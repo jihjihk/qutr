@@ -1,0 +1,3 @@
+rootProject.name = 'QuTR'
+
+include ':app'
