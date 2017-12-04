@@ -19,8 +19,11 @@ export default class ToolbarButton extends Component {
   render = () => {
 
     return (
-        <Button transparent style={[styles.alignment]} onPress={this.props.onPress}>
-            <Icon name={this.props.name} style={[styles.button, this.props.style]}/>
+        <Button transparent 
+                style={[styles.alignment]} 
+                onPress={this.props.onPress}>
+          <Icon name={this.props.name} 
+                style={[styles.button, this.props.style]}/>
         </Button>
     );
   }

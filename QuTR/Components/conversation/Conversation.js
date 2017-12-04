@@ -22,11 +22,14 @@ export default class Conversation extends Component {
   }
 
   render = () => {
+
     return (
-          <TouchableHighlight underlayColor={GREYUNDERLAY} onPress={() => this.props.onPress()}>
+          <TouchableHighlight underlayColor={GREYUNDERLAY} 
+                              onPress={() => this.props.navigation.navigate('Chat', {name: this.props.sender, realm: this.props.realm, refresh: this.props.refresh})}>
             <View style={[styles.convo]}>
                <View style={[styles.pictureWrapper]}>
-                  <Image style={[styles.picture]} source={this.props.picture.source}/>
+                  <Image style={[styles.picture]} 
+                         source={this.props.picture.source}/>
                </View>
                <View style={{flex:1}}>
                  <View style={styles.rowWrapper}>
@@ -34,7 +37,9 @@ export default class Conversation extends Component {
                     <Text style={[styles.date]}>{this.props.date}</Text>
                  </View>
                  <View style={[styles.rowWrapper]}>
-                    <Text numberOfLines={1} style={styles.lastMessage}>{this.props.message}</Text>
+                    <Text numberOfLines={1} 
+                          style={styles.lastMessage}>{this.props.message}
+                    </Text>
                     <Text style={[styles.time]}>{this.props.time}</Text>
                  </View>
                </View>

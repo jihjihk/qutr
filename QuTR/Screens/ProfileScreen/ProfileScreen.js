@@ -4,30 +4,77 @@ import {
   Keyboard,
   Image,
   TextInput,
-  Picker, 
+  ToastAndroid,
 } from 'react-native';
-import { Container, Title, Text } from 'native-base';
+import { Container, Title, Text, Picker, Item as FormItem} from 'native-base';
+import { Button, Form } from 'react-native-elements'
 import { StackNavigator } from 'react-navigation';
+import { NavigationActions } from 'react-navigation';
 
-import ChatWindow from '../../Components/chatWindow/ChatWindow.js';
+import { UserSchema, MessageSchema, ConversationSchema } from '../../Schemas.js';
+
+import InputWindow from '../../Components/inputWindow/InputWindow.js';
 import Header from '../../Components/header/Header.js';
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
+import ProfileFormItem from '../../Components/profileFormItem/ProfileFormItem.js';
 
 import styles from './styles.js';
 
+const Item=Picker.Item;
+const Realm = require('realm');
+
+var countries = [{label: "China", value: 'china'}, 
+                 {label: "United States of America", value: 'usa'}, 
+                 {label: "United Arab Emirates", value: 'uae'}];
+
+var languages = [{label: "Chinese", value: 'chinese'}, 
+                 {label: "English", value: 'english'}, 
+                 {label: "Arabic", value: 'arabic'}];
+
+var genders = [{label: "Male", value: 'male'}, 
+               {label: "Female", value: 'female'}, 
+               {label: "Other", value: 'other'}];
+
 export default class ProfileScreen extends Component<{}>  {
 
-  static navigationOptions = ({ navigation }) => ({
-    header: (
-        <Header center={<Title style={[styles.Title]}>MY PROFILE</Title>}/>
-        ),
-  });
+  static navigationOptions = { header: null };
 
   constructor(props) {
-    super(props);
+    super(props);  
+    var realm = props.navigation.state.params.realm;
+    var theUser = realm.objects('User')[0]; 
+    this.state = { realm: realm,
+                   user: theUser, 
+                   id: theUser.id, 
+                   name: theUser.name, 
+                   country: theUser.country, 
+                   age: theUser.age, 
+                   language: theUser.language, 
+                   gender: theUser.gender
+    }
   }
 
-  componentWillMount () {
+  updateDatabase()  {
+
+    this.state.realm.write(() => {
+      this.state.user.name = this.state.name;
+      this.state.user.country = this.state.country;
+      this.state.user.age = parseInt(this.state.age);
+      this.state.user.language = this.state.language;
+      this.state.user.gender = this.state.gender;
+    });
+  
+    ToastAndroid.show('The settings have been saved!', ToastAndroid.SHORT);
+
+    setTimeout(this.goBack.bind(this), 100);    
+  }
+
+  goBack()  {
+    const backAction = NavigationActions.back({});
+    this.props.navigation.dispatch(backAction);
+  }
+
+  componentWillMount () {  
   }
 
   componentWillUnmount () {
@@ -39,48 +86,68 @@ export default class ProfileScreen extends Component<{}>  {
   _keyboardDidHide () {
   }
 
+  listItems (items) {
+
+    var pickerItems = [], i=0;
+    for (i; i<items.length; i++) {
+      pickerItems.push(<Item key={i} label={items[i].label} value={items[i].value}/>);
+    }
+    return pickerItems;
+  }
+
   render() {
     return (
-      <Container ref="container">
-        <ChatWindow ref="cw">
+      <Container ref="container" >
+        <Header center={<Title style={[styles.Title]}>MY PROFILE</Title>}/>
+        <InputWindow ref="cw">
           <View style={[styles.imageContainer]}>
             <View style={[styles.imageWrapper]}>
               <Image style={[styles.profileImage]} source={require("../../Pictures/user.png")}/>
             </View>
           </View>
           <View style={[styles.form]}>
-            <View style = {[styles.formRow]}>
-              <View style={[styles.formItem]}>
-                <Text style={[styles.formLabel]}>Name: </Text><TextInput underlineColorAndroid='transparent' placeholder='Enter name:' style={[styles.formTextInput]}/>
-              </View>
-            </View>
-            <View style = {[styles.formRow]}>
-              <View style={[styles.formItem]}>
-                <Text style={[styles.formLabel]}>Country: </Text>
-                <View style={[styles.formTextInput]}>
-                  <Picker>
-                    <Picker.Item label="China" value='china'/>
-                    <Picker.Item label="UAE" value='uae'/>
-                    <Picker.Item label="United States of America" value='usa'/>
-                  </Picker>
-                </View>
-              </View>
-            </View>
-            <View style = {[styles.formRow]}>
-              <View style={[styles.formItem]}>
-                <Text style={[styles.formLabel]}>Language: </Text>
-                <View style={[styles.formTextInput]}>
-                  <Picker>
-                    <Picker.Item label="Chinese" value='chinese'/>
-                    <Picker.Item label="Arabic" value='arabic'/>
-                    <Picker.Item label="English" value='english'/>
-                  </Picker>
-                </View>
-              </View>
-            </View>
-            <ToolbarButton name='md-thumbs-up' style={{color: 'green'}}/>
+            <ProfileFormItem label="Name">
+              <TextInput underlineColorAndroid='transparent' 
+                         placeholder='Enter name:' 
+                         onChangeText={(value) => {this.setState({name: value})}} 
+                         value={this.state.name}/>
+            </ProfileFormItem>
+            <ProfileFormItem label="Country">
+              <Picker mode='dialog' 
+                      onValueChange={(itemValue, itemPosition) => {this.setState({country: itemValue}, function () {})}} 
+                      selectedValue={this.state.country}>
+                {this.listItems(countries)}
+              </Picker>
+            </ProfileFormItem>
+            <ProfileFormItem label="Language">
+              <Picker mode='dialog' 
+                      onValueChange={(itemValue, itemPosition) => {this.setState({language: itemValue}, function () {})}} 
+                      selectedValue={this.state.language}>
+                {this.listItems(languages)}
+              </Picker>
+            </ProfileFormItem>
+            <ProfileFormItem label="Age">
+              <TextInput keyboardType='numeric' 
+                         underlineColorAndroid='transparent' 
+                         placeholder='Enter your age:' 
+                         onChangeText={(value) => {this.setState({age: value})}} 
+                         value={this.state.age.toString()}/>
+            </ProfileFormItem>
+            <ProfileFormItem label="Gender">
+              <Picker mode='dialog' 
+                      onValueChange={(itemValue, itemPosition) => {this.setState({gender: itemValue}, function () {})}} 
+                      selectedValue={this.state.gender}>
+                {this.listItems(genders)}
+              </Picker>    
+            </ProfileFormItem> 
           </View>
-        </ChatWindow>
+          <Button iconRight={{name: 'check', size: 25}} 
+                  buttonStyle={{backgroundColor: 'black'}} 
+                  containerViewStyle={{alignSelf: 'center'}} 
+                  title='CONFIRM CHANGES' 
+                  onPress={() => {this.updateDatabase()}}>
+          </Button>
+        </InputWindow>
       </Container>
    );
   }

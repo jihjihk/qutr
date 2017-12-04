@@ -4,6 +4,7 @@ import {
   View,
   ScrollView,
   Keyboard,
+  BackHandler
 } from 'react-native';
 import { Container, Title, Text, } from 'native-base';
 import { StackNavigator } from 'react-navigation';
@@ -22,28 +23,35 @@ import { TBBUTTON, ENABLEDSEND } from '../../masterStyle.js'
 
 export default class ChatScreen extends Component<{}>  {
 
-  static navigationOptions = ({ navigation }) => ({
-    header: (
-        <Header center={<Title style={[styles.Title]}>{navigation.state.params.name}</Title>} left={<ToolbarButton name='md-settings' onPress={() => that.props.navigation.navigate('Profile')}/>} right={<ToolbarButton name='md-bluetooth'/>}/>
-        ),
-  });
+  static navigationOptions = { header: null };
 
   constructor(props) {
     super(props);
     this.state={sendDisabled: true,
-                sendStyle: {color: TBBUTTON}};
-    var that=this;
+                sendStyle: {color: TBBUTTON},
+                realm: this.props.navigation.state.params.realm,
+                conversation: null
+              };
   }
 
   sendMessage = () => {
 
-    if (that.state.sendDisabled)  return;
+    if (this.state.sendDisabled)  return;
     var message = this.refs.mi.state.message;
-    this.refs.cw.receiveMessage("mm", message);
+    this.state.realm.write(() => {
+
+      let theMessage = this.state.realm.create('Message', {
+
+        owner: 'me',
+        date: new Date(),
+        text: message
+      });
+      this.state.conversation.messages.push(theMessage);
+    });
+    this.refs.cw.receiveMessage(this.state.conversation.messages);
     this.refs.mi.clearContent();
     this.refs.sb.clean();
-    this.disableSend();
-    
+    this.disableSend();    
   }
 
   enableSend = () => {
@@ -54,7 +62,8 @@ export default class ChatScreen extends Component<{}>  {
   disableSend = () => {
 
     this.setState({sendDisabled: true,
-                  sendStyle: {color: TBBUTTON, opacity: 1}});
+                  sendStyle: {color: TBBUTTON, 
+                              opacity: 1}});
   }
 
   textChanged = (value) => {
@@ -75,36 +84,59 @@ export default class ChatScreen extends Component<{}>  {
     this.enableSend();
   }
 
+  backHandler() {
+    this.props.navigation.state.params.refresh();
+  }
+
   componentWillMount () {
-    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow);
-    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide);
-    that = this;
+    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
+    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this));
+    BackHandler.addEventListener('hardwareBackPress', this.backHandler.bind(this));
+  }
+
+  componentDidMount() {
+    setTimeout(this.renderPropsIntoState.bind(this), 10);
+  }
+
+  renderPropsIntoState()  {
+    this.setState({conversation: this.state.realm.objects('Conversation')
+                                  .filtered('correspondent.name = "'+this.props.navigation.state.params.name+'"')[0]});
   }
 
   componentWillUnmount () {
     this.keyboardDidShowListener.remove();
     this.keyboardDidHideListener.remove();
+    BackHandler.removeEventListener('hardwareBackPress', this.backHandler.bind(this));
   }
 
   _keyboardDidShow () {
-    that.refs.cw.onKeyboardShow();
-    that.refs.sb.onKeyboardShow();
+    this.refs.cw.onKeyboardShow();
+    this.refs.sb.onKeyboardShow();
   }
 
   _keyboardDidHide () {
-    that.refs.cw.onKeyboardHide();
-    that.refs.sb.onKeyboardHide();
+    this.refs.cw.onKeyboardHide();
+    this.refs.sb.onKeyboardHide();
   }
 
   render() {
+    if (this.state.conversation==null) return null;
     return (
       <Container ref="container">
-        <ChatWindow ref="cw">
+        <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>} 
+                left={<ToolbarButton name='md-settings' 
+                                     onPress={() => this.props.navigation.navigate('Profile', {realm: this.props.navigation.state.params.realm})}/>}/>
+        <ChatWindow ref="cw" messages = {this.state.conversation.messages} >
         </ChatWindow>
 
-        <Footer center={<MessageInput ref='mi' style={{flex: 1}} onChangeText={(value) => this.textChanged(value)}/>} 
-                right={<ToolbarButton style={this.state.sendStyle} name='md-send' onPress={() => this.sendMessage()}/>}/>
-        <SuggestionBar ref='sb' onChildPressed={(input) => this.selectSuggestion(input)}>    
+        <Footer center={<MessageInput ref='mi' 
+                                      style={{flex: 1}} 
+                                      onChangeText={(value) => this.textChanged(value)}/>} 
+                right={<ToolbarButton style={this.state.sendStyle} 
+                                      name='md-send' 
+                                      onPress={() => this.sendMessage()}/>}/>
+        <SuggestionBar ref='sb' 
+                       onChildPressed={(input) => this.selectSuggestion(input)}>    
         </SuggestionBar>
       </Container>
    );

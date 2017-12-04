@@ -21,7 +21,9 @@ export default class SuggestionButton extends Component {
   render = () => {
 
     return (
-        <TouchableHighlight underlayColor={GREYUNDERLAY} style={[styles.container]} onPress = {() => this.props.onPress(this.props.text)}>
+        <TouchableHighlight underlayColor={GREYUNDERLAY} 
+                            style={[styles.container]} 
+                            onPress = {() => this.props.onPress(this.props.text)}>
           <Text style={[styles.text]}>{this.props.text}</Text>
         </TouchableHighlight> 
     );

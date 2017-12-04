@@ -13,38 +13,83 @@ import Header from '../../Components/header/Header.js';
 import ConversationsWindow from '../../Components/conversationsWindow/ConversationsWindow.js';
 import Conversation from '../../Components/conversation/Conversation.js';
 
+import { UserSchema, MessageSchema, ConversationSchema } from '../../Schemas.js';
+
 import styles from './styles.js';
+import { TBBUTTON } from '../../masterStyle.js';
 
-import { TBBUTTON } from '../../masterStyle.js'
+const Realm = require('realm');
 
-export default class ChatScreen extends Component<{}>  {
+const pictures = {"MERCHANT": require("../../Pictures/merchant.png"),
+                  "COUNTER ATTENDANT": require("../../Pictures/counter.png"),
+                  "TAXI DRIVER": require("../../Pictures/driver.jpg")}
 
-  static navigationOptions = ({ navigation }) => ({
-    header: (
-        <Header center={<Title style={[styles.Title]}>MY CONVERSATIONS</Title>} left={<ToolbarButton name='md-settings' onPress={() => that.props.navigation.navigate('Profile')}/>}/>
-        ),
-  });
+export default class ConversationsScreen extends Component<{}>  {
 
   constructor(props) {
     super(props);
-    var that;
+    this.realm = null;
+    this.state= {realm: null,
+                 user: null};
   }
+
+  static navigationOptions = { header: null };
 
   componentWillMount () {
-    that=this;
+    Realm.open({
+      schema: [UserSchema, MessageSchema, ConversationSchema],
+    }).then(realm => {
+      this.setState({realm: realm,
+                    user: realm.objects('User')[0]});
+      this.realm = realm;
+    }).catch(error => {
+      console.log(error);
+    });
   }
 
-  componentWillUnmount () {
+  componentWillUnmount()  {
+  }
+
+  getLastMessage(conversation) {
+
+    if (conversation.messages.length===0) return {text: "Hi", date: new Date()};
+    return conversation.messages[conversation.messages.length-1];
+  }
+
+  refresh() {
+    this.setState({});
   }
 
   render() {
 
+    var conversations=[];
+    if (this.state.realm)  {
+      var allConversations = this.state.realm.objects('Conversation'), i=0;
+      let conversation;
+      for (i; i<allConversations.length; i++) {
+
+        conversation = allConversations[i];
+        var lastMessage = this.getLastMessage(conversation);
+
+        conversations.push(<Conversation navigation = {this.props.navigation}
+                                         realm = {this.state.realm}
+                                         refresh = {this.refresh.bind(this)}
+                                         key={i}
+                                         sender = {conversation.correspondent.name}                                          
+                                         message = {lastMessage.text}
+                                         date={(lastMessage.date.getDate()+1)+"/"+(lastMessage.date.getMonth()+1)+"/"+lastMessage.date.getFullYear()} 
+                                         time={lastMessage.date.getHours()+":"+lastMessage.date.getMinutes()} 
+                                         picture={{source: pictures[conversation.correspondent.name]}}></Conversation>);
+      }
+    }
+
     return (
       <Container ref="container">
+      <Header center={<Title style={[styles.Title]}>MY CONVERSATIONS</Title>} 
+              left={<ToolbarButton name='md-settings' 
+                                   onPress={() => {this.props.navigation.navigate('Profile', {realm: this.state.realm})}}/>}/>
         <ConversationsWindow ref="cw">
-          <Conversation onPress={() => this.props.navigation.navigate('Chat', {name: "MERCHANT"})} sender="MERCHANT" message="See you then, by the way I will make sure to do the job!" date="11/11/2017" time="5:33PM" picture={{source: require("../../Pictures/merchant.png")}}/>
-          <Conversation onPress={() => this.props.navigation.navigate('Chat', {name: "COUNTER ATTENDANT"})} sender="COUNTER ATTENDANT" message="Goodbye!" date="05/11/2017" time="2:29PM" picture={{source: require("../../Pictures/counter.png")}}/>
-          <Conversation onPress={() => this.props.navigation.navigate('Chat', {name: "TAXI DRIVER"})} sender="TAXI DRIVER" message="Thanks." date="01/11/2017" time="11:14AM" picture={{source: require("../../Pictures/driver.jpg")}}/>
+          {conversations}
         </ConversationsWindow>
         <ActionButton></ActionButton>
       </Container>

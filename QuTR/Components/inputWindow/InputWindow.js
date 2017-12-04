@@ -15,15 +15,9 @@ export default class ChatWindow extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {message: props.messages,
-                  kavStyle: [styles.withoutKeyboard],
+    this.state = {kavStyle: [styles.withoutKeyboard],
                   helperStyle: [styles.noHeight]};
     var that=this;
-  }
-
-  receiveMessage = (messages) => {
-
-    this.setState({message: messages}, function() {console.log(this.state.message.length);});    
   }
 
   scrolltoBottom = () => {
@@ -44,34 +38,6 @@ export default class ChatWindow extends Component {
     this.refs.scrollView.scrollToEnd({animated: false});
   }
 
-  getMessages() {
-
-    var messages=[];
-
-    for (var i=0; i<this.state.message.length; i++) {
-
-      if (this.state.message[i].owner=="me")  {
-
-        messages.push(<View key={i} style={[styles.myMessageView]}>
-                        <Message  message={this.state.message[i].text} 
-                                  style={[styles.myMessage]}/>
-                        <Image source={require('../../Pictures/user.png')} 
-                               style={[styles.picture]}/>
-                      </View>);
-      }
-      else if (this.state.message[i].type=="them") {
-
-        messages.push(<View key={i} style={[styles.theirMessageView]}>
-                        <Image source={require('../../Pictures/user.png')} 
-                               style={[styles.picture]}/>
-                        <Message message={this.state.message[i].text} 
-                                 style={[styles.theirMessage]}/>
-                      </View>);
-      }
-    }
-    return messages;
-  }
-
   render = () => {
 
     return (
@@ -82,7 +48,7 @@ export default class ChatWindow extends Component {
                       scrollEnabled={true} 
                       ref="scrollView"
                       onContentSizeChange={(width,height) => this.scrolltoBottom()}>
-            {this.getMessages()}
+            {this.props.children}
             <View style={[this.state.helperStyle]}></View>
           </ScrollView>
         </KeyboardAvoidingView>

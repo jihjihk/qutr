@@ -11,6 +11,10 @@ import ChatScreen from './Screens/ChatScreen/ChatScreen.js';
 import ConversationsScreen from './Screens/ConversationsScreen/ConversationsScreen.js';
 import ProfileScreen from './Screens/ProfileScreen/ProfileScreen.js';
 
+import { UserSchema, MessageSchema, ConversationSchema } from './Schemas.js';
+
+const Realm = require('realm');
+
 const SimpleApp = StackNavigator({
   Conversations: { screen: ConversationsScreen },
   Chat: { screen: ChatScreen },    
@@ -19,8 +23,16 @@ const SimpleApp = StackNavigator({
 
 export default class App extends Component<{}> {
 
+  constructor(props)  {
+
+    super(props);
+  }
+
+  componentWillMount()  {
+    
+  }
+
   render() {
-    return <SimpleApp />;
+    return <SimpleApp/>;
   }
 }
-

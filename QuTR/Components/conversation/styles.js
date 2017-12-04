@@ -44,12 +44,12 @@ export default StyleSheet.create({
   	flex: 1,
   },
   date: {
-  	fontSize: 13, 
+  	fontSize: 14, 
   	color: 'black', 
   	width: 70,
   },
   time: {
-  	fontSize: 11, 
+  	fontSize: 13, 
   	color: 'grey', 
   	width: 70,
   }

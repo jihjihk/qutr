@@ -27,7 +27,9 @@ export default class SuggestionBar extends Component {
 
   populate(input)  {
     
-    if (input!=='') this.setState({content: {text1: input+'1', text2: input+'2', text3: input+'3'}});
+    if (input!=='') this.setState({content: {text1: input+'1', 
+                                             text2: input+'2', 
+                                             text3: input+'3'}});
     else this.clean();
   }
 
@@ -39,9 +41,15 @@ export default class SuggestionBar extends Component {
 
     return (
         <View style={[this.state.viewStyle]}>
-          <SuggestionButton text={this.state.content.text1} onPress = {(input) => this.props.onChildPressed(input)}></SuggestionButton>
-          <SuggestionButton text={this.state.content.text2} onPress = {(input) => this.props.onChildPressed(input)}></SuggestionButton> 
-          <SuggestionButton text={this.state.content.text3} onPress = {(input) => this.props.onChildPressed(input)}></SuggestionButton>
+          <SuggestionButton text={this.state.content.text1} 
+                            onPress = {(input) => this.props.onChildPressed(input)}>
+          </SuggestionButton>
+          <SuggestionButton text={this.state.content.text2} 
+                            onPress = {(input) => this.props.onChildPressed(input)}>
+          </SuggestionButton> 
+          <SuggestionButton text={this.state.content.text3} 
+                            onPress = {(input) => this.props.onChildPressed(input)}>
+          </SuggestionButton>
         </View> 
     );
   }
