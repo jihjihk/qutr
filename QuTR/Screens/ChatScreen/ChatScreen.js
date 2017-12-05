@@ -40,18 +40,34 @@ export default class ChatScreen extends Component<{}>  {
     var message = this.refs.mi.state.message;
     this.state.realm.write(() => {
 
-      let theMessage = this.state.realm.create('Message', {
-
-        owner: 'me',
-        date: new Date(),
-        text: message
-      });
-      this.state.conversation.messages.push(theMessage);
+      var myMessage = this.createMessage('me', message);
+      var theirMessage = this.createMessage('them', message);
+      this.state.conversation.messages.push(myMessage);
+      this.state.conversation.messages.push(theirMessage);
     });
-    this.refs.cw.receiveMessage(this.state.conversation.messages);
+    this.refs.cw.receiveMessage(this.getLastMessages(15));
     this.refs.mi.clearContent();
     this.refs.sb.clean();
     this.disableSend();    
+  }
+
+  createMessage(owner, message) {
+
+    var theMessage = this.state.realm.create('Message', {
+
+        owner: owner,
+        date: new Date(),
+        text: message
+      });
+    return theMessage;
+  }  
+
+  getLastMessages(number)   {
+
+    var length = this.state.conversation.messages.length;
+    var messages = this.state.conversation.messages;
+    if (length<number) return messages;
+    return messages.slice(length-number, length);
   }
 
   enableSend = () => {
@@ -126,7 +142,7 @@ export default class ChatScreen extends Component<{}>  {
         <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>} 
                 left={<ToolbarButton name='md-settings' 
                                      onPress={() => this.props.navigation.navigate('Profile', {realm: this.props.navigation.state.params.realm})}/>}/>
-        <ChatWindow ref="cw" messages = {this.state.conversation.messages} >
+        <ChatWindow ref="cw" messages = {this.getLastMessages(15)} >
         </ChatWindow>
 
         <Footer center={<MessageInput ref='mi' 

@@ -23,7 +23,7 @@ export default class ChatWindow extends Component {
 
   receiveMessage = (messages) => {
 
-    this.setState({message: messages}, function() {console.log(this.state.message.length);});    
+    this.setState({message: messages}, function() {});    
   }
 
   scrolltoBottom = () => {
@@ -47,7 +47,6 @@ export default class ChatWindow extends Component {
   getMessages() {
 
     var messages=[];
-
     for (var i=0; i<this.state.message.length; i++) {
 
       if (this.state.message[i].owner=="me")  {
@@ -59,7 +58,7 @@ export default class ChatWindow extends Component {
                                style={[styles.picture]}/>
                       </View>);
       }
-      else if (this.state.message[i].type=="them") {
+      else if (this.state.message[i].owner=="them") {
 
         messages.push(<View key={i} style={[styles.theirMessageView]}>
                         <Image source={require('../../Pictures/user.png')} 
