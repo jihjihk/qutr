@@ -2,6 +2,11 @@
 I created this app following the example on the GitHub page of the library [react-native-ble-manager](https://github.com/innoveit/react-native-ble-manager).
 Parts of it are adapted according to the needs of my project.
 
+## How To Run The App
+Right now, the application is built for iOS only. In order to run it, `cd` into
+this directory and run `npm install`, then run `react-native run-ios` in the
+command line to start the emulator.
+
 ## Ways to Establish a Connection
 * Traditional: entering a code
 * Profile Pictures
