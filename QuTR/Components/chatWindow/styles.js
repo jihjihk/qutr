@@ -51,8 +51,8 @@ export default StyleSheet.create({
   picture: {
     borderRadius: 100, 
     borderWidth: 2, 
-    width: 30, 
-    height: 30, 
+    width: 40, 
+    height: 40, 
     alignSelf: 'center'
   }
 });

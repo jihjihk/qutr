@@ -46,11 +46,11 @@ export default StyleSheet.create({
   date: {
   	fontSize: 14, 
   	color: 'black', 
-  	width: 70,
+  	width: 80,
   },
   time: {
   	fontSize: 13, 
   	color: 'grey', 
-  	width: 70,
+  	width: 80,
   }
 });

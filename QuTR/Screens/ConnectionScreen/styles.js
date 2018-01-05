@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native';
 
+import {
+  HEADERBG,
+  TITLE
+} from '../../masterStyle.js';
+
 export default StyleSheet.create({
 
-  withKeyboard: {
-    height: 40, 
-  },
-  withoutKeyboard: {
-  	height: 0,
-  }
+  
 });

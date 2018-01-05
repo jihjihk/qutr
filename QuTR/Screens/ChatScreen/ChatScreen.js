@@ -41,7 +41,7 @@ export default class ChatScreen extends Component<{}>  {
     this.state.realm.write(() => {
 
       var myMessage = this.createMessage('me', message);
-      var theirMessage = this.createMessage('them', message);
+      var theirMessage = this.createMessage('them', message+" to you too!");
       this.state.conversation.messages.push(myMessage);
       this.state.conversation.messages.push(theirMessage);
     });
@@ -142,7 +142,7 @@ export default class ChatScreen extends Component<{}>  {
         <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>} 
                 left={<ToolbarButton name='md-settings' 
                                      onPress={() => this.props.navigation.navigate('Profile', {realm: this.props.navigation.state.params.realm})}/>}/>
-        <ChatWindow ref="cw" messages = {this.getLastMessages(15)} >
+        <ChatWindow ref="cw" messages = {this.getLastMessages(15)} picture = {this.props.navigation.state.params.picture}>
         </ChatWindow>
 
         <Footer center={<MessageInput ref='mi' 
@@ -152,7 +152,7 @@ export default class ChatScreen extends Component<{}>  {
                                       name='md-send' 
                                       onPress={() => this.sendMessage()}/>}/>
         <SuggestionBar ref='sb' 
-                       onChildPressed={(input) => this.selectSuggestion(input)}>    
+                       select = {(suggestion) => this.selectSuggestion(suggestion)}>    
         </SuggestionBar>
       </Container>
    );

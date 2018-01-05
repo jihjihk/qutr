@@ -52,7 +52,7 @@ export default class ConversationsScreen extends Component<{}>  {
 
   getLastMessage(conversation) {
 
-    if (conversation.messages.length===0) return {text: "Hi", date: new Date()};
+    if (conversation.messages.length===0) return {text: '', date: new Date()};
     return conversation.messages[conversation.messages.length-1];
   }
 
@@ -91,7 +91,7 @@ export default class ConversationsScreen extends Component<{}>  {
         <ConversationsWindow ref="cw">
           {conversations}
         </ConversationsWindow>
-        <ActionButton></ActionButton>
+        <ActionButton onPress={() => {this.props.navigation.navigate('Connection')}}></ActionButton>
       </Container>
    );
   }

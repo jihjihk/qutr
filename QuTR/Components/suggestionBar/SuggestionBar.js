@@ -3,6 +3,9 @@ import {
   	Text,
     View,
 } from 'native-base';
+import {
+    ScrollView
+} from 'react-native';
 
 import SuggestionButton from './../suggestionButton/SuggestionButton.js';
 
@@ -13,8 +16,9 @@ export default class SuggestionBar extends Component {
   constructor(props)  {
     super(props);
     this.state = {viewStyle: [styles.withoutKeyboard],
-                  content: {text1: '', text2: '', text3: ''},
-                  selectedText: ''};
+                  content: [],
+                  suggestionCount: 5
+                };
   }
 
   onKeyboardShow()  {
@@ -27,30 +31,44 @@ export default class SuggestionBar extends Component {
 
   populate(input)  {
     
-    if (input!=='') this.setState({content: {text1: input+'1', 
-                                             text2: input+'2', 
-                                             text3: input+'3'}});
+    if (input!=='') {
+
+      var suggestions = [];
+      for (var i=0; i<this.state.suggestionCount; i++)  {
+        var suffix = '';
+        for (var a=0; a<i+1; a++) suffix = suffix.concat('.');
+        suggestions.push(input+suffix);
+      }
+
+      this.setState({content: suggestions});
+    }
+
     else this.clean();
   }
 
   clean()  {
-    this.setState({content: {text1: '', text2: '', text3: ''}});
+    this.setState({content: []});
   }
 
   render = () => {
 
+    var suggestions = [];
+    for (var i=0; i<this.state.suggestionCount; i++)  {
+      suggestions.push(<SuggestionButton key={i}
+                                         text={this.state.content[i]} 
+                                         toSelect ={(suggestion) => this.props.select(suggestion)}>
+                       </SuggestionButton>);
+    }
+
     return (
-        <View style={[this.state.viewStyle]}>
-          <SuggestionButton text={this.state.content.text1} 
-                            onPress = {(input) => this.props.onChildPressed(input)}>
-          </SuggestionButton>
-          <SuggestionButton text={this.state.content.text2} 
-                            onPress = {(input) => this.props.onChildPressed(input)}>
-          </SuggestionButton> 
-          <SuggestionButton text={this.state.content.text3} 
-                            onPress = {(input) => this.props.onChildPressed(input)}>
-          </SuggestionButton>
-        </View> 
+        <View>
+          <ScrollView contentContainerStyle={[this.state.viewStyle]} 
+                      horizontal 
+                      showsHorizontalScrollIndicator = {false}
+                      keyboardShouldPersistTaps = 'always'>            
+            {suggestions}
+          </ScrollView> 
+        </View>
     );
   }
 }

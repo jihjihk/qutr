@@ -4,7 +4,8 @@ export default StyleSheet.create({
 
   container: {
     backgroundColor: '#C7C7C7',
-    flex: 1,
+    height: 40,
+    width: 137.5,
     borderRightWidth: 0.2,
     borderColor: 'white',
     justifyContent: 'center',
@@ -13,7 +14,7 @@ export default StyleSheet.create({
   text: {
   	textAlign: 'center', 
     textAlignVertical: 'center', 	
-  	color: 'white',
+  	color: 'black',
   	fontSize: 15,
   },
 });

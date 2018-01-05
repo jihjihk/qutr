@@ -62,6 +62,7 @@ export default class ProfileScreen extends Component<{}>  {
       this.state.user.age = parseInt(this.state.age);
       this.state.user.language = this.state.language;
       this.state.user.gender = this.state.gender;
+      //this.state.realm.objects('Conversation')[0].messages = [];
     });
   
     ToastAndroid.show('The settings have been saved!', ToastAndroid.SHORT);
@@ -102,7 +103,7 @@ export default class ProfileScreen extends Component<{}>  {
         <InputWindow ref="cw">
           <View style={[styles.imageContainer]}>
             <View style={[styles.imageWrapper]}>
-              <Image style={[styles.profileImage]} source={require("../../Pictures/user.png")}/>
+              <Image style={[styles.profileImage]} source={require("../../Pictures/TZ.jpg")}/>
             </View>
           </View>
           <View style={[styles.form]}>

@@ -54,14 +54,14 @@ export default class ChatWindow extends Component {
         messages.push(<View key={i} style={[styles.myMessageView]}>
                         <Message  message={this.state.message[i].text} 
                                   style={[styles.myMessage]}/>
-                        <Image source={require('../../Pictures/user.png')} 
+                        <Image source={require('../../Pictures/TZ.jpg')} 
                                style={[styles.picture]}/>
                       </View>);
       }
       else if (this.state.message[i].owner=="them") {
 
         messages.push(<View key={i} style={[styles.theirMessageView]}>
-                        <Image source={require('../../Pictures/user.png')} 
+                        <Image source={this.props.picture} 
                                style={[styles.picture]}/>
                         <Message message={this.state.message[i].text} 
                                  style={[styles.theirMessage]}/>

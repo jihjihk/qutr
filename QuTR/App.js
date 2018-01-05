@@ -10,6 +10,7 @@ import { StackNavigator } from 'react-navigation';
 import ChatScreen from './Screens/ChatScreen/ChatScreen.js';
 import ConversationsScreen from './Screens/ConversationsScreen/ConversationsScreen.js';
 import ProfileScreen from './Screens/ProfileScreen/ProfileScreen.js';
+import ConnectionScreen from './Screens/ConnectionScreen/ConnectionScreen.js';
 
 import { UserSchema, MessageSchema, ConversationSchema } from './Schemas.js';
 
@@ -19,6 +20,7 @@ const SimpleApp = StackNavigator({
   Conversations: { screen: ConversationsScreen },
   Chat: { screen: ChatScreen },    
   Profile: { screen: ProfileScreen },
+  Connection: { screen: ConnectionScreen}
 });
 
 export default class App extends Component<{}> {
