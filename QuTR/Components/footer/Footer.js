@@ -14,7 +14,7 @@ export default class Footer extends Component {
   render = () => {
 
     return (
-        <View style={[styles.Footer]}>
+        <View style={[styles.Footer, this.props.style]}>
           <View style={[styles.Side]}>
             {this.props.left}
           </View>

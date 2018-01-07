@@ -41,7 +41,7 @@ export default class MessageInput extends Component {
   render = () => {
 
     return (
-        <Input style={[styles.textInput]} 
+        <Input style={[styles.textInput, this.props.style]} 
                ref={(input) => { this.input = input; }} 
                multiline={false} 
                placeholder='Enter message: ' 

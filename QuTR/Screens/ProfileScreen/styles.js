@@ -1,4 +1,7 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet,
+         Dimensions } from 'react-native';
+
+const windowHeight = Dimensions.get('window').height;
 
 import {
   HEADERBG,
@@ -29,18 +32,26 @@ export default StyleSheet.create({
     paddingBottom: 10
   },
   profileImage: {
-    borderRadius: 100, 
-    borderWidth: 2, 
-    width: 90, 
-    height: 90
+    //borderRadius: 100, 
+    borderWidth: 1, 
+    borderColor: 'black',
+    width: 100, 
+    height: 100
   },
   form: {
     flex: 1, 
   },
-  /* formRow: {
-    height: 60, 
-    flexDirection: 'row', 
-    alignSelf: 'center',
+  modalContainer: {
+    flex: 1
   },
-  */
+  loadMore: {
+    backgroundColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: windowHeight/15
+  },
+  scrollView: {
+    flexWrap: 'wrap',
+    flexDirection: 'row'
+  },
 });

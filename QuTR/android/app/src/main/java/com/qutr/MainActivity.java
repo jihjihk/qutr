@@ -1,6 +1,8 @@
 package com.qutr;
 
 import com.facebook.react.ReactActivity;
+import com.zyu.ReactNativeWheelPickerPackage;
+import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class MainActivity extends ReactActivity {
 

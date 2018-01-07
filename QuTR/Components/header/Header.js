@@ -14,7 +14,7 @@ export default class Header extends Component {
   render = () => {
 
     return (
-        <View style={[styles.Header]}>
+        <View style={[styles.Header, this.props.style]}>
           <View style={[styles.Side]}>
             {this.props.left}
           </View>

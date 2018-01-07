@@ -62,7 +62,7 @@ export default class SuggestionBar extends Component {
 
     return (
         <View>
-          <ScrollView contentContainerStyle={[this.state.viewStyle]} 
+          <ScrollView contentContainerStyle={[this.state.viewStyle, this.props.style]} 
                       horizontal 
                       showsHorizontalScrollIndicator = {false}
                       keyboardShouldPersistTaps = 'always'>            

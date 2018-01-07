@@ -26,7 +26,7 @@ export default class Conversation extends Component {
     return (
           <TouchableHighlight underlayColor={GREYUNDERLAY} 
                               onPress={() => this.props.navigation.navigate('Chat', {name: this.props.sender, realm: this.props.realm, refresh: this.props.refresh, picture: this.props.picture.source})}>
-            <View style={[styles.convo]}>
+            <View style={[styles.convo, this.props.style]}>
                <View style={[styles.pictureWrapper]}>
                   <Image style={[styles.picture]} 
                          source={this.props.picture.source}/>

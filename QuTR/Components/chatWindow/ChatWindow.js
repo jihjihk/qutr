@@ -77,7 +77,7 @@ export default class ChatWindow extends Component {
         <KeyboardAvoidingView behavior='padding' 
                               style={this.state.kavStyle} 
                               keyboardVerticalOffset={-240}>
-          <ScrollView style={[styles.sw]} 
+          <ScrollView style={[styles.sw, this.props.style]} 
                       scrollEnabled={true} 
                       ref="scrollView"
                       onContentSizeChange={(width,height) => this.scrolltoBottom()}>

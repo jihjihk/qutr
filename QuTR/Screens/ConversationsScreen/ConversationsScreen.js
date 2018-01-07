@@ -28,7 +28,6 @@ export default class ConversationsScreen extends Component<{}>  {
 
   constructor(props) {
     super(props);
-    this.realm = null;
     this.state= {realm: null,
                  user: null};
   }
@@ -39,9 +38,7 @@ export default class ConversationsScreen extends Component<{}>  {
     Realm.open({
       schema: [UserSchema, MessageSchema, ConversationSchema],
     }).then(realm => {
-      this.setState({realm: realm,
-                    user: realm.objects('User')[0]});
-      this.realm = realm;
+      this.setState({realm: realm, user: realm.objects('User')[0]});
     }).catch(error => {
       console.log(error);
     });

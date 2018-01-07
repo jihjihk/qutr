@@ -6,6 +6,12 @@
 
 import React, { Component } from 'react';
 import { StackNavigator } from 'react-navigation';
+import {
+  Alert,
+  Platform
+} from 'react-native';
+
+import RNFetchBlob from 'react-native-fetch-blob';
 
 import ChatScreen from './Screens/ChatScreen/ChatScreen.js';
 import ConversationsScreen from './Screens/ConversationsScreen/ConversationsScreen.js';
@@ -23,6 +29,8 @@ const SimpleApp = StackNavigator({
   Connection: { screen: ConnectionScreen}
 });
 
+export const appFolder = ((Platform.OS == 'android' ? RNFetchBlob.fs.dirs.PictureDir : RNFetchBlob.fs.dirs.MainBundleDir)+"/QuTR");
+
 export default class App extends Component<{}> {
 
   constructor(props)  {
@@ -31,7 +39,27 @@ export default class App extends Component<{}> {
   }
 
   componentWillMount()  {
-    
+     this.createAppFolder();
+  }
+
+  createAppFolder()  {
+
+    var profilePictures = appFolder+"/Profile Pictures";
+
+    RNFetchBlob.fs.isDir(appFolder)
+    .then((isDir) => {
+
+      if (!isDir)  {
+        RNFetchBlob.fs.mkdir(appFolder)
+          .then(() => {
+            RNFetchBlob.fs.mkdir(profilePictures)
+            .then(() => {})
+            .catch((err) => {})
+          })
+          .catch((err) => {})
+      }        
+    })
+    .catch((err) => {console.log("Err: ", err)})
   }
 
   render() {
