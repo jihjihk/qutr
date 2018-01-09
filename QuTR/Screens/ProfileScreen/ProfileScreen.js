@@ -5,6 +5,7 @@ import {
   Image,
   Alert,
   TextInput,
+  BackAndroid,
   ToastAndroid,
   TouchableOpacity,
   TouchableHighlight,
@@ -92,12 +93,6 @@ export default class ProfileScreen extends Component<{}>  {
     this.props.navigation.dispatch(backAction);
   }
 
-  componentWillMount () {  
-  }
-
-  componentWillUnmount () {
-  }
-
   _keyboardDidShow () {
   }
 
@@ -113,7 +108,20 @@ export default class ProfileScreen extends Component<{}>  {
     return pickerItems;
   }
 
-  getPhotos = () => {
+  refreshAndFetch() {
+
+    this.setState({photos: [],
+                   lastCursor: null,
+                   load: true}, this.fetchPhotos);
+  }
+
+  getPhotos = (fresh) => {
+
+    if (fresh)  this.refreshAndFetch();
+    else this.fetchPhotos();
+  }
+
+  fetchPhotos() {
 
     if (!this.state.load)  return;
 
@@ -133,6 +141,9 @@ export default class ProfileScreen extends Component<{}>  {
   }
 
   toggleModal = () => {
+
+    if (!this.state.modalVisible) 
+      this.getPhotos(true);
     this.setState({ modalVisible: !this.state.modalVisible });
   }
 
@@ -191,13 +202,11 @@ export default class ProfileScreen extends Component<{}>  {
         <InputWindow ref="cw">
 
           <TouchableOpacity style={[styles.imageContainer]} 
-                            onPress = {() => {this.toggleModal(); this.getPhotos()}}>
-            <View style={[styles.imageWrapper]}>
+                            onPress = {() => {this.toggleModal();}}>
               <Image style={[styles.profileImage]} source={{uri: this.state.picture}}/>
-            </View>
           </TouchableOpacity>
 
-          <Modal animationType={"slide"}
+          <Modal animationType={"none"}
                  transparent={false}
                  visible={this.state.modalVisible}
                  onRequestClose={() => console.log('closed')}>
@@ -205,6 +214,10 @@ export default class ProfileScreen extends Component<{}>  {
               <Header center={<Title style={[styles.Title]}>CAMERA ROLL</Title>}
                       left={<ToolbarButton name='md-arrow-back' 
                                             onPress={() => {this.toggleModal()}}/>}
+                      right={<ToolbarButton name='md-camera' 
+                                            onPress={() => {this.props.navigation.navigate('Camera', 
+                                                                {path: appFolder, showModal: this.toggleModal});
+                                                            setTimeout(this.toggleModal, 300);}}/>}
                       style={{marginBottom: 5}}/>
               <ScrollView
                 contentContainerStyle={styles.scrollView}>
@@ -226,12 +239,13 @@ export default class ProfileScreen extends Component<{}>  {
               </ScrollView>
               <View style={{marginTop: 5}}>
                 <TouchableOpacity style={[styles.loadMore]} 
-                                  onPress={() => {this.setState({load: true}); this.getPhotos()}}
+                                  onPress={() => {this.setState({load: true}, function() {this.getPhotos(false)});}}
                                   activeOpacity={0.75}>
                   <Text style = {{color: 'white', fontSize: 16}}>LOAD MORE</Text>
                 </TouchableOpacity>
               </View>
             </View>
+
           </Modal>
 
           <View style={[styles.form]}>

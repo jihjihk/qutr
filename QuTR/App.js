@@ -13,6 +13,7 @@ import {
 
 import RNFetchBlob from 'react-native-fetch-blob';
 
+import CameraScreen from './Screens/CameraScreen/CameraScreen.js';
 import ChatScreen from './Screens/ChatScreen/ChatScreen.js';
 import ConversationsScreen from './Screens/ConversationsScreen/ConversationsScreen.js';
 import ProfileScreen from './Screens/ProfileScreen/ProfileScreen.js';
@@ -25,6 +26,7 @@ const Realm = require('realm');
 const SimpleApp = StackNavigator({
   Conversations: { screen: ConversationsScreen },
   Chat: { screen: ChatScreen },    
+  Camera: { screen: CameraScreen },
   Profile: { screen: ProfileScreen },
   Connection: { screen: ConnectionScreen}
 });

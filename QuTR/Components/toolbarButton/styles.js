@@ -10,6 +10,7 @@ export default StyleSheet.create({
     color: TBBUTTON,
     flex: 1,
     textAlign: 'center',
+    justifyContent: 'center'
   },
   alignment: {
   	flex: 1,

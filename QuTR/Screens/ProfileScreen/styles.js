@@ -19,24 +19,27 @@ export default StyleSheet.create({
     color: TITLE,
   },
   imageContainer: {
-    height: 120, 
+    height: 100,
+    width: 100,
+    borderWidth: 1, 
+    borderColor: 'black',
     flexDirection: 'row', 
+    alignSelf: 'center',
     alignItems: 'center', 
     justifyContent: 'center'
   },
-  imageWrapper: {
-    flex: 0.33, 
-    borderBottomWidth: 1, 
-    alignItems: 'center', 
-    justifyContent: 'center', 
-    paddingBottom: 10
-  },
+  // imageWrapper: {
+  //   flex: 0.33, 
+  //   borderWidth: 1, 
+  //   borderColor: 'black',
+  //   alignItems: 'center', 
+  //   justifyContent: 'center', 
+  //   paddingBottom: 10
+  // },
   profileImage: {
-    //borderRadius: 100, 
-    borderWidth: 1, 
-    borderColor: 'black',
     width: 100, 
-    height: 100
+    height: 100,
+
   },
   form: {
     flex: 1, 
