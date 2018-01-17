@@ -1,14 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 import {
-  HEADERBG,
-  TITLE
+  PRIMARY,
+  BLACK
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
 
   Header: {
-    backgroundColor: HEADERBG,
+    backgroundColor: PRIMARY,
     flexDirection: 'row', 
     height: 45,
     borderBottomWidth: 0.2,

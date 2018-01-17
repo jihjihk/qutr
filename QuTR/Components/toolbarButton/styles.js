@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 import {
-  TBBUTTON,
+  SECONDARY_LIGHT,
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
 
   button: {
-    color: TBBUTTON,
+    color: SECONDARY_LIGHT,
     flex: 1,
     textAlign: 'center',
     justifyContent: 'center'

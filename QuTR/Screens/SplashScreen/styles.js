@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 import {
-  HEADERBG,
-  TITLE
+  BLACK
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
@@ -13,7 +12,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   Title: {
-    color: TITLE,
+    color: BLACK,
   },
   imageContainer: {
     height: 120, 

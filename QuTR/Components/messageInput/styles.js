@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 import {
-  INPUTBG,
+  SECONDARY_LIGHT,
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
 
   textInput: {
-    backgroundColor: INPUTBG, 
+    backgroundColor: SECONDARY_LIGHT, 
     flex: 1,
     borderRadius: 7.5,
     fontSize: 17.5,

@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
 
 import {
-
+  PRIMARY,
+  PRIMARY_LIGHT
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
@@ -10,20 +11,24 @@ export default StyleSheet.create({
     height: 55,
     flex: 1,
     flexDirection: 'row',
-    marginBottom: 15,
+  },
+  TouchableHighlight: {
+    borderBottomWidth: 1,
+    borderColor: PRIMARY_LIGHT,
   },
   pictureWrapper: {
   	maxWidth: 80, 
   	maxHeight: 56, 
   	marginRight: 5, 
   	alignItems: 'center',
+    justifyContent: 'center'
   },
   picture: {
   	borderRadius: 100, 
-  	borderColor: 'black', 
-  	borderWidth: 2, 
-  	height: 56, 
-  	width: 56,
+  	borderColor: PRIMARY, 
+  	borderWidth: 0.5, 
+  	height: 50, 
+  	width: 50,
   },
   rowWrapper: {
   	padding: 5, 

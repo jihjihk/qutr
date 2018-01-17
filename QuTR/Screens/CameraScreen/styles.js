@@ -2,7 +2,7 @@ import { StyleSheet,
          Dimensions } from 'react-native';
 
 import {
-  TITLE
+  BLACK
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
@@ -29,7 +29,7 @@ export default StyleSheet.create({
     margin: 40
   },
   Title: {
-    color: TITLE,
+    color: BLACK,
   }
 });
 

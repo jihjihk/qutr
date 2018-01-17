@@ -22,6 +22,9 @@ import Footer from '../../Components/footer/Footer.js';
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 
 import styles from './styles.js';
+import {
+  SECONDARY_LIGHT
+} from '../../masterStyle.js';
 
 export default class CameraScreen extends Component {
   constructor(props) {
@@ -98,8 +101,8 @@ export default class CameraScreen extends Component {
        </Camera>
        <Footer center={<ToolbarButton name='md-camera' 
                                        onPress={this.takePicture.bind(this)}
-                                       style={{ color: 'white', fontSize: 40 }} />} 
-               style={{backgroundColor: 'black', height: 60}}/>        
+                                       style={{ color: SECONDARY_LIGHT, fontSize: 40 }} />} 
+               style={{height: 60}}/>        
       </Container>
     );
   }

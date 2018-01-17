@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 
 import {
-  GREYUNDERLAY
+  SECONDARY
 } from '../../masterStyle.js';
 
 import styles from './styles.js';
@@ -23,7 +23,7 @@ export default class SuggestionButton extends Component {
     console.log(this.props);
 
     return (
-        <TouchableHighlight underlayColor={GREYUNDERLAY} 
+        <TouchableHighlight underlayColor={SECONDARY} 
                             style={[styles.container, this.props.style]} 
                             onPress = {() => this.props.toSelect(this.props.text)}>
           <Text style={[styles.text]}>{this.props.text}</Text>

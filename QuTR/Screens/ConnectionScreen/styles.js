@@ -1,11 +1,15 @@
 import { StyleSheet } from 'react-native';
 
 import {
-  HEADERBG,
-  TITLE
+  SECONDARY
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
 
-  
+  Container: {
+    backgroundColor: SECONDARY
+  },
+  Title: {
+    color: SECONDARY,
+  },
 });

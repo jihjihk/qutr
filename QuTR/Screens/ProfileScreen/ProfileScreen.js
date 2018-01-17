@@ -28,6 +28,12 @@ import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 import ProfileFormItem from '../../Components/profileFormItem/ProfileFormItem.js';
 
 import styles from './styles.js';
+import {
+  BLACK,
+  SECONDARY_DARK,
+  SECONDARY_LIGHT
+} from '../../masterStyle.js';
+
 import { appFolder } from '../../App.js';
 
 const Item=Picker.Item;
@@ -197,8 +203,8 @@ export default class ProfileScreen extends Component<{}>  {
   render() {
 
     return (
-      <Container ref="container" >
-        <Header center={<Title style={[styles.Title]}>MY PROFILE</Title>}/>
+      <Container ref="container" style = {[styles.Container]}>
+        <Header center={<Title style={[styles.Title]}>My profile</Title>}/>
         <InputWindow ref="cw">
 
           <TouchableOpacity style={[styles.imageContainer]} 
@@ -211,7 +217,7 @@ export default class ProfileScreen extends Component<{}>  {
                  visible={this.state.modalVisible}
                  onRequestClose={() => console.log('closed')}>
             <View style={styles.modalContainer}>
-              <Header center={<Title style={[styles.Title]}>CAMERA ROLL</Title>}
+              <Header center={<Title style={[styles.Title]}>Camera roll</Title>}
                       left={<ToolbarButton name='md-arrow-back' 
                                             onPress={() => {this.toggleModal()}}/>}
                       right={<ToolbarButton name='md-camera' 
@@ -241,7 +247,7 @@ export default class ProfileScreen extends Component<{}>  {
                 <TouchableOpacity style={[styles.loadMore]} 
                                   onPress={() => {this.setState({load: true}, function() {this.getPhotos(false)});}}
                                   activeOpacity={0.75}>
-                  <Text style = {{color: 'white', fontSize: 16}}>LOAD MORE</Text>
+                  <Text style = {{color: SECONDARY_DARK, fontSize: 16}}>LOAD MORE</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -253,19 +259,25 @@ export default class ProfileScreen extends Component<{}>  {
               <TextInput underlineColorAndroid='transparent' 
                          placeholder='Enter name:' 
                          onChangeText={(value) => {this.setState({name: value})}} 
-                         value={this.state.name}/>
+                         value={this.state.name}
+                         selectionColor={SECONDARY_LIGHT}
+                         style={{color: SECONDARY_LIGHT, textAlign: 'center'}}/>
             </ProfileFormItem>
             <ProfileFormItem label="Country">
               <Picker mode='dialog' 
                       onValueChange={(itemValue, itemPosition) => {this.setState({country: itemValue}, function () {})}} 
-                      selectedValue={this.state.country}>
+                      selectedValue={this.state.country}
+                      selectionColor={SECONDARY_LIGHT}
+                      style={{color: SECONDARY_LIGHT}}>
                 {this.listItems(countries)}
               </Picker>
             </ProfileFormItem>
             <ProfileFormItem label="Language">
               <Picker mode='dialog' 
                       onValueChange={(itemValue, itemPosition) => {this.setState({language: itemValue}, function () {})}} 
-                      selectedValue={this.state.language}>
+                      selectedValue={this.state.language}
+                      selectionColor={SECONDARY_LIGHT}
+                      style={{color: SECONDARY_LIGHT}}>
                 {this.listItems(languages)}
               </Picker>
             </ProfileFormItem>
@@ -274,19 +286,24 @@ export default class ProfileScreen extends Component<{}>  {
                          underlineColorAndroid='transparent' 
                          placeholder='Enter your age:' 
                          onChangeText={(value) => {this.setState({age: value})}} 
-                         value={this.state.age.toString()}/>
+                         value={this.state.age.toString()}
+                         selectionColor={SECONDARY_LIGHT}
+                         style={{color: SECONDARY_LIGHT, textAlign: 'center'}}/>
             </ProfileFormItem>
             <ProfileFormItem label="Gender">
               <Picker mode='dialog' 
                       onValueChange={(itemValue, itemPosition) => {this.setState({gender: itemValue}, function () {})}} 
-                      selectedValue={this.state.gender}>
+                      selectedValue={this.state.gender}
+                      selectionColor={SECONDARY_LIGHT}
+                      style={{color: SECONDARY_LIGHT}}>
                 {this.listItems(genders)}
               </Picker>    
             </ProfileFormItem> 
           </View>
-          <Button iconRight={{name: 'check', size: 25}} 
-                  buttonStyle={{backgroundColor: 'black'}} 
-                  containerViewStyle={{alignSelf: 'center'}} 
+          <Button iconRight={{name: 'check', size: 25, color: SECONDARY_DARK}} 
+                  buttonStyle={[styles.confirm]} 
+                  color = {SECONDARY_DARK}
+                  containerViewStyle={{alignSelf: 'center', marginTop: 40}} 
                   title='CONFIRM CHANGES' 
                   onPress={() => {this.updateDatabase(false)}}>
           </Button>

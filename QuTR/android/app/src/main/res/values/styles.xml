@@ -8,16 +8,18 @@
 	<style name="SpinnerItem" parent="Theme.AppCompat.Light.NoActionBar">>
 	  <item name="android:fontFamily">sans-serif-light</item>
 	  <item name="android:textSize">14dp</item>
-	  <item name="android:paddingLeft">5dp</item>
+	  <item name="android:paddingLeft">10dp</item>
 	  <item name="android:paddingBottom">13dp</item>
+	  <item name="android:gravity">center</item>
+
 	</style>
 
 	<style name="SpinnerDropDownItem" parent="Theme.AppCompat.Light.NoActionBar">>
-	    <item name="android:textColor">#ffffff</item>
+	    <item name="android:textColor">#ccc5af</item>
 	    <item name="android:textSize">16dp</item>
 	    <item name="android:fontFamily">sans-serif-light</item>
 	    <item name="android:gravity">center</item>
-	    <item name="android:background">#000000</item>
+	    <item name="android:background">#12005e</item>
 	</style>
 
 </resources>

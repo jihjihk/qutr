@@ -54,7 +54,7 @@ export default class ChatWindow extends Component {
         messages.push(<View key={i} style={[styles.myMessageView]}>
                         <Message  message={this.state.message[i].text} 
                                   style={[styles.myMessage]}/>
-                        <Image source={require('../../Pictures/TZ.jpg')} 
+                        <Image source={{uri: this.props.myPicture}} 
                                style={[styles.picture]}/>
                       </View>);
       }

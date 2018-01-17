@@ -1,26 +1,26 @@
 import { StyleSheet } from 'react-native';
 
 import {
-  HEADERBG,
+  PRIMARY,
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
 
   formItem: {
-    height: 60, 
-    flex: 0.7, 
+    height: 60,  
     flexDirection: 'row', 
     alignItems: 'center',
   },
   formLabel: {
-    flex: 0.35, 
+    flex: 0.35,
     textAlign: 'right', 
     paddingRight: 15,
+    color: PRIMARY
   },
   formTextInput: {
     height: 40, 
-    flex: 0.65, 
-    backgroundColor: HEADERBG,
+    flex: 0.5, 
+    backgroundColor: PRIMARY,
     borderRadius: 10,
   }
 });

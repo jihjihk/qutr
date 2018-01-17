@@ -16,7 +16,10 @@ import Conversation from '../../Components/conversation/Conversation.js';
 import { UserSchema, MessageSchema, ConversationSchema } from '../../Schemas.js';
 
 import styles from './styles.js';
-import { TBBUTTON } from '../../masterStyle.js';
+import { PRIMARY_DARK,
+         PRIMARY,
+         SECONDARY_DARK
+       } from '../../masterStyle.js';
 
 const Realm = require('realm');
 
@@ -81,14 +84,18 @@ export default class ConversationsScreen extends Component<{}>  {
     }
 
     return (
-      <Container ref="container">
-      <Header center={<Title style={[styles.Title]}>MY CONVERSATIONS</Title>} 
+      <Container ref="container" style={[styles.Container]}>
+      <Header center={<Title style={[styles.Title]}>My conversations</Title>} 
               left={<ToolbarButton name='md-settings' 
                                    onPress={() => {this.props.navigation.navigate('Profile', {realm: this.state.realm})}}/>}/>
         <ConversationsWindow ref="cw">
           {conversations}
         </ConversationsWindow>
-        <ActionButton onPress={() => {this.props.navigation.navigate('Connection')}}></ActionButton>
+        <ActionButton onPress={() => {this.props.navigation.navigate('Connection')}} 
+                      buttonColor = {PRIMARY_DARK} 
+                      buttonTextStyle={{color: SECONDARY_DARK}}
+                      nativeFeedbackRippleColor = {PRIMARY}
+                      fixNativeFeedbackRadius = {true}></ActionButton>
       </Container>
    );
   }

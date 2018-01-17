@@ -19,7 +19,9 @@ import Footer from '../../Components/footer/Footer.js';
 
 import styles from './styles.js';
 
-import { TBBUTTON, ENABLEDSEND } from '../../masterStyle.js'
+import { BLACK, 
+         GREEN,
+         SECONDARY_LIGHT } from '../../masterStyle.js'
 
 export default class ChatScreen extends Component<{}>  {
 
@@ -28,9 +30,10 @@ export default class ChatScreen extends Component<{}>  {
   constructor(props) {
     super(props);
     this.state={sendDisabled: true,
-                sendStyle: {color: TBBUTTON},
+                sendStyle: {color: SECONDARY_LIGHT},
                 realm: this.props.navigation.state.params.realm,
-                conversation: null
+                conversation: null,
+                user: this.props.navigation.state.params.realm.objects('User')[0]
               };
   }
 
@@ -72,13 +75,13 @@ export default class ChatScreen extends Component<{}>  {
 
   enableSend = () => {
     this.setState({sendDisabled: false,
-                  sendStyle: {color: ENABLEDSEND}});
+                  sendStyle: {color: GREEN}});
   }
 
   disableSend = () => {
 
     this.setState({sendDisabled: true,
-                  sendStyle: {color: TBBUTTON, 
+                  sendStyle: {color: SECONDARY_LIGHT, 
                               opacity: 1}});
   }
 
@@ -138,11 +141,11 @@ export default class ChatScreen extends Component<{}>  {
   render() {
     if (this.state.conversation==null) return null;
     return (
-      <Container ref="container">
+      <Container ref="container" style={[styles.Container]}>
         <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>} 
                 left={<ToolbarButton name='md-settings' 
                                      onPress={() => this.props.navigation.navigate('Profile', {realm: this.props.navigation.state.params.realm})}/>}/>
-        <ChatWindow ref="cw" messages = {this.getLastMessages(15)} picture = {this.props.navigation.state.params.picture}>
+        <ChatWindow ref="cw" messages = {this.getLastMessages(15)} picture = {this.props.navigation.state.params.picture} myPicture ={this.state.user.picture}>
         </ChatWindow>
 
         <Footer center={<MessageInput ref='mi' 

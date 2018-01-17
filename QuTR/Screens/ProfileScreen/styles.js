@@ -4,38 +4,31 @@ import { StyleSheet,
 const windowHeight = Dimensions.get('window').height;
 
 import {
-  HEADERBG,
-  TITLE
+  BLACK,
+  SECONDARY,
+  SECONDARY_LIGHT,
+  PRIMARY,
+  PRIMARY_DARK
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
 
   Container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: SECONDARY
   },
   Title: {
-    color: TITLE,
+    color: SECONDARY,
   },
   imageContainer: {
     height: 100,
     width: 100,
     borderWidth: 1, 
-    borderColor: 'black',
+    borderColor: BLACK,
     flexDirection: 'row', 
     alignSelf: 'center',
     alignItems: 'center', 
     justifyContent: 'center'
   },
-  // imageWrapper: {
-  //   flex: 0.33, 
-  //   borderWidth: 1, 
-  //   borderColor: 'black',
-  //   alignItems: 'center', 
-  //   justifyContent: 'center', 
-  //   paddingBottom: 10
-  // },
   profileImage: {
     width: 100, 
     height: 100,
@@ -45,16 +38,21 @@ export default StyleSheet.create({
     flex: 1, 
   },
   modalContainer: {
-    flex: 1
+    flex: 1,
+    backgroundColor: SECONDARY,
   },
   loadMore: {
-    backgroundColor: 'black',
+    backgroundColor: PRIMARY_DARK,
     alignItems: 'center',
     justifyContent: 'center',
     height: windowHeight/15
   },
   scrollView: {
     flexWrap: 'wrap',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginLeft: 5
   },
+  confirm: {
+    backgroundColor: PRIMARY_DARK,
+  }
 });

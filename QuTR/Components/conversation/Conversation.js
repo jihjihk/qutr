@@ -10,7 +10,7 @@ import Message from './../message/Message.js';
 import ToolbarButton from './../toolbarButton/ToolbarButton.js';
 
 import {
-  GREYUNDERLAY
+  PRIMARY_LIGHT
 } from '../../masterStyle.js';
 
 import styles from './styles.js';
@@ -24,7 +24,8 @@ export default class Conversation extends Component {
   render = () => {
 
     return (
-          <TouchableHighlight underlayColor={GREYUNDERLAY} 
+          <TouchableHighlight underlayColor={PRIMARY_LIGHT} 
+                              style={[styles.TouchableHighlight]}
                               onPress={() => this.props.navigation.navigate('Chat', {name: this.props.sender, realm: this.props.realm, refresh: this.props.refresh, picture: this.props.picture.source})}>
             <View style={[styles.convo, this.props.style]}>
                <View style={[styles.pictureWrapper]}>

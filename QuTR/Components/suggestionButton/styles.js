@@ -1,12 +1,17 @@
 import { StyleSheet,
          Dimensions } from 'react-native';
 
+import {
+  SECONDARY_DARK,
+} from '../../masterStyle.js';
+
+
 const windowWidth = Dimensions.get('window').width;
 
 export default StyleSheet.create({
 
   container: {
-    backgroundColor: '#C7C7C7',
+    backgroundColor: SECONDARY_DARK,
     height: 40,
     width: windowWidth/3,
     borderRightWidth: 0.2,

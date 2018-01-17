@@ -1,22 +1,20 @@
-const HEADERBG = '#C7C7C7';
-const TITLE = 'black';
-const MYMESSAGEBG = '#0084FF';
-const MYMESSAGETEXT = 'white';
-const THEIRMESSAGEBG = '#dcdcdc';
-const THEIRMESSAGETEXT = 'black';
-const TBBUTTON = 'black';
-const ENABLEDSEND = 'green';
-const INPUTBG = 'white';
-const GREYUNDERLAY='#d3d3d3';
+const PRIMARY = '#4A148C';
+const PRIMARY_LIGHT='#7c43bd';
+const PRIMARY_DARK='#12005e';
+const SECONDARY = '#FFF8E1';
+const SECONDARY_LIGHT = '#ffffff';
+const SECONDARY_DARK = '#ccc5af';
+const BLACK = 'black';
+const WHITE = 'white';
+const GREEN = 'green';
 
-export { HEADERBG, 
-		 TITLE, 
-		 MYMESSAGETEXT, 
-		 MYMESSAGEBG, 
-		 THEIRMESSAGEBG, 
-		 THEIRMESSAGETEXT,
-		 TBBUTTON, 
-		 ENABLEDSEND,
-		 INPUTBG,
-		 GREYUNDERLAY
+export { PRIMARY, 
+		 PRIMARY_LIGHT,
+		 PRIMARY_DARK, 
+		 SECONDARY, 
+		 SECONDARY_LIGHT,
+		 SECONDARY_DARK,
+		 WHITE, 
+		 BLACK,		  
+		 GREEN		 
 		};

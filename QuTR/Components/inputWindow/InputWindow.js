@@ -7,8 +7,6 @@ import {
     Image
 } from 'react-native';
 
-import Message from './../message/Message.js';
-
 import styles from './styles.js';
 
 export default class ChatWindow extends Component {

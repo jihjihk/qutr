@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import {
-  View,
+  ScrollView
 } from 'react-native';
+
+import { Container, 
+         Title
+       } 
+from 'native-base';
+import { StackNavigator } from 'react-navigation';
+
+import Header from '../../Components/header/Header.js';
+
+import styles from './styles.js';
+
 import { NavigationActions } from 'react-navigation';
 
 export default class ConnectionScreen extends Component<{}>  {
 
+  static navigationOptions = { header: null };
+
   constructor(props) {
     super(props);
-    console.log(props);
-    this.state={navigation: this.props.navigation};
-    var that;
   }
 
   componentWillMount() {
-    console.log(this.state.navigation);
   }
 
   componentWillUnmount () {
@@ -30,6 +39,11 @@ export default class ConnectionScreen extends Component<{}>  {
   }
 
   render() {
-    return <View style={{backgroundColor: 'red'}}></View>
+    return (<Container ref="container" style={[styles.Container]}>
+              <Header center={<Title style={[styles.Title]}>Connectivity</Title>}/> 
+              <ScrollView>
+              </ScrollView>
+            </Container>
+    );
   }
 }
