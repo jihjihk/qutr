@@ -1,0 +1,350 @@
+,category,english,chinese
+0,Basics, Hello. , 你好。 Nǐ hǎo.
+1,Basics, How are you? , 你好吗？ Nǐ hǎo ma?
+2,Basics," Fine, thank you. "," 很好, 谢谢。 Hěn hǎo, xièxie."
+3,Basics," May I please ask, what is your name? ", 请问你叫什么名? Qǐngwèn nǐjiào shěnme míng?
+4,Basics, What is your name? ,  你叫什么名字？ Nǐ jiào shénme míngzi?
+5,Basics, My name is ______ . , 我叫 _____ 。 Wǒ jiào ______ . 
+6,Basics, Nice to meet you. ,  很高兴认识你。 Hěn gāoxìng rènshì nǐ.
+7,Basics, Please. ,  请。 Qǐng.
+8,Basics, Thank you. ,  谢谢。 Xièxiè.
+9,Basics, You're welcome. , 不客气。 Bú kèqi.
+10,Basics, Excuse me. (getting attention) , 请问 qǐng wèn
+11,Basics, Excuse me. (begging pardon) ," 打扰一下。 Dǎrǎo yixià ; 麻烦您了, Máfán nín le."
+12,Basics, Excuse me. (coming through) , 对不起 Duìbùqǐ * or * 请让一下 Qǐng ràng yixià
+13,Basics, I'm sorry. , 对不起。 Duìbùqǐ.
+14,Basics," It's okay. (polite response to ""I'm sorry"")", 没关系 (méiguānxi).
+15,Basics, Goodbye ,  再见。 Zàijiàn
+16,Basics, Goodbye (informal) , 拜拜。 Bāi-bāi (Bye bye)
+17,Basics, I can't speak Chinese. ,  我不会讲中文。 Wǒ bú huì jiáng zhōngwén.
+18,Basics, Do you speak English? , 你会说英语吗？ Nǐ huì shuō Yīngyǔ ma?
+19,Basics, Is there someone here who speaks English? , 这里有人会说英语吗？ Zhèlĭ yǒu rén hùi shuō Yīngyǔ ma?
+20,Basics, Help! (in emergencies), 救命！ Jiùmìng!
+21,Basics, Good morning. ,  早安。 zǎo ān.
+22,Basics, Good evening. ,  晚上好。 Wǎnshàng hǎo.
+23,Basics, Good night. ,  晚安。 Wǎn'ān.
+24,Basics, I don't understand (something heard). , 我听不懂。 Wǒ tīng bù dǒng.
+25,Basics, I don't understand (something read). , 我看不懂。 Wǒ kàn bù dǒng.
+26,Basics, Where is the toilet? , 厕所在哪里？ Cèsuǒ zài nǎli?
+27,Basics, Where is the bathroom（polite)? , 洗手间在哪里？ Xǐshǒujiān zài nǎli?
+28,Problems, Leave me alone. , 不要打扰我。 (búyào dǎrǎo wǒ)
+29,Problems, I don't want it! (useful for people who come up trying to sell you something) , 我不要 (wǒ búyào!)
+30,Problems, Don't touch me! , 不要碰我！ (búyào pèng wǒ!)
+31,Problems, I'll call the police. , 我会叫警察。 (wǒ yào jiào jǐngchá le) 
+32,Problems, Police! , 警察！ (jǐngchá!) or in Mainland China: 公安！(gōng'ān) (either will be understood in Mainland China)
+33,Problems, Stop! Thief! , 住手！小偷！ (zhùshǒu! xiǎotōu!)
+34,Problems, I need your help. , 我需要你的帮助。 (wǒ xūyào nǐde bāngzhù) 
+35,Problems, It's an emergency. , 这是紧急情况。 (zhèshì jǐnjí qíngkuàng)
+36,Problems, I'm lost. , 我迷路了。 (wǒ mílù le)
+37,Problems, I lost my bag. , 我丟了手提包。 (wǒ diūle shǒutíbāo)
+38,Problems, I lost my wallet. , 我丟了钱包。 (wǒ diūle qiánbāo)
+39,Problems, I'm sick. , 我生病了。 (wǒ shēngbìng le)
+40,Problems, I've been injured. , 我受伤了。 (wǒ shòushāng le)
+41,Problems, I need a doctor. , 我需要医生。 (wǒ xūyào yīshēng)
+42,Problems, Can I make a telephone call? , 我可以打个电话吗？ (wǒ kěyǐ dǎ ge diànhuà ma?)
+43,Problems, Can I use your phone? ,我可以用您的电话吗？(wǒ kěyǐ yòng nín de diànhuà ne?)
+44,Problems, Can I use your cell phone? ,我可以用您的手机吗？(wǒ kěyǐ yòng nín de shǒujī ma?)
+45,Going to the doctor, I am sick. , 我生病了。 (wǒ shēngbìng le)
+46,Going to the doctor, Painful. , 痛。  (tòng)
+47,Going to the doctor, Uncomfortable. , 不舒服。 (bù shūfú)
+48,Going to the doctor, Itchy/ticklish. , 痒。(yǎng)
+49,Going to the doctor, Sore (In muscle strains). , 酸。(suān)
+50,Going to the doctor, Fever. , 发烧。 (fāshāo)
+51,Going to the doctor, Cough. , 咳嗽。 (késòu)
+52,Going to the doctor, Sneeze. , 打喷嚏 (dǎ pēntì)
+53,Going to the doctor, Diarrhoea. , 泻肚子/拉肚子 (xiè dùzi/lā dùzi)
+54,Going to the doctor, Running nose. , 流鼻涕 (liú bítì)
+55,Going to the doctor, Phlegm. , 痰。 (tán)
+56,Going to the doctor, Hands/Arms. , 手。 (shǒu)
+57,Going to the doctor, Fingers. , 手指。(shǒuzhǐ)
+58,Going to the doctor, Wrist. , 手腕。 (shǒuwàn)
+59,Going to the doctor, Shoulder. , 肩膀。 (jiānbǎng)
+60,Going to the doctor, Feet. , 脚。 (jiǎo)
+61,Going to the doctor, Toes. , 脚指。 (jiǎozhǐ)
+62,Going to the doctor, Legs. , 腿。 (tuǐ)
+63,Going to the doctor, Nails. , 指甲。 (zhǐjiǎ)
+64,Going to the doctor, Body. , 身体。 (shēntǐ)
+65,Going to the doctor, Eyes. , 眼睛。 (yǎnjīng)
+66,Going to the doctor, Ears. , 耳朵。 (ěrduo)
+67,Going to the doctor, Nose. , 鼻子。 (bízi)
+68,Going to the doctor, Face. , 脸。 (liǎn)
+69,Going to the doctor, Hair. , 头发。 (tóufǎ)
+70,Going to the doctor, Head. , 头。 (tóu)
+71,Going to the doctor, Neck. , 颈项/脖子。 (jǐngxiàng/bózi)
+72,Going to the doctor, Throat. , 喉咙。 (hóulóng)
+73,Going to the doctor, Chest. , 胸。 (xiōng)
+74,Going to the doctor, Abdomen. , 肚子。 (dùzi)
+75,Going to the doctor, Hip/Waist. , 腰。 (yāo)
+76,Going to the doctor, Buttocks. , 屁股。 (pìgǔ)
+77,Going to the doctor, Back. , 背。 (bèi)
+78,Numbers, 0 , 〇 (零) líng
+79,Numbers, 1 , 一 (壹) yī
+80,Numbers, 2 , 二 (贰) èr (两 liǎng is used when specifying quantities)
+81,Numbers, 3 , 三 (叁) sān
+82,Numbers, 4 , 四 (肆) sì
+83,Numbers, 5 , 五 (伍) wǔ
+84,Numbers, 6 , 六 (陆) liù
+85,Numbers, 7 , 七 (柒) qī
+86,Numbers, 8 , 八 (捌) bā
+87,Numbers, 9 , 九 (玖) jiǔ
+88,Numbers, 10 , 十 (拾) shí
+89,Numbers, 11 , 十一 shí-yī
+90,Numbers, 12 , 十二 shí-èr
+91,Numbers, 13 , 十三 shí-sān
+92,Numbers, 14 , 十四 shí-sì
+93,Numbers, 15 , 十五 shí-wǔ
+94,Numbers, 16 , 十六 shí-liù
+95,Numbers, 17 , 十七 shí-qī
+96,Numbers, 18 , 十八 shí-bā
+97,Numbers, 19 , 十九 shí-jiǔ
+98,Numbers, 20 , 二十 èr-shí
+99,Numbers, 21 , 二十一 èr-shí-yī
+100,Numbers, 22 , 二十二 èr-shí-èr
+101,Numbers, 23 , 二十三 èr-shí-sān
+102,Numbers, 30 , 三十 sān-shí
+103,Numbers, 40 , 四十 sì-shí
+104,Numbers, 50 , 五十 wǔ-shí
+105,Numbers, 60 , 六十 liù-shí
+106,Numbers, 70 , 七十 qī-shí
+107,Numbers, 80 , 八十 bā-shí
+108,Numbers, 90 , 九十 jiǔ-shí
+109,Numbers, 100 , 一百 (壹佰) yī-bǎi
+110,Numbers, 101 , 一百〇一 (壹佰零壹) yī-bǎi-líng-yī
+111,Numbers, 110 , 一百一十 (壹佰壹拾) yī-bǎi-yī-shí
+112,Numbers, 111 , 一百一十一 yī-bǎi-yī-shí-yī
+113,Numbers, 200 , 二百 èr-bǎi or 两百：liǎng-bǎi
+114,Numbers, 300 , 三百 sān-bǎi
+115,Numbers, 500 , 五百 wǔ-bǎi
+116,Numbers, 1000 , 一千 (壹仟) yī-qiān
+117,Numbers, 2000 , 二千 èr-qiān
+118,Numbers, 2000 , or 两千 liǎng-qiān
+119,Numbers," 10,000 ", 一万 (壹萬) yī-wàn
+120,Numbers," 10,001 ", 一万〇一 yī-wàn-líng-yī
+121,Numbers," 10,002 ", 一万〇二 yī-wàn-líng-èr
+122,Numbers," 20,000 ", 二万 èr-wàn
+123,Numbers," 50,000 ", 五万 wǔ-wàn
+124,Numbers," 100,000 ", 十万 shí-wàn
+125,Numbers," 200,000 ", 二十万 èr-shí-wàn
+126,Numbers," 1,000,000 ", 一百万 yī-bǎi-wàn
+127,Numbers," 10,000,000 ", 一千万 yī-qiān-wàn
+128,Numbers," 100,000,000 ", 一亿 (壹億) yī-yì
+129,Numbers," 1,000,000,000,000 ", 一兆 yī-zhào
+130,Numbers, half , 半 bàn
+131,Numbers, less than , 少於 shǎoyú
+132,Numbers, more than , 多於 duōyú
+133,Numbers, more , 更 gèng
+134,Time, now , 现在 xiànzài
+135,Time, later , 以后 or 稍后， yǐhòu or shāohòu
+136,Time, before ," 以前, yǐqián"
+137,Time, morning ," 早上, zǎoshàng"
+138,Time, noon," 中午, zhōngwǔ"
+139,Time, afternoon ," 下午, xiàwǔ"
+140,Time, evening/night ," 晚上, wǎnshàng"
+141,Time, midnight, 半夜 bànyè or 午夜 (wǔyè)
+142,Time, What time is it? , 现在几点？ Xiànzài jǐ diǎn?
+143,Time, It is nine in the morning. , 早上9点钟。 Zǎoshàng jǐu diǎn zhōng.
+144,Time, Three-thirty PM. , 下午3点半. Xiàwǔ sān diǎn bàn.
+145,Time, 3:38 PM , 下午3点38分 Xiàwǔ sāndiǎn sānshíbā fēn.
+146,Time, _____ minute(s) , _____ 分钟 fēnzhōng
+147,Time, _____ hour(s) , _____ 小时 xiǎoshí
+148,Time, _____ day(s) , _____ 天 tiān
+149,Time, _____ week(s) , _____ 星期 xīngqī
+150,Time, _____ month(s) , _____ 月 yùe
+151,Time, _____ year(s) , _____ 年 nián
+152,Time, today , 今天 jīntiān
+153,Time, yesterday , 昨天 zuótiān
+154,Time, the day before yesterday, 前天qiăntiān
+155,Time, tomorrow , 明天 míngtiān
+156,Time, the day after tomorrow, 后天 hòutiān
+157,Time, this week , 这个星期 zhè ge xīngqī
+158,Time, last week , 上个星期 shàng ge xīngqī
+159,Time, next week , 下个星期 xià ge xīngqī
+160,Time, Sunday , 星期天 xīngqī tiān or xīngqī rì (星期日)
+161,Time, Monday , 星期一 xīngqī yī
+162,Time, Tuesday , 星期二 xīngqī èr
+163,Time, Wednesday , 星期三 xīngqī sān
+164,Time, Thursday , 星期四 xīngqī sì
+165,Time, Friday , 星期五 xīngqī wǔ
+166,Time, Saturday , 星期六 xīngqī liù
+167,Time, January ," 一月, yī yuè"
+168,Time, February ," 二月, èr yuè"
+169,Time, March ," 三月, sān yuè"
+170,Time, April ," 四月, sì yuè"
+171,Time, May ," 五月, wŭ yuè"
+172,Time, June ," 六月, liù yuè"
+173,Time, July ," 七月, qī yuè"
+174,Time, August ," 八月, bā yuè"
+175,Time, September ," 九月, jiŭ yuè"
+176,Time, October ," 十月, shí yuè"
+177,Time, November ," 十一月, shí yī yuè"
+178,Time, December ," 十二月, shí èr yuè"
+179,Time,6th January, 一月六号 (yī yuè liù hào) or 一月六日 (yī yuè liù rì)
+180,Time,25th December, 十二月二十五号 (shí-èr yuè èr-shí-wǔ hào)
+181,Colours, black , 黑色 hēi sè
+182,Colours, white , 白色 bái sè
+183,Colours, grey , 灰色 huī sè
+184,Colours, red , 红色 hóng sè
+185,Colours, blue , 蓝色 lán sè
+186,Colours, yellow , 黄色 huáng sè
+187,Colours, green , 绿色  lǜ sè 
+188,Colours, orange , 橙色 chéng sè
+189,Colours, purple , 紫色 zǐ sè
+190,Colours, brown ," 褐色 he sè,  棕色 zōng sè,  "
+191,Colours, gold , 金色 jīn se 
+192,Colours, Do you have it in another colour?  , 你们有没有另外颜色?  nǐmen yǒu méiyǒu lìngwài yánsè ?
+193,Transportation, How much is a ticket to _____? , 去______的票多少钱? qù _____ de piào duō shǎo qián?
+194,Transportation, Do you go to ___(the central station)? , 去不去___(火车站)? qù bù qù ___ (huǒ chē zhàn)?
+195,Transportation, How do I get to _____ ? , 怎么去_____ zěnme  qù _____? 
+196,Transportation, ...the train station? , ...火车站? ...huǒchē zhàn?
+197,Transportation, ...the bus station? , ...汽车总站? ...qìchē  zǒngzhàn?
+198,Transportation, ...the airport? , ...机场? ...jī chǎng?
+199,Transportation, street , 街 jiē;
+200,Transportation, road , 路 lù
+201,Transportation, avenue , 大道 dàjiē
+202,Transportation, Turn left. , 左边转弯 zuǒbiān zhuǎnwān/左拐zuǒguǎi
+203,Transportation, Turn right. , 右边转弯 yòubiān zhuǎnwān/右拐yòuguăi
+204,Transportation, Go straight, 一直走 yìzhízŏu  
+205,Transportation, I've reached my destination, 到了dàole                                    
+206,Transportation, U-turn, 掉头 diàotóu 
+207,Transportation, Taxi driver, 司机 sījī
+208,Transportation, Please use the meter machine,  请打表 qǐng dǎbiǎo                                        
+209,Transportation, Please turn up the aircon/heater, 请把空调开大一点。 qǐng kōngtiáo kāi dàdiǎn
+210,Transportation, left , 左边 zuǒbiān
+211,Transportation, right , 右边 yòubiān
+212,Transportation, straight ahead , 往前走 wǎngqián zǒu
+213,Transportation, north , 北 bĕi 
+214,Transportation, south , 南 nán 
+215,Transportation, east , 东 dōng
+216,Transportation, west , 西 xī
+217,Transportation," Take me to _____, please. ", 请您开到_____。 qǐng nín kāidào _____。
+218,Lodging, Do you have any rooms available? , 你们有房间吗？ Nǐmen yǒu fángjiān ma?
+219,Lodging, Does the room come with... , 有没有... Yǒu méiyǒu...
+220,Lodging, ...bedsheets? , ...床单？ ...chuángdān?
+221,Lodging, ...a bathroom? , ...浴室？ ...yùshì?
+222,Lodging, ...a telephone? , ...电话？ ...diànhuà?
+223,Lodging, ...a TV? , ...电视？ ...diànshì ?
+224,Lodging, I will stay for _____ night(s). , 我打算住_____夜。 Wǒ dǎsuàn zhù _____ yè.
+225,Lodging, Do you have a safe? , 你们有没有保险箱？ Nǐmen yǒu méiyǒu bǎoxiǎn xiāng?
+226,Lodging, Can you wake me at _____? , 请明天早上_____叫醒我。 Qǐng míngtiān zǎoshàng  _____ jiàoxǐng wǒ.
+227,Lodging, I want to check out. , 我现在要走了。 Wǒ xiànzài yào zǒu le.
+228,Money, pay, 付 fù
+229,Money, cash, 现钱 xiàn qián
+230,Money, credit card, 信用卡 xìn yòng kǎ
+231,Money, check, 支票　zhīpiào
+232,Eating," Can I look at the menu, please? ", 请给我看看菜单. qǐng gěi wǒ kànkan Càidān.
+233,Eating, Do you have an English menu? , 你有没有英文菜单？ nǐ yŏu méi yǒu yīngwén Càidān?
+234,Eating, I'm a vegetarian , 我吃素的  wǒ chī sù de 
+235,Eating, breakfast , 早饭 zǎofàn or 早餐 zǎocān
+236,Eating, lunch , 午饭 wǔfàn  or 中饭 zhōngfàn or 午餐 wǔcān
+237,Eating, supper , 晚饭 wǎnfàn or 晚餐 wǎncān
+238,Eating, beef , 牛肉  niúròu 
+239,Eating, pork, 猪肉  zhūròu，or sometimes simply '肉' ròu.
+240,Eating, mutton, 羊肉  yángròu
+241,Eating, chicken, 鸡  jī
+242,Eating, fish, 鱼  yú
+243,Eating, vegetable, 蔬菜 shūcài
+244,Eating, cheese , 奶酪  nǎilào
+245,Eating, eggs , 鸡蛋 jīdàn
+246,Eating, bread , 面包  miànbāo 
+247,Eating, noodles , 面条 miàntiáo 
+248,Eating, fried rice, 炒饭  chǎofàn
+249,Eating, dumpling, 饺子  jiǎozi
+250,Eating, rice , 米饭 mĭfàn  
+251,Eating, soup , 汤 tāng
+252,Eating, coffee , 咖啡 kāfēi
+253,Eating, coffee , black coffee: 黑咖啡 hēi kāfēi
+254,Eating, milk, 牛奶 niúnǎi
+255,Eating, sugar, 糖 táng
+256,Eating, tea (drink) , 茶 chá
+257,Eating, green tea, 绿茶 lǜ chá
+258,Eating, scented tea, 花茶 huāchá
+259,Eating, black tea, 红茶 hóngchá
+260,Eating, juice ," (水)果汁  (shuǐ)guǒzhī, literally 'fruit juice'."
+261,Eating, water , 水 shuĭ
+262,Eating, natural mineral water, 矿泉水 kuàngquán shuǐ
+263,Eating, beer , 啤酒 píjiŭ
+264,Eating, red/white wine , 红/白 葡萄 酒 hóng/bái pútáo jiŭ
+265,Eating, It was delicious. , 很好吃。 hěn hǎochī.
+266,Eating," The check, please. ", 请结帐。 qǐng jiézhàng.
+267,Bars, Do you serve alcohol? , 卖不卖酒？ ( mài búmài jiǔ?)
+268,Bars, Is there table service? , 有没有餐桌服务？ (yǒu méiyǒu cānzhuō fúwù?)
+269,Bars," A beer/two beers, please. ", 请给我一杯/两杯啤酒。 (qǐng gěiwǒ yìbēi/liǎngbēi píjiǔ)
+270,Bars," A glass of red/white wine, please. ", 请给我一杯红/白酒。 (qǐng gěi wǒ yìbēi hóng/bái jiǔ)
+271,Bars," A pint, please. ", 请给我一品脱。 (qǐng gěi wǒ yìpǐntuō)
+272,Bars," A bottle, please. ", 请给我一瓶。 (qǐng gěi wǒ yìpíng)
+273,Bars," _____ (hard liquor) and _____ (mixer), please. ", 请给我_____和_____。 (qǐng gěi wǒ _____ hé _____)
+274,Bars, whiskey , 威士忌 (wēishìjì)
+275,Bars, vodka , 伏特加 (fútèjiā)
+276,Bars, rum , 朗姆酒 (lángmǔ jiǔ)
+277,Bars, water , 水 (shuǐ)
+278,Bars, mineral spring (i.e. bottled) water , 矿泉水 (kuàngquánshuǐ)
+279,Bars, boiled water, 开水 (kāishuǐ)
+280,Bars, club soda , 苏打水 (sūdǎshuǐ)
+281,Bars, tonic water , 通宁水 (tōngníng shuǐ)/汤力水 (tānglì shuǐ)
+282,Bars, orange juice , 柳橙汁 （liǔchéng zhī)
+283,Bars, Coke (soda) , 可乐 (kělè)
+284,Bars, Do you have any bar snacks? , 有没有吧台小吃？ (yǒu méiyǒu bātái xiaochi?)
+285,Bars," One more, please. ", 请再给我一个。 (qǐng zài gěi wǒ yígè')
+286,Bars," Another round, please. ", 请再来一轮。 (qǐng zàilái yìlún)
+287,Bars, When is closing time? , 几点打烊/关门？ (jǐdiǎn dǎyáng/guānmén?)
+288,Bars, Where is the toilet? , 厕所在哪里？ (cèsuǒ zài nǎli?)
+289,Bars, Where is the washingroom? , 洗手间在哪儿？（xǐshǒujiān zài nǎr?）
+290,Shopping, Do you have this in my size? , 有没有我的尺寸？ (yǒu méiyǒu wǒde chǐcùn?)
+291,Shopping, How much is this? , 多少钱？ (duōshǎo qián?)
+292,Shopping, That's too expensive. , 太贵了。 (tài guì le)
+293,Shopping, Would you take _____? , _____元可以吗？ (_____ yuán kěyǐ ma?)
+294,Shopping, expensive , 贵 (guì)
+295,Shopping, cheap , 便宜 (piányi)
+296,Shopping, I can't afford it. , 我付不起。 (wǒ fù bù qǐ)
+297,Shopping, I don't want it. , 我不要。 (wǒ bú yào)
+298,Shopping, You're cheating me. , 你在骗我。 (nǐ zài piàn wǒ) Use with caution!
+299,Shopping, I'm not interested. , 我没有兴趣。 (wǒ méiyǒu xìngqù)
+300,Shopping," OK, I'll take it. ", 我要买这个。 (wǒ yào mǎi zhège)
+301,Shopping, Please provide me with a carrier-bag. , 请给我袋子。 (qǐng gěi wǒ dàizi)
+302,Shopping, Do you ship (overseas)? , 可以邮寄到海外吗？ (kěyǐ yóujì dào hǎiwài ma?)
+303,Shopping, I need... , 我要_____ (wǒ yào _____)
+304,Shopping, ...toothpaste. , 牙膏 (yágāo)
+305,Shopping, ...a toothbrush. , 牙刷 (yáshuā)
+306,Shopping, ...tampons. , 卫生棉条 (wèishēng miántiáo)
+307,Shopping, ...soap. , 肥皂 (féizào)
+308,Shopping, ...shampoo. , 洗发精 (xǐfàjīng) 
+309,Shopping," ...pain reliever. (e.g., aspirin or ibuprofen) ", 镇痛剂 (zhèntòngjì)
+310,Shopping, ...cold medicine. , 感冒药 (gǎnmào yào)
+311,Shopping, ...stomach medicine. , 胃肠药 (wèicháng yào)
+312,Shopping, ...a razor. , 剃刀 (tìdāo)
+313,Shopping, ...an umbrella. , 雨伞 (yǔsǎn)
+314,Shopping, ...sunblock lotion. , 防晒油 (fángshàiyóu)
+315,Shopping, ...a postcard. , 明信片 (míngxìnpiàn)
+316,Shopping, ...postage stamps. , 邮票 (yóupiào)
+317,Shopping, ...batteries. , 电池 (diànchí)
+318,Shopping, ...writing paper. , 纸 (zhǐ)
+319,Shopping, ...a pen. , 笔 (bǐ)
+320,Shopping, ...a pencil. , 铅笔 (qiānbǐ)
+321,Shopping, ...glasses. , 眼镜 (yǎnjìng)
+322,Shopping, ...English-language books. , 英文书 (Yīngwén shū)
+323,Shopping, ...English-language magazines. , 英文杂志 (Yīngwén zázhì)
+324,Shopping, ...an English-language newspaper. , 英文报纸 (Yīngwén bàozhǐ)
+325,Shopping, ...a Chinese-English dictionary. , 汉英词典 (Hàn-Yīng cídiǎn)
+326,Shopping, ...an English-Chinese dictionary. , 英汉词典 (Yīng-Hàn cídiǎn)
+327,Driving, I want to rent a car. , 我想要租车。 (wǒ xiǎngyào zūchē)
+328,Driving, Can I get insurance? , 我可以买保险吗？ (wǒ kěyǐ mǎi bǎoxiǎn ma?)
+329,Driving, stop (on a street sign) , 停 (tíng)
+330,Driving, one way , 单行道 (dānxíngdào)
+331,Driving, yield , 让路 (rànglù)
+332,Driving, no parking , 禁止停车 (jìnzhǐ tíngchē
+333,Driving, speed limit , 速度限制 (sùdù xiànzhì)
+334,Driving, gas (petrol) station , 加油站 (jiāyóuzhàn)
+335,Driving, petrol , 汽油 (qìyóu)
+336,Driving, diesel , 柴油 (cháiyóu)
+337,Authority, I haven't done anything wrong. , 我没有做错事。 (wǒ méiyǒu zuòcuò shì)
+338,Authority, It was a misunderstanding. , 这是误会。 (zhè shì wùhuì)
+339,Authority, Where are you taking me? , 你带我去哪里？ (nǐ dài wǒ qù nǎlǐ?)
+340,Authority, Am I under arrest? , 我被捕了吗？ (wǒ bèibǔle ma?)
+341,Authority, I am an American/Australian/British/Canadian citizen. , 我是 美国/澳洲/英国/加拿大 公民。 (wǒ shì měiguó/àozhōu/yīngguó/jiānádà gōngmín)
+342,Authority, I want to talk to the American/Australian/British/Canadian embassy/consulate. , 我希望跟 美国/澳洲/英国/加拿大 的 大使馆/领事馆 联系。 (wǒ xīwàng gēn měiguó/àozhōu/yīngguó/jiānádà de dàshǐguǎn/lǐngshìguǎn liánxì)
+343,Authority, I want to talk to a lawyer. , 我希望跟律师联系。 (wǒ xīwàng gēn lǜshī liánxì)
+344,Authority, Can I just pay a fine now? , 我可以支付罚款吗？ (wǒ kěyǐ zhī fù fákuǎn ma?)
+345,Telephone and the Internet, Can I make international calls here? , 可以打国际电话吗? (kěyǐ dǎ guójì diànhuà ma?)
+346,Telephone and the Internet, How much is it to America/Australia/Britain/Canada? , 打给 美国/澳洲/英国/加拿大 是多少钱? (dǎgěi měiguó/àozhōu/yīngguó/jiānádà shì duōshǎo qián?)
+347,Telephone and the Internet, Where can I find an Internet cafe? , 哪里有网吧? (nǎlǐ yǒu wǎng ba?)
+348,Telephone and the Internet, How much is it per hour? , 一小时是多少钱?  (yī xiǎoshí shì duōshǎo qián?)
