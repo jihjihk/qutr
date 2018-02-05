@@ -1,7 +1,6 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * An messaging App made with React Native and Firebase
+ * Adapted from this example: https://github.com/rubygarage/react-native-firebase-chat
  */
 
 import React, { Component } from 'react';
