@@ -1,38 +1,37 @@
-import React, { Component } from 'react'
-import { View, TextInput, TouchableOpacity, Image, Alert } from 'react-native'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { View, TextInput, TouchableOpacity, Image, Alert } from 'react-native';
+import PropTypes from 'prop-types';
 
-import translations from '../../../../i18n'
+import translations from '../../../../i18n';
 
-import styles from './Styles'
+import styles from './Styles';
 
-const OPACITY_ENABLED = 1.0
-const OPACITY_DISABLED = 0.2
+const OPACITY_ENABLED = 1.0;
+const OPACITY_DISABLED = 0.2;
 
 class MessageFormComponent extends Component {
-
   constructor() {
-    super()
+    super();
 
     this.handleMessageChange = (message) => {
-      this.props.updateMessage(message)
-    }
+      this.props.updateMessage(message);
+    };
 
     this.handleButtonPress = () => {
-      this.props.sendMessage(this.props.message)
-    }
+      this.props.sendMessage(this.props.message);
+    };
   }
 
   componentDidUpdate(prevProps) {
     if (!prevProps.sendingError && this.props.sendingError) {
-      Alert.alert(translations.t('error'), this.props.sendingError)
+      Alert.alert(translations.t('error'), this.props.sendingError);
     }
   }
 
   render() {
-    const sending = this.props.sending
-    const isButtonDisabled = sending || this.props.message.trim().length == 0
-    const opacity = isButtonDisabled ? OPACITY_DISABLED : OPACITY_ENABLED
+    const sending = this.props.sending;
+    const isButtonDisabled = sending || this.props.message.trim().length == 0;
+    const opacity = isButtonDisabled ? OPACITY_DISABLED : OPACITY_ENABLED;
 
     return (
       <View style={styles.container}>
@@ -68,6 +67,6 @@ MessageFormComponent.propTypes = {
   updateMessage: PropTypes.func.isRequired,
   message: PropTypes.string.isRequired,
   sendingError: PropTypes.string
-}
+};
 
-export default MessageFormComponent
+export default MessageFormComponent;

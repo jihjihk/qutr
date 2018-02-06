@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { TouchableOpacity, Image } from 'react-native'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TouchableOpacity, Image } from 'react-native';
 
-import styles from './Styles'
+import styles from './Styles';
 
 const LogoutButtonComponent = props =>
   <TouchableOpacity
@@ -14,6 +14,6 @@ const LogoutButtonComponent = props =>
 
 LogoutButtonComponent.propTypes = {
   logout: PropTypes.func.isRequired
-}
+};
 
-export default LogoutButtonComponent
+export default LogoutButtonComponent;

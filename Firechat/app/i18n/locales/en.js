@@ -12,5 +12,5 @@ export default {
 
   you: 'You',
 
-  placeholder: 'There are no messages yet',
-}
+  placeholder: 'There are no messages yet'
+};

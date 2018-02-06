@@ -1,19 +1,20 @@
-import React, { Component } from 'react'
-import { View, Text } from 'react-native'
-import PropTypes from 'prop-types'
-import relativeDate from 'relative-date'
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+import PropTypes from 'prop-types';
+import relativeDate from 'relative-date';
 
-import styles from './Styles'
-import translations from '../../../../../i18n'
+import styles from './Styles';
 
-const MESSAGE_TEXT_MARGIN = 50
+import translations from '../../../../../i18n';
+
+const MESSAGE_TEXT_MARGIN = 50;
 
 const MessageRowComponent = props => {
-  const isCurrentUser = props.isCurrentUser
-  const alignItems = isCurrentUser ? 'flex-end' : 'flex-start'
-  const margin = isCurrentUser ? {marginLeft: MESSAGE_TEXT_MARGIN} : {marginRight: MESSAGE_TEXT_MARGIN}
-  const username = isCurrentUser ? translations.t('you') : props.message.user.email
-  const date = relativeDate(new Date(props.message.createdAt))
+  const isCurrentUser = props.isCurrentUser;
+  const alignItems = isCurrentUser ? 'flex-end' : 'flex-start';
+  const margin = isCurrentUser ? {marginLeft: MESSAGE_TEXT_MARGIN} : {marginRight: MESSAGE_TEXT_MARGIN};
+  const username = isCurrentUser ? translations.t('you') : props.message.user.email;
+  const date = relativeDate(new Date(props.message.createdAt));
   return (
     <View
       style={styles.container}>
@@ -29,8 +30,8 @@ const MessageRowComponent = props => {
         </Text>
       </View>
     </View>
-  )
-}
+  );
+};
 
 MessageRowComponent.propTypes = {
   isCurrentUser: PropTypes.bool.isRequired,
@@ -41,6 +42,6 @@ MessageRowComponent.propTypes = {
       email: PropTypes.string.isRequired
     })
   })
-}
+};
 
-export default MessageRowComponent
+export default MessageRowComponent;

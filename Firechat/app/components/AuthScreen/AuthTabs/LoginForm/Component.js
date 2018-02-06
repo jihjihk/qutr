@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import BasicForm from '../BasicForm'
+import BasicForm from '../BasicForm';
 
-import translations from '../../../../i18n'
+import translations from '../../../../i18n';
 
 const LoginFormComponent = props =>
   <BasicForm
@@ -11,7 +11,7 @@ const LoginFormComponent = props =>
     onButtonPress={props.login} />
 
 LoginFormComponent.propTypes = {
-  login: PropTypes.func.isRequired,
-}
+  login: PropTypes.func.isRequired
+};
 
-export default LoginFormComponent
+export default LoginFormComponent;

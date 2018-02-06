@@ -1,16 +1,15 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import { loadMessages } from '../../../../store/chat/actions'
-import { getChatItems } from '../../../../store/chat/selectors'
+import { loadMessages } from '../../../../store/chat/actions';
+import { getChatItems } from '../../../../store/chat/selectors';
 
-import MessageListComponent from './Component'
+import MessageListComponent from './Component';
 
 class MessagesListContainer extends Component {
-
   componentDidMount() {
-    this.props.loadMessages()
+    this.props.loadMessages();
   }
 
   render() {
@@ -18,23 +17,23 @@ class MessagesListContainer extends Component {
     return (
       <MessageListComponent
         data={data} />
-    )
+    );
   }
 }
 
 const mapStateToProps = state => ({
   messages: state.chat.messages,
   error: state.chat.loadMessagesError
-})
+});
 
 const mapDispatchToProps = {
   loadMessages
-}
+};
 
 MessagesListContainer.propTypes = {
   messages: PropTypes.object,
   error: PropTypes.string,
   loadMessages: PropTypes.func.isRequired
-}
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(MessagesListContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(MessagesListContainer);

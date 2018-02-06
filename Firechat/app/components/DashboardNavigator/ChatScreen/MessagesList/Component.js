@@ -1,23 +1,22 @@
-import React, { Component } from 'react'
-import { FlatList, Text } from 'react-native'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { FlatList, Text } from 'react-native';
+import PropTypes from 'prop-types';
 
-import MessageRow from './MessageRow'
+import MessageRow from './MessageRow';
 
-import translations from '../../../../i18n'
+import translations from '../../../../i18n';
 
-import styles from './Styles'
+import styles from './Styles';
 
-const ITEM_HEIGHT = 50
+const ITEM_HEIGHT = 50;
 
 class MessageListComponent extends Component {
-
   constructor() {
-    super()
+    super();
 
     this.renderItem = ({item}) => {
-      return <MessageRow message={item} />
-    }
+      return <MessageRow message={item} />;
+    };
 
     this.emptyList = () => {
       return (
@@ -25,12 +24,12 @@ class MessageListComponent extends Component {
           style={styles.placeholder}>
           {translations.t('placeholder')}
         </Text>
-      )
-    }
+      );
+    };
 
     this.itemLayout = (data, index) => (
       {length: ITEM_HEIGHT, offset: ITEM_HEIGHT * index, index}
-    )
+    );
   }
 
   componentDidUpdate() {
@@ -40,8 +39,8 @@ class MessageListComponent extends Component {
   }
 
   render() {
-    const data = this.props.data
-    const contentContainerStyle = data.length ? null : styles.flatlistContainerStyle
+    const data = this.props.data;
+    const contentContainerStyle = data.length ? null : styles.flatlistContainerStyle;
     return (
       <FlatList
         ref={(c) => { this.flatList = c }}
@@ -53,12 +52,12 @@ class MessageListComponent extends Component {
         getItemLayout={this.itemLayout}
         ListEmptyComponent={this.emptyList}
         inverted />
-    )
+    );
   }
 }
 
 MessageListComponent.propTypes = {
-  data: PropTypes.array.isRequired,
-}
+  data: PropTypes.array.isRequired
+};
 
-export default MessageListComponent
+export default MessageListComponent;

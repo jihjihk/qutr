@@ -1,10 +1,10 @@
-import React from 'react'
-import { View } from 'react-native'
+import React from 'react';
+import { View } from 'react-native';
 
-import MessagesList from './MessagesList'
-import MessageForm from './MessageForm'
+import MessagesList from './MessagesList';
+import MessageForm from './MessageForm';
 
-import styles from './Styles'
+import styles from './Styles';
 
 const ChatScreenComponent = () =>
   <View style={styles.container}>
@@ -12,4 +12,4 @@ const ChatScreenComponent = () =>
     <MessageForm />
   </View>
 
-export default ChatScreenComponent
+export default ChatScreenComponent;

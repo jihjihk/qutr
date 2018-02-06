@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import BasicForm from '../BasicForm'
+import BasicForm from '../BasicForm';
 
-import translations from '../../../../i18n'
+import translations from '../../../../i18n';
 
 const SignUpFormComponent = props =>
   <BasicForm
@@ -12,6 +12,6 @@ const SignUpFormComponent = props =>
 
 SignUpFormComponent.propTypes = {
   signup: PropTypes.func.isRequired
-}
+};
 
-export default SignUpFormComponent
+export default SignUpFormComponent;

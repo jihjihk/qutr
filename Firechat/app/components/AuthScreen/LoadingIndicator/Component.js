@@ -1,11 +1,11 @@
-import React from 'react'
-import { View, ActivityIndicator } from 'react-native'
+import React from 'react';
+import { View, ActivityIndicator } from 'react-native';
 
-import styles from './Styles'
+import styles from './Styles';
 
 const LoadingIndicator = () =>
   <View style={styles.loadingContainer}>
     <ActivityIndicator style={styles.loadingIndicator} />
   </View>
 
-export default LoadingIndicator
+export default LoadingIndicator;

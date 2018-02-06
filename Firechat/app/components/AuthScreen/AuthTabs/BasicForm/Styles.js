@@ -1,17 +1,17 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'stretch',
-    justifyContent:'center',
+    justifyContent:'center'
   },
   textInput: {
     backgroundColor: '#ffffff',
     height: 40,
     margin: 10,
     borderRadius: 5,
-    padding: 3,
+    padding: 3
   },
   button: {
     backgroundColor: '#88cc88',
@@ -20,11 +20,11 @@ export default StyleSheet.create({
     borderRadius: 5,
     padding: 3,
     alignItems: 'center',
-    justifyContent:'center',
+    justifyContent:'center'
   },
   buttonTitle: {
     color: '#ffffff',
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: 'bold'
   }
-})
+});

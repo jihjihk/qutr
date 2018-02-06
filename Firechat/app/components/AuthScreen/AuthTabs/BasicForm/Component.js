@@ -1,28 +1,27 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { View, TextInput, TouchableOpacity, Text } from 'react-native'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { View, TextInput, TouchableOpacity, Text } from 'react-native';
 
-import translations from '../../../../i18n'
+import translations from '../../../../i18n';
 
-import styles from './Styles'
+import styles from './Styles';
 
 class BasicFormComponent extends Component {
-
   constructor(props) {
     super(props);
     this.state = { email: '', password: '', };
 
     this.handleEmailChange = (email) => {
-      this.setState({email: email})
-    }
+      this.setState({email: email});
+    };
 
     this.handlePasswordChange = (password) => {
-      this.setState({password: password})
-    }
+      this.setState({password: password});
+    };
 
     this.handleButtonPress = () => {
-      this.props.onButtonPress(this.state.email, this.state.password)
-    }
+      this.props.onButtonPress(this.state.email, this.state.password);
+    };
   }
 
   render() {
@@ -58,13 +57,13 @@ class BasicFormComponent extends Component {
         </TouchableOpacity>
 
       </View>
-    )
+    );
   }
 }
 
 BasicFormComponent.propTypes = {
   buttonTitle: PropTypes.string.isRequired,
   onButtonPress: PropTypes.func.isRequired,
-}
+};
 
-export default BasicFormComponent
+export default BasicFormComponent;

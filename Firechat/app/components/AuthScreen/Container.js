@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import AuthScreenComponent from './Component'
+import AuthScreenComponent from './Component';
 
 const AuthScreenContainer = props =>
   <AuthScreenComponent
@@ -11,12 +11,12 @@ const AuthScreenContainer = props =>
 
 const mapStateToProps = state => ({
   loading: state.session.loading,
-  error: state.session.error,
-})
+  error: state.session.error
+});
 
 AuthScreenContainer.propTypes = {
   loading: PropTypes.bool.isRequired,
-  error: PropTypes.string,
-}
+  error: PropTypes.string
+};
 
-export default connect(mapStateToProps)(AuthScreenContainer)
+export default connect(mapStateToProps)(AuthScreenContainer);

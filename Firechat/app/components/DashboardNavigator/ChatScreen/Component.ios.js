@@ -1,10 +1,10 @@
-import React from 'react'
-import { KeyboardAvoidingView } from 'react-native'
+import React from 'react';
+import { KeyboardAvoidingView } from 'react-native';
 
-import MessagesList from './MessagesList'
-import MessageForm from './MessageForm'
+import MessagesList from './MessagesList';
+import MessageForm from './MessageForm';
 
-import styles from './Styles'
+import styles from './Styles';
 
 const ChatScreenComponent = () =>
   <KeyboardAvoidingView
@@ -16,4 +16,4 @@ const ChatScreenComponent = () =>
     <MessageForm />
   </KeyboardAvoidingView>
 
-export default ChatScreenComponent
+export default ChatScreenComponent;

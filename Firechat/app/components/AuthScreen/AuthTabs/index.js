@@ -1,16 +1,16 @@
-import { TabNavigator } from 'react-navigation'
+import { TabNavigator } from 'react-navigation';
 
-import LoginForm from './LoginForm'
-import SignUpForm from './SignUpForm'
+import LoginForm from './LoginForm';
+import SignUpForm from './SignUpForm';
 
 const routeConfigs = {
   Login: {
-    screen: LoginForm,
+    screen: LoginForm
   },
   SignUp: {
-    screen: SignUpForm,
-  },
-}
+    screen: SignUpForm
+  }
+};
 
 const tabBarOptions = {
   tabBarOptions: {
@@ -19,13 +19,13 @@ const tabBarOptions = {
     showIcon: true,
     scrollEnabled: false,
     indicatorStyle: {
-      display: 'none',
+      display: 'none'
     },
     style: {
-      backgroundColor: '#ffffff',
-    },
+      backgroundColor: '#ffffff'
+    }
   },
   tabBarPosition: 'bottom'
 }
 
-export default TabNavigator(routeConfigs, tabBarOptions)
+export default TabNavigator(routeConfigs, tabBarOptions);

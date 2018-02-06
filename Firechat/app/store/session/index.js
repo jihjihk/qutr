@@ -1,3 +1,3 @@
-export * from './actions'
+export * from './actions';
 
-export { default } from './reducer'
+export { default } from './reducer';
