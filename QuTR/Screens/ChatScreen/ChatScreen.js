@@ -4,7 +4,8 @@ import {
   View,
   ScrollView,
   Keyboard,
-  BackHandler
+  BackHandler,
+  Alert
 } from 'react-native';
 import { Container, Title, Text, } from 'native-base';
 import { StackNavigator } from 'react-navigation';
@@ -98,9 +99,10 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   selectSuggestion = (value) => {
-    this.refs.mi.setText(value);
-    this.textChanged(value);
-    this.enableSend();
+    Alert.alert(value, "Hi");
+    // this.refs.mi.setText(value);
+    // this.textChanged(value);
+    // this.enableSend();
   }
 
   backHandler() {
@@ -142,9 +144,7 @@ export default class ChatScreen extends Component<{}>  {
     if (this.state.conversation==null) return null;
     return (
       <Container ref="container" style={[styles.Container]}>
-        <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>} 
-                left={<ToolbarButton name='md-settings' 
-                                     onPress={() => this.props.navigation.navigate('Profile', {realm: this.props.navigation.state.params.realm})}/>}/>
+        <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>}/>
         <ChatWindow ref="cw" messages = {this.getLastMessages(15)} picture = {this.props.navigation.state.params.picture} myPicture ={this.state.user.picture}>
         </ChatWindow>
 
