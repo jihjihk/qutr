@@ -1,3 +1,27 @@
+class PhraseNode:
+    def __init__(self, phrase):
+        self.phrase = phrase
+        self.rank = 0
+
+    def increaseRank(self):
+        self.rank += 1
+
+    def getPhrase(self):
+        return self.phrase
+
+    def getRank(self):
+        return self.rank
+
+class PhraseDictionary:
+    def __init__(self):
+        self.phrases = {}
+
+    def insertPhraseNode(self, cID, node):
+        self.phrases[cID] = node
+
+    def getPhraseNode(self, cID):
+        return self.phrases[cID] if cID in self.phrases else None
+
 class TrieNode:
     def __init__(self):
         self.children = {}
@@ -31,7 +55,7 @@ class Trie:
         return current.endOfWord
 
     def wordSuggestions(self, prefix):
-        suggestions = []
+        suggestions = {}
         penalty = False
         current = self.root
         prefixLen = len(prefix)
@@ -42,7 +66,6 @@ class Trie:
                 pre = prefix[i:]    # Search for this substring in potential suggestions
                 break
             current = current.children[c]
-
         # BFS to print all words under a given prefix
         queue = []
         queue.append(current)
@@ -51,12 +74,12 @@ class Trie:
             if node.endOfWord:
                 # If there is no spelling mistake, add suggestion normally
                 if not penalty:
-                    suggestions.append(node.word)
+                    suggestions[node.word] = node.children[" "].concepts
                     node.rank += 1
                 else:
                     # Otherwise, allow for only edit distance penalty
                     if abs(len(node.word) - prefixLen) <= 1 and pre[1:] in node.word:
-                            suggestions.append(node.word)
+                            suggestions[node.word] = node.children[" "].concepts
                             node.rank += 1
 
             for child in node.children:
@@ -65,6 +88,32 @@ class Trie:
 
         # Sort suggestions based on rank here
         return suggestions
+
+    def insertPhrase(self, cID, phrase):
+        current = self.root
+        words = phrase.split(" ")
+        for w in words:
+            for c in w:
+                if c not in current.children:
+                    node = TrieNode()
+                    current.children[c] = node
+                current = current.children[c]
+            current.endOfWord = True
+            current.word = w
+            #print("stored: " + w)
+            # Add space to the end of every node and store the concept ID
+            if " " not in current.children:
+                current.children[" "] = TrieNode()
+            current.children[" "].concepts.append(cID)
+            #print(current.children[" "].concepts)
+            current = self.root # reset at root for word
+
+    def suggConcepts(self, prefix):
+        inputWords = prefix.split(" ")
+        concepts = {}
+        if len(inputWords) == 1:    # If user inputs one word thus far
+            sugg = self.wordSuggestions(inputWords[0])
+            return sugg
 
     # Implement Trie Print function
 
@@ -79,41 +128,36 @@ def edits1(word):
     return set(deletes + transposes + replaces + inserts)
 
 def main():
-    engDict = [
-        "Hello",
-        "Hi",
-        "Good Morning",
-        "Good Evening",
-        "What would you like?",
-        "What is your name?",
-        "My name is *",
-        "Nice to meet you",
-        "good",
-        "very *",
-        "Today",
-        "We have *",
-        "Orange",
-        "Apple",
-        "Mango",
-        "How much are *?",
-        "What is the price?",
-        "* dollars",
-        "per *",
-        "I would like *",
-        "* kilograms",
-        "please",
-        "okay"
-    ]
+    engTrie = Trie() # Main Trie
+    globalDict = PhraseDictionary() # Main (User) Dictionary
 
-    engTrie = Trie()
-    engTrie.insert("hat")
-    engTrie.insert("hello")
-    engTrie.insert("help")
-    engTrie.insert("helper")
-    engTrie.insert("hey")
-    engTrie.insert("hell")
-    engTrie.insert("helm")
-    engTrie.insert("helmet")
+    # Parsing tsv input and adding words to Trie & Global Dict
+    inputFile = open("input.tsv", "r")
+    for line in inputFile:
+        l = line.split("\t")
+        cID = l[0]
+        phrase = l[1].lower()
+        globalDict.insertPhraseNode(cID, PhraseNode(phrase))
+        engTrie.insertPhrase(cID, phrase)
+        
+    while True:
+        word = input("Please enter a word or quit() to exit: ")
+        if word != 'quit()':
+            print(engTrie.suggConcepts(word.lower()))
+        else:
+            break
+
+    inputFile.close()
+
+    # engTrie = Trie()
+    # engTrie.insert("hat")
+    # engTrie.insert("hello")
+    # engTrie.insert("help")
+    # engTrie.insert("helper")
+    # engTrie.insert("hey")
+    # engTrie.insert("hell")
+    # engTrie.insert("helm")
+    # engTrie.insert("helmet")
 
     # for phrase in engDict:
     #     words = phrase.lower().split()
@@ -123,22 +167,22 @@ def main():
     #         for word in words:
     #             engTrie.insert(word)
 
-    while True:
-    	word = input("Please enter a word or quit() to exit: ");
-    	if word != 'quit()':
-            print(engTrie.wordSuggestions(word.lower()))
-                # edits = edits1(word)
-                # print(edits)
-                # corr = False
-                # for e in edits:
-                #     if engTrie.search(e):
-                #         print("\nDid you mean \"" + e + "\"?\n")
-                #         corr = True
-                #         break
-                # if not corr:
-                #     print("\nWord not found.\n")
-    	else:
-    		break
+    # while True:
+    # 	word = input("Please enter a word or quit() to exit: ");
+    # 	if word != 'quit()':
+    #         print(engTrie.wordSuggestions(word.lower()))
+    #             # edits = edits1(word)
+    #             # print(edits)
+    #             # corr = False
+    #             # for e in edits:
+    #             #     if engTrie.search(e):
+    #             #         print("\nDid you mean \"" + e + "\"?\n")
+    #             #         corr = True
+    #             #         break
+    #             # if not corr:
+    #             #     print("\nWord not found.\n")
+    # 	else:
+    # 		break
 
 main()
 
