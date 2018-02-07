@@ -6,7 +6,6 @@ import {
 } from 'react-native';
 import { Container, Title, Text, } from 'native-base';
 import { StackNavigator } from 'react-navigation';
-import ActionButton from 'react-native-action-button';
 
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js'
 import Header from '../../Components/header/Header.js';
@@ -31,24 +30,11 @@ export default class ConversationsScreen extends Component<{}>  {
 
   constructor(props) {
     super(props);
-    this.state= {realm: null,
-                 user: null};
+    this.state= {realm: this.props.screenProps.realm,
+                 user: this.props.screenProps.user};
   }
 
   static navigationOptions = { header: null };
-
-  componentWillMount () {
-    Realm.open({
-      schema: [UserSchema, MessageSchema, ConversationSchema],
-    }).then(realm => {
-      this.setState({realm: realm, user: realm.objects('User')[0]});
-    }).catch(error => {
-      console.log(error);
-    });
-  }
-
-  componentWillUnmount()  {
-  }
 
   getLastMessage(conversation) {
 
@@ -73,6 +59,7 @@ export default class ConversationsScreen extends Component<{}>  {
 
         conversations.push(<Conversation navigation = {this.props.navigation}
                                          realm = {this.state.realm}
+                                         user = {this.state.user}
                                          refresh = {this.refresh.bind(this)}
                                          key={i}
                                          sender = {conversation.correspondent.name}                                          
@@ -85,17 +72,9 @@ export default class ConversationsScreen extends Component<{}>  {
 
     return (
       <Container ref="container" style={[styles.Container]}>
-      <Header center={<Title style={[styles.Title]}>My conversations</Title>} 
-              left={<ToolbarButton name='md-settings' 
-                                   onPress={() => {this.props.navigation.navigate('Profile', {realm: this.state.realm})}}/>}/>
         <ConversationsWindow ref="cw">
           {conversations}
         </ConversationsWindow>
-        <ActionButton onPress={() => {this.props.navigation.navigate('Connection')}} 
-                      buttonColor = {PRIMARY_DARK} 
-                      buttonTextStyle={{color: SECONDARY_DARK}}
-                      nativeFeedbackRippleColor = {PRIMARY}
-                      fixNativeFeedbackRadius = {true}></ActionButton>
       </Container>
    );
   }

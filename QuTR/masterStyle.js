@@ -1,9 +1,9 @@
-const PRIMARY = '#4A148C';
-const PRIMARY_LIGHT='#7c43bd';
-const PRIMARY_DARK='#12005e';
-const SECONDARY = '#FFF8E1';
-const SECONDARY_LIGHT = '#ffffff';
-const SECONDARY_DARK = '#ccc5af';
+const PRIMARY = '#3A5AB2';
+const PRIMARY_LIGHT='#7086e5';
+const PRIMARY_DARK='#003282';
+const SECONDARY = 'white';
+const SECONDARY_LIGHT = 'white';
+const SECONDARY_DARK = 'white';
 const BLACK = 'black';
 const WHITE = 'white';
 const GREEN = 'green';
