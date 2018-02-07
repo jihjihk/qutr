@@ -17,4 +17,6 @@ Clone the repo: `git clone`. Run `npm install`. In order to run two simulators o
 
 ### Useful References
 * https://medium.com/react-native-development/tutorial-build-a-chat-app-with-firebase-and-redux-ca76a910fab7
+* https://school.shoutem.com/lectures/chat-app-firebase-redux-react-native/
+* https://www.firebase.com/docs/web/guide/understanding-data.html
 * 
