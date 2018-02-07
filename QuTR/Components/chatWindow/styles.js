@@ -3,7 +3,9 @@ import { StyleSheet } from 'react-native';
 import {
   PRIMARY,
   PRIMARY_DARK,
+  PRIMARY_LIGHT,
   SECONDARY_DARK,
+  SECONDARY_LIGHT,
   WHITE,
   BLACK,
 } from '../../masterStyle.js';
@@ -34,12 +36,12 @@ export default StyleSheet.create({
     backgroundColor: 'transparent',
   },
   myMessage: {
-    backgroundColor: PRIMARY_DARK,
-    color: WHITE,
+    backgroundColor: PRIMARY_LIGHT,
+    color: SECONDARY_LIGHT,
   },
   theirMessage: {
-    backgroundColor: SECONDARY_DARK,
-    color: BLACK,
+    backgroundColor: PRIMARY_DARK,
+    color: SECONDARY_DARK,
   },
   myMessageView: {
     alignSelf: 'flex-end', 
