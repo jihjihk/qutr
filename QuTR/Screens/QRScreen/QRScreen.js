@@ -14,6 +14,9 @@ import styles from './styles.js';
 import { BLACK, 
          PRIMARY_LIGHT } from '../../masterStyle.js'
 
+/* Instead of the QR scanner, start with a QR code integrated with the app's logo - see QR Starbucks logo example */
+/* FIle an Invention Report */
+
 export default class QRScreen extends Component<{}>  {
 
   constructor(props) {

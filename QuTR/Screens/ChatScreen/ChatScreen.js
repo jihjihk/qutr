@@ -99,10 +99,9 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   selectSuggestion = (value) => {
-    Alert.alert(value, "Hi");
-    // this.refs.mi.setText(value);
-    // this.textChanged(value);
-    // this.enableSend();
+    this.refs.mi.setText(value);
+    this.textChanged(value);
+    this.enableSend();
   }
 
   backHandler() {

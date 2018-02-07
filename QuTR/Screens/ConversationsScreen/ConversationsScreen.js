@@ -3,6 +3,7 @@ import {
   View,
   ScrollView,
   Keyboard,
+  Alert
 } from 'react-native';
 import { Container, Title, Text, } from 'native-base';
 import { StackNavigator } from 'react-navigation';
@@ -26,12 +27,15 @@ const pictures = {"MERCHANT": require("../../Pictures/merchant.png"),
                   "COUNTER ATTENDANT": require("../../Pictures/counter.png"),
                   "TAXI DRIVER": require("../../Pictures/driver.jpg")}
 
+var self;
+
 export default class ConversationsScreen extends Component<{}>  {
 
   constructor(props) {
     super(props);
     this.state= {realm: this.props.screenProps.realm,
                  user: this.props.screenProps.user};
+    self = this;
   }
 
   static navigationOptions = { header: null };
@@ -43,7 +47,7 @@ export default class ConversationsScreen extends Component<{}>  {
   }
 
   refresh() {
-    this.setState({});
+    self.setState({});
   }
 
   render() {

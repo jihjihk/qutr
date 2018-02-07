@@ -99,13 +99,13 @@ export default class App extends Component<{}> {
             tabBarUnderlineStyle = {{backgroundColor: SECONDARY}}>
         <Tab heading={<TabHeading style={{backgroundColor: PRIMARY}}><Icon name="qrcode-scan" type='material-community' color={SECONDARY}></Icon></TabHeading>}>
           <Tabs initialPage={0} locked = {true}>
-            <Tab heading={<TabHeading style={{backgroundColor: PRIMARY_DARK}}><Icon name="md-qr-scanner" type='ionicon' color={SECONDARY_DARK}></Icon></TabHeading>}>
-              <QRScanner>
-              </QRScanner>
-            </Tab>
             <Tab heading={<TabHeading style={{backgroundColor: PRIMARY_DARK}}><Icon name="qrcode" type='material-community' color={SECONDARY_DARK}></Icon></TabHeading>}>
               <QRScreen>
               </QRScreen>
+            </Tab>
+            <Tab heading={<TabHeading style={{backgroundColor: PRIMARY_DARK}}><Icon name="md-qr-scanner" type='ionicon' color={SECONDARY_DARK}></Icon></TabHeading>}>
+              <QRScanner>
+              </QRScanner>
             </Tab>
           </Tabs>
         </Tab>
