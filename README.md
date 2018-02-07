@@ -14,3 +14,7 @@ Clone the repo: `git clone`. Run `npm install`. In order to run two simulators o
 4. `cd` back into Firechat/
 5. `react-native run-ios --simulator "iPhone SE"`. Replace "iPhone SE" with whatever device you chose in step 3.
 6. Repeat steps 1-5 to open another device.
+
+### Useful References
+* https://medium.com/react-native-development/tutorial-build-a-chat-app-with-firebase-and-redux-ca76a910fab7
+* 
