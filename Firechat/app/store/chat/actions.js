@@ -6,7 +6,7 @@ const FIREBASE_REF_MESSAGES_LIMIT = 20;
 
 export const sendMessage = message => {
   return (dispatch) => {
-    dispatch(chatMessageLoading())
+    dispatch(chatMessageLoading());
 
     let currentUser = firebaseService.auth().currentUser;
     let createdAt = new Date().getTime();
@@ -31,7 +31,7 @@ export const sendMessage = message => {
 
 export const updateMessage = text => {
   return (dispatch) => {
-    dispatch(chatUpdateMessage(text))
+    dispatch(chatUpdateMessage(text));
   };
 };
 

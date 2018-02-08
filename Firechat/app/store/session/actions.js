@@ -8,11 +8,11 @@ export const restoreSession = () => {
     let unsubscribe = firebaseService.auth()
       .onAuthStateChanged(user => {
         if (user) {
-          dispatch(sessionSuccess(user))
-          unsubscribe()
+          dispatch(sessionSuccess(user));
+          unsubscribe();
         } else {
-          dispatch(sessionLogout())
-          unsubscribe()
+          dispatch(sessionLogout());
+          unsubscribe();
         }
       });
   };
