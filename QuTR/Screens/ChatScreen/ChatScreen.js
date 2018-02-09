@@ -21,7 +21,6 @@ import Footer from '../../Components/footer/Footer.js';
 import styles from './styles.js';
 
 import { BLACK, 
-         GREEN,
          SECONDARY_LIGHT } from '../../masterStyle.js'
 
 export default class ChatScreen extends Component<{}>  {
@@ -31,7 +30,7 @@ export default class ChatScreen extends Component<{}>  {
   constructor(props) {
     super(props);
     this.state={sendDisabled: true,
-                sendStyle: {color: SECONDARY_LIGHT},
+                sendStyle: {color: BLACK},
                 realm: this.props.navigation.state.params.realm,
                 conversation: null,
                 user: this.props.navigation.state.params.realm.objects('User')[0]
@@ -76,13 +75,13 @@ export default class ChatScreen extends Component<{}>  {
 
   enableSend = () => {
     this.setState({sendDisabled: false,
-                  sendStyle: {color: GREEN}});
+                  sendStyle: {color: SECONDARY_LIGHT}});
   }
 
   disableSend = () => {
 
     this.setState({sendDisabled: true,
-                  sendStyle: {color: SECONDARY_LIGHT, 
+                  sendStyle: {color: BLACK, 
                               opacity: 1}});
   }
 

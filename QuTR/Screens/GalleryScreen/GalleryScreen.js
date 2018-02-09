@@ -164,7 +164,7 @@ export default class GalleryScreen extends Component<{}>  {
             </View>
             <Footer left={<ToolbarButton name='ios-more'
                                          onPress={() => {this.setState({load: true}, function() {this.getPhotos(false)});}}/>}
-                    right={<ToolbarButton name='md-camera' 
+                    right={<ToolbarButton name='md-camera'
                                           onPress={() => {this.props.navigation.navigate('Camera', {refreshAndFetch: this.refreshAndFetch});}}/>}/>
       </Container>
    );

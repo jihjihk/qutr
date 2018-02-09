@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
   	Button,
-  	Icon,
+    Icon
 } from 'native-base';
 import styles from './styles.js';
 import PropTypes from 'prop-types';

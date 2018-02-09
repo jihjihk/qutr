@@ -36,7 +36,7 @@ export default class QRCodeScreen extends Component<{}>  {
     return (
       <View style={styles.Container}>
         <QRCodeScanner onRead={ this.onSuccess.bind(this) }
-                       cameraStyle = {{ width: 350, height: 350, alignSelf: 'center', justifyContent: 'center' }}/>
+                       cameraStyle = {styles.Scanner}/>
       </View>
     );
   };

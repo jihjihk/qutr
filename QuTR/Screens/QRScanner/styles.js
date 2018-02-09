@@ -9,5 +9,11 @@ export default StyleSheet.create({
 	    flex: 1,
 	    alignItems: 'center',
         justifyContent: 'center'
+	 },
+	 Scanner: {
+	 	width: 350, 
+	 	height: 350, 
+	 	alignSelf: 'center', 
+	 	justifyContent: 'center' 
 	 }
 });

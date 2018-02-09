@@ -20,6 +20,7 @@ import InputWindow from '../../Components/inputWindow/InputWindow.js';
 import Header from '../../Components/header/Header.js';
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 import ProfileFormItem from '../../Components/profileFormItem/ProfileFormItem.js';
+import LogoutButton from '../../Components/logoutButton';
 
 import styles from './styles.js';
 import {
@@ -91,6 +92,7 @@ export default class ProfileScreen extends Component<{}>  {
 
     return (
       <Container ref="container" style = {[styles.Container]}>
+        <Header right={<LogoutButton/>}/>
         <InputWindow ref="cw">
 
           <TouchableOpacity style={[styles.imageContainer]} 
@@ -147,7 +149,6 @@ export default class ProfileScreen extends Component<{}>  {
           <Button iconRight={{name: 'check', size: 25, color: SECONDARY_DARK}} 
                   buttonStyle={[styles.confirm]} 
                   color = {SECONDARY_DARK}
-                  containerViewStyle={{alignSelf: 'center', marginTop: 10}} 
                   title='CONFIRM CHANGES' 
                   onPress={() => {this.updateDatabase(false)}}>
           </Button>
