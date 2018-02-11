@@ -1,3 +1,4 @@
+import firebaseService from '../../../services/firebase';
 import React, { Component } from 'react';
 import { StackNavigator } from 'react-navigation';
 import {
@@ -31,8 +32,7 @@ const Realm = require('realm');
 
 import { PRIMARY,
          PRIMARY_DARK,
-         SECONDARY,
-         SECONDARY_DARK } from '../../../masterStyle.js'
+         SECONDARY } from '../../../masterStyle.js'
 
 export const appFolder = ((Platform.OS == 'android' ? RNFetchBlob.fs.dirs.PictureDir : RNFetchBlob.fs.dirs.MainBundleDir)+"/QuTR");
 
@@ -40,24 +40,12 @@ export default class App extends Component<{}> {
 
   constructor(props)  {
 
-    super(props);
-    this.state={
-      realm: null,
-      user: null
-    };
+    super(props);  
   }
 
   componentWillMount () {
 
     this.createAppFolder();
-
-    Realm.open({
-      schema: [UserSchema, MessageSchema, ConversationSchema],
-    }).then(realm => {
-      this.setState({realm: realm, user: realm.objects('User')[0]});
-    }).catch(error => {
-      console.log(error);
-    });
   }
 
   createAppFolder()  {
@@ -97,7 +85,7 @@ export default class App extends Component<{}> {
             <Tab heading={<TabHeading style={{backgroundColor: PRIMARY_DARK}}>
                             <Icon name="qrcode" 
                                   type='material-community' 
-                                  color={SECONDARY_DARK}>
+                                  color={SECONDARY}>
                             </Icon>
                           </TabHeading>}>
               <QRScreen>
@@ -106,7 +94,7 @@ export default class App extends Component<{}> {
             <Tab heading={<TabHeading style={{backgroundColor: PRIMARY_DARK}}>
                             <Icon name="md-qr-scanner" 
                                   type='ionicon' 
-                                  color={SECONDARY_DARK}>
+                                  color={SECONDARY}>
                             </Icon>
                           </TabHeading>}>
               <QRScanner>
@@ -120,8 +108,7 @@ export default class App extends Component<{}> {
                               color={SECONDARY}>
                         </Icon>
                       </TabHeading>}>
-          <ConversationNavigator screenProps={{realm: this.state.realm, 
-                                              user: this.state.user}}>
+          <ConversationNavigator>
           </ConversationNavigator>
         </Tab>
         <Tab heading={<TabHeading style={{backgroundColor: PRIMARY}}>
@@ -130,8 +117,7 @@ export default class App extends Component<{}> {
                               color={SECONDARY}>
                         </Icon>
                       </TabHeading>}>
-          <ProfileNavigator screenProps={{realm: this.state.realm, 
-                                          user: this.state.user}}>
+          <ProfileNavigator>
           </ProfileNavigator>
         </Tab>
       </Tabs>

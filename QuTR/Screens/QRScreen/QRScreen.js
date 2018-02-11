@@ -1,3 +1,4 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   View
@@ -22,7 +23,7 @@ export default class QRScreen extends Component<{}>  {
   constructor(props) {
     super(props);
     this.state = {
-        text: "Changed",
+        text: firebaseService.auth().currentUser.uid,
         logo: require("../../Pictures/logo.png")};
   }
 

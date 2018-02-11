@@ -4,15 +4,14 @@ import { StyleSheet,
 import {
   BLACK,
   SECONDARY,
-  SECONDARY_LIGHT,
-  PRIMARY,
+  SECONDARY_DARK,
   PRIMARY_DARK
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
 
   Container: {
-    backgroundColor: SECONDARY
+    backgroundColor: SECONDARY_DARK
   },
   imageContainer: {
     height: 100,
@@ -28,10 +27,15 @@ export default StyleSheet.create({
     width: 100, 
     height: 100,
   },
-  form: {
-    flex: 1, 
+  textInput: {
+    backgroundColor: '#ffffff',
+    height: 40,
+    margin: 10,
+    borderRadius: 5,
+    padding: 3,
+    alignItems: 'stretch'
   },
-  confirm: {
+  button: {
     backgroundColor: PRIMARY_DARK,
     height: 40,
     margin: 10,
@@ -39,5 +43,10 @@ export default StyleSheet.create({
     padding: 3,
     alignItems: 'center',
     justifyContent:'center'
-  }
+  },
+  buttonTitle: {
+    color: SECONDARY_DARK,
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
 });

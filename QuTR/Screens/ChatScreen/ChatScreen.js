@@ -1,3 +1,4 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   Views,
@@ -31,9 +32,9 @@ export default class ChatScreen extends Component<{}>  {
     super(props);
     this.state={sendDisabled: true,
                 sendStyle: {color: BLACK},
-                realm: this.props.navigation.state.params.realm,
+                firebase: firebaseService.auth(),
+                user: firebaseService.auth().currentUser,
                 conversation: null,
-                user: this.props.navigation.state.params.realm.objects('User')[0]
               };
   }
 
@@ -41,13 +42,13 @@ export default class ChatScreen extends Component<{}>  {
 
     if (this.state.sendDisabled)  return;
     var message = this.refs.mi.state.message;
-    this.state.realm.write(() => {
+    // this.state.realm.write(() => {
 
-      var myMessage = this.createMessage('me', message);
-      var theirMessage = this.createMessage('them', message+" to you too!");
-      this.state.conversation.messages.push(myMessage);
-      this.state.conversation.messages.push(theirMessage);
-    });
+    //   var myMessage = this.createMessage('me', message);
+    //   var theirMessage = this.createMessage('them', message+" to you too!");
+    //   this.state.conversation.messages.push(myMessage);
+    //   this.state.conversation.messages.push(theirMessage);
+    // });
     this.refs.cw.receiveMessage(this.getLastMessages(15));
     this.refs.mi.clearContent();
     this.refs.sb.clean();
@@ -56,13 +57,13 @@ export default class ChatScreen extends Component<{}>  {
 
   createMessage(owner, message) {
 
-    var theMessage = this.state.realm.create('Message', {
+    // var theMessage = this.state.realm.create('Message', {
 
-        owner: owner,
-        date: new Date(),
-        text: message
-      });
-    return theMessage;
+    //     owner: owner,
+    //     date: new Date(),
+    //     text: message
+    //   });
+    // return theMessage;
   }  
 
   getLastMessages(number)   {
@@ -118,8 +119,8 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   renderPropsIntoState()  {
-    this.setState({conversation: this.state.realm.objects('Conversation')
-                                  .filtered('correspondent.name = "'+this.props.navigation.state.params.name+'"')[0]});
+    // this.setState({conversation: this.state.realm.objects('Conversation')
+    //                               .filtered('correspondent.name = "'+this.props.navigation.state.params.name+'"')[0]});
   }
 
   componentWillUnmount () {

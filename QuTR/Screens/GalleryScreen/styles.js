@@ -7,7 +7,7 @@ const windowWidth = Dimensions.get('window').width;
 import {
   BLACK,
   SECONDARY,
-  SECONDARY_LIGHT,
+  SECONDARY_DARK,
   PRIMARY,
   PRIMARY_DARK
 } from '../../masterStyle.js';
@@ -15,11 +15,7 @@ import {
 export default StyleSheet.create({
 
   Container: {
-    backgroundColor: SECONDARY
-  },
-  modalContainer: {
-    flex: 1,
-    backgroundColor: SECONDARY,
+    backgroundColor: SECONDARY_DARK
   },
   loadMore: {
     backgroundColor: PRIMARY_DARK,

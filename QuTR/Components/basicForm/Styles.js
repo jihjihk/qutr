@@ -1,18 +1,20 @@
 import { StyleSheet } from 'react-native';
 import { PRIMARY_DARK,
-         SECONDARY_DARK } from "../../../../../masterStyle.js"
+         SECONDARY_DARK,
+         WHITE } from "../../masterStyle.js"
 
 export default StyleSheet.create({
-  container: {
+  Container: {
     flex: 1,
     alignItems: 'stretch'
   },
   textInput: {
-    backgroundColor: '#ffffff',
+    backgroundColor: WHITE,
     height: 40,
     margin: 10,
     borderRadius: 5,
-    padding: 3
+    padding: 3,
+    alignItems: 'stretch'
   },
   button: {
     backgroundColor: PRIMARY_DARK,
