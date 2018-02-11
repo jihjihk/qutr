@@ -16,6 +16,11 @@ Clone the repo: `git clone`. Run `npm install`. In order to run two simulators o
 6. Repeat steps 1-5 to open another device.
 
 ### Useful References
+#### Building with Firebase
 * https://medium.com/react-native-development/tutorial-build-a-chat-app-with-firebase-and-redux-ca76a910fab7
 * https://school.shoutem.com/lectures/chat-app-firebase-redux-react-native/
 * https://www.firebase.com/docs/web/guide/understanding-data.html
+#### What is Redux?
+* http://www.youhavetolearncomputers.com/blog/2015/9/15/a-conceptual-overview-of-redux-or-how-i-fell-in-love-with-a-javascript-state-container
+* https://daveceddia.com/how-does-redux-work/
+* https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6
