@@ -24,3 +24,4 @@ Clone the repo: `git clone`. Run `npm install`. In order to run two simulators o
 * http://www.youhavetolearncomputers.com/blog/2015/9/15/a-conceptual-overview-of-redux-or-how-i-fell-in-love-with-a-javascript-state-container
 * https://daveceddia.com/how-does-redux-work/
 * https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6
+* https://egghead.io/lessons/react-redux-the-single-immutable-state-tree

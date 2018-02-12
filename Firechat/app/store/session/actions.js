@@ -24,24 +24,6 @@ export const loginUser = (email, password) => {
 
     firebaseService.auth()
       .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        let user = firebaseService.auth().currentUser;
-
-        if (user) {
-          console.log("Successfully get user");
-        } else {
-          console.log("Oops...Failed to get user");
-        }
-
-        let uid = user.uid;
-
-        firebaseService.database()
-          .ref(`users/${uid}`)
-          .set({
-            name,
-            uid
-          });
-      })
       .catch(error => {
         dispatch(sessionError(error.message));
       });

@@ -44,6 +44,29 @@ export const signupUser = (email, password) => {
 
     firebaseService.auth()
       .createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        let user = firebaseService.auth().currentUser;
+
+        if (user) {
+          console.log("Successfully get current user!");
+        } else {
+          console.log("Oops...failed to get current user");
+        }
+
+        let uid = user.uid;
+
+        firebaseService.database()
+          .ref(`users/${uid}`)
+          .set({
+            email,
+            uid,
+            language: 'Language',
+            gender: 'Gender',
+            age: 18,
+            profile_photo: 'URL',
+            conversations: []
+          });
+      })
       .catch(error => {
         dispatch(sessionError(error.message));;
       });
