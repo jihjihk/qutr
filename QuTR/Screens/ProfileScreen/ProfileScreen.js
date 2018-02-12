@@ -69,20 +69,34 @@ export default class ProfileScreen extends Component<{}>  {
 
   componentWillMount()  {
     self=this;
-    this.state.firebase.database().ref('/users/' + this.state.user.uid)
-                                  .once('value')
-                                  .then(function(snapshot) {  
-                                    self.setState({
-                                      name: snapshot.val().name,
-                                      age: snapshot.val().age,
-                                      language: snapshot.val().language,
-                                      gender: snapshot.val().gender,
-                                      picture: (snapshot.val().picture || self.state.picture)
-                                    });
-                                  })
-                                  .catch(error => {
-                                    dispatch(sessionError(error.message));
-                                  });
+    var picture;
+    this.state.firebase.database()
+      .ref('/users/' + this.state.user.uid)
+      .once('value')
+      .then(function(snapshot) {  
+
+        /* Check if the user hasn't erased the picture from the app folder */
+        if (snapshot.val().picture != "" 
+          && snapshot.val().picture!=self.state.picture) {
+
+          picture = self.state.picture;
+          RNFetchBlob.fs.exists(snapshot.val().picture)
+            .then((exist) => {
+              if (exist) picture = snapshot.val().picture;
+              self.setState({picture: picture})
+            }).catch(err => console.error(err));
+        }
+
+        self.setState({
+          name: snapshot.val().name,
+          age: snapshot.val().age,
+          language: snapshot.val().language,
+          gender: snapshot.val().gender
+        });
+      })
+      .catch(error => {
+        dispatch(sessionError(error.message));
+      });
   }
 
   updateDatabase()  {

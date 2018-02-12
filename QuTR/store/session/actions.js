@@ -51,7 +51,8 @@ export const signupUser = (email, password, name, age, language, gender) => {
           .set({"name": name,
                 "age": age,
                 "language": language,
-                "gender": gender
+                "gender": gender,
+                "picture": ""
           });
       }).catch(error => {
         dispatch(sessionError(error.message));;

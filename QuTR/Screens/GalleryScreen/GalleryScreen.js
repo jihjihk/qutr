@@ -7,6 +7,7 @@ import {
   CameraRoll,
   Dimensions,
   ScrollView,
+  ToastAndroid
 } from 'react-native';
 import RNFetchBlob from 'react-native-fetch-blob';
 import { Container, Text } from 'native-base';
@@ -67,6 +68,7 @@ export default class GalleryScreen extends Component<{}>  {
     if (fresh)  this.refreshAndFetch();
     else {      
       if (this.state.photos.length>=fetchParams.first) this.fetchPhotos();
+      else ToastAndroid.show("No more photos", ToastAndroid.SHORT);
     }
   }
 
