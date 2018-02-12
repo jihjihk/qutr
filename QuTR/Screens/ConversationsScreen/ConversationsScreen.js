@@ -1,3 +1,4 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   View,
@@ -18,7 +19,6 @@ import { UserSchema, MessageSchema, ConversationSchema } from '../../Schemas.js'
 import styles from './styles.js';
 import { PRIMARY_DARK,
          PRIMARY,
-         SECONDARY_DARK
        } from '../../masterStyle.js';
 
 const Realm = require('realm');
@@ -33,8 +33,9 @@ export default class ConversationsScreen extends Component<{}>  {
 
   constructor(props) {
     super(props);
-    this.state= {realm: this.props.screenProps.realm,
-                 user: this.props.screenProps.user};
+    this.state= {
+      firebase: firebaseService.auth(),
+      user: firebaseService.auth().currentUser};
     self = this;
   }
 
@@ -53,30 +54,35 @@ export default class ConversationsScreen extends Component<{}>  {
   render() {
 
     var conversations=[];
-    if (this.state.realm)  {
-      var allConversations = this.state.realm.objects('Conversation'), i=0;
-      let conversation;
-      for (i; i<allConversations.length; i++) {
+    // if (this.state.firebase)  {
+    //   var allConversations = this.state.firebase.objects('Conversation'), i=0;
+    //   let conversation;
+    //   for (i; i<allConversations.length; i++) {
 
-        conversation = allConversations[i];
-        var lastMessage = this.getLastMessage(conversation);
+    //     conversation = allConversations[i];
+    //     var lastMessage = this.getLastMessage(conversation);
 
-        conversations.push(<Conversation navigation = {this.props.navigation}
-                                         realm = {this.state.realm}
-                                         user = {this.state.user}
-                                         refresh = {this.refresh.bind(this)}
-                                         key={i}
-                                         sender = {conversation.correspondent.name}                                          
-                                         message = {lastMessage.text}
-                                         date={(lastMessage.date.getDate()+1)+"/"+(lastMessage.date.getMonth()+1)+"/"+lastMessage.date.getFullYear()} 
-                                         time={lastMessage.date.getHours()+":"+lastMessage.date.getMinutes()} 
-                                         picture={{source: pictures[conversation.correspondent.name]}}></Conversation>);
-      }
-    }
+    //     conversations.push(<Conversation navigation = {this.props.navigation}
+    //                                      firebase = {this.state.firebase}
+    //                                      user = {this.state.user}
+    //                                      refresh = {this.refresh.bind(this)}
+    //                                      key={i}
+    //                                      sender = {conversation.correspondent.name}                                          
+    //                                      message = {lastMessage.text}
+    //                                      date={(lastMessage.date.getDate()+1)+"/"+(lastMessage.date.getMonth()+1)+"/"+lastMessage.date.getFullYear()} 
+    //                                      time={lastMessage.date.getHours()+":"+lastMessage.date.getMinutes()} 
+    //                                      picture={{source: pictures[conversation.correspondent.name]}}></Conversation>);
+    //   }
+    // }
 
     return (
       <Container ref="container" style={[styles.Container]}>
         <ConversationsWindow ref="cw">
+          {(conversations.length==0) && 
+            <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
+              <Text>No conversations to display</Text>
+            </View>
+          }
           {conversations}
         </ConversationsWindow>
       </Container>

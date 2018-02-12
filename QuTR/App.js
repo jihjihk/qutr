@@ -5,25 +5,6 @@
  */
 
 import React, { Component } from 'react';
-import { StackNavigator } from 'react-navigation';
-import {
-  Alert,
-  Platform,
-  View
-} from 'react-native';
-
-import { 
-  Button,
-  Header,
-  Tab,
-  TabHeading,
-  Tabs,
-  Text
-} from 'native-base';
-
-import { Icon } from 'react-native-elements'
-
-import RNFetchBlob from 'react-native-fetch-blob';
 
 import { Provider } from 'react-redux';
 import { configureStore } from './store';
@@ -36,10 +17,6 @@ export default class App extends Component<{}> {
   constructor(props)  {
 
     super(props);
-    this.state={
-      realm: null,
-      user: null
-    };
   }
 
   componentWillMount () {

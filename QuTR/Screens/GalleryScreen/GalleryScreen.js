@@ -19,11 +19,10 @@ import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 import styles from './styles.js';
 import {
   BLACK,
-  SECONDARY_DARK,
   SECONDARY_LIGHT
 } from '../../masterStyle.js';
 
-import { appFolder } from '../../App.js';
+import { appFolder } from '../../Screens/InitialScreen/DashboardRedirecter/DashboardRedirecter.js';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -142,7 +141,6 @@ export default class GalleryScreen extends Component<{}>  {
 
     return (
       <Container ref="container" style = {[styles.Container]}>
-            <View style={styles.modalContainer}>
               <ScrollView
                 contentContainerStyle={styles.scrollView}>
                 {
@@ -161,7 +159,6 @@ export default class GalleryScreen extends Component<{}>  {
                   })
                 }
               </ScrollView>
-            </View>
             <Footer left={<ToolbarButton name='ios-more'
                                          onPress={() => {this.setState({load: true}, function() {this.getPhotos(false)});}}/>}
                     right={<ToolbarButton name='md-camera'

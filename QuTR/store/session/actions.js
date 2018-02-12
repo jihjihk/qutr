@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
 import firebaseService from '../../services/firebase';
+import { Alert } from 'react-native'
 
 export const restoreSession = () => {
   return (dispatch) => {
@@ -38,36 +39,21 @@ export const loginUser = (email, password) => {
   };
 };
 
-export const signupUser = (email, password) => {
+export const signupUser = (email, password, name, age, language, gender) => {
   return (dispatch) => {
     dispatch(sessionLoading());
 
     firebaseService.auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(() => {
-        let user = firebaseService.auth().currentUser;
-
-        if (user) {
-          console.log("Successfully get current user!");
-        } else {
-          console.log("Oops...failed to get current user");
-        }
-
-        let uid = user.uid;
-
-        firebaseService.database()
-          .ref(`users/${uid}`)
-          .set({
-            email,
-            uid,
-            language: 'Language',
-            gender: 'Gender',
-            age: 18,
-            profile_photo: 'URL',
-            conversations: []
+      .then(function(authData)  {
+          firebaseService.database()
+          .ref('users/'+authData.uid)
+          .set({"name": name,
+                "age": age,
+                "language": language,
+                "gender": gender
           });
-      })
-      .catch(error => {
+      }).catch(error => {
         dispatch(sessionError(error.message));;
       });
 
