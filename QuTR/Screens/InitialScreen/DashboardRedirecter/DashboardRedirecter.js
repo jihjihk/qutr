@@ -93,7 +93,8 @@ export default class App extends Component<{}> {
                         </Icon>
                       </TabHeading>}>
           <Tabs initialPage={0} 
-                locked = {true}>
+                locked = {true}
+                tabBarUnderlineStyle = {{backgroundColor: SECONDARY}}>
             <Tab heading={<TabHeading style={{backgroundColor: PRIMARY_DARK}}>
                             <Icon name="qrcode" 
                                   type='material-community' 

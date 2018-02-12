@@ -1,7 +1,7 @@
 # qutr
 
 ## QuTr
-Our application uses `node 9.3.0` and `npm 5.6.0`, since `npm 5.5.x` may cause bugs in `node 9.3.0`. Please ensure that you have these versions installed before running `npm install`.
+Our application uses `node 9.3.0` and `npm 5.6.0`, since `npm 5.5.x` may cause bugs in `node 9.3.0`. `node 9.3.0` comes with `npm 5.5.x` by default, so you would have to run `npm i -g npm` in order to update the npm version. If you need to keep other versions of node, checkout [nvm](https://github.com/creationix/nvm), the Node Version Manager. Please ensure that you have these versions installed before running `npm install`.
 
 ### Running on iOS
 react-native-camera is recently making the change from RCTCamera to RNCamera (see [react-native-camera repo](https://github.com/react-native-community/react-native-camera)). Because of this, the app will not build properly. In order to make this work:
