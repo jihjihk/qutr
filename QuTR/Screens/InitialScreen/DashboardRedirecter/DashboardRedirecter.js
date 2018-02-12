@@ -40,7 +40,11 @@ export default class App extends Component<{}> {
 
   constructor(props)  {
 
-    super(props);  
+    super(props);
+    this.state={
+      page: 1
+    }
+    this.setState.bind(this);
   }
 
   componentWillMount () {
@@ -68,12 +72,20 @@ export default class App extends Component<{}> {
     .catch((err) => {console.log("Err: ", err)})
   }
 
+  changeTab = (page) => {
+
+    this.setState({
+      page: page
+    });
+  }
+
   render()  {
 
     return (
       <Tabs initialPage={0}
             locked = {true}
-            tabBarUnderlineStyle = {{backgroundColor: SECONDARY}}>
+            tabBarUnderlineStyle = {{backgroundColor: SECONDARY}}
+            page={this.state.page}>
         <Tab heading={<TabHeading style={{backgroundColor: PRIMARY}}>
                         <Icon name="qrcode-scan" 
                               type='material-community' 
@@ -97,7 +109,7 @@ export default class App extends Component<{}> {
                                   color={SECONDARY}>
                             </Icon>
                           </TabHeading>}>
-              <QRScanner>
+              <QRScanner changeTab = {this.changeTab}>
               </QRScanner>
             </Tab>
           </Tabs>

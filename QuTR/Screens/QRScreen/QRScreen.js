@@ -23,7 +23,7 @@ export default class QRScreen extends Component<{}>  {
   constructor(props) {
     super(props);
     this.state = {
-        text: "http://google.com/"+firebaseService.auth().currentUser.uid,
+        text: "http://google.com/"+firebaseService.auth().currentUser.uid.toString(),
         logo: require("../../Pictures/logo.png")};
   }
 

@@ -31,11 +31,11 @@ export default class Conversation extends Component {
     return (
           <TouchableHighlight underlayColor={PRIMARY_LIGHT} 
                               style={[styles.TouchableHighlight]}
-                              onPress={() => this.props.navigation.navigate('Chat', {user: this.state.user, name: this.props.sender, firebase: this.state.firebase, refresh: this.props.refresh, picture: this.props.picture.source})}>
+                              onPress={() => this.props.navigation.navigate('Chat', {user: this.state.user, name: this.props.sender, firebase: this.state.firebase, refresh: this.props.refresh, picture: this.props.picture})}>
             <View style={[styles.convo, this.props.style]}>
                <View style={[styles.pictureWrapper]}>
                   <Image style={[styles.picture]} 
-                         source={this.props.picture.source}/>
+                         source={{uri: this.props.picture}}/>
                </View>
                <View style={{flex:1}}>
                  <View style={styles.rowWrapper}>

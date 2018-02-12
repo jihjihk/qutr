@@ -119,8 +119,6 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   renderPropsIntoState()  {
-    // this.setState({conversation: this.state.realm.objects('Conversation')
-    //                               .filtered('correspondent.name = "'+this.props.navigation.state.params.name+'"')[0]});
   }
 
   componentWillUnmount () {
@@ -140,12 +138,10 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   render() {
-    if (this.state.conversation==null) return null;
     return (
       <Container ref="container" style={[styles.Container]}>
         <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>}/>
-        <ChatWindow ref="cw" messages = {this.getLastMessages(15)} picture = {this.props.navigation.state.params.picture} myPicture ={this.state.user.picture}>
-        </ChatWindow>
+        
 
         <Footer center={<MessageInput ref='mi' 
                                       style={{flex: 1}} 

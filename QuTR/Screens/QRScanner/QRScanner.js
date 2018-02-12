@@ -2,7 +2,8 @@ import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   View,
-  Alert
+  Alert,
+  ToastAndroid
 } from 'react-native';
 
 import {
@@ -32,8 +33,31 @@ export default class QRCodeScreen extends Component<{}>  {
 
   onSuccess(e) {
     var eSplit = e.data.split("/");
-    Alert.alert("", eSplit[eSplit.length-1]);
+    var theirKey = eSplit[eSplit.length-1];
 
+    var newChatKey = firebaseService.database().ref().child('chats/').push().key;
+
+    firebaseService.database().ref()
+      .child('users')
+      .child(firebaseService.auth().currentUser.uid)
+      .child('userRooms')
+      .child(newChatKey)
+      .set({"message": "", "timestamp":"", correspondent: theirKey});
+
+    firebaseService.database().ref()
+    .child('users')
+    .child(theirKey)
+    .child('userRooms')
+    .child(newChatKey)
+    .set({"message": "", "timestamp":"", correspondent: firebaseService.auth().currentUser.uid});
+
+    firebaseService.database().ref()
+    .child('chats')
+    .child(newChatKey)
+    .push({"senderID": "", "message": ""});
+
+    ToastAndroid.show("Scan successful!", ToastAndroid.SHORT);
+    this.props.changeTab(1);
   }
 
   render() {
@@ -41,7 +65,7 @@ export default class QRCodeScreen extends Component<{}>  {
       <View style={styles.Container}>
         <QRCodeScanner onRead={ this.onSuccess.bind(this) }
                        cameraStyle = {styles.Scanner}
-                       reactivate = {false}/>
+                       reactivate={false}/>
       </View>
     );
   };
