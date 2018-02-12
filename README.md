@@ -1,7 +1,22 @@
 # qutr
 
+## QuTr
+Our application uses `node 9.3.0` and `npm 5.6.0`, since `npm 5.5.x` may cause bugs in `node 9.3.0`. Please ensure that you have these versions installed before running `npm install`.
+
+### Running on iOS
+react-native-camera is recently making the change from RCTCamera to RNCamera (see [react-native-camera repo](https://github.com/react-native-community/react-native-camera)). Because of this, the app will not build properly. In order to make this work:
+1. Follow the steps detailed in react-native-camera to install. One important thing to note is that, since we do not have to use Face Detection in our app, follow the **Post install steps** to delete the **FaceDetector** folder in Xcode.
+2. In your Finder, navigate to `ios/` and open the Xcode project
+3. Click on **QuTR** with the blue icon next to it on the top left corner
+4. Go to **Build Phases** and expand **Link Binary With Libraries**, then find libRCTCamera.a and remove it by clicking on the - button at the bottom.
+5. Do the same with libRNSVG-tvOS.a
+6. react-native-vector-icons currently has a bug, so follow [this solution](https://github.com/oblador/react-native-vector-icons/issues/626#issuecomment-362386341) to resolve it.
+7. You should be ready to go now. Run `react-native run-ios` to start the project.
+
+
 ## BleManager
 An attempt to use Bluetooth Low Energy to send messages between two phones. As of right now, the implementaiton succeeds in scanning and connecting to a peripheral device, but for our purposes fulfill only half of the requirements, as our devices need to both send and receive messages. Will attempt to finish this if we are able to meet our deadline.
+
 
 ## Firechat
 An alternative to the BLE solution - using WiFi. This implementation uses React Native and Redux, with Firebase as the backend, allowing any user who connects to the database to be able to send messages to one another. This is adapted from the example given [here](https://github.com/rubygarage/react-native-firebase-chat). Next steps are to identify specific users to connect to.
