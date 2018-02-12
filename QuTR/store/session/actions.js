@@ -53,7 +53,7 @@ export const signupUser = (email, password, name, age, language, gender) => {
                 "age": age,
                 "language": language,
                 "gender": gender,
-                "picture": ''
+                "picture": ""
           });
       }).catch(error => {
         dispatch(sessionError(error.message));;

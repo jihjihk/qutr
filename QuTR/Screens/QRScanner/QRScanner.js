@@ -1,6 +1,8 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
-  View
+  View,
+  Alert
 } from 'react-native';
 
 import {
@@ -29,14 +31,17 @@ export default class QRCodeScreen extends Component<{}>  {
   }
 
   onSuccess(e) {
-    Linking.openURL(e.data).catch(err => console.error('An error occured', err));
+    var eSplit = e.data.split("/");
+    Alert.alert("", eSplit[eSplit.length-1]);
+
   }
 
   render() {
     return (
       <View style={styles.Container}>
         <QRCodeScanner onRead={ this.onSuccess.bind(this) }
-                       cameraStyle = {styles.Scanner}/>
+                       cameraStyle = {styles.Scanner}
+                       reactivate = {false}/>
       </View>
     );
   };
