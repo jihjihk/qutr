@@ -49,9 +49,11 @@ export const signupUser = (email, password, name, age, language, gender) => {
           firebaseService.database()
           .ref('users/'+authData.uid)
           .set({"name": name,
+                "email": email,
                 "age": age,
                 "language": language,
-                "gender": gender
+                "gender": gender,
+                "picture": ''
           });
       }).catch(error => {
         dispatch(sessionError(error.message));;
