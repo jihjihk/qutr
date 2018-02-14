@@ -1,0 +1,393 @@
+,en,ar
+0,OPEN,مفتوح (maftūh)
+1,CLOSED,مغلق (mughlaq)
+2,ENTRANCE,دخول (dukhūl)
+3,EXIT,خروج (khurūj)
+4,PUSH,ادفع (idfa`)
+5,PULL,اسحب (ishab)
+6,TOILET,حمام (hammām)
+7,MEN,رجال (rijāl)
+8,WOMEN,سيدات (sayyidāt)
+9,FORBIDDEN,ممنوع (mamnū`)
+10,Goodbye,مع السلامة  ma`a as-salāma
+11,Goodbye (informal),باي باي bāy bāy
+12,I can't speak Arabic [well].,لا اتكلم عربي جيدا Lā atakallam `arabi [jayyidan]
+13,Do you speak English?,Do you speak English? هل تتكلم الانجليزية hal tatakallam el-ingliziyya?
+14,Is there someone here who speaks English?,حد بيتكلم انجليزي؟ had beyetkallem ingelīzi? (Egyptian); حدن بيحكي انجليزي hadan byihki ingilīzi (Levantine)
+15,Help!,النجدة an-najda!; إلحقوني ilha'ūni
+16,Look out!,انتبه intibih
+17,Good night.,تصبح على خير tisbah `ala khair
+18,I don't understand.,لا افهم lā afham
+19,Where is the toilet?,وين/فين الحمام؟ ayn/fēn el-hammām?
+20,Leave me alone.,Leave me alone. (اتركني (M) or اتركيني (F))
+21,Don't touch me!,لا تلمسني (lā tilmisni)
+22,I'll call the police.,سأتصل بالشرطة.‏ ‎(sa attasil bil-shurta)
+23,Police!,"shurta, bulīs! (شرطة‎, بوليس)‎; راح اتصل بالشرطة (rāh attasil bil-shurta) (Levantine); هتصل بالبوليس (hattasil bel-bulīs) (Egyptian)"
+24,Stop! Thief!,"اوقف! حرامي!‏ ‎(ūw'af, o'af harāmi!)"
+25,I need your help.,محتاج مساعدة لو سمحت (mihtāj musā`da law samaht)
+26,Medical emergency,إسعاف (is`āf); other emergencies: طوارئ (tawāre' )
+27,I'm lost.,أنا تايه (tāyeh) (M); أنا تايهة (ana tāyha) (F)
+28,I lost my bag.,I lost my bag. (لقد فقدت حقيبتى)
+29,I lost my wallet.,I lost my wallet. (لقد فقدت محفظتى)
+30,I'm sick.,I'm sick. (انا مريض (M) OR انا مريضة (F))
+31,I've been injured.,I've been injured. إنني مصاب(Innani Musabun)
+32,I need a doctor.,I need a doctor. (أحتاج دكتور)
+33,Can I use your phone?,Can I use your phone? (هل ممكن أستخدم التلفون؟)
+34,٠,0
+35,١,1
+36,٢,2
+37,٣,3
+38,٤,4
+39,٥,5
+40,٦,6
+41,٧,7
+42,٨,8
+43,٩,9
+44,0,صفر sifr
+45,1,واحد wāhid
+46,2,إثنان ithnān
+47,3,ثلاثة thalātha
+48,4,اربعة arba`a
+49,5,خمسة khamsa
+50,6,ستة sitta
+51,7,سبعة sab`a
+52,8,ثمانية thamāniya
+53,9,تسعة tis`a
+54,10,عشرة `ashara
+55,11,احد عشر ahad `ashar
+56,12,اثنا عشر ithnā `ashar
+57,13,ثلاثة عشر thalāthata `ashar
+58,14,اربعة عشر arba`ata `ashar
+59,15,خمسة عشر khamsata `ashar
+60,16,ستة عشر sittata `ashar
+61,17,سبعة عشر sab`ata `ashar
+62,18,ثمانية عشر thamāniyata `ashar
+63,19,تسعة عشر tis'ata `ashar
+64,20,عشرون ishrūn
+65,21,واحد وعشرون wāhid wa-`ashrūn
+66,22,اثنان وعشرون ithnān wa-`ashrūn
+67,23,ثلاثة وعشرون thalātha wa-`ashrūn
+68,30,ثلاثون thalathūn
+69,40,اربعون arba`ūn
+70,50,خمسون khamsūn
+71,60,ستون sittūn
+72,70,سبعون sab`ūn
+73,80,ثمانون thamanūn
+74,90,تسعون tis`ūn
+75,100,مئة mi'a
+76,200,مئتين mitayn
+77,300,ثلاث مئة thalāth mi'a
+78,1000,الف  alf  (as in The Thousand and One Nights - الف ليلة وليلة  Alf Layla wa Layla)
+79,2000,الفين alfayn
+80,"1,000,000",مليون milyōn
+81,"1,000,000,000","مليار‎, بليون milyōn, bilyōn"
+82,"1,000,000,000,000",تريليون tirilyōn
+83,"number _____ (train, bus, etc.)",رقم / Raqam (...)
+84,half,نصف nisf
+85,less,اقل aqal
+86,more,اكثر akthar
+87,Go,ذهب dhahaba
+88,Stop,وقف Waqif
+89,Turn left,لف يسار Lif Yasser
+90,Turn right,لف يمين Lif Yameen
+91,straight ahead,إلى الامام il al-amām; على طول `ala tūl (Egyptian); dughri (Jordan/Egyptian)
+92,slowly,ببطء bi-but'; شوي شوي shway shway (Levantine)
+93,Wait or stay,انتظر (intadhir)
+94,Show me.,أرني (arini); وريني warrīni (Egyptian)
+95,here,هنا huna
+96,there,هناك hunāk
+97,before,قبل qabl
+98,after,بعد ba`d
+99,now,الأن al'ān
+100,from,من min
+101,to or at (a place),إلى ilā
+102,Wait one minute.,إنتظر دقيقه واحده intadhir daqīqa wāhida.
+103,I,انا ana
+104,you (m),أنتَ anta; enta~inta (colloquial)
+105,you (f),"أنتِ anti; enti~inti, init (colloquial)"
+106,he,"هو huwa; huwwa~huwwe, hū (colloquial)"
+107,she,"هي hiya; hiyya~hiyye, hī (colloquial)"
+108,we,"نحن nahnu; احنا‎, نحنا (ehna, nihna) (colloquial)"
+109,you (m/mixed),أنتما antumā (rarely used out of the most formal Literary Arabic)
+110,they (two people) : هما huma (rarely used out of the most formal Literary Arabic),أنتم antum; intu(m)  (colloquial)
+111,they (m/mixed),"هم hum, humma"
+112,they (f),هن hunna (rarely used out of the most formal Literary Arabic)
+113,Who?,من man
+114,What?,ما/ماذا mā/mādha
+115,When?,متى  mata
+116,Where?,اين ayn
+117,Why?,لماذا limādha
+118,How much?,بكم bi-kam
+119,How much is this?,بكم هذا bi-kam hādha
+120,Where are you from?,من أين أنت min ayn anta
+121,Understand?,مفهوم؟ mafhūm
+122,Do you speak English?,هل تتكلم الإنجليزية؟ hal tatakallam el-ingliziyya?
+123,What is this?,ما هذا؟ mā hādha?
+124,I want,urīd أريد
+125,I don't want,Lā urīd لا أريد
+126,I have,لي lī / laday لدي / `andi عندي
+127,I don't have,lays `andi ليس عندي
+128,I don't understand,أنا لا أفهم ana lā afham / أنا مش فاهم ana mesh fāhem (Egyptian)
+129,I work at the _____.,a`mal fi _____  _____أعمل في / ana bashtaghel fi _____أنا باشتغل في (Egyptian)
+130,I don't speak Arabic,لا أتكلم العربية lā atakallam el-`arabiyya / mā bihki `arabi ما باحكي عربي (Levantine) / ma batkallemsh `arabi مابتكلمش عربي (Egyptian)
+131,money,"مال‎, فلوس  māl, fulūs"
+132,coffee,قهوة qahwa
+133,sugar,سكر sukkar
+134,salt,ملح malh
+135,car,سيارة sayyāra
+136,hotel,فندق funduq  /  اوتيل  otēl
+137,water,ماء mā'
+138,tea,شاي shay
+139,milk,حليب halīb
+140,work,شغل  shughl
+141,airplane,طائرة tā'ira
+142,street,شارع shāri`
+143,now,الآن (al'ān)
+144,later,لاحقاً (Lāhgan)
+145,before,قبل (qabla)
+146,morning,صباح (sabāh)
+147,afternoon,بعد ظهر (ba`ada zuhur)
+148,evening,مساء (masā')
+149,night,ليلة (layla)
+150,one o'clock AM,one o'clock AM (sa'ati wahad)
+151,two o'clock AM,two o'clock AM (sa'ati ithnayn)
+152,noon,noon (zuhr)
+153,one o'clock PM,one o'clock PM (...)
+154,two o'clock PM,two o'clock PM (...)
+155,midnight,"متصف الليلة‎, نص الليل (muntasf el-laila, noss el-lēl)"
+156,_____ minute(s),‏_____ دقيقة (دقائق)‏ ‎(daqīqa (daqā'iq))
+157,_____ hour(s),‏_____ ساعة (ساعات)‏ ‎(sā`a (sā`āt))
+158,_____ day(s),‏_____ يوم (أيام)‏ ‎(yom (ayyām))
+159,_____ week(s),‏_____ أسبوع (أسابيع)‏ ‎(usbū` (asābī`))
+160,_____ month(s),‏_____ month(s)‏ ‎(shahr (shuhūr))
+161,_____ year(s),‏_____ سنة (سنوات) ‏ ‎(sana (sanawāt))
+162,today,البوم (el-yaum)
+163,yesterday,أمس (ams)
+164,tomorrow,غداً (ghadan)
+165,this week,الاسبوع (el-'usbu` )
+166,last week,الأسبوع الماضي (el-'usbu` el-mādi )
+167,next week,الأسبوع القادم (el-'usbu` el-qādim)
+168,Sunday,يوم الأحد ((yaum) el'ahad)
+169,Monday,يوم الاثنين ((yaum) el-ithnayn)
+170,Tuesday,يوم الثلاثاء ((yaum) eth-thulātha)
+171,Wednesday,يوم الأربعاء ((yaum) el'arbi`a')
+172,Thursday,يوم الخميس ((yaum) el-khamīs)
+173,Friday,يوم الجمعة ((yaum) el-jum`a)
+174,Saturday,يوم السبت ((yaum) es-sabt)
+175,January,"كانون الثاني‎, يناير (kānūn eth-thāni, yanāyir)"
+176,February,"شباط‎, فبراير (shbat, fibrāyir)"
+177,March,"آذار‎, مارس (ādhār, māris)"
+178,April,"نيسان‎, ابريل (nīsan, abrīl)"
+179,May,"أيار‎, مايو (ayār, māyu)"
+180,June,"حزيران‎, يونيو (hzayrān, yunyu)"
+181,July,"تموز‎, يوليو (tammūz, yulyu)"
+182,August,"آب‎, أغسطس (āb, oghostos)"
+183,September,"أيلول‎, سبتمبر (aylūl, sebtambir)"
+184,October,"تشرن الأول‎, أكتوبر (tishrīn el-awwal, oktōbar)"
+185,November,"تشرن الثاني‎, نوفمبر (tishrīn eth-thani, novambir)"
+186,December,"كانون الأول‎, ديسمبر (kānūn el-awwal, dīsambir)"
+187,black,أسود (aswad)
+188,white,أبيض (abyad)
+189,gray,رمادي (ramādi )
+190,red,أحمر (ahmar)
+191,blue,أزرق (azraq)
+192,yellow,أصفر (asfar)
+193,green,أخضر (akhdar)
+194,orange,برتقالي (burtuqāli )
+195,purple,بنفسجي (banafsaji)
+196,brown,بني (bunni )
+197,How much is a ticket to _____?,adash tazkara ila ____? Bekam tazkara ila......?
+198,"One ticket to _____, please.",tazkara wahida ila ___ law samaht
+199,Where does this train/bus go?,el-qitār/bās hādha biyruh ilā wain? ila ayn yadhhab hādha el-qitār/otobīs?
+200,Where is the train/bus to _____?,wein el-qitar/el-bus ila ___?
+201,Does this train/bus stop in _____?,hal biwa'ef hazal qitar/bus fi__ ?
+202,When does the train/bus for _____ leave?,emta btatla el-qitar/el-bus ila ___?
+203,When will this train/bus arrive in _____?,'emta byusil hazal qitar/bus fi___?
+204,How do I get to _____ ?,How do I get to _____ ? (kayf bawsal la __)
+205,...the train station?,...the train station? (mahatet il qitar?)
+206,...the bus station?,...the bus station? (mawqif il bassat?)
+207,...the airport?,...المطار (el-matar?)
+208,...downtown?,...downtown? (west il balad?)
+209,...the youth hostel?,...the youth hostel? (bayt ash-shabab)
+210,...the _____ hotel?,...the _____ hotel? (otel?/ Al Fonduk)
+211,...the American/Canadian/Australian/British consulate?,"...the American/Canadian/Australian/British consulate? (sefara Al Amrikia, Canadeia, ostralia, beritania)"
+212,Where are there a lot of...,Where are there a lot of... (Wein fi kteer...)
+213,...hotels?,...hotels? (otelat/ Fanadek)
+214,...restaurants?,...restaurants? (mata'em)
+215,...bars?,...bars? (bars)
+216,...sites to see?,...sites to see? (amaken seyaheyeh?)
+217,Can you show me on the map?,Can you show me on the map? (momken tfarjeeni ala al khareeta?)
+218,street,شارع (shari`)
+219,Turn left.,لف يسار (lif yasār)
+220,Turn right.,لف يمين (lif yamīn)
+221,left,يسار (yasār)
+222,right,يمين (yameen)
+223,straight ahead,على طول (`ala tūl)
+224,towards the _____,towards the _____ (bijehet il)
+225,past the _____,past the _____ (baed il)
+226,before the _____,before the _____ (abel il)
+227,Watch for the _____.,Watch for the _____. (intibeh la)
+228,intersection,intersection (taqato)
+229,north,شمال (shamāl)
+230,south,جنوب (janūb)
+231,east,شرق (sharq)
+232,west,غرب (gharb)
+233,uphill,uphill (talā)
+234,downhill,downhill (nazleh)
+235,Taxi!,تاكسي!‏ ‎(taxi!) sayyāra
+236,"Take me to _____, please.","Take me to _____, please. (khudni li-....., law samaht)"
+237,How much does it cost to get to _____?,How much does it cost to
+238,"Take me there, please.","Take me there, please. (khudni `ala __, law samaht)"
+239,Do you have any rooms available?,Do you have any rooms available? (endkom ghoraf(alternatively- owad) edafeyeh?)
+240,How much is a room for one person/two people?,How much is a room for one person/two people? (adeish il ghorfeh li shakhs/shakhsein?)
+241,Does the room come with...,Does the room come with... (il ghorfeh btīji ma...)
+242,...bedsheets?,"‏...شراشف‎, ملايات (sharāshef, melāyāt)"
+243,...a bathroom?,‏...حمام (hammām?)
+244,...a telephone?,‏...تليفون (telefōn?)
+245,...a TV?,‏...تلفزيون (televizyōn?)
+246,May I see the room first?,May I see the room first? (Baqdar ashoof il ghorfeh abel?)
+247,Do you have anything quieter?,Do you have anything quieter? (Fi eshi ahda?.)
+248,...bigger?,...bigger? (akbar?)
+249,...cleaner?,...cleaner? (andaf?)
+250,...cheaper?,...cheaper? (arkhas?)
+251,"OK, I'll take it.","OK, I'll take it. (OK, bakhodha)"
+252,I will stay for _____ night(s).,I will stay for _____ night(s). (Rah aba'a kaman ___ yom)
+253,Can you suggest another hotel?,Can you suggest another hotel? (')
+254,Do you have a safe?,Do you have a safe? (fi khazneh?)
+255,...lockers?,...lockers? (...)
+256,Is breakfast/supper included?,Is breakfast/supper included? (')
+257,What time is breakfast/supper?,What time is breakfast/supper? (ay sei-a il ftoor/asha?)
+258,Please clean my room.,Please clean my room. (momken tanadef il ghorfeh)
+259,I want to check out.,I want to check out. (beddi ashoofha)
+260,Do you accept American/Australian/Canadian dollars?,هل تقبل الدولار الأمريكي/الأسترالي/الكندية؟  (hal taqbal el-dolār el-am(e)rīki/ost(o)rāli/kanadi?)
+261,Do you accept British pounds?,هل تقبل الجنيه الاسترليني؟ (hal taqbal el-jinē el-esterlīni?)
+262,Do you accept credit cards?,هل تقبل الكريديت كارد؟ (hal taqbal el-k(e)redit kārd?)
+263,Can you change money for me?,Can you change money for me? (Momken tsarefli masari?)
+264,Where can I get money changed?,Where can I get money changed? (Wein badar asaref masari?)
+265,Can you change a traveler's check for me?,Can you change a traveler's check for me? (...)
+266,Where can I get a traveler's check changed?,Where can I get a traveler's check changed? (...)
+267,What is the exchange rate?,What is the exchange rate? (...)
+268,Where is an automatic teller machine (ATM)?,وين فيه ايه تي ام؟ (wein fī ē tī em?) (Levantine); فين ألاقي ايه تي ام؟ (fēn ala'i ē tī em?) (Egyptian)
+269,"A table for one person/two people, please.","A table for one person/two people, please. (tawla la wahed/tenein)"
+270,"Can I look at the menu, please?","Can I look at the menu, please? (Momken ashoof il menu?)"
+271,Can I look in the kitchen?,Can I look in the kitchen? (Mumken ashuf il matbakh?)
+272,Is there a house specialty?,Is there a house specialty? (...)
+273,Is there a local specialty?,Is there a local specialty? (...)
+274,I'm a vegetarian.,I'm a vegetarian. (Ana nabati)
+275,I don't eat pork.,I don't eat pork. (Ma bakol lahem khanzeer)
+276,I don't eat beef.,I don't eat beef. (Ma bakol lahmeh)
+277,I only eat Halal food.,I only eat Halal food. (Bas bakol akel hallal)
+278,"Can you make it ""lite"", please? (less oil/butter/lard)","Can you make it ""lite"", please? (khaleeha khafeefeh)"
+279,fixed-price meal,fixed-price meal (...)
+280,à la carte,à la carte (à la carte)
+281,breakfast,breakfast (ftoor) al iftar
+282,lunch,lunch (...) al ghada
+283,tea (meal),tea (...) shay'
+284,supper,supper (...) al isha'
+285,I want _____.,._____أريد (urīd)
+286,I want a dish containing _____.,I want a dish containing _____. (...)
+287,chicken,"دجاج‎, فراخ (dajāj, firākh)"
+288,beef,بقر (baqar)
+289,fish,سمك (samak)
+290,ham,خنزير (khanzīr)
+291,sausage,سوسيس (sōsīs)
+292,cheese,جبنة (jubneh)
+293,eggs,بيض (baid)
+294,salad,سلاطة (salata)
+295,(fresh) vegetables,(fresh) vegetables (...) (fresh) khudrawat
+296,(fresh) fruit,(fresh) fruit (fawakeh) (fresh) fawakat
+297,bread,bread (...) ayish OR khubz
+298,toast,toast (...)
+299,macaroni,مكرونة (makarōna)
+300,rice,أرز (roz)
+301,beans,فول (fūl)
+302,May I have a glass of _____?,May I have a glass of _____? (momken kās(et)___)
+303,May I have a cup of _____?,May I have a cup of _____? (momken finjan ___)
+304,May I have a bottle of _____?,May I have a bottle of _____? (...)
+305,coffee,قهوة (qahwa)
+306,tea (drink),شاي ( shay' )
+307,juice,عصير (`asīr)
+308,(bubbly) water,مياه غازية (miyāh ghāziyya)
+309,water,"ماي,‎ ماية‎, ماء (may(ya), mā')"
+310,beer,بيرة (bīra)
+311,red/white wine,"red/white wine (nabīd, nibīt ahmar/abyad)"
+312,May I have some _____?,May I have some _____? (momken ___?)
+313,salt,ملح (malh)
+314,black pepper,فلفل أسود (filfil aswad)
+315,butter,زبدة (zibda)
+316,"Excuse me, waiter? (getting attention of server)","Excuse me, waiter? (...)garcoon"
+317,I'm finished.,I'm finished. (khalast ) galaste
+318,It was delicious.,كان لذيذ.‏ ‎(kān ladhīdh)
+319,Please clear the plates.,Please clear the plates. (...)
+320,"The check, please.","The check, please. (...)Leh'seb min fadlak"
+321,Do you serve alcohol?,Do you serve alcohol? (fi kohool?)
+322,Is there table service?,Is there table service? (...)
+323,"A beer/two beers, please.","A beer/two beers, please. (bīra)"
+324,"A glass of red/white wine, please.","A glass of red/white wine, please. (kaset nbeed)"
+325,"A pint, please.","A pint, please. (...)"
+326,"A bottle, please.","A bottle, please. (aneeneh)"
+327,"_____ (hard liquor) and _____ (mixer), please.","_____ and _____, please. (...)"
+328,whiskey,whiskey (...)
+329,vodka,vodka (...)
+330,rum,rum (...)
+331,water,ماء ( mā' )
+332,club soda,club soda (soda)
+333,tonic water,tonic water (...)
+334,orange juice,orange juice (aseer bortoqal)
+335,Coke (soda),Coke (cola)
+336,Do you have any bar snacks?,Do you have any bar snacks? (...)
+337,"One more, please.","One more, please. (kaman wahed)"
+338,"Another round, please.","Another round, please. (kaman wahed)"
+339,When is closing time?,When is closing time? (emta bitsakro?)
+340,Do you have this in my size?,Do you have this in my size? (fi maqas?)
+341,How much is this?,بكم هذا؟ (bikam hatha)
+342,That's too expensive.,"that's too expensive. (...) ""ghali katheer!"""
+343,Would you take _____?,Would you take _____? (...)
+344,expensive,غالي (ghali)
+345,cheap,رخيص(rakhees)
+346,I can't afford it.,I can't afford it. (...)
+347,I don't want it.,I don't want it. (ma beddi)
+348,You're cheating me.,You're cheating me. (harami)
+349,I'm not interested.,I'm not interested. (lust muhtam)
+350,"OK, I'll take it.","OK, I'll take it. (ok)"
+351,Can I have a bag?,Can I have a bag? (urīo kīs)
+352,Do you ship (overseas)?,Do you ship (overseas)? (...)
+353,I need...,I need... (...) ahtāj
+354,...toothpaste.,...toothpaste. (ma`jūn asnān)
+355,...a toothbrush.,...a toothbrush. (forshāt asnān)
+356,...tampons.,...tampons. (always)
+357,...soap.,...soap. (saboon)
+358,...shampoo.,...shampoo. (shambū)
+359,"...pain reliever. (e.g., aspirin or ibuprofen)",...pain reliever. (mussakin)
+360,...cold medicine.,...cold medicine. (dawa rash-h)
+361,...stomach medicine.,...stomach medicine. (dawa baten)
+362,...a razor.,...a razor. (shafra)
+363,...an umbrella.,...an umbrella. (shamseyeh)
+364,...sunblock lotion.,...sunblock lotion. (...)
+365,...a postcard.,...بطاقة بريدية (bitaqa bareedia)
+366,...postage stamps.,...postage stamps. (tawabe' bareed)
+367,...batteries.,...batteries. (batareyat)
+368,...writing paper.,...ورق للكتبة (waraq lil-kitaba)
+369,...a pen.,...قلم (qalam)
+370,...English-language books.,...كتب إنجليزية (kutub ingliziya)
+371,...English-language magazines.,... مجلات انكليزية English-language magazines. (majalat engiliziya)
+372,...an English-language newspaper.,...جرائد إنجليزية(jara'id ingliziya)
+373,...an English-English dictionary.,...an English-English dictionary. (qāmūs ingilizi-ingilizi)
+374,I want to rent a car.,أريد استئجار سيارة (urīd isti'jār sayyāra)
+375,Can I get insurance?,هل أستطيع الحصول على تأمين؟ (hal astatī` al-husūl `ala ta'mīn?)
+376,stop (on a street sign),قف (qif)
+377,one way,اتجاه واحد (ittjāh wāhid)
+378,yield,(atti alaolwyeh(?))
+379,no parking,ممنوع الاسطفاف (mamnū` al-istifāf)
+380,speed limit,السرعة القصوى (as-sur`a al-qānūniyya)
+381,gas/petrol station,محطة بنزين (mahattat banzīn)
+382,petrol (gasoline),بنزين (banzīn)
+383,diesel,"ديزل‎, سولار‎, جاز (dīzel, sōlār, gāz)"
+384,I haven't done anything wrong.,ما عملت اشي غلط (ma `emelet eshi ghalat) (Jordanian); ما عملتش حاجة غلط (ma`amaltesh hāga ghalat) (Egyptian)
+385,It was a misunderstanding.,كان سوء تفاهم (kān sū' tafāhom)
+386,Where are you taking me?,وين/فين آخدني (wein/fēn akhedni?)
+387,Am I under arrest?,هل أنا معتقل؟ (hal ana mo`taqal?)
+388,I am an American/Australian/British/Canadian citizen.,I am an American/Australian/British/Canadian citizen. (Ana Americi/Anglizi/Kanadi)
+389,I want to talk to the American/Australian/British/Canadian embassy/consulate.,I need to talk to the American/Australian/British/Canadian embassy/consulate. (AhTAJ an atkalim ma'a al-Safeera al-Amrikiya/Australiya/Britaniya/Kanadiya.)
+390,I need to talk to a lawyer.,محتاج أحكي مع محامي (mehtāj ahki ma`a mohāmi )
+391,Can I just pay a fine now?,أقدر أدفع غرامة الآن؟ (aqdar adfa` gharāma al'ān?)

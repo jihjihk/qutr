@@ -1,0 +1,42 @@
+id,phrase,pos
+p0,Hello,phrs
+p1,Hi,phrs
+p2,Welcome,phrs
+p3,Good Morning,phrs
+p4,Good Afternoon,phrs
+p5,Good Evening,phrs
+p6,What would you like?,phrs
+p7,What is your name?,phrs
+p8,My name is *,vp
+p9,Nice to meet you,phrs
+p10,good,adj
+p11,very *,adv
+p12,Today,adv
+p13,We have *,vp
+p14,Orange,np
+p15,Apple,np
+p16,Mango,np
+p17,How much are *?,vp
+p18,What is the price?,phrs
+p19,* dollars,prt
+p20,per *,prt
+p21,I would like *,vp
+p22,* kilograms,prt
+p23,please,adv
+p24,okay,phrs
+p25,Would you like anything else?,phrs
+p26,Yes,phrs
+p27,No,phrs
+p28,"No, thanks",phrs
+p29,I don't need it.,phrs
+p30,Good bye,phrs
+p31,Right,adj
+p32,Wrong,adj
+p33,Thank you,phrs
+p34,You are welcome,phrs
+p35,Do you have *?,vp
+p36,I do not understand,phrs
+p37,and,conj
+p38,Sorry,phrs
+p39,Do you speak *?,vp
+p40,Help!,phrs
