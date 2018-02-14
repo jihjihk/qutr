@@ -3,19 +3,22 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  BackHandler,
   ToastAndroid,
-  Dimensions
+  Dimensions,
+  View
 } from 'react-native';
 
 import {
   Container,
-  Title
+  Title,
+  Button
 } from 'native-base';
 
 import Camera from 'react-native-camera';
 import RNFetchBlob from 'react-native-fetch-blob';
 import { NavigationActions } from 'react-navigation';
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import Header from '../../Components/header/Header.js';
 import Footer from '../../Components/footer/Footer.js';
@@ -23,7 +26,10 @@ import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 
 import styles from './styles.js';
 import {
-  SECONDARY_LIGHT
+  SECONDARY_LIGHT,
+  PRIMARY,
+  PRIMARY_DARK,
+  SECONDARY_DARK
 } from '../../masterStyle.js';
 
 export default class CameraScreen extends Component {
@@ -36,18 +42,6 @@ export default class CameraScreen extends Component {
   }
 
   static navigationOptions = { header: null };
-
-  componentDidMount() {
-      BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
-  }
-
-  componentWillUnmount() {
-      BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
-  }
-
-  handleBackButton() {
-      return true;
-  }
 
   changeCameraType() {
     if(this.state.cameraType === 'back') {
@@ -67,29 +61,21 @@ export default class CameraScreen extends Component {
   goBack()  {
     const backAction = NavigationActions.back({});
     this.props.navigation.dispatch(backAction);
-    this.props.navigation.state.params.showModal();
   }
 
   takePicture() {
    this.camera.capture()
      .then((data) => {
          ToastAndroid.show('Saving the picture...', ToastAndroid.SHORT);
+         this.props.navigation.state.params.refreshAndFetch();
          this.goBack();
           })
      .catch(err => console.error(err));
   }
 
-  pressBack() {
-    setTimeout(this.goBack.bind(this), 10);
-  }
-
   render() {
     return (
-      <Container ref='container'>
-        <Header left = {<ToolbarButton name='md-arrow-back'
-                                       onPress = {this.pressBack.bind(this)}/>}
-                center={<ToolbarButton name='md-reverse-camera' 
-                                       onPress={this.changeCameraType.bind(this)}/>}/>
+      <Container ref='container'>                      
         <Camera
            ref={(cam) => { this.camera = cam; }}
            style={styles.preview}
@@ -99,10 +85,24 @@ export default class CameraScreen extends Component {
            mirrorImage={this.state.mirrorMode}
            >
        </Camera>
-       <Footer center={<ToolbarButton name='md-camera' 
-                                       onPress={this.takePicture.bind(this)}
-                                       style={{ color: SECONDARY_LIGHT, fontSize: 40 }} />} 
-               style={{height: 60}}/>        
+       <ActionButton  buttonColor = {PRIMARY_DARK} 
+                      position = "center"
+                      offsetX={0}
+                      buttonTextStyle={{color: SECONDARY_DARK}}
+                      nativeFeedbackRippleColor = {PRIMARY}
+                      fixNativeFeedbackRadius = {true}
+                      autoInactive = {false}>            
+          <ActionButton.Item onPress={this.takePicture.bind(this)}
+                             useNativeFeedback={false}>
+            <Icon name='md-camera'
+                  style={{fontSize: 30, color: SECONDARY_LIGHT}}/>
+          </ActionButton.Item>
+          <ActionButton.Item onPress={this.changeCameraType.bind(this)}
+                             useNativeFeedback={false}>
+            <Icon name='md-reverse-camera'
+                  style={{fontSize: 30, color: SECONDARY_LIGHT}}/>
+          </ActionButton.Item>
+      </ActionButton>
       </Container>
     );
   }

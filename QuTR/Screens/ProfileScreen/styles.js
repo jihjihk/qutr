@@ -1,23 +1,17 @@
 import { StyleSheet,
          Dimensions } from 'react-native';
 
-const windowHeight = Dimensions.get('window').height;
-
 import {
   BLACK,
   SECONDARY,
-  SECONDARY_LIGHT,
-  PRIMARY,
+  SECONDARY_DARK,
   PRIMARY_DARK
 } from '../../masterStyle.js';
 
 export default StyleSheet.create({
 
   Container: {
-    backgroundColor: SECONDARY
-  },
-  Title: {
-    color: SECONDARY,
+    backgroundColor: SECONDARY_DARK
   },
   imageContainer: {
     height: 100,
@@ -32,27 +26,27 @@ export default StyleSheet.create({
   profileImage: {
     width: 100, 
     height: 100,
-
   },
-  form: {
-    flex: 1, 
+  textInput: {
+    backgroundColor: '#ffffff',
+    height: 40,
+    margin: 10,
+    borderRadius: 5,
+    padding: 3,
+    alignItems: 'stretch'
   },
-  modalContainer: {
-    flex: 1,
-    backgroundColor: SECONDARY,
-  },
-  loadMore: {
+  button: {
     backgroundColor: PRIMARY_DARK,
+    height: 40,
+    margin: 10,
+    borderRadius: 5,
+    padding: 3,
     alignItems: 'center',
-    justifyContent: 'center',
-    height: windowHeight/15
+    justifyContent:'center'
   },
-  scrollView: {
-    flexWrap: 'wrap',
-    flexDirection: 'row',
-    marginLeft: 5
+  buttonTitle: {
+    color: SECONDARY_DARK,
+    fontSize: 18,
+    fontWeight: 'bold'
   },
-  confirm: {
-    backgroundColor: PRIMARY_DARK,
-  }
 });

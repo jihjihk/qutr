@@ -1,3 +1,4 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   View,
@@ -8,50 +9,27 @@ import {
   BackAndroid,
   ToastAndroid,
   TouchableOpacity,
-  TouchableHighlight,
-  CameraRoll,
-  Dimensions,
-  Modal,
   ScrollView,
 } from 'react-native';
 import RNFetchBlob from 'react-native-fetch-blob';
-import { Container, Title, Text, Picker, Item as FormItem} from 'native-base';
+import { Container, Title, Text} from 'native-base';
 import { Button, Form } from 'react-native-elements'
 import { StackNavigator } from 'react-navigation';
 import { NavigationActions } from 'react-navigation';
-
-import { UserSchema, MessageSchema, ConversationSchema } from '../../Schemas.js';
+import { SegmentedControls } from 'react-native-radio-buttons'
 
 import InputWindow from '../../Components/inputWindow/InputWindow.js';
 import Header from '../../Components/header/Header.js';
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 import ProfileFormItem from '../../Components/profileFormItem/ProfileFormItem.js';
+import LogoutButton from '../../Components/logoutButton';
+
+import Lists from "../../Lists.js";
 
 import styles from './styles.js';
 import {
-  BLACK,
-  SECONDARY_DARK,
-  SECONDARY_LIGHT
+  PRIMARY_DARK
 } from '../../masterStyle.js';
-
-import { appFolder } from '../../App.js';
-
-const Item=Picker.Item;
-const Realm = require('realm');
-const { width } = Dimensions.get('window');
-
-
-var countries = [{label: "China", value: 'china'}, 
-                 {label: "United States of America", value: 'usa'}, 
-                 {label: "United Arab Emirates", value: 'uae'}];
-
-var languages = [{label: "Chinese", value: 'chinese'}, 
-                 {label: "English", value: 'english'}, 
-                 {label: "Arabic", value: 'arabic'}];
-
-var genders = [{label: "Male", value: 'male'}, 
-               {label: "Female", value: 'female'}, 
-               {label: "Other", value: 'other'}];
 
 export default class ProfileScreen extends Component<{}>  {
 
@@ -59,254 +37,135 @@ export default class ProfileScreen extends Component<{}>  {
 
   constructor(props) {
     super(props);  
-    var realm = props.navigation.state.params.realm;
-    var theUser = realm.objects('User')[0]; 
-    this.state = { realm: realm,
+    var firebase = firebaseService;
+    var theUser = firebase.auth().currentUser; 
+    this.state = { firebase: firebase,
                    user: theUser, 
-                   picture: theUser.picture,
-                   id: theUser.id, 
-                   name: theUser.name, 
-                   country: theUser.country, 
-                   age: theUser.age, 
-                   language: theUser.language, 
-                   gender: theUser.gender,
-                   photos: [],
-                   modalVisible: false,
-                   lastCursor: null,
-                   load: true,
+                   picture: "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png",
+                   name: "", 
+                   age: "", 
+                   language: "", 
+                   gender: ""
     }
-  }
+    this.updateDatabase = this.updateDatabase.bind(this);
 
-  updateDatabase(fromCameraRoll)  {
+    this.handleNameChange = (name) => {
+      this.setState({name: name});
+    };
 
-    this.state.realm.write(() => {
-      this.state.user.picture = this.state.picture;
-      this.state.user.name = this.state.name;
-      this.state.user.country = this.state.country;
-      this.state.user.age = parseInt(this.state.age);
-      this.state.user.language = this.state.language;
-      this.state.user.gender = this.state.gender;
-      //this.state.realm.objects('Conversation')[0].messages = [];
-    });
-  
-    ToastAndroid.show('The settings have been saved!', ToastAndroid.LONG);
+    this.handleAgeChange = (age) => {
+      this.setState({age: age});
+    };
 
-    if (!fromCameraRoll) setTimeout(this.goBack.bind(this), 100);    
-  }
-
-  goBack()  {
-    const backAction = NavigationActions.back({});
-    this.props.navigation.dispatch(backAction);
-  }
-
-  _keyboardDidShow () {
-  }
-
-  _keyboardDidHide () {
-  }
-
-  listItems (items) {
-
-    var pickerItems = [], i=0;
-    for (i; i<items.length; i++) {
-      pickerItems.push(<Item key={i} label={items[i].label} value={items[i].value}/>);
-    }
-    return pickerItems;
-  }
-
-  refreshAndFetch() {
-
-    this.setState({photos: [],
-                   lastCursor: null,
-                   load: true}, this.fetchPhotos);
-  }
-
-  getPhotos = (fresh) => {
-
-    if (fresh)  this.refreshAndFetch();
-    else this.fetchPhotos();
-  }
-
-  fetchPhotos() {
-
-    if (!this.state.load)  return;
-
-    const fetchParams = {
-      first: 60,
-      assetType: 'Photos'
+    this.setSelectedLanguage = (selectedOption) => {
+      this.setState({language:selectedOption});
     }
 
-    if (this.state.lastCursor) fetchParams.after = this.state.lastCursor;
+    this.setSelectedGender = (selectedOption) => {
+      this.setState({gender:selectedOption});
+    }
 
-    CameraRoll.getPhotos(fetchParams)
-    .then(r => { this.setState({ photos: this.state.photos.concat(r.edges), 
-                                 lastCursor: r.page_info.end_cursor,
-                                 load: false});
-    })
-    .catch((err) => {Alert.alert("Error", "Couldn't fetch photos.")})
   }
 
-  toggleModal = () => {
+  componentWillMount()  {
+    self=this;
+    var picture;
+    this.state.firebase.database()
+      .ref('/users/' + this.state.user.uid)
+      .once('value')
+      .then(function(snapshot) {  
 
-    if (!this.state.modalVisible) 
-      this.getPhotos(true);
-    this.setState({ modalVisible: !this.state.modalVisible });
-  }
+        /* Check if the user hasn't erased the picture from the app folder */
+        if (snapshot.val().picture != "" 
+          && snapshot.val().picture!=self.state.picture) {
 
-  setProfilePicture = (image) => {
-
-      var splitPath = image.node.image.uri.split("/");
-      var number = splitPath[splitPath.length-1];
-      var profilePictures = appFolder+"/Profile Pictures";
-      var newURI = profilePictures + "/" +number;
-
-      /* Check that the App directory exists */
-      RNFetchBlob.fs.isDir(profilePictures)
-      .then((isDir) => {
-
-        if (!isDir)  {
-          Alert.alert("Error", "Can't access app folder");
-          this.toggleModal();
+          picture = self.state.picture;
+          RNFetchBlob.fs.exists(snapshot.val().picture)
+            .then((exist) => {
+              if (exist) picture = snapshot.val().picture;
+              self.setState({picture: picture})
+            }).catch(err => console.error(err));
         }
 
-        /* Clear the App's picture directory */
-        RNFetchBlob.fs.ls(profilePictures)
-        .then((files) => {
-            for (var i=0; i<files.length; i++)  {
-              RNFetchBlob.fs.unlink(profilePictures+"/"+files[i])
-              .then(() => {})
-              .catch((err) => {})
-            }
-        })
-        .catch((err) => {})
+        self.setState({
+          name: snapshot.val().name,
+          age: snapshot.val().age,
+          language: snapshot.val().language,
+          gender: snapshot.val().gender
+        });
+      })
+      .catch(error => {
+        dispatch(sessionError(error.message));
+      });
+  }
 
-        /* Copy the chosen picture to App picture directory */
-        RNFetchBlob.fs.cp(image.node.image.uri, newURI)
-          .then(() => { 
-            this.setState({picture: "file://"+newURI}, 
-              function() { this.toggleModal();
-                           this.updateDatabase(true);                           
-            });
-          })
-          .catch((err) => {"Error", "Error copying the picture!"})
-       })
-      .catch((err) => {console.log("Err: ", err)})
+  updateDatabase()  {
 
-      /* Refresh Gallery */
-      RNFetchBlob.fs.scanFile([ { path : newURI } ])
-       .then(() => {})
-       .catch((err) => {
-         console.log("scan file error")
-       })
+    this.state.firebase.database()
+          .ref('users/'+this.state.user.uid)
+          .set({"name": this.state.name,
+                "age": this.state.age,
+                "language": this.state.language,
+                "gender": this.state.gender,
+                "picture": this.state.picture
+          });
+  
+    ToastAndroid.show('The settings have been saved!', ToastAndroid.LONG);
+    this.setState({});
   }
 
   render() {
 
     return (
       <Container ref="container" style = {[styles.Container]}>
-        <Header center={<Title style={[styles.Title]}>My profile</Title>}/>
-        <InputWindow ref="cw">
+        <Header right={<LogoutButton/>}/>
+        <InputWindow
+        contentContainerStyle={styles.Container}>
 
           <TouchableOpacity style={[styles.imageContainer]} 
-                            onPress = {() => {this.toggleModal();}}>
+                          onPress = {() => {this.props.navigation.navigate('Gallery', { update: this.updateDatabase, that: this});}}>
               <Image style={[styles.profileImage]} source={{uri: this.state.picture}}/>
           </TouchableOpacity>
 
-          <Modal animationType={"none"}
-                 transparent={false}
-                 visible={this.state.modalVisible}
-                 onRequestClose={() => console.log('closed')}>
-            <View style={styles.modalContainer}>
-              <Header center={<Title style={[styles.Title]}>Camera roll</Title>}
-                      left={<ToolbarButton name='md-arrow-back' 
-                                            onPress={() => {this.toggleModal()}}/>}
-                      right={<ToolbarButton name='md-camera' 
-                                            onPress={() => {this.props.navigation.navigate('Camera', 
-                                                                {path: appFolder, showModal: this.toggleModal});
-                                                            setTimeout(this.toggleModal, 300);}}/>}
-                      style={{marginBottom: 5}}/>
-              <ScrollView
-                contentContainerStyle={styles.scrollView}>
-                {
-                  this.state.photos.map((p, i) => {
-                    return (
-                      <TouchableOpacity style={{ marginBottom: 5,
-                                                 marginRight: 5}}
-                                          key={i}
-                                          underlayColor='transparent'
-                                          onPress={() => {this.setProfilePicture(p)}}>
-                        
-                        <Image style={{ width: width/4.3,
-                                        height: width/4.3}}
-                               source={{uri: p.node.image.uri}}/>
-                      </TouchableOpacity>)
-                  })
-                }
-              </ScrollView>
-              <View style={{marginTop: 5}}>
-                <TouchableOpacity style={[styles.loadMore]} 
-                                  onPress={() => {this.setState({load: true}, function() {this.getPhotos(false)});}}
-                                  activeOpacity={0.75}>
-                  <Text style = {{color: SECONDARY_DARK, fontSize: 16}}>LOAD MORE</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
+          <TextInput
+          style={ styles.textInput }
+          placeholder="Name"
+          returnKeyType='next'
+          autoCapitalize='none'
+          onChangeText={this.handleNameChange}
+          value={this.state.name}
+          underlineColorAndroid={'transparent'} />
 
-          </Modal>
+          <TextInput
+          style={ styles.textInput }
+          placeholder="Age"
+          returnKeyType='done'
+          keyboardType='numeric'
+          autoCapitalize='none'
+          onChangeText={this.handleAgeChange}
+          value={this.state.age}
+          underlineColorAndroid={'transparent'} />
 
-          <View style={[styles.form]}>
-            <ProfileFormItem label="Name">
-              <TextInput underlineColorAndroid='transparent' 
-                         placeholder='Enter name:' 
-                         onChangeText={(value) => {this.setState({name: value})}} 
-                         value={this.state.name}
-                         selectionColor={SECONDARY_LIGHT}
-                         style={{color: SECONDARY_LIGHT, textAlign: 'center'}}/>
-            </ProfileFormItem>
-            <ProfileFormItem label="Country">
-              <Picker mode='dialog' 
-                      onValueChange={(itemValue, itemPosition) => {this.setState({country: itemValue}, function () {})}} 
-                      selectedValue={this.state.country}
-                      selectionColor={SECONDARY_LIGHT}
-                      style={{color: SECONDARY_LIGHT}}>
-                {this.listItems(countries)}
-              </Picker>
-            </ProfileFormItem>
-            <ProfileFormItem label="Language">
-              <Picker mode='dialog' 
-                      onValueChange={(itemValue, itemPosition) => {this.setState({language: itemValue}, function () {})}} 
-                      selectedValue={this.state.language}
-                      selectionColor={SECONDARY_LIGHT}
-                      style={{color: SECONDARY_LIGHT}}>
-                {this.listItems(languages)}
-              </Picker>
-            </ProfileFormItem>
-            <ProfileFormItem label="Age">
-              <TextInput keyboardType='numeric' 
-                         underlineColorAndroid='transparent' 
-                         placeholder='Enter your age:' 
-                         onChangeText={(value) => {this.setState({age: value})}} 
-                         value={this.state.age.toString()}
-                         selectionColor={SECONDARY_LIGHT}
-                         style={{color: SECONDARY_LIGHT, textAlign: 'center'}}/>
-            </ProfileFormItem>
-            <ProfileFormItem label="Gender">
-              <Picker mode='dialog' 
-                      onValueChange={(itemValue, itemPosition) => {this.setState({gender: itemValue}, function () {})}} 
-                      selectedValue={this.state.gender}
-                      selectionColor={SECONDARY_LIGHT}
-                      style={{color: SECONDARY_LIGHT}}>
-                {this.listItems(genders)}
-              </Picker>    
-            </ProfileFormItem> 
-          </View>
-          <Button iconRight={{name: 'check', size: 25, color: SECONDARY_DARK}} 
-                  buttonStyle={[styles.confirm]} 
-                  color = {SECONDARY_DARK}
-                  containerViewStyle={{alignSelf: 'center', marginTop: 40}} 
-                  title='CONFIRM CHANGES' 
-                  onPress={() => {this.updateDatabase(false)}}>
-          </Button>
+          <SegmentedControls
+            options={ Lists.languages }
+            tint={PRIMARY_DARK}
+            onSelection={ this.setSelectedLanguage.bind(this) }
+            selectedOption={ this.state.language }
+            containerStyle={ styles.textInput }/>
+
+          <SegmentedControls
+            options={ Lists.genders }
+            tint={PRIMARY_DARK}
+            onSelection={ this.setSelectedGender.bind(this) }
+            selectedOption={ this.state.gender }
+            containerStyle={ styles.textInput }/>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={this.updateDatabase}>
+            <Text style={styles.buttonTitle}>Confirm changes</Text>
+          </TouchableOpacity>
+
         </InputWindow>
       </Container>
    );

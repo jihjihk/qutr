@@ -1,12 +1,13 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   View,
   ScrollView,
   Keyboard,
+  Alert
 } from 'react-native';
 import { Container, Title, Text, } from 'native-base';
 import { StackNavigator } from 'react-navigation';
-import ActionButton from 'react-native-action-button';
 
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js'
 import Header from '../../Components/header/Header.js';
@@ -18,36 +19,64 @@ import { UserSchema, MessageSchema, ConversationSchema } from '../../Schemas.js'
 import styles from './styles.js';
 import { PRIMARY_DARK,
          PRIMARY,
-         SECONDARY_DARK
        } from '../../masterStyle.js';
 
 const Realm = require('realm');
 
-const pictures = {"MERCHANT": require("../../Pictures/merchant.png"),
-                  "COUNTER ATTENDANT": require("../../Pictures/counter.png"),
-                  "TAXI DRIVER": require("../../Pictures/driver.jpg")}
+var self;
 
 export default class ConversationsScreen extends Component<{}>  {
 
-  constructor(props) {
-    super(props);
-    this.state= {realm: null,
-                 user: null};
-  }
-
   static navigationOptions = { header: null };
 
-  componentWillMount () {
-    Realm.open({
-      schema: [UserSchema, MessageSchema, ConversationSchema],
-    }).then(realm => {
-      this.setState({realm: realm, user: realm.objects('User')[0]});
-    }).catch(error => {
-      console.log(error);
-    });
+  constructor(props) {
+    super(props);
+    this.state= {
+      firebase: firebaseService,
+      user: firebaseService.auth().currentUser,
+      conversations: []
+    };
+    self = this;
+
+    this.conversationAddedListener();
   }
 
-  componentWillUnmount()  {
+  conversationAddedListener = () => {
+
+    this.state.firebase.database().ref()
+      .child('users')
+      .child(this.state.firebase.auth().currentUser.uid)
+      .child('userRooms')
+      .on("child_added", 
+        function(snapshot, prevChildKey) {
+          self.addConversation(snapshot);
+        });
+  }
+
+  addConversation = (snapshot) => {
+
+    var key=snapshot.key;
+    this.state.firebase.database().ref()
+      .child('users')
+      .child(snapshot.val().correspondent)
+      .once('value')
+      .then(function(snapshot) {
+        var name = snapshot.val().name;
+        var convos = self.state.conversations;
+        convos.push(
+           <Conversation navigation = {self.props.navigation}
+                         firebase = {self.state.firebase}
+                         user = {self.state.user}
+                         refresh = {self.refresh.bind(this)}
+                         key={key}
+                         sender = {name.toString()}                                          
+                         message =  ""
+                         date="" 
+                         time="" 
+                         picture={"https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png"}>
+           </Conversation>)
+        self.setState({conversations: convos});
+      });
   }
 
   getLastMessage(conversation) {
@@ -57,45 +86,19 @@ export default class ConversationsScreen extends Component<{}>  {
   }
 
   refresh() {
-    this.setState({});
+    self.setState({});
   }
 
   render() {
 
-    var conversations=[];
-    if (this.state.realm)  {
-      var allConversations = this.state.realm.objects('Conversation'), i=0;
-      let conversation;
-      for (i; i<allConversations.length; i++) {
-
-        conversation = allConversations[i];
-        var lastMessage = this.getLastMessage(conversation);
-
-        conversations.push(<Conversation navigation = {this.props.navigation}
-                                         realm = {this.state.realm}
-                                         refresh = {this.refresh.bind(this)}
-                                         key={i}
-                                         sender = {conversation.correspondent.name}                                          
-                                         message = {lastMessage.text}
-                                         date={(lastMessage.date.getDate()+1)+"/"+(lastMessage.date.getMonth()+1)+"/"+lastMessage.date.getFullYear()} 
-                                         time={lastMessage.date.getHours()+":"+lastMessage.date.getMinutes()} 
-                                         picture={{source: pictures[conversation.correspondent.name]}}></Conversation>);
-      }
-    }
-
     return (
       <Container ref="container" style={[styles.Container]}>
-      <Header center={<Title style={[styles.Title]}>My conversations</Title>} 
-              left={<ToolbarButton name='md-settings' 
-                                   onPress={() => {this.props.navigation.navigate('Profile', {realm: this.state.realm})}}/>}/>
         <ConversationsWindow ref="cw">
-          {conversations}
+          {this.state.conversations.length==0 && <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
+                                          <Text>No conversations to display</Text>
+                                        </View>
+          }{this.state.conversations}
         </ConversationsWindow>
-        <ActionButton onPress={() => {this.props.navigation.navigate('Connection')}} 
-                      buttonColor = {PRIMARY_DARK} 
-                      buttonTextStyle={{color: SECONDARY_DARK}}
-                      nativeFeedbackRippleColor = {PRIMARY}
-                      fixNativeFeedbackRadius = {true}></ActionButton>
       </Container>
    );
   }

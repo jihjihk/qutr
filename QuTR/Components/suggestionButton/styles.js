@@ -3,6 +3,7 @@ import { StyleSheet,
 
 import {
   SECONDARY_DARK,
+  PRIMARY_DARK
 } from '../../masterStyle.js';
 
 
@@ -15,14 +16,14 @@ export default StyleSheet.create({
     height: 40,
     width: windowWidth/3,
     borderRightWidth: 0.2,
-    borderColor: 'white',
+    borderColor: PRIMARY_DARK,
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
   	textAlign: 'center', 
     textAlignVertical: 'center', 	
-  	color: 'black',
+  	color: PRIMARY_DARK,
   	fontSize: 15,
   },
 });
