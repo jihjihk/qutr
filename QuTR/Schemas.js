@@ -3,7 +3,7 @@ const UserSchema = {
   primaryKey: 'id',
   properties: {
     id: 'int',
-    picture: 'string?',
+    picture: 'string',
     name: 'string',
     country: 'string',
     language: 'string',

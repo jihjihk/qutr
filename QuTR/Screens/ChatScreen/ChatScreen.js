@@ -1,3 +1,4 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   Views,
@@ -21,7 +22,6 @@ import Footer from '../../Components/footer/Footer.js';
 import styles from './styles.js';
 
 import { BLACK, 
-         GREEN,
          SECONDARY_LIGHT } from '../../masterStyle.js'
 
 export default class ChatScreen extends Component<{}>  {
@@ -31,10 +31,10 @@ export default class ChatScreen extends Component<{}>  {
   constructor(props) {
     super(props);
     this.state={sendDisabled: true,
-                sendStyle: {color: SECONDARY_LIGHT},
-                realm: this.props.navigation.state.params.realm,
+                sendStyle: {color: BLACK},
+                firebase: firebaseService.auth(),
+                user: firebaseService.auth().currentUser,
                 conversation: null,
-                user: this.props.navigation.state.params.realm.objects('User')[0]
               };
   }
 
@@ -42,13 +42,13 @@ export default class ChatScreen extends Component<{}>  {
 
     if (this.state.sendDisabled)  return;
     var message = this.refs.mi.state.message;
-    this.state.realm.write(() => {
+    // this.state.realm.write(() => {
 
-      var myMessage = this.createMessage('me', message);
-      var theirMessage = this.createMessage('them', message+" to you too!");
-      this.state.conversation.messages.push(myMessage);
-      this.state.conversation.messages.push(theirMessage);
-    });
+    //   var myMessage = this.createMessage('me', message);
+    //   var theirMessage = this.createMessage('them', message+" to you too!");
+    //   this.state.conversation.messages.push(myMessage);
+    //   this.state.conversation.messages.push(theirMessage);
+    // });
     this.refs.cw.receiveMessage(this.getLastMessages(15));
     this.refs.mi.clearContent();
     this.refs.sb.clean();
@@ -57,13 +57,13 @@ export default class ChatScreen extends Component<{}>  {
 
   createMessage(owner, message) {
 
-    var theMessage = this.state.realm.create('Message', {
+    // var theMessage = this.state.realm.create('Message', {
 
-        owner: owner,
-        date: new Date(),
-        text: message
-      });
-    return theMessage;
+    //     owner: owner,
+    //     date: new Date(),
+    //     text: message
+    //   });
+    // return theMessage;
   }  
 
   getLastMessages(number)   {
@@ -76,13 +76,13 @@ export default class ChatScreen extends Component<{}>  {
 
   enableSend = () => {
     this.setState({sendDisabled: false,
-                  sendStyle: {color: GREEN}});
+                  sendStyle: {color: SECONDARY_LIGHT}});
   }
 
   disableSend = () => {
 
     this.setState({sendDisabled: true,
-                  sendStyle: {color: SECONDARY_LIGHT, 
+                  sendStyle: {color: BLACK, 
                               opacity: 1}});
   }
 
@@ -99,10 +99,9 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   selectSuggestion = (value) => {
-    Alert.alert(value, "Hi");
-    // this.refs.mi.setText(value);
-    // this.textChanged(value);
-    // this.enableSend();
+    this.refs.mi.setText(value);
+    this.textChanged(value);
+    this.enableSend();
   }
 
   backHandler() {
@@ -120,8 +119,6 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   renderPropsIntoState()  {
-    this.setState({conversation: this.state.realm.objects('Conversation')
-                                  .filtered('correspondent.name = "'+this.props.navigation.state.params.name+'"')[0]});
   }
 
   componentWillUnmount () {
@@ -141,12 +138,10 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   render() {
-    if (this.state.conversation==null) return null;
     return (
       <Container ref="container" style={[styles.Container]}>
         <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>}/>
-        <ChatWindow ref="cw" messages = {this.getLastMessages(15)} picture = {this.props.navigation.state.params.picture} myPicture ={this.state.user.picture}>
-        </ChatWindow>
+        
 
         <Footer center={<MessageInput ref='mi' 
                                       style={{flex: 1}} 

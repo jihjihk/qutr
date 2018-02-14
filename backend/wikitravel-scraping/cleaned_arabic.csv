@@ -1,0 +1,393 @@
+,en,ar
+0,OPEN,مفتوح 
+1,CLOSED,مغلق 
+2,ENTRANCE,دخول 
+3,EXIT,خروج 
+4,PUSH,ادفع 
+5,PULL,اسحب 
+6,TOILET,حمام 
+7,MEN,رجال 
+8,WOMEN,سيدات 
+9,FORBIDDEN,ممنوع 
+10,Goodbye,مع السلامة   
+11,Goodbye (informal),باي باي  
+12,I can't speak Arabic [well].,لا اتكلم عربي جيدا    
+13,Do you speak English?,هل تتكلم الانجليزية   
+14,Is there someone here who speaks English?,حد بيتكلم انجليزي؟    
+15,Help!,النجدة ; إلحقوني 
+16,Look out!,انتبه 
+17,Good night.,تصبح على خير   
+18,I don't understand.,لا افهم  
+19,Where is the toilet?,وين/فين الحمام؟ / 
+20,Leave me alone.,
+21,Don't touch me!,لا تلمسني 
+22,I'll call the police.,سأتصل بالشرطة‏ ‎
+23,Police!,  
+24,Stop! Thief!,اوقف حرامي‏ ‎
+25,I need your help.,محتاج مساعدة لو سمحت 
+26,Medical emergency,إسعاف 
+27,I'm lost.,أنا تايه 
+28,I lost my bag.,
+29,I lost my wallet.,
+30,I'm sick.,
+31,I've been injured.,إنني مصاب
+32,I need a doctor.,
+33,Can I use your phone?,
+34,٠,
+35,١,
+36,٢,
+37,٣,
+38,٤,
+39,٥,
+40,٦,
+41,٧,
+42,٨,
+43,٩,
+44,0,صفر 
+45,1,واحد 
+46,2,إثنان 
+47,3,ثلاثة 
+48,4,اربعة 
+49,5,خمسة 
+50,6,ستة 
+51,7,سبعة 
+52,8,ثمانية 
+53,9,تسعة 
+54,10,عشرة 
+55,11,احد عشر  
+56,12,اثنا عشر  
+57,13,ثلاثة عشر  
+58,14,اربعة عشر  
+59,15,خمسة عشر  
+60,16,ستة عشر  
+61,17,سبعة عشر  
+62,18,ثمانية عشر  
+63,19,تسعة عشر  
+64,20,عشرون 
+65,21,واحد وعشرون  
+66,22,اثنان وعشرون  
+67,23,ثلاثة وعشرون  
+68,30,ثلاثون 
+69,40,اربعون 
+70,50,خمسون 
+71,60,ستون 
+72,70,سبعون 
+73,80,ثمانون 
+74,90,تسعون 
+75,100,مئة 
+76,200,مئتين 
+77,300,ثلاث مئة  
+78,1000,الف    
+79,2000,الفين 
+80,"1,000,000",مليون 
+81,"1,000,000,000",مليار‎ بليون  
+82,"1,000,000,000,000",تريليون 
+83,"number _____ (train, bus, etc.)",رقم /  
+84,half,نصف 
+85,less,اقل 
+86,more,اكثر 
+87,Go,ذهب 
+88,Stop,وقف 
+89,Turn left,لف يسار  
+90,Turn right,لف يمين  
+91,straight ahead,إلى الامام  ; على طول   
+92,slowly,ببطء ; شوي شوي   
+93,Wait or stay,انتظر 
+94,Show me.,أرني 
+95,here,هنا 
+96,there,هناك 
+97,before,قبل 
+98,after,بعد 
+99,now,الأن 
+100,from,من 
+101,to or at (a place),إلى 
+102,Wait one minute.,إنتظر دقيقه واحده   
+103,I,انا 
+104,you (m),أنتَ ;  
+105,you (f),أنتِ ;   
+106,he,هو ;   
+107,she,هي ;   
+108,we,نحن ; احنا‎ نحنا 
+109,you (m/mixed),أنتما  
+110,they (two people) : هما huma (rarely used out of the most formal Literary Arabic),أنتم ; 
+111,they (m/mixed),هم  
+112,they (f),هن  
+113,Who?,من 
+114,What?,ما/ماذا /
+115,When?,متى  
+116,Where?,اين 
+117,Why?,لماذا 
+118,How much?,بكم 
+119,How much is this?,بكم هذا  
+120,Where are you from?,من أين أنت   
+121,Understand?,مفهوم؟ 
+122,Do you speak English?,هل تتكلم الإنجليزية؟   
+123,What is this?,ما هذا؟  
+124,I want, أريد
+125,I don't want,  لا أريد
+126,I have,لي  /  لدي /  عندي
+127,I don't have,  ليس عندي
+128,I don't understand,أنا لا أفهم    / أنا مش فاهم    
+129,I work at the _____.,  *  *أعمل في /    *أنا باشتغل في 
+130,I don't speak Arabic,لا أتكلم العربية    /    ما باحكي عربي 
+131,money,مال‎ فلوس   
+132,coffee,قهوة 
+133,sugar,سكر 
+134,salt,ملح 
+135,car,سيارة 
+136,hotel,فندق   /  اوتيل  
+137,water,ماء 
+138,tea,شاي 
+139,milk,حليب 
+140,work,شغل  
+141,airplane,طائرة 
+142,street,شارع 
+143,now,الآن 
+144,later,لاحقاً 
+145,before,قبل 
+146,morning,صباح 
+147,afternoon,بعد ظهر 
+148,evening,مساء 
+149,night,ليلة 
+150,one o'clock AM,
+151,two o'clock AM,
+152,noon,
+153,one o'clock PM,
+154,two o'clock PM,
+155,midnight,متصف الليلة‎ نص الليل 
+156,_____ minute(s),‏* دقيقة 
+157,_____ hour(s),‏* ساعة 
+158,_____ day(s),‏* يوم 
+159,_____ week(s),‏* أسبوع 
+160,_____ month(s),‏* ‏ ‎( (
+161,_____ year(s),‏* سنة 
+162,today,البوم 
+163,yesterday,أمس 
+164,tomorrow,غداً 
+165,this week,الاسبوع 
+166,last week,الأسبوع الماضي 
+167,next week,الأسبوع القادم 
+168,Sunday,يوم الأحد 
+169,Monday,يوم الاثنين 
+170,Tuesday,يوم الثلاثاء 
+171,Wednesday,يوم الأربعاء 
+172,Thursday,يوم الخميس 
+173,Friday,يوم الجمعة 
+174,Saturday,يوم السبت 
+175,January,كانون الثاني‎ يناير 
+176,February,شباط‎ فبراير 
+177,March,آذار‎ مارس 
+178,April,نيسان‎ ابريل 
+179,May,أيار‎ مايو 
+180,June,حزيران‎ يونيو 
+181,July,تموز‎ يوليو 
+182,August,آب‎ أغسطس 
+183,September,أيلول‎ سبتمبر 
+184,October,تشرن الأول‎ أكتوبر 
+185,November,تشرن الثاني‎ نوفمبر 
+186,December,كانون الأول‎ ديسمبر 
+187,black,أسود 
+188,white,أبيض 
+189,gray,رمادي 
+190,red,أحمر 
+191,blue,أزرق 
+192,yellow,أصفر 
+193,green,أخضر 
+194,orange,برتقالي 
+195,purple,بنفسجي 
+196,brown,بني 
+197,How much is a ticket to _____?,   *   
+198,"One ticket to _____, please.",   *  
+199,Where does this train/bus go?,/         /
+200,Where is the train/bus to _____?, /  *
+201,Does this train/bus stop in _____?,   / * 
+202,When does the train/bus for _____ leave?,  /  *
+203,When will this train/bus arrive in _____?,   / *
+204,How do I get to _____ ?,
+205,the train station,
+206,the bus station,
+207,the airport,المطار 
+208,downtown,
+209,the youth hostel,
+210,the _____ hotel,
+211,the American/Canadian/Australian/British consulate,
+212,Where are there a lot of...,
+213,hotels,
+214,restaurants,
+215,bars,
+216,sites to see,
+217,Can you show me on the map?,
+218,street,شارع 
+219,Turn left.,لف يسار 
+220,Turn right.,لف يمين 
+221,left,يسار 
+222,right,يمين 
+223,straight ahead,على طول 
+224,towards the _____,
+225,past the _____,
+226,before the _____,
+227,Watch for the _____.,
+228,intersection,
+229,north,شمال 
+230,south,جنوب 
+231,east,شرق 
+232,west,غرب 
+233,uphill,
+234,downhill,
+235,Taxi!,تاكسي‏ ‎ 
+236,"Take me to _____, please.",
+237,How much does it cost to get to _____?,     
+238,"Take me there, please.",
+239,Do you have any rooms available?,
+240,How much is a room for one person/two people?,
+241,Does the room come with...,
+242,bedsheets,‏شراشف‎ ملايات 
+243,a bathroom,‏حمام 
+244,a telephone,‏تليفون 
+245,a TV,‏تلفزيون 
+246,May I see the room first?,
+247,Do you have anything quieter?,
+248,bigger,
+249,cleaner,
+250,cheaper,
+251,"OK, I'll take it.",
+252,I will stay for _____ night(s).,   * 
+253,Can you suggest another hotel?,
+254,Do you have a safe?,
+255,lockers,
+256,Is breakfast/supper included?,
+257,What time is breakfast/supper?,
+258,Please clean my room.,
+259,I want to check out.,
+260,Do you accept American/Australian/Canadian dollars?,هل تقبل الدولار الأمريكي/الأسترالي/الكندية؟  
+261,Do you accept British pounds?,هل تقبل الجنيه الاسترليني؟ 
+262,Do you accept credit cards?,هل تقبل الكريديت كارد؟ 
+263,Can you change money for me?,
+264,Where can I get money changed?,
+265,Can you change a traveler's check for me?,
+266,Where can I get a traveler's check changed?,
+267,What is the exchange rate?,
+268,Where is an automatic teller machine (ATM)?,وين فيه ايه تي ام؟ 
+269,"A table for one person/two people, please.",
+270,"Can I look at the menu, please?",
+271,Can I look in the kitchen?,
+272,Is there a house specialty?,
+273,Is there a local specialty?,
+274,I'm a vegetarian.,
+275,I don't eat pork.,
+276,I don't eat beef.,
+277,I only eat Halal food.,
+278,"Can you make it ""lite"", please? (less oil/butter/lard)","    """"  "
+279,fixed-price meal,
+280,à la carte,
+281,breakfast,  
+282,lunch,  
+283,tea (meal),  
+284,supper,  
+285,I want _____.,*أريد 
+286,I want a dish containing _____.,
+287,chicken,دجاج‎ فراخ 
+288,beef,بقر 
+289,fish,سمك 
+290,ham,خنزير 
+291,sausage,سوسيس 
+292,cheese,جبنة 
+293,eggs,بيض 
+294,salad,سلاطة 
+295,(fresh) vegetables,)  
+296,(fresh) fruit,)  
+297,bread,   
+298,toast,
+299,macaroni,مكرونة 
+300,rice,أرز 
+301,beans,فول 
+302,May I have a glass of _____?,
+303,May I have a cup of _____?,
+304,May I have a bottle of _____?,
+305,coffee,قهوة 
+306,tea (drink),شاي 
+307,juice,عصير 
+308,(bubbly) water,مياه غازية 
+309,water,ماي‎ ماية‎ ماء 
+310,beer,بيرة 
+311,red/white wine,
+312,May I have some _____?,
+313,salt,ملح 
+314,black pepper,فلفل أسود 
+315,butter,زبدة 
+316,"Excuse me, waiter? (getting attention of server)",   
+317,I'm finished., 
+318,It was delicious.,كان لذيذ‏ ‎
+319,Please clear the plates.,
+320,"The check, please.",  
+321,Do you serve alcohol?,
+322,Is there table service?,
+323,"A beer/two beers, please.",
+324,"A glass of red/white wine, please.",
+325,"A pint, please.",
+326,"A bottle, please.",
+327,"_____ (hard liquor) and _____ (mixer), please.",*  *  
+328,whiskey,
+329,vodka,
+330,rum,
+331,water,ماء 
+332,club soda,
+333,tonic water,
+334,orange juice,
+335,Coke (soda), 
+336,Do you have any bar snacks?,
+337,"One more, please.",
+338,"Another round, please.",
+339,When is closing time?,
+340,Do you have this in my size?,
+341,How much is this?,بكم هذا؟ 
+342,That's too expensive.,"    "" """
+343,Would you take _____?,
+344,expensive,غالي 
+345,cheap,رخيص
+346,I can't afford it.,
+347,I don't want it.,
+348,You're cheating me.,
+349,I'm not interested.,
+350,"OK, I'll take it.",
+351,Can I have a bag?,
+352,Do you ship (overseas)?,
+353,I need..., 
+354,toothpaste,
+355,a toothbrush,
+356,tampons,
+357,soap,
+358,shampoo,
+359,"pain reliever. (e.g., aspirin or ibuprofen",  
+360,cold medicine,
+361,stomach medicine,
+362,a razor,
+363,an umbrella,
+364,sunblock lotion,
+365,a postcard,بطاقة بريدية 
+366,postage stamps,
+367,batteries,
+368,writing paper,ورق للكتبة 
+369,a pen,قلم 
+370,English-language books,كتب إنجليزية 
+371,English-language magazines,مجلات انكليزية
+372,an English-language newspaper,جرائد إنجليزية
+373,an English-English dictionary,
+374,I want to rent a car.,أريد استئجار سيارة 
+375,Can I get insurance?,هل أستطيع الحصول على تأمين؟ 
+376,stop (on a street sign),قف 
+377,one way,اتجاه واحد 
+378,yield,
+379,no parking,ممنوع الاسطفاف 
+380,speed limit,السرعة القصوى 
+381,gas/petrol station,محطة بنزين 
+382,petrol (gasoline),بنزين 
+383,diesel,ديزل‎ سولار‎ جاز 
+384,I haven't done anything wrong.,ما عملت اشي غلط 
+385,It was a misunderstanding.,كان سوء تفاهم 
+386,Where are you taking me?,وين/فين آخدني 
+387,Am I under arrest?,هل أنا معتقل؟ 
+388,I am an American/Australian/British/Canadian citizen.,
+389,I want to talk to the American/Australian/British/Canadian embassy/consulate.,      /// / 
+390,I need to talk to a lawyer.,محتاج أحكي مع محامي 
+391,Can I just pay a fine now?,أقدر أدفع غرامة الآن؟ 

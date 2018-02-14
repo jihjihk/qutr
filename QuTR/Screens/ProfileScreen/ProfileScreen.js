@@ -1,3 +1,4 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   View,
@@ -11,36 +12,24 @@ import {
   ScrollView,
 } from 'react-native';
 import RNFetchBlob from 'react-native-fetch-blob';
-import { Container, Title, Text, Picker, Item as FormItem} from 'native-base';
+import { Container, Title, Text} from 'native-base';
 import { Button, Form } from 'react-native-elements'
 import { StackNavigator } from 'react-navigation';
 import { NavigationActions } from 'react-navigation';
+import { SegmentedControls } from 'react-native-radio-buttons'
 
 import InputWindow from '../../Components/inputWindow/InputWindow.js';
 import Header from '../../Components/header/Header.js';
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 import ProfileFormItem from '../../Components/profileFormItem/ProfileFormItem.js';
+import LogoutButton from '../../Components/logoutButton';
+
+import Lists from "../../Lists.js";
 
 import styles from './styles.js';
 import {
-  BLACK,
-  SECONDARY_DARK,
-  SECONDARY_LIGHT
+  PRIMARY_DARK
 } from '../../masterStyle.js';
-
-const Item=Picker.Item;
-
-var countries = [{label: "China", value: 'china'}, 
-                 {label: "United States of America", value: 'usa'}, 
-                 {label: "United Arab Emirates", value: 'uae'}];
-
-var languages = [{label: "Chinese", value: 'chinese'}, 
-                 {label: "English", value: 'english'}, 
-                 {label: "Arabic", value: 'arabic'}];
-
-var genders = [{label: "Male", value: 'male'}, 
-               {label: "Female", value: 'female'}, 
-               {label: "Other", value: 'other'}];
 
 export default class ProfileScreen extends Component<{}>  {
 
@@ -48,109 +37,135 @@ export default class ProfileScreen extends Component<{}>  {
 
   constructor(props) {
     super(props);  
-    var realm = this.props.screenProps.realm;
-    var theUser = this.props.screenProps.user; 
-    this.state = { realm: realm,
+    var firebase = firebaseService;
+    var theUser = firebase.auth().currentUser; 
+    this.state = { firebase: firebase,
                    user: theUser, 
-                   picture: theUser.picture,
-                   id: theUser.id, 
-                   name: theUser.name, 
-                   country: theUser.country, 
-                   age: theUser.age, 
-                   language: theUser.language, 
-                   gender: theUser.gender
+                   picture: "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png",
+                   name: "", 
+                   age: "", 
+                   language: "", 
+                   gender: ""
     }
     this.updateDatabase = this.updateDatabase.bind(this);
+
+    this.handleNameChange = (name) => {
+      this.setState({name: name});
+    };
+
+    this.handleAgeChange = (age) => {
+      this.setState({age: age});
+    };
+
+    this.setSelectedLanguage = (selectedOption) => {
+      this.setState({language:selectedOption});
+    }
+
+    this.setSelectedGender = (selectedOption) => {
+      this.setState({gender:selectedOption});
+    }
+
+  }
+
+  componentWillMount()  {
+    self=this;
+    var picture;
+    this.state.firebase.database()
+      .ref('/users/' + this.state.user.uid)
+      .once('value')
+      .then(function(snapshot) {  
+
+        /* Check if the user hasn't erased the picture from the app folder */
+        if (snapshot.val().picture != "" 
+          && snapshot.val().picture!=self.state.picture) {
+
+          picture = self.state.picture;
+          RNFetchBlob.fs.exists(snapshot.val().picture)
+            .then((exist) => {
+              if (exist) picture = snapshot.val().picture;
+              self.setState({picture: picture})
+            }).catch(err => console.error(err));
+        }
+
+        self.setState({
+          name: snapshot.val().name,
+          age: snapshot.val().age,
+          language: snapshot.val().language,
+          gender: snapshot.val().gender
+        });
+      })
+      .catch(error => {
+        dispatch(sessionError(error.message));
+      });
   }
 
   updateDatabase()  {
 
-    this.state.realm.write(() => {
-      this.state.user.picture = this.state.picture;
-      this.state.user.name = this.state.name;
-      this.state.user.country = this.state.country;
-      this.state.user.age = parseInt(this.state.age);
-      this.state.user.language = this.state.language;
-      this.state.user.gender = this.state.gender;
-    });
+    this.state.firebase.database()
+          .ref('users/'+this.state.user.uid)
+          .set({"name": this.state.name,
+                "age": this.state.age,
+                "language": this.state.language,
+                "gender": this.state.gender,
+                "picture": this.state.picture
+          });
   
     ToastAndroid.show('The settings have been saved!', ToastAndroid.LONG);
     this.setState({});
-  }
-
-  listItems (items) {
-
-    var pickerItems = [], i=0;
-    for (i; i<items.length; i++) {
-      pickerItems.push(<Item key={i} label={items[i].label} value={items[i].value}/>);
-    }
-    return pickerItems;
   }
 
   render() {
 
     return (
       <Container ref="container" style = {[styles.Container]}>
-        <InputWindow ref="cw">
+        <Header right={<LogoutButton/>}/>
+        <InputWindow
+        contentContainerStyle={styles.Container}>
 
           <TouchableOpacity style={[styles.imageContainer]} 
-                            onPress = {() => {this.props.navigation.navigate('Gallery', { update: this.updateDatabase, that: this});}}>
+                          onPress = {() => {this.props.navigation.navigate('Gallery', { update: this.updateDatabase, that: this});}}>
               <Image style={[styles.profileImage]} source={{uri: this.state.picture}}/>
           </TouchableOpacity>
 
-           <View style={[styles.form]}>
-            <ProfileFormItem label="Name">
-              <TextInput underlineColorAndroid='transparent' 
-                         placeholder='Enter name:' 
-                         onChangeText={(value) => {this.setState({name: value})}} 
-                         value={this.state.name}
-                         selectionColor={SECONDARY_LIGHT}
-                         style={{color: SECONDARY_LIGHT, textAlign: 'center'}}/>
-            </ProfileFormItem>
-            <ProfileFormItem label="Country">
-              <Picker mode='dialog' 
-                      onValueChange={(itemValue, itemPosition) => {this.setState({country: itemValue}, function () {})}} 
-                      selectedValue={this.state.country}
-                      selectionColor={SECONDARY_LIGHT}
-                      style={{color: SECONDARY_LIGHT}}>
-                {this.listItems(countries)}
-              </Picker>
-            </ProfileFormItem>
-            <ProfileFormItem label="Language">
-              <Picker mode='dialog' 
-                      onValueChange={(itemValue, itemPosition) => {this.setState({language: itemValue}, function () {})}} 
-                      selectedValue={this.state.language}
-                      selectionColor={SECONDARY_LIGHT}
-                      style={{color: SECONDARY_LIGHT}}>
-                {this.listItems(languages)}
-              </Picker>
-            </ProfileFormItem>
-            <ProfileFormItem label="Age">
-              <TextInput keyboardType='numeric' 
-                         underlineColorAndroid='transparent' 
-                         placeholder='Enter your age:' 
-                         onChangeText={(value) => {this.setState({age: value})}} 
-                         value={this.state.age.toString()}
-                         selectionColor={SECONDARY_LIGHT}
-                         style={{color: SECONDARY_LIGHT, textAlign: 'center'}}/>
-            </ProfileFormItem>
-            <ProfileFormItem label="Gender">
-              <Picker mode='dialog' 
-                      onValueChange={(itemValue, itemPosition) => {this.setState({gender: itemValue}, function () {})}} 
-                      selectedValue={this.state.gender}
-                      selectionColor={SECONDARY_LIGHT}
-                      style={{color: SECONDARY_LIGHT}}>
-                {this.listItems(genders)}
-              </Picker>    
-            </ProfileFormItem> 
-          </View>
-          <Button iconRight={{name: 'check', size: 25, color: SECONDARY_DARK}} 
-                  buttonStyle={[styles.confirm]} 
-                  color = {SECONDARY_DARK}
-                  containerViewStyle={{alignSelf: 'center', marginTop: 10}} 
-                  title='CONFIRM CHANGES' 
-                  onPress={() => {this.updateDatabase(false)}}>
-          </Button>
+          <TextInput
+          style={ styles.textInput }
+          placeholder="Name"
+          returnKeyType='next'
+          autoCapitalize='none'
+          onChangeText={this.handleNameChange}
+          value={this.state.name}
+          underlineColorAndroid={'transparent'} />
+
+          <TextInput
+          style={ styles.textInput }
+          placeholder="Age"
+          returnKeyType='done'
+          keyboardType='numeric'
+          autoCapitalize='none'
+          onChangeText={this.handleAgeChange}
+          value={this.state.age}
+          underlineColorAndroid={'transparent'} />
+
+          <SegmentedControls
+            options={ Lists.languages }
+            tint={PRIMARY_DARK}
+            onSelection={ this.setSelectedLanguage.bind(this) }
+            selectedOption={ this.state.language }
+            containerStyle={ styles.textInput }/>
+
+          <SegmentedControls
+            options={ Lists.genders }
+            tint={PRIMARY_DARK}
+            onSelection={ this.setSelectedGender.bind(this) }
+            selectedOption={ this.state.gender }
+            containerStyle={ styles.textInput }/>
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={this.updateDatabase}>
+            <Text style={styles.buttonTitle}>Confirm changes</Text>
+          </TouchableOpacity>
+
         </InputWindow>
       </Container>
    );

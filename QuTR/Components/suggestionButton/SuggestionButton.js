@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  	Text,
+    Text,
 } from 'native-base';
 import {
     TouchableHighlight
@@ -25,7 +25,7 @@ export default class SuggestionButton extends Component {
     return (
         <TouchableHighlight underlayColor={SECONDARY} 
                             style={[styles.container, this.props.style]} 
-                            onPress = {this.props.toSelect(this.props.text)}>
+                            onPress = { () => {this.props.toSelect(this.props.text)}}>
           <Text style={[styles.text]}>{this.props.text}</Text>
         </TouchableHighlight> 
     );

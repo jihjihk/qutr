@@ -7,6 +7,7 @@ import {
   CameraRoll,
   Dimensions,
   ScrollView,
+  ToastAndroid
 } from 'react-native';
 import RNFetchBlob from 'react-native-fetch-blob';
 import { Container, Text } from 'native-base';
@@ -19,11 +20,10 @@ import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 import styles from './styles.js';
 import {
   BLACK,
-  SECONDARY_DARK,
   SECONDARY_LIGHT
 } from '../../masterStyle.js';
 
-import { appFolder } from '../../App.js';
+import { appFolder } from '../../Screens/InitialScreen/DashboardRedirecter/DashboardRedirecter.js';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
@@ -68,6 +68,7 @@ export default class GalleryScreen extends Component<{}>  {
     if (fresh)  this.refreshAndFetch();
     else {      
       if (this.state.photos.length>=fetchParams.first) this.fetchPhotos();
+      else ToastAndroid.show("No more photos", ToastAndroid.SHORT);
     }
   }
 
@@ -142,7 +143,6 @@ export default class GalleryScreen extends Component<{}>  {
 
     return (
       <Container ref="container" style = {[styles.Container]}>
-            <View style={styles.modalContainer}>
               <ScrollView
                 contentContainerStyle={styles.scrollView}>
                 {
@@ -161,10 +161,9 @@ export default class GalleryScreen extends Component<{}>  {
                   })
                 }
               </ScrollView>
-            </View>
             <Footer left={<ToolbarButton name='ios-more'
                                          onPress={() => {this.setState({load: true}, function() {this.getPhotos(false)});}}/>}
-                    right={<ToolbarButton name='md-camera' 
+                    right={<ToolbarButton name='md-camera'
                                           onPress={() => {this.props.navigation.navigate('Camera', {refreshAndFetch: this.refreshAndFetch});}}/>}/>
       </Container>
    );
