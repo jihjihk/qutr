@@ -1,3 +1,5 @@
+from collections import Counter
+
 class PhraseNode:
     def __init__(self, phrase):
         self.phrase = phrase
@@ -110,10 +112,13 @@ class Trie:
 
     def suggConcepts(self, prefix):
         inputWords = prefix.split(" ")
-        concepts = {}
-        if len(inputWords) == 1:    # If user inputs one word thus far
-            sugg = self.wordSuggestions(inputWords[0])
-            return sugg
+        concepts = Counter()
+        for word in inputWords:
+            suggs = self.wordSuggestions(word)
+            for sugg in suggs:
+                for concept in suggs[sugg]:
+                    concepts[concept] += 1
+        return concepts.most_common()
 
     # Implement Trie Print function
 
@@ -139,11 +144,14 @@ def main():
         phrase = l[1].lower()
         globalDict.insertPhraseNode(cID, PhraseNode(phrase))
         engTrie.insertPhrase(cID, phrase)
-        
+
     while True:
         word = input("Please enter a word or quit() to exit: ")
         if word != 'quit()':
-            print(engTrie.suggConcepts(word.lower()))
+            concepts = engTrie.suggConcepts(word.lower())
+            print(concepts)
+            for c in concepts:
+                print(globalDict.getPhraseNode(c[0]).getPhrase())
         else:
             break
 
