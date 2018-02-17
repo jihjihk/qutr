@@ -41,7 +41,7 @@ export default class ProfileScreen extends Component<{}>  {
     var theUser = firebase.auth().currentUser; 
     this.state = { firebase: firebase,
                    user: theUser, 
-                   picture: "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png",
+                   picture: "",
                    name: "", 
                    age: "", 
                    language: "", 
@@ -103,7 +103,7 @@ export default class ProfileScreen extends Component<{}>  {
 
     this.state.firebase.database()
           .ref('users/'+this.state.user.uid)
-          .set({"name": this.state.name,
+          .update({"name": this.state.name,
                 "age": this.state.age,
                 "language": this.state.language,
                 "gender": this.state.gender,
@@ -124,7 +124,8 @@ export default class ProfileScreen extends Component<{}>  {
 
           <TouchableOpacity style={[styles.imageContainer]} 
                           onPress = {() => {this.props.navigation.navigate('Gallery', { update: this.updateDatabase, that: this});}}>
-              <Image style={[styles.profileImage]} source={{uri: this.state.picture}}/>
+              <Image style={[styles.profileImage]} source={{uri: this.state.picture || 
+                                                                  "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png"}}/>
           </TouchableOpacity>
 
           <TextInput

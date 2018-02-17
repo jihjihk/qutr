@@ -4,19 +4,11 @@ import {
   View
 } from 'react-native';
 
-import {
-  Label
-} from 'native-base'
-
 import styles from './styles.js';
 
-import { BLACK, 
-         PRIMARY_LIGHT } from '../../masterStyle.js'
+import { PRIMARY_LIGHT } from '../../masterStyle.js'
 
 import QRCode from 'react-native-qrcode-svg';
-
-/* Instead of the QR scanner, start with a QR code integrated with the app's logo - see QR Starbucks logo example */
-/* FIle an Invention Report */
 
 export default class QRScreen extends Component<{}>  {
 
@@ -27,28 +19,17 @@ export default class QRScreen extends Component<{}>  {
         logo: require("../../Pictures/logo.png")};
   }
 
-  componentWillMount() {
-  }
-
-  componentWillUnmount () {
-
-  }
-
-  componentWillReceiveProps () {
-
-  }
-
   render() {
     return (
       <View style={styles.Container}>
         <QRCode
           value={this.state.text}
-          size={300}
+          size={250}
           color={PRIMARY_LIGHT}
           logo={this.state.logo}
-          logoSize={100}
+          logoSize={75}
           logoBorderRadius={100}
-          logoMargin={4}/>
+          logoMargin={2}/>
       </View>
     );
   };

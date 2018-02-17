@@ -1,16 +1,16 @@
 import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
+  ActivityIndicator,
   View,
   ScrollView,
-  Keyboard,
-  Alert
+  Alert,
+  ListView
 } from 'react-native';
 import { Container, Title, Text, } from 'native-base';
 import { StackNavigator } from 'react-navigation';
 
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js'
-import Header from '../../Components/header/Header.js';
 import ConversationsWindow from '../../Components/conversationsWindow/ConversationsWindow.js';
 import Conversation from '../../Components/conversation/Conversation.js';
 
@@ -22,7 +22,6 @@ import { PRIMARY_DARK,
        } from '../../masterStyle.js';
 
 const Realm = require('realm');
-
 var self;
 
 export default class ConversationsScreen extends Component<{}>  {
@@ -31,73 +30,105 @@ export default class ConversationsScreen extends Component<{}>  {
 
   constructor(props) {
     super(props);
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state= {
-      firebase: firebaseService,
+      loading: true,
       user: firebaseService.auth().currentUser,
-      conversations: []
+      dataSource: ds,
     };
-    self = this;
-
-    this.conversationAddedListener();
+    self = this
   }
 
-  conversationAddedListener = () => {
+  componentDidMount() {
+    
+    this.getProfilePicture();
 
-    this.state.firebase.database().ref()
-      .child('users')
-      .child(this.state.firebase.auth().currentUser.uid)
-      .child('userRooms')
-      .on("child_added", 
-        function(snapshot, prevChildKey) {
-          self.addConversation(snapshot);
-        });
-  }
+    var urref = firebaseService.database().ref()
+                .child('users')
+                .child(this.state.user.uid)
+                .child('userRooms');
 
-  addConversation = (snapshot) => {
+    this.setState({urref: urref});
 
-    var key=snapshot.key;
-    this.state.firebase.database().ref()
-      .child('users')
-      .child(snapshot.val().correspondent)
-      .once('value')
-      .then(function(snapshot) {
-        var name = snapshot.val().name;
-        var convos = self.state.conversations;
-        convos.push(
-           <Conversation navigation = {self.props.navigation}
-                         firebase = {self.state.firebase}
-                         user = {self.state.user}
-                         refresh = {self.refresh.bind(this)}
-                         key={key}
-                         sender = {name.toString()}                                          
-                         message =  ""
-                         date="" 
-                         time="" 
-                         picture={"https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png"}>
-           </Conversation>)
-        self.setState({conversations: convos});
+    /* Fetch all conversations for a user and sort them by timestamp in descending order */
+    urref.orderByChild('reverseTimestamp').on('value', (e) => {
+      var rows = [];
+      if ( e && e.val() ) {                
+          e.forEach(function(child) 
+            {rows.push ( child )})
+      }
+      var ds = this.state.dataSource.cloneWithRows(rows);
+      this.setState({
+          dataSource: ds,
+          loading: false
       });
+    });
   }
 
-  getLastMessage(conversation) {
+  componentDidUnMount() {
 
-    if (conversation.messages.length===0) return {text: '', date: new Date()};
-    return conversation.messages[conversation.messages.length-1];
+    /* Turn off listeners */
+    this.state.urref.off('value');
+
+    firebaseService.database().ref()
+      .child('users')
+      .child(this.state.user.uid)
+      .off('value');
   }
 
-  refresh() {
-    self.setState({});
+  getProfilePicture() {
+
+    firebaseService.database().ref()
+      .child('users')
+      .child(this.state.user.uid)
+      .once('value', function(snapshot) {
+        var picture = snapshot.val().picture;
+        self.setState({myPicture: picture});
+      })
+  }
+
+  renderRow(rd) {
+
+      /* Render an item in the conversation lists */
+      var chatInfo = rd.val();
+      var dateOfTs = new Date(rd.val().timestamp);
+      var day = (dateOfTs.getDate() < 10) ? ""+0+dateOfTs.getDate() : dateOfTs.getDate();
+      var month = (dateOfTs.getMonth() < 10) ? ""+0+(dateOfTs.getMonth()+1) : (dateOfTs.getMonth()+1);
+      var date = day+"/"+month+"/"+dateOfTs.getFullYear();
+
+      var hours = (dateOfTs.getHours()<10) ? ""+0+dateOfTs.getHours() : dateOfTs.getHours();
+      var minutes = (dateOfTs.getMinutes()<10) ? ""+0+dateOfTs.getMinutes() : dateOfTs.getMinutes();
+
+      var time = hours+":"+minutes;
+      var message = chatInfo.message, name = chatInfo.theirName, picture = chatInfo.theirPicture;
+
+      return <Conversation roomID = {rd.key}
+                           message = {message}
+                           date = {date}
+                           time = {time}
+                           correspondent = {name}
+                           correspondentKey = {chatInfo.theirID}
+                           theirPicture = {"https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png" || picture}
+                           myPicture = {this.state.myPicture || "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png"}
+                           navigation = {this.props.navigation} />;    
   }
 
   render() {
 
+    if ( this.state.loading ) {
+            return (<View style={{flex: 1, justifyContent:'center'}}>
+                      <ActivityIndicator size="large"/>
+                      <Text style={{textAlign: 'center'}}>Loading</Text>
+                    </View>
+            );
+        }
+        
     return (
       <Container ref="container" style={[styles.Container]}>
         <ConversationsWindow ref="cw">
-          {this.state.conversations.length==0 && <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
-                                          <Text>No conversations to display</Text>
-                                        </View>
-          }{this.state.conversations}
+          <ListView dataSource={this.state.dataSource}
+                    enableEmptySections={true}
+                    renderRow={(rowData) => this.renderRow(rowData)}/>
         </ConversationsWindow>
       </Container>
    );

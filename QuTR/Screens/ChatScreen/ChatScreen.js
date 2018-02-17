@@ -1,18 +1,18 @@
 import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
-  Views,
   View,
-  ScrollView,
   Keyboard,
-  BackHandler,
-  Alert
+  ActivityIndicator,
+  ListView,
+  Image
 } from 'react-native';
 import { Container, Title, Text, } from 'native-base';
 import { StackNavigator } from 'react-navigation';
 
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 import MessageInput from '../../Components/messageInput/MessageInput.js';
+import Message from '../../Components/message/Message.js';
 import ChatWindow from '../../Components/chatWindow/ChatWindow.js';
 import SuggestionButton from '../../Components/suggestionButton/SuggestionButton.js';
 import SuggestionBar from '../../Components/suggestionBar/SuggestionBar.js';
@@ -24,55 +24,142 @@ import styles from './styles.js';
 import { BLACK, 
          SECONDARY_LIGHT } from '../../masterStyle.js'
 
+const Firebase = require('firebase');
+var self;
+
 export default class ChatScreen extends Component<{}>  {
 
   static navigationOptions = { header: null };
 
   constructor(props) {
     super(props);
+    self=this;
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state={sendDisabled: true,
                 sendStyle: {color: BLACK},
-                firebase: firebaseService.auth(),
                 user: firebaseService.auth().currentUser,
-                conversation: null,
+                myPicture: "",
+                loading: true,
+                dataSource: ds
               };
   }
+
+  componentWillMount () {
+    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
+    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this));
+  }
+
+  componentWillUnmount () {
+    this.keyboardDidShowListener.remove();
+    this.keyboardDidHideListener.remove();
+  }
+
+   _keyboardDidShow () {
+    this.refs.cw.onKeyboardShow();
+    this.refs.sb.onKeyboardShow();
+  }
+
+  _keyboardDidHide () {
+    this.refs.cw.onKeyboardHide();
+    this.refs.sb.onKeyboardHide();
+  }
+
+  componentDidMount() {
+
+    var urref = firebaseService.database().ref()
+                .child('users')
+                .child(this.state.user.uid)
+                .child('userRooms')
+                .child(this.props.navigation.state.params.roomID);
+
+    this.setState({urref: urref});
+
+    /* Get a list of all messages for a conversation. Maybe we can limit if the number grows to be too large */
+    urref.orderByChild('timestamp').on('value', (e) => {
+            var rows = [];
+            if ( e && e.val() ) {                
+                e.forEach(function(child) 
+                  {rows.push ( child )})
+            }
+            var ds = this.state.dataSource.cloneWithRows(rows);
+            this.setState({
+                dataSource: ds,
+                loading: false
+            });
+        });
+  }
+
+  componentDidUnMount() {
+    /* Turn off the listeners */
+    firebaseService.database().ref()
+      .child('users')
+      .child(this.state.user.uid).off('value');
+
+    this.state.urref.off('value')
+  }  
 
   sendMessage = () => {
 
     if (this.state.sendDisabled)  return;
-    var message = this.refs.mi.state.message;
-    // this.state.realm.write(() => {
 
-    //   var myMessage = this.createMessage('me', message);
-    //   var theirMessage = this.createMessage('them', message+" to you too!");
-    //   this.state.conversation.messages.push(myMessage);
-    //   this.state.conversation.messages.push(theirMessage);
-    // });
-    this.refs.cw.receiveMessage(this.getLastMessages(15));
+    /* Read the text input, create a message, update proper database entries and clean up the interface */
+    var text = this.refs.mi.state.message;
+    var newMessage = this.createMessage(this.state.user.uid, text);
+    var newMessageKey = this.getNewMessageKey();
+
+    this.pushToUserChatrooms(newMessage, this.state.user.uid, newMessageKey);
+    this.pushToUserChatrooms(newMessage, this.props.navigation.state.params.correspondentKey, newMessageKey);
+
     this.refs.mi.clearContent();
     this.refs.sb.clean();
     this.disableSend();    
   }
 
-  createMessage(owner, message) {
-
-    // var theMessage = this.state.realm.create('Message', {
-
-    //     owner: owner,
-    //     date: new Date(),
-    //     text: message
-    //   });
-    // return theMessage;
-  }  
-
-  getLastMessages(number)   {
-
-    var length = this.state.conversation.messages.length;
-    var messages = this.state.conversation.messages;
-    if (length<number) return messages;
-    return messages.slice(length-number, length);
+  getNewMessageKey = () => {
+    return firebaseService.database().ref()
+      .child('users')
+      .child(this.state.user.uid)
+      .child('userRooms')
+      .child(this.props.navigation.state.params.roomID)
+      .push().key;
   }
+
+  pushToUserChatrooms = (message, userID, messageKey) => {
+
+    firebaseService.database().ref()
+      .child('users')
+      .child(userID)
+      .child('userRooms')
+      .child(this.props.navigation.state.params.roomID)
+      .child(messageKey)
+      .set(message);
+
+    /* Update so that this information can be used to show
+       a list of conversations in the ConversationsScreen */
+    this.updateLatestMessage(message, userID);
+  }
+
+  updateLatestMessage = (message, userID) => {
+
+    firebaseService.database().ref()
+      .child('users')
+      .child(userID)
+      .child('userRooms')
+      .child(this.props.navigation.state.params.roomID)
+      .update({message: message.message, 
+               timestamp: message.timestamp, 
+               reverseTimestamp: message.reverseTimestamp});
+  }
+
+  createMessage = (ownerID, message) => {
+
+    return {
+      senderID: ownerID,
+      message: message,
+      timestamp: Firebase.database.ServerValue.TIMESTAMP,
+      reverseTimestamp: 0 - new Date().getTime()
+    };
+  }  
 
   enableSend = () => {
     this.setState({sendDisabled: false,
@@ -93,6 +180,8 @@ export default class ChatScreen extends Component<{}>  {
     this.sendToSuggestionBar(value);
   }
 
+  /* This is where the current input is being sent to the suggestion bar 
+     to generate placeholder suggestions with appended dots */
   sendToSuggestionBar = (value) => {
 
     this.refs.sb.populate(value);
@@ -104,44 +193,48 @@ export default class ChatScreen extends Component<{}>  {
     this.enableSend();
   }
 
-  backHandler() {
-    this.props.navigation.state.params.refresh();
-  }
+  renderRow = (rd) => {
 
-  componentWillMount () {
-    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
-    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this));
-    BackHandler.addEventListener('hardwareBackPress', this.backHandler.bind(this));
-  }
+    if (rd.val().senderID==this.state.user.uid)  {
 
-  componentDidMount() {
-    setTimeout(this.renderPropsIntoState.bind(this), 10);
-  }
+      return (<View style={[styles.myMessageView]}>
+                <Message message={rd.val().message} 
+                         style={[styles.myMessage]}/>
+                <Image source={{uri: this.props.navigation.state.params.myPicture}} 
+                       style={[styles.picture]}/>
+              </View>);
+      }
 
-  renderPropsIntoState()  {
-  }
+      else if (!!rd.val().senderID) {
 
-  componentWillUnmount () {
-    this.keyboardDidShowListener.remove();
-    this.keyboardDidHideListener.remove();
-    BackHandler.removeEventListener('hardwareBackPress', this.backHandler.bind(this));
-  }
+        return (<View style={[styles.theirMessageView]}>
+                  <Image source={{uri: this.props.navigation.state.params.picture}} 
+                         style={[styles.picture]}/>
+                  <Message message={rd.val().message} 
+                           style={[styles.theirMessage]}/>
+                </View>);
+    }
 
-  _keyboardDidShow () {
-    this.refs.cw.onKeyboardShow();
-    this.refs.sb.onKeyboardShow();
-  }
-
-  _keyboardDidHide () {
-    this.refs.cw.onKeyboardHide();
-    this.refs.sb.onKeyboardHide();
+    else return null;
   }
 
   render() {
     return (
       <Container ref="container" style={[styles.Container]}>
         <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>}/>
-        
+        <ChatWindow ref="cw">
+
+          { this.state.loading ? <View style={{flex: 1, justifyContent:'center'}}>
+                                    <ActivityIndicator size="large"/>
+                                    <Text style={{textAlign: 'center'}}>Loading</Text>
+                                  </View>
+                                :
+                                <ListView dataSource={this.state.dataSource}
+                                          enableEmptySections={true}
+                                          renderRow={(rowData) => this.renderRow(rowData)}/>
+          }
+          
+        </ChatWindow>
 
         <Footer center={<MessageInput ref='mi' 
                                       style={{flex: 1}} 

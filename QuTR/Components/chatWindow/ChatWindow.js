@@ -1,13 +1,13 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   	ScrollView,
     KeyboardAvoidingView,
     View,
     Keyboard,
-    Image
+    Image,
+    Alert
 } from 'react-native';
-
-import Message from './../message/Message.js';
 
 import styles from './styles.js';
 
@@ -15,15 +15,11 @@ export default class ChatWindow extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {message: props.messages,
-                  kavStyle: [styles.withoutKeyboard],
-                  helperStyle: [styles.noHeight]};
+    this.state = {kavStyle: [styles.withoutKeyboard],
+                  helperStyle: [styles.noHeight],
+                  user: firebaseService.auth().currentUser
+                };
     var that=this;
-  }
-
-  receiveMessage = (messages) => {
-
-    this.setState({message: messages}, function() {});    
   }
 
   scrolltoBottom = () => {
@@ -44,33 +40,6 @@ export default class ChatWindow extends Component {
     this.refs.scrollView.scrollToEnd({animated: false});
   }
 
-  getMessages() {
-
-    var messages=[];
-    for (var i=0; i<this.state.message.length; i++) {
-
-      if (this.state.message[i].owner=="me")  {
-
-        messages.push(<View key={i} style={[styles.myMessageView]}>
-                        <Message  message={this.state.message[i].text} 
-                                  style={[styles.myMessage]}/>
-                        <Image source={{uri: this.props.myPicture}} 
-                               style={[styles.picture]}/>
-                      </View>);
-      }
-      else if (this.state.message[i].owner=="them") {
-
-        messages.push(<View key={i} style={[styles.theirMessageView]}>
-                        <Image source={this.props.picture} 
-                               style={[styles.picture]}/>
-                        <Message message={this.state.message[i].text} 
-                                 style={[styles.theirMessage]}/>
-                      </View>);
-      }
-    }
-    return messages;
-  }
-
   render = () => {
 
     return (
@@ -81,7 +50,7 @@ export default class ChatWindow extends Component {
                       scrollEnabled={true} 
                       ref="scrollView"
                       onContentSizeChange={(width,height) => this.scrolltoBottom()}>
-            {this.getMessages()}
+              {this.props.children}
             <View style={[this.state.helperStyle]}></View>
           </ScrollView>
         </KeyboardAvoidingView>

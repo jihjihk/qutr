@@ -37,7 +37,7 @@ export default StyleSheet.create({
   	justifyContent: 'flex-end', 
   	alignItems: 'center',
   },
-  sender: {
+  correspondent: {
   	fontSize: 16, 
   	fontWeight: 'bold', 
   	color: 'black', 
