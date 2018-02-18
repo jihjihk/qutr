@@ -4,6 +4,6 @@ export const firebaseConfig = {
   authDomain: "qutr-8cc2c.firebaseapp.com",
   databaseURL: "https://qutr-8cc2c.firebaseio.com",
   projectId: "qutr-8cc2c",
-  storageBucket: "",
+  storageBucket: "qutr-8cc2c.appspot.com",
   messagingSenderId: "544340651597"
 };

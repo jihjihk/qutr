@@ -23,11 +23,8 @@ export default StyleSheet.create({
   	alignItems: 'center',
     justifyContent: 'center'
   },
-  picture: {
-  	borderRadius: 100, 
-  	borderColor: PRIMARY, 
-  	borderWidth: 0.5, 
-  	height: 50, 
+  picture: { 
+  	height: 56, 
   	width: 50,
   },
   rowWrapper: {

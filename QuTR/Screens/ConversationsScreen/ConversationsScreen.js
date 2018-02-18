@@ -108,7 +108,7 @@ export default class ConversationsScreen extends Component<{}>  {
                            time = {time}
                            correspondent = {name}
                            correspondentKey = {chatInfo.theirID}
-                           theirPicture = {"https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png" || picture}
+                           theirPicture = {picture || "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png"}
                            myPicture = {this.state.myPicture || "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png"}
                            navigation = {this.props.navigation} />;    
   }
@@ -122,7 +122,7 @@ export default class ConversationsScreen extends Component<{}>  {
                     </View>
             );
         }
-        
+
     return (
       <Container ref="container" style={[styles.Container]}>
         <ConversationsWindow ref="cw">

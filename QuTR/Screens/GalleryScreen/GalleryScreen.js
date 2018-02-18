@@ -1,3 +1,4 @@
+import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   View,
@@ -7,7 +8,8 @@ import {
   CameraRoll,
   Dimensions,
   ScrollView,
-  ToastAndroid
+  ToastAndroid,
+  ActivityIndicator
 } from 'react-native';
 import RNFetchBlob from 'react-native-fetch-blob';
 import { Container, Text } from 'native-base';
@@ -25,13 +27,15 @@ import {
 
 import { appFolder } from '../../Screens/InitialScreen/DashboardRedirecter/DashboardRedirecter.js';
 
+const LOADPICTURES = 60;
+
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
 
-const fetchParams = {
-      first: 60,
-      assetType: 'Photos'
-    }
+const Blob = RNFetchBlob.polyfill.Blob;
+window.Blob = Blob;
+window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest;
+
 var self;
 
 export default class GalleryScreen extends Component<{}>  {
@@ -43,6 +47,8 @@ export default class GalleryScreen extends Component<{}>  {
     this.state = { photos: [],
                    lastCursor: null,
                    load: true,
+                   uid: this.props.navigation.state.params.uid,
+                   loadingIndicator: false
     }
     self = this;
   }
@@ -63,25 +69,36 @@ export default class GalleryScreen extends Component<{}>  {
                    load: true}, self.fetchPhotos);
   }
 
+  /* Take different actions if we load for the first time or come back from camera */
   getPhotos = (fresh) => {
 
     if (fresh)  this.refreshAndFetch();
     else {      
-      if (this.state.photos.length>=fetchParams.first) this.fetchPhotos();
+      if (this.state.photos.length>=LOADPICTURES) this.fetchPhotos();
       else ToastAndroid.show("No more photos", ToastAndroid.SHORT);
     }
   }
 
+  /* Gets photos from camera roll */
   fetchPhotos() {
 
+    /* Load batch by batch, not all gallery pictures at once */
     if (!this.state.load)  return;
 
-    if (this.state.lastCursor) fetchParams.after = this.state.lastCursor;
+    this.setState({loadingIndicator: true});
 
+    var fetchParams = {
+      first: LOADPICTURES,
+      assetType: 'Photos',
+      after: this.state.lastCursor
+    }
+
+    /* Update pictures array */
     CameraRoll.getPhotos(fetchParams)
     .then(r => { this.setState({ photos: this.state.photos.concat(r.edges), 
                                  lastCursor: r.page_info.end_cursor,
-                                 load: false});
+                                 load: false,
+                                 loadingIndicator: false});
     })
     .catch((err) => {Alert.alert("Error", "Couldn't fetch photos.")})
   }
@@ -92,51 +109,45 @@ export default class GalleryScreen extends Component<{}>  {
 
   setProfilePicture = (image) => {
 
-      var splitPath = image.node.image.uri.split("/");
-      var number = splitPath[splitPath.length-1];
-      var profilePictures = appFolder+"/Profile Pictures";
-      var newURI = profilePictures + "/" +number;
+      this.setState({loadingIndicator: true})
+      var path = image.node.image.uri;
+      var rnfbURI = RNFetchBlob.wrap(path)
+      /* Create Blob from file path */
+      Blob
+        .build(rnfbURI, { type : 'image/png;'})
+        .then((blob) => {
+          /* Upload image using Firebase SDK */
+          firebaseService.storage()
+            .ref('profile-pictures')
+            .child(this.state.uid)
+            .put(blob, { contentType : 'image/png' })
+            .then((snapshot) => {
+              blob.close();
 
-      /* Check that the App directory exists */
-      RNFetchBlob.fs.isDir(profilePictures)
-      .then((isDir) => {
+              firebaseService.storage()
+              .ref('profile-pictures')
+              .child(this.state.uid)
+              .getDownloadURL()
+              .then((url) => {
 
-        if (!isDir)  {
-          Alert.alert("Error", "Can't access app folder");
-        }
-
-        /* Clear the App's picture directory */
-        RNFetchBlob.fs.ls(profilePictures)
-        .then((files) => {
-            for (var i=0; i<files.length; i++)  {
-              RNFetchBlob.fs.unlink(profilePictures+"/"+files[i])
-              .then(() => {})
-              .catch((err) => {})
-            }
-        })
-        .catch((err) => {})
-
-        /* Copy the chosen picture to App picture directory */
-        RNFetchBlob.fs.cp(image.node.image.uri, newURI)
-          .then(() => { 
-            this.props.navigation.state.params.that.setState({picture: "file://"+newURI}, 
-              function() { self.updateRemotely();
-                           self.goBack()});                           
+                this.setState({loadingIndicator: false})
+                /* Navigate back to ProfileScreen and update the profile picture automatically */
+                this.props.navigation.state.params.that.setState({picture: url}, 
+                  function() { self.updateRemotely();
+                               self.goBack()
+                             });                
+              })
+              .catch((err) => {
+                Alert.alert("Error!")
+              })            
             })
-          .catch((err) => {"Error", "Error copying the picture!"})
-       })
-      .catch((err) => {console.log("Err: ", err)})
-
-      /* Refresh Gallery */
-      RNFetchBlob.fs.scanFile([ { path : newURI } ])
-       .then(() => {})
-       .catch((err) => {
-         console.log("scan file error")
-       })
-  }
-
-  refreshGallery()  {
-
+            .catch((err) => {
+            Alert.alert("Error!")
+          })
+        })
+        .catch((err) => {
+          Alert.alert("Error!")
+        })
   }
 
   render() {
@@ -165,6 +176,11 @@ export default class GalleryScreen extends Component<{}>  {
                                          onPress={() => {this.setState({load: true}, function() {this.getPhotos(false)});}}/>}
                     right={<ToolbarButton name='md-camera'
                                           onPress={() => {this.props.navigation.navigate('Camera', {refreshAndFetch: this.refreshAndFetch});}}/>}/>
+            {this.state.loadingIndicator &&
+              <View style={styles.loading}>
+                <ActivityIndicator size='small' />
+              </View>
+            }
       </Container>
    );
   }

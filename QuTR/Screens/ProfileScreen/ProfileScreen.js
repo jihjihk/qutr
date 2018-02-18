@@ -26,6 +26,8 @@ import LogoutButton from '../../Components/logoutButton';
 
 import Lists from "../../Lists.js";
 
+import { firebaseConfig } from '../../configs/firebase.js';
+
 import styles from './styles.js';
 import {
   PRIMARY_DARK
@@ -69,29 +71,17 @@ export default class ProfileScreen extends Component<{}>  {
 
   componentWillMount()  {
     self=this;
-    var picture;
     this.state.firebase.database()
       .ref('/users/' + this.state.user.uid)
       .once('value')
       .then(function(snapshot) {  
 
-        /* Check if the user hasn't erased the picture from the app folder */
-        if (snapshot.val().picture != "" 
-          && snapshot.val().picture!=self.state.picture) {
-
-          picture = self.state.picture;
-          RNFetchBlob.fs.exists(snapshot.val().picture)
-            .then((exist) => {
-              if (exist) picture = snapshot.val().picture;
-              self.setState({picture: picture})
-            }).catch(err => console.error(err));
-        }
-
         self.setState({
           name: snapshot.val().name,
           age: snapshot.val().age,
           language: snapshot.val().language,
-          gender: snapshot.val().gender
+          gender: snapshot.val().gender,
+          picture: snapshot.val().picture
         });
       })
       .catch(error => {
@@ -123,7 +113,9 @@ export default class ProfileScreen extends Component<{}>  {
         contentContainerStyle={styles.Container}>
 
           <TouchableOpacity style={[styles.imageContainer]} 
-                          onPress = {() => {this.props.navigation.navigate('Gallery', { update: this.updateDatabase, that: this});}}>
+                          onPress = {() => {this.props.navigation.navigate('Gallery', { update: this.updateDatabase, 
+                                                                                        that: this, 
+                                                                                        uid: this.state.user.uid});}}>
               <Image style={[styles.profileImage]} source={{uri: this.state.picture || 
                                                                   "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png"}}/>
           </TouchableOpacity>
