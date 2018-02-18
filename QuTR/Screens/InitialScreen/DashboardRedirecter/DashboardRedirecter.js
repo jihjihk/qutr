@@ -124,7 +124,7 @@ export default class App extends Component<{}> {
           <ConversationNavigator>
           </ConversationNavigator>
         </Tab>
-        <Tab heading={<TabHeading style={{backgroundColor: PRIMARY}}>
+        <Tab heading={<TabHeading style={{backgroundColor: PRIMARY, marginLeft: -1}}>
                         <Icon name="md-settings" 
                               type='ionicon' 
                               color={SECONDARY}>
