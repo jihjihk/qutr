@@ -35,6 +35,8 @@ Clone the repo: `git clone`. Run `npm install`. In order to run two simulators o
 * https://medium.com/react-native-development/tutorial-build-a-chat-app-with-firebase-and-redux-ca76a910fab7
 * https://school.shoutem.com/lectures/chat-app-firebase-redux-react-native/
 * https://www.firebase.com/docs/web/guide/understanding-data.html
+* https://stackoverflow.com/questions/47879031/firebase-database-structure-for-chat-application
+* https://discuss.reactjs.org/t/building-both-chatroom-one-to-one-chat-app-in-react-native-with-firebase/9447
 #### What is Redux?
 * http://www.youhavetolearncomputers.com/blog/2015/9/15/a-conceptual-overview-of-redux-or-how-i-fell-in-love-with-a-javascript-state-container
 * https://daveceddia.com/how-does-redux-work/
