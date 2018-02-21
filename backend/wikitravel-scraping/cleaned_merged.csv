@@ -1,735 +1,554 @@
 ,en,ar,cn
-0,OPEN,مفتوح ,
-1,CLOSED,مغلق ,
-2,ENTRANCE,دخول ,
-3,EXIT,خروج ,
-4,PUSH,ادفع ,
-5,PULL,اسحب ,
-6,TOILET,حمام ,
-7,MEN,رجال ,
-8,WOMEN,سيدات ,
-9,FORBIDDEN,ممنوع ,
-10,Goodbye,مع السلامة   ,
-11,Goodbye (informal),باي باي  ,
-12,I can't speak Arabic [well].,لا اتكلم عربي جيدا    ,
-13,Do you speak English?,هل تتكلم الانجليزية   ,
-14,Do you speak English?,هل تتكلم الإنجليزية؟   ,
-15,Is there someone here who speaks English?,حد بيتكلم انجليزي؟    ,
-16,Help!,النجدة ; إلحقوني ,
-17,Look out!,انتبه ,
-18,Good night.,تصبح على خير   ,
-19,I don't understand.,لا افهم  ,
-20,Where is the toilet?,وين/فين الحمام؟ / ,
-21,Leave me alone.,,
-22,Don't touch me!,لا تلمسني ,
-23,I'll call the police.,سأتصل بالشرطة‏ ‎,
-24,Police!,  ,
-25,Stop! Thief!,اوقف حرامي‏ ‎,
-26,I need your help.,محتاج مساعدة لو سمحت ,
-27,Medical emergency,إسعاف ,
-28,I'm lost.,أنا تايه ,
-29,I lost my bag.,,
-30,I lost my wallet.,,
-31,I'm sick.,,
-32,I've been injured.,إنني مصاب,
-33,I need a doctor.,,
-34,Can I use your phone?,,
-35,٠,,
-36,١,,
-37,٢,,
-38,٣,,
-39,٤,,
-40,٥,,
-41,٦,,
-42,٧,,
-43,٨,,
-44,٩,,
-45,0,صفر ,
-46,1,واحد ,
-47,2,إثنان ,
-48,3,ثلاثة ,
-49,4,اربعة ,
-50,5,خمسة ,
-51,6,ستة ,
-52,7,سبعة ,
-53,8,ثمانية ,
-54,9,تسعة ,
-55,10,عشرة ,
-56,11,احد عشر  ,
-57,12,اثنا عشر  ,
-58,13,ثلاثة عشر  ,
-59,14,اربعة عشر  ,
-60,15,خمسة عشر  ,
-61,16,ستة عشر  ,
-62,17,سبعة عشر  ,
-63,18,ثمانية عشر  ,
-64,19,تسعة عشر  ,
-65,20,عشرون ,
-66,21,واحد وعشرون  ,
-67,22,اثنان وعشرون  ,
-68,23,ثلاثة وعشرون  ,
-69,30,ثلاثون ,
-70,40,اربعون ,
-71,50,خمسون ,
-72,60,ستون ,
-73,70,سبعون ,
-74,80,ثمانون ,
-75,90,تسعون ,
-76,100,مئة ,
-77,200,مئتين ,
-78,300,ثلاث مئة  ,
-79,1000,الف    ,
-80,2000,الفين ,
-81,"1,000,000",مليون ,
-82,"1,000,000,000",مليار‎ بليون  ,
-83,"1,000,000,000,000",تريليون ,
-84,"number _____ (train, bus, etc.)",رقم /  ,
-85,half,نصف ,
-86,less,اقل ,
-87,more,اكثر ,
-88,Go,ذهب ,
-89,Stop,وقف ,
-90,Turn left,لف يسار  ,
-91,Turn right,لف يمين  ,
-92,straight ahead,إلى الامام  ; على طول   ,
-93,straight ahead,على طول ,
-94,slowly,ببطء ; شوي شوي   ,
-95,Wait or stay,انتظر ,
-96,Show me.,أرني ,
-97,here,هنا ,
-98,there,هناك ,
-99,before,قبل ,
-100,before,قبل ,
-101,after,بعد ,
-102,now,الأن ,
-103,now,الآن ,
-104,from,من ,
-105,to or at (a place),إلى ,
-106,Wait one minute.,إنتظر دقيقه واحده   ,
-107,I,انا ,
-108,you (m),أنتَ ;  ,
-109,you (f),أنتِ ;   ,
-110,he,هو ;   ,
-111,she,هي ;   ,
-112,we,نحن ; احنا‎ نحنا ,
-113,you (m/mixed),أنتما  ,
-114,they (two people) : هما huma (rarely used out of the most formal Literary Arabic),أنتم ; ,
-115,they (m/mixed),هم  ,
-116,they (f),هن  ,
-117,Who?,من ,
-118,What?,ما/ماذا /,
-119,When?,متى  ,
-120,Where?,اين ,
-121,Why?,لماذا ,
-122,How much?,بكم ,
-123,How much is this?,بكم هذا  ,
-124,How much is this?,بكم هذا؟ ,
-125,Where are you from?,من أين أنت   ,
-126,Understand?,مفهوم؟ ,
-127,What is this?,ما هذا؟  ,
-128,I want, أريد,
-129,I don't want,  لا أريد,
-130,I have,لي  /  لدي /  عندي,
-131,I don't have,  ليس عندي,
-132,I don't understand,أنا لا أفهم    / أنا مش فاهم    ,
-133,I work at the _____.,  *  *أعمل في /    *أنا باشتغل في ,
-134,I don't speak Arabic,لا أتكلم العربية    /    ما باحكي عربي ,
-135,money,مال‎ فلوس   ,
-136,coffee,قهوة ,
-137,coffee,قهوة ,
-138,sugar,سكر ,糖
-139,salt,ملح ,
-140,salt,ملح ,
-141,car,سيارة ,
-142,hotel,فندق   /  اوتيل  ,
-143,water,ماء ,
-144,water,ماي‎ ماية‎ ماء ,
-145,water,ماء ,
-146,tea,شاي ,
-147,milk,حليب ,牛奶
-148,work,شغل  ,
-149,airplane,طائرة ,
-150,street,شارع ,
-151,street,شارع ,
-152,later,لاحقاً ,
-153,morning,صباح ,
-154,afternoon,بعد ظهر ,
-155,evening,مساء ,
-156,night,ليلة ,
-157,one o'clock AM,,
-158,two o'clock AM,,
-159,noon,, 中午
-160,one o'clock PM,,
-161,two o'clock PM,,
-162,midnight,متصف الليلة‎ نص الليل ,半夜
-163,_____ minute(s),‏* دقيقة ,
-164,_____ hour(s),‏* ساعة ,
-165,_____ day(s),‏* يوم ,
-166,_____ week(s),‏* أسبوع ,
-167,_____ month(s),‏* ‏ ‎( (,
-168,_____ year(s),‏* سنة ,
-169,today,البوم ,
-170,yesterday,أمس ,
-171,tomorrow,غداً ,
-172,this week,الاسبوع ,
-173,last week,الأسبوع الماضي ,
-174,next week,الأسبوع القادم ,
-175,Sunday,يوم الأحد ,
-176,Monday,يوم الاثنين ,
-177,Tuesday,يوم الثلاثاء ,
-178,Wednesday,يوم الأربعاء ,
-179,Thursday,يوم الخميس ,
-180,Friday,يوم الجمعة ,
-181,Saturday,يوم السبت ,
-182,January,كانون الثاني‎ يناير ,
-183,February,شباط‎ فبراير ,
-184,March,آذار‎ مارس ,
-185,April,نيسان‎ ابريل ,
-186,May,أيار‎ مايو ,
-187,June,حزيران‎ يونيو ,
-188,July,تموز‎ يوليو ,
-189,August,آب‎ أغسطس ,
-190,September,أيلول‎ سبتمبر ,
-191,October,تشرن الأول‎ أكتوبر ,
-192,November,تشرن الثاني‎ نوفمبر ,
-193,December,كانون الأول‎ ديسمبر ,
-194,black,أسود ,
-195,white,أبيض ,
-196,gray,رمادي ,
-197,red,أحمر ,
-198,blue,أزرق ,
-199,yellow,أصفر ,
-200,green,أخضر ,
-201,orange,برتقالي ,
-202,purple,بنفسجي ,
-203,brown,بني ,
-204,How much is a ticket to _____?,   *   ,
-205,"One ticket to _____, please.",   *  ,
-206,Where does this train/bus go?,/         /,
-207,Where is the train/bus to _____?, /  *,
-208,Does this train/bus stop in _____?,   / * ,
-209,When does the train/bus for _____ leave?,  /  *,
-210,When will this train/bus arrive in _____?,   / *,
-211,How do I get to _____ ?,,
-212,the train station,,
-213,the bus station,,
-214,the airport,المطار ,
-215,downtown,,
-216,the youth hostel,,
-217,the _____ hotel,,
-218,the American/Canadian/Australian/British consulate,,
-219,Where are there a lot of...,,
-220,hotels,,
-221,restaurants,,
-222,bars,,
-223,sites to see,,
-224,Can you show me on the map?,,
-225,Turn left.,لف يسار ,
-226,Turn right.,لف يمين ,
-227,left,يسار ,
-228,right,يمين ,
-229,towards the _____,,
-230,past the _____,,
-231,before the _____,,
-232,Watch for the _____.,,
-233,intersection,,
-234,north,شمال ,
-235,south,جنوب ,
-236,east,شرق ,
-237,west,غرب ,
-238,uphill,,
-239,downhill,,
-240,Taxi!,تاكسي‏ ‎ ,
-241,"Take me to _____, please.",,
-242,How much does it cost to get to _____?,     ,
-243,"Take me there, please.",,
-244,Do you have any rooms available?,,
-245,How much is a room for one person/two people?,,
-246,Does the room come with...,,
-247,bedsheets,‏شراشف‎ ملايات ,
-248,a bathroom,‏حمام ,
-249,a telephone,‏تليفون ,
-250,a TV,‏تلفزيون ,
-251,May I see the room first?,,
-252,Do you have anything quieter?,,
-253,bigger,,
-254,cleaner,,
-255,cheaper,,
-256,"OK, I'll take it.",,
-257,"OK, I'll take it.",,
-258,I will stay for _____ night(s).,   * ,
-259,Can you suggest another hotel?,,
-260,Do you have a safe?,,
-261,lockers,,
-262,Is breakfast/supper included?,,
-263,What time is breakfast/supper?,,
-264,Please clean my room.,,
-265,I want to check out.,,
-266,Do you accept American/Australian/Canadian dollars?,هل تقبل الدولار الأمريكي/الأسترالي/الكندية؟  ,
-267,Do you accept British pounds?,هل تقبل الجنيه الاسترليني؟ ,
-268,Do you accept credit cards?,هل تقبل الكريديت كارد؟ ,
-269,Can you change money for me?,,
-270,Where can I get money changed?,,
-271,Can you change a traveler's check for me?,,
-272,Where can I get a traveler's check changed?,,
-273,What is the exchange rate?,,
-274,Where is an automatic teller machine (ATM)?,وين فيه ايه تي ام؟ ,
-275,"A table for one person/two people, please.",,
-276,"Can I look at the menu, please?",,
-277,Can I look in the kitchen?,,
-278,Is there a house specialty?,,
-279,Is there a local specialty?,,
-280,I'm a vegetarian.,,
-281,I don't eat pork.,,
-282,I don't eat beef.,,
-283,I only eat Halal food.,,
-284,"Can you make it ""lite"", please? (less oil/butter/lard)","    """"  ",
-285,fixed-price meal,,
-286,à la carte,,
-287,breakfast,  ,
-288,lunch,  ,
-289,tea (meal),  ,
-290,supper,  ,
-291,I want _____.,*أريد ,
-292,I want a dish containing _____.,,
-293,chicken,دجاج‎ فراخ ,鸡
-294,beef,بقر ,
-295,fish,سمك ,鱼
-296,ham,خنزير ,
-297,sausage,سوسيس ,
-298,cheese,جبنة ,
-299,eggs,بيض ,
-300,salad,سلاطة ,
-301,(fresh) vegetables,)  ,
-302,(fresh) fruit,)  ,
-303,bread,   ,
-304,toast,,
-305,macaroni,مكرونة ,
-306,rice,أرز ,
-307,beans,فول ,
-308,May I have a glass of _____?,,
-309,May I have a cup of _____?,,
-310,May I have a bottle of _____?,,
-311,tea (drink),شاي ,
-312,juice,عصير ,
-313,(bubbly) water,مياه غازية ,
-314,beer,بيرة ,
-315,red/white wine,,
-316,May I have some _____?,,
-317,black pepper,فلفل أسود ,
-318,butter,زبدة ,
-319,"Excuse me, waiter? (getting attention of server)",   ,
-320,I'm finished., ,
-321,It was delicious.,كان لذيذ‏ ‎,
-322,Please clear the plates.,,
-323,"The check, please.",  ,
-324,Do you serve alcohol?,,
-325,Is there table service?,,
-326,"A beer/two beers, please.",,
-327,"A glass of red/white wine, please.",,
-328,"A pint, please.",,
-329,"A bottle, please.",,
-330,"_____ (hard liquor) and _____ (mixer), please.",*  *  ,
-331,whiskey,,
-332,vodka,,
-333,rum,,
-334,club soda,,
-335,tonic water,,
-336,orange juice,,
-337,Coke (soda), ,
-338,Do you have any bar snacks?,,
-339,"One more, please.",,
-340,"Another round, please.",,
-341,When is closing time?,,
-342,Do you have this in my size?,,
-343,That's too expensive.,"    "" """,
-344,Would you take _____?,,
-345,expensive,غالي ,
-346,cheap,رخيص,
-347,I can't afford it.,,
-348,I don't want it.,,
-349,You're cheating me.,,
-350,I'm not interested.,,
-351,Can I have a bag?,,
-352,Do you ship (overseas)?,,
-353,I need..., ,
-354,toothpaste,,
-355,a toothbrush,,
-356,tampons,,
-357,soap,,
-358,shampoo,,
-359,"pain reliever. (e.g., aspirin or ibuprofen",  ,
-360,cold medicine,,
-361,stomach medicine,,
-362,a razor,,
-363,an umbrella,,
-364,sunblock lotion,,
-365,a postcard,بطاقة بريدية ,
-366,postage stamps,,
-367,batteries,,
-368,writing paper,ورق للكتبة ,
-369,a pen,قلم ,
-370,English-language books,كتب إنجليزية ,
-371,English-language magazines,مجلات انكليزية,
-372,an English-language newspaper,جرائد إنجليزية,
-373,an English-English dictionary,,
-374,I want to rent a car.,أريد استئجار سيارة ,
-375,Can I get insurance?,هل أستطيع الحصول على تأمين؟ ,
-376,stop (on a street sign),قف ,
-377,one way,اتجاه واحد ,
-378,yield,,
-379,no parking,ممنوع الاسطفاف ,
-380,speed limit,السرعة القصوى ,
-381,gas/petrol station,محطة بنزين ,
-382,petrol (gasoline),بنزين ,
-383,diesel,ديزل‎ سولار‎ جاز ,
-384,I haven't done anything wrong.,ما عملت اشي غلط ,
-385,It was a misunderstanding.,كان سوء تفاهم ,
-386,Where are you taking me?,وين/فين آخدني ,
-387,Am I under arrest?,هل أنا معتقل؟ ,
-388,I am an American/Australian/British/Canadian citizen.,,
-389,I want to talk to the American/Australian/British/Canadian embassy/consulate.,      /// / ,
-390,I need to talk to a lawyer.,محتاج أحكي مع محامي ,
-391,Can I just pay a fine now?,أقدر أدفع غرامة الآن؟ ,
-392,Hello. ,,你好。
-393,How are you? ,,你好吗？
-394," Fine, thank you. ",,"很好, 谢谢。"
-395," May I please ask, what is your name? ",,请问你叫什么名?
-396,What is your name? ,,你叫什么名字？
-397,My name is * . ,,我叫 * 。
-398,Nice to meet you. ,,很高兴认识你。
-399,Please. ,,请。
-400,Thank you. ,,谢谢。
-401,You're welcome. ,,不客气。
-402,Excuse me. (getting attention) ,,请问
-403,Excuse me. (begging pardon) ,,打扰一下。
-404,Excuse me. (coming through) ,,对不起
-405,I'm sorry. ,,对不起。
-406," It's okay. (polite response to ""I'm sorry"")",,没关系
-407,Goodbye ,,再见。
-408,Goodbye (informal) ,,拜拜。
-409,I can't speak Chinese. ,,我不会讲中文。
-410,Do you speak English? ,,你会说英语吗？
-411,Is there someone here who speaks English? ,,这里有人会说英语吗？
-412,Help! (in emergencies),,救命！
-413,Good morning. ,,早安。
-414,Good evening. ,,晚上好。
-415,Good night. ,,晚安。
-416,I don't understand (something heard). ,,我听不懂。
-417,I don't understand (something read). ,,我看不懂。
-418,Where is the toilet? ,,厕所在哪里？
-419,Where is the toilet? ,,厕所在哪里？
-420,Where is the bathroom（polite)? ,,洗手间在哪里？
-421,Leave me alone. ,,不要打扰我。
-422,I don't want it! (useful for people who come up trying to sell you something) ,,我不要
-423,Don't touch me! ,,不要碰我！
-424,I'll call the police. ,,我会叫警察。
-425,Police! ,,警察！
-426,Stop! Thief! ,,住手！小偷！
-427,I need your help. ,,我需要你的帮助。
-428,It's an emergency. ,,这是紧急情况。
-429,I'm lost. ,,我迷路了。
-430,I lost my bag. ,,我丟了手提包。
-431,I lost my wallet. ,,我丟了钱包。
-432,I'm sick. ,,我生病了。
-433,I've been injured. ,,我受伤了。
-434,I need a doctor. ,,我需要医生。
-435,Can I make a telephone call? ,,我可以打个电话吗？
-436,Can I use your phone? ,,我可以用您的电话吗？
-437,Can I use your cell phone? ,,我可以用您的手机吗？
-438,I am sick. ,,我生病了。
-439,Painful. ,,痛。
-440,Uncomfortable. ,,不舒服。
-441,Itchy/ticklish. ,,痒。
-442,Sore (In muscle strains). ,,酸。
-443,Fever. ,,发烧。
-444,Cough. ,,咳嗽。
-445,Sneeze. ,,打喷嚏
-446,Diarrhoea. ,,泻肚子/拉肚子
-447,Running nose. ,,流鼻涕
-448,Phlegm. ,,痰。
-449,Hands/Arms. ,,手。
-450,Fingers. ,,手指。
-451,Wrist. ,,手腕。
-452,Shoulder. ,,肩膀。
-453,Feet. ,,脚。
-454,Toes. ,,脚指。
-455,Legs. ,,腿。
-456,Nails. ,,指甲。
-457,Body. ,,身体。
-458,Eyes. ,,眼睛。
-459,Ears. ,,耳朵。
-460,Nose. ,,鼻子。
-461,Face. ,,脸。
-462,Hair. ,,头发。
-463,Head. ,,头。
-464,Neck. ,,颈项/脖子。
-465,Throat. ,,喉咙。
-466,Chest. ,,胸。
-467,Abdomen. ,,肚子。
-468,Hip/Waist. ,,腰。
-469,Buttocks. ,,屁股。
-470,Back. ,,背。
-471,0 ,,〇
-472,1 ,,一
-473,2 ,,二
-474,3 ,,三
-475,4 ,,四
-476,5 ,,五
-477,6 ,,六
-478,7 ,,七
-479,8 ,,八
-480,9 ,,九
-481,10 ,,十
-482,11 ,,十一
-483,12 ,,十二
-484,13 ,,十三
-485,14 ,,十四
-486,15 ,,十五
-487,16 ,,十六
-488,17 ,,十七
-489,18 ,,十八
-490,19 ,,十九
-491,20 ,,二十
-492,21 ,,二十一
-493,22 ,,二十二
-494,23 ,,二十三
-495,30 ,,三十
-496,40 ,,四十
-497,50 ,,五十
-498,60 ,,六十
-499,70 ,,七十
-500,80 ,,八十
-501,90 ,,九十
-502,100 ,,一百
-503,101 ,,一百〇一
-504,110 ,,一百一十
-505,111 ,,一百一十一
-506,200 ,,二百
-507,300 ,,三百
-508,500 ,,五百
-509,1000 ,,一千
-510,2000 ,,二千
-511,2000 ,,or
-512," 10,000 ",,一万
-513," 10,001 ",,一万〇一
-514," 10,002 ",,一万〇二
-515," 20,000 ",,二万
-516," 50,000 ",,五万
-517," 100,000 ",,十万
-518," 200,000 ",,二十万
-519," 1,000,000 ",,一百万
-520," 10,000,000 ",,一千万
-521," 100,000,000 ",,一亿
-522," 1,000,000,000,000 ",,一兆
-523,half ,,半
-524,less than ,,少於
-525,more than ,,多於
-526,more ,,更
-527,now ,,现在
-528,later ,,以后
-529,before ,, 以前
-530,morning ,, 早上
-531,afternoon ,, 下午
-532,evening/night ,, 晚上
-533,What time is it? ,,现在几点？
-534,It is nine in the morning. ,,早上9点钟。
-535,Three-thirty PM. ,,下午3点半.
-536,3:38 PM ,,下午3点38分
-537,* minute(s) ,,* 分钟
-538,* hour(s) ,,* 小时
-539,* day(s) ,,* 天
-540,* week(s) ,,* 星期
-541,* month(s) ,,* 月
-542,* year(s) ,,* 年
-543,today ,,今天
-544,yesterday ,,昨天
-545,the day before yesterday,,前天
-546,tomorrow ,,明天
-547,the day after tomorrow,,后天
-548,this week ,,这个星期
-549,last week ,,上个星期
-550,next week ,,下个星期
-551,Sunday ,,星期天
-552,Monday ,,星期一
-553,Tuesday ,,星期二
-554,Wednesday ,,星期三
-555,Thursday ,,星期四
-556,Friday ,,星期五
-557,Saturday ,,星期六
-558,January ,, 一月
-559,February ,, 二月
-560,March ,, 三月
-561,April ,, 四月
-562,May ,, 五月
-563,June ,, 六月
-564,July ,, 七月
-565,August ,, 八月
-566,September ,, 九月
-567,October ,, 十月
-568,November ,, 十一月
-569,December ,, 十二月
-570,6th January,,一月六号
-571,25th December,,十二月二十五号
-572,black ,,黑色
-573,white ,,白色
-574,grey ,,灰色
-575,red ,,红色
-576,blue ,,蓝色
-577,yellow ,,黄色
-578,green ,,绿色
-579,orange ,,橙色
-580,purple ,,紫色
-581,brown ,,褐色
-582,gold ,,金色
-583,Do you have it in another colour?  ,,你们有没有另外颜色?
-584,How much is a ticket to *? ,,去*的票多少钱?
-585,Do you go to *? ,,去不去*?
-586,How do I get to * ? ,,怎么去*?
-587,...the train station? ,,...火车站?
-588,...the bus station? ,,...汽车总站?
-589,...the airport? ,,...机场?
-590,street ,,街
-591,road ,,路
-592,avenue ,,大道
-593,Turn left. ,,左边转弯
-594,Turn right. ,,右边转弯
-595,Go straight,,一直走
-596,I've reached my destination,,到了
-597,U-turn,,掉头
-598,Taxi driver,,司机
-599,Please use the meter machine,,请打表
-600,Please turn up the aircon/heater,,请把空调开大一点。
-601,left ,,左边
-602,right ,,右边
-603,straight ahead ,,往前走
-604,north ,,北
-605,south ,,南
-606,east ,,东
-607,west ,,西
-608," Take me to *, please. ",,请您开到*。
-609,Do you have any rooms available? ,,你们有房间吗？
-610,Does the room come with... ,,有没有...
-611,...bedsheets? ,,...床单？
-612,...a bathroom? ,,...浴室？
-613,...a telephone? ,,...电话？
-614,...a TV? ,,...电视？
-615,I will stay for * night(s). ,,我打算住*夜。
-616,Do you have a safe? ,,你们有没有保险箱？
-617,Can you wake me at *? ,,请明天早上*叫醒我。
-618,I want to check out. ,,我现在要走了。
-619,pay,,付
-620,cash,,现钱
-621,credit card,,信用卡
-622,check,,支票
-623," Can I look at the menu, please? ",,请给我看看菜单.
-624,Do you have an English menu? ,,你有没有英文菜单？
-625,I'm a vegetarian ,,我吃素的
-626,breakfast ,,早饭
-627,lunch ,,午饭
-628,supper ,,晚饭
-629,beef ,,牛肉
-630,pork,,猪肉
-631,mutton,,羊肉
-632,vegetable,,蔬菜
-633,cheese ,,奶酪
-634,eggs ,,鸡蛋
-635,bread ,,面包
-636,noodles ,,面条
-637,fried rice,,炒饭
-638,dumpling,,饺子
-639,rice ,,米饭
-640,soup ,,汤
-641,coffee ,,咖啡
-642,tea (drink) ,,茶
-643,green tea,,绿茶
-644,scented tea,,花茶
-645,black tea,,红茶
-646,juice ,,果汁
-647,water ,,水
-648,water ,,水
-649,natural mineral water,,矿泉水
-650,beer ,,啤酒
-651,red/white wine ,,红/白
-652,It was delicious. ,,很好吃。
-653," The check, please. ",,请结帐。
-654,Do you serve alcohol? ,,卖不卖酒？
-655,Is there table service? ,,有没有餐桌服务？
-656," A beer/two beers, please. ",,请给我一杯/两杯啤酒。
-657," A glass of red/white wine, please. ",,请给我一杯红/白酒。
-658," A pint, please. ",,请给我一品脱。
-659," A bottle, please. ",,请给我一瓶。
-660," * (hard liquor) and * (mixer), please. ",,请给我*和*。
-661,whiskey ,,威士忌
-662,vodka ,,伏特加
-663,rum ,,朗姆酒
-664,mineral spring (i.e. bottled) water ,,矿泉水
-665,boiled water,,开水
-666,club soda ,,苏打水
-667,tonic water ,,通宁水
-668,orange juice ,,柳橙汁
-669,Coke (soda) ,,可乐
-670,Do you have any bar snacks? ,,有没有吧台小吃？
-671," One more, please. ",,请再给我一个。
-672," Another round, please. ",,请再来一轮。
-673,When is closing time? ,,几点打烊/关门？
-674,Where is the washingroom? ,,洗手间在哪儿？
-675,Do you have this in my size? ,,有没有我的尺寸？
-676,How much is this? ,,多少钱？
-677,That's too expensive. ,,太贵了。
-678,Would you take *? ,,*元可以吗？
-679,expensive ,,贵
-680,cheap ,,便宜
-681,I can't afford it. ,,我付不起。
-682,I don't want it. ,,我不要。
-683,You're cheating me. ,,你在骗我。
-684,I'm not interested. ,,我没有兴趣。
-685," OK, I'll take it. ",,我要买这个。
-686,Please provide me with a carrier-bag. ,,请给我袋子。
-687,Do you ship (overseas)? ,,可以邮寄到海外吗？
-688,I need... ,,我要*
-689,...toothpaste. ,,牙膏
-690,...a toothbrush. ,,牙刷
-691,...tampons. ,,卫生棉条
-692,...soap. ,,肥皂
-693,...shampoo. ,,洗发精
-694," ...pain reliever. (e.g., aspirin or ibuprofen) ",,镇痛剂
-695,...cold medicine. ,,感冒药
-696,...stomach medicine. ,,胃肠药
-697,...a razor. ,,剃刀
-698,...an umbrella. ,,雨伞
-699,...sunblock lotion. ,,防晒油
-700,...a postcard. ,,明信片
-701,...postage stamps. ,,邮票
-702,...batteries. ,,电池
-703,...writing paper. ,,纸
-704,...a pen. ,,笔
-705,...a pencil. ,,铅笔
-706,...glasses. ,,眼镜
-707,...English-language books. ,,英文书
-708,...English-language magazines. ,,英文杂志
-709,...an English-language newspaper. ,,英文报纸
-710,...a Chinese-English dictionary. ,,汉英词典
-711,...an English-Chinese dictionary. ,,英汉词典
-712,I want to rent a car. ,,我想要租车。
-713,Can I get insurance? ,,我可以买保险吗？
-714,stop (on a street sign) ,,停
-715,one way ,,单行道
-716,yield ,,让路
-717,no parking ,,禁止停车
-718,speed limit ,,速度限制
-719,gas (petrol) station ,,加油站
-720,petrol ,,汽油
-721,diesel ,,柴油
-722,I haven't done anything wrong. ,,我没有做错事。
-723,It was a misunderstanding. ,,这是误会。
-724,Where are you taking me? ,,你带我去哪里？
-725,Am I under arrest? ,,我被捕了吗？
-726,I am an American/Australian/British/Canadian citizen. ,,我是 美国/澳洲/英国/加拿大 公民。
-727,I want to talk to the American/Australian/British/Canadian embassy/consulate. ,,我希望跟 美国/澳洲/英国/加拿大 的 大使馆/领事馆 联系。
-728,I want to talk to a lawyer. ,,我希望跟律师联系。
-729,Can I just pay a fine now? ,,我可以支付罚款吗？
-730,Can I make international calls here? ,,可以打国际电话吗?
-731,How much is it to America/Australia/Britain/Canada? ,,打给 美国/澳洲/英国/加拿大 是多少钱?
-732,Where can I find an Internet cafe? ,,哪里有网吧?
-733,How much is it per hour? ,,一小时是多少钱?
+318,(bubbly) water,مياه غازية,
+307,(fresh) fruit,),
+306,(fresh) vegetables,),
+527,"* (hard liquor) and * (mixer), please.",,请给我*和*。
+478,* day(s),,* 天
+477,* hour(s),,* 小时
+476,* minute(s),,* 分钟
+480,* month(s),,* 月
+479,* week(s),,* 星期
+481,* year(s),,* 年
+46,0,صفر,〇
+47,1,واحد,一
+83,"1,000,000",مليون,一百万
+84,"1,000,000,000",مليار‎ بليون,
+85,"1,000,000,000,000",تريليون,一兆
+56,10,عشرة,十
+460,"10,000",,一万
+467,"10,000,000",,一千万
+461,"10,001",,一万〇一
+462,"10,002",,一万〇二
+77,100,مئة,一百
+465,"100,000",,十万
+468,"100,000,000",,一亿
+80,1000,الف,一千
+456,101,,一百〇一
+57,11,احد عشر,十一
+457,110,,一百一十
+458,111,,一百一十一
+58,12,اثنا عشر,十二
+59,13,ثلاثة عشر,十三
+60,14,اربعة عشر,十四
+61,15,خمسة عشر,十五
+62,16,ستة عشر,十六
+63,17,سبعة عشر,十七
+64,18,ثمانية عشر,十八
+65,19,تسعة عشر,十九
+48,2,إثنان,二
+66,20,عشرون,二十
+463,"20,000",,二万
+78,200,مئتين,二百
+466,"200,000",,二十万
+81,2000,الفين,二千
+82,2000,الفين,or
+67,21,واحد وعشرون,二十一
+68,22,اثنان وعشرون,二十二
+69,23,ثلاثة وعشرون,二十三
+485,25th December,,十二月二十五号
+49,3,ثلاثة,三
+70,30,ثلاثون,三十
+79,300,ثلاث مئة,三百
+475,3:38 PM,,下午3点38分
+50,4,اربعة,四
+71,40,اربعون,四十
+51,5,خمسة,五
+72,50,خمسون,五十
+464,"50,000",,五万
+459,500,,五百
+52,6,ستة,六
+73,60,ستون,六十
+484,6th January,,一月六号
+53,7,سبعة,七
+74,70,سبعون,七十
+54,8,ثمانية,八
+75,80,ثمانون,八十
+55,9,تسعة,九
+76,90,تسعون,九十
+331,"A beer/two beers, please.",,请给我一杯/两杯啤酒。
+334,"A bottle, please.",,请给我一瓶。
+332,"A glass of red/white wine, please.",,请给我一杯红/白酒。
+333,"A pint, please.",,请给我一品脱。
+280,"A table for one person/two people, please.",,
+452,Abdomen.,,肚子。
+392,Am I under arrest?,هل أنا معتقل؟,我被捕了吗？
+345,"Another round, please.",,请再来一轮。
+190,April,نيسان‎ ابريل,四月
+194,August,آب‎ أغسطس,八月
+455,Back.,,背。
+442,Body.,,身体。
+454,Buttocks.,,屁股。
+1,CLOSED,مغلق,
+380,Can I get insurance?,هل أستطيع الحصول على تأمين؟,我可以买保险吗？
+356,Can I have a bag?,,
+396,Can I just pay a fine now?,أقدر أدفع غرامة الآن؟,我可以支付罚款吗？
+281,"Can I look at the menu, please?",,请给我看看菜单.
+282,Can I look in the kitchen?,,
+421,Can I make a telephone call?,,我可以打个电话吗？
+559,Can I make international calls here?,,可以打国际电话吗?
+422,Can I use your cell phone?,,我可以用您的手机吗？
+35,Can I use your phone?,,我可以用您的电话吗？
+276,Can you change a traveler's check for me?,,
+274,Can you change money for me?,,
+289,"Can you make it ""lite"", please? (less oil/butter/lard)","""""",
+229,Can you show me on the map?,,
+264,Can you suggest another hotel?,,
+509,Can you wake me at *?,,请明天早上*叫醒我。
+451,Chest.,,胸。
+554,Chinese-English dictionar,,汉英词典
+342,Coke (soda),,可乐
+429,Cough.,,咳嗽。
+198,December,كانون الأول‎ ديسمبر,十二月
+431,Diarrhoea.,,泻肚子/拉肚子
+271,Do you accept American/Australian/Canadian dollars?,هل تقبل الدولار الأمريكي/الأسترالي/الكندية؟,
+272,Do you accept British pounds?,هل تقبل الجنيه الاسترليني؟,
+273,Do you accept credit cards?,هل تقبل الكريديت كارد؟,
+490,Do you go to *?,,去不去*?
+265,Do you have a safe?,,你们有没有保险箱？
+514,Do you have an English menu?,,你有没有英文菜单？
+343,Do you have any bar snacks?,,有没有吧台小吃？
+249,Do you have any rooms available?,,你们有房间吗？
+257,Do you have anything quieter?,,
+488,Do you have it in another colour?,,你们有没有另外颜色?
+347,Do you have this in my size?,,有没有我的尺寸？
+329,Do you serve alcohol?,,卖不卖酒？
+357,Do you ship (overseas)?,,可以邮寄到海外吗？
+13,Do you speak English?,هل تتكلم الانجليزية,你会说英语吗？
+14,Do you speak English?,هل تتكلم الإنجليزية؟,你会说英语吗？
+251,Does the room come with...,,有没有...
+213,Does this train/bus stop in _____?,/ *,
+23,Don't touch me!,لا تلمسني,不要碰我！
+2,ENTRANCE,دخول,
+3,EXIT,خروج,
+444,Ears.,,耳朵。
+555,English-Chinese dictionar,,英汉词典
+551,English-language book,,英文书
+375,English-language books,كتب إنجليزية,
+552,English-language magazine,,英文杂志
+376,English-language magazines,مجلات انكليزية,
+553,English-language newspape,,英文报纸
+324,"Excuse me, waiter? (getting attention of server)",,
+408,Excuse me. (begging pardon),,打扰一下。
+409,Excuse me. (coming through),,对不起
+407,Excuse me. (getting attention),,请问
+443,Eyes.,,眼睛。
+9,FORBIDDEN,ممنوع,
+446,Face.,,脸。
+188,February,شباط‎ فبراير,二月
+438,Feet.,,脚。
+428,Fever.,,发烧。
+399,"Fine, thank you.",,"很好, 谢谢。"
+435,Fingers.,,手指。
+185,Friday,يوم الجمعة,星期五
+90,Go,ذهب,
+497,Go straight,,一直走
+415,Good evening.,,晚上好。
+414,Good morning.,,早安。
+18,Good night.,تصبح على خير,晚安。
+10,Goodbye,مع السلامة,再见。
+11,Goodbye (informal),باي باي,拜拜。
+447,Hair.,,头发。
+434,Hands/Arms.,,手。
+448,Head.,,头。
+397,Hello.,,你好。
+16,Help!,النجدة ; إلحقوني,
+413,Help! (in emergencies),,救命！
+453,Hip/Waist.,,腰。
+398,How are you?,,你好吗？
+491,How do I get to * ?,,怎么去*?
+216,How do I get to _____ ?,,
+247,How much does it cost to get to _____?,,
+250,How much is a room for one person/two people?,,
+489,How much is a ticket to *?,,去*的票多少钱?
+209,How much is a ticket to _____?,*,
+562,How much is it per hour?,,一小时是多少钱?
+560,How much is it to America/Australia/Britain/Canada?,,打给 美国/澳洲/英国/加拿大 是多少钱?
+125,How much is this?,بكم هذا,多少钱？
+126,How much is this?,بكم هذا؟,多少钱？
+124,How much?,بكم,
+109,I,انا,
+393,I am an American/Australian/British/Canadian citizen.,,我是 美国/澳洲/英国/加拿大 公民。
+423,I am sick.,,我生病了。
+352,I can't afford it.,,我付不起。
+12,I can't speak Arabic [well].,لا اتكلم عربي جيدا,
+412,I can't speak Chinese.,,我不会讲中文。
+287,I don't eat beef.,,
+286,I don't eat pork.,,
+133,I don't have,ليس عندي,
+136,I don't speak Arabic,لا أتكلم العربية    /    ما باحكي عربي,
+134,I don't understand,أنا لا أفهم    / أنا مش فاهم,
+416,I don't understand (something heard).,,我听不懂。
+417,I don't understand (something read).,,我看不懂。
+19,I don't understand.,لا افهم,
+131,I don't want,لا أريد,
+419,I don't want it! (useful for people who come up trying to sell you something),,我不要
+353,I don't want it.,,我不要。
+132,I have,لي  /  لدي /  عندي,
+389,I haven't done anything wrong.,ما عملت اشي غلط,我没有做错事。
+30,I lost my bag.,,我丟了手提包。
+31,I lost my wallet.,,我丟了钱包。
+34,I need a doctor.,,我需要医生。
+395,I need to talk to a lawyer.,محتاج أحكي مع محامي,
+27,I need your help.,محتاج مساعدة لو سمحت,我需要你的帮助。
+358,I need...,,我要*
+288,I only eat Halal food.,,
+130,I want,أريد,
+296,I want _____.,*أريد,
+297,I want a dish containing _____.,,
+270,I want to check out.,,我现在要走了。
+379,I want to rent a car.,أريد استئجار سيارة,我想要租车。
+558,I want to talk to a lawyer.,,我希望跟律师联系。
+394,I want to talk to the American/Australian/British/Canadian embassy/consulate.,/// /,我希望跟 美国/澳洲/英国/加拿大 的 大使馆/领事馆 联系。
+508,I will stay for * night(s).,,我打算住*夜。
+263,I will stay for _____ night(s).,*,
+135,I work at the _____.,*  *أعمل في /    *أنا باشتغل في,
+24,I'll call the police.,سأتصل بالشرطة‏ ‎,我会叫警察。
+515,I'm a vegetarian,,我吃素的
+285,I'm a vegetarian.,,
+325,I'm finished.,,
+29,I'm lost.,أنا تايه,我迷路了。
+355,I'm not interested.,,我没有兴趣。
+32,I'm sick.,,我生病了。
+410,I'm sorry.,,对不起。
+33,I've been injured.,إنني مصاب,我受伤了。
+498,I've reached my destination,,到了
+267,Is breakfast/supper included?,,
+283,Is there a house specialty?,,
+284,Is there a local specialty?,,
+15,Is there someone here who speaks English?,حد بيتكلم انجليزي؟,这里有人会说英语吗？
+330,Is there table service?,,有没有餐桌服务？
+473,It is nine in the morning.,,早上9点钟。
+390,It was a misunderstanding.,كان سوء تفاهم,这是误会。
+326,It was delicious.,كان لذيذ‏ ‎,很好吃。
+420,It's an emergency.,,这是紧急情况。
+411,"It's okay. (polite response to ""I'm sorry"")",,没关系
+426,Itchy/ticklish.,,痒。
+187,January,كانون الثاني‎ يناير,一月
+193,July,تموز‎ يوليو,七月
+192,June,حزيران‎ يونيو,六月
+22,Leave me alone.,,不要打扰我。
+440,Legs.,,腿。
+17,Look out!,انتبه,
+7,MEN,رجال,
+189,March,آذار‎ مارس,三月
+191,May,أيار‎ مايو,五月
+315,May I have a bottle of _____?,,
+314,May I have a cup of _____?,,
+313,May I have a glass of _____?,,
+321,May I have some _____?,,
+400,"May I please ask, what is your name?",,请问你叫什么名?
+256,May I see the room first?,,
+28,Medical emergency,إسعاف,
+181,Monday,يوم الاثنين,星期一
+402,My name is * .,,我叫 * 。
+441,Nails.,,指甲。
+449,Neck.,,颈项/脖子。
+403,Nice to meet you.,,很高兴认识你。
+445,Nose.,,鼻子。
+197,November,تشرن الثاني‎ نوفمبر,十一月
+261,"OK, I'll take it.",,我要买这个。
+0,OPEN,مفتوح,
+196,October,تشرن الأول‎ أكتوبر,十月
+344,"One more, please.",,请再给我一个。
+210,"One ticket to _____, please.",*,
+5,PULL,اسحب,
+4,PUSH,ادفع,
+424,Painful.,,痛。
+433,Phlegm.,,痰。
+269,Please clean my room.,,
+327,Please clear the plates.,,
+532,Please provide me with a carrier-bag.,,请给我袋子。
+502,Please turn up the aircon/heater,,请把空调开大一点。
+501,Please use the meter machine,,请打表
+404,Please.,,请。
+25,Police!,,警察！
+432,Running nose.,,流鼻涕
+186,Saturday,يوم السبت,星期六
+195,September,أيلول‎ سبتمبر,九月
+437,Shoulder.,,肩膀。
+98,Show me.,أرني,
+430,Sneeze.,,打喷嚏
+427,Sore (In muscle strains).,,酸。
+91,Stop,وقف,
+26,Stop! Thief!,اوقف حرامي‏ ‎,住手！小偷！
+180,Sunday,يوم الأحد,星期天
+507,T,,电
+6,TOILET,حمام,
+248,"Take me there, please.",,
+503,"Take me to *, please.",,请您开到*。
+246,"Take me to _____, please.",,
+500,Taxi driver,,司机
+245,Taxi!,تاكسي‏ ‎,
+405,Thank you.,,谢谢。
+348,That's too expensive.,""" """,太贵了。
+328,"The check, please.",,请结帐。
+474,Three-thirty PM.,,下午3点半.
+450,Throat.,,喉咙。
+184,Thursday,يوم الخميس,星期四
+439,Toes.,,脚指。
+182,Tuesday,يوم الثلاثاء,星期二
+92,Turn left,لف يسار,
+230,Turn left.,لف يسار,左边转弯
+93,Turn right,لف يمين,
+231,Turn right.,لف يمين,右边转弯
+499,U-turn,,掉头
+425,Uncomfortable.,,不舒服。
+128,Understand?,مفهوم؟,
+8,WOMEN,سيدات,
+108,Wait one minute.,إنتظر دقيقه واحده,
+97,Wait or stay,انتظر,
+237,Watch for the _____.,,
+183,Wednesday,يوم الأربعاء,星期三
+278,What is the exchange rate?,,
+129,What is this?,ما هذا؟,
+401,What is your name?,,你叫什么名字？
+268,What time is breakfast/supper?,,
+472,What time is it?,,现在几点？
+120,What?,ما/ماذا /,
+214,When does the train/bus for _____ leave?,/  *,
+346,When is closing time?,,几点打烊/关门？
+215,When will this train/bus arrive in _____?,/ *,
+121,When?,متى,
+224,Where are there a lot of...,,
+127,Where are you from?,من أين أنت,
+391,Where are you taking me?,وين/فين آخدني,你带我去哪里？
+561,Where can I find an Internet cafe?,,哪里有网吧?
+277,Where can I get a traveler's check changed?,,
+275,Where can I get money changed?,,
+211,Where does this train/bus go?,/         /,
+279,Where is an automatic teller machine (ATM)?,وين فيه ايه تي ام؟,
+418,Where is the bathroom（polite)?,,洗手间在哪里？
+20,Where is the toilet?,وين/فين الحمام؟ /,厕所在哪里？
+212,Where is the train/bus to _____?,/  *,
+530,Where is the washingroom?,,洗手间在哪儿？
+122,Where?,اين,
+119,Who?,من,
+123,Why?,لماذا,
+531,Would you take *?,,*元可以吗？
+349,Would you take _____?,,
+436,Wrist.,,手腕。
+354,You're cheating me.,,你在骗我。
+406,You're welcome.,,不客气。
+335,"_____ (hard liquor) and _____ (mixer), please.",*  *,
+170,_____ day(s),‏* يوم,
+169,_____ hour(s),‏* ساعة,
+168,_____ minute(s),‏* دقيقة,
+172,_____ month(s),‏* ‏ ‎( (,
+171,_____ week(s),‏* أسبوع,
+173,_____ year(s),‏* سنة,
+255,a TV,‏تلفزيون,
+253,a bathroom,‏حمام,
+374,a pen,قلم,
+370,a postcard,بطاقة بريدية,
+367,a razor,,
+254,a telephone,‏تليفون,
+360,a toothbrush,,
+103,after,بعد,
+159,afternoon,بعد ظهر,下午
+154,airplane,طائرة,
+494,airpor,,机
+378,an English-English dictionary,,
+377,an English-language newspaper,جرائد إنجليزية,
+368,an umbrella,,
+496,avenue,,大道
+227,bars,,
+505,bathroo,,浴
+546,batterie,,电池
+372,batteries,,
+312,beans,فول,
+504,bedsheet,,床
+252,bedsheets,‏شراشف‎ ملايات,
+299,beef,بقر,牛肉
+319,beer,بيرة,啤酒
+101,before,قبل,以前
+236,before the _____,,
+258,bigger,,
+199,black,أسود,黑色
+322,black pepper,فلفل أسود,
+525,black tea,,红茶
+203,blue,أزرق,蓝色
+529,boiled water,,开水
+308,bread,,面包
+292,breakfast,,早饭
+208,brown,بني,褐色
+493,bus statio,,汽车总
+323,butter,زبدة,
+143,car,سيارة,
+511,cash,,现钱
+351,cheap,رخيص,便宜
+260,cheaper,,
+513,check,,支票
+303,cheese,جبنة,奶酪
+298,chicken,دجاج‎ فراخ,鸡
+259,cleaner,,
+339,club soda,,苏打水
+138,coffee,قهوة,咖啡
+539,cold medicin,,感冒药
+365,cold medicine,,
+512,credit card,,信用卡
+388,diesel,ديزل‎ سولار‎ جاز,柴油
+244,downhill,,
+220,downtown,,
+521,dumpling,,饺子
+241,east,شرق,东
+304,eggs,بيض,鸡蛋
+160,evening,مساء,
+471,evening/night,,晚上
+350,expensive,غالي,贵
+300,fish,سمك,鱼
+290,fixed-price meal,,
+520,fried rice,,炒饭
+106,from,من,
+556,gas (petrol) station,,加油站
+386,gas/petrol station,محطة بنزين,
+550,glasse,,眼镜
+487,gold,,金色
+201,gray,رمادي,
+205,green,أخضر,绿色
+523,green tea,,绿茶
+486,grey,,灰色
+87,half,نصف,半
+301,ham,خنزير,
+112,he,هو ;,
+99,here,هنا,
+144,hotel,فندق   /  اوتيل,
+225,hotels,,
+238,intersection,,
+317,juice,عصير,果汁
+178,last week,الأسبوع الماضي,上个星期
+157,later,لاحقاً,以后
+232,left,يسار,左边
+88,less,اقل,
+469,less than,,少於
+266,lockers,,
+293,lunch,,午饭
+310,macaroni,مكرونة,
+167,midnight,متصف الليلة‎ نص الليل,半夜
+152,milk,حليب,牛奶
+528,mineral spring (i.e. bottled) water,,矿泉水
+137,money,مال‎ فلوس,
+89,more,اكثر,更
+470,more than,,多於
+158,morning,صباح,早上
+517,mutton,,羊肉
+526,natural mineral water,,矿泉水
+179,next week,الأسبوع القادم,下个星期
+161,night,ليلة,
+384,no parking,ممنوع الاسطفاف,禁止停车
+519,noodles,,面条
+164,noon,,中午
+239,north,شمال,北
+104,now,الأن,现在
+105,now,الآن,现在
+86,"number _____ (train, bus, etc.)",رقم /,
+162,one o'clock AM,,
+165,one o'clock PM,,
+382,one way,اتجاه واحد,单行道
+206,orange,برتقالي,橙色
+341,orange juice,,柳橙汁
+538,"pain reliever. (e.g., aspirin or ibuprofe",,镇痛剂
+364,"pain reliever. (e.g., aspirin or ibuprofen",,
+235,past the _____,,
+510,pay,,付
+548,pe,,笔
+549,penci,,铅笔
+557,petrol,,汽油
+387,petrol (gasoline),بنزين,
+516,pork,,猪肉
+545,postage stamp,,邮票
+371,postage stamps,,
+544,postcar,,明信片
+207,purple,بنفسجي,紫色
+541,razo,,剃刀
+202,red,أحمر,红色
+320,red/white wine,,红/白
+226,restaurants,,
+311,rice,أرز,米饭
+233,right,يمين,右边
+495,road,,路
+338,rum,,朗姆酒
+305,salad,سلاطة,
+141,salt,ملح,
+302,sausage,سوسيس,
+524,scented tea,,花茶
+537,shampo,,洗发精
+363,shampoo,,
+113,she,هي ;,
+228,sites to see,,
+96,slowly,ببطء ; شوي شوي,
+536,soa,,肥皂
+362,soap,,
+522,soup,,汤
+240,south,جنوب,南
+385,speed limit,السرعة القصوى,速度限制
+540,stomach medicin,,胃肠药
+366,stomach medicine,,
+381,stop (on a street sign),قف,停
+94,straight ahead,إلى الامام  ; على طول,往前走
+95,straight ahead,على طول,往前走
+155,street,شارع,街
+140,sugar,سكر,糖
+543,sunblock lotio,,防晒油
+369,sunblock lotion,,
+295,supper,,晚饭
+535,tampon,,卫生棉条
+361,tampons,,
+151,tea,شاي,
+316,tea (drink),شاي,茶
+294,tea (meal),,
+506,telephon,,电
+223,the American/Canadian/Australian/British consulate,,
+222,the _____ hotel,,
+219,the airport,المطار,
+218,the bus station,,
+483,the day after tomorrow,,后天
+482,the day before yesterday,,前天
+217,the train station,,
+221,the youth hostel,,
+100,there,هناك,
+118,they (f),هن,
+117,they (m/mixed),هم,
+116,they (two people) : هما huma (rarely used out of the most formal Literary Arabic),أنتم ;,
+177,this week,الاسبوع,这个星期
+107,to or at (a place),إلى,
+309,toast,,
+174,today,البوم,今天
+176,tomorrow,غداً,明天
+340,tonic water,,通宁水
+534,toothbrus,,牙刷
+533,toothpast,,牙膏
+359,toothpaste,,
+234,towards the _____,,
+492,train statio,,火车
+163,two o'clock AM,,
+166,two o'clock PM,,
+542,umbrell,,雨伞
+243,uphill,,
+518,vegetable,,蔬菜
+337,vodka,,伏特加
+147,water,ماي‎ ماية‎ ماء,水
+145,water,ماء,水
+114,we,نحن ; احنا‎ نحنا,
+242,west,غرب,西
+336,whiskey,,威士忌
+200,white,أبيض,白色
+153,work,شغل,
+547,writing pape,,纸
+373,writing paper,ورق للكتبة,
+204,yellow,أصفر,黄色
+175,yesterday,أمس,昨天
+383,yield,,让路
+111,you (f),أنتِ ;,
+110,you (m),أنتَ ;,
+115,you (m/mixed),أنتما,
+291,à la carte,,
+36,٠,,
+37,١,,
+38,٢,,
+39,٣,,
+40,٤,,
+41,٥,,
+42,٦,,
+43,٧,,
+44,٨,,
+45,٩,,
