@@ -5,7 +5,8 @@ import {
   Keyboard,
   ActivityIndicator,
   ListView,
-  Image
+  Image,
+  Alert
 } from 'react-native';
 import { Container, Title, Text, } from 'native-base';
 import { StackNavigator } from 'react-navigation';
@@ -103,7 +104,14 @@ export default class ChatScreen extends Component<{}>  {
     if (this.state.sendDisabled)  return;
 
     /* Read the text input, create a message, update proper database entries and clean up the interface */
-    var text = this.refs.mi.state.message;
+    var text="";
+    var previousSelections = this.refs.mi.state.previousSelections;
+    previousSelections
+    .forEach(function(child) 
+      {
+        text+=child+" ";
+      })
+
     var newMessage = this.createMessage(this.state.user.uid, text);
     var newMessageKey = this.getNewMessageKey();
 
@@ -173,11 +181,32 @@ export default class ChatScreen extends Component<{}>  {
                               opacity: 1}});
   }
 
-  textChanged = (value) => {
+  textChanged = (value, suggestionSelected, remainderString) => {
 
-    var message = this.refs.mi.state.message;
-    this.refs.mi.setState({message: value});
-    this.sendToSuggestionBar(value);
+    var previousSelections = this.refs.mi.state.previousSelections;
+    var potentialMessage = this.refs.mi.state.message;
+    var stringForSuggestions = value;
+
+    if (suggestionSelected) stringForSuggestions = remainderString;
+    else {
+
+      previousSelections
+      .forEach(function(child) 
+        {
+          /* stringForSuggestions is the string which is in the text input
+             but hasn't been selected by the user yet.
+             This is handling the text that is in the message input 
+             before the user has selected a suggestion, 
+             not the one returned by Shehroze's function */
+          stringForSuggestions = stringForSuggestions.replace(child+" ", ""); 
+        })
+    }
+    
+    /* If everything in the message input is identical to our potential message, enable send */
+    if (stringForSuggestions.length>0) this.disableSend();
+    else this.enableSend();
+
+    this.sendToSuggestionBar(stringForSuggestions);
   }
 
   /* This is where the current input is being sent to the suggestion bar 
@@ -189,8 +218,14 @@ export default class ChatScreen extends Component<{}>  {
 
   selectSuggestion = (value) => {
     this.refs.mi.setText(value);
-    this.textChanged(value);
-    this.enableSend();
+    /* I first pass the selection to Shehroze, 
+       then he gives me back the remainding text, 
+       the one that wasn't used to produce the suggestion 
+       That text is the third parameter for the function
+       E.g. If input is "I want 5" and a suggestion is "I want",
+            and the user selects it,
+            we pass 5 as the third parameter to the following function */
+    this.textChanged(value, true, "");
   }
 
   renderRow = (rd) => {
@@ -238,7 +273,8 @@ export default class ChatScreen extends Component<{}>  {
 
         <Footer center={<MessageInput ref='mi' 
                                       style={{flex: 1}} 
-                                      onChangeText={(value) => this.textChanged(value)}/>} 
+                                      onChangeText={(value) => this.textChanged(value, false)}>
+                        </MessageInput>} 
                 right={<ToolbarButton style={this.state.sendStyle} 
                                       name='md-send' 
                                       onPress={() => this.sendMessage()}/>}/>
