@@ -24,6 +24,7 @@ export default class ToolbarButton extends Component {
                 onPress={this.props.onPress}>
           <Icon name={this.props.name} 
                 style={[styles.button, this.props.style]}/>
+          {this.props.children}
         </Button>
     );
   }

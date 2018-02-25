@@ -23,7 +23,6 @@ export default StyleSheet.create({
   withKeyboard: {
     maxHeight: 210,
     marginTop: 5,
-    marginBottom: 5,
   },
   sw: {    
     flex: 1,

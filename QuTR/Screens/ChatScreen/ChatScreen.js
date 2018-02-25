@@ -6,9 +6,11 @@ import {
   ActivityIndicator,
   ListView,
   Image,
-  Alert
+  Alert,
+  ScrollView,
+  TouchableOpacity
 } from 'react-native';
-import { Container, Title, Text, } from 'native-base';
+import { Container, Title, Text, Badge } from 'native-base';
 import { StackNavigator } from 'react-navigation';
 
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
@@ -23,7 +25,10 @@ import Footer from '../../Components/footer/Footer.js';
 import styles from './styles.js';
 
 import { BLACK, 
-         SECONDARY_LIGHT } from '../../masterStyle.js'
+         SECONDARY_LIGHT,
+         PRIMARY_DARK,
+         SECONDARY,
+         PRIMARY } from '../../masterStyle.js'
 
 const Firebase = require('firebase');
 var self;
@@ -41,7 +46,11 @@ export default class ChatScreen extends Component<{}>  {
                 user: firebaseService.auth().currentUser,
                 myPicture: "",
                 loading: true,
-                dataSource: ds
+                dataSource: ds,
+                selectionsVisible: false,
+                message: '',
+                renderPreviousSelections: [],
+                previousSelections: []
               };
   }
 
@@ -105,7 +114,7 @@ export default class ChatScreen extends Component<{}>  {
 
     /* Read the text input, create a message, update proper database entries and clean up the interface */
     var text="";
-    var previousSelections = this.refs.mi.state.previousSelections;
+    var previousSelections = this.state.previousSelections;
     previousSelections
     .forEach(function(child) 
       {
@@ -117,6 +126,11 @@ export default class ChatScreen extends Component<{}>  {
 
     this.pushToUserChatrooms(newMessage, this.state.user.uid, newMessageKey);
     this.pushToUserChatrooms(newMessage, this.props.navigation.state.params.correspondentKey, newMessageKey);
+
+    this.setState({message: '',
+                   renderPreviousSelections: [],
+                   previousSelections: []
+                 });
 
     this.refs.mi.clearContent();
     this.refs.sb.clean();
@@ -177,17 +191,25 @@ export default class ChatScreen extends Component<{}>  {
   disableSend = () => {
 
     this.setState({sendDisabled: true,
-                  sendStyle: {color: BLACK, 
-                              opacity: 1}});
+                  sendStyle: {color: BLACK}
+                });
+  }
+
+  toggleSelections = () => {
+    this.setState({selectionsVisible: !this.state.selectionsVisible})
   }
 
   textChanged = (value, suggestionSelected, remainderString) => {
 
-    var previousSelections = this.refs.mi.state.previousSelections;
-    var potentialMessage = this.refs.mi.state.message;
+    var previousSelections = this.state.previousSelections;
+    var potentialMessage = this.state.message;
     var stringForSuggestions = value;
 
-    if (suggestionSelected) stringForSuggestions = remainderString;
+    if (suggestionSelected) {
+
+      stringForSuggestions = remainderString;
+      this.refs.mi.logAllProperties(this.refs.mi.input, remainderString);
+    }
     else {
 
       previousSelections
@@ -198,12 +220,13 @@ export default class ChatScreen extends Component<{}>  {
              This is handling the text that is in the message input 
              before the user has selected a suggestion, 
              not the one returned by Shehroze's function */
-          stringForSuggestions = stringForSuggestions.replace(child+" ", ""); 
+          if (stringForSuggestions.includes(child))
+            stringForSuggestions = stringForSuggestions.replace(child+" ", ""); 
         })
     }
-    
+
     /* If everything in the message input is identical to our potential message, enable send */
-    if (stringForSuggestions.length>0) this.disableSend();
+    if (stringForSuggestions.length>0 || potentialMessage.length==0) this.disableSend();
     else this.enableSend();
 
     this.sendToSuggestionBar(stringForSuggestions);
@@ -217,9 +240,9 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   selectSuggestion = (value) => {
-    this.refs.mi.setText(value);
+    this.renderText(value);
     /* I first pass the selection to Shehroze, 
-       then he gives me back the remainding text, 
+       then he gives me back the remaining text, 
        the one that wasn't used to produce the suggestion 
        That text is the third parameter for the function
        E.g. If input is "I want 5" and a suggestion is "I want",
@@ -227,6 +250,48 @@ export default class ChatScreen extends Component<{}>  {
             we pass 5 as the third parameter to the following function */
     this.textChanged(value, true, "");
   }
+
+  /* This adds the selected suggestion to the message composer
+     and handles the appropriate state changes */
+  renderText = (input) => {
+    var selection = [];
+    selection.push(<TouchableOpacity onLongPress={() => {this.removeSelection(input)}}
+                                     key={this.state.previousSelections.length}>
+                    <Text style={[styles.selectedSuggestion]}
+                          overflow="hidden"
+                          numberOfLines={1}>
+                        {input}
+                    </Text>
+                   </TouchableOpacity>);
+
+    this.setState({renderPreviousSelections: this.state.renderPreviousSelections.concat(selection),
+                   message: this.state.message+=input+" ",
+                   previousSelections: this.state.previousSelections.concat([input])});
+  }
+
+  /* Removes the selection from the message composer */
+  removeSelection = (deletedSelection) => {    
+
+    var helper = this.state.previousSelections;
+    var renderHelper = this.state.renderPreviousSelections;
+    var messageHelper = this.state.message;
+    var index = helper.indexOf(deletedSelection);
+
+    if (index !== -1) {
+
+      helper.splice(index, 1);
+      renderHelper.splice(index, 1);
+      messageHelper = messageHelper.replace(deletedSelection+" ", ""); 
+    }
+
+    /* Clean up if no suggestions are left selected */
+    if (helper.length==0) this.disableSend();
+
+    this.setState({renderPreviousSelections: renderHelper,
+                   previousSelections: helper,
+                   message: messageHelper})
+  }
+
 
   renderRow = (rd) => {
 
@@ -271,8 +336,38 @@ export default class ChatScreen extends Component<{}>  {
           
         </ChatWindow>
 
-        <Footer center={<MessageInput ref='mi' 
-                                      style={{flex: 1}} 
+        {this.state.selectionsVisible ? <View style={[styles.scrollWrapper]}>
+                                          <ScrollView style={[styles.selectionList]}
+                                                      horizontal={true}
+                                                      contentContainerStyle={[styles.childLayout]}
+                                                      overflow="hidden"
+                                                      scrollEnabled={true}
+                                                      showsHorizontalScrollIndicator = {false}>
+                                            {(!!this.refs.mi) ? 
+                                              this.state.renderPreviousSelections : null}
+                                          </ScrollView>
+                                        </View>
+                                      :
+                                      null}
+
+        <Footer left={<ToolbarButton style={(this.state.renderPreviousSelections.length>0) ? 
+                                            {color: SECONDARY} : {color: 'black'}}
+                                     name='md-mail' 
+                                     onPress={() => this.toggleSelections()}>
+                        {(this.state.renderPreviousSelections.length>0) 
+                          ? 
+                          <Badge success
+                                 style={[styles.badge]}>
+                            <Text style={[styles.badgeText]}>
+                              {this.state.renderPreviousSelections.length}
+                            </Text>
+                          </Badge>
+                          :
+                          null
+                        }
+                      </ToolbarButton>}
+
+                center={<MessageInput ref='mi' 
                                       onChangeText={(value) => this.textChanged(value, false)}>
                         </MessageInput>} 
                 right={<ToolbarButton style={this.state.sendStyle} 

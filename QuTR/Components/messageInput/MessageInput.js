@@ -8,15 +8,13 @@ import { Keyboard,
 import PropTypes from 'prop-types';
 
 import styles from './styles.js';
-import { PRIMARY_LIGHT } from '../../masterStyle.js'
+import { PRIMARY,
+         SECONDARY } from '../../masterStyle.js'
 
 export default class MessageInput extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {message: '',
-                  renderPreviousSelections: [],
-                  previousSelections: []};
   }
 
   static propTypes = {
@@ -26,24 +24,6 @@ export default class MessageInput extends Component {
   clearContent = () =>  {
 
     this.logAllProperties(this.input, '');
-    this.setState({message: '',
-                   renderPreviousSelections: [],
-                   previousSelections: []});
-  }
-
-  setText = (input) => {
-    var selection = [];
-    selection.push(<Text style={{backgroundColor: PRIMARY_LIGHT, borderRadius: 30, borderWidth: 1, color: 'white'}}
-                                  overflow='hidden'
-                                  key={this.state.previousSelections.length}>
-                      {input}
-                    </Text>);
-    selection.push(<Text> </Text>);
-
-
-    this.setState({renderPreviousSelections: this.state.renderPreviousSelections.concat(selection),
-                   message: this.state.message+=input+" ",
-                   previousSelections: this.state.previousSelections.concat([input])});
   }
 
   logAllProperties = (obj, newText) => {
@@ -60,12 +40,12 @@ export default class MessageInput extends Component {
     return (
         <Input style={[styles.textInput, this.props.style]} 
                ref={(input) => { this.input = input; }} 
-               multiline={false} 
+               multiline={true} 
                placeholder='Enter message: ' 
                autoCorrect={false} 
                onChangeText={(value) => {this.props.onChangeText(value)}} 
-               onSubmitEditing={Keyboard.dismiss}>
-          {this.state.renderPreviousSelections}
+               onSubmitEditing={Keyboard.dismiss}
+               overflow='hidden'>
         </Input>
 
     );
