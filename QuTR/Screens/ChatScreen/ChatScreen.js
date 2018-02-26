@@ -84,8 +84,7 @@ export default class ChatScreen extends Component<{}>  {
 
     this.setState({urref: urref});
 
-    /* Get a list of all messages for a conversation. Maybe we can limit if the number grows to be too large */
-    urref.orderByChild('timestamp').on('value', (e) => {
+    urref.orderByChild('timestamp').limitToLast(20).on('value', (e) => {
             var rows = [];
             if ( e && e.val() ) {                
                 e.forEach(function(child) 
