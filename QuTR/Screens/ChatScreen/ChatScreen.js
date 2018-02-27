@@ -29,6 +29,10 @@ import { BLACK,
          SECONDARY,
          PRIMARY } from '../../masterStyle.js'
 
+import ar from './phrases_json/ar.json';
+import en from './phrases_json/en.json';
+import cn from './phrases_json/cn.json';
+
 const Firebase = require('firebase');
 var self;
 
@@ -49,7 +53,8 @@ export default class ChatScreen extends Component<{}>  {
                 selectionsVisible: false,
                 message: '',
                 renderPreviousSelections: [],
-                previousSelections: []
+                previousSelections: [],
+                defaultLang: "English"
               };
   }
 
@@ -95,6 +100,17 @@ export default class ChatScreen extends Component<{}>  {
                 loading: false
             });
         });
+
+    firebaseService.database().ref()
+                .child('users')
+                .child(this.state.user.uid)
+                .once('value')
+                .then(function(snapshot) {
+                  this.setState({
+                    defaultLang: snapshot.val().language
+                  })
+                })
+
   }
 
   componentDidUnMount() {
@@ -169,6 +185,45 @@ export default class ChatScreen extends Component<{}>  {
       .update({message: message.message, 
                timestamp: message.timestamp, 
                reverseTimestamp: message.reverseTimestamp});
+  }
+  
+  generateSentence = (phrsIDarr) => {
+
+    var myLang = this.state.defaultLang;
+    var phraseDB;
+
+    var np = "";
+    var temp = "";
+    var final = "";
+
+    if (myLang == "Arabic") phraseDB = ar;
+    else if (myLang == "Chinese") phraseDB = cn;
+    else phraseDB = en;
+
+    phrsIDarr.forEach(function(pid) {
+      if (typeof(pid) == "number") {
+        np += pid;
+      }
+
+      else {
+        if (en[pid].pos == "phrs") {
+          final += en[pid].phrase + " ";
+        }
+        else {
+          if (en[pid].phrase.includes("*") && en[pid].pos == "vp") {
+            temp = en[pid].phrase;
+          }
+          else
+            np += en[pid].phrase.replace("*", "").toLowerCase();
+        }
+      }
+    });
+
+    if (temp != "")
+      temp = temp.replace("*", np);
+    final += temp;
+
+    this.setState({message: final});
   }
 
   createMessage = (ownerID, message) => {
