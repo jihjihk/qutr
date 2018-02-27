@@ -20,7 +20,6 @@ import ChatWindow from '../../Components/chatWindow/ChatWindow.js';
 import SuggestionButton from '../../Components/suggestionButton/SuggestionButton.js';
 import SuggestionBar from '../../Components/suggestionBar/SuggestionBar.js';
 import Header from '../../Components/header/Header.js';
-import Footer from '../../Components/footer/Footer.js';
 
 import styles from './styles.js';
 

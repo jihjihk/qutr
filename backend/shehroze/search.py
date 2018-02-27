@@ -83,11 +83,10 @@ class Trie:
                     if abs(len(node.word) - prefixLen) <= 1 and pre[1:] in node.word:
                             suggestions[node.word] = node.children[" "].concepts
                             node.rank += 1
-
-            for child in node.children:
-                if child:
-                    queue.append(node.children[child])
-
+            else:
+                for child in node.children:
+                    if child:
+                        queue.append(node.children[child])
         # Sort suggestions based on rank here
         return suggestions
 
@@ -149,7 +148,6 @@ def main():
         word = input("Please enter a word or quit() to exit: ")
         if word != 'quit()':
             concepts = engTrie.suggConcepts(word.lower())
-            print(concepts)
             for c in concepts:
                 print(globalDict.getPhraseNode(c[0]).getPhrase())
         else:
