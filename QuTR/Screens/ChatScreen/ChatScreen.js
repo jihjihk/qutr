@@ -239,6 +239,8 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   selectSuggestion = (value) => {
+
+    if (!value) return;
     this.renderText(value);
     /* I first pass the selection to Shehroze, 
        then he gives me back the remaining text, 
