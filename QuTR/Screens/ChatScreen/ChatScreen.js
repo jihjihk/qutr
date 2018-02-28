@@ -40,6 +40,13 @@ export default class ChatScreen extends Component<{}>  {
 
   static navigationOptions = { header: null };
 
+  /* *** message is the fully constructed sentences after generateSentence()
+  while selectedPhraseID is an array of raw phrase IDs selected by the user.
+
+  We should probably send the other chat conversant the selectedPhraseID array
+  instead of "message" and call generateSentence() before displaying.
+
+  */
   constructor(props) {
     super(props);
     self=this;
@@ -54,6 +61,7 @@ export default class ChatScreen extends Component<{}>  {
                 message: '',
                 renderPreviousSelections: [],
                 previousSelections: [],
+                selectedPhraseID: [],
                 defaultLang: "English"
               };
   }
@@ -122,6 +130,9 @@ export default class ChatScreen extends Component<{}>  {
     this.state.urref.off('value')
   }  
 
+  /* *** Sending the chat coresspondent selectedPhraseID arr instead of a full sentence?
+  */
+
   sendMessage = () => {
 
     if (this.state.sendDisabled)  return;
@@ -134,6 +145,13 @@ export default class ChatScreen extends Component<{}>  {
       {
         text+=child+" ";
       })
+
+    /* *** This code should be where the generateSentence() function is called
+    to construct a sentence from an array of phrase IDs
+
+    var selectedPhraseID = this.state.selectedPhraseID;
+    var text = generateSentence(selectedPhraseID);
+    */
 
     var newMessage = this.createMessage(this.state.user.uid, text);
     var newMessageKey = this.getNewMessageKey();
@@ -186,8 +204,20 @@ export default class ChatScreen extends Component<{}>  {
                timestamp: message.timestamp, 
                reverseTimestamp: message.reverseTimestamp});
   }
+
+  /* *** Jihyun: this is where my function is. It receives an array of phrase IDs
+  and given the defaultLang info in state, it generates a sentence using some rules.
+  Up top of this .js file, I imported json files of phrases and their IDs
+
+  This function should be called whenever the user hits send so that
+    1) sender's own chat screen renders a full complete sentence
+    2) receiver's chat screen also renders a full sentence but in a different language
+
+  But considering how Shehroze is selecting phrases directly and not their corresponding IDs,
+  should we have a separate data structure that is a reverse {phrase: ID} relationship so it's fast to look up?
+  */
   
-  generateSentence = (phrsIDarr) => {
+  generateSentence = (selectedPhraseID) => {
 
     var myLang = this.state.defaultLang;
     var phraseDB;
@@ -200,7 +230,7 @@ export default class ChatScreen extends Component<{}>  {
     else if (myLang == "Chinese") phraseDB = cn;
     else phraseDB = en;
 
-    phrsIDarr.forEach(function(pid) {
+    selectedPhraseID.forEach(function(pid) {
       if (typeof(pid) == "number") {
         np += pid;
       }
@@ -223,7 +253,9 @@ export default class ChatScreen extends Component<{}>  {
       temp = temp.replace("*", np);
     final += temp;
 
-    this.setState({message: final});
+    //this.setState({message: final});
+
+    return final;
   }
 
   createMessage = (ownerID, message) => {
