@@ -1,7 +1,7 @@
 # qutr
 
 ## QuTr
-Our application uses `node 9.3.0` and `npm 5.6.0`, since `npm 5.5.x` may cause bugs in `node 9.3.0`. `node 9.3.0` comes with `npm 5.5.x` by default, so you would have to run `npm i -g npm` in order to update the npm version. If you need to keep other versions of node, checkout [nvm](https://github.com/creationix/nvm), the Node Version Manager. Please ensure that you have these versions installed before running `npm install`.
+Our application uses `node 9.3.0` and `npm 5.6.0`, since `npm 5.5.x` may cause bugs in `node 9.3.0`. `node 9.3.0` comes with `npm 5.5.x` by default, so you would have to run `npm i -g npm` in order to update the npm version to 5.6.0. If you need to keep other versions of node, checkout [nvm](https://github.com/creationix/nvm), the Node Version Manager. Please ensure that you have these versions installed before running `npm install`.
 
 ### Running on iOS
 react-native-camera is recently making the change from RCTCamera to RNCamera (see [react-native-camera repo](https://github.com/react-native-community/react-native-camera)). Because of this, the app will not build properly. In order to make this work:
@@ -12,6 +12,8 @@ react-native-camera is recently making the change from RCTCamera to RNCamera (se
 5. Do the same with libRNSVG-tvOS.a
 6. react-native-vector-icons currently has a bug, so follow [this solution](https://github.com/oblador/react-native-vector-icons/issues/626#issuecomment-362386341) to resolve it.
 7. You should be ready to go now. Run `react-native run-ios` to start the project.
+
+*NOTE: Running `npm install` seems to affect Xcode configurations. So, if you have to run `npm install`, then please make sure Xcode is in the correct settings again.*
 
 
 ## BleManager
