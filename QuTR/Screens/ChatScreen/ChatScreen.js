@@ -33,6 +33,8 @@ import ar from './phrases_json/ar.json';
 import en from './phrases_json/en.json';
 import cn from './phrases_json/cn.json';
 
+import Trie from '../../DataStructures/Trie.js';
+
 const Firebase = require('firebase');
 var self;
 
@@ -62,7 +64,8 @@ export default class ChatScreen extends Component<{}>  {
                 renderPreviousSelections: [],
                 previousSelections: [],
                 selectedPhraseID: [],
-                defaultLang: "English"
+                defaultLang: "English",
+                trie: null
               };
   }
 
@@ -114,8 +117,28 @@ export default class ChatScreen extends Component<{}>  {
                 .child(this.state.user.uid)
                 .once('value')
                 .then(function(snapshot) {
+                  /*
+                    Shehroze:
+                    Retrieve user language from Firebase and initialize the Trie with the appropriate data.
+                  */
+                  let lang = snapshot.val().language;
+                  let trie = new Trie();
+                  let phraseData = null;
+                  if (lang === "English") {
+                    phraseData = en;
+                  } else if (lang === "Arabic") {
+                    phraseData = ar;
+                  } else if (lang === "Chinese") {
+                    phraseData = cn;
+                  }
+                  if(phraseData) {
+                    for (let pObj in phraseData) {
+                      trie.insertPhrase(pObj, phraseData[pObj].phrase);
+                    }
+                  }
                   this.setState({
-                    defaultLang: snapshot.val().language
+                    defaultLang: lang
+                    trie: trie
                   })
                 })
 
@@ -308,6 +331,18 @@ export default class ChatScreen extends Component<{}>  {
           if (stringForSuggestions.includes(child))
             stringForSuggestions = stringForSuggestions.replace(child+" ", ""); 
         })
+      /*
+        Shehroze: Making a call to the trie to return a set of concepts based on given text input. The
+        following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
+      */
+      let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
+      let conceptsArray = []  // Preparing a list of possible concepts for Jihyun's function
+      for(let i = 0; i < conceptCount.length; i++) {
+        conceptsArray[i] = conceptCount[i][0];
+      }
+      this.setState({
+        selectedPhraseID: conceptsArray
+      });
     }
 
     /* If everything in the message input is identical to our potential message, enable send */

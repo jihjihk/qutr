@@ -7,7 +7,7 @@ class Trie {
 
 	insertPhrase(cID, phrase) {
 		let current = this.root;
-		let words = phrase.split(" ");
+		let words = phrase.toLowerCase().split(" ");
 		for(let i = 0; i < words.length; i++) {
 			let word = words[i];
 			for(let j = 0; j < word.length; j++) {
@@ -74,7 +74,7 @@ class Trie {
 	}
 
 	suggConcepts(prefix) {
-		let inputWords = prefix.split(" ");
+		let inputWords = prefix.toLowerCase().split(" ");
 		let concepts = {};
 		for(let i = 0; i < inputWords.length; i++) {
 			let word = inputWords[i];
