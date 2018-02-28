@@ -1,4 +1,4 @@
-import TrieNode from 'TrieNode.js';
+import TrieNode from './TrieNode.js';
 
 class Trie {
 	constructor() {
