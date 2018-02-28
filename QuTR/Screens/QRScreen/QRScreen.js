@@ -10,6 +10,8 @@ import { PRIMARY_LIGHT } from '../../masterStyle.js'
 
 import QRCode from 'react-native-qrcode-svg';
 
+var self;
+
 export default class QRScreen extends Component<{}>  {
 
   constructor(props) {
@@ -17,6 +19,23 @@ export default class QRScreen extends Component<{}>  {
     this.state = {
         text: "http://google.com/"+firebaseService.auth().currentUser.uid.toString(),
         logo: require("../../Pictures/logo.png")};
+    self = this;
+  }
+
+  componentDidMount() {
+
+    var urref = firebaseService.database().ref()
+                .child('users')
+                .child(firebaseService.auth().currentUser.uid)
+                .child('userRooms');
+
+    urref.on("child_added", function(snapshot, prevChildKey) {
+      var time = new Date();
+      var ms = time.getTime();
+      /* Only change the tab if I know that I've been scanned successfuly */
+      if (snapshot.val().message==="" && Math.abs(snapshot.val().timestamp - ms) < 3000)
+        self.props.changeTab(1);
+    });
   }
 
   render() {

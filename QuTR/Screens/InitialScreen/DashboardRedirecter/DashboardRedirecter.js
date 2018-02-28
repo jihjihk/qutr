@@ -101,7 +101,7 @@ export default class App extends Component<{}> {
                                   color={SECONDARY}>
                             </Icon>
                           </TabHeading>}>
-              <QRScreen>
+              <QRScreen changeTab = {this.changeTab}>
               </QRScreen>
             </Tab>
             <Tab heading={<TabHeading style={{backgroundColor: PRIMARY_DARK}}>
