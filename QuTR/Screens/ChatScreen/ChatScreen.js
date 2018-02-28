@@ -20,7 +20,6 @@ import ChatWindow from '../../Components/chatWindow/ChatWindow.js';
 import SuggestionButton from '../../Components/suggestionButton/SuggestionButton.js';
 import SuggestionBar from '../../Components/suggestionBar/SuggestionBar.js';
 import Header from '../../Components/header/Header.js';
-import Footer from '../../Components/footer/Footer.js';
 
 import styles from './styles.js';
 
@@ -30,6 +29,12 @@ import { BLACK,
          SECONDARY,
          PRIMARY } from '../../masterStyle.js'
 
+import ar from './phrases_json/ar.json';
+import en from './phrases_json/en.json';
+import cn from './phrases_json/cn.json';
+
+import Trie from '../../DataStructures/Trie.js';
+
 const Firebase = require('firebase');
 var self;
 
@@ -37,6 +42,13 @@ export default class ChatScreen extends Component<{}>  {
 
   static navigationOptions = { header: null };
 
+  /* *** message is the fully constructed sentences after generateSentence()
+  while selectedPhraseID is an array of raw phrase IDs selected by the user.
+
+  We should probably send the other chat conversant the selectedPhraseID array
+  instead of "message" and call generateSentence() before displaying.
+
+  */
   constructor(props) {
     super(props);
     self=this;
@@ -50,7 +62,10 @@ export default class ChatScreen extends Component<{}>  {
                 selectionsVisible: false,
                 message: '',
                 renderPreviousSelections: [],
-                previousSelections: []
+                previousSelections: [],
+                selectedPhraseID: [],
+                defaultLang: "English",
+                trie: null
               };
   }
 
@@ -96,6 +111,37 @@ export default class ChatScreen extends Component<{}>  {
                 loading: false
             });
         });
+
+    firebaseService.database().ref()
+                .child('users')
+                .child(this.state.user.uid)
+                .once('value')
+                .then(function(snapshot) {
+                  /*
+                    Shehroze:
+                    Retrieve user language from Firebase and initialize the Trie with the appropriate data.
+                  */
+                  let lang = snapshot.val().language;
+                  let trie = new Trie();
+                  let phraseData = null;
+                  if (lang === "English") {
+                    phraseData = en;
+                  } else if (lang === "Arabic") {
+                    phraseData = ar;
+                  } else if (lang === "Chinese") {
+                    phraseData = cn;
+                  }
+                  if(phraseData) {
+                    for (let pObj in phraseData) {
+                      trie.insertPhrase(pObj, phraseData[pObj].phrase);
+                    }
+                  }
+                  this.setState({
+                    defaultLang: lang
+                    trie: trie
+                  })
+                })
+
   }
 
   componentDidUnMount() {
@@ -106,6 +152,9 @@ export default class ChatScreen extends Component<{}>  {
 
     this.state.urref.off('value')
   }  
+
+  /* *** Sending the chat coresspondent selectedPhraseID arr instead of a full sentence?
+  */
 
   sendMessage = () => {
 
@@ -119,6 +168,13 @@ export default class ChatScreen extends Component<{}>  {
       {
         text+=child+" ";
       })
+
+    /* *** This code should be where the generateSentence() function is called
+    to construct a sentence from an array of phrase IDs
+
+    var selectedPhraseID = this.state.selectedPhraseID;
+    var text = generateSentence(selectedPhraseID);
+    */
 
     var newMessage = this.createMessage(this.state.user.uid, text);
     var newMessageKey = this.getNewMessageKey();
@@ -172,6 +228,59 @@ export default class ChatScreen extends Component<{}>  {
                reverseTimestamp: message.reverseTimestamp});
   }
 
+  /* *** Jihyun: this is where my function is. It receives an array of phrase IDs
+  and given the defaultLang info in state, it generates a sentence using some rules.
+  Up top of this .js file, I imported json files of phrases and their IDs
+
+  This function should be called whenever the user hits send so that
+    1) sender's own chat screen renders a full complete sentence
+    2) receiver's chat screen also renders a full sentence but in a different language
+
+  But considering how Shehroze is selecting phrases directly and not their corresponding IDs,
+  should we have a separate data structure that is a reverse {phrase: ID} relationship so it's fast to look up?
+  */
+  
+  generateSentence = (selectedPhraseID) => {
+
+    var myLang = this.state.defaultLang;
+    var phraseDB;
+
+    var np = "";
+    var temp = "";
+    var final = "";
+
+    if (myLang == "Arabic") phraseDB = ar;
+    else if (myLang == "Chinese") phraseDB = cn;
+    else phraseDB = en;
+
+    selectedPhraseID.forEach(function(pid) {
+      if (typeof(pid) == "number") {
+        np += pid;
+      }
+
+      else {
+        if (en[pid].pos == "phrs") {
+          final += en[pid].phrase + " ";
+        }
+        else {
+          if (en[pid].phrase.includes("*") && en[pid].pos == "vp") {
+            temp = en[pid].phrase;
+          }
+          else
+            np += en[pid].phrase.replace("*", "").toLowerCase();
+        }
+      }
+    });
+
+    if (temp != "")
+      temp = temp.replace("*", np);
+    final += temp;
+
+    //this.setState({message: final});
+
+    return final;
+  }
+
   createMessage = (ownerID, message) => {
 
     return {
@@ -222,6 +331,18 @@ export default class ChatScreen extends Component<{}>  {
           if (stringForSuggestions.includes(child))
             stringForSuggestions = stringForSuggestions.replace(child+" ", ""); 
         })
+      /*
+        Shehroze: Making a call to the trie to return a set of concepts based on given text input. The
+        following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
+      */
+      let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
+      let conceptsArray = []  // Preparing a list of possible concepts for Jihyun's function
+      for(let i = 0; i < conceptCount.length; i++) {
+        conceptsArray[i] = conceptCount[i][0];
+      }
+      this.setState({
+        selectedPhraseID: conceptsArray
+      });
     }
 
     /* If everything in the message input is identical to our potential message, enable send */
