@@ -162,13 +162,7 @@ export default class ChatScreen extends Component<{}>  {
     if (this.state.sendDisabled)  return;
 
     /* Read the text input, create a message, update proper database entries and clean up the interface */
-    var text="";
-    var previousSelections = this.state.previousSelections;
-    previousSelections
-    .forEach(function(child) 
-      {
-        text+=child+" ";
-      })
+    var text=this.state.message;
 
     /* *** This code should be where the generateSentence() function is called
     to construct a sentence from an array of phrase IDs
@@ -310,7 +304,6 @@ export default class ChatScreen extends Component<{}>  {
 
   textChanged = (value, suggestionSelected, remainderString) => {
 
-    var previousSelections = this.state.previousSelections;
     var potentialMessage = this.state.message;
     var stringForSuggestions = value;
 
@@ -321,17 +314,6 @@ export default class ChatScreen extends Component<{}>  {
     }
     else {
 
-      previousSelections
-      .forEach(function(child) 
-        {
-          /* stringForSuggestions is the string which is in the text input
-             but hasn't been selected by the user yet.
-             This is handling the text that is in the message input 
-             before the user has selected a suggestion, 
-             not the one returned by Shehroze's function */
-          if (stringForSuggestions.includes(child))
-            stringForSuggestions = stringForSuggestions.replace(child+" ", ""); 
-        })
       /*
         Shehroze: Making a call to the trie to return a set of concepts based on given text input. The
         following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
@@ -343,7 +325,7 @@ export default class ChatScreen extends Component<{}>  {
       }
       this.setState({
         selectedPhraseID: conceptsArray
-      });
+      }, function() {Alert.alert('selectedPhraseID', conceptsArray.toString())});
     }
 
     /* If everything in the message input is identical to our potential message, enable send */
