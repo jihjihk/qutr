@@ -8,9 +8,11 @@ import {
   Image,
   Alert,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
+  TouchableHighlight
 } from 'react-native';
-import { Container, Title, Text, Badge } from 'native-base';
+import { Container, Title, Text, Icon } from 'native-base';
+import { Icon as ElementsIcon } from 'react-native-elements';
 import { StackNavigator } from 'react-navigation';
 
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
@@ -179,7 +181,8 @@ export default class ChatScreen extends Component<{}>  {
 
     this.setState({message: '',
                    renderPreviousSelections: [],
-                   previousSelections: []
+                   previousSelections: [],
+                   selectionsVisible: false
                  });
 
     this.refs.mi.clearContent();
@@ -299,7 +302,8 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   toggleSelections = () => {
-    this.setState({selectionsVisible: !this.state.selectionsVisible})
+    if (this.state.renderPreviousSelections.length>0)
+      this.setState({selectionsVisible: !this.state.selectionsVisible})
   }
 
   textChanged = (value, suggestionSelected, remainderString) => {
@@ -325,7 +329,7 @@ export default class ChatScreen extends Component<{}>  {
       }
       this.setState({
         selectedPhraseID: conceptsArray
-      }, function() {Alert.alert('selectedPhraseID', conceptsArray.toString())});
+      });
     }
 
     /* If everything in the message input is identical to our potential message, enable send */
@@ -360,14 +364,19 @@ export default class ChatScreen extends Component<{}>  {
      and handles the appropriate state changes */
   renderText = (input) => {
     var selection = [];
-    selection.push(<TouchableOpacity onLongPress={() => {this.removeSelection(input)}}
-                                     key={this.state.previousSelections.length}>
-                    <Text style={[styles.selectedSuggestion]}
-                          overflow="hidden"
-                          numberOfLines={1}>
-                        {input}
-                    </Text>
-                   </TouchableOpacity>);
+    selection.push(<View key={this.state.previousSelections.length}
+                         style={{flexDirection: 'row', alignItems:'center'}}>
+                      <Text style={[styles.selectedSuggestion]}
+                            overflow="hidden"
+                            numberOfLines={1}>
+                          {input}
+                      </Text>
+                      <TouchableOpacity onPress={() => {this.removeSelection(input)}}>
+                         <Icon name='md-remove-circle'
+                               style={[styles.removeSelection]}>
+                         </Icon>                                     
+                      </TouchableOpacity>
+                    </View>);
 
     this.setState({renderPreviousSelections: this.state.renderPreviousSelections.concat(selection),
                    message: this.state.message+=input+" ",
@@ -390,11 +399,16 @@ export default class ChatScreen extends Component<{}>  {
     }
 
     /* Clean up if no suggestions are left selected */
-    if (helper.length==0) this.disableSend();
+    if (helper.length==0) {
+
+      this.disableSend();
+      this.setState({selectionsVisible: false})
+    }
 
     this.setState({renderPreviousSelections: renderHelper,
                    previousSelections: helper,
-                   message: messageHelper})
+                   message: messageHelper,
+                  })
   }
 
 
@@ -455,22 +469,15 @@ export default class ChatScreen extends Component<{}>  {
                                       :
                                       null}
 
-        <Footer left={<ToolbarButton style={(this.state.renderPreviousSelections.length>0) ? 
-                                            {color: SECONDARY} : {color: 'black'}}
-                                     name='md-mail' 
-                                     onPress={() => this.toggleSelections()}>
-                        {(this.state.renderPreviousSelections.length>0) 
-                          ? 
-                          <Badge success
-                                 style={[styles.badge]}>
-                            <Text style={[styles.badgeText]}>
-                              {this.state.renderPreviousSelections.length}
-                            </Text>
-                          </Badge>
-                          :
-                          null
-                        }
-                      </ToolbarButton>}
+        <Footer left={<TouchableHighlight style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+                        <ElementsIcon color={(this.state.renderPreviousSelections.length>0) ? 
+                                               SECONDARY : 'black'}
+                                      name='thought-bubble' 
+                                      type='material-community'
+                                      underlayColor='transparent'
+                                      onPress={() => this.toggleSelections()}>
+                        </ElementsIcon>
+                      </TouchableHighlight>}
 
                 center={<MessageInput ref='mi' 
                                       onChangeText={(value) => this.textChanged(value, false)}>

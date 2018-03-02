@@ -50,21 +50,6 @@ export default StyleSheet.create({
     marginLeft: 5,
     marginRight: 5
   },
-  badge: {
-    position: 'absolute', 
-    right: 5, 
-    top: 2, 
-    paddingTop: 0, 
-    paddingBottom: 0, 
-    borderRadius: 100, 
-    height: 18, 
-    alignItems: 'center'
-  },
-  badgeText: {
-    height: 16, 
-    fontSize: 10, 
-    alignSelf: 'center'
-  },
   scrollWrapper: {
     height: 35, 
     borderColor: PRIMARY_DARK, 
@@ -76,6 +61,12 @@ export default StyleSheet.create({
     borderRadius: 5, 
     color: PRIMARY, 
     fontSize: 17, 
+    marginRight: 5
+  },
+  removeSelection: {
+    color: 'red', 
+    fontSize: 20, 
+    alignSelf: 'center', 
     marginRight: 5
   }
 });
