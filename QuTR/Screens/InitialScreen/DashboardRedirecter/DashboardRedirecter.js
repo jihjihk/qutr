@@ -79,7 +79,6 @@ export default class App extends Component<{}> {
     this.setState({
       page: page
     });
-    alert(page+"");
   }
 
   render()  {

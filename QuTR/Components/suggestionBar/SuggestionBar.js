@@ -11,13 +11,15 @@ import SuggestionButton from './../suggestionButton/SuggestionButton.js';
 
 import styles from './styles.js';
 
+const DEFAULTCOUNT = 3;
+
 export default class SuggestionBar extends Component {
 
   constructor(props)  {
     super(props);
     this.state = {viewStyle: [styles.withoutKeyboard],
                   content: [],
-                  suggestionCount: 5
+                  suggestionCount: DEFAULTCOUNT
                 };
   }
 
@@ -29,25 +31,25 @@ export default class SuggestionBar extends Component {
     this.setState({viewStyle: [styles.withoutKeyboard]});
   }
 
-  populate(input)  {
+  populate(suggestions)  {
     
-    if (input!=='') {
+    if (suggestions.length>0) {
 
-      var suggestions = [];
-      for (var i=0; i<this.state.suggestionCount; i++)  {
-        var suffix = '';
-        for (var a=0; a<i+1; a++) suffix = suffix.concat('.');
-        suggestions.push(input+suffix);
-      }
+      var phrases=[];
+      suggestions.forEach(function(child) {
+        phrases.push(child.phrase);
+      })
 
-      this.setState({content: suggestions});
+      this.setState({content: phrases,
+                     suggestionCount: suggestions.length});
     }
 
     else this.clean();
   }
 
   clean()  {
-    this.setState({content: []});
+    this.setState({content: [],
+                   suggestionCount: DEFAULTCOUNT});
   }
 
   render = () => {

@@ -6,7 +6,6 @@ import {
   ActivityIndicator,
   ListView,
   Image,
-  Alert,
   ScrollView,
   TouchableOpacity,
   TouchableHighlight
@@ -141,7 +140,8 @@ export default class ChatScreen extends Component<{}>  {
                   }
                   self.setState({
                     defaultLang: lang,
-                    trie: trie
+                    trie: trie,
+                    phraseData: phraseData
                   })
                 })
 
@@ -316,39 +316,38 @@ export default class ChatScreen extends Component<{}>  {
       stringForSuggestions = remainderString;
       this.refs.mi.logAllProperties(this.refs.mi.input, remainderString);
     }
-    else {
-
-      /*
-        Shehroze: Making a call to the trie to return a set of concepts based on given text input. The
-        following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
-      */
-      let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
-      // Preparing a list of possible concepts (stored as objects) for Jihyun's function and for the display
-      let conceptsArray = []
-      for(let i = 0; i < conceptCount.length; i++) {
-        let cID = conceptCount[i][0];
-        if (this.state.phraseData.hasOwnProperty(cID)) {
-          let cPhrase = this.state.phraseData[cID].phrase;
-          conceptsArray[i] = { ID: cID, phrase: cPhrase };
-        }
+    
+    /*
+      Shehroze: Making a call to the trie to return a set of concepts based on given text input. The
+      following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
+    */
+    let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
+    // Preparing a list of possible concepts (stored as objects) for Jihyun's function and for the display
+    let conceptsArray = []
+    for(let i = 0; i < conceptCount.length; i++) {
+      let cID = conceptCount[i][0];
+      if (this.state.phraseData.hasOwnProperty(cID)) {
+        let cPhrase = this.state.phraseData[cID].phrase;
+        conceptsArray[i] = { ID: cID, phrase: cPhrase };
       }
-      this.setState({
-        selectedPhraseID: conceptsArray
-      });
     }
+    // this.setState({
+    //   selectedPhraseID: conceptsArray
+    // }, this.sendToSuggestionBar(this.state.selectedPhraseID));
+    stringForSuggestions!=="" ? 
+      this.sendToSuggestionBar(conceptsArray) :
+      this.sendToSuggestionBar([]);
 
     /* If everything in the message input is identical to our potential message, enable send */
     if (stringForSuggestions.length>0 || potentialMessage.length==0) this.disableSend();
     else this.enableSend();
-
-    this.sendToSuggestionBar(stringForSuggestions);
   }
 
   /* This is where the current input is being sent to the suggestion bar 
      to generate placeholder suggestions with appended dots */
-  sendToSuggestionBar = (value) => {
+  sendToSuggestionBar = (suggestions) => {
 
-    this.refs.sb.populate(value);
+    this.refs.sb.populate(suggestions);
   }
 
   selectSuggestion = (value) => {
