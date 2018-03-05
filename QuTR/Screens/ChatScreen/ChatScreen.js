@@ -323,9 +323,14 @@ export default class ChatScreen extends Component<{}>  {
         following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
       */
       let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
-      let conceptsArray = []  // Preparing a list of possible concepts for Jihyun's function
+      // Preparing a list of possible concepts (stored as objects) for Jihyun's function and for the display
+      let conceptsArray = []
       for(let i = 0; i < conceptCount.length; i++) {
-        conceptsArray[i] = conceptCount[i][0];
+        let cID = conceptCount[i][0];
+        if (this.state.phraseData.hasOwnProperty(cID)) {
+          let cPhrase = this.state.phraseData[cID].phrase;
+          conceptsArray[i] = { ID: cID, phrase: cPhrase };
+        }
       }
       this.setState({
         selectedPhraseID: conceptsArray
