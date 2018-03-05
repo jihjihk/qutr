@@ -93,7 +93,7 @@ export default class QRCodeScreen extends Component<{}>  {
     return (
       <View style={styles.Container}>
         <QRCodeScanner onRead={ this.onSuccess.bind(this) }
-                       cameraStyle = {styles.Scanner}
+                       cameraStyle = {[styles.Scanner, this.props.style]}
                        reactivate={true}
                        reactivateTimeout={5000}/>
       </View>

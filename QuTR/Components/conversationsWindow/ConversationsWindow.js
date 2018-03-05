@@ -21,7 +21,9 @@ export default class ConversationsWindow extends Component {
     var conversations=[];
 
     return (
-          <ScrollView style={[styles.sw, this.props.style]} scrollEnabled={true}>
+          <ScrollView style={[styles.sw]} 
+                      scrollEnabled={true}
+                      contentContainerStyle={this.props.contentContainerStyle}>
                {this.props.children}
                {conversations}
           </ScrollView>

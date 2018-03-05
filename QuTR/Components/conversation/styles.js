@@ -12,10 +12,6 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
   },
-  TouchableHighlight: {
-    borderBottomWidth: 1,
-    borderColor: PRIMARY_LIGHT,
-  },
   pictureWrapper: {
   	maxWidth: 80, 
   	maxHeight: 56, 

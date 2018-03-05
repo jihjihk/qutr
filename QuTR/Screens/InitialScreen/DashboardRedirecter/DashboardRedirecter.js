@@ -32,7 +32,9 @@ const Realm = require('realm');
 
 import { PRIMARY,
          PRIMARY_DARK,
-         SECONDARY } from '../../../masterStyle.js'
+         SECONDARY,
+         SECONDARY_DARK
+       } from '../../../masterStyle.js'
 
 export const appFolder = ((Platform.OS == 'android' ? RNFetchBlob.fs.dirs.PictureDir : RNFetchBlob.fs.dirs.MainBundleDir)+"/QuTR");
 
@@ -42,7 +44,7 @@ export default class App extends Component<{}> {
 
     super(props);
     this.state={
-      page: 1
+      page: 0
     }
     this.setState.bind(this);
   }
@@ -77,28 +79,29 @@ export default class App extends Component<{}> {
     this.setState({
       page: page
     });
+    alert(page+"");
   }
 
   render()  {
 
     return (
-      <Tabs initialPage={0}
-            locked = {true}
-            tabBarUnderlineStyle = {{backgroundColor: SECONDARY}}
-            page={this.state.page}>
+      <Tabs locked = {true}
+            tabBarUnderlineStyle = {{backgroundColor: SECONDARY_DARK}}
+            page={this.state.page}
+            onChangeTab={(tab) => this.changeTab(tab.i)}>
         <Tab heading={<TabHeading style={{backgroundColor: PRIMARY}}>
                         <Icon name="qrcode-scan" 
                               type='material-community' 
-                              color={SECONDARY}>
+                              color={SECONDARY_DARK}>
                         </Icon>
                       </TabHeading>}>
           <Tabs initialPage={0} 
                 locked = {true}
-                tabBarUnderlineStyle = {{backgroundColor: SECONDARY}}>
+                tabBarUnderlineStyle = {{backgroundColor: SECONDARY_DARK}}>
             <Tab heading={<TabHeading style={{backgroundColor: PRIMARY_DARK}}>
                             <Icon name="qrcode" 
                                   type='material-community' 
-                                  color={SECONDARY}>
+                                  color={SECONDARY_DARK}>
                             </Icon>
                           </TabHeading>}>
               <QRScreen changeTab = {this.changeTab}>
@@ -107,7 +110,7 @@ export default class App extends Component<{}> {
             <Tab heading={<TabHeading style={{backgroundColor: PRIMARY_DARK}}>
                             <Icon name="md-qr-scanner" 
                                   type='ionicon' 
-                                  color={SECONDARY}>
+                                  color={SECONDARY_DARK}>
                             </Icon>
                           </TabHeading>}>
               <QRScanner changeTab = {this.changeTab}>
@@ -118,7 +121,7 @@ export default class App extends Component<{}> {
         <Tab heading={<TabHeading style={{backgroundColor: PRIMARY}}>
                         <Icon name="md-chatboxes" 
                               type='ionicon' 
-                              color={SECONDARY}>
+                              color={SECONDARY_DARK}>
                         </Icon>
                       </TabHeading>}>
           <ConversationNavigator>
@@ -127,7 +130,7 @@ export default class App extends Component<{}> {
         <Tab heading={<TabHeading style={{backgroundColor: PRIMARY, marginLeft: -1}}>
                         <Icon name="md-settings" 
                               type='ionicon' 
-                              color={SECONDARY}>
+                              color={SECONDARY_DARK}>
                         </Icon>
                       </TabHeading>}>
           <ProfileNavigator>

@@ -19,10 +19,12 @@ import { UserSchema, MessageSchema, ConversationSchema } from '../../Schemas.js'
 import styles from './styles.js';
 import { PRIMARY_DARK,
          PRIMARY,
+         SECONDARY_DARK,
+         SECONDARY
        } from '../../masterStyle.js';
 
 const Realm = require('realm');
-var self;
+var self, count=0;
 
 export default class ConversationsScreen extends Component<{}>  {
 
@@ -34,7 +36,7 @@ export default class ConversationsScreen extends Component<{}>  {
     this.state= {
       loading: true,
       user: firebaseService.auth().currentUser,
-      dataSource: ds,
+      dataSource: ds
     };
     self = this
   }
@@ -102,7 +104,8 @@ export default class ConversationsScreen extends Component<{}>  {
       var time = hours+":"+minutes;
       var message = chatInfo.message, name = chatInfo.theirName, picture = chatInfo.theirPicture;
 
-      return <Conversation roomID = {rd.key}
+      return <Conversation style={(count++%2==0) ? {backgroundColor: SECONDARY_DARK} : {backgroundColor: SECONDARY}}
+                           roomID = {rd.key}
                            message = {message}
                            date = {date}
                            time = {time}
@@ -125,10 +128,19 @@ export default class ConversationsScreen extends Component<{}>  {
 
     return (
       <Container ref="container" style={[styles.Container]}>
-        <ConversationsWindow ref="cw">
-          <ListView dataSource={this.state.dataSource}
-                    enableEmptySections={true}
-                    renderRow={(rowData) => this.renderRow(rowData)}/>
+        <ConversationsWindow ref="cw"
+                             contentContainerStyle={(this.state.dataSource._dataBlob.s1.length>0) ? {} : [styles.noConversations]}>
+          {(this.state.dataSource._dataBlob.s1.length>0)
+          ?
+            <ListView dataSource={this.state.dataSource}
+                      enableEmptySections={true}
+                      renderRow={(rowData) => this.renderRow(rowData)}/>
+          :
+          <View>
+            <Text>No conversations to show</Text>
+          </View>
+          }
+          
         </ConversationsWindow>
       </Container>
    );

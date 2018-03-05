@@ -4,7 +4,7 @@ import {
     View,
     Image,
     Text,
-    TouchableHighlight
+    TouchableOpacity
 } from 'react-native';
 
 import ToolbarButton from './../toolbarButton/ToolbarButton.js';
@@ -28,13 +28,11 @@ export default class Conversation extends Component {
   render = () => {
 
     return (
-          <TouchableHighlight underlayColor={PRIMARY_LIGHT} 
-                              style={[styles.TouchableHighlight]}
-                              onPress={() => this.props.navigation.navigate('Chat', {roomID: this.props.roomID, 
-                                                                                     name: this.props.correspondent, 
-                                                                                     correspondentKey: this.props.correspondentKey, 
-                                                                                     picture: this.props.theirPicture,
-                                                                                     myPicture: this.props.myPicture})}>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Chat', {roomID: this.props.roomID, 
+                                                                                   name: this.props.correspondent, 
+                                                                                   correspondentKey: this.props.correspondentKey, 
+                                                                                   picture: this.props.theirPicture,
+                                                                                   myPicture: this.props.myPicture})}>
             <View style={[styles.convo, this.props.style]}>
                <View style={[styles.pictureWrapper]}>
                   <Image style={[styles.picture]} 
@@ -53,7 +51,7 @@ export default class Conversation extends Component {
                  </View>
                </View>
             </View>
-          </TouchableHighlight>
+          </TouchableOpacity>
     );
   }
 }
