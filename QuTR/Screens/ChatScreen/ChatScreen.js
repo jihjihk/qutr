@@ -164,7 +164,7 @@ export default class ChatScreen extends Component<{}>  {
 
     if (this.state.sendDisabled)  return;
 
-    /* Read the text input, create a message, update proper database entries and clean up the interface */
+    /* Read the text input, create a message, update proper database entries and clean up user interface */
     var selectedIDs = this.state.previousSelectionIDs;
     var text = this.generateSentence(selectedIDs);
 
@@ -270,8 +270,6 @@ export default class ChatScreen extends Component<{}>  {
       temp = temp.replace("*", np);
     final += temp;
 
-    //this.setState({message: final});
-
     return final;
   }
 
@@ -306,6 +304,7 @@ export default class ChatScreen extends Component<{}>  {
 
     var potentialMessage = this.state.message;
     var stringForSuggestions = value;
+    //alert(potentialMessage);
 
     if (suggestionSelected) {
 
@@ -327,9 +326,6 @@ export default class ChatScreen extends Component<{}>  {
         conceptsArray[i] = { ID: cID, phrase: cPhrase };
       }
     }
-    // this.setState({
-    //   selectedPhraseID: conceptsArray
-    // }, this.sendToSuggestionBar(this.state.selectedPhraseID));
     stringForSuggestions!=="" ? 
       this.sendToSuggestionBar(conceptsArray) :
       this.sendToSuggestionBar([]);
@@ -346,45 +342,86 @@ export default class ChatScreen extends Component<{}>  {
     this.refs.sb.populate(suggestions);
   }
 
+  compareObjs = (a, b) => {
+
+    if (a.index < b.index)
+      return -1;
+    if (a.index > b.index)
+      return 1;
+    return 0;
+  }
+
   selectSuggestion = (value, id) => {
 
     if (!value) return;
-    this.renderText(value, id);
-    /* I first pass the selection to Shehroze, 
-       then he gives me back the remaining text, 
-       the one that wasn't used to produce the suggestion 
-       That text is the third parameter for the function
-       E.g. If input is "I want 5" and a suggestion is "I want",
-            and the user selects it,
-            we pass 5 as the third parameter to the following function */
-    this.textChanged(value, true, "");
+    this.setState({previousSelectionIDs: this.state.previousSelectionIDs.concat([id]),
+                   previousSelections: this.state.previousSelections.concat([value]),
+                   renderPreviousSelections: []},
+      function(){
+        /* Upon selecting a suggestion we want to generate the possible sentence out of the choices that we have 
+           This will help us reorder selections in the message composer bar and give a more accurate picture to
+           the user of what will be sent as a message */
+        var message = self.generateSentence(self.state.previousSelectionIDs);
+        self.setState({message: message}, function() {
+
+          var helperArr=[];
+          self.state.previousSelections.forEach(function(child) {
+            var newChild=child.toLowerCase();
+            
+            if (child.includes("*")) newChild = newChild.replace(" *", "");
+            if (child.includes("?")) newChild = newChild.replace("?", "");
+            if (child.includes("!")) newChild = newChild.replace("!", "");
+            helperArr.push({"text": child, "index": self.state.message.toLowerCase().indexOf(newChild) })
+          })
+
+          helperArr.sort(this.compareObjs);
+          var newSelections = [];
+          helperArr.forEach(function(child) {
+            newSelections.push(child.text);
+          })
+
+          self.setState({previousSelections: newSelections}, function() {
+
+            //alert(JSON.stringify(helperArr));
+            this.renderText(self.state.previousSelections);
+            /* I first pass the selection to Shehroze, 
+               then he gives me back the remaining text, 
+               the one that wasn't used to produce the suggestion 
+               That text is the third parameter for the function
+               E.g. If input is "I want 5" and a suggestion is "I want",
+                    and the user selects it,
+                    we pass 5 as the third parameter to the following function */
+            this.textChanged(value, true, "");
+          })
+        })
+      })
   }
 
   /* This adds the selected suggestion to the message composer
      and handles the appropriate state changes */
-  renderText = (input, id) => {
+  renderText = (previousSelections) => {
     var selection = [];
-    selection.push(<View key={this.state.previousSelections.length}
+    previousSelections.forEach(function(child) {
+
+      selection.push(<View key={self.state.previousSelections.length}
                          style={{flexDirection: 'row', alignItems:'center'}}>
                       <Text style={[styles.selectedSuggestion]}
                             overflow="hidden"
                             numberOfLines={1}>
-                          {input}
+                          {child}
                       </Text>
-                      <TouchableOpacity onPress={() => {this.removeSelection(input)}}>
+                      <TouchableOpacity onPress={() => {self.removeSelection(child)}}>
                          <Icon name='md-remove-circle'
                                style={[styles.removeSelection]}>
                          </Icon>                                     
                       </TouchableOpacity>
                     </View>);
+    })
 
-    this.setState({renderPreviousSelections: this.state.renderPreviousSelections.concat(selection),
-                   message: this.state.message+=input+" ",
-                   previousSelections: this.state.previousSelections.concat([input]),
-                   previousSelectionIDs: this.state.previousSelectionIDs.concat([id])});
+    this.setState({renderPreviousSelections: selection});
   }
 
-  /* Removes the selection from the message composer */
+  /* Removes the selection from the message composer and memory */
   removeSelection = (deletedSelection) => {    
 
     var helper = this.state.previousSelections;
