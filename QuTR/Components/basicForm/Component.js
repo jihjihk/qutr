@@ -52,7 +52,12 @@ class BasicFormComponent extends Component {
       if (!this.state.register) this.props.onButtonPress(this.state.email, this.state.password);
       else {
         if (this.state.name=="" || this.state.age=="")  return Alert.alert("Error", "You didn't complete the form!");
-        this.props.onButtonPress(this.state.email, this.state.password, this.state.name, this.state.age, this.state.language, this.state.gender);
+        this.props.onButtonPress(this.state.email, 
+                                 this.state.password, 
+                                 this.state.name, 
+                                 this.state.age, 
+                                 this.state.language, 
+                                 this.state.gender);
       }
     };
   }

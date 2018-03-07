@@ -19,6 +19,7 @@ export default class SuggestionBar extends Component {
     super(props);
     this.state = {viewStyle: [styles.withoutKeyboard],
                   content: [],
+                  IDs: [],
                   suggestionCount: DEFAULTCOUNT
                 };
   }
@@ -35,12 +36,14 @@ export default class SuggestionBar extends Component {
     
     if (suggestions.length>0) {
 
-      var phrases=[];
+      var phrases=[], IDs=[];
       suggestions.forEach(function(child) {
         phrases.push(child.phrase);
+        IDs.push(child.ID);
       })
 
       this.setState({content: phrases,
+                     IDs: IDs,
                      suggestionCount: suggestions.length});
     }
 
@@ -49,6 +52,7 @@ export default class SuggestionBar extends Component {
 
   clean()  {
     this.setState({content: [],
+                   IDs: [],
                    suggestionCount: DEFAULTCOUNT});
   }
 
@@ -58,7 +62,8 @@ export default class SuggestionBar extends Component {
     for (var i=0; i<this.state.suggestionCount; i++)  {
       suggestions.push(<SuggestionButton key={i}
                                          text={this.state.content[i]} 
-                                         toSelect ={(suggestion) => this.props.select(suggestion)}>
+                                         id={this.state.IDs[i]}
+                                         toSelect ={(suggestion, id) => this.props.select(suggestion, id)}>
                        </SuggestionButton>);
     }
 

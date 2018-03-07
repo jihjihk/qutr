@@ -65,6 +65,7 @@ export default class ChatScreen extends Component<{}>  {
                 message: '',
                 renderPreviousSelections: [],
                 previousSelections: [],
+                previousSelectionIDs: [],
                 selectedPhraseID: [],
                 defaultLang: "English",
                 trie: null
@@ -164,14 +165,8 @@ export default class ChatScreen extends Component<{}>  {
     if (this.state.sendDisabled)  return;
 
     /* Read the text input, create a message, update proper database entries and clean up the interface */
-    var text=this.state.message;
-
-    /* *** This code should be where the generateSentence() function is called
-    to construct a sentence from an array of phrase IDs
-
-    var selectedPhraseID = this.state.selectedPhraseID;
-    var text = generateSentence(selectedPhraseID);
-    */
+    var selectedIDs = this.state.previousSelectionIDs;
+    var text = this.generateSentence(selectedIDs);
 
     var newMessage = this.createMessage(this.state.user.uid, text);
     var newMessageKey = this.getNewMessageKey();
@@ -182,6 +177,7 @@ export default class ChatScreen extends Component<{}>  {
     this.setState({message: '',
                    renderPreviousSelections: [],
                    previousSelections: [],
+                   previousSelectionIDs: [],
                    selectionsVisible: false
                  });
 
@@ -350,10 +346,10 @@ export default class ChatScreen extends Component<{}>  {
     this.refs.sb.populate(suggestions);
   }
 
-  selectSuggestion = (value) => {
+  selectSuggestion = (value, id) => {
 
     if (!value) return;
-    this.renderText(value);
+    this.renderText(value, id);
     /* I first pass the selection to Shehroze, 
        then he gives me back the remaining text, 
        the one that wasn't used to produce the suggestion 
@@ -366,7 +362,7 @@ export default class ChatScreen extends Component<{}>  {
 
   /* This adds the selected suggestion to the message composer
      and handles the appropriate state changes */
-  renderText = (input) => {
+  renderText = (input, id) => {
     var selection = [];
     selection.push(<View key={this.state.previousSelections.length}
                          style={{flexDirection: 'row', alignItems:'center'}}>
@@ -384,7 +380,8 @@ export default class ChatScreen extends Component<{}>  {
 
     this.setState({renderPreviousSelections: this.state.renderPreviousSelections.concat(selection),
                    message: this.state.message+=input+" ",
-                   previousSelections: this.state.previousSelections.concat([input])});
+                   previousSelections: this.state.previousSelections.concat([input]),
+                   previousSelectionIDs: this.state.previousSelectionIDs.concat([id])});
   }
 
   /* Removes the selection from the message composer */
@@ -392,6 +389,7 @@ export default class ChatScreen extends Component<{}>  {
 
     var helper = this.state.previousSelections;
     var renderHelper = this.state.renderPreviousSelections;
+    var idHelper = this.state.previousSelectionIDs;
     var messageHelper = this.state.message;
     var index = helper.indexOf(deletedSelection);
 
@@ -399,6 +397,7 @@ export default class ChatScreen extends Component<{}>  {
 
       helper.splice(index, 1);
       renderHelper.splice(index, 1);
+      idHelper.splice(index, 1);
       messageHelper = messageHelper.replace(deletedSelection+" ", ""); 
     }
 
@@ -411,6 +410,7 @@ export default class ChatScreen extends Component<{}>  {
 
     this.setState({renderPreviousSelections: renderHelper,
                    previousSelections: helper,
+                   previousSelectionIDs: idHelper,
                    message: messageHelper,
                   })
   }
@@ -490,7 +490,7 @@ export default class ChatScreen extends Component<{}>  {
                                       name='md-send' 
                                       onPress={() => this.sendMessage()}/>}/>
         <SuggestionBar ref='sb' 
-                       select = {(suggestion) => this.selectSuggestion(suggestion)}>    
+                       select = {(suggestion, id) => this.selectSuggestion(suggestion, id)}>    
         </SuggestionBar>
       </Container>
    );

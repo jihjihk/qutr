@@ -117,7 +117,7 @@ export default class ProfileScreen extends Component<{}>  {
                                                                                         that: this, 
                                                                                         uid: this.state.user.uid});}}>
               <Image style={[styles.profileImage]} source={{uri: this.state.picture || 
-                                                                  "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png"}}/>
+                                                                 "https://www.jamf.com/jamf-nation/img/default-avatars/generic-user.png"}}/>
           </TouchableOpacity>
 
           <TextInput
