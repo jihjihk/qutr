@@ -12,7 +12,7 @@ import {
 export default StyleSheet.create({
 
   Container: {
-    backgroundColor: SECONDARY_DARK
+    backgroundColor: SECONDARY_DARK,
   },
   Title: {
     color: SECONDARY,
@@ -68,5 +68,11 @@ export default StyleSheet.create({
     fontSize: 20, 
     alignSelf: 'center', 
     marginRight: 5
+  },
+  noConversations: {
+    flex: 1, 
+    flexDirection: 'column', 
+    justifyContent: 'center', 
+    alignItems: 'center'
   }
 });

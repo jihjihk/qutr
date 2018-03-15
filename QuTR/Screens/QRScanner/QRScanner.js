@@ -11,82 +11,92 @@ import styles from './styles.js';
 const Firebase = require('firebase');
 var self;
 
-export default class QRCodeScreen extends Component<{}>  {
+export default class QRScanner extends Component<{}>  {
 
   constructor(props) {
     super(props);
     self=this;
+    this.state={
+      user: firebaseService.auth().currentUser
+    }
   }
 
   componentWillMount() {
+
+    this.loadConversationIntoState();
   }
 
   componentWillUnmount () {
 
+    firebaseService.database().ref()
+    .child('users')
+    .child(this.state.user.uid)
+    .off('value');
   }
 
-  componentWillReceiveProps () {
+  loadConversationIntoState = () => {
 
+    firebaseService.database().ref()
+    .child('users')
+    .child(this.state.user.uid)
+    .on('value', function(snapshot) {
+      var conversation = snapshot.val().conversation;
+      if (!!conversation) {
+        self.setState({conversation: conversation});
+      }
+    })
   }
 
   onSuccess(e) {
-   
+
+    if (!!self.state.conversation) {
+      firebaseService.database().ref()
+      .child('conversations')
+      .child(self.state.conversation)
+      .remove(function() {
+        self.processNewConversation(e);
+      });
+    }
+    else this.processNewConversation(e);
+  }
+
+  processNewConversation = (e) => {
     var eSplit = e.data.split("/");
     var theirKey = eSplit[eSplit.length-1];
     var myKey = firebaseService.auth().currentUser.uid;
     var newChatKey = firebaseService.database().ref().child('chats/').push().key; /* Key of the new conversation */
     var date = Firebase.database.ServerValue.TIMESTAMP;
-    var reverseDate = 0 - new Date().getTime();
+    
+    var convInfo = {"timestamp": date, 
+                    "ID1": myKey, "ID2": theirKey};
 
-    /* Get information about the other user */
-    firebaseService.database().ref()
-    .child('users')
-    .child(theirKey)
-    .once('value')
-    .then(function(snapshot) {
+    this.createConversation(newChatKey, convInfo);
       
-      var theirName = snapshot.val().name;
-      var theirPicture = snapshot.val().picture;
-
-      /* Get information about me */
-      firebaseService.database().ref()
-      .child('users')
-      .child(myKey)
-      .once('value')
-      .then(function(snapshot) {
-
-        var myName = snapshot.val().name;
-        var myPicture = snapshot.val().picture;
-
-        /* These two objects are used for rendering appropriate
-           Conversation items in the ConversationScreen */
-        var myConvInfo = {"message": "", "theirPicture": theirPicture,
-                        "timestamp": date, "reverseTimestamp": reverseDate,
-                        "myName": myName, "theirName": theirName, 
-                        "myID": myKey, "theirID": theirKey};
-
-        var theirConvInfo = {"message": "", "theirPicture": myPicture,
-                             "timestamp": date, "reverseTimestamp": reverseDate,
-                             "myName": theirName, "theirName": myName, 
-                             "myID": theirKey, "theirID": myKey};
-
-        self.writeToUserRooms(myKey, newChatKey, myConvInfo);
-        self.writeToUserRooms(theirKey, newChatKey, theirConvInfo);
-      });
-
-      /* Redirect user to ConversationsScreen upon a successful scan */
-      self.props.changeTab(1);
-    });
+    /* Redirect user to ConversationsScreen upon a successful scan */
+    setTimeout(function() {self.props.changeTab(1)}, 750);
   }
 
-  writeToUserRooms = (userKey, chatKey, message) => {
+  createConversation = (chatKey, message) => {
+
+    var key1 = message.ID1;
+    var key2 = message.ID2;
+
+    firebaseService.database().ref()
+    .child('conversations')
+    .child(chatKey)
+    .set(message);
 
     firebaseService.database().ref()
     .child('users')
-    .child(userKey)
-    .child('userRooms')
-    .child(chatKey)
-    .set(message);
+    .child(key1)
+    .update({'conversation': chatKey});
+
+    firebaseService.database().ref()
+    .child('users')
+    .child(key2)
+    .update({'conversation': chatKey});
+
+
   }
 
   render() {

@@ -22,21 +22,17 @@ import RNFetchBlob from 'react-native-fetch-blob';
 
 import QRScreen from '../../QRScreen/QRScreen.js';
 import QRScanner from '../../QRScanner/QRScanner.js';
+import ChatScreen from '../../ChatScreen/ChatScreen.js';
 
-import ConversationNavigator from '../../../Navigators/ConversationNavigator/conversationNavigator.js';
 import ProfileNavigator from '../../../Navigators/ProfileNavigator/profileNavigator.js';
-
-import { UserSchema, MessageSchema, ConversationSchema } from '../../../Schemas.js';
-
-const Realm = require('realm');
 
 import { PRIMARY,
          PRIMARY_DARK,
          SECONDARY,
          SECONDARY_DARK
-       } from '../../../masterStyle.js'
+       } from '../../../masterStyle.js';
 
-export const appFolder = ((Platform.OS == 'android' ? RNFetchBlob.fs.dirs.PictureDir : RNFetchBlob.fs.dirs.MainBundleDir)+"/QuTR");
+var self;
 
 export default class App extends Component<{}> {
 
@@ -44,34 +40,11 @@ export default class App extends Component<{}> {
 
     super(props);
     this.state={
-      page: 0
+      page: 0,
+      user: firebaseService.auth().currentUser
     }
     this.setState.bind(this);
-  }
-
-  componentWillMount () {
-
-    this.createAppFolder();
-  }
-
-  createAppFolder()  {
-
-    var profilePictures = appFolder+"/Profile Pictures";
-
-    RNFetchBlob.fs.isDir(appFolder)
-    .then((isDir) => {
-
-      if (!isDir)  {
-        RNFetchBlob.fs.mkdir(appFolder)
-          .then(() => {
-            RNFetchBlob.fs.mkdir(profilePictures)
-            .then(() => {})
-            .catch((err) => {})
-          })
-          .catch((err) => {})
-      }        
-    })
-    .catch((err) => {console.log("Err: ", err)})
+    self = this;
   }
 
   changeTab = (page) => {
@@ -123,8 +96,8 @@ export default class App extends Component<{}> {
                               color={SECONDARY_DARK}>
                         </Icon>
                       </TabHeading>}>
-          <ConversationNavigator>
-          </ConversationNavigator>
+          <ChatScreen>
+          </ChatScreen>
         </Tab>
         <Tab heading={<TabHeading style={{backgroundColor: PRIMARY, marginLeft: -1}}>
                         <Icon name="md-settings" 

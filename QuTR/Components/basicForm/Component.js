@@ -77,7 +77,7 @@ class BasicFormComponent extends Component {
         contentContainerStyle={styles.Container}>
 
         {!this.state.register && <Image style={styles.logo}
-               source={require("../../Pictures/logo.png")}/>}
+               source={{uri: "https://firebasestorage.googleapis.com/v0/b/qutr-8cc2c.appspot.com/o/logo.png?alt=media&token=d9844d2c-51b4-43a2-a607-a4a7c1f2c5a6"}}/>}
 
         <TextInput
           style={styles.textInput}

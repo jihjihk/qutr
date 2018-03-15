@@ -42,8 +42,6 @@ var self;
 
 export default class ChatScreen extends Component<{}>  {
 
-  static navigationOptions = { header: null };
-
   /* *** message is the fully constructed sentences after generateSentence()
   while selectedPhraseID is an array of raw phrase IDs selected by the user.
 
@@ -58,6 +56,7 @@ export default class ChatScreen extends Component<{}>  {
     this.state={sendDisabled: true,
                 sendStyle: {color: BLACK},
                 user: firebaseService.auth().currentUser,
+                conversation: null,
                 myPicture: "",
                 loading: true,
                 dataSource: ds,
@@ -68,13 +67,16 @@ export default class ChatScreen extends Component<{}>  {
                 previousSelectionIDs: [],
                 selectedPhraseID: [],
                 defaultLang: "English",
-                trie: null
+                trie: null,
+                loading: true
               };
   }
 
   componentWillMount () {
     this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
     this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this));
+
+    this.getChatInformation();
   }
 
   componentWillUnmount () {
@@ -93,27 +95,6 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   componentDidMount() {
-
-    var urref = firebaseService.database().ref()
-                .child('users')
-                .child(this.state.user.uid)
-                .child('userRooms')
-                .child(this.props.navigation.state.params.roomID);
-
-    this.setState({urref: urref});
-
-    urref.orderByChild('timestamp').limitToLast(20).on('value', (e) => {
-            var rows = [];
-            if ( e && e.val() ) {                
-                e.forEach(function(child) 
-                  {rows.push ( child )})
-            }
-            var ds = this.state.dataSource.cloneWithRows(rows);
-            this.setState({
-                dataSource: ds,
-                loading: false
-            });
-        });
 
     firebaseService.database().ref()
                 .child('users')
@@ -142,10 +123,10 @@ export default class ChatScreen extends Component<{}>  {
                   self.setState({
                     defaultLang: lang,
                     trie: trie,
-                    phraseData: phraseData
+                    phraseData: phraseData,
+                    loading: false
                   })
                 })
-
   }
 
   componentDidUnMount() {
@@ -154,25 +135,76 @@ export default class ChatScreen extends Component<{}>  {
       .child('users')
       .child(this.state.user.uid).off('value');
 
-    this.state.urref.off('value')
+    firebaseService.database().ref()
+        .child('conversations')
+        .child(self.state.conversation)
+        .off('value')
   }  
 
-  /* *** Sending the chat coresspondent selectedPhraseID arr instead of a full sentence?
-  */
+  getChatInformation = () => {
+
+    firebaseService.database().ref()
+    .child('users')
+    .child(this.state.user.uid)
+    .on('value', function(snapshot) {
+
+      if (!!snapshot.val().conversation)
+        self.setState({conversation: snapshot.val().conversation,
+                       myPicture: snapshot.val().picture},
+        /* Once I get metainformation about the conversation */
+        function() {
+          firebaseService.database().ref()
+          .child('conversations')
+          .child(self.state.conversation)
+          .once('value')
+          .then(function(snapshot) {
+
+            var theirID = (snapshot.val().ID1==self.state.user.uid ? 
+                           snapshot.val().ID2 : 
+                           snapshot.val().ID1);
+
+            firebaseService.database().ref()
+            .child('users')
+            .child(theirID)
+            .once('value')
+            .then(function(snapshot) {
+
+              self.setState({theirName: snapshot.val().name,
+                             theirPicture: snapshot.val().picture})
+            });
+          })
+
+          /* This is obtaining messages continuously */
+          firebaseService.database().ref()
+          .child('conversations')
+          .child(self.state.conversation)
+          .limitToLast(20).on('value', (e) => {
+                  var rows = [];
+                  if ( e && e.val() ) {                
+                      e.forEach(function(child) 
+                        {rows.push ( child )})
+                  }
+                  var ds = this.state.dataSource.cloneWithRows(rows);
+                  this.setState({
+                      dataSource: ds,
+                      loading: false
+                  });
+              });
+        });
+    })
+  }
 
   sendMessage = () => {
 
     if (this.state.sendDisabled)  return;
 
-    /* Read the text input, create a message, update proper database entries and clean up user interface */
+    /* Read the text input, create a message, push to the database and clean up user interface */
     var selectedIDs = this.state.previousSelectionIDs;
-    var text = this.generateSentence(selectedIDs);
 
-    var newMessage = this.createMessage(this.state.user.uid, text);
+    var newMessage = this.createMessage(this.state.user.uid, selectedIDs);
     var newMessageKey = this.getNewMessageKey();
 
-    this.pushToUserChatrooms(newMessage, this.state.user.uid, newMessageKey);
-    this.pushToUserChatrooms(newMessage, this.props.navigation.state.params.correspondentKey, newMessageKey);
+    this.pushToConversation(newMessage, newMessageKey);
 
     this.setState({message: '',
                    renderPreviousSelections: [],
@@ -191,35 +223,22 @@ export default class ChatScreen extends Component<{}>  {
       .child('users')
       .child(this.state.user.uid)
       .child('userRooms')
-      .child(this.props.navigation.state.params.roomID)
+      .child(this.state.conversation)
       .push().key;
   }
 
-  pushToUserChatrooms = (message, userID, messageKey) => {
+  pushToConversation = (message, messageKey) => {
 
     firebaseService.database().ref()
-      .child('users')
-      .child(userID)
-      .child('userRooms')
-      .child(this.props.navigation.state.params.roomID)
+      .child('conversations')
+      .child(this.state.conversation)
       .child(messageKey)
       .set(message);
 
-    /* Update so that this information can be used to show
-       a list of conversations in the ConversationsScreen */
-    this.updateLatestMessage(message, userID);
-  }
-
-  updateLatestMessage = (message, userID) => {
-
     firebaseService.database().ref()
-      .child('users')
-      .child(userID)
-      .child('userRooms')
-      .child(this.props.navigation.state.params.roomID)
-      .update({message: message.message, 
-               timestamp: message.timestamp, 
-               reverseTimestamp: message.reverseTimestamp});
+    .child('conversations')
+    .child(this.state.conversation)
+    .update({'timestamp': message.timestamp});
   }
 
   /* *** Jihyun: this is where my function is. It receives an array of phrase IDs
@@ -253,15 +272,15 @@ export default class ChatScreen extends Component<{}>  {
       }
 
       else {
-        if (en[pid].pos == "phrs") {
-          final += en[pid].phrase + " ";
+        if (phraseDB[pid].pos == "phrs") {
+          final += phraseDB[pid].phrase + " ";
         }
         else {
-          if (en[pid].phrase.includes("*") && en[pid].pos == "vp") {
-            temp = en[pid].phrase;
+          if (phraseDB[pid].phrase.includes("*") && phraseDB[pid].pos == "vp") {
+            temp = phraseDB[pid].phrase;
           }
           else
-            np += en[pid].phrase.replace("*", "").toLowerCase();
+            np += phraseDB[pid].phrase.replace("*", "").toLowerCase();
         }
       }
     });
@@ -271,6 +290,7 @@ export default class ChatScreen extends Component<{}>  {
     final += temp;
 
     return final;
+
   }
 
   createMessage = (ownerID, message) => {
@@ -278,8 +298,7 @@ export default class ChatScreen extends Component<{}>  {
     return {
       senderID: ownerID,
       message: message,
-      timestamp: Firebase.database.ServerValue.TIMESTAMP,
-      reverseTimestamp: 0 - new Date().getTime()
+      timestamp: Firebase.database.ServerValue.TIMESTAMP
     };
   }  
 
@@ -304,8 +323,7 @@ export default class ChatScreen extends Component<{}>  {
 
     var potentialMessage = this.state.message;
     var stringForSuggestions = value;
-    //alert(potentialMessage);
-
+    
     if (suggestionSelected) {
 
       stringForSuggestions = remainderString;
@@ -382,7 +400,6 @@ export default class ChatScreen extends Component<{}>  {
 
           self.setState({previousSelections: newSelections}, function() {
 
-            //alert(JSON.stringify(helperArr));
             this.renderText(self.state.previousSelections);
             /* I first pass the selection to Shehroze, 
                then he gives me back the remaining text, 
@@ -455,12 +472,16 @@ export default class ChatScreen extends Component<{}>  {
 
   renderRow = (rd) => {
 
+    if (!!rd.val().message) 
+      var message = this.generateSentence(rd.val().message)
+    else var message=""
+
     if (rd.val().senderID==this.state.user.uid)  {
 
       return (<View style={[styles.myMessageView]}>
-                <Message message={rd.val().message} 
+                <Message message={message} 
                          style={[styles.myMessage]}/>
-                <Image source={{uri: this.props.navigation.state.params.myPicture}} 
+                <Image source={{uri: this.state.myPicture}} 
                        style={[styles.picture]}/>
               </View>);
       }
@@ -468,9 +489,9 @@ export default class ChatScreen extends Component<{}>  {
       else if (!!rd.val().senderID) {
 
         return (<View style={[styles.theirMessageView]}>
-                  <Image source={{uri: this.props.navigation.state.params.picture}} 
+                  <Image source={{uri: this.state.theirPicture}} 
                          style={[styles.picture]}/>
-                  <Message message={rd.val().message} 
+                  <Message message={message} 
                            style={[styles.theirMessage]}/>
                 </View>);
     }
@@ -479,57 +500,77 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   render() {
+
+    if (this.state.loading) {
+      return (      <View style={{flex: 1, justifyContent:'center'}}>
+                      <ActivityIndicator size="large"/>
+                      <Text style={{textAlign: 'center'}}>Loading</Text>
+                    </View>)
+    }
+    
+    if (!!this.state.conversation) 
+
     return (
       <Container ref="container" style={[styles.Container]}>
-        <Header center={<Title style={[styles.Title]}>{this.props.navigation.state.params.name}</Title>}/>
-        <ChatWindow ref="cw">
 
-          { this.state.loading ? <View style={{flex: 1, justifyContent:'center'}}>
-                                    <ActivityIndicator size="large"/>
-                                    <Text style={{textAlign: 'center'}}>Loading</Text>
-                                  </View>
-                                :
-                                <ListView dataSource={this.state.dataSource}
-                                          enableEmptySections={true}
-                                          renderRow={(rowData) => this.renderRow(rowData)}/>
-          }
-          
-        </ChatWindow>
+          <Header center={<Title style={[styles.Title]}>{this.state.theirName}</Title>}/>
+          <ChatWindow ref="cw">
 
-        {this.state.selectionsVisible ? <View style={[styles.scrollWrapper]}>
-                                          <ScrollView style={[styles.selectionList]}
-                                                      horizontal={true}
-                                                      contentContainerStyle={[styles.childLayout]}
-                                                      overflow="hidden"
-                                                      scrollEnabled={true}
-                                                      showsHorizontalScrollIndicator = {false}>
-                                            {(!!this.refs.mi) ? 
-                                              this.state.renderPreviousSelections : null}
-                                          </ScrollView>
-                                        </View>
-                                      :
-                                      null}
+            { this.state.loading ? <View style={{flex: 1, justifyContent:'center'}}>
+                                      <ActivityIndicator size="large"/>
+                                      <Text style={{textAlign: 'center'}}>Loading</Text>
+                                    </View>
+                                  :
+                                  <ListView dataSource={this.state.dataSource}
+                                            enableEmptySections={true}
+                                            renderRow={(rowData) => this.renderRow(rowData)}/>
+            }
+            
+          </ChatWindow>
 
-        <Footer left={<TouchableHighlight style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-                        <ElementsIcon color={(this.state.renderPreviousSelections.length>0) ? 
-                                               SECONDARY : 'black'}
-                                      name='thought-bubble' 
-                                      type='material-community'
-                                      underlayColor='transparent'
-                                      onPress={() => this.toggleSelections()}>
-                        </ElementsIcon>
-                      </TouchableHighlight>}
+          {this.state.selectionsVisible ? <View style={[styles.scrollWrapper]}>
+                                            <ScrollView style={[styles.selectionList]}
+                                                        horizontal={true}
+                                                        contentContainerStyle={[styles.childLayout]}
+                                                        overflow="hidden"
+                                                        scrollEnabled={true}
+                                                        showsHorizontalScrollIndicator = {false}>
+                                              {(!!this.refs.mi) ? 
+                                                this.state.renderPreviousSelections : null}
+                                            </ScrollView>
+                                          </View>
+                                        :
+                                        null}
 
-                center={<MessageInput ref='mi' 
-                                      onChangeText={(value) => this.textChanged(value, false)}>
-                        </MessageInput>} 
-                right={<ToolbarButton style={this.state.sendStyle} 
-                                      name='md-send' 
-                                      onPress={() => this.sendMessage()}/>}/>
-        <SuggestionBar ref='sb' 
-                       select = {(suggestion, id) => this.selectSuggestion(suggestion, id)}>    
-        </SuggestionBar>
+          <Footer left={<TouchableHighlight style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+                          <ElementsIcon color={(this.state.renderPreviousSelections.length>0) ? 
+                                                 SECONDARY : 'black'}
+                                        name='thought-bubble' 
+                                        type='material-community'
+                                        underlayColor='transparent'
+                                        onPress={() => this.toggleSelections()}>
+                          </ElementsIcon>
+                        </TouchableHighlight>}
+
+                  center={<MessageInput ref='mi' 
+                                        onChangeText={(value) => this.textChanged(value, false)}>
+                          </MessageInput>} 
+                  right={<ToolbarButton style={this.state.sendStyle} 
+                                        name='md-send' 
+                                        onPress={() => this.sendMessage()}/>}/>
+          <SuggestionBar ref='sb' 
+                         select = {(suggestion, id) => this.selectSuggestion(suggestion, id)}>    
+          </SuggestionBar>
       </Container>
    );
+    
+   return (
+      <Container ref="container" style={[styles.noConversations]}>
+        <View>
+          <Text>No conversations to show</Text>
+        </View>
+      </Container>
+   );
+
   }
 }
