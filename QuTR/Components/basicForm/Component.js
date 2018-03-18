@@ -7,7 +7,7 @@ import { SegmentedControls } from 'react-native-radio-buttons'
 import translations from '../../i18n';
 
 import InputWindow from '../inputWindow/InputWindow.js';
-import Lists from "../../Lists.js";
+import Texts from "../../Texts.js";
 
 import styles from './Styles';
 import { PRIMARY_DARK} from "../../masterStyle.js"
@@ -21,8 +21,8 @@ class BasicFormComponent extends Component {
                    password: '',
                    name: '',
                    age: '',
-                   language: Lists.languages[0],
-                   gender: Lists.genders[0] };
+                   language: Texts.languages[0],
+                   gender: 0 };
 
     this.handleEmailChange = (email) => {
       this.setState({email: email});
@@ -44,8 +44,8 @@ class BasicFormComponent extends Component {
       this.setState({language:selectedOption});
     }
 
-    this.setSelectedGender = (selectedOption) => {
-      this.setState({gender:selectedOption});
+    this.setSelectedGender = (selectedOption, selectedIndex) => {
+      this.setState({gender:selectedIndex});
     }
 
     this.handleButtonPress = () => {
@@ -118,18 +118,20 @@ class BasicFormComponent extends Component {
           underlineColorAndroid={'transparent'} />}
 
           {this.state.register && <SegmentedControls
-            options={ Lists.languages }
+            options={ Texts.languages }
             tint={PRIMARY_DARK}
             onSelection={ this.setSelectedLanguage.bind(this) }
             selectedOption={ this.state.language }
-            containerStyle={ styles.textInput }/>}
+            containerStyle={ styles.textInput }
+            separatorWidth={0.5}/>}
 
           {this.state.register && <SegmentedControls
-            options={ Lists.genders }
+            options={ Texts.genders["English"] }
             tint={PRIMARY_DARK}
             onSelection={ this.setSelectedGender.bind(this) }
-            selectedOption={ this.state.gender }
-            containerStyle={ styles.textInput }/>}
+            selectedIndex={ this.state.gender }
+            containerStyle={ styles.textInput }
+            separatorWidth={0.5}/>}
 
         <TouchableOpacity
           style={styles.button}

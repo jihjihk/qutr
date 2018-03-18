@@ -24,7 +24,7 @@ import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 import ProfileFormItem from '../../Components/profileFormItem/ProfileFormItem.js';
 import LogoutButton from '../../Components/logoutButton';
 
-import Lists from "../../Lists.js";
+import Texts from "../../Texts.js"
 
 import { firebaseConfig } from '../../configs/firebase.js';
 
@@ -63,8 +63,8 @@ export default class ProfileScreen extends Component<{}>  {
       this.setState({language:selectedOption});
     }
 
-    this.setSelectedGender = (selectedOption) => {
-      this.setState({gender:selectedOption});
+    this.setSelectedGender = (selectedOption, selectedIndex) => {
+      this.setState({gender:selectedIndex});
     }
 
   }
@@ -140,23 +140,25 @@ export default class ProfileScreen extends Component<{}>  {
           underlineColorAndroid={'transparent'} />
 
           <SegmentedControls
-            options={ Lists.languages }
+            options={ Texts.languages }
             tint={PRIMARY_DARK}
             onSelection={ this.setSelectedLanguage.bind(this) }
             selectedOption={ this.state.language }
-            containerStyle={ styles.textInput }/>
+            containerStyle={ styles.textInput }
+            separatorWidth={0.5}/>
 
           <SegmentedControls
-            options={ Lists.genders }
+            options={ Texts.genders[this.state.language] || []}
             tint={PRIMARY_DARK}
             onSelection={ this.setSelectedGender.bind(this) }
-            selectedOption={ this.state.gender }
-            containerStyle={ styles.textInput }/>
+            selectedIndex={ this.state.gender }
+            containerStyle={ styles.textInput }
+            separatorWidth={0.5}/>
 
           <TouchableOpacity
             style={styles.button}
             onPress={this.updateDatabase}>
-            <Text style={styles.buttonTitle}>Confirm changes</Text>
+            <Text style={styles.buttonTitle}>{Texts.buttons["Confirm"][this.state.language]}</Text>
           </TouchableOpacity>
 
         </InputWindow>

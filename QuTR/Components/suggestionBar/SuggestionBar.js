@@ -4,7 +4,8 @@ import {
     View,
 } from 'native-base';
 import {
-    ScrollView
+    ScrollView,
+    Dimensions 
 } from 'react-native';
 
 import SuggestionButton from './../suggestionButton/SuggestionButton.js';
@@ -12,6 +13,7 @@ import SuggestionButton from './../suggestionButton/SuggestionButton.js';
 import styles from './styles.js';
 
 const DEFAULTCOUNT = 3;
+const windowWidth = Dimensions.get('window').width;
 
 export default class SuggestionBar extends Component {
 
@@ -56,6 +58,14 @@ export default class SuggestionBar extends Component {
                    suggestionCount: DEFAULTCOUNT});
   }
 
+  getSuggestionWidth = () => {
+
+    var widthDivisor = 3;
+    if (this.state.suggestionCount == 1 || this.state.suggestionCount ==2 )
+      widthDivisor = this.state.suggestionCount;
+    return {width: windowWidth/widthDivisor};
+  }
+
   render = () => {
 
     var suggestions = [];
@@ -63,7 +73,8 @@ export default class SuggestionBar extends Component {
       suggestions.push(<SuggestionButton key={i}
                                          text={this.state.content[i]} 
                                          id={this.state.IDs[i]}
-                                         toSelect ={(suggestion, id) => this.props.select(suggestion, id)}>
+                                         toSelect ={(suggestion, id) => this.props.select(suggestion, id)}
+                                         style = {this.getSuggestionWidth()}>
                        </SuggestionButton>);
     }
 

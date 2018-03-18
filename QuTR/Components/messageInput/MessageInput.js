@@ -41,7 +41,7 @@ export default class MessageInput extends Component {
         <Input style={[styles.textInput, this.props.style]} 
                ref={(input) => { this.input = input; }} 
                multiline={true} 
-               placeholder='Enter message: ' 
+               placeholder={this.props.placeholder} 
                autoCorrect={false} 
                onChangeText={(value) => {this.props.onChangeText(value)}} 
                onSubmitEditing={Keyboard.dismiss}

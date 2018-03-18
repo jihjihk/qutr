@@ -36,6 +36,7 @@ import en from './phrases_json/en.json';
 import cn from './phrases_json/cn.json';
 
 import Trie from '../../DataStructures/Trie.js';
+import Texts from "../../Texts.js"
 
 const Firebase = require('firebase');
 var self;
@@ -110,9 +111,9 @@ export default class ChatScreen extends Component<{}>  {
                   let phraseData = null;
                   if (lang === "English") {
                     phraseData = en;
-                  } else if (lang === "Arabic") {
+                  } else if (lang === "عربية") {
                     phraseData = ar;
-                  } else if (lang === "Chinese") {
+                  } else if (lang === "中文") {
                     phraseData = cn;
                   }
                   if(phraseData) {
@@ -151,7 +152,7 @@ export default class ChatScreen extends Component<{}>  {
       if (!!snapshot.val().conversation)
         self.setState({conversation: snapshot.val().conversation,
                        myPicture: snapshot.val().picture},
-        /* Once I get metainformation about the conversation */
+        /* I get metainformation about the conversation once*/
         function() {
           firebaseService.database().ref()
           .child('conversations')
@@ -369,6 +370,10 @@ export default class ChatScreen extends Component<{}>  {
     return 0;
   }
 
+  /* Handle suggestion selection:
+      * value is a textual representation of the suggestion
+      * id is the concept id
+  */
   selectSuggestion = (value, id) => {
 
     if (!value) return;
@@ -383,6 +388,7 @@ export default class ChatScreen extends Component<{}>  {
         self.setState({message: message}, function() {
 
           var helperArr=[];
+          /* Sort all of the previous selections according to their indices in the projected message string */
           self.state.previousSelections.forEach(function(child) {
             var newChild=child.toLowerCase();
             
@@ -392,24 +398,26 @@ export default class ChatScreen extends Component<{}>  {
             helperArr.push({"text": child, "index": self.state.message.toLowerCase().indexOf(newChild) })
           })
 
+          sortedHelperArr = helperArr;
+
           helperArr.sort(this.compareObjs);
           var newSelections = [];
           helperArr.forEach(function(child) {
             newSelections.push(child.text);
           })
 
-          self.setState({previousSelections: newSelections}, function() {
+          /* Once the previous selections have been sorted, call renderText() to display them,
+             as well as textChanged to rerender text in the message input box */
 
-            this.renderText(self.state.previousSelections);
-            /* I first pass the selection to Shehroze, 
-               then he gives me back the remaining text, 
-               the one that wasn't used to produce the suggestion 
-               That text is the third parameter for the function
-               E.g. If input is "I want 5" and a suggestion is "I want",
-                    and the user selects it,
-                    we pass 5 as the third parameter to the following function */
-            this.textChanged(value, true, "");
-          })
+          this.renderText(newSelections);
+          /* I first pass the selection to Shehroze, 
+             then he gives me back the remaining text, 
+             the one that wasn't used to produce the suggestion 
+             That text is the third parameter for the function
+             E.g. If input is "I want 5" and a suggestion is "I want",
+                  and the user selects it,
+                  we pass 5 as the third parameter to the following function */
+          this.textChanged(value, true, "");
         })
       })
   }
@@ -420,6 +428,10 @@ export default class ChatScreen extends Component<{}>  {
     var selection = [];
     previousSelections.forEach(function(child) {
 
+      /* In state, a phrase and its ID are always at the same index
+         in their respective containers */
+      var indexInState = self.state.previousSelections.indexOf(child);
+      var ID = self.state.previousSelectionIDs[indexInState];
       selection.push(<View key={self.state.previousSelections.length}
                          style={{flexDirection: 'row', alignItems:'center'}}>
                       <Text style={[styles.selectedSuggestion]}
@@ -427,7 +439,7 @@ export default class ChatScreen extends Component<{}>  {
                             numberOfLines={1}>
                           {child}
                       </Text>
-                      <TouchableOpacity onPress={() => {self.removeSelection(child)}}>
+                      <TouchableOpacity onPress={() => {self.removeSelection(child, ID)}}>
                          <Icon name='md-remove-circle'
                                style={[styles.removeSelection]}>
                          </Icon>                                     
@@ -439,34 +451,39 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   /* Removes the selection from the message composer and memory */
-  removeSelection = (deletedSelection) => {    
+  removeSelection = (deletedSelection, ID) => {    
 
-    var helper = this.state.previousSelections;
-    var renderHelper = this.state.renderPreviousSelections;
-    var idHelper = this.state.previousSelectionIDs;
-    var messageHelper = this.state.message;
-    var index = helper.indexOf(deletedSelection);
+    /* Call renderText later */
+    var previousSelections = this.state.previousSelections;
+    var previousSelectionIDs = this.state.previousSelectionIDs;
+    
+    var index = previousSelections.indexOf(deletedSelection);
 
-    if (index !== -1) {
+    previousSelections.splice(index, 1);
+    previousSelectionIDs.splice(index, 1);
+    
+    this.setState({previousSelections: previousSelections,
+                   previousSelectionIDs: previousSelectionIDs,
+                   renderPreviousSelections: []
+                  }, 
 
-      helper.splice(index, 1);
-      renderHelper.splice(index, 1);
-      idHelper.splice(index, 1);
-      messageHelper = messageHelper.replace(deletedSelection+" ", ""); 
-    }
+                   function() {
+                      
+                      self.setState({message: this.generateSentence(self.state.previousSelectionIDs)}, 
+                                    function() {
 
-    /* Clean up if no suggestions are left selected */
-    if (helper.length==0) {
+                                      //alert("Message: "+self.state.message+",\nPrevious selections: "+self.state.previousSelections.toString()+",\nIDs: "+self.state.previousSelectionIDs.toString()+",\nRemoved: "+deletedSelection);
+                                      self.renderText(self.state.previousSelections);
 
-      this.disableSend();
-      this.setState({selectionsVisible: false})
-    }
+                                      /* Clean up if no suggestions are left selected */
+                                      if (self.state.previousSelections.length==0 || 
+                                          self.state.message=="") {
 
-    this.setState({renderPreviousSelections: renderHelper,
-                   previousSelections: helper,
-                   previousSelectionIDs: idHelper,
-                   message: messageHelper,
-                  })
+                                        this.disableSend();
+                                        this.setState({selectionsVisible: false})
+                                      }
+                                    })
+                   })    
   }
 
 
@@ -504,7 +521,6 @@ export default class ChatScreen extends Component<{}>  {
     if (this.state.loading) {
       return (      <View style={{flex: 1, justifyContent:'center'}}>
                       <ActivityIndicator size="large"/>
-                      <Text style={{textAlign: 'center'}}>Loading</Text>
                     </View>)
     }
     
@@ -518,7 +534,6 @@ export default class ChatScreen extends Component<{}>  {
 
             { this.state.loading ? <View style={{flex: 1, justifyContent:'center'}}>
                                       <ActivityIndicator size="large"/>
-                                      <Text style={{textAlign: 'center'}}>Loading</Text>
                                     </View>
                                   :
                                   <ListView dataSource={this.state.dataSource}
@@ -553,7 +568,8 @@ export default class ChatScreen extends Component<{}>  {
                         </TouchableHighlight>}
 
                   center={<MessageInput ref='mi' 
-                                        onChangeText={(value) => this.textChanged(value, false)}>
+                                        onChangeText={(value) => this.textChanged(value, false)}
+                                        placeholder={Texts.inputPlaceholder[this.state.defaultLang]}>
                           </MessageInput>} 
                   right={<ToolbarButton style={this.state.sendStyle} 
                                         name='md-send' 
@@ -567,7 +583,7 @@ export default class ChatScreen extends Component<{}>  {
    return (
       <Container ref="container" style={[styles.noConversations]}>
         <View>
-          <Text>No conversations to show</Text>
+          <Text>{Texts.noConversations[this.state.defaultLang]}</Text>
         </View>
       </Container>
    );
