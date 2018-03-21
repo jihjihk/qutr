@@ -273,7 +273,7 @@ export default class ChatScreen extends Component<{}>  {
       }
 
       else {
-        if (phraseDB[pid].pos == "phrs") {
+        if (phraseDB[pid].pos == "sent") {
           final += phraseDB[pid].phrase + " ";
         }
         else {
