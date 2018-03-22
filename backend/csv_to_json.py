@@ -38,6 +38,6 @@ def convert(inputcsv):
 	with open('cn.json', 'w') as outfile:
 	    json.dump(cnob, outfile)
 
-convert("master0321.csv")
+convert("master0322.csv")
 
 

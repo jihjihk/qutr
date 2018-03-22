@@ -262,36 +262,77 @@ export default class ChatScreen extends Component<{}>  {
     var np = "";
     var temp = "";
     var final = "";
+    var unit = "";
 
     if (myLang == "Arabic") phraseDB = ar;
     else if (myLang == "Chinese") phraseDB = cn;
     else phraseDB = en;
 
-    selectedPhraseID.forEach(function(pid) {
-      if (typeof(pid) == "number") {
-        np += pid;
-      }
+    //input array has 0 or 1 phrase only
+    if (selectedPhraseID.length == 0) {
+      return final;
+    }
 
-      else {
-        if (phraseDB[pid].pos == "sent") {
-          final += phraseDB[pid].phrase + " ";
+    //there is only 1 phrase ID in the array,
+    //so we return the phrase by itself
+    else if (selectedPhraseID.length == 1) {
+      var onlypid = selectedPhraseID[0];
+      final = phraseDB[onlypid].phrase;
+
+      //extra whitespace removal if the phrase is returned as it self.
+      if (final.includes(" *")) {
+        final = final.replace(" *", "");
+      }
+      if (final.includes("* ")) {
+        final = final.replace("* ", "");
+      }
+    }
+
+    //input has 2 or more phrases
+    else {      
+      selectedPhraseID.forEach(function(pid) {
+        //query is an integer; append as itself
+        if (typeof(pid) == "number") {
+          unit += pid;
         }
+        //query item is a phrase id
         else {
-          if (phraseDB[pid].phrase.includes("*") && phraseDB[pid].pos == "vp") {
-            temp = phraseDB[pid].phrase;
+          //query item is a complete sentence
+          if (phraseDB[pid].pos == "sent") {
+            final += phraseDB[pid].phrase + " ";
           }
-          else
-            np += phraseDB[pid].phrase.replace("*", "").toLowerCase();
+          //if the query is a particle
+          //CHECK if number is always at the beginning
+          else if (phraseDB[pid].pos == "prt") {
+            unit += phraseDB[pid].phrase;
+          }
+          else {
+            if (phraseDB[pid].phrase.includes("*") && phraseDB[pid].pos == "vp") {
+              temp = phraseDB[pid].phrase;
+            }
+            else
+              np += phraseDB[pid].phrase.replace("*", "").toLowerCase();
+          }
         }
-      }
-    });
+      });
+    }
 
+    //if there is some number or unit
+    if (unit != "") {
+      np = unit + " " + np;
+    }
+
+    //replace asterisk with noun phrase or empty string
     if (temp != "")
       temp = temp.replace("*", np);
     final += temp;
 
-    return final;
+    //capitalize the sentence if English
+    if (myLang == "English") {
+      final = final.charAt(0).toUpperCase() + final.slice(1);
+    }
 
+    return final;
   }
 
   createMessage = (ownerID, message) => {

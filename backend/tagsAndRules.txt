@@ -1,0 +1,18 @@
+Qutr Phrase Structure Tagset includes the following:
+
+SENT - complete, unmodifiable sentences
+VP - templates and verb phrases containing * (all tenses and modes)
+NP - nouns and noun phrases (common and proper)
+ADJ - adjectives
+ADV - adverbs
+NUM - cardinal numbers
+PRT - particles or other function words
+
+sent -> sent
+np vp -> sent
+adj np -> np
+num -> adj
+num prt -> np (eg 5 + day -> 5 days)
+np vp adv -> sent
+adj -> sent
+adv -> sent
