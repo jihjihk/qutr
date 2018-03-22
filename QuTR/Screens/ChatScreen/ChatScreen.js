@@ -263,8 +263,8 @@ export default class ChatScreen extends Component<{}>  {
     var temp = "";
     var final = "";
 
-    if (myLang == "Arabic") phraseDB = ar;
-    else if (myLang == "Chinese") phraseDB = cn;
+    if (myLang == "عربية") phraseDB = ar;
+    else if (myLang == "中文") phraseDB = cn;
     else phraseDB = en;
 
     selectedPhraseID.forEach(function(pid) {
