@@ -282,12 +282,15 @@ export default class ChatScreen extends Component<{}>  {
       var onlypid = selectedPhraseID[0];
       final = phraseDB[onlypid].phrase;
 
-      //extra whitespace removal if the phrase is returned as it self.
-      if (final.includes(" *")) {
-        final = final.replace(" *", "");
-      }
-      if (final.includes("* ")) {
-        final = final.replace("* ", "");
+      if (!!final)  {
+
+        //extra whitespace removal if the phrase is returned as it self.
+        if (final.includes(" *")) {
+          final = final.replace(" *", "");
+        }
+        if (final.includes("* ")) {
+          final = final.replace("* ", "");
+        }
       }
     }
 
