@@ -69,7 +69,8 @@ export default class ChatScreen extends Component<{}>  {
                 selectedPhraseID: [],
                 defaultLang: "English",
                 trie: null,
-                loading: true
+                loading: true,
+                madeFirstSelection: false
               };
   }
 
@@ -363,6 +364,7 @@ export default class ChatScreen extends Component<{}>  {
 
   textChanged = (value, suggestionSelected, remainderString) => {
 
+    //alert(this.state.defaultLang);
     var potentialMessage = this.state.message;
     var stringForSuggestions = value;
     
@@ -418,6 +420,8 @@ export default class ChatScreen extends Component<{}>  {
   selectSuggestion = (value, id) => {
 
     if (!value) return;
+    if (!this.state.madeFirstSelection) this.setState({selectionsVisible: true,
+                                                       madeFirstSelection: true});
     this.setState({previousSelectionIDs: this.state.previousSelectionIDs.concat([id]),
                    previousSelections: this.state.previousSelections.concat([value]),
                    renderPreviousSelections: []},
@@ -513,7 +517,6 @@ export default class ChatScreen extends Component<{}>  {
                       self.setState({message: this.generateSentence(self.state.previousSelectionIDs)}, 
                                     function() {
 
-                                      //alert("Message: "+self.state.message+",\nPrevious selections: "+self.state.previousSelections.toString()+",\nIDs: "+self.state.previousSelectionIDs.toString()+",\nRemoved: "+deletedSelection);
                                       self.renderText(self.state.previousSelections);
 
                                       /* Clean up if no suggestions are left selected */

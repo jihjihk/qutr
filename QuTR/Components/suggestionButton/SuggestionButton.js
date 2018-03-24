@@ -3,7 +3,9 @@ import {
     Text,
 } from 'native-base';
 import {
-    TouchableHighlight
+    TouchableHighlight,
+    ScrollView,
+    View
 } from 'react-native';
 
 import {
@@ -20,13 +22,16 @@ export default class SuggestionButton extends Component {
 
   render = () => {
 
-    console.log(this.props);
-
     return (
         <TouchableHighlight underlayColor={SECONDARY} 
                             style={[styles.container, this.props.style]} 
                             onPress = { () => {this.props.toSelect(this.props.text, this.props.id)}}>
-          <Text style={[styles.text]}>{this.props.text}</Text>
+          <View onStartShouldSetResponder={() => true}>
+            <ScrollView vertical
+                        showsVerticalScrollIndicator = {true}>
+              <Text style={[styles.text]}>{this.props.text}</Text>
+            </ScrollView>
+          </View>
         </TouchableHighlight> 
     );
   }
