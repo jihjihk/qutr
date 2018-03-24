@@ -19,7 +19,8 @@ export default StyleSheet.create({
   },
   text: {
   	textAlign: 'center', 
-    textAlignVertical: 'center', 	
+    textAlignVertical: 'center',
+    justifyContent: 'center', 	
   	color: PRIMARY_DARK,
   	fontSize: 15,
   },

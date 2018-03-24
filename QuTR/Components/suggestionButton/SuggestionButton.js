@@ -26,12 +26,7 @@ export default class SuggestionButton extends Component {
         <TouchableHighlight underlayColor={SECONDARY} 
                             style={[styles.container, this.props.style]} 
                             onPress = { () => {this.props.toSelect(this.props.text, this.props.id)}}>
-          <View onStartShouldSetResponder={() => true}>
-            <ScrollView vertical
-                        showsVerticalScrollIndicator = {true}>
-              <Text style={[styles.text]}>{this.props.text}</Text>
-            </ScrollView>
-          </View>
+          <Text style={[styles.text]}>{this.props.text}</Text>
         </TouchableHighlight> 
     );
   }

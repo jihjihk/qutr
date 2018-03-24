@@ -483,7 +483,7 @@ export default class ChatScreen extends Component<{}>  {
       var indexInState = self.state.previousSelections.indexOf(child);
       var ID = self.state.previousSelectionIDs[indexInState];
       selection.push(<View key={self.state.previousSelections.length}
-                         style={{flexDirection: 'row', alignItems:'center'}}>
+                         style={{flexDirection: 'row', alignItems:'center', marginRight: 5}}>
                       <Text style={[styles.selectedSuggestion]}
                             overflow="hidden"
                             numberOfLines={1}>
@@ -596,7 +596,6 @@ export default class ChatScreen extends Component<{}>  {
                                             <ScrollView style={[styles.selectionList]}
                                                         horizontal={true}
                                                         contentContainerStyle={[styles.childLayout]}
-                                                        overflow="hidden"
                                                         scrollEnabled={true}
                                                         showsHorizontalScrollIndicator = {false}>
                                               {(!!this.refs.mi) ? 

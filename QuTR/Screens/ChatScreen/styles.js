@@ -43,18 +43,17 @@ export default StyleSheet.create({
   selectionList: {
     backgroundColor: 'transparent', 
     height: 35,
-    flex: 1
+    flex: 1,
   },
   childLayout: {
     alignItems: 'center',
-    marginLeft: 5,
-    marginRight: 5
   },
   scrollWrapper: {
     height: 35, 
     borderColor: PRIMARY_DARK, 
     borderWidth: 0.5, 
-    backgroundColor: PRIMARY
+    backgroundColor: PRIMARY,
+    paddingLeft: 5
   },
   selectedSuggestion: {
     backgroundColor: SECONDARY, 
@@ -67,7 +66,6 @@ export default StyleSheet.create({
     color: 'red', 
     fontSize: 20, 
     alignSelf: 'center', 
-    marginRight: 5
   },
   noConversations: {
     flex: 1, 
