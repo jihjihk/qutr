@@ -119,7 +119,9 @@ export default class ChatScreen extends Component<{}>  {
                   }
                   if(phraseData) {
                     for (let pObj in phraseData) {
-                      trie.insertPhrase(pObj, phraseData[pObj].phrase);
+                      if(phraseData[pObj].phrase) {
+                        trie.insertPhrase(pObj, phraseData[pObj].phrase);
+                      }
                     }
                   }
                   self.setState({
