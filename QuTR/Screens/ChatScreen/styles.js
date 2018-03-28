@@ -65,7 +65,8 @@ export default StyleSheet.create({
   removeSelection: {
     color: 'red', 
     fontSize: 20, 
-    alignSelf: 'center', 
+    alignSelf: 'center',
+    marginRight: 5
   },
   noConversations: {
     flex: 1, 
