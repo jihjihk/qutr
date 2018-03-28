@@ -83,7 +83,7 @@ class Trie {
 	}
 
 	suggConcepts(prefix) {
-		let inputWords = prefix.toLowerCase().split(" ");
+		let inputWords = prefix.replace(/^\s+|\s+$/g, '').toLowerCase().split(" ");  // Remove extra whitespace and split
 		let concepts = {};
 		for(let i = 0; i < inputWords.length; i++) {
 			let word = inputWords[i];

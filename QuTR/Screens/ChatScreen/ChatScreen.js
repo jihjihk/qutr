@@ -382,7 +382,7 @@ export default class ChatScreen extends Component<{}>  {
   textChanged = (value, suggestionSelected, remainderString) => {
 
     var potentialMessage = this.state.message;
-    var stringForSuggestions = value.replace(/^\s+|\s+$/g, ''); // Remove extra whitespace
+    var stringForSuggestions = value;
     
     if (suggestionSelected) {
 
