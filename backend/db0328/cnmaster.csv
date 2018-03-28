@@ -1,0 +1,543 @@
+en,cn,pos
+I would like this.,我想要这个,sent
+0,零,num
+1,一,num
+2,二,num
+3,三,num
+4,四,num
+5,五,num
+6,六,num
+7,七,num
+8,八,num
+9,九,num
+10,十,num
+11,十一,num
+12,十二,num
+13,十三,num
+14,十四,num
+15,十五,num
+16,十六,num
+17,十七,num
+18,十八,num
+19,十九,num
+20,二十,num
+21,二十一,num
+22,二十二,num
+23,二十三,num
+30,三十,num
+40,四十,num
+50,五十,num
+60,六十,num
+70,七十,num
+80,八十,num
+90,九十,num
+100,一百,num
+101,一百零一,num
+110,一百一十,num
+111,一百一十一,num
+200,二百,num
+300,三百,num
+500,五百,num
+1000,一千,num
+2000,二千,num
+"10,000",一万,num
+"10,001",一万零一,num
+"10,002",一万零二,num
+"20,000",二万,num
+"50,000",五万,num
+"100,000",十万,num
+"200,000",二十万,num
+"1,000,000",一百万,num
+"10,000,000",一千万,num
+"100,000,000",一亿,num
+"1,000,000,000",十亿,num
+"1,000,000,000,000",一兆,num
+"* and * , please.",请给我*和*。,vp
+* day(s),*天,prt
+* hour(s),*个小时,prt
+* is not working.,坏了,vp
+* minute(s),*分钟,prt
+* month(s),*个月,prt
+* week(s),*个星期,prt
+* year(s),*年,prt
+a beer,啤酒,np
+a bottle,一瓶,np
+a glass of wine,一杯酒,np
+a pint,一品脱,np
+a table for * people,*人的座位,np
+abdomen,腹部,np
+after,之后,adv
+After *.,*之后,adv
+afternoon,下午,np
+airconditioner,空调,np
+airplane,飞机,np
+airport,机场,np
+Am I under arrest?,我被捕了吗？,sent
+April,四月,np
+Around the corner.,转角,sent
+August,八月,np
+avenue,大道,np
+back,背,np
+bars,酒吧,np
+bathroom,卫生间,np
+batteries,电池,np
+beans,豆,np
+bedsheet,床单,np
+bedsheets,床单,np
+beef,牛肉,np
+beer,啤酒,np
+before,以前,adv
+Before *.,*以前,adv
+bigger,更大,adj
+black,黑色,adj
+black pepper,黑胡椒,np
+black tea,红茶,np
+blue,蓝色,adj
+body,身体,np
+boiled water,开水,np
+bottled water,矿泉水,np
+bread,面包,np
+breakfast,早饭,np
+brown,褐色,adj
+bus station,公家车站,np
+butter,牛油,np
+buttocks,屁股,np
+cafe,咖啡室,np
+Can I get a bag?,我可以要一个袋子吗？,sent
+Can I get insurance?,我可以买保险吗？,sent
+Can I just pay a fine now?,我可以缴交罚款吗？,sent
+"Can I look at the menu, please?",请给我看看菜单.,sent
+Can I make a telephone call?,我可以打个电话吗？,sent
+Can I make an appointment?,我可以预约吗？,sent
+Can I make international calls here?,可以打国际电话吗?,sent
+Can I print here?,我可以复印吗？,sent
+Can I use your cell phone?,我可以用您的手机吗？,sent
+Can I use your phone?,我可以用您的电话吗？,sent
+Can you change a traveler's check for me?,你可以帮我兑换我的旅行支票吗？,sent
+Can you change money for me?,你可以帮我换钱吗？,sent
+Can you get a doctor?,你可以帮我找一位医生吗？,sent
+Can you show me on the map?,你可以在地图上指给我看?,sent
+Can you speak *?,你可以说*吗？,vp
+Can you suggest another hotel?,你有其他推荐的酒店吗？,sent
+Can you tell me where * is?,你可以告诉我*在那里吗？,vp
+Can you wake me at *?,请在明天早上*点钟叫醒我。,vp
+Can you write the name and address down?,你可以写下名字和地址吗？,sent
+car,汽车,np
+carbonated water,碳酸水,np
+cash,现金,np
+cheap,便宜,adj
+cheaper,比较便宜,adj
+check,支票,np
+cheese,奶酪,np
+chest,胸部,np
+chicken,鸡,np
+cleaner,清洁工,np
+closed,关闭,adj
+club soda,苏打水,np
+coffee,咖啡,np
+Coke,可乐,np
+cold medicine,感冒药,np
+cough,咳嗽,np
+Could you please *?,可以请你*吗？,vp
+Could you repeat that?,你可以重复一遍吗？,sent
+credit card,信用卡,np
+December,十二月,np
+deposit,押金,np
+diarrhoea,泻肚子/拉肚子,np
+dictionary,词典,np
+diesel,柴油,np
+Do you accept * currency?,你接受*的货币吗？,vp
+Do you accept credit cards?,你接受信用卡吗？,sent
+Do you accept US dollars?,你接受美元吗？,sent
+Do you go to *?,去不去*?,vp
+Do you have a safe?,你们有没有保险箱？,sent
+Do you have an English menu?,你有没有英文菜单？,sent
+Do you have any rooms available?,你们还有房间吗？,sent
+Do you have any snacks?,有没有小吃？有没有点心？,sent
+Do you have insurance?,你有保险吗？,sent
+Do you have it in another color?,你们有没有另外的颜色?,sent
+Do you have this in my size?,有没有我的尺寸？,sent
+Do you know *?,你知道*吗？,vp
+Do you serve alcohol?,你们销售酒精类饮品吗？,sent
+Do you ship overseas?,可以邮寄到海外吗？,sent
+Do you speak English?,你会说英语吗？,sent
+Do you take * currency?,*元可以吗？,vp
+Do you understand?,听得懂吗？,sent
+Does that include breakfast?,早餐包含在内吗？,sent
+Does the room come with *?,这个房间有没有*？,vp
+Does this bus stop in *?,这辆巴士停在*吗？,vp
+Does this train stop in *?,这列火车停在*吗？,vp
+Don't touch me!,不要碰我！,sent
+downtown,市中心,np
+driver's license,驾驶证件,np
+dumpling,饺子,np
+ears,耳朵,np
+east,东,adj
+eggs,鸡蛋,np
+English books,英文书,np
+English magazines,英文杂志,np
+English newspaper,英文报纸,np
+entrance,入口,np
+evening,晚上,np
+Excellent!,太棒了！,sent
+Excuse me. (begging pardon),打扰一下。,sent
+Excuse me. (coming through),对不起。,sent
+Excuse me. (getting attention),请问。,sent
+exit,出口,np
+expensive,贵,adj
+eyes,眼睛,sent
+face,脸,np
+February,二月,np
+feet,脚,np
+fever,发烧,np
+"Fine, thank you.","很好, 谢谢。",sent
+fingers,手指,np
+first class cabin,头等舱,np
+fish,鱼,np
+fixed-price meal,定价套餐,np
+forbidden,被禁止,adj
+Friday,星期五,np
+fried rice,炒饭,np
+from,从,prt
+fruits,水果,np
+gas station,加油站,np
+glasses,眼镜,np
+go,去,vp
+Go straight.,直走,sent
+gold,金色,adj
+Good evening.,晚上好。,sent
+Good morning.,早安。,sent
+Good night.,晚安。,sent
+Goodbye,再见。,sent
+Goodbye (informal),拜拜。,sent
+green,绿色,adj
+green tea,绿茶,np
+grey,灰色,adj
+hair,头发,np
+half,半,adj
+ham,火腿,np
+hands,手,np
+he,他,np
+head,头,np
+heater,暖气,np
+Hello.,你好。,sent
+Help!,救命！,sent
+here,这里,adv
+Here by yourself?,你自己一个人吗？,sent
+hotel,酒店／旅馆,np
+How are you?,你好吗？,sent
+How do I get to * ?,怎么去*?,vp
+How much does it cost to get to *?,去*要多少钱？,vp
+How much is a room for one person per night?,单人房一晚多少钱？,sent
+How much is a room for two people per night?,双人房一晚多少钱？,sent
+How much is a ticket to *?,去*的票多少钱？,vp
+How much is it per hour?,一小时是多少钱？,sent
+How much is it to call to *?,打给*是多少钱？,vp
+How much is it to get in?,入场费多少钱？,sent
+How much is this?,多少钱？,sent
+How much?,多少？,sent
+How was your meal?,这一顿饭怎么样？,sent
+I,我,np
+I am from *.,我从*来。,vp
+I am sick.,我生病了。,sent
+I can't afford it.,我付不起。,sent
+I can't speak *.,我不会讲*。,vp
+I don't eat *.,我不吃*。,vp
+I don't have *.,我没有*。,vp
+I don't speak *.,我不能说*。,vp
+I don't understand (something heard).,我听不懂。,sent
+I don't want *.,我不要*。,vp
+I don't want it.,我不要。,sent
+I have *.,我有*。,vp
+I have arrived.,我到了。,sent
+I haven't done anything wrong.,我没有做错事。,sent
+I lost my *.,我丢了我的*。,vp
+I lost my bag.,我丢了我的包包。,sent
+I need *.,我要*。,vp
+I need a doctor.,我需要医生。,sent
+I need to see your passport.,我需要看一下你的护照。,sent
+I need to talk to a lawyer.,我要跟律师联系。,sent
+I need your help.,我需要你的帮助。,sent
+I only eat Halal food.,我只吃清真食品。,sent
+I want *.,我想要*。,vp
+I want a dish with *.,我想吃*的菜。,vp
+I want to check out.,我要退房。,sent
+I want to rent a car.,我想要租车。,sent
+I want to talk to the * embassy.,我希望跟*大使馆联系。,vp
+I will stay for * night(s).,我打算住*夜。,vp
+I work at the *.,我在*工作。,vp
+I'd like to rent a car.,我想租车,sent
+I'll call the police.,我会叫警察。,sent
+I'm a vegetarian.,我吃素的。,sent
+I'm finished.,我完成了。,sent
+I'm looking for *.,我在找*,vp
+I'm lost.,我迷路了。,sent
+I'm not feeling well.,我不舒服,sent
+I'm not interested.,我没有兴趣。,sent
+I'm sick.,我生病了。,sent
+I'm sorry.,对不起。,sent
+I'm with *.,我现在跟*在一起,vp
+I've been injured.,我受伤了。,sent
+I've lost *.,我的*不见了,vp
+intersection,交界,np
+Is breakfast included?,包含早餐吗？,sent
+Is insurance included?,包含保险吗？,sent
+Is it open on *?,*对外开放吗？,vp
+Is there * around here?,附近有没有*,vp
+Is there * you recommend?,你有推介的*吗？,vp
+Is there a group discount?,有没有团体折扣？,sent
+Is there a local specialty?,有没有当地特色？,sent
+Is there a student discount?,有没有学生优惠？,sent
+Is there anywhere I can leave luggage?,有没有地方让我放行李？,sent
+Is there someone here who speaks English?,这里有人会说英语吗？,sent
+Is there table service?,有没有餐桌服务？,sent
+Is this seat free?,这里有人坐吗？,sent
+It hurts here.,这里很痛,sent
+It is nine in the morning.,现在是早上9点钟。,sent
+It was a misunderstanding.,这是误会。,sent
+It was delicious.,很好吃。,sent
+It's an emergency.,这是紧急情况。,sent
+"It's okay. (polite response to ""I'm sorry"")",没关系。,sent
+It's uncomfortable.,不舒服。,sent
+itchy,痒,adj
+January,一月,np
+juice,果汁,np
+July,七月,np
+June,六月,np
+last week,上个星期,np
+later,迟一点,adv
+Leave me alone.,不要打扰我。,sent
+left,左边,adv
+legs,腿,np
+less,少,adj
+less than,少于,adj
+lockers,储物柜,np
+Look out!,小心！,sent
+lunch,午饭,np
+macaroni,通粉,np
+March,三月,np
+May,五月,np
+May I have a bottle of *?,可以来一瓶*吗？,vp
+May I have a cup of *?,可以来一杯*吗？,vp
+May I have a glass of *?,可以来一杯*吗？,vp
+May I have some *?,可以来一点*吗？,vp
+"May I please ask, what is your name?",请问你叫什么名?,sent
+May I see the room first?,请问我可以先看一下房间吗？,sent
+Me too.,我也是,sent
+Medical emergency,医疗急诊,np
+men,男人,np
+midnight,半夜,np
+milk,牛奶,np
+Monday,星期一,np
+money,金钱,np
+more,更,adj
+more than,多于,adj
+morning,早上,np
+mutton,羊肉,np
+My name is * .,我叫 * 。,vp
+nails,指甲,np
+national ID,证件,np
+neck,颈项/脖子,np
+newspaper,报纸,np
+next week,下个星期,np
+Nice to meet you.,很高兴认识你。,sent
+night,晚上好。,np
+No parking.,禁止停车,sent
+"No, thank you.",不用了，谢谢。,sent
+No.,不要,sent
+noodles,面条,np
+noon,中午,np
+north,北,adv
+nose,鼻子,np
+Not too far.,不太远,sent
+November,十一月,np
+now,现在,adv
+Number *.,数字,vp
+October,十月,np
+"OK, I'll take it.",我要买这个。,sent
+Okay.,好的,sent
+"One more, please.",请再给我一个。,sent
+one o'clock AM,凌晨一点钟,np
+one o'clock PM,下午一点钟,np
+"One ticket to *, please.",要一张去*的票，谢谢,vp
+one way,单行道,adv
+open,开,adj
+orange,橙色,np
+orange juice,柳橙汁,np
+pain killer,止痛药,np
+painful,痛。,adj
+Pardon me?,可以再重复一遍吗？,sent
+passport,护照,np
+Past the *.,传*,vp
+pay,付,vp
+pen,笔,np
+pen,笔,np
+pencil,铅笔,np
+petrol,汽油,np
+Please clean my room.,请清洁我的房间,sent
+Please clear the plates.,请洗干净这些碟子,sent
+Please come with me.,请跟我过来,sent
+Please give me *.,请给我*。,vp
+Please turn up the AC.,请把空调开大一点。,vp
+Please use the meter machine.,请打表。,sent
+Please.,请。,np
+Police!,警察！,np
+pork,猪肉,np
+pork,猪肉,np
+postage stamp,邮票,np
+postcard,明信片,np
+postcard,明信片,np
+pull,拉,vp
+purple,紫色,adj
+push,推,vp
+quiet,安静,adj
+razor,剃刀,np
+razor,剃刀,np
+red,红色,adj
+red wine,红酒,np
+restaurant,餐厅,np
+rice,米饭,np
+right,右边,adv
+road,路,np
+rum,朗姆酒,np
+runny nose,流鼻涕,np
+salad,沙拉,np
+salt,盐,np
+Saturday,星期六,np
+sausage,香肠,np
+scented tea,花茶,np
+second class cabin,二等舱,np
+See you later.,待会见,sent
+September,九月,np
+shampoo,洗发精,np
+she,她,np
+shoulder,肩膀,np
+Show me.,给我看一下。,sent
+sites to see,景点,np
+slowly,慢慢的,adv
+Slowly.,慢点,sent
+sneeze,打喷嚏,np
+soap,肥皂,np
+"Some more *, pelase.",再多一点*，谢谢,vp
+sore,酸,adj
+soup,汤,np
+south,南,adv
+speed limit,速度限制,np
+stomach medicine,肠胃药,np
+stop (on a street sign),停,sent
+Stop! Thief!,住手！小偷！,sent
+Stop.,停。,sent
+straight ahead,往前走,sent
+street,街,np
+sugar,糖,np
+sunblock lotion,防晒乳,np
+Sunday,星期天,np
+supper,晚饭,np
+"Take me there, please.",请带我到那里。,sent
+"Take me to *, please.",请您开到*。,vp
+tampon,卫生棉条,np
+taxi,出租车,np
+Taxi driver,出租车司机,np
+tea,茶,np
+telephone,电话,np
+telephone,电话,np
+Thank you so much.,非常感谢,sent
+Thank you.,谢谢。,sent
+That's too expensive.,太贵了。,sent
+"The check, please.",请结帐。,sent
+the day after tomorrow,后天,np
+the day before yesterday,前天,np
+there,那里,adv
+There are * of us.,一共有*个人,vp
+they (f),她们,np
+they (m/mixed),他们,np
+they (two people),他们,np
+This was very impressive!,真的很棒！,sent
+this week,这个星期,np
+Three-thirty PM.,下午3点半.,vsent
+throat,喉咙。,np
+Thursday,星期四,np
+To *.,去*,vp
+toast,吐司,np
+today,今天,np
+toes,脚指。,np
+toilet,厕所,np
+tomorrow,明天,np
+tonic water,通宁水,np
+toothbrush,牙刷,np
+toothbrush,牙刷,np
+toothpaste,牙膏,np
+Towards the *.,靠近*,vp
+train station,火车站,np
+Tuesday,星期二,np
+Turn left.,左拐。,sent
+Turn right.,右拐。,sent
+TV,电视,np
+U-turn.,掉头。,sent
+umbrella,雨伞,np
+umbrella,雨伞,np
+vegetables,蔬菜,np
+vodka,伏特加,np
+waist,腰,np
+Wait or stay?,等待还是留下来？,sent
+Wait.,等一下。,sent
+Watch for the *.,注意*,vp
+water,水,np
+we,我们,np
+Wednesday,星期三,np
+west,西,adv
+What is the exchange rate?,汇率多少？,sent
+What is this called?,这叫什么？,sent
+What is this?,这是什么？,sent
+What is your name?,你叫什么名字？,sent
+What is your name?,你叫什么名字？,sent
+What is your special dish?,你的招牌才是什么,sent
+What time is breakfast/supper?,早/晚餐是什么时候？,sent
+What time is it?,现在几点？,sent
+What time will this bus arrive?,公车什么时候到？,vp
+What time will this train arrive?,火车什么时候到？,sent
+What?,什么？,sent
+When do I have to check out?,何时要退房？,sent
+When does the bus for * leave?,去*的公车什么时候离开？,vp
+When does the train for * leave?,去*的火车什么时候离开？,vp
+When is closing time?,几点关门？,sent
+When is opening time?,几点开门？,sent
+When?,什么时候？,sent
+Where are you from?,你从哪里来的？,sent
+Where are you taking me?,你带我去哪里？,sent
+Where can I find *?,哪里有*?,vp
+Where can I get a traveler's check changed?,我在哪里可以兑换这个旅行支票？,sent
+Where can I get money changed?,我要在哪里换钱？,sent
+Where do we get tickets?,哪里买车票？,sent
+Where does it hurt?,哪里痛？,sent
+Where does this bus go?,这辆巴士去哪里？,sent
+Where does this train go?,这列火车去哪里？,sent
+Where is an ATM?,提款机在哪里？,sent
+Where is it on the map?,在地图上的哪里？,sent
+Where is the *?,*在哪里？,vp
+Where is the bathroom?,洗手间在哪里？,sent
+Where is the bus to *?,到*的巴士在哪？,vp
+Where is the toilet?,厕所在哪里？,sent
+Where is the train to *?,到*的火车在哪？,vp
+Where?,哪里？,sent
+Which direction?,哪个方向？,sent
+Which station are we at?,我们在哪一站？,sent
+whiskey,威士忌,np
+white,白色,adj
+white wine,白酒,np
+Who?,谁？,sent
+Why?,为什么？,sent
+women,女人,np
+work,工作,np
+wrist,手腕,np
+writing paper,纸,np
+yellow,黄色,adj
+"Yes, please.",是，谢谢,sent
+Yes.,是,sent
+yesterday,昨天,np
+yield,让路,vp
+you,你,np
+you (p),你们,np
+You're cheating me.,你在骗我。,sent
+You're welcome.,不客气。,sent
+youth hostel,青年旅馆,np

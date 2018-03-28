@@ -1,0 +1,567 @@
+,en,ar,pos,cn
+0,0,صفر,num,零
+1,1,واحد,num,一
+2,2,إثنان,num,二
+3,3,ثلاثة,num,三
+4,4,أربعة,num,四
+5,5,خمسة,num,五
+6,6,ستة,num,六
+7,7,سبعة,num,七
+8,8,ثمانية,num,八
+9,9,تسعة,num,九
+10,10,عشرة,num,十
+11,11,إحدى عشر,num,十一
+12,12,إثنا عشر,num,十二
+13,13,ثلاثة عشر,num,十三
+14,14,أربعة عشر,num,十四
+15,15,خمسة عشر,num,十五
+16,16,ستة عشر,num,十六
+17,17,سبعة عشر,num,十七
+18,18,ثمانية عشر,num,十八
+19,19,تسعة عشر,num,十九
+20,20,عشرون,num,二十
+21,21,واحد وعشرون,num,二十一
+22,22,إثنان وعشرون,num,二十二
+23,23,ثلاثة وعشرون,num,二十三
+24,30,ثلاثون,num,三十
+25,40,أربعون,num,四十
+26,50,خمسون,num,五十
+27,60,ستون,num,六十
+28,70,سبعون,num,七十
+29,80,ثمانون,num,八十
+30,90,تسعون,num,九十
+31,100,مائة,num,一百
+32,101,مائة و واحد,num,一百零一
+33,110,مائة وعشرة,num,一百一十
+34,111,مائة و أحد عشر,num,一百一十一
+35,200,مئتين,num,二百
+36,300,ثلاث مائة,num,三百
+37,500,خمس مائة,num,五百
+38,1000,ألف,num,一千
+39,2000,ألفين,num,二千
+40,"10,000",عشرة آلاف,num,一万
+41,"10,001",عشرة آلاف و واحد,num,一万零一
+42,"10,002",عشرة آلاف وإثنان,num,一万零二
+43,"20,000",عشرون الف,num,二万
+44,"50,000",خمسون ألف,num,五万
+45,"100,000",مائة ألف,num,十万
+46,"200,000",مئتي ألف,num,二十万
+47,"1,000,000",مليون,num,一百万
+48,"10,000,000",عشرة ملايين,num,一千万
+49,"100,000,000",مائة مليون,num,一亿
+50,"1,000,000,000",مليار‎,num,十亿
+51,"1,000,000,000,000",تريليون,num,一兆
+52,"* and * , please.",من فضلك أعطني * و *.,vp,请给我*和*。
+53,* day(s),‏* أيام,prt,*天
+54,* hour(s),‏* ساعات,prt,*个小时
+55,* is not working.,* لا يعمل,vp,坏了
+56,* minute(s),‏* دقائق,prt,*分钟
+57,* month(s),*  أشهر,prt,*个月
+58,* week(s),‏* أسبوع,prt,*个星期
+59,* year(s),‏* سنوات,prt,*年
+60,a beer,البيرة,np,啤酒
+61,a bottle,قارورة,np,一瓶
+62,a glass of wine,كأس من النبيذ,np,一杯酒
+63,a pint,نصف لتر,np,一品脱
+64,a table for * people,طاولة ل * شخص,np,*人的座位
+65,abdomen,بطن,np,腹部
+66,after,بعد,adv,之后
+67,afternoon,بعد الظهر,np,下午
+68,airconditioner,مكيف هواء,np,空调
+69,airplane,طائرة,np,飞机
+70,airport,مطار,np,机场
+71,Am I under arrest?,هل أنا معتقل؟,sent,我被捕了吗？
+72,April,نيسان‎\ أبريل,np,四月
+73,Around the corner.,قريب من هنا,sent,转角
+74,August,آب‎\ أغسطس,np,八月
+75,avenue,سبيل,np,大道
+76,back,ظهر,np,背
+77,bars,مشرب,np,酒吧
+78,bathroom,‏حمام,np,卫生间
+79,batteries,بطارية,np,电池
+80,beans,فول,np,豆
+81,bedsheet,ملاءة سرير,np,床单
+82,bedsheets,ملاءات السرير,np,床单
+83,beef,لحم بقري,np,牛肉
+84,beer,بيرة,np,啤酒
+85,before,قبل,adv,以前
+86,bigger,أكبر,adj,更大
+87,black,أسود,adj,黑色
+88,black pepper,فلفل أسود,np,黑胡椒
+89,black tea,شاي أسود,np,红茶
+90,blue,أزرق,adj,蓝色
+91,body,الجسم,np,身体
+92,boiled water,ماء مغلي,np,开水
+93,bottled water,مياه معبأة,np,矿泉水
+94,bread,خبز,np,面包
+95,breakfast,وجبة افطار,np,早饭
+96,brown,بني,adj,褐色
+97,bus station,محطة حافلات,np,公家车站
+98,butter,زبدة,np,牛油
+99,buttocks,مؤخرة,np,屁股
+100,cafe,مقهى,np,咖啡室
+101,Can I get a bag?,هل استطيع الحصول على حقيبة؟,sent,我可以要一个袋子吗？
+102,Can I get insurance?,هل أستطيع الحصول على تأمين؟,sent,我可以买保险吗？
+103,Can I just pay a fine now?,هل استطيع دفع غرامة أدفع غرامة الآن؟,sent,我可以缴交罚款吗？
+104,"Can I look at the menu, please?",قائمة الطعام، من فضلك؟,sent,请给我看看菜单.
+105,Can I make a telephone call?,هل يمكنني الحصول على مكالمة هاتفية؟,sent,我可以打个电话吗？
+106,Can I make an appointment?,هل يمكنني حجز موعد؟,sent,我可以预约吗？
+107,Can I make international calls here?,هل استطيع القيام بمكالمة دولية من هنا؟,sent,可以打国际电话吗?
+108,Can I print here?,هل يمكنني الطبع من هنا؟,sent,我可以复印吗？
+109,Can I use your cell phone?,أيمكنني إستخدام هاتفك؟,sent,我可以用您的手机吗？
+110,Can I use your phone?,أيمكنني استخدام هاتفك النقال؟,sent,我可以用您的电话吗？
+111,Can you change money for me?,هل يمكنك تحويل مال لي؟ ,sent,你可以帮我换钱吗？
+112,Can you get a doctor?,هل يمكنك أن تحضر طبيب؟,sent,你可以帮我找一位医生吗？
+113,Can you show me on the map?,هل يمكنك أن تريني أين هو على الخريطة؟,sent,你可以在地图上指给我看?
+114,Can you speak *?,عل يمكنك تحدث ال*؟,vp,你可以说*吗？
+115,Can you suggest another hotel?,هل يمكنك اقتراح فندق آخر؟,sent,你有其他推荐的酒店吗？
+116,Can you tell me where * is?,اين *؟,vp,你可以告诉我*在那里吗？
+117,Can you wake me at *?,هل تستطيع إيقاظي الساعة *؟,vp,请在明天早上*点钟叫醒我。
+118,Can you write the name and address down?,هل يمكنك أن تكتب لي الإسم و العنوان؟,sent,你可以写下名字和地址吗？
+119,car,سيارة,np,汽车
+120,carbonated water,مياه غازية,np,碳酸水
+121,cash,أوراق مالية,np,现金
+122,cheap,رخيص,adj,便宜
+123,cheaper,أرخص,adj,比较便宜
+124,check,شيك,np,支票
+125,cheese,جبنة,np,奶酪
+126,chest,صدر,np,胸部
+127,chicken,دجاج‎\ فراخ,np,鸡
+128,cleaner,أنظف,np,清洁工
+129,closed,مغلق,adj,关闭
+130,club soda,صودا,np,苏打水
+131,coffee,قهوة,np,咖啡
+132,Coke,الكولا,np,可乐
+133,cold medicine,دواء للزكام,np,感冒药
+134,cough,سعال,np,咳嗽
+135,Could you please *?,لو سمحتو هل يمكنك أن *؟,vp,可以请你*吗？
+136,Could you repeat that?,هل يمكنك أن تكرر هذا؟,sent,你可以重复一遍吗？
+137,credit card,بطاقة ائتمان,np,信用卡
+138,December,كانون الأول‎/ ديسمبر,np,十二月
+139,deposit,وديعة,np,押金
+140,diarrhoea,إسهال,np,泻肚子/拉肚子
+141,dictionary,قاموس,np,词典
+142,diesel,ديزل‎ سولار‎ جاز,np,柴油
+143,Do you accept * currency?,هل تقبل العملة *؟,vp,你接受*的货币吗？
+144,Do you accept credit cards?,هل تقبل بطاقات الائتمان؟,sent,你接受信用卡吗？
+145,Do you accept US dollars?,هل تقبل الدولار الأمريكي؟,sent,你接受美元吗？
+146,Do you go to *?,هل تذهب إلى *؟,vp,去不去*?
+147,Do you have a safe?,هل لديك خزنة؟,sent,你们有没有保险箱？
+148,Do you have an English menu?,هل لديك قائمة بالإنجليزية؟,sent,你有没有英文菜单？
+149,Do you have any rooms available?,هل لديك أي غرف متاحة؟,sent,你们还有房间吗？
+150,Do you have any snacks?,هل لديك أي وجبات خفيفة؟,sent,有没有小吃？有没有点心？
+151,Do you have insurance?,هل لديك تأمين؟,sent,你有保险吗？
+152,Do you have it in another color?,هل لديك لون آخر؟,sent,你们有没有另外的颜色?
+153,Do you have this in my size?,هل لديكم من هذه بمقاسي؟,sent,有没有我的尺寸？
+154,Do you know *?,هل تعلم *؟,vp,你知道*吗？
+155,Do you serve alcohol?,هل تقدمون أي خمور؟,sent,你们销售酒精类饮品吗？
+156,Do you ship overseas?,هل هن,sent,可以邮寄到海外吗？
+157,Do you speak English?,هل هناك شحن دولى؟,sent,你会说英语吗？
+158,Do you take * currency?,هل تقبلون عملة *؟,vp,*元可以吗？
+159,Do you understand?,مفهوم؟,sent,听得懂吗？
+160,Does that include breakfast?,هل هذا يشمل وجبة الافطار؟,sent,早餐包含在内吗？
+161,Does the room come with *?,هل تحتوي هذه الغرفة على *؟,vp,这个房间有没有*？
+162,Does this bus stop in *?,هل تتوقف هذه الحافلة في *؟,vp,这辆巴士停在*吗？
+163,Does this train stop in *?,هل يتوقف هذا القطار في *؟,vp,这列火车停在*吗？
+164,Don't touch me!,لا تلمسني!,sent,不要碰我！
+165,downtown,وسط البلد,np,市中心
+166,driver's license,رخصة قيادة,np,驾驶证件
+167,dumpling,زلابية,np,饺子
+168,ears,آذان,np,耳朵
+169,east,شرق,adj,东
+170,eggs,بيض,np,鸡蛋
+171,English books,كتب إنجليزية,np,英文书
+172,English magazines,مجلات انجليزية,np,英文杂志
+173,English newspaper,جريدة إنجليزية,np,英文报纸
+174,entrance,دخول,np,入口
+175,evening,مساء,np,晚上
+176,Excellent!,ممتاز!,sent,太棒了！
+177,Excuse me. (begging pardon),أعذرني,sent,打扰一下。
+178,Excuse me. (coming through),لو سمحت,sent,对不起。
+179,Excuse me. (getting attention),معذرة,sent,请问。
+180,exit,خروج,np,出口
+181,expensive,غالي,adj,贵
+182,eyes,عيون,sent,眼睛
+183,face,وجه,np,脸
+184,February,شباط‎ \فبراير,np,二月
+185,feet,أقدام,np,脚
+186,fever,حمة,np,发烧
+187,"Fine, thank you.",بخير، شكرا لك.,sent,"很好, 谢谢。"
+188,fingers,أصابع,np,手指
+189,first class cabin,مقصورة درجة أولى,np,头等舱
+190,fish,سمك,np,鱼
+191,fixed-price meal,وجبة ثابتة السعر,np,定价套餐
+192,forbidden,ممنوع,adj,被禁止
+193,Friday,يوم الجمعة,np,星期五
+194,fried rice,أرز مقلي,np,炒饭
+195,from,من,prt,从
+196,fruits,فاكهة,np,水果
+197,gas station,محطة بنزين,np,加油站
+198,glasses,نظارات,np,眼镜
+199,go,ذهب,vp,去
+200,Go straight.,انطلق الى الأمام.,sent,直走
+201,gold,ذهب,adj,金色
+202,Good evening.,مساء الخير.,sent,晚上好。
+203,Good morning.,صباح الخير.,sent,早安。
+204,Good night.,تصبح على خير,sent,晚安。
+205,Goodbye,مع السلامة,sent,再见。
+206,Goodbye (informal),باي باي,sent,拜拜。
+207,green,أخضر,adj,绿色
+208,green tea,شاي أخضر,np,绿茶
+209,grey,رمادي,adj,灰色
+210,hair,شعر,np,头发
+211,half,نصف,adj,半
+212,ham,خنزير,np,火腿
+213,hands,أيادي,np,手
+214,he,هو,np,他
+215,head,رئس,np,头
+216,heater,مدفأة,np,暖气
+217,Hello.,مرحبا.,sent,你好。
+218,Help!,النجدة!,sent,救命！
+219,here,هنا,adv,这里
+220,Here by yourself?,هل أنت(ي) هنا لوحدك؟,sent,你自己一个人吗？
+221,hotel,فندق,np,酒店／旅馆
+222,How are you?,كيف حالك,sent,你好吗？
+223,How do I get to * ?,كيف أصل إلى *؟,vp,怎么去*?
+224,How much does it cost to get to *?,كم سيكلفني الذهاب إلى *؟,vp,去*要多少钱？
+225,How much is a room for one person per night?,ما سعر الغرفة لفرد واحد؟,sent,单人房一晚多少钱？
+226,How much is a room for two people per night?,ما سعر الغرفة لفردين؟,sent,双人房一晚多少钱？
+227,How much is a ticket to *?,ما سعر التذكرة الى *؟,vp,去*的票多少钱？
+228,How much is it per hour?,ما السعر للساعة؟,sent,一小时是多少钱？
+229,How much is it to call to *?,ما سعر المكالمة الى *؟,vp,打给*是多少钱？
+230,How much is it to get in?,ما سعر تذكرة الدخول؟,sent,入场费多少钱？
+231,How much is this?,بكم هذا؟,sent,多少钱？
+232,How much?,بكم؟,sent,多少？
+233,How was your meal?,كيف كانت وجبتك؟,sent,这一顿饭怎么样？
+234,I,انا,np,我
+235,I am from *.,أنا من *.,vp,我从*来。
+236,I am sick.,انا مريض,sent,我生病了。
+237,I can't afford it.,لا أستطيع تحمل هذا,sent,我付不起。
+238,I can't speak *.,لا اتكلم *.,vp,我不会讲*。
+239,I don't eat *.,لا آكل *.,vp,我不吃*。
+240,I don't have *.,ليس عندي *.,vp,我没有*。
+241,I don't speak *.,لا أتحدث *.,vp,我不能说*。
+242,I don't understand (something heard).,أنا لا أفهم,sent,我听不懂。
+243,I don't want *.,لا أريد *.,vp,我不要*。
+244,I don't want it.,أنا لا أريده,sent,我不要。
+245,I have *.,لدي *.,vp,我有*。
+246,I have arrived.,لقد وصلت.,sent,我到了。
+247,I haven't done anything wrong.,ما عملت اشي غلط.,sent,我没有做错事。
+248,I lost my *.,فقدت *.,vp,我丢了我的*。
+249,I lost my bag.,فقدت حقيبتي.,sent,我丢了我的包包。
+250,I need *.,احتاج *.,vp,我要*。
+251,I need a doctor.,أحتاج طبيب.,sent,我需要医生。
+252,I need to see your passport.,أ حتاج أن أرى جواز سفرك,sent,我需要看一下你的护照。
+253,I need to talk to a lawyer.,أريد التحدث مع محامي,sent,我要跟律师联系。
+254,I need your help.,أحتاج مساعدة لو سمحت.,sent,我需要你的帮助。
+255,I only eat Halal food.,أنا آكل الطعام الحلال فقط.,sent,我只吃清真食品。
+256,I want *.,أريد *.,vp,我想要*。
+257,I want a dish with *.,أريد أن آكل طبق مع *.,vp,我想吃*的菜。
+258,I want to check out.,أريد أن أدفع لاغادر.,sent,我要退房。
+259,I want to rent a car.,أريد ايجار سيارة.,sent,我想要租车。
+260,I want to talk to the * embassy.,أود بالتحدث مع سّفارة *.,vp,我希望跟*大使馆联系。
+261,I will stay for * night(s).,سأقيم * ليلى,vp,我打算住*夜。
+262,I work at the *.,أعمل في *.,vp,我在*工作。
+263,I'd like to rent a car.,أريد ايجار سيارة.,sent,我想租车
+264,I'll call the police.,سأتصل بالشرطة‏ ‎.,sent,我会叫警察。
+265,I'm a vegetarian.,أنا نباتي.,sent,我吃素的。
+266,I'm finished.,لقد انتهيت.,sent,我完成了。
+267,I'm looking for *.,أبحث عن *.,vp,我在找*
+268,I'm lost.,أنا تائه.,sent,我迷路了。
+269,I'm not feeling well.,أنا لست على ما يرام.,sent,我不舒服
+270,I'm not interested.,أنا لست مهتم.,sent,我没有兴趣。
+271,I'm sick.,انا مريض.,sent,我生病了。
+272,I'm sorry.,أنا آسف.,sent,对不起。
+273,I'm with *.,أنا مع *.,vp,我现在跟*在一起
+274,I've been injured.,إنني مصاب.,sent,我受伤了。
+275,I've lost *.,أنا فقدت *.,vp,我的*不见了
+276,intersection,تقاطع,np,交界
+277,Is breakfast included?,هل يتضمن ذلك الإفطار؟,sent,包含早餐吗？
+278,Is insurance included?,هل هذا شامل التأمين؟,sent,包含保险吗？
+279,Is it open on *?,هل هو مفتوح *؟,vp,*对外开放吗？
+280,Is there * around here?,هل هناك * قريب؟,vp,附近有没有*
+281,Is there * you recommend?,هل هناك * تنصحني به؟,vp,你有推介的*吗？
+282,Is there a group discount?,هل هناك خصم للمجموعات؟,sent,有没有团体折扣？
+283,Is there a local specialty?,هل هناك تخصص محلي؟,sent,有没有当地特色？
+284,Is there a student discount?,هل هناك خصم للطلاب؟,sent,有没有学生优惠？
+285,Is there anywhere I can leave luggage?,هل هناك مكان أترك فيه أغراضي؟,sent,有没有地方让我放行李？
+286,Is there someone here who speaks English?,هل هناك أحد يتحدث الانجليزية؟,sent,这里有人会说英语吗？
+287,Is there table service?,هل هناك خدمة طاولات؟,sent,有没有餐桌服务？
+288,Is this seat free?,هل هذا المقعد خالى؟,sent,这里有人坐吗？
+289,It hurts here.,أشعر بالألم هنا.,sent,这里很痛
+290,It is nine in the morning.,هي التاسعة صباحاً,sent,现在是早上9点钟。
+291,It was a misunderstanding.,كان سوء تفاهم,sent,这是误会。
+292,It was delicious.,كان لذيذ‏ ‎,sent,很好吃。
+293,It's an emergency.,إنها حالة طارئة.,sent,这是紧急情况。
+294,"It's okay. (polite response to ""I'm sorry"")",لا بأس,sent,没关系。
+295,It's uncomfortable.,إنه غير مريح.,sent,不舒服。
+296,itchy,يحكك,adj,痒
+297,January,كانون الثاني‎/ يناير,np,一月
+298,juice,عصير,np,果汁
+299,July,تموز/‎ يوليو,np,七月
+300,June,حزيران/‎ يونيو,np,六月
+301,last week,الأسبوع الماضي,np,上个星期
+302,later,لاحقاً,adv,迟一点
+303,Leave me alone.,اتركني وحدي.,sent,不要打扰我。
+304,left,يسار,adv,左边
+305,legs,أرجل,np,腿
+306,less,اقل,adj,少
+307,less than,أقل من,adj,少于
+308,lockers,خزانات,np,储物柜
+309,Look out!,انتبه!,sent,小心！
+310,lunch,غداء,np,午饭
+311,macaroni,معكرونة,np,通粉
+312,March,آذار‎ / مارس,np,三月
+313,May,أيار‎/ مايو,np,五月
+314,May I have a bottle of *?,هل لي بالحصول على قارورة *؟,vp,可以来一瓶*吗？
+315,May I have a cup of *?,هل لي بالحصول على كوب من *؟,vp,可以来一杯*吗？
+316,May I have a glass of *?,هل لي بالحصول على كأس من *؟,vp,可以来一杯*吗？
+317,May I have some *?,هل لي بالحصول على القليل من *؟,vp,可以来一点*吗？
+318,"May I please ask, what is your name?",هل لي بالسؤال، ما هو اسمك؟,sent,请问你叫什么名?
+319,May I see the room first?,هل لي برؤية الغرفة أولاً؟,sent,请问我可以先看一下房间吗？
+320,Me too.,أنا أيضاً,sent,我也是
+321,Medical emergency,طارئ طبي,np,医疗急诊
+322,men,رجال,np,男人
+323,midnight,منتصف الليل,np,半夜
+324,milk,حليب,np,牛奶
+325,Monday,الاثنين,np,星期一
+326,money,مال,np,金钱
+327,more,المزيد/أكثر,adj,更
+328,more than,أكثر من,adj,多于
+329,morning,صباح,np,早上
+330,mutton,لحم الضأن,np,羊肉
+331,My name is * .,أنا اسمي *.,vp,我叫 * 。
+332,nails,"أظافر (fingernails), مسامير (hammering nails) ",np,指甲
+333,national ID,الهوية الوطنية,np,证件
+334,neck,رقبة,np,颈项/脖子
+335,newspaper,جرائد,np,报纸
+336,next week,الأسبوع القادم,np,下个星期
+337,Nice to meet you.,سعيد بالتعرف عليك,sent,很高兴认识你。
+338,night,ليلة/ليل,np,晚上好。
+339,No parking.,ممنوع الوقوف,sent,禁止停车
+340,"No, thank you.",لا، شكراً.,sent,不用了，谢谢。
+341,No.,لا.,sent,不要
+342,noodles,الشعيرية,np,面条
+343,noon,الظهيرة,np,中午
+344,north,شمال,adv,北
+345,nose,أنف,np,鼻子
+346,Not too far.,ليس بعيد جداً,sent,不太远
+347,November,تشرين الثاني/‎ نوفمبر,np,十一月
+348,now,الآن,adv,现在
+349,Number *.,رقم *,vp,数字
+350,October,تشرن الأول‎ /أكتوبر,np,十月
+351,"OK, I'll take it.",حسناً، سآخذه.,sent,我要买这个。
+352,Okay.,حسناًً,sent,好的
+353,"One more, please.",واحد إضافي، من فضلك.,sent,请再给我一个。
+354,one o'clock AM,الساعة الواحدة صباحاً,np,凌晨一点钟
+355,one o'clock PM,الساعة الواحدة مساءً,np,下午一点钟
+356,"One ticket to *, please.",تذكرة واحدة إلى *.,vp,要一张去*的票，谢谢
+357,one way,اتجاه واحد,adv,单行道
+358,open,مفتوح,adj,开
+359,orange,"برتقالي (the color or the adjective), برتقال (the fruit)",np,橙色
+360,orange,"برتقالي (the color or the adjective), برتقال (the fruit)",np,橙色
+361,orange juice,عصير برتقال,np,柳橙汁
+362,pain killer,مسكن ألم,np,止痛药
+363,painful,مؤلم,adj,痛。
+364,Pardon me?,عذراً/معذرة؟,sent,可以再重复一遍吗？
+365,passport,جواز سفر,np,护照
+366,Past the *.,بعد ال*. / بعد أن تتخطى ال*.,vp,传*
+367,pay,ادفع,vp,付
+368,pen,قلم حبر,np,笔
+369,pen,قلم حبر,np,笔
+370,pencil,قلم رصاص,np,铅笔
+371,petrol,بترول,np,汽油
+372,Please clean my room.,من فضلك نظف غرفتي.,sent,请清洁我的房间
+373,Please clear the plates.,من فضلك نظف الصحون.,sent,请洗干净这些碟子
+374,Please come with me.,أرجوك، تعال/تعالي معي.,sent,请跟我过来
+375,Please give me *.,من فضلك أعطني *.,vp,请给我*。
+376,Please turn up the AC.,من فضلك شغل المكيف الهوائي., sent,请把空调开大一点。
+377,Please use the meter machine.,من فضلك استعمل آلة السحب ببطاقة الائتمان.,sent,请打表。
+378,Please.,من فضلك,adv,请。
+379,police,الشرطة, np,警察
+380,pork,لحم خنزير,np,猪肉
+381,pork,لحم خنزير,np,猪肉
+382,postage stamp,طابع بريدي,np,邮票
+383,postcard,بطاقة بريدية,np,明信片
+384,postcard,بطاقة بريدية,np,明信片
+385,pull,اسحب,vp,拉
+386,purple,بنفسجي,adj,紫色
+387,push,ادفع,adv,推
+388,quiet,هادئ,adj,安静
+389,razor,موس حلاقة,np,剃刀
+390,razor,موس حلاقة,np,剃刀
+391,red,أحمر,adj,红色
+392,red wine,نبيذ أحمر,np,红酒
+393,restaurant,مطعم,np,餐厅
+394,rice,أرز,np,米饭
+395,right,يمين,part,右边
+396,road,شارع,np,路
+397,rum,شراب مسكر كحولي (رم),np,朗姆酒
+398,runny nose,سيلان الأنف,np,流鼻涕
+399,salad, سلطة,np,沙拉
+400,salt,ملح,np,盐
+401,Saturday,يوم السبت,np,星期六
+402,sausage,سجق/نقاق,np,香肠
+403,scented tea,شاي معطر,np,花茶
+404,second class cabin,مقصورة الدرجة الثانية,np,二等舱
+405,See you later.,أراك لاحقاً.,sent,待会见
+406,September,أيلول‎/ سبتمبر,np,九月
+407,shampoo,شامبو,np,洗发精
+408,she,هي,np,她
+409,shoulder,كتف,np,肩膀
+410,Show me., أرني.,sent,给我看一下。
+411,sites to see,مواقع لترى,np,景点
+412,slowly,ببطء,adv,慢慢的
+413,sneeze,عطسة,np,打喷嚏
+414,soap,صابون,np,肥皂
+415,"Some more *, pelase.",المزيد من *، من فضلك.,vp,再多一点*，谢谢
+416,sore,ملتهب,adj,酸
+417,soup,حساء,np,汤
+418,south,جنوب,adv,南
+419,speed limit,حد السرعة,np,速度限制
+420,stomach medicine,دواء للمعدة,np,肠胃药
+421,stop (on a street sign),قف,sent,停
+422,Stop! Thief!,توقف! لص/سارق‏! ‎,sent,住手！小偷！
+423,Stop.,توقف,sent,停。
+424,straight ahead,إلى الأمام,sent,往前走
+425,street,شارع,np,街
+426,sugar,سكر,np,糖
+427,sunblock lotion,مرهم حماية من حروق الشمس,np,防晒乳
+428,Sunday,الأحد,np,星期天
+429,supper,العشاء,np,晚饭
+430,"Take me there, please.",خذني إلى هناك من فضلك.,sent,请带我到那里。
+431,"Take me to *, please.",خذني إلى *، من فضلك.,vp,请您开到*。
+432,tampon,سدادة قطنية للدورة ,np,卫生棉条
+433,taxi,تاكسي‏/سيارة أجرة,np,出租车
+434,Taxi driver,سائق سيارة أجرة/تاكسي,np,出租车司机
+435,tea,شاي,np,茶
+436,telephone, هاتف,np,电话
+437,telephone, هاتف,np,电话
+438,Thank you so much.,شكراً جزيلاً,sent,非常感谢
+439,Thank you.,شكراًً,sent,谢谢。
+440,That's too expensive.,هذا غال جدا.,sent,太贵了。
+441,"The check, please.",الفاتورة، من فضلك.,sent,请结帐。
+442,the day after tomorrow,بعد غد,np,后天
+443,the day before yesterday,قبل البارحة,np,前天
+444,there,هناك,adv,那里
+445,There are * of us.,نحن * أشخاص,vp,一共有*个人
+446,they (f),هن,np,她们
+447,they (m/mixed),هم,np,他们
+448,they (two people),هما,np,他们
+449,This was very impressive!,كان هذا رائعا جدا!,sent,真的很棒！
+450,this week,هذا الأسبوع,np,这个星期
+451,throat,حلق,np,喉咙。
+452,Thursday,يوم الخميس,np,星期四
+453,To *.,إلى *,vp,去*
+454,toast,خبز التوست/المحمص,np,吐司
+455,today, اليوم,np,今天
+456,toes,أصابع القدم,np,脚指。
+457,toilet,حمام,np,厕所
+458,tomorrow,غداً,np,明天
+459,tonic water,مياه مقوية,np,通宁水
+460,toothbrush,فرشاة أسنان,np,牙刷
+461,toothbrush,فرشاة أسنان,np,牙刷
+462,toothbrush,فرشاة أسنان,np,牙刷
+463,toothbrush,فرشاة أسنان,np,牙刷
+464,toothpaste,معجون أسنان,np,牙膏
+465,Towards the *.,نحو ال*.,vp,靠近*
+466,train station,محطة القطار,np,火车站
+467,Tuesday,يوم الثلاثاء,np,星期二
+468,Turn left.,در إلى يسار.,sent,左拐。
+469,Turn right.,در إلى يمين.,sent,右拐。
+470,TV,‏تلفاز,np,电视
+471,U-turn.,منعطف.,sent,掉头。
+472,umbrella,مظلة,np,雨伞
+473,umbrella,مظلة,np,雨伞
+474,umbrella,مظلة,np,雨伞
+475,umbrella,مظلة,np,雨伞
+476,vegetables,خضروات,np,蔬菜
+477,vodka,شراب فودكا,np,伏特加
+478,waist, خصر,np,腰
+479,Wait or stay?,انتظر أو ابقى؟,sent,等待还是留下来？
+480,Wait.,انتظر.,sent,等一下。
+481,Watch for the *.,احذر ال*.,vp,注意*
+482,water,ماء,np,水
+483,we,نحن,np,我们
+484,Wednesday,يوم الأربعاء,np,星期三
+485,west,غرب,adv,西
+486,What is the exchange rate?,ما هو سعر العملة؟,sent,汇率多少？
+487,What is this called?,ماذا يدعى هذا؟,sent,这叫什么？
+488,What is this?,ما هذا؟,sent,这是什么？
+489,What is your name?,ما اسمك؟,sent,你叫什么名字？
+490,What is your name?,ما اسمك؟,sent,你叫什么名字？
+491,What is your name?,ما اسمك؟,sent,你叫什么名字？
+492,What is your name?,ما اسمك؟,sent,你叫什么名字？
+493,What is your special dish?,ما هو طبقك المميز؟,sent,你的招牌才是什么
+494,What time is breakfast/supper?,ما هو توقيت الفطور/العشاء؟,sent,早/晚餐是什么时候？
+495,What time is it?,كم الساعة؟,sent,现在几点？
+496,What time will this bus arrive?,متى ستصل هذه الحافلة؟,vp,公车什么时候到？
+497,What time will this train arrive?,متى سيصل هذا القطار؟,sent,火车什么时候到？
+498,What?,ماذا؟,sent,什么？
+499,When do I have to check out?,متى يجب علي تسجيل الخروج؟,sent,何时要退房？
+500,When does the bus for * leave?,متى تنطلق الحافلة المتجه إلى*؟,vp,去*的公车什么时候离开？
+501,When does the train for * leave?,متى ينطلق القطار المتجه إلى*؟,vp,去*的火车什么时候离开？
+502,When is closing time?,ما هو توقيت الإغلاق؟,sent,几点关门？
+503,When is opening time?,ما هو توقيت الافتتاح؟,sent,几点开门？
+504,When?,متى؟,sent,什么时候？
+505,Where are you from?,من أين أنت؟,sent,你从哪里来的？
+506,Where are you taking me?,إلى أين أنت آخذني؟,sent,你带我去哪里？
+507,Where can I find *?,أين يمكنني أن أجد؟,vp,哪里有*?
+508,Where can I get a traveler's check changed?,أين يمكنني أن أصرّف شيك سياحي؟,sent,我在哪里可以兑换这个旅行支票？
+509,Where can I get money changed?,أين يمكنني أن أصرّف بعض المال؟,sent,我要在哪里换钱？
+510,Where do we get tickets?,أين يمكننا أن نحصل على تذاكر؟,sent,哪里买车票？
+511,Where does it hurt?,أين يؤلمك؟,sent,哪里痛？
+512,Where does this bus go?,أين تذهب هذه الحافلة؟,sent,这辆巴士去哪里？
+513,Where does this train go?,أين يذهب هذا القطار؟,sent,这列火车去哪里？
+514,Where is an ATM?,أين توجد آلة الصرف الآلي؟,sent,提款机在哪里？
+515,Where is it on the map?,أين تقع على الخريطة؟,sent,在地图上的哪里？
+516,Where is the *?,أين ال*؟,vp,*在哪里？
+517,Where is the bathroom?,أين الحمام؟,sent,洗手间在哪里？
+518,Where is the bus to *?,أين الحافلة المتجهة إلى *؟,vp,到*的巴士在哪？
+519,Where is the toilet?,أين الحمام؟,sent,厕所在哪里？
+520,Where is the train to *?,أن القطار المتجه إلى *؟,vp,到*的火车在哪？
+521,Where?,اين؟,sent,哪里？
+522,Which direction?,بأي اتجاه؟,sent,哪个方向？
+523,Which station are we at?,نحن في أي محطة؟,sent,我们在哪一站？
+524,whiskey,شراب الويسكي,np,威士忌
+525,white,أبيض,adj,白色
+526,white wine,نبيذ أبيض,np,白酒
+527,Who?,من؟,sent,谁？
+528,Why?,لماذا؟,sent,为什么？
+529,women,نساء,np,女人
+530,work,عمل,np,工作
+531,wrist,معصم,np,手腕
+532,writing paper,ورق للكتابة,np,纸
+533,yellow,أصفر,adj,黄色
+534,"Yes, please.",نعم من فضلك,sent,是，谢谢
+535,Yes.,نعم.,sent,是
+536,yesterday, البارحة,np,昨天
+537,yield,ينتج,vp,让路
+538,you,أنت,np,你
+539,you (p), أنتم,np,你们
+540,You're cheating me.,"أنت تغشني (s), أنتما تغشانني (two), أنتم تغشونني (more than two)",sent,你在骗我。
+541,You're welcome.,على الرحب والسعة,sent,不客气。
+542,youth hostel,بيوت الشباب,np,青年旅馆
+546,"I'm fine, thank you.",بخير، شكرا لك.,sent,"很好, 谢谢。"
+547,Good.,جيد!,sent,好！
+548,Great.,عظيم.,sent,很棒！
+549,Are you here by yourself?,هل أنت بمفردك؟,sent,
+550,How much is *?,كم ثمن *؟,vp,多少钱 *？
+551,I don't understand.,أنا لا أفهم,sent,我听不懂。
+555,* dollar(s),دولار,prt,美元
+556,* pound(s),جنيه,prt,磅
+557,* dirham,درهم,prt,迪拉姆
+558,* dinar,دينار,prt,第纳尔
+559,* yuan,* يوان,prt,*元
+560,For one person.,لشخص واحد.,sent,为一个人。
+561,For two people.,لشخصين.,sent,为两个人。
+562,For * people.,ل* أشخاص.,vp,为*个人。
+563,Yeah.,نعم.,vp,是的。
+564,Sure.,صحيح!,sent,当然啦!
+565,friend,صديق,np,朋友
+566,Hi!,مرحبا!,sent,你好！
+567,What would you like?,ماذا تحب؟,sent,你喜欢什么？
+568,I would like *.,أود *.,vp,我想要 *。
+569,mango,مانجو,np,芒果
+570,apple,تفاحة,np,苹果
+571,* people,* أشخاص,prt,*个人

@@ -262,13 +262,14 @@ export default class ChatScreen extends Component<{}>  {
     var np = "";
     var temp = "";
     var final = "";
-    var unit = "";
+    var prt = "";
+    var qnt = "";
 
     if (myLang == "عربية") phraseDB = ar;
     else if (myLang == "中文") phraseDB = cn;
     else phraseDB = en;
 
-    //input array has 0 or 1 phrase only
+    //input array has 0
     if (selectedPhraseID.length == 0) {
       return final;
     }
@@ -277,15 +278,22 @@ export default class ChatScreen extends Component<{}>  {
     //so we return the phrase by itself
     else if (selectedPhraseID.length == 1) {
       var onlypid = selectedPhraseID[0];
-      final = phraseDB[onlypid].phrase;
+
+      if (typeof(onlypid) == "number") {
+        final += onlypid;
+      }
+      else {
+        final = phraseDB[onlypid].phrase;
+      }
+
+      var astlist = [" *", "* ", "*"]
 
       //extra whitespace removal if the phrase is returned as it self.
-      if (final.includes(" *")) {
-        final = final.replace(" *", "");
-      }
-      if (final.includes("* ")) {
-        final = final.replace("* ", "");
-      }
+      astlist.forEach(function(ast) {
+        if (final.includes(ast)) {
+          final = final.replace(ast, "");
+        }
+      }) 
     }
 
     //input has 2 or more phrases
@@ -293,7 +301,7 @@ export default class ChatScreen extends Component<{}>  {
       selectedPhraseID.forEach(function(pid) {
         //query is an integer; append as itself
         if (typeof(pid) == "number") {
-          unit += pid;
+          qnt += pid;
         }
         //query item is a phrase id
         else {
@@ -301,11 +309,21 @@ export default class ChatScreen extends Component<{}>  {
           if (phraseDB[pid].pos == "sent") {
             final += phraseDB[pid].phrase + " ";
           }
+
           //if the query is a particle
           //CHECK if number is always at the beginning
           else if (phraseDB[pid].pos == "prt") {
-            unit += phraseDB[pid].phrase;
+            unit = phraseDB[pid].phrase;
+
+            if (unit.includes("*")) {
+              unit = unit.replace("*", qnt);
+            }
+            else {
+              unit = qnt + " " + unit;
+            }
+            np += unit;
           }
+
           else {
             if (phraseDB[pid].phrase.includes("*") && phraseDB[pid].pos == "vp") {
               temp = phraseDB[pid].phrase;
@@ -317,15 +335,15 @@ export default class ChatScreen extends Component<{}>  {
       });
     }
 
-    //if there is some number or unit
-    if (unit != "") {
-      np = unit + " " + np;
-    }
-
     //replace asterisk with noun phrase or empty string
-    if (temp != "")
+    if (temp != "") {
       temp = temp.replace("*", np);
-    final += temp;
+      final += temp;
+    }
+    
+    else {
+      final += np;
+    }
 
     //capitalize the sentence if English
     if (myLang == "English") {
