@@ -395,6 +395,12 @@ export default class ChatScreen extends Component<{}>  {
       following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
     */
     let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
+    conceptCount.sort(function(a, b) {
+      if(b[1] - a[1] === 0) { // Sorting concepts by phrase length
+        return this.state.phraseData[a[0]].phrase.length - this.state.phraseData[b[0]].phrase.length;
+      } else return b[1] - a[1];
+    });
+    
     // Preparing a list of possible concepts (stored as objects) for Jihyun's function and for the display
     let conceptsArray = []
     for(let i = 0; i < conceptCount.length; i++) {
