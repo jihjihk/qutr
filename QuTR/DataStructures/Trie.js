@@ -6,8 +6,13 @@ class Trie {
 	}
 
 	insertPhrase(cID, phrase) {
+		// Remove punctuation from phrase
+		let punctRE = /[\u2000-\u206F\u2E00-\u2E7F\\!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/g;
+		let spaceRE = /\s+/g;
+		let noPuncPhrase = phrase.replace(punctRE, "").replace(spaceRE, " ").toLowerCase();
+
 		let current = this.root;
-		let words = phrase.toLowerCase().split(" ");
+		let words = noPuncPhrase.split(" ");
 		for(let i = 0; i < words.length; i++) {
 			let word = words[i];
 			for(let j = 0; j < word.length; j++) {
