@@ -3,7 +3,9 @@ import {
     Text,
 } from 'native-base';
 import {
-    TouchableHighlight
+    TouchableHighlight,
+    ScrollView,
+    View
 } from 'react-native';
 
 import {
@@ -19,8 +21,6 @@ export default class SuggestionButton extends Component {
   }
 
   render = () => {
-
-    console.log(this.props);
 
     return (
         <TouchableHighlight underlayColor={SECONDARY} 

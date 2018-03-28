@@ -12,7 +12,7 @@ import SuggestionButton from './../suggestionButton/SuggestionButton.js';
 
 import styles from './styles.js';
 
-const DEFAULTCOUNT = 3;
+const DEFAULTCOUNT = 2;
 const windowWidth = Dimensions.get('window').width;
 
 export default class SuggestionBar extends Component {
@@ -60,7 +60,7 @@ export default class SuggestionBar extends Component {
 
   getSuggestionWidth = () => {
 
-    var widthDivisor = 3;
+    var widthDivisor = DEFAULTCOUNT;
     if (this.state.suggestionCount == 1 || this.state.suggestionCount ==2 )
       widthDivisor = this.state.suggestionCount;
     return {width: windowWidth/widthDivisor};
@@ -82,7 +82,7 @@ export default class SuggestionBar extends Component {
         <View>
           <ScrollView contentContainerStyle={[this.state.viewStyle, this.props.style]} 
                       horizontal 
-                      showsHorizontalScrollIndicator = {false}
+                      showsHorizontalScrollIndicator = {true}
                       keyboardShouldPersistTaps = 'always'>            
             {suggestions}
           </ScrollView> 
