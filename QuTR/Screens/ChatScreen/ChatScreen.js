@@ -69,7 +69,6 @@ export default class ChatScreen extends Component<{}>  {
                 selectedPhraseID: [],
                 defaultLang: "English",
                 trie: null,
-                loading: true
               };
   }
 
@@ -179,7 +178,7 @@ export default class ChatScreen extends Component<{}>  {
           firebaseService.database().ref()
           .child('conversations')
           .child(self.state.conversation)
-          .limitToLast(20).on('value', (e) => {
+          .on('value', (e) => {
                   var rows = [];
                   if ( e && e.val() ) {                
                       e.forEach(function(child) 
@@ -383,6 +382,8 @@ export default class ChatScreen extends Component<{}>  {
 
     var potentialMessage = this.state.message;
     var stringForSuggestions = value;
+
+    this.refs.sb.scrollToBeginning();
     
     if (suggestionSelected) {
 
@@ -397,7 +398,7 @@ export default class ChatScreen extends Component<{}>  {
     let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
     conceptCount.sort(function(a, b) {
       if(b[1] - a[1] === 0) { // Sorting concepts by phrase length
-        return this.state.phraseData[a[0]].phrase.length - this.state.phraseData[b[0]].phrase.length;
+        return self.state.phraseData[a[0]].phrase.length - self.state.phraseData[b[0]].phrase.length;
       } else return b[1] - a[1];
     });
     
@@ -414,7 +415,6 @@ export default class ChatScreen extends Component<{}>  {
       this.sendToSuggestionBar(conceptsArray) :
       this.sendToSuggestionBar([]);
 
-    /* If everything in the message input is identical to our potential message, enable send */
     if (stringForSuggestions.length>0 || potentialMessage.length==0) this.disableSend();
     else this.enableSend();
   }
@@ -426,6 +426,8 @@ export default class ChatScreen extends Component<{}>  {
     this.refs.sb.populate(suggestions);
   }
 
+  /* Comparator for rendering selections in the composer bar according to their order
+     in the potential message */
   compareObjs = (a, b) => {
 
     if (a.index < b.index)
@@ -444,7 +446,8 @@ export default class ChatScreen extends Component<{}>  {
     if (!value) return;
     this.setState({previousSelectionIDs: this.state.previousSelectionIDs.concat([id]),
                    previousSelections: this.state.previousSelections.concat([value]),
-                   renderPreviousSelections: []},
+                   renderPreviousSelections: [],
+                   selectionsVisible: true},
       function(){
         /* Upon selecting a suggestion we want to generate the possible sentence out of the choices that we have 
            This will help us reorder selections in the message composer bar and give a more accurate picture to
@@ -471,10 +474,10 @@ export default class ChatScreen extends Component<{}>  {
             newSelections.push(child.text);
           })
 
-          /* Once the previous selections have been sorted, call renderText() to display them,
+          /* Once the previous selections have been sorted, call renderComposerBar() to display them,
              as well as textChanged to rerender text in the message input box */
 
-          this.renderText(newSelections);
+          this.renderComposerBar(newSelections);
           /* I first pass the selection to Shehroze, 
              then he gives me back the remaining text, 
              the one that wasn't used to produce the suggestion 
@@ -489,7 +492,7 @@ export default class ChatScreen extends Component<{}>  {
 
   /* This adds the selected suggestion to the message composer
      and handles the appropriate state changes */
-  renderText = (previousSelections) => {
+  renderComposerBar = (previousSelections) => {
     var selection = [];
     previousSelections.forEach(function(child) {
 
@@ -518,7 +521,7 @@ export default class ChatScreen extends Component<{}>  {
   /* Removes the selection from the message composer and memory */
   removeSelection = (deletedSelection, ID) => {    
 
-    /* Call renderText later */
+    /* Call renderComposerBar later */
     var previousSelections = this.state.previousSelections;
     var previousSelectionIDs = this.state.previousSelectionIDs;
     
@@ -537,8 +540,7 @@ export default class ChatScreen extends Component<{}>  {
                       self.setState({message: this.generateSentence(self.state.previousSelectionIDs)}, 
                                     function() {
 
-                                      //alert("Message: "+self.state.message+",\nPrevious selections: "+self.state.previousSelections.toString()+",\nIDs: "+self.state.previousSelectionIDs.toString()+",\nRemoved: "+deletedSelection);
-                                      self.renderText(self.state.previousSelections);
+                                      self.renderComposerBar(self.state.previousSelections);
 
                                       /* Clean up if no suggestions are left selected */
                                       if (self.state.previousSelections.length==0 || 
@@ -595,17 +597,10 @@ export default class ChatScreen extends Component<{}>  {
       <Container ref="container" style={[styles.Container]}>
 
           <Header center={<Title style={[styles.Title]}>{this.state.theirName}</Title>}/>
-          <ChatWindow ref="cw">
-
-            { this.state.loading ? <View style={{flex: 1, justifyContent:'center'}}>
-                                      <ActivityIndicator size="large"/>
-                                    </View>
-                                  :
-                                  <ListView dataSource={this.state.dataSource}
-                                            enableEmptySections={true}
-                                            renderRow={(rowData) => this.renderRow(rowData)}/>
-            }
-            
+          <ChatWindow ref="cw">          
+            <ListView dataSource={this.state.dataSource}
+                      enableEmptySections={true}
+                      renderRow={(rowData) => this.renderRow(rowData)}/>            
           </ChatWindow>
 
           {this.state.selectionsVisible ? <View style={[styles.scrollWrapper]}>
