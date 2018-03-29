@@ -79,6 +79,7 @@ class Trie {
 				}
 			}
 		}
+		console.log(suggestions);
 		return suggestions;
 	}
 
@@ -94,7 +95,9 @@ class Trie {
 					if (!concepts.hasOwnProperty(concept)) {
 						concepts[concept] = 1;
 					} else {
-						concepts[concept] += 1;
+						if(inputWords.length > 1) {
+							concepts[concept] += 1;
+						}
 					}
 				}
 			}
