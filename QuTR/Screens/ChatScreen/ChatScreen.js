@@ -600,7 +600,12 @@ export default class ChatScreen extends Component<{}>  {
           <ChatWindow ref="cw">          
             <ListView dataSource={this.state.dataSource}
                       enableEmptySections={true}
-                      renderRow={(rowData) => this.renderRow(rowData)}/>            
+                      renderRow={(rowData) => this.renderRow(rowData)}/>  
+            
+            { this.state.areTheyTyping ? 
+              <Text>{this.state.theirName} is typing...</Text> :
+              null
+            }          
           </ChatWindow>
 
           {this.state.selectionsVisible ? <View style={[styles.scrollWrapper]}>
