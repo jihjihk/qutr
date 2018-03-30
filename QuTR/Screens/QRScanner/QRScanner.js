@@ -68,7 +68,9 @@ export default class QRScanner extends Component<{}>  {
     var date = Firebase.database.ServerValue.TIMESTAMP;
     
     var convInfo = {"timestamp": date, 
-                    "ID1": myKey, "ID2": theirKey};
+                    "ID1": myKey, "ID2": theirKey,
+                    [myKey]: false,
+                    [theirKey]: false};
 
     this.createConversation(newChatKey, convInfo);
       

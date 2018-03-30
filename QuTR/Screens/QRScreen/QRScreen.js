@@ -64,6 +64,9 @@ export default class QRScreen extends Component<{}>  {
             var time = new Date();
             var ms = time.getTime();
             var ID1 = snapshot.val().ID1, ID2 = snapshot.val().ID2;
+
+            conversationRef.update({[ID1]: false, [ID2]: false})
+
             /* The conversation expired, needs to be removed */
             if (Math.abs(snapshot.val().timestamp - ms) > 86400000) {
 

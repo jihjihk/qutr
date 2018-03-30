@@ -13,6 +13,7 @@ import {
 import { Container, Title, Text, Icon } from 'native-base';
 import { Icon as ElementsIcon } from 'react-native-elements';
 import { StackNavigator } from 'react-navigation';
+import { DotIndicator } from 'react-native-indicators'
 
 import ToolbarButton from '../../Components/toolbarButton/ToolbarButton.js';
 import MessageInput from '../../Components/messageInput/MessageInput.js';
@@ -69,6 +70,7 @@ export default class ChatScreen extends Component<{}>  {
                 selectedPhraseID: [],
                 defaultLang: "English",
                 trie: null,
+                areTheyTyping: false
               };
   }
 
@@ -143,10 +145,12 @@ export default class ChatScreen extends Component<{}>  {
 
   getChatInformation = () => {
 
+    /* Has to be on because messages are being sent continuously */
     firebaseService.database().ref()
     .child('users')
     .child(this.state.user.uid)
-    .on('value', function(snapshot) {
+    .once('value')
+    .then(function(snapshot) {
 
       if (!!snapshot.val().conversation)
         self.setState({conversation: snapshot.val().conversation,
@@ -170,7 +174,8 @@ export default class ChatScreen extends Component<{}>  {
             .then(function(snapshot) {
 
               self.setState({theirName: snapshot.val().name,
-                             theirPicture: snapshot.val().picture})
+                             theirPicture: snapshot.val().picture,
+                             theirID: theirID})
             });
           })
 
@@ -185,9 +190,11 @@ export default class ChatScreen extends Component<{}>  {
                         {rows.push ( child )})
                   }
                   var ds = this.state.dataSource.cloneWithRows(rows);
+                  var areTheyTyping = (!!this.state.theirID) ? e.val()[this.state.theirID] : null
                   this.setState({
                       dataSource: ds,
-                      loading: false
+                      loading: false,
+                      areTheyTyping: areTheyTyping
                   });
               });
         });
@@ -205,6 +212,7 @@ export default class ChatScreen extends Component<{}>  {
     var newMessageKey = this.getNewMessageKey();
 
     this.pushToConversation(newMessage, newMessageKey);
+    this.amTyping(false);
 
     this.setState({message: '',
                    renderPreviousSelections: [],
@@ -378,6 +386,14 @@ export default class ChatScreen extends Component<{}>  {
       this.setState({selectionsVisible: !this.state.selectionsVisible})
   }
 
+  amTyping = (truth) => {
+
+    firebaseService.database().ref()
+    .child('conversations')
+    .child(self.state.conversation)
+    .update({[this.state.user.uid]: truth})    
+  }
+
   textChanged = (value, suggestionSelected, remainderString) => {
 
     var potentialMessage = this.state.message;
@@ -390,6 +406,11 @@ export default class ChatScreen extends Component<{}>  {
       stringForSuggestions = remainderString;
       this.refs.mi.logAllProperties(this.refs.mi.input, remainderString);
     }
+
+    /* Send typing info for me to the database */
+    if (stringForSuggestions.length>0 || 
+        suggestionSelected)  this.amTyping(true);
+    else this.amTyping(false); 
     
     /*
       Shehroze: Making a call to the trie to return a set of concepts based on given text input. The
@@ -547,7 +568,8 @@ export default class ChatScreen extends Component<{}>  {
                                           self.state.message=="") {
 
                                         this.disableSend();
-                                        this.setState({selectionsVisible: false})
+                                        this.setState({selectionsVisible: false});
+                                        this.amTyping(false);
                                       }
                                     })
                    })    
@@ -603,7 +625,15 @@ export default class ChatScreen extends Component<{}>  {
                       renderRow={(rowData) => this.renderRow(rowData)}/>  
             
             { this.state.areTheyTyping ? 
-              <Text>{this.state.theirName} is typing...</Text> :
+              <View style={[styles.theirMessageView]}>
+                <Image source={{uri: this.state.theirPicture}} 
+                       style={[styles.picture]}/>
+                <DotIndicator color={PRIMARY_DARK}
+                              count={3}
+                              size={5}
+                              style={{marginLeft: 5, justifyContent: 'flex-start'}}/>
+              </View>
+                 :
               null
             }          
           </ChatWindow>
