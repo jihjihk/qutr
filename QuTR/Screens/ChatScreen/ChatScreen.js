@@ -149,8 +149,7 @@ export default class ChatScreen extends Component<{}>  {
     firebaseService.database().ref()
     .child('users')
     .child(this.state.user.uid)
-    .once('value')
-    .then(function(snapshot) {
+    .on('value', function(snapshot) {
 
       if (!!snapshot.val().conversation)
         self.setState({conversation: snapshot.val().conversation,
@@ -190,7 +189,7 @@ export default class ChatScreen extends Component<{}>  {
                         {rows.push ( child )})
                   }
                   var ds = this.state.dataSource.cloneWithRows(rows);
-                  var areTheyTyping = (!!this.state.theirID) ? e.val()[this.state.theirID] : null
+                  var areTheyTyping = (!!this.state.theirID && !!e.val()) ? e.val()[this.state.theirID] : false;
                   this.setState({
                       dataSource: ds,
                       loading: false,
