@@ -39,7 +39,7 @@ export default class SuggestionBar extends Component {
     if (suggestions.length>0) {
 
       var phrases=[], IDs=[];
-      suggestions.forEach(function(child) {
+      suggestions.forEach((child) => {
         phrases.push(child.phrase);
         IDs.push(child.ID);
       })

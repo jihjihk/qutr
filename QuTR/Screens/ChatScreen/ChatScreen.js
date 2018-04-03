@@ -40,7 +40,6 @@ import Trie from '../../DataStructures/Trie.js';
 import Texts from "../../Texts.js"
 
 const Firebase = require('firebase');
-var self;
 
 export default class ChatScreen extends Component<{}>  {
 
@@ -53,7 +52,6 @@ export default class ChatScreen extends Component<{}>  {
   */
   constructor(props) {
     super(props);
-    self=this;
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state={sendDisabled: true,
                 sendStyle: {color: BLACK},
@@ -70,15 +68,15 @@ export default class ChatScreen extends Component<{}>  {
                 selectedPhraseID: [],
                 defaultLang: "English",
                 trie: null,
-                areTheyTyping: false
+                theyAreTyping: false,
+                conversationRef: null,
+                userRef: null
               };
   }
 
   componentWillMount () {
     this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
     this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this));
-
-    this.getChatInformation();
   }
 
   componentWillUnmount () {
@@ -98,105 +96,110 @@ export default class ChatScreen extends Component<{}>  {
 
   componentDidMount() {
 
-    firebaseService.database().ref()
-                .child('users')
-                .child(this.state.user.uid)
-                .once('value')
-                .then(function(snapshot) {
-                  /*
-                    Shehroze:
-                    Retrieve user language from Firebase and initialize the Trie with the appropriate data.
-                  */
-                  let lang = snapshot.val().language;
-                  let trie = new Trie();
-                  let phraseData = null;
-                  if (lang === "English") {
-                    phraseData = en;
-                  } else if (lang === "عربية") {
-                    phraseData = ar;
-                  } else if (lang === "中文") {
-                    phraseData = cn;
-                  }
-                  if(phraseData) {
-                    for (let pObj in phraseData) {
-                      trie.insertPhrase(pObj, phraseData[pObj].phrase);
-                    }
-                  }
-                  self.setState({
-                    defaultLang: lang,
-                    trie: trie,
-                    phraseData: phraseData,
-                    loading: false
-                  })
-                })
+    var userRef = firebaseService.database().ref()
+                  .child('users')
+                  .child(this.state.user.uid);
+
+    userRef
+    .once('value')
+    .then((snapshot) => {
+      /*
+        Shehroze:
+        Retrieve user language from Firebase and initialize the Trie with the appropriate data.
+      */
+      let lang = snapshot.val().language;
+      let trie = new Trie();
+      let phraseData = null;
+      if (lang === "English") {
+        phraseData = en;
+      } else if (lang === "عربية") {
+        phraseData = ar;
+      } else if (lang === "中文") {
+        phraseData = cn;
+      }
+      if(phraseData) {
+        for (let pObj in phraseData) {
+          trie.insertPhrase(pObj, phraseData[pObj].phrase);
+        }
+      }
+      this.setState({
+        defaultLang: lang,
+        trie: trie,
+        phraseData: phraseData,
+        loading: false,
+        userRef: userRef
+      }, () => {this.getChatInformation()})
+    })
   }
 
   componentDidUnMount() {
     /* Turn off the listeners */
-    firebaseService.database().ref()
-      .child('users')
-      .child(this.state.user.uid).off('value');
-
-    firebaseService.database().ref()
-        .child('conversations')
-        .child(self.state.conversation)
-        .off('value')
+    this.state.userRef.off('value');
+    this.state.conversationRef.off('value')
   }  
 
   getChatInformation = () => {
 
-    /* Has to be on because messages are being sent continuously */
-    firebaseService.database().ref()
-    .child('users')
-    .child(this.state.user.uid)
-    .on('value', function(snapshot) {
+    /* Listener type has to be 'on', not 'once', because messages are being sent continuously */
+    this.state.userRef
+    .on('value', (snapshot) => {
 
-      if (!!snapshot.val().conversation)
-        self.setState({conversation: snapshot.val().conversation,
+      var conversation = snapshot.val().conversation;
+
+      if (!!conversation) {
+
+        var conversationRef = firebaseService.database().ref()
+                              .child('conversations')
+                              .child(conversation);
+        
+        this.setState({conversation: conversation,
+                       conversationRef: conversationRef,
                        myPicture: snapshot.val().picture},
         /* I get metainformation about the conversation once*/
-        function() {
-          firebaseService.database().ref()
-          .child('conversations')
-          .child(self.state.conversation)
+        () => {          
+          
+          this.state.conversationRef
           .once('value')
-          .then(function(snapshot) {
+          .then((snapshot) => {
 
-            var theirID = (snapshot.val().ID1==self.state.user.uid ? 
-                           snapshot.val().ID2 : 
-                           snapshot.val().ID1);
+            var snapshotValue = snapshot.val();
+            var theirID = (snapshotValue.ID1==this.state.user.uid ? 
+                           snapshotValue.ID2 : 
+                           snapshotValue.ID1);
 
             firebaseService.database().ref()
             .child('users')
             .child(theirID)
             .once('value')
-            .then(function(snapshot) {
+            .then((snapshot) => {
 
-              self.setState({theirName: snapshot.val().name,
+              this.setState({theirName: snapshot.val().name,
                              theirPicture: snapshot.val().picture,
                              theirID: theirID})
             });
           })
 
           /* This is obtaining messages continuously */
-          firebaseService.database().ref()
-          .child('conversations')
-          .child(self.state.conversation)
-          .on('value', (e) => {
-                  var rows = [];
-                  if ( e && e.val() ) {                
-                      e.forEach(function(child) 
-                        {rows.push ( child )})
-                  }
-                  var ds = this.state.dataSource.cloneWithRows(rows);
-                  var areTheyTyping = (!!this.state.theirID && !!e.val()) ? e.val()[this.state.theirID] : false;
-                  this.setState({
-                      dataSource: ds,
-                      loading: false,
-                      areTheyTyping: areTheyTyping
-                  });
-              });
-        });
+          this.state.conversationRef
+          .on('value', (snapshot) => {
+            var rows = [], snapshotValue = snapshot.val();
+            if (snapshot && snapshotValue) {                
+              snapshot.forEach((child) => {
+                rows.push ( child )
+              })
+            }
+            var ds = this.state.dataSource.cloneWithRows(rows);
+            var theyAreTyping = (!!this.state.theirID && !!snapshotValue) ? 
+                                snapshotValue[this.state.theirID] : 
+                                false;
+            this.setState({
+                dataSource: ds,
+                loading: false,
+                theyAreTyping: theyAreTyping
+            });
+          });
+        })
+      }
     })
   }
 
@@ -236,15 +239,11 @@ export default class ChatScreen extends Component<{}>  {
 
   pushToConversation = (message, messageKey) => {
 
-    firebaseService.database().ref()
-      .child('conversations')
-      .child(this.state.conversation)
-      .child(messageKey)
-      .set(message);
+    this.state.conversationRef
+    .child(messageKey)
+    .set(message);
 
-    firebaseService.database().ref()
-    .child('conversations')
-    .child(this.state.conversation)
+    this.state.conversationRef
     .update({'timestamp': message.timestamp});
   }
 
@@ -295,7 +294,7 @@ export default class ChatScreen extends Component<{}>  {
       var astlist = [" *", "* ", "*"]
 
       //extra whitespace removal if the phrase is returned as it self.
-      astlist.forEach(function(ast) {
+      astlist.forEach((ast) => {
         if (final.includes(ast)) {
           final = final.replace(ast, "");
         }
@@ -304,7 +303,7 @@ export default class ChatScreen extends Component<{}>  {
 
     //input has 2 or more phrases
     else {      
-      selectedPhraseID.forEach(function(pid) {
+      selectedPhraseID.forEach((pid) => {
         //query is an integer; append as itself
         if (typeof(pid) == "number") {
           qnt += pid;
@@ -387,9 +386,7 @@ export default class ChatScreen extends Component<{}>  {
 
   amTyping = (truth) => {
 
-    firebaseService.database().ref()
-    .child('conversations')
-    .child(self.state.conversation)
+    this.state.conversationRef
     .update({[this.state.user.uid]: truth})    
   }
 
@@ -407,8 +404,8 @@ export default class ChatScreen extends Component<{}>  {
     }
 
     /* Send typing info for me to the database */
-    if (stringForSuggestions.length>0 || 
-        suggestionSelected)  this.amTyping(true);
+    if (stringForSuggestions.length>0 || suggestionSelected)  
+      this.amTyping(true);
     else this.amTyping(false); 
     
     /*
@@ -416,15 +413,16 @@ export default class ChatScreen extends Component<{}>  {
       following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
     */
     let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
-    conceptCount.sort(function(a, b) {
+    conceptCount.sort((a, b) => {
       if(b[1] - a[1] === 0) { // Sorting concepts by phrase length
-        return self.state.phraseData[a[0]].phrase.length - self.state.phraseData[b[0]].phrase.length;
+        return this.state.phraseData[a[0]].phrase.length - this.state.phraseData[b[0]].phrase.length;
       } else return b[1] - a[1];
     });
     
     // Preparing a list of possible concepts (stored as objects) for Jihyun's function and for the display
-    let conceptsArray = []
-    for(let i = 0; i < conceptCount.length; i++) {
+    let conceptsArray = [];
+    var conceptCountLength = conceptCount.length;
+    for(let i = 0; i < conceptCountLength; i++) {
       let cID = conceptCount[i][0];
       if (this.state.phraseData.hasOwnProperty(cID)) {
         let cPhrase = this.state.phraseData[cID].phrase;
@@ -439,8 +437,6 @@ export default class ChatScreen extends Component<{}>  {
     else this.enableSend();
   }
 
-  /* This is where the current input is being sent to the suggestion bar 
-     to generate placeholder suggestions with appended dots */
   sendToSuggestionBar = (suggestions) => {
 
     this.refs.sb.populate(suggestions);
@@ -468,35 +464,32 @@ export default class ChatScreen extends Component<{}>  {
                    previousSelections: this.state.previousSelections.concat([value]),
                    renderPreviousSelections: [],
                    selectionsVisible: true},
-      function(){
+      () => {
         /* Upon selecting a suggestion we want to generate the possible sentence out of the choices that we have 
            This will help us reorder selections in the message composer bar and give a more accurate picture to
            the user of what will be sent as a message */
-        var message = self.generateSentence(self.state.previousSelectionIDs);
-        self.setState({message: message}, function() {
+        var message = this.generateSentence(this.state.previousSelectionIDs);
+        this.setState({message: message}, () => {
 
-          var helperArr=[];
+          var phraseAppearanceOrder=[];
           /* Sort all of the previous selections according to their indices in the projected message string */
-          self.state.previousSelections.forEach(function(child) {
-            var newChild=child.toLowerCase();
+          this.state.previousSelections.forEach((child) => {
+            var tempChild=child.toLowerCase();
             
-            if (child.includes("*")) newChild = newChild.replace(" *", "");
-            if (child.includes("?")) newChild = newChild.replace("?", "");
-            if (child.includes("!")) newChild = newChild.replace("!", "");
-            helperArr.push({"text": child, "index": self.state.message.toLowerCase().indexOf(newChild) })
+            if (child.includes("*")) tempChild = tempChild.replace(" *", "");
+            if (child.includes("?")) tempChild = tempChild.replace("?", "");
+            if (child.includes("!")) tempChild = tempChild.replace("!", "");
+            phraseAppearanceOrder.push({"text": child, "index": this.state.message.toLowerCase().indexOf(tempChild) })
           })
 
-          sortedHelperArr = helperArr;
-
-          helperArr.sort(this.compareObjs);
+          phraseAppearanceOrder.sort(this.compareObjs);
           var newSelections = [];
-          helperArr.forEach(function(child) {
+          phraseAppearanceOrder.forEach((child) => {
             newSelections.push(child.text);
           })
 
           /* Once the previous selections have been sorted, call renderComposerBar() to display them,
              as well as textChanged to rerender text in the message input box */
-
           this.renderComposerBar(newSelections);
           /* I first pass the selection to Shehroze, 
              then he gives me back the remaining text, 
@@ -512,22 +505,23 @@ export default class ChatScreen extends Component<{}>  {
 
   /* This adds the selected suggestion to the message composer
      and handles the appropriate state changes */
-  renderComposerBar = (previousSelections) => {
-    var selection = [];
-    previousSelections.forEach(function(child) {
+  renderComposerBar = (selections) => {
+
+    var tempSelectionArray = [];
+    selections.forEach((child) => {
 
       /* In state, a phrase and its ID are always at the same index
          in their respective containers */
-      var indexInState = self.state.previousSelections.indexOf(child);
-      var ID = self.state.previousSelectionIDs[indexInState];
-      selection.push(<View key={self.state.previousSelections.length}
+      var indexInState = this.state.previousSelections.indexOf(child);
+      var ID = this.state.previousSelectionIDs[indexInState];
+      tempSelectionArray.push(<View key={this.state.previousSelections.length}
                          style={{flexDirection: 'row', alignItems:'center'}}>
                       <Text style={[styles.selectedSuggestion]}
                             overflow="hidden"
                             numberOfLines={1}>
                           {child}
                       </Text>
-                      <TouchableOpacity onPress={() => {self.removeSelection(child, ID)}}>
+                      <TouchableOpacity onPress={() => {this.removeSelection(child, ID)}}>
                          <Icon name='md-remove-circle'
                                style={[styles.removeSelection]}>
                          </Icon>                                     
@@ -535,7 +529,7 @@ export default class ChatScreen extends Component<{}>  {
                     </View>);
     })
 
-    this.setState({renderPreviousSelections: selection});
+    this.setState({renderPreviousSelections: tempSelectionArray});
   }
 
   /* Removes the selection from the message composer and memory */
@@ -554,24 +548,23 @@ export default class ChatScreen extends Component<{}>  {
                    previousSelectionIDs: previousSelectionIDs,
                    renderPreviousSelections: []
                   }, 
+      () => {
+        
+        this.setState({message: this.generateSentence(this.state.previousSelectionIDs)}, 
+          () => {
 
-                   function() {
-                      
-                      self.setState({message: this.generateSentence(self.state.previousSelectionIDs)}, 
-                                    function() {
+            this.renderComposerBar(this.state.previousSelections);
 
-                                      self.renderComposerBar(self.state.previousSelections);
+            /* Clean up if no suggestions are left selected */
+            if (this.state.previousSelections.length==0 || 
+                this.state.message=="") {
 
-                                      /* Clean up if no suggestions are left selected */
-                                      if (self.state.previousSelections.length==0 || 
-                                          self.state.message=="") {
-
-                                        this.disableSend();
-                                        this.setState({selectionsVisible: false});
-                                        this.amTyping(false);
-                                      }
-                                    })
-                   })    
+              this.disableSend();
+              this.setState({selectionsVisible: false});
+              this.amTyping(false);
+            }
+          })
+     })    
   }
 
 
@@ -623,7 +616,7 @@ export default class ChatScreen extends Component<{}>  {
                       enableEmptySections={true}
                       renderRow={(rowData) => this.renderRow(rowData)}/>  
             
-            { this.state.areTheyTyping ? 
+            { this.state.theyAreTyping ? 
               <View style={[styles.theirMessageView]}>
                 <Image source={{uri: this.state.theirPicture}} 
                        style={[styles.picture]}/>

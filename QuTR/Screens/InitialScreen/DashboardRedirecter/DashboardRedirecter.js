@@ -32,8 +32,6 @@ import { PRIMARY,
          SECONDARY_DARK
        } from '../../../masterStyle.js';
 
-var self;
-
 export default class App extends Component<{}> {
 
   constructor(props)  {
@@ -43,8 +41,6 @@ export default class App extends Component<{}> {
       page: 0,
       user: firebaseService.auth().currentUser
     }
-    this.setState.bind(this);
-    self = this;
   }
 
   changeTab = (page) => {

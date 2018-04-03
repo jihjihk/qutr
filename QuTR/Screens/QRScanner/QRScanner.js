@@ -9,13 +9,11 @@ import QRCodeScanner from 'react-native-qrcode-scanner';
 import styles from './styles.js';
 
 const Firebase = require('firebase');
-var self;
 
 export default class QRScanner extends Component<{}>  {
 
   constructor(props) {
     super(props);
-    self=this;
     this.state={
       user: firebaseService.auth().currentUser
     }
@@ -39,22 +37,22 @@ export default class QRScanner extends Component<{}>  {
     firebaseService.database().ref()
     .child('users')
     .child(this.state.user.uid)
-    .on('value', function(snapshot) {
+    .on('value', (snapshot) => {
       var conversation = snapshot.val().conversation;
       if (!!conversation) {
-        self.setState({conversation: conversation});
+        this.setState({conversation: conversation});
       }
     })
   }
 
   onSuccess(e) {
 
-    if (!!self.state.conversation) {
+    if (!!this.state.conversation) {
       firebaseService.database().ref()
       .child('conversations')
-      .child(self.state.conversation)
-      .remove(function() {
-        self.processNewConversation(e);
+      .child(this.state.conversation)
+      .remove(() => {
+        this.processNewConversation(e);
       });
     }
     else this.processNewConversation(e);
@@ -74,8 +72,8 @@ export default class QRScanner extends Component<{}>  {
 
     this.createConversation(newChatKey, convInfo);
       
-    /* Redirect user to ConversationsScreen upon a successful scan */
-    setTimeout(function() {self.props.changeTab(1)}, 750);
+    /* Redirect user to ChatScreen upon a successful scan */
+    setTimeout(() => {this.props.changeTab(1)}, 750);
   }
 
   createConversation = (chatKey, message) => {

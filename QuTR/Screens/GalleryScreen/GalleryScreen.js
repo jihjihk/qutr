@@ -36,8 +36,6 @@ const Blob = RNFetchBlob.polyfill.Blob;
 window.Blob = Blob;
 window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest;
 
-var self;
-
 export default class GalleryScreen extends Component<{}>  {
 
   static navigationOptions = { header: null };
@@ -50,7 +48,6 @@ export default class GalleryScreen extends Component<{}>  {
                    uid: this.props.navigation.state.params.uid,
                    loadingIndicator: false
     }
-    self = this;
   }
 
   componentWillMount()  {
@@ -64,9 +61,9 @@ export default class GalleryScreen extends Component<{}>  {
 
   refreshAndFetch() {
 
-    self.setState({photos: [],
+    this.setState({photos: [],
                    lastCursor: null,
-                   load: true}, self.fetchPhotos);
+                   load: true}, this.fetchPhotos);
   }
 
   /* Take different actions if we load for the first time or come back from camera */
@@ -133,9 +130,10 @@ export default class GalleryScreen extends Component<{}>  {
                 this.setState({loadingIndicator: false})
                 /* Navigate back to ProfileScreen and update the profile picture automatically */
                 this.props.navigation.state.params.that.setState({picture: url}, 
-                  function() { self.updateRemotely();
-                               self.goBack()
-                             });                
+                  () => { this.updateRemotely();
+                          this.goBack()
+                        }
+                );                
               })
               .catch((err) => {
                 Alert.alert("Error!")
@@ -173,7 +171,7 @@ export default class GalleryScreen extends Component<{}>  {
                 }
               </ScrollView>
             <Footer left={<ToolbarButton name='ios-more'
-                                         onPress={() => {this.setState({load: true}, function() {this.getPhotos(false)});}}/>}
+                                         onPress={() => {this.setState({load: true}, () => {this.getPhotos(false)});}}/>}
                     right={<ToolbarButton name='md-camera'
                                           onPress={() => {this.props.navigation.navigate('Camera', {refreshAndFetch: this.refreshAndFetch});}}/>}/>
             {this.state.loadingIndicator &&
