@@ -1,17 +1,21 @@
 import { StyleSheet,
-      } from 'react-native';
+         Dimensions
+} from 'react-native';
 
 import {
   SECONDARY_DARK,
-  PRIMARY_DARK
+  PRIMARY_DARK,
+  SUGGESTIONBAR_HEIGHT
 } from '../../masterStyle.js';
+
+const windowHeight = Dimensions.get('window').height;
 
 
 export default StyleSheet.create({
 
   container: {
     backgroundColor: SECONDARY_DARK,
-    height: 40,
+    height: windowHeight/SUGGESTIONBAR_HEIGHT,
     borderRightWidth: 0.2,
     borderColor: PRIMARY_DARK,
     justifyContent: 'center',
