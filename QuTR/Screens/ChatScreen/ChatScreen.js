@@ -397,7 +397,7 @@ export default class ChatScreen extends Component<{}>  {
 
   textChanged = (value, suggestionSelected, remainderString) => {
 
-    var stringForSuggestions, potentialMessage = this.state.message;
+    var conceptsArray, stringForSuggestions, potentialMessage = this.state.message;
     
     /* Check that the user is not entering an empty string */
     if (/\S/.test(value)) 
@@ -417,6 +417,17 @@ export default class ChatScreen extends Component<{}>  {
       this.amTyping(true);
     else this.amTyping(false); 
     
+    conceptsArray = this.getConcepts(stringForSuggestions);
+
+    stringForSuggestions!=="" ? 
+      this.sendToSuggestionBar(conceptsArray) :
+      this.sendToSuggestionBar([]);
+
+    if (stringForSuggestions.length>0 || potentialMessage.length==0) this.disableSend();
+    else this.enableSend();
+  }
+
+  getConcepts = (stringForSuggestions) => {
     /*
       Shehroze: Making a call to the trie to return a set of concepts based on given text input. The
       following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
@@ -438,12 +449,7 @@ export default class ChatScreen extends Component<{}>  {
         conceptsArray[i] = { ID: cID, phrase: cPhrase };
       }
     }
-    stringForSuggestions!=="" ? 
-      this.sendToSuggestionBar(conceptsArray) :
-      this.sendToSuggestionBar([]);
-
-    if (stringForSuggestions.length>0 || potentialMessage.length==0) this.disableSend();
-    else this.enableSend();
+    return conceptsArray;
   }
 
   sendToSuggestionBar = (suggestions) => {
@@ -480,11 +486,7 @@ export default class ChatScreen extends Component<{}>  {
         var message = this.generateSentence(this.state.previousSelectionIDs);
         this.setState({message: message}, () => {
 
-          var reorderedSelections = this.reorderSelectionsForComposerBar();
-          alert("Reorder selections: "+reorderedSelections.toString()+"\nMessage: "+this.state.message);
-          /* Once the previous selections have been sorted, call renderComposerBar() to display them,
-             as well as textChanged to rerender text remaining in the message input box */
-          this.renderComposerBar(reorderedSelections);
+          this.refreshComposerBar();
           this.textChanged(value, true, "");
         })
       })
@@ -497,9 +499,11 @@ export default class ChatScreen extends Component<{}>  {
     this.state.previousSelections.forEach((child) => {
       var tempChild=child.toLowerCase();
       
-      if (child.includes("*")) tempChild = tempChild.replace(" *", "");
+      if (child.includes("*.")) tempChild = tempChild.replace(" *.", "");
       if (child.includes("?")) tempChild = tempChild.replace("?", "");
       if (child.includes("!")) tempChild = tempChild.replace("!", "");
+      if (child.includes("* ")) tempChild = tempChild.replace("* ", "");
+      else if (child.includes(" *")) tempChild = tempChild.replace(" *", "")
       phraseAppearanceOrder.push({"text": child, "index": this.state.message.toLowerCase().indexOf(tempChild) })
     })
 
@@ -540,6 +544,14 @@ export default class ChatScreen extends Component<{}>  {
     this.setState({renderPreviousSelections: tempSelectionArray});
   }
 
+  refreshComposerBar = () => {
+
+    var reorderedSelections = this.reorderSelectionsForComposerBar();
+    /* Once the previous selections have been sorted, call renderComposerBar() to display them,
+       as well as textChanged to rerender text remaining in the message input box */
+    this.renderComposerBar(reorderedSelections);
+  }
+
   /* Removes the selection from the message composer and memory */
   removeSelection = (deletedSelection, ID) => {    
 
@@ -560,12 +572,7 @@ export default class ChatScreen extends Component<{}>  {
       () => {        
 
         
-        var reorderedSelections = this.reorderSelectionsForComposerBar();
-        alert("Reorder selections: "+reorderedSelections.toString()+"\nMessage: "+this.state.message);
-        /* Once the previous selections have been sorted, call renderComposerBar() to display them,
-           as well as textChanged to rerender text remaining in the message input box */
-        this.renderComposerBar(reorderedSelections);
-
+        this.refreshComposerBar();
         /* Clean up if no suggestions are left selected */
         if (this.state.previousSelections.length==0 || 
             this.state.message=="") {
