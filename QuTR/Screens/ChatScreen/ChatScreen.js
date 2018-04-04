@@ -152,32 +152,13 @@ export default class ChatScreen extends Component<{}>  {
                               .child('conversations')
                               .child(conversation);
         
+        /* Get my information for display */
         this.setState({conversation: conversation,
                        conversationRef: conversationRef,
                        myPicture: snapshot.val().picture},
-        /* I get metainformation about the conversation once*/
         () => {          
           
-          this.state.conversationRef
-          .once('value')
-          .then((snapshot) => {
-
-            var snapshotValue = snapshot.val();
-            var theirID = (snapshotValue.ID1==this.state.user.uid ? 
-                           snapshotValue.ID2 : 
-                           snapshotValue.ID1);
-
-            firebaseService.database().ref()
-            .child('users')
-            .child(theirID)
-            .once('value')
-            .then((snapshot) => {
-
-              this.setState({theirName: snapshot.val().name,
-                             theirPicture: snapshot.val().picture,
-                             theirID: theirID})
-            });
-          })
+          this.fetchCorrespondentInformation();
 
           /* This is obtaining messages continuously */
           this.state.conversationRef
@@ -203,6 +184,30 @@ export default class ChatScreen extends Component<{}>  {
     })
   }
 
+  fetchCorrespondentInformation = () => {
+
+    this.state.conversationRef
+    .once('value')
+    .then((snapshot) => {
+
+      var snapshotValue = snapshot.val();
+      var theirID = (snapshotValue.ID1==this.state.user.uid ? 
+                     snapshotValue.ID2 : 
+                     snapshotValue.ID1);
+
+      firebaseService.database().ref()
+      .child('users')
+      .child(theirID)
+      .once('value')
+      .then((snapshot) => {
+
+        this.setState({theirName: snapshot.val().name,
+                       theirPicture: snapshot.val().picture,
+                       theirID: theirID})
+      });
+    })
+  }
+
   sendMessage = () => {
 
     if (this.state.sendDisabled)  return;
@@ -210,10 +215,10 @@ export default class ChatScreen extends Component<{}>  {
     /* Read the text input, create a message, push to the database and clean up user interface */
     var selectedIDs = this.state.previousSelectionIDs;
 
-    var newMessage = this.createMessage(this.state.user.uid, selectedIDs);
-    var newMessageKey = this.getNewMessageKey();
+    var message = this.createMessage(this.state.user.uid, selectedIDs);
+    var messageKey = this.getNewMessageKey();
 
-    this.pushToConversation(newMessage, newMessageKey);
+    this.addNewMessageToConversation(message, messageKey);
     this.amTyping(false);
 
     this.setState({message: '',
@@ -237,7 +242,7 @@ export default class ChatScreen extends Component<{}>  {
       .push().key;
   }
 
-  pushToConversation = (message, messageKey) => {
+  addNewMessageToConversation = (message, messageKey) => {
 
     this.state.conversationRef
     .child(messageKey)
@@ -392,8 +397,12 @@ export default class ChatScreen extends Component<{}>  {
 
   textChanged = (value, suggestionSelected, remainderString) => {
 
-    var potentialMessage = this.state.message;
-    var stringForSuggestions = value;
+    var stringForSuggestions, potentialMessage = this.state.message;
+    
+    /* Check that the user is not entering an empty string */
+    if (/\S/.test(value)) 
+      stringForSuggestions = value;
+    else stringForSuggestions = "";
 
     this.refs.sb.scrollToBeginning();
     
@@ -403,7 +412,7 @@ export default class ChatScreen extends Component<{}>  {
       this.refs.mi.logAllProperties(this.refs.mi.input, remainderString);
     }
 
-    /* Send typing info for me to the database */
+    /* Send my typing info to the database */
     if (stringForSuggestions.length>0 || suggestionSelected)  
       this.amTyping(true);
     else this.amTyping(false); 
@@ -471,36 +480,35 @@ export default class ChatScreen extends Component<{}>  {
         var message = this.generateSentence(this.state.previousSelectionIDs);
         this.setState({message: message}, () => {
 
-          var phraseAppearanceOrder=[];
-          /* Sort all of the previous selections according to their indices in the projected message string */
-          this.state.previousSelections.forEach((child) => {
-            var tempChild=child.toLowerCase();
-            
-            if (child.includes("*")) tempChild = tempChild.replace(" *", "");
-            if (child.includes("?")) tempChild = tempChild.replace("?", "");
-            if (child.includes("!")) tempChild = tempChild.replace("!", "");
-            phraseAppearanceOrder.push({"text": child, "index": this.state.message.toLowerCase().indexOf(tempChild) })
-          })
-
-          phraseAppearanceOrder.sort(this.compareObjs);
-          var newSelections = [];
-          phraseAppearanceOrder.forEach((child) => {
-            newSelections.push(child.text);
-          })
-
+          var reorderedSelections = this.reorderSelectionsForComposerBar();
+          alert("Reorder selections: "+reorderedSelections.toString()+"\nMessage: "+this.state.message);
           /* Once the previous selections have been sorted, call renderComposerBar() to display them,
-             as well as textChanged to rerender text in the message input box */
-          this.renderComposerBar(newSelections);
-          /* I first pass the selection to Shehroze, 
-             then he gives me back the remaining text, 
-             the one that wasn't used to produce the suggestion 
-             That text is the third parameter for the function
-             E.g. If input is "I want 5" and a suggestion is "I want",
-                  and the user selects it,
-                  we pass 5 as the third parameter to the following function */
+             as well as textChanged to rerender text remaining in the message input box */
+          this.renderComposerBar(reorderedSelections);
           this.textChanged(value, true, "");
         })
       })
+  }
+
+  /* Sort all of the previous selections according to their indices in the projected message string */ 
+  reorderSelectionsForComposerBar = () => {
+
+    var phraseAppearanceOrder=[];
+    this.state.previousSelections.forEach((child) => {
+      var tempChild=child.toLowerCase();
+      
+      if (child.includes("*")) tempChild = tempChild.replace(" *", "");
+      if (child.includes("?")) tempChild = tempChild.replace("?", "");
+      if (child.includes("!")) tempChild = tempChild.replace("!", "");
+      phraseAppearanceOrder.push({"text": child, "index": this.state.message.toLowerCase().indexOf(tempChild) })
+    })
+
+    phraseAppearanceOrder.sort(this.compareObjs);
+    var newSelections = [];
+    phraseAppearanceOrder.forEach((child) => {
+      newSelections.push(child.text);
+    })
+    return newSelections;
   }
 
   /* This adds the selected suggestion to the message composer
@@ -546,24 +554,26 @@ export default class ChatScreen extends Component<{}>  {
     
     this.setState({previousSelections: previousSelections,
                    previousSelectionIDs: previousSelectionIDs,
-                   renderPreviousSelections: []
+                   renderPreviousSelections: [],
+                   message: this.generateSentence(previousSelectionIDs)
                   }, 
-      () => {
+      () => {        
+
         
-        this.setState({message: this.generateSentence(this.state.previousSelectionIDs)}, 
-          () => {
+        var reorderedSelections = this.reorderSelectionsForComposerBar();
+        alert("Reorder selections: "+reorderedSelections.toString()+"\nMessage: "+this.state.message);
+        /* Once the previous selections have been sorted, call renderComposerBar() to display them,
+           as well as textChanged to rerender text remaining in the message input box */
+        this.renderComposerBar(reorderedSelections);
 
-            this.renderComposerBar(this.state.previousSelections);
+        /* Clean up if no suggestions are left selected */
+        if (this.state.previousSelections.length==0 || 
+            this.state.message=="") {
 
-            /* Clean up if no suggestions are left selected */
-            if (this.state.previousSelections.length==0 || 
-                this.state.message=="") {
-
-              this.disableSend();
-              this.setState({selectionsVisible: false});
-              this.amTyping(false);
-            }
-          })
+          this.disableSend();
+          this.setState({selectionsVisible: false});
+          this.amTyping(false);
+        }
      })    
   }
 
