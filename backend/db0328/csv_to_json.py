@@ -1,7 +1,9 @@
 import pandas as pd
 import json
+import sys, getopt
 
-def convert(inputcsv):
+def main(inputcsv):
+
 	tri = pd.read_csv(inputcsv)
 	en = pd.DataFrame(tri.en)
 	ar = pd.DataFrame(tri.ar)
@@ -38,6 +40,5 @@ def convert(inputcsv):
 	with open('cn.json', 'w') as outfile:
 	    json.dump(cnob, outfile)
 
-convert("master0403.csv")
-
-
+if __name__ == "__main__":
+	main(sys.argv[1])

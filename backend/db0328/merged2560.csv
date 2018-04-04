@@ -1,0 +1,2561 @@
+,ar,cn,en,pos
+0,,早上好，请问有什么可以帮你的吗?,Morning. May I help you?,sent
+1,,我想预订机票。,I would like to make flight reservations.,sent
+2,,我想预订一张飞往伦敦的下一班机票。,I want to book one ticket for the next flight to London.,sent
+3,,请帮我预订明天去芝加哥的机票好吗?,Would you please make my reservation to Chicago for tomorrow?,sent
+4,,给我一张单程到洛杉矶的票。,Give me a one-way ticket to L.A.,sent
+5,,请给我一张去芝加哥的单程二等票好吗?,"Can I have a second-class one-way ticket to Chicago, please?",sent
+6,,您何时出发?,When are you leaving?,sent
+7,,请问订哪一天?,"What date, please?",sent
+8,,我想订*张*月*日到巴黎的机票。,I'd like to get three seats on a flight to Paris on May *,vp
+9,,你们有那天的票吗?,Do you have any tickets available for that date?,sent
+10,,我想乘第一班飞机。,I'd like to take the first available flight.,sent
+11,,飞机何时起飞呢?,What time does the plane take off?,sent
+12,,让我看看还有票吗。,Let me check the availability.,sent
+13,,请稍等，让我看一下...,"Hold on a second please, Let me see...",sent
+14,,请等一下，让我看看是否有航班。,Just a minute and I'll see if there are any flights.,sent
+15,,稍等一会儿，我查一下时间表。,Just a second and I will check the schedule.,sent
+16,,请稍等，我来为您查一下。,"Just a monent,please. Let me check for you.",sent
+17,,有的。,"Yes, there is.",sent
+18,,美国航空公司有一架班机，在早上*点*分起飞。,American Airlines has a flight leaving at * a. m.,vp
+19,,我们有两次航班，下午*和*的。,We have two flights at * p.m. and * p.m.,vp
+20,,两次航班都有座。,Both flights have seats available.,sent
+21,,还有很多座位。,There are enough seats.,sent
+22,,是直飞航班吗?,Is it a direct flight?,sent
+23,,它们是直飞班机吗?,Are they non-stop flights?,sent
+24,,是的，这是直飞巴黎的飞机。,Yes. Direct to Paris.,sent
+25,,*点半我们有一个直达航班。,We have a nonstop flight leaving at half past ten.,vp
+26,,没有直达的航班。,There are no direct flights.,sent
+27,,那不是直飞的航班。,That is not a direct flight.,sent
+28,,你需要在东京转机。,You need to transfer at Tokyo.,sent
+29,,你喜欢哪种，头等舱还是经济舱?,"Which would you prefer, first class or economy?",sent
+30,,你要什么类型的票，头等舱还是经济舱?,"What kind of tickets do you want, first class or economy?",sent
+31,,您要头等舱还是经济舱?,Do you want to fly first or economy class?,sent
+32,,要什么舱位?,What class?,sent
+33,,公务舱。,Business class.,sent
+34,,请买经济舱。,"Economy, please.",sent
+35,,我要经济舱，回程时间不定的来回票。,I'll need an economy ticket with an open return.,sent
+36,,现在只有头等舱了，先生。,"Only first class tickets available, sir.",sent
+37,,经济舱的票价是多少?,What's the fare for an economy class ticket?,sent
+38,,去纽约的经济舱机票多少钱?,What's the fare to New York for the economy class?,sent
+39,,票价多少钱?,How much is the fare?,sent
+40,,这票多少钱?,How much is the ticket?,sent
+41,,请问票价是多少?,"What is the fare, please?",sent
+42,,您要单程票吗?,Will this be a one-way trip?,sent
+43,,往返还是单程?,Round trip or one way?,sent
+44,,往返票多少钱?,How much is the round trip?,sent
+45,,回程时你们有直飞的班机吗?,Do you have any direct flights coming back?,sent
+46,,单程。,One way.,sent
+47,,我要往返票，*月*日飞回芝加哥。,Round trip back to Chicago on Janunary *rd.,vp
+48,,从北京至上海的单程机票，头等舱是*元。,First class fare of a one-way ticket from Beijing to Shanghai is * yuan.,vp
+49,,*元。,* yuan.,vp
+50,,我买票有折扣吗?,Are there any discount tickets for me?,sent
+51,,机票能给我折扣吗?,Will you give me some discount on tickets?,sent
+52,,没有,No.,sent
+53,,好的，就这班。,OK. I will take it.,sent
+54,,我想就那个吧。,I guess that's OK.,sent
+55,,你需要什么样的座位?,What kind of seats do you want?,sent
+56,,你想要一个靠窗的位子，还是靠过道的?,Would you prefer a window seat or an aisle seat?,sent
+57,,可以给我靠窗的座位吗?,Could you give me a window seat?,sent
+58,,我想要一个靠窗的座位。,I'd like to have a seat by the window.,sent
+59,,很抱谦，没有靠窗的座位了。,"I'm sorry, but there are no window seats available.",sent
+60,,还有没有其他连在一起的座位?,Do you have any other seats open where we can sit together?,sent
+61,,我想要一个走廊的座位。,I'd like an aisle seat.,sent
+62,,请给我一个靠走道的座位。,"An aisle seat, please.",sent
+63,,靠过道的。,"Aisle, please.",sent
+64,,能告诉我你的名字、手机号和身份证号码吗?,"Would you please tell me your name, telephone and ID number?",sent
+65,,当然，我叫刘霞，手机号是*，身份证号是*。,Sure! I'm Liuxia. My phone number is * and ID number is *,vp
+66,,好的，我记下了。,"Well, I've got them.",sent
+67,,现在您已完成订位。,Now you have been booked.,sent
+68,,您的机票现在完全办妥了。,Your ticket is in order now.,sent
+69,,您的航班号是BT*。,Your flight number is BT*,vp
+70,,您的机位以确定，航班号为BT*，*起飞。,Your seat is confirmed on flight BT* leaving at *,vp
+71,,我什么时候来取票?,When shall I come to pick up the ticket?,sent
+72,,请于起飞前两天来付款取票。,"Come to pay the fare and fetch your ticket two days before departure, please.",sent
+73,,我去什么地方拿机票?,Where do I pick up the ticket?,sent
+74,,我什么时候到机场?,What time do I have to be at the airport?,sent
+75,,我应该什么时候检票呢?,When am I supposed to check in?,sent
+76,,我应该什么时间办理登机手续呢?,What time should I check in?,sent
+77,,你要在飞机起飞前两个小时到达那里。,You have to be there two hours before departure time.,sent
+78,,请于起飞前*小时到机场办理登机手续。,Please check in at the airport two hours before departure.,vp
+79,,尽量*到那吧，机场人会很多的。,Try to be there by * and the airport will be crowed.,vp
+80,,最晚请在*到那里。,Please be there fourteen o'clock at the latest.,vp
+81,,最晚*到，因为机场提前半小时检票。,You'll have to get there by * at the latest. The check-in is half an hour earlier than departure.,vp
+82,,你应该在飞机起飞之前半个小时到那。,You have to be there half an hour before departure time.,sent
+83,,我需要更改航班日期。,I need to change my flight date.,sent
+84,,我能更改一下订票的班机吗?,"Can you change the reservation, please?",sent
+85,,当然可以。,Sure.,sent
+86,,请问您的姓名?,May I have your name?,sent
+87,,我想把*月*日预订的班机取消，改订*月*日的班机。,"I'd like to cancel my reservation for the flight on September * and book one on September * instead, please.",vp
+88,,好，请稍等。对不起，*号的都卖完了。,"OK. wait a moment, please. Sorry, that's all sold out.",vp
+89,,那*月*号的呢?,What about September *?,vp
+90,,让我看看，*号就剩一张了，头等舱*元人民币。,"Let me see. OK, there is only one ticket left, first class and it is * yuan.",vp
+91,,有比较便宜的机票吗?,Do you have any lower fare?,sent
+92,,有，*号的，*元，可以吗?,"Yes, for September * * yuan, OK?",vp
+93,,好的。,All right.,sent
+94,,票价差额为*元，需要你自理。,"The balance of the fare is * yuan, you have to pay it by yourself.",vp
+95,,请问中国国际航空公司办理登机手续的柜台在哪里?,Where is the check-in counter for China Airlines?,sent
+96,,这里是去东京的MU*航班登机手续办理处吗?,May I check in here for flight MU * to Tokyo?,vp
+97,,是在这儿检票吗?,Is this the right counter to check in at?,sent
+98,,请到Ｒ区办理登机手续。,Please check-in at zone R.,sent
+99,,请沿着标志引导到Ｒ区办理登机手续。,Please follow the signs for zone R to check in.,sent
+100,,你可以在G和H区自助服务亭办理登机手续。,You may check in at the self-service kiosk area in zones G & H.,sent
+101,,办理登机区。,Check in area.,sent
+102,,办理登机区。,Check in zone.,sent
+103,,办理飞往世界各地登机手续。,Check-in all destinations.,sent
+104,,？你们何时开始办理登机手续？,What time do you start check-in,sent
+105,,我什么时候开始办理登机手续?,When can I start to check in?,sent
+106,,请将机票和护照准备好办理登机手续。,Have your ticket and passport ready for the check-in agent.,sent
+107,,请排队办理前往欧洲各地的登机手续。,Please queue for flights to European destinations.,sent
+108,,我要办理登记手续。,I'd like to check in.,sent
+109,,可以帮我换登机牌吗?,Would you please help me to get my boarding pass?,sent
+110,,可以看看你的护照吗?,"May I see your passport, please?",sent
+111,,可以给我您的护照吗。,May I have your passport please?,sent
+112,,？一个经济舱座位，对吗？,"One economy class seat, is that right",sent
+113,,您有几件行李?,How many pieces of luggage do you have?,sent
+114,,您有好多行李。,You have a lot of baggage.,sent
+115,,你有什么行李要托运吗?,Do you have any bages to check?,sent
+116,,您要托运几个包裹?,How many bags do you want to check in?,sent
+117,,就这一个。,Just this one.,sent
+118,,请把它放在这里。,Please put it here.,sent
+119,,请把您的行李放在磅秤上。,Please put your baggage on the scale.,sent
+120,,*公斤。,It's * kilos.,vp
+121,,恐怕超重了。,I'm afraid it's overweight.,sent
+122,,你的行李超重了。,Your baggage is overweight.,sent
+123,,行李限重是多少?,What's the baggage allowance?,sent
+124,,您可以把一些东西拿出来，或者付行李超重费。,You can either take out something or pay the excess baggage charge.,sent
+125,,我付钱好了。,I would rather pay.,sent
+126,,这是您的机票、登机牌和行李签。,"Here's your ticket, your boarding pass and the tag of your baggage.",sent
+127,,这是您的机票，登机证，护照和行李提领证。,"Here's your ticket, boarding pass, passport and baggage claim tag.",sent
+128,,这是您的登机牌。,Here is your boarding pass.,sent
+129,,登机时间是*点。,The boarding time is *,vp
+130,,登机时间是上午*点*分。,Boarding time is * a.m.,vp
+131,,我在哪儿登机?,Where do I board the plane?,sent
+132,,在几号门?,What's the gate number?,sent
+133,,登机门是*号。,The gate number is *,vp
+134,,请将在*号登机门登机。,You'll be boarding at Gate *,vp
+135,,*号登机口，在通过安检后左转，走到大厅的尽头乘电梯能到。,"At gate * go through the security check and turn left, take the moving staircase at the end of the hall, then you will find it.",vp
+136,,在起飞前还有其他手续要办吗?,Is there anything else to do before flight time?,sent
+137,,没有，小姐。您登机时只要向工作人员出示机票就可以了。,"No, Miss. Just show your ticket to the boarding officer as you get on the plane.",sent
+138,,余下的是我们的事，祝您旅途愉快。,The rest is our job. Have a good trip.,sent
+139,,机场安检。,Airport security.,sent
+140,,安检。,Security check (in).,sent
+141,,安检。,Security Inspection.,sent
+142,,所有行李包裹以及个人一律接受安检。,All bags-packages and persons are subject to search.,sent
+143,,请自觉接受行包安检。,Please have your luggage checked.,sent
+144,,安检要求。,Security screening requirements.,sent
+145,,限带物品数量。,Quantity allowed to take.,sent
+146,,限带液体物品的规定。,Regulations on restriction of liquids.,sent
+147,,最高限重。,Maximum storage.,sent
+148,,请这边走。,"Go this way, please.",sent
+149,,在此排队。,Queue here.,sent
+150,,请把所有的随身行李放在一个筐里，然后把筐放在传送带上。,Please put all carry-on luggage in a basket and then place it on the conveyor.,sent
+151,,请把你的手提行李放在传送带上。,"Put your carry-on luggage on the belt, please.",sent
+152,,请把你的手提箱和那个盒子放在传送带上好吗?,Will you please put your suitcase and that box on the belt?,sent
+153,,请把您的电脑从包里取出放入筐里。,Please take your computer out and put it in the basket.,sent
+154,,笔记本电脑从随身行李取出接受X光安检。,Laptop computers must be removed from carry-on and placed on X-ray.,sent
+155,,便携电器、钥匙、硬币、和其他金属物品置放单独盒内后，放X光安检传送带上。,"All portable electronic devices, keys, coins and other metal objects should be placed on X-ray belt in separate container.",sent
+156,,现在请把口袋里的东西掏出来放在这里，从检测器走过。,Now put everything from your pockets in this tray and come through the detector.,sent
+157,,请把您随身携带的所有金属物品，如硬币、手机、口香糖、香烟、以 及带锡纸的物品等放在篮子里。,"Please put all your metallic objects such as coin,cellphone,chewing gum,cigarettes,and anything with Aluminum foil into the basket.",sent
+158,,口袋里还有其它物品吗？,Anything else in your pocket?,sent
+159,,脱掉您的外套和鞋子，把它们放进盒子里。,Take off your coat and shoes and put then in the box.,sent
+160,,所有旅客都必须从这个检查口通过。,All the leaving passengers must go through this gate.,sent
+161,,请通过安全门。,"Go through the gate, please.",sent
+162,,请走过这个安检门。,"Walk through the security gate, please.",sent
+163,,请一个一个通过探测门。,Please pass through the detector one by one.,sent
+164,,跟紧。,Stay close.,sent
+165,,请过来接受检查。,Please come over for inspection.,sent
+166,,请把你的包打开，我们要检查一下。,Please open your bag. We'd like to have a look.,sent
+167,,我只是要确定你没有携带液体。,Just make sure you don't have any liquid with you.,sent
+168,,您介意打开您的手提电脑吗?,And would you mind opening your lap-top?,sent
+169,,没关系，给你。,"No, not at all. there you go.",sent
+170,,请脱掉您的鞋子。,Please take off your shoes.,sent
+171,,请您抬起双臂。,Please raise your arms.,sent
+172,,请转身。,Turn around please.,sent
+173,,我还要脱掉夹克吗?,Should I take off my jacket too?,sent
+174,,请把您的衣扣打开。,Please unbutton your coat.,sent
+175,,请解下您的皮带。,"Take off your belt, please.",sent
+176,,我们用手检，你看如何?,"We'll check you by hand, what do you think?",sent
+177,,您不能携带任何液体。,You can't have any liquid with you.,sent
+178,,这是违禁品。,It is a prohibited item.,sent
+179,,这些东西是违禁品。,These items are forbidden by law.,sent
+180,,您不能把它带上飞机。,You can't take it with you into the aircraft.,sent
+181,,易燃品不能随身带上飞机。,Flammable items cannot be taken with you into the aircraft.,sent
+182,,我们必须没收。,We will have to be confiscated.,sent
+183,,这是给您的没收单据。,Here is your receipt.,sent
+184,,您可以办理托运或在我们这儿办理暂存，我们可以替您保留一个月。,"We could check it in for you ,or you could have it deposited temporarily at our place for up to one month.",sent
+185,,如果一个月之内，您不来领的话，我们将不再替您保存。,"If you can't come back within a month, we won't keep it for you.",sent
+186,,这是政府规定的，为了您和其他旅客的安全，请您理解和配合我们的工作。,"This is the government's rule. For your own safety and other passangers, we need your understanding and corporation.",sent
+187,,一切检查完毕。,Everything checks out.,sent
+188,,检查完毕，谢谢合作。,"Checking is done, thankyou for your corporation.",sent
+189,,您可以拿行李了。,You can take your baggage now.,sent
+190,,.你可以走了，带好你的东西。,You may go now. Please take your things,sent
+191,,当心不要遗忘携带物品。,"Take care, not to leave things behind.",sent
+192,,遗忘物品超过*天我们概不负责。,We are not responsible for items left over * days.,vp
+193,,祝您旅途愉快。,I wish you a happy joumey.,sent
+194,,各位旅客请注意，由于气候不佳，所有飞往台北的班机都将延后起飞。,"Attention, please. Due to weather condition, all flights to Taipei will be delayed.",sent
+195,,由于天气不好航班延误了。,The flight is delayed due to bad weather conditions.,sent
+196,,我们对此深表谦意，并感谢您的配合与耐心。,We truly regret the delay. Thank you for your cooperation and patience.,sent
+197,,我们将尽快通知您的新班机的起飞时候，谢谢。,We will inform you of the new departure time as soon as possible. Thank you.,sent
+198,,我刚听到广播说我的班机延迟了。,I just heard an announcement that my flight has been delayed.,sent
+199,,你的班机号是什么?,What's your flight number?,sent
+200,,*号班机，去费城的。,Flight *-bound for Philadelphia.,vp
+201,,延迟出发是因为机械故障。,The delay is due to mechanical difficulties.,sent
+202,,你知道会延误多久吗?,Do you know how long it will be?,sent
+203,,大概不会超过两小时。,Probably not more than two hours.,sent
+204,,我会赶不上我下一段的班机了。,I'm afraid I'll miss my connecting flight.,sent
+205,,现在还有别的班机可以坐吗?,Is there another flight available?,sent
+206,,请等一下，让我看看。,Just a minute. Let me check.,sent
+207,,有，有一架班机十分钟内去费城，可是已经满座了。我可以把您列为候补，如果您愿意的话。,"Yes, there is a flight leaving for Philadelphia in ten minutes, but it's full. I could put you on standby if you wish.",sent
+208,,请把我列为候补。,Please put me on the waiting list.,sent
+209,,好吧。可是假如我上不了那架飞机，能换一班转飞迈阿密的班机吗?,"Yes, all right. But if I don't get on that flight, would it be possible to change the connecting flight to Miami?",sent
+210,,我看一下...今天晚上七点四十五分联合航空公司有一班机由费城起飞。,Let's see... there's a United flight leaving Philadelphia at * this evening.,vp
+211,,能设法让我搭上那班飞机吗?,"Could you get me on that flight, please?",sent
+212,,好，我查查看还有没有剩余位置。,"Yes, I'll check to see if there's any space left.",sent
+213,,登机口。,Gate.,sent
+214,,登机口。,Departure Gate.,sent
+215,,登机口。,Boarding Gate.,sent
+216,,这班飞机的登机口在哪儿?,Where is the boarding gate for this flight?,sent
+217,,登机口在哪儿?,Where is the gate?,sent
+218,,跟着指示走，你将看到登机口。,Go straight following the sign ang you will see the gate.,sent
+219,,下一班可以登机的航班是飞往内布拉斯加州，林肯市。,"The next flight available for boarding is to Lincoln, Nebraska.",sent
+220,,什么时候登机呢?,What is the boarding time?,sent
+221,,什么时候登机呢?,When is the boarding time?,sent
+222,,飞往曼谷的泰航TG*班，已经开始登机。,Thai Airlines flight TG * to Bangkok is now boarding.,vp
+223,,请头等舱的旅客前往登机门。,"Passengers in the first class, please proceed to the boarding gate now.",sent
+224,,欢迎登机。,Welcome aboard.,sent
+225,,请出示登记证和身份证!,"Boarding passes and IDs, please!",sent
+226,,请把机票和登机牌准备好接受检查。,Please have your ticket or boarding card ready for inspection.,sent
+227,,请准备好带照片的身份证接受检查。,Please have photo identification ready for inspection.,sent
+228,,我可以看看你的票吗?,"Can I see your ticket, please?",sent
+229,,请出示一下你的机票和登机牌好吗?,Would you please show me your ticket and boarding pass?,sent
+230,,这是我的护照和机票。,Here are my passport and ticket.,sent
+231,,飞行愉快!,Enjoy your flight!,sent
+232,,飞行愉快!,Have a nice flight!,sent
+233,,现在正在登机。,It's boarding now.,sent
+234,,登机口关闭。,Closing.,sent
+235,,*号候机楼。,Terminal * Departure.,vp
+236,,*号货运航班候机楼。,Terminal * & Cargo.,vp
+237,,出港。,Departures.,sent
+238,,国内出发。,Domestic Departure.,sent
+239,,国内航班。,Domestic Flights.,sent
+240,,候机和登机。,Waiting And Boarding.,sent
+241,,候机厅。,Waiting Room.,sent
+242,,候机厅。,Waiting Hall.,sent
+243,,候机厅。,Waiting Lounge.,sent
+244,,候机厅。,Departure Lounge.,sent
+245,,贵宾候机厅。,Very Important Person(VIP) Suite.,sent
+246,,贵宾候机亭。,Lounge Pavilion.,sent
+247,,国际旅客候机厅。,International Passenger Lobby.,sent
+248,,过境旅客。,Transit Passenger.,sent
+249,,海关监管区。,Area Of Customs Control.,sent
+250,,海关申请表。,Customs Declaration form.,sent
+251,,海关申报台。,Customs Declaration Counter.,sent
+252,,保安部。,Security Office.,sent
+253,,行李车。,Luggage Car.,sent
+254,,行李手推车。,Trolley.,sent
+255,,行李称重处。,Luggage Weighting.,sent
+256,,行李寄存。,Left Baggage.,sent
+257,,行李寄存（处）。,Luggage Storage (Counter).,sent
+258,,行李架。,Baggage Rack.,sent
+259,,行李检查台。,Luggage Inspection.,sent
+260,,行李交付。,Luggage Delivery.,sent
+261,,行李提取（区）。,Baggage Claim (Area).,sent
+262,,行包托运须知。,Notice On Luggage Check-In.,sent
+263,,随身携带的物品限制规定。,Restriction of hand carry-on articles.,sent
+264,,禁止随身携带的物品。,Goods Prohibited To Be Hand-Carried.,sent
+265,,禁止携带出境的物品。,Goods Prohibited To Exit The Country.,sent
+266,,除指定区域外，禁止吸烟。,No Smoking Except In Designated Area.,sent
+267,,快速通道。,Express Pass.,sent
+268,,紧急出口。,Emergency Exit.,sent
+269,,各通道出口。,Exit To All Routes.,sent
+270,,机场巴士。,Airport Bus.,sent
+271,,机场巴士。,Shuttle Bus.,sent
+272,,机场班车。,Airport Limousine.,sent
+273,,机场班车。,Airport Shuttle.,sent
+274,,走失求救热线。,Missing People Help Line.,sent
+275,,走失儿童认领。,Lost Child Information.,sent
+276,,飞行员驾驶舱。,Pilot's Cockpit.,sent
+277,,就坐后请系好安全带。,Fasten Seat Belt While Seated.,sent
+278,,耳机。,Earphone Set.,sent
+279,,飞行中。,In-Flight.,sent
+280,,飞行时间。,Flying Time.,sent
+281,,飞行速度。,Speed Per Hour.,sent
+282,,返航时间。,Departure Time On Reverse.,sent
+283,,我的座位在哪儿?,Where is my seat?,sent
+284,,A号座位在哪儿?,Where is seat *A? *,vp
+285,,你能告诉我*A座位在哪儿吗?,Can you tell me where seat *A is?,vp
+286,,你能指给我的座位吗?,Can you show me the way to my seat?,sent
+287,,你能帮我找到我的座位吗?,Can you help me find my seat?,sent
+288,,您的座位在客舱的中部。,Your seat is in the middle of the cabin.,sent
+289,,就在那里，靠窗的那一个。,It's over there next to the window.,sent
+290,,这个座位是*A吗?,Is this seat *A?,vp
+291,,不好意思，你坐到我的位子了。,Excuse me. You have my seat.,sent
+292,,我想这是我的座位。,I think this is my seat.,sent
+293,,这应该是我的座位了。,This is supposed to be my seat.,sent
+294,,我们的座位是分开的。,Our seats are separated.,sent
+295,,哪有在一起的空座位呢?,Do you have any empty seats together somewhere?,sent
+296,,我们想坐在一起。,We'd like to sit together.,sent
+297,,你介意跟我换下座位吗?,Do you mind changing seats with me?,sent
+298,,我可以跟你换位子吗?,Can I change seats with you?,sent
+299,,我们可以交换座位吗?,Would it be possible for us to trade seats?,sent
+300,,我可以移到那边的空座位吗?,Can I move to an empty seat over there?,sent
+301,,我可以坐在那边其中的一个空座吗?,Can I take one of those empty saets over there?,sent
+302,,可以帮我把行李放上去吗?,Could you please help me put my baggage up there?,sent
+303,,上面的行李箱都满了。,The overhead compartments are all full.,sent
+304,,我的包放不进上面的行李箱了。,I can't get my bag to fit into the overhead compartment.,sent
+305,,我的行李放哪儿呢?,Where can I put my baggage?,sent
+306,,请把你的行李放在座位下面。,Please put your package under your seat.,sent
+307,,您可以将行李放在前面的座位下面。,You can place the baggage under the seat in front of you.,sent
+308,,我怎么让我的椅子躺下?,How do I recline my seat?,sent
+309,,请竖直椅背好吗?,"Could you put your seat up, please?",sent
+310,,请系好安全带。,Please keep your seat belt fastened.,sent
+311,,请系好安全带。,"Put on your seat belt, please.",sent
+312,,您能告诉我怎么系安全带吗?,Can you tell me how to fasten the seat belt?,sent
+313,,您能告诉我安全带怎么解开吗?,Can you tell me how to unfasten the seat belt?,sent
+314,,各位乘客请注意，飞机准备起飞了，请关闭所有电子装置。,"The passengers, in preparation for takeoff, please turn off all electronic devices.",sent
+315,,机上电影什么时候开始播放?,What time does the inflight movie start?,sent
+316,,哪个是电影频道?,Which is the movie channel?,sent
+317,,这副耳机是坏的，能给我一副新的吗?,This headphone is not working. Can I have a new one?,sent
+318,,你们有没有中文报纸?,Do you have Chinese newspapers?,sent
+319,,请问怎样开阅读灯?,How do I turn on the light?,sent
+320,,请问洗手间在哪里?,Where is the lavatory?,sent
+321,,请问晚餐几点开始供应?,When do you start to serve dinner?,sent
+322,,晚餐时间到了，请放下桌子。,Please pull your table down. It's supper time.,sent
+323,,你晚餐吃什么?,What would you like to have for dinner?,sent
+324,,你推荐什么?,What would you suggest?,sent
+325,,你可以选择鱼或者是牛肉。,You may choose from the fish and beef.,sent
+326,,晚餐想吃牛肉、鸡肉还是鱼?,"Which would you like for dinner, beef, chicken or fish?",sent
+327,,我想牛肉比较好。,I think beef is better.,sent
+328,,我要牛肉。,I'd like the beef.,sent
+329,,打扰一下，请问您要吃什么，中餐还是西餐?,"Excuse me. What would you like to eat, Chinese food or Western food?",sent
+330,,中餐是什么?,What is the Chinese food?,sent
+331,,白粥。,Porridge.,sent
+332,,西餐呢?,And the Western food?,sent
+333,,火腿肠煎蛋。,Fried eggs with ham.,sent
+334,,那给我来双份西餐吧。,Then give me a double Western.,sent
+335,,给我一些饮料可以吗?,"May I have a drink, please?",sent
+336,,当然可以。 你想要什么饮料?,Sure. What kind of drink do you want?,sent
+337,,你喝点什么?,What would you like to drink?,sent
+338,,如果可能的话来点鸡尾酒吧。,A cocktail if possible.,sent
+339,,现在恐怕没有鸡尾酒了。,I'm afraid we have no cocktails now.,sent
+340,,其他的怎么样，咖啡、茶、果汁、可乐、或啤酒?,"What about something else, coffee,tea, juice, coke or beer?",sent
+341,,要茶还是咖啡呢?,Would you like a cup of tea or coffee?,sent
+342,,好吧，我要一杯咖啡。,"Well, I'll have a cup of coffee.",sent
+343,,请给我一杯可乐。,"I'll have a coke, please.",sent
+344,,不，我更想要一杯果汁。,"No,I'd rather have a glass of juice, please.",sent
+345,,你们都有什么果汁?,What kinds do you have?,sent
+346,,我们有橙汁、苹果汁、葡萄汁和柠檬汁。,"We have a selection of orange, apple, grape and lemonade.",sent
+347,,我要一杯柠檬汁，请多放一点冰块。,"I'll have a glass of lemonade. More ice,please.",sent
+348,,好的，还需要别的吗?,All right. Will there be anything else?,sent
+349,,你能多给一些餐巾纸吗?,Could you give me more paper napkins?,sent
+350,,好的，我马上拿给你。,OK. I'll have that right out.,sent
+351,,祝您用餐愉快。,Enjoy your meal.,sent
+352,,如果你需要其他什么东西，就告诉我。,Just let me know if you need anything else.,sent
+353,,如果还有其他需求，可以按呼叫按钮通知我们。,Press the call button if you need any more help.,sent
+354,,请再给我一个枕头。,"One extra pillow, please.",sent
+355,,我觉得有点冷。,I feel a little bit cold.,sent
+356,,我能再要条毯子吗?,Can I have another blank?,sent
+357,,能再给我一条毯子吗?,Could you give me one more blanket?,sent
+358,,好的。,All right.,sent
+359,,你还可以调小空调。,You can also turn down the air-conditioner.,sent
+360,,各位旅客请注意，本班机即将行经乱流区。,"Ladies and gentlemen, we are approaching an area of turbulence.",sent
+361,,请您回到您的座位，并系好安全带，以求安全。谢谢您的合作。,"For your own safety, please go back to your seat and fasten the seat belts. Thank you.",sent
+362,,我什么时候才能使用电子设备?,When can I use my electronic devices?,sent
+363,,飞机降落在机场后，你就能打开手机了。,"After landing on the airport, you can turn on you cell phone.",sent
+364,,飞机什么时候着陆?,When does your flight land?,sent
+365,,飞机什么时候着陆?,When is the plane due?,sent
+366,,*分钟后我们即将降落在曼谷国际机场。,We will be landing at Bangkok international Airport in * minutes.,vp
+367,,当地时间为晚上*点*分，地面温度摄氏*度，华氏*度。,"The local time is * p. m. and the ground temperature is * degrees Centigrade, or * degrees Fahrenheit.",vp
+368,,机长汤尼与所有组员感谢各位旅客搭乘本班机。,Captain Tony and all the members of his crew thank you for flying with us.,sent
+369,,我们希望你们满意这次的飞行。,We hope you enjoyed your flight.,sent
+370,,你怎么了?,What's wrong with you?,sent
+371,,我感到不舒服。,I'm not feeling well.,sent
+372,,我觉的不太舒服。,I don't feel well.,sent
+373,,我感觉头晕、虚弱，耳朵也有点疼。,I feel dizzy and weak. And I'm having this pain in my ear.,sent
+374,,我想我是病了。,I think I am sick.,sent
+375,,我觉得晕机了。,I'm feeling kind of airsick.,sent
+376,,我有点晕机。,I have a little airsickness.,sent
+377,,我想吐。,I feel like vomiting.,sent
+378,,我需要一个呕吐袋。,I need an airsickness bag.,sent
+379,,放松点。,Just relax a little bit.,sent
+380,,在椅兜里有呕吐袋。,There's an airsickness bag in the seat pocket.,sent
+381,,你们有晕机药吗?,Do you have anything for airsickness?,sent
+382,,你们有晕机药吗?,Do you have any medicine for airsickness?,sent
+383,,能给我些晕机药吗?,Could you give me some airsickness medicine?,sent
+384,,我马上去给你拿些药来。,I'll get some medicine for you right away.,sent
+385,,这是给你的药。,Here's your medicine.,sent
+386,,您可以吃点晕机药。,You can take some airsick pills.,sent
+387,,为什么在飞机上会有这种感觉? 我感觉很难受。,Why does this happen to me when I am on the plane? I feel bad.,sent
+388,,不用担心，先生。只是由于低气压的缘故。,"Don't worry, Sir. It's just due to the lower pressure.",sent
+389,,我该怎么做呢?,What should I do about it?,sent
+390,,如果嚼点口香糖或花生会感觉舒服些。,You may feel much better if you chew some gum or peanuts.,sent
+391,,真的有用吗? 我来试试。,Does that really work? I'll give it a try.,sent
+392,,现在感觉如何?,How are you feeling now?,sent
+393,,.好多了，谢谢。,Much better. Thank you,sent
+394,,不客气。如果需要什么帮助，请按按钮。,You are welcome. Please press the button when you need any help.,sent
+395,,我要转机去香港。,I am going to transfer in Hong Kong.,sent
+396,,我必须转机去纽约。,I have to transfer to New York.,sent
+397,,我要去哪里赶衔接的航班?,Where do I go to catch my connecting flight?,sent
+398,,您能告诉我去哪里办理手续吗?,Could you tell me where to deal with the formalities?,sent
+399,,您可以去转机柜台。,You can go to the flight connection counter.,sent
+400,,请到转机柜台办理。,Please go to the transfer counter.,sent
+401,,转机柜台在哪儿?,Where is the transfer desk?,sent
+402,,华航的转机柜台在哪里?,Where is the CAL transfer desk?,sent
+403,,衔接的航班什么时候起飞?,When will the connecting flight take off?,sent
+404,,我可以换成早一点的航班吗?,Can I get on the earlier flight instead?,sent
+405,,您有下一趟航班的登机牌吗?,Do you have the boarding pass for the next flight?,sent
+406,,我的行李怎么办呢?,How do I deal with my luggage?,sent
+407,,您的行李将会转到下一班飞机上。,Your luggage will be trasferred to your next plane.,sent
+408,,我们有足够的时间转飞机。,We have enough time to transfer the flight.,sent
+409,,我们有足够的时间转飞机。,There is enough time for us for the connection.,sent
+410,,所有转机旅客请到*号登机门。,All the connecting passengers are requested to proceed to Gate *,vp
+411,,去行李领取处怎么走呢?,How can I get to the baggage claim area?,sent
+412,,行李领取处在哪儿?,Where is the baggage claim area?,sent
+413,,*的行李提取处在哪里?,Which carousel is for flight TG *? TG,vp
+414,,我在等我的行李。,I'm waiting for my luggage.,sent
+415,,借过一下，这是我的行李。,"Excuse me, this is my bag.",sent
+416,,哪里有行李推车。,Where can I find a baggage trolley?,sent
+417,,我找不到行李了。,I can't find my baggage.,sent
+418,,我的行李不见了。,I lost my baggage.,sent
+419,,能告诉我你乘坐的航班号吗?,Can you tell me your flight number?,sent
+420,,请给我你的行李领取牌。,Please give me your baggage claim tag.,sent
+421,,你能描述一下你的行李吗?,Could you describe your baggage?,sent
+422,,它是什么样子的?,What does it look like?,sent
+423,,它是有轮子的绿色行李箱。,It's a green suitcase with wheels.,sent
+424,,填一下这张表。,Fill out this form.,sent
+425,,我马上为您查询。,I'll check it for you at once.,sent
+426,,在这儿。,Here it is.,sent
+427,,这是我的行李。,This is my luggage.,sent
+428,,你能帮我拿行李吗? 实在太重了。,Can you help me get my baggage? It's too heavy.,sent
+429,,我在哪儿能得到行李车?,Where can I get a baggage trolley?,sent
+430,,你的旅途怎么样呢?,How was your flight?,sent
+431,,经过长途飞行后你一定累了。,You must be tired after such a long flight.,sent
+432,,我感觉很累，因为飞行时间很长。,"I feel very tired, because it's a very long flight.",sent
+433,,让我帮你拿行李吧。,Let me help you with your luggage.,sent
+434,,我的车停在外面。,My car is waiting outside.,sent
+435,,我去停车场取车。,I am getting my car at the parking lot.,sent
+436,,我们直接去停车场吧。,Let's go to the parking space directly.,sent
+437,,我们快找点吃的吧。,We could grab a quick bite.,sent
+438,,我不饿。,I'm not hungry.,sent
+439,,这附近还有在营业的饭店吗?,Are there any restaurants still open near here?,sent
+440,,你想在哪儿吃饭呢?,Where would you like to go for dinner?,sent
+441,,你想好有什么特别的餐馆吗?,Do you have any particular restaurant in mind?,sent
+442,,你有推荐的吗?,Do you have one to recommend?,sent
+443,,你能推荐几家附近的好餐馆吗?,Could you recommend some good restaurants around here?,sent
+444,,你推荐哪家餐厅呢?,Which restaurant do you recommend?,sent
+445,,街对面的那家餐馆不错。,The restaurant across the street is excellent.,sent
+446,,这家餐厅以海鲜闻名。,This restaurant is famous for the seafood.,sent
+447,,我们应该去试试。,I think we should go and have a try.,sent
+448,,我不想在那儿吃。,I don't want to eat there.,sent
+449,,我们换个饭店吧。,Let's change restaurants.,sent
+450,,晚上在这家餐厅很难找到座位。,It is very hard to find a seat in this restaurant in the evening.,sent
+451,,这家餐厅太出名了，要等一两个小时才有座位。,The restaurant is so popular that you have to wait for one to two hours to get a seat.,sent
+452,,这家餐馆比那一家贵得多。,This restaurant is more expensive than that one.,sent
+453,,这家餐厅的价格比其他的餐厅高。,Prices of food in this restaurant are much higher than that in other restaurants.,sent
+454,,我们今天选家最便宜的餐馆吧。,Let's choose the least expensive restaurant today.,sent
+455,,晚上好，欢迎光临我们饭店。,Good evening. Welcome to our restaurant.,sent
+456,,您预订订座了吗?,Have you made a reservation?,sent
+457,,您有预订吗?,Do you have a reservation?,sent
+458,,我已经在你们餐厅预订过了。,I've made a reservation at your restaurant.,sent
+459,,我订了一个两人桌。,I've reserved a table for two.,sent
+460,,我们预订了*号桌。,Our table is No.*,vp
+461,,请告诉我您的名字。,Please tell me your name.,sent
+462,,我有在皮特名下的预订。,I have a reservation under Peter Li.,sent
+463,,是用陈的名字预订的。,The reservation is under chen.,sent
+464,,我叫维克多。,My surname is Victor.,sent
+465,,名字是维克多。,The name is Victor.,sent
+466,,我们正恭候着您呢。,We were expecting you.,sent
+467,,我们的服务生会带您到餐位。,Our waiter will show you to your table.,sent
+468,,请稍等或自便，有人会领你入座。,Please wait here or take advantage until our hostess escorts to your table.,sent
+469,,我来带您到餐桌。,I'll show you to your table.,sent
+470,,请跟我来。,Please follow me.,sent
+471,,请往这边走。,Please come this way.,sent
+472,,来这边请。,Come this way please.,sent
+473,,这边请。,This way please.,sent
+474,,请让我们借过一下。,Please let us pass.,sent
+475,,请过。,Go right ahead.,sent
+476,,我没有预订.,I didn't reserve a table.,sent
+477,,没有预订。,"No, we do not.",sent
+478,,没有，我事先没有预订。,"No, I haven't reserved in advance.",sent
+479,,抱歉，我们位子被订满了。,"Sorry, we're fully booked.",sent
+480,,请问几个人?,How many people please?,sent
+481,,几个人? 先生。,How many? sir.,sent
+482,,请问几位?,"How many of you, please?",sent
+483,,三位。,"A table for three, please.",sent
+484,,我们想要张*人桌。,We'd love a table for four.,vp
+485,,我们要一张四人桌。,We need a table for four.,sent
+486,,你能安排一张四人桌吗?,Do you have a table for four please?,sent
+487,,你喜欢坐在哪里?,Where would you prefer to sit?,sent
+488,,您喜欢吸烟区还是非吸烟区?,Would you like the smoking or non-smoking section?,sent
+489,,您喜欢吸烟区还是非吸烟区?,Do you prefer a smoking or non-smoking area?,sent
+490,,吸烟区还是非吸烟区?,Smoking or non-smoking?,sent
+491,,没关系。,Doesn't matter.,sent
+492,,吸烟区。,"Smoking, please.",sent
+493,,非吸烟区。,Non-smoking.,sent
+494,,我喜欢非吸烟（吸烟）区。,I'd like the non-smoking(smoking) section.,sent
+495,,请稍等一会。,Please wait a moment.,sent
+496,,我会为您找一张桌子。,I'll find a table for you.,sent
+497,,我看看是否还有空位。,I'll check if we have vacancy.,sent
+498,,您能在吧台等一下，我为您找张合适的桌子?,Could you wait at the bar until I find an approprite table for you?,sent
+499,,恐怕我们所有的桌子都被占用着。,I'm afraid all our tables are taken.,sent
+500,,您介意等一下空出桌子吗?,Would you mind waiting until one is free?,sent
+501,,您能在那边的座位上等一下，当有空桌时我会通知您好吗?,Would you take a seat over there and I will call you when a table is free?,sent
+502,,请您排队等候空位好吗?,"Could you wait in line until a table is free, please?",sent
+503,,请您等稍长点时间可以吗?,"Could you wait a little longer, please?",sent
+504,,这需要多长时间?,How long will it take?,sent
+505,,我不确定。,I'm not sure.,sent
+506,,我等一下吧。,I'll wait.,sent
+507,,现在有桌子了。,We have a table for you now.,sent
+508,,谢谢您一直等着。,Thank you for waiting.,sent
+509,,很抱歉让您一直等着。,I'm very sorry to have kept you waiting.,sent
+510,,我们很抱歉延误了这么长时间。,We're very sorry for the delay.,sent
+511,,这张桌子可以吗?,Is this table all right?,sent
+512,,这张桌行吗?,Will this table be all right?,sent
+513,,这张桌子可以吗?,How about this table?,sent
+514,,我不喜欢这张桌子。,I don't like this table.,sent
+515,,这张桌子离厕所太近。,This table is too close to the toilet.,sent
+516,,我们能换个其他的吗?,Could we have another one?,sent
+517,,我可以要一个安静的地方吗?,Can we have a quiet area?,sent
+518,,我们想还是靠窗的那张吧。,I think we'd like to take that one by the window.,sent
+519,,那张桌子被预定了。,That table is reserved.,sent
+520,,那边那张桌子已经被预定了。,The table over there has been reserved.,sent
+521,,靠窗的那张已经有人预订了。,The one by the window has been taken by others.,sent
+522,,恐怕那张桌子晚上*点以后被预定了。,I'm afraid that table is reserved for * p.m.,vp
+523,,恐怕那一区还在准备中。,I'm afraid that area is under preparation.,sent
+524,,没关系，那就这张吧。,It doesn't matter. This one will do.,sent
+525,,可以，就做这儿吧。,Not bad. We'll take it.,sent
+526,,这张桌很好。,This one is very good.,sent
+527,,很好。,It's all right.,sent
+528,,,,sent
+529,,您的帽子和围巾可以挂在这儿。,Your hat and scart can be hung here.,sent
+530,,请坐。,Please sit down.,sent
+531,,请坐。,Please take seats.,sent
+532,,请随意入座。,Please sit where you like.,sent
+533,,请坐。,"Be seated, please.",sent
+534,,您比较喜欢做里面还是外面?,Would you prefer sitting inside or outside?,sent
+535,,我可以给婴儿拿个高脚椅吗?,May I get a high chair for the baby?,sent
+536,,您想要一个高脚椅给婴儿吗?,Would you like a high chair for your baby?,sent
+537,,您需要我拿个婴儿椅吗?,Would you like me to bring a baby chair?,sent
+538,,我需要拿个垫子为小朋友坐吗?,Shall I bring a cushion for the little one to sit on?,sent
+539,,这是菜单。,Here's the menu.,sent
+540,,请先看看菜单再决定点什么菜。,You may look at the menu first and decide what you like to have.,sent
+541,,我去安排一个服务员过来。,I'm going to have one waitress to serve you.,sent
+542,,服务员马上就来。,Our waitress will be with you in a moment.,sent
+543,,服务员马上就给您上茶。,Our waitress will get you tea in a minute.,sent
+544,,服务员会过来为您点餐。,A waiter will come to take your order.,sent
+545,,干杯!,Cheers!,sent
+546,,干杯!,Bottoms up!,sent
+547,,举杯!,Glasses up!,sent
+548,,让我们来干一杯!,Let's have a toast!,sent
+549,,为我们的友谊举杯。,Let us raise the glass to friendship.,sent
+550,,让我们再次举杯庆祝。,Let's just have another toast.,sent
+551,,为了这个我们再次祝酒，干杯！,We can have another toast for that. Cheers!,sent
+552,,请给我些纸巾。,Please give me the paper towel.,sent
+553,,能给我们拿些小盘吗?,Could you get a few small plates for us?,sent
+554,,能给我拿副刀叉吗?,Would you please bring me a knife and fork?,sent
+555,,服务生! 我有点问题。,Waiter! I have a small problem.,sent
+556,,这个桌布好脏。,This tablecloth is filthy.,sent
+557,,这杯子有缺口。,This glass is chipped.,sent
+558,,这杯子是脏的。,This glass is dirty.,sent
+559,,这杯子有污渍。,This glass is smeared.,sent
+560,,这杯子有斑点。,This glass is spotted.,sent
+561,,这杯子有污垢。,This glass is stained.,sent
+562,,杯子有污垢，这可真倒胃口。,This glass is stained and it really spoiled my appetite very much.,sent
+563,,这个叉子是脏的。,This fork is dirty.,sent
+564,,这把刀不锋利了。,This knife is not sparp.,sent
+565,,这把刀子弯了。,This knife is bent.,sent
+566,,这把刀不能切了。,This knife doesn't cut.,sent
+567,,这把刀子钝了。,This knife is blunt.,sent
+568,,这刀太钝了，甚至连豆腐都切不了。,This knife is so blunt that it can't even cut beancurd.,sent
+569,,我会立即更换。,I'll change it immediately.,sent
+570,,我们的菜在那儿呢?(我们的才怎么还没来呀?),Where are our dishes?,sent
+571,,菜上的太慢了。,The dishes are offered too slowly.,sent
+572,,我们已经等了一个小时了。,We've been waiting for an hour.,sent
+573,,从我点餐到现在等了半个小时了。,I've been waiting half an hour for my order.,sent
+574,,我至少*分钟前点的餐，到现在还没来。,I order my meal at least * nimutes ago and it still hasn't come.,vp
+575,,我们已经等了很长时间了，但没人来为我们服务。,I've been waiting for a long time but nobody came to serve me.,sent
+576,,我们比他们先到，怎么他们先得到服务?,We came here before they did. How come they were served first?,sent
+577,,能看看是否做好了吗?,Could you see if it's ready?,sent
+578,,我这就去看看你点的菜。,I'll see about your order.,sent
+579,,我会和厨师查对您点的菜。,I'll check your order with the chef.,sent
+580,,请快点做好我们的菜。,Please rush our order.,sent
+581,,请快一点!,Please do and hurry up!,sent
+582,,你们能快点吗?,Would you mind hurrying?,sent
+583,,能上菜快点吗?,Would you please serve a little quicker?,sent
+584,,你能告诉厨房速度快一点吗?,Do you think you could tell the kitchen to speed it up a little bit?,sent
+585,,我会催促快些。,I'll try to hurry things up.,sent
+586,,我会快点的，请稍等一会儿。,I'll hurry. Please wait a moment.,sent
+587,,我要赶时间。,I'm in a hurry.,sent
+588,,今天厨房很忙。,The kitchen is very busy today.,sent
+589,,我们的厨师正在尽最大的努力。,Our chef is trying his best.,sent
+590,,我会立即为您送上餐点。,I'll be right back with your order.,sent
+591,,为什么会这么久?,Why is it taking so long?,sent
+592,,为什么上餐要这么久?,Why is it taking so long for the food to arrive?,sent
+593,,用花那么长时间吗?,Does it need to take so long?,sent
+594,,我们还要等多久才能吃上饭呢?,How much longer are we going to have to wait for our dinner?,sent
+595,,我想我们没时间再等了。,I'm afraid we have no more time to wait.,sent
+596,,我要取消我的点餐。,I'd like to cancel my order.,sent
+597,,如果饭菜没做好的话请取消我的点餐吧。,Please cancel my order if the food is not ready.,sent
+598,,你的食物正在做，恐怕取消太晚了。,Your food is being cooked. I'm afraid it's too late to cancel it.,sent
+599,,这服务太慢了。,The service is too slow.,sent
+600,,我不明白这个饭店为什么总是上菜这么慢。,I can't understand why this restaurant always serves so slowly.,sent
+601,,您的菜准备好了。,Your dishes are ready.,sent
+602,,你的菜，我们真的很抱歉耽搁了。,"Your meal, we're really sorry for the delay.",sent
+603,,恐怕出错了吧。,I'm afraid there is a mistake.,sent
+604,,我想你上错我的点的菜了。,I think you have made a mistake with my order.,sent
+605,,我想我没有点这个菜。,I don't think I ordered this dish.,sent
+606,,这不是我点的菜。,This is not my order.,sent
+607,,这不是我点的菜。,This is not what I ordered.,sent
+608,,我可能搞错了。,I might have made a mistake.,sent
+609,,您点的是什么?,What was your order?,sent
+610,,能再说下您点的餐吗?,Could you repeat your order again?,sent
+611,,很抱歉搞错了。,I'm very sorry for the mistake.,sent
+612,,请以后多多注意。,Please be more careful in the future.,sent
+613,,我希望您喜欢您的食物。,I hope you enjoy your meal.,sent
+614,,这菜味道好怪。,This food tastes strange.,sent
+615,,这菜闻起来很奇怪。,The food has a funny smell.,sent
+616,,这不是正经的味道。,This is not the right flavor.,sent
+617,,色拉不新鲜了。,This salad is not fresh.,sent
+618,,我点的菜不新鲜。,The dish I ordered was not fresh.,sent
+619,,海鲜好像坏了。,It seems that the seafood has gone bad.,sent
+620,,这菜变质了。,The food is off.,sent
+621,,我的鱼没做熟。,My fish is not cooked enough.,sent
+622,,我觉得这鱼好像没做熟。,I don't think this fish is proberly cooked.,sent
+623,,鸡蛋是生的。,These eggs are raw.,sent
+624,,鸡蛋还没熟。,These eggs are undercooked.,sent
+625,,鸡蛋太软/硬了。,These eggs are too soft/hard.,sent
+626,,鸡蛋过熟了。,These eggs are overcooked.,sent
+627,,我不要蛋黄做的太老。,I don't want the yolk to be too well-done.,sent
+628,,我的牛排是生的。,My steak is raw.,sent
+629,,牛排没熟。,This steak is underdone.,sent
+630,,牛排带血过多。,This steak is bloody.,sent
+631,,牛排太硬/干了。,This steak is hard/dry.,sent
+632,,我的牛排太硬过熟了。,My steak is tough and overdone.,sent
+633,,这份烤羊肉串烧焦了。,This shish kebab is burnt.,sent
+634,,我的汤里有只苍蝇。,There is a fly in my soup.,sent
+635,,这饭菜糟糕透了。,The food was dreadful.,sent
+636,,我对这菜不满意。,I'm not happy about the dish.,sent
+637,,我对这里的饭菜质量非常的不满意。,I'm not very happy with the quality of the food here.,sent
+638,,我会向主厨反应你的意见。,I'll return your suggestion to the chef.,sent
+639,,我会请主厨来向您解释。,I'll ask the chef to explain to you.,sent
+640,,我会请厨师准备另一份。,I'll have the chef prepare another one.,sent
+641,,我会告诉厨房为您再做一份新的。,I'll tell the kitchen to prepare a new one for you.,sent
+642,,我会给你另外拿来一份。,I'll bring you another one.,sent
+643,,我会把它送回厨房，换拿给您为一份新的。,I'll send this back to the kitchen and get you a new one.,sent
+644,,这一份我们不收费。,There will be no charge for this.,sent
+645,,这一份由饭店出钱。,This is on the house.,sent
+646,,你的餐点由饭店出钱。,Your meal is on the house.,sent
+647,,请接受我们的道歉。,Please accept our apology.,sent
+648,,我已经与厨房检查过了。,I've checked with the kitchen.,sent
+649,,这菜没有任何问题。,There isn't anything wrong with this food.,sent
+650,,如果您不喜欢这口味，或许我给你换成其他的?,"If you don't like the taste of it, perhaps I could get you something else?",sent
+651,,这服务太差劲了。,The service was very bad.,sent
+652,,我不喜欢你的态度。,I don't like your attitude.,sent
+653,,你的态度有问题。,You have a problem with your attitude.,sent
+654,,我能跟主管谈谈吗?,Could I talk to someone in charge?,sent
+655,,我要见你们经理。,I'd like to see to your manager.,sent
+656,,你的工作人员很粗鲁。,Your staff was rude.,sent
+657,,我需要三个打包袋。,I want three doggy bags.,sent
+658,,我可以打包吗?,May I have a doggy bag?,sent
+659,,你能把这个打包吗?,Could you wrap this?,sent
+660,,我想把剩下的打包回家。,I'd like to take the rest home.,sent
+661,,请帮我把剩菜打包。,Please pack the leftovers for me.,sent
+662,,打包这份牛排，他要带走。,"Wrap the steak up for him, so he'll take it with.",sent
+663,,你为什么不打包他的牛排?,Why don't you wrap his steak up?,sent
+664,,你有空喝杯咖啡吗?,Do you have time for coffee?,sent
+665,,来杯咖啡怎么样?,How about a coffee?,sent
+666,,我们去喝杯咖啡吧。,Let's go for coffee.,sent
+667,,让我们在咖啡店歇会儿。,Let's stop at a coffee shop.,sent
+668,,你为什么喜欢咖啡店?,Why do you like coffee shop?,sent
+669,,咖啡店不仅是喝咖啡的好地方，而且是会见客户的好地方。,"Coffee shops are not only a good place to get a cup of coffee, but also a great place to meet customers.",sent
+670,,现在很多咖啡店都装有无线网络。,Many cafes are now equipped with Wi-Fi.,sent
+671,,你在品尝咖啡的时候可以浏览网络。,You can surf the Internet while enjoying your coffee.,sent
+672,,请问附近有没有咖啡店？,Is there a cafe near by?,sent
+673,,服务生！,Waiter!,sent
+674,,你们这儿有什么咖啡?,What kind of coffee do you have?,sent
+675,,你们有什么饮料?,What kind of drinks you got?,sent
+676,,你们这里有什么喝的?,What do you have to drink?,sent
+677,,喝茶还是喝咖啡？,Would you like some tea or coffee?,sent
+678,,我想要杯咖啡。,I'd like a coffee.,sent
+679,,给我一杯咖啡。,Give me a cup of coffee.,sent
+680,,我要一杯咖啡，她要一杯苹果汁。,"A cup of coffee for me, and a glass of apple juice for her.",sent
+681,,你喝什么样的咖啡?,How would you like your coffee?,sent
+682,,你喜欢什么口味?,What flavor do you like?,sent
+683,,你喜欢什么咖啡，黑咖啡还是牛奶咖啡？,"What coffee would you like,black coffee or white coffee?",sent
+684,,小杯浓的黑咖啡，不加牛奶和奶油。,A small cup of strong black coffee without milk or cream.,sent
+685,,你的咖啡要加点奶油吗?,Would you like some cream in your coffee?,sent
+686,,要加糖和奶油。,Cream and sugar.,sent
+687,,请不要加奶油。,"No cream, please.",sent
+688,,我想要杯加糖的咖啡。,I'd like a coffee with sugar.,sent
+689,,你们有代糖的吗?,Do you have any sugar substitute?,sent
+690,,我不想摄入糖分。,I don't want to intake any sugar.,sent
+691,,来一杯没有咖啡因的咖啡。,I'd like a decaf.,sent
+692,,给我一杯没有咖啡因的咖啡。,Give me a decaf.,sent
+693,,请来杯黑咖啡（清咖啡）。,"Black coffee, please.",sent
+694,,黑咖啡，不加别的。,"Black coffee for me,just black.",sent
+695,,我喜欢黑咖啡。,I take it black.,sent
+696,,.一些黑咖啡，能让我清醒。,Some black coffee will help to sober me up,sent
+697,,我喜欢日本的咖啡店。,I love Japanese coffee shops.,sent
+698,,除了喝的你们这还有什么别的吗? 比如蛋糕。,"Do you serve anything else besides drinks? Say, cake.",sent
+699,,我们还供应三明治和蛋糕。,We also serve sandwiches and cakes.,sent
+700,,给我来两块蛋糕吧。,Give me two pieces of cake.,sent
+701,,你有空时能到这里来一下吗?,Can you come here when you have a second?,sent
+702,,来了，先生。有什么需要帮忙的?,"Yes, sir. How can I help you?",sent
+703,,请收拾一下桌子。,Please clean up the table.,sent
+704,,好的，还有什么别的需要吗?,OK. And anything else I can do for you?,sent
+705,,请给我续一杯。,"I'd like a refill, please.",sent
+706,,我要加点咖啡。,I need more coffee.,sent
+707,,续杯是免费的吗?,Is it free of charge?,sent
+708,,请再给我一杯黑咖啡好吗？,"May I have another black coffee,please?",sent
+709,,咖啡店什么时候打烊呢？,When does the coffee shop close?,sent
+710,,我们在一家咖啡馆消磨了整个下午。,We lazed the whole afternoon away at a cafe.,sent
+711,,,,sent
+712,,这是珠江宾馆，我能为您做什么?,The Pearl River Hotel. anything I can do for you?,sent
+713,,客房预约部。下午好!,Room Reservation. Good afternoon.,sent
+714,,这儿预订房间，需要效劳吗?,Advance Reservations. Can I help you?,sent
+715,,我想预订房间。,I'd like to make a reservation.,sent
+716,,我想订一间房。,I'd like to reserve a room.,sent
+717,,我想为一个旅游团订一些房间。,I'd like to reserve some rooms for a tourist party.,sent
+718,,你们那天入住?,What date will you check in?,sent
+719,,小姐，请问什么时间入住?,"For what time, Madam?",sent
+720,,要订在哪个日期?,Which date would you that be?,sent
+721,,订*月*日一个晚上。,For the night of April *th for one night.,vp
+722,,你喜欢订哪类房间?,What kind of room would you like?,sent
+723,,我们有单人房，双人房，套房和豪华套房等等。,"We have single rooms, double rooms, suites and luxury suites, etc.",sent
+724,,我要一个标准间。,I'd like a standard room.,sent
+725,,我想订一个带洗澡间的单人房间，从*月*日下午到*月*日上午。,I'd like to book a single room with a bath from the afternoon of February *th to the morning of february *th.,vp
+726,,我从南京打来电话。我想预订一个单人房，明晚开始，共*天。,"I'm calling from Nanjing. I'd like to reserve a single room from tomorrow for six days, please.",vp
+727,,下星期二我想订一个双人房间。,I'd like to book a double room for next Tuesday.,sent
+728,,好的。星期二，*月*日，一个双人间。,"That's fine. A double room for Tuesday, September *th.",vp
+729,,你计划住多久?,How long do you plan to stay?,sent
+730,,请问你要住多久?,How long will you be staying?,sent
+731,,我们星期日早上离开。,We'll be leaving on Sunday morning.,sent
+732,,那就是五天。,That will be five night.,sent
+733,,请别挂断? 我要查一下那天的空房间。,"Could you hold the line, please? I'll check our room availability for that day.",sent
+734,,让您就等了。我们这段时间有房间。,"Thank you for waiting, Sir. We have a vacancy for that period.",sent
+735,,房间的价格是多少?,What's the price?,sent
+736,,请问房费是多少?,"What's the rate, please?",sent
+737,,你能告诉我现在房价是多少吗?,Could you tell me the current price?,sent
+738,,标准房间多少钱?,What's the rate for a standard room?,sent
+739,,每晚*元。,It's two hundred and twenty yuan per night.,vp
+740,,现行房费是每天*元。,The current rate is * yuan per night.,vp
+741,,*美元包括早餐和服务费。,It's $* including breakfast and room service.,vp
+742,,听起来还不错。这个房间我订了。,That sounds not bad at all. I'll take it.,sent
+743,,可以，请问您的名字?,"OK. Your name, please?",sent
+744,,能告诉我你的名字吗，先生?,"Could you tell me your name, Sir?",sent
+745,,请问您的名字?,"What's your name, please?",sent
+746,,好的，我是卡尔。,"Yes, it is Carl.",sent
+747,,请问怎么拼写呢?,"How do you spell it, please?",sent
+748,,,It's C-A-R-L. C-A-R-L,sent
+749,,请问你的电话号码是多少?,"And your telephone number, please?",sent
+750,,我的电话号码是*7856。,My telephone number is *-*,vp
+751,,另外，您准备怎样付款呢?,"By the way, how would you like to pay for it?",sent
+752,,本宾馆主张现金付款。,This hotel prefers cash.,sent
+753,,明白了。我什么时候可以得到你们的确认?,I see. When can I receive your confirmation?,sent
+754,,您只要支付*%的预订金，我们就予以确定。,Not until you have paid a * percent deposit.,vp
+755,,我还是上因特网去看吧。我知道你们的网址。,I'll log in to the Internet to find out about you. I know your address.,sent
+756,,请问您什么时候到达?,Could I ask when you will arrive?,sent
+757,,我会在*月*日*点之前到达。,I'll get there by five o'clock on August *th.,vp
+758,,我们会为您准备好房间。,We'll have the room ready for you.,sent
+759,,谢谢您预定我们的宾馆。,Thank you for booking in our hotel.,sent
+760,,好的，我们期待您的光临。,OK. We look forward to your visit.,sent
+761,,好的，谢谢您，我们期盼您的到来。,OK. Thank you and we look forward to your arrival.,sent
+762,,我们盼望下星期二见到您。,We look forward to seeing you next Tuesday.,sent
+763,,到时候见。,See you then.,sent
+764,,我想订个临海的房间。,I'd like reserve a room facing the sea.,sent
+765,,我们都订满了。,We're fully booked.,sent
+766,,我们所有的房间都满了。,All our rooms are full occupied.,sent
+767,,本店那晚恐怕已经登记满了。,I'm afraid our hotel is fully booked on that night.,sent
+768,,恐怕所有看得到海的房间都已经被预订了。,I am afraid that all the room with a view to the sea have been booked.,sent
+769,,真让人失望。,That is really disappointing.,sent
+770,,你想变更一下入住时间吗?,"And now you want to change the booking, do you?",sent
+771,,你可不可以改变预约日期呢?,Is it possible for you to change your reservation date?,sent
+772,,不能。,"No, that's not possible.",sent
+773,,或许有人会取消预约，请您接近哪个日期时再打电话好吗?,We might have cancellations. Could you call us again closer to the date?,sent
+774,,好的，如果真有人取消，能不能尽快让我知道呢?,"Sure, but if you do have any cancellations, could you let me know as soon as possible?",sent
+775,,先生，非常抱歉，我们不能那样做，如果您能打电话来，我们将会非常感激。,"I'm very sorry, Sir, but we are unable to do that. We would appreciate it very much if you could call us instead.",sent
+776,,希望您能谅解。,We hope you understand.,sent
+777,,客房预定。先生有什么需要我帮忙的吗?,"Room Reservations. May i help you,sir?",sent
+778,,是的，我的名字是爱丽丝，我预订了房间从*月*日保留两个晚上，我将延长两个晚上直到*号。,"Yes, my name is Alice, and I made a reservation for two nights from October *th. I'd like to extend it for two more nights until the *th.",vp
+779,,从*月*日到*日四个晚上。,For * nights from October *th until October *th.,vp
+780,,您需要变化你的房间类型吗？你预定的是一间双人床的。,Will there be any change in your room type? Your reservation is for a twin room.,sent
+781,,不。,No.,sent
+782,,谢谢，先生。我们将为您扩大保留。,"Thank you, sir. We will extend the reservation for you.",sent
+783,,我在你们宾馆预定了这周五的单人房间。,I booked a single room in your hotel for this friday.,sent
+784,,我很抱歉，我不得不取消这个预定。,I'm sorry to say that I have to cancel it.,sent
+785,,我想取消预订。,I'd like to cancel a reservation.,sent
+786,,我能取消我的预定吗?,Can I cancel my reservation?,sent
+787,,请把你的名字告诉我好吗?,"May I have your name, please?",sent
+788,,用谁的名字预订的?,In whose name was the reservation?,sent
+789,,杰克布鲁德尔。,Jack Bruder.,sent
+790,,请讲一下是怎么拼写的?,"How do you spell that, please?",sent
+791,,,B-r-u-d-e-r. B-r-u-d-e-r。,sent
+792,,保留的日期是什么呢?,What was the date of the reservation?,sent
+793,,从*月*日三个晚上。,From October *nd for * nights.,vp
+794,,对不起，是您预定的?,"Excuse me, but is the reservation for you?",sent
+795,,不，是我的朋友。,"No, it's for my friend.",sent
+796,,能告诉我你的名字和电话吗?,"May I have your name and phone number, please?",sent
+797,,我叫玛丽凯撒和我的电话*-*。,It's Mary Calson and my number is *-*,vp
+798,,谢谢你太太，我们将取消布鲁特尔从*月*号三个晚上的预定，我的名字叫杰桑，我们下次一个机会为您服务。,"Thank you, ma'am.I'll cancel Mr.Bruder's reservation from October *nd for * nights.My name is Jason and we look forward to another chance to serve you.",vp
+799,,我已经取消了你的预定。,I have cancelled your reservation.,sent
+800,,办理入住。,Check In.,sent
+801,,办理离店手续。,Check Out.,sent
+802,,抱歉，客满。,Sorry No Vacancy.,sent
+803,,前台,Front Desk,sent
+804,,前台,Front Counter,sent
+805,,前台/服务台/接待,Reception,sent
+806,,问询处/咨询台,Information,sent
+807,,值班经理。,Manager On Duty.,sent
+808,,酒店大厅。,Restaurant Lounge.,sent
+809,,中庭,Stalls,sent
+810,,前廊,Front Aisle,sent
+811,,东楼,East Wing,sent
+812,,西楼,West Wing,sent
+813,,东厢,East Box,sent
+814,,西厢,West Box,sent
+815,,套间,Suit,sent
+816,,残疾人房间。,Handicapped Room.,sent
+817,,残疾人客房。,Accessible Guestroom.,sent
+818,,客房部,Guest Room Dept.,sent
+819,,客房部,House Keeping Dept.,sent
+820,,价格按季节和公寓大小而定。,Price According To Season And Size Of Flat.,sent
+821,,住三晚，可额外免费赠一晚。,Stay A Minimum Of * Nights And Receive * Extra Night Free.,vp
+822,,老人优惠。,Reduced Rates For Elderly.,sent
+823,,免收服务费用。,No Service Fee.,sent
+824,,旅客安全提示。,Guest Safety Tips.,sent
+825,,小心路滑。,Slippery Road.,sent
+826,,小心(路滑)。,Be Careful.,sent
+827,,注意：滑!,Caution：Slippery!,sent
+828,,始终使用死栓。,Always Use Deadbolt.,sent
+829,,双保险门闩，请使用安全碰锁。,Double Lock Door. Use Safety Latch.,sent
+830,,开门前通过猫洞鉴别叫门人身份。,Use Door Viewer To Identify Callers Prior To Opening Door.,sent
+831,,没有确认对方身份绝对不能开门。,Never Open Door Prior To Verifying ID.,sent
+832,,保管好贵重物品。,Secure Valuables.,sent
+833,,贵重物品随身携带/贵重物品请自行妥善保管。,Please Keep Valuables With You.,sent
+834,,请保管好随身物品。,Please Take care Of Your Belongings.,sent
+835,,请保管好随身携带的贵重物品。,Don't Leave Valuables Unattended.,sent
+836,,前台可以提供保险箱。,Safe Deposit Boxes Are Available At Front Desk.,sent
+837,,报告可疑人员或可疑行为。,Report Suspicious Persons Or Acts.,sent
+838,,将钥匙卡插入或擦过处理机。,Insert Or Swipe Key.,sent
+839,,取出钥匙卡。,Remove Key.,sent
+840,,旋转手柄。,Turn Handle.,sent
+841,,结账时请将钥匙卡归还前台。,Please Return This Key Card To The Front Desk When You Check Out.,sent
+842,,请勿在床上吸烟。,Do Not Smoke In The Bed.,sent
+843,,这是指定的禁烟房间。,This Is Designated Non-Smoking Room.,sent
+844,,违者将被从账户中扣除$*罚金作为清洁费用。,A Cleaning Fee Of $* Will Be Charged To Your Room Account If You Smoke In This Room.,vp
+845,,空调开放。,Air Conditioned.,sent
+846,,中央暖气全部开放。,Fully Centrally Heated.,sent
+847,,中央暖气系统，房间*小时提供热水。,Full Central Heating With House Provided Hot Water * Hours.,vp
+848,,室内咖啡机。,In-Room Coffee Maker.,sent
+849,,所有卧室有沏茶（煮咖啡）设备。,Tea(Coffee) Making Facility In All Bedrooms.,sent
+850,,使用此浴室时小心。,Be Careful When Using The Bath.,sent
+851,,桑拿浴,Sauna,sent
+852,,热水漩涡池,Whirlpool,sent
+853,,压下把手直至便盆冲净为止。,Depress Handle Until Bowl Is Empty.,sent
+854,,室外泳池。,Outdoor Swimming Pools.,sent
+855,,室内泳池。,Indoor Swimming Pools.,sent
+856,,头发吹风机,(Hair) Dryer,sent
+857,,吹风机。,Warm Air Hand Drier.,sent
+858,,谨防沾水。,Keep Away From Water.,sent
+859,,所有卧室备有刮脸插销。,Shave Pins In All Bedrooms.,sent
+860,,拔去电源插头。,Unplug It.,sent
+861,,小心孩童触电死亡。,Warn Children Of The Risk Of Death By Electric Shock.,sent
+862,,遗忘了物品吗?,Forget Something?,sent
+863,,如果您忘了把洗漱物品打入您的包裹（如牙刷，牙膏，剃须膏，剃须刀或梳子），请给前台电话，我们可以立即提供赠送替代品。,"If You Forget To Pack Any Standard Toiletry Item（Toothbrush, Toothpaste, Shaving Cream, Razor Or Comb）, Just Call The Front Desk And We'll Get You A Complimentary Repacement Right Away.",sent
+864,,为了您的方便，前台有香烟出售。,"For Your Convenience, Cigarettes Are Available At The Front Desk.",sent
+865,,夜间有行李搬运服务生。,Night Porter On Duty.,sent
+866,,提供洗烫服务。,Laundry Service.,sent
+867,,付费电话,Pay Phone,sent
+868,,呼叫服务员,Attendant Call.,sent
+869,,预订服务请拨电话...,For Reservation Call...,sent
+870,,预订午餐或晚餐。,Early Book For Lunch Or Dinner.,sent
+871,,高速无线上网,High-Speed Wireless Internet.,sent
+872,,高速上网介绍。,Introducing High-Speed Internet Access.,sent
+873,,所有房间内免费登陆。,Free In All Guest Rooms.,sent
+874,,本酒店旅客房间内没有无线上网设施。,Guest Rooms In This Hotel Are Not Equipped With Wireless(Wifi) High Speed Internet Access.,sent
+875,,在酒店的公共场所可以登陆无线英特网。,Wifi Is Available In Public Area In The Hotel.,sent
+876,,可以打电话询问酒店接线员更多信息。,Please Call The Hotel Operator For More Information.,sent
+877,,请查阅旅客服务指南获取更多的有关高速上网以及如何排除故障的信息。,"For More On High Speed Internet Access, Including Trouble Shooting Information, Please Refer To The Guest Service Directory.",sent
+878,,服务承诺,Hospitality Promise,sent
+879,,我们随时倾听您的意见。,"When You Talk, We Listen.",sent
+880,,为了让您尽可能舒适我们愿意付出一切。,We Are Committed To Doing What It Takes To Make Your Stay As Comfortable As Possible.,sent
+881,,我们前台服务团队每天*小时为您解决一切问题。,Our Front Desk Team Is Available * Hours A Day To Address Any Of Your Needs.,vp
+882,,如果某处不尽人意请告诉我们的值班经理或前台服务人员。,Just Let Our Manager On Duty Or Front Desk Staff Know If Any Part Of Your Stay Isn't Satisfactory.,sent
+883,,我们承诺将立即整改，否则您可以拒绝支付相关服务的费用。,We Promise To Make It Right Or You Won't Pay For That Part Of Your Stay.,sent
+884,,请不要犹豫联系我们。,Do Not Hesitate To Contact Us.,sent
+885,,您的满意就是我们的宗旨。,Your Comfort Is Our Priority.,sent
+886,,让您居住的完全满意是我们的宗旨。,Making Your Stay A Complete Success Is Our Goal.,sent
+887,,员工便后必须洗手方可回到工作岗位。,Employees Must Wash Hands Before Returning To Work.,sent
+888,,旅馆双向停车场。,Two Way Traffic Hotel Parking.,sent
+889,,行政商务中心,Executive Business Centre.,sent
+890,,会议设施。,Conference Facilities.,sent
+891,,传真复印服务。,Fax And Copy Service.,sent
+892,,餐馆酒吧。,Restaurant And Pub.,sent
+893,,健身中心。,Fitness Centre.,sent
+894,,锻炼设施,Exercise Facilities,sent
+895,,游戏房。,Games Room.,sent
+896,,旅客止步。,Staff Only.,sent
+897,,你家有几口人?,How many people are in your family?,sent
+898,,四口人。,Four people.,sent
+899,,父母和我的妹妹。,My parents and my younger sister.,sent
+900,,有兄弟姐妹吗?,Any brothers or sisters?,sent
+901,,只有一个哥哥。,Just one brother.,sent
+902,,你和父母住在一起吗?,Do you live with your parents?,sent
+903,,我一个人住。,I live alone.,sent
+904,,我住在一个公寓里。,I live in an apartment.,sent
+905,,你说日语吗?,Do you speak Japanese?,sent
+906,,我只说英语。,I only speak English.,sent
+907,,只会一点。,A little.,sent
+908,,我的爱好是…,I am interested in ….,sent
+909,,你学的是什么?,What are you studying?,sent
+910,,你在ABC公司担任什么职务?,What sort of job do you do at ABC?,sent
+911,,你在那里从事什么工作?,What do you do there?,sent
+912,,我的工作是教学生。,My job is to teach students.,sent
+913,,我在政府部门上班。,I work in government.,sent
+914,,你在哪里工作?,Where do you work?,sent
+915,,你从事哪类工作?,What kind of work do you do?,sent
+916,,你靠什么来谋生（你做什么工作）?,What do you do for a living?,sent
+917,,你做什么工作?,What do you do?,sent
+918,,你的工作是什么?,What's your job?,sent
+919,,这里是我的电话号码、电邮。,"That's my number, e-mail.",sent
+920,,这是我的名片。,Here's my business card.,sent
+921,,你的电话号码是多少?,What's your telephone number?,sent
+922,,我可以得到你的电话号码和地址吗?,May I have your telephone number and address?,sent
+923,,你能给我你的联系方式吗?,Can you give me your contact information?,sent
+924,,我怎么联系你呢?,How can I contact you?,sent
+925,,我想让你见见我的朋友,I'd like you to meet a friend of mine.,sent
+926,,我想让你见见鲍勃。,I want you to meet Bob.,sent
+927,,我来介绍一下鲍勃。,I'd like to introduce Bob.,sent
+928,,他是个好人。,He's a nice guy.,sent
+929,,让我来给你们相互介绍。,Let me introduce you to eath other.,sent
+930,,你们以前见过吗?,Have you met before?,sent
+931,,我们以前见过面吗?,Have we ever met?,sent
+932,,你看起来很眼熟。,You look familiar.,sent
+933,,你看起来像我的一个朋友。,You look like one of my friends.,sent
+934,,你看起来像我认识的一个人。,You look like someone I know.,sent
+935,,我不确定，也许。,I'm not sure. Maybe.,sent
+936,,不，我想没见过面。,"No, I don't think we've met.",sent
+937,,认识你很高兴。,It was nice meeting you.,sent
+938,,很高兴认识(遇见)你。,It's pleasure to meet you.,sent
+939,,请问你叫什么名字?,"What's your name, please?",sent
+940,,我可以知道你的名字吗?,May I have your name?,sent
+941,,我的名字叫*。,My name is *.,sent
+942,,你多大了?,How old are you?,sent
+943,,我今年*岁了。,I'm * years old.,sent
+944,,我可以问一下你从哪里来吗?,May I ask where you come from?,sent
+945,,我从加拿大来。,I come from Canada.,sent
+946,,你的国籍是哪儿?,What is your nationality?,sent
+947,,我的国籍是中国。,My nationality is Chinese.,sent
+948,,我是美国人。,I am American.,sent
+949,,我们需要买点牛奶,We need more milk,sent
+950,,我们去超市买东西吧,Let's go grocery shopping,sent
+951,,我们去超市吧。,Let's go to the supermarket.,sent
+952,,我们去超市转转。,We took a trip to the supermarket.,sent
+953,,去超市，干嘛?,To the supermarket. What's up?,sent
+954,,超市今天开门吗?,Is the supermarket open today?,sent
+955,,我能为你效劳吗?,May I help you?,sent
+956,,购物篮在哪里?,Where are the shopping baskets?,sent
+957,,我们先去找个购物车。,Let's get a shopping cart first.,sent
+958,,我需要一辆购物车。,I need a shopping cart.,sent
+959,,就在入口处。,It is at the entrance.,sent
+960,,在这，取一辆手推车吧。,"Here, take one of these trolleys.",sent
+961,,我们现在有免费试吃。,We have free samples now.,sent
+962,,你要不要尝一下?,Do you want to try it?,sent
+963,,您在找什么呢?,What are you looking for?,sent
+964,,您在找什么呢?,Are you looking for something particular?,sent
+965,,你到底想买些什么?,What do you want exactly?,sent
+966,,我找不到宠物食品。,I can't find the pet food.,sent
+967,,肉柜台在哪里?,Where's the meat counter?,sent
+968,,乳制品在哪儿?,Where can I find the diary products?,sent
+969,,乳制品在哪儿?,Where are the dairy products?,sent
+970,,就在你身后的货架上。,They are on the chelf right behind you.,sent
+971,,罐头产品在哪条通道?,Which aisle are the canned goods at?,sent
+972,,冷冻食品在哪条通道?,At what aisle is the frozen food?,sent
+973,,你记得这货物在哪条货道里吗?,Do you remember which aisle this was at?,sent
+974,,谁能告诉我哪里可以买到做中国菜的原材料?,Can anyone tell me where I can buy the ingredients to make Chinese food?,sent
+975,,水果蔬菜区在哪里?,Where is the fruit and vegetable section?,sent
+976,,水果和蔬菜在那边。,The fruit and vegetables are over there.,sent
+977,,它们在B区。,They are in Section B.,sent
+978,,在第三通道。,In aisle *,vp
+979,,在这条通道的尽头。,It's at the end of this aisle.,sent
+980,,往里走到头然后右转。,Go all the way to the back and turn right.,sent
+981,,我想要些香蕉。,I'd like some bananas.,sent
+982,,这肉有多重?,How much dose this meat weight?,sent
+983,,你能称一下这个吗?,Could you weight this?,sent
+984,,给我切一斤牛肉。,Slice me half a kilo of beef.,sent
+985,,给我一磅番茄和一磅茄子。,Give me a pound of tomatoes and a pound of eggplants.,sent
+986,,好的，还要其它的吗?,OK. Anyting else?,sent
+987,,你们卖有机蔬菜吗?,Do you sell organic vegetables here?,sent
+988,,有的，就在你面前。,"Yes, we do. They're right in front of you.",sent
+989,,你们应该要有标识，让顾客知道哪些是有机蔬菜，那些不是。,You should have a sign. That way people could identify which are organic and which aren't.,sent
+990,,有机蔬菜都有蓝色的标签。在这里，看到了吗?,"The organic vegetables are marked with the blue label. Here, do you see?",sent
+991,,它们在包装上有标示。,They're labeled on the packet.,sent
+992,,这上面没有标价。,There is no price on this item.,sent
+993,,这上面没有标价。,This item is not priced.,sent
+994,,我们想买一些酱油，酱油在哪一个通道?,We need to buy some soya sauce. Which aisle is the soya sauce in?,sent
+995,,在第七走道，和调味品一起，就在番茄酱的旁边。,That would be in aisle * with the condiments. It is right next to the ketchup.,vp
+996,,我们今天清仓大处理。,We have a clearance sale today.,sent
+997,,价格将会下降。,The price will go down.,sent
+998,,这个还有存货吗?,Do you have this in stock?,sent
+999,,这种商品还有存货吗?,Do you have more of this item in stock?,sent
+1000,,恐怕已经没有存货了。,I'm afraid We don't have it in stock.,sent
+1001,,恐怕那种货已经卖完了。,I'm afraid we're out of that item.,sent
+1002,,对不起，已经脱销了。,Sorry. It's out of stock now.,sent
+1003,,好用实惠，物美价廉。,Easy to use and great value too.,sent
+1004,,你们几点开始营业?,What time do you open?,sent
+1005,,你们几点开始关门?,What time do you close?,sent
+1006,,机场,airport,np
+1007,,国内机场,domestic airport,np
+1008,,停机坪,ramp,np
+1009,,机场控制台,control tower,np
+1010,,机场候机楼,airport terminal,np
+1011,,候机厅,waiting room,np
+1012,,候机厅,waiting lounge,np
+1013,,主候机厅,main lobby,np
+1014,,贵宾候机亭,lounge pavilion,np
+1015,,问讯处,assistance,np
+1016,,问讯处,information,np
+1017,,售票处,ticket office,np
+1018,,办理登机区,check in area,np
+1019,,护照检查处,passport control immigration,np
+1020,,失物招领处,lost and found,np
+1021,,公共汽车,bus,np
+1022,,机场班车,airports shuttle,np
+1023,,出租车乘车点,taxipick-up point,np
+1024,,女厕,women's,np
+1025,,订旅馆,hotel reservation,np
+1026,,旅行社,travel agency,np
+1027,,免税店,duty-free shop,np
+1028,,咖啡馆,cafe,np
+1029,,面包店,bakery,np
+1030,,加油站,filling station,np
+1031,,邮局,post office,np
+1032,,办公时间,office hours,np
+1033,,暂停,pause,np
+1034,,停车处,parting,np
+1035,,机场休息室,airport lounges,np
+1036,,旅客休息室,customers lounges,np
+1037,,飞机票,plane ticket,np
+1038,,国际班机,international flight,np
+1039,,旅客姓名,name of passenger,np
+1040,,机号,plane no,np
+1041,,来回机票,round-trip ticket,np
+1042,,头等舱,first class,np
+1043,,经济舱,economy class,np
+1044,,前往城市,to,np
+1045,,起飞日期,date,np
+1046,,预计时间,scheduled time,np
+1047,,机场费,airport fee,np
+1048,,承运公司,carrier,np
+1049,,自动售票机,automatic ticket machine,np
+1050,,国内航班,domestic flights,np
+1051,,进港,arrivals,np
+1052,,过境,transit,np
+1053,,国内航班出站,domestic departure,np
+1054,,由此乘电梯前往登机,stairs and lifts to departures,np
+1055,,出口,exit,np
+1056,,各通道出口,exit to all routes,np
+1057,,由此上楼,upstairs,np
+1058,,推,push,np
+1059,,此路不通,shut,np
+1060,,游人止步,no visitors,np
+1061,,闲人免进,no admittance,np
+1062,,油漆未干,wet paint,np
+1063,,关,off,np
+1064,,快车先行,give way,np
+1065,,禁止吸烟,no smoking,np
+1066,,请勿拍照,no photos,np
+1067,,勿乱扔杂物,no litter,np
+1068,,禁止超车,do not pass,np
+1069,,可以U形转弯,u turn ok,np
+1070,,本处职工专用,staff only,np
+1071,,保持安静,keep silence,np
+1072,,恕不出售,not for sale,np
+1073,,谨防扒手,beware of pickpocket,np
+1074,,灭火专用,for use only in case of fire,np
+1075,,爱护公共财物,protect public propety,np
+1076,,禁止小便,commit no nuisance,np
+1077,,妇女、儿童优先,children and women first,np
+1078,,马路施工，请绕行,"road up, detour",np
+1079,,行李,baggage,np
+1080,,行李,luggage,np
+1081,,托运的行李,checked baggage,np
+1082,,行李领取处,luggage claim,np
+1083,,行李推车,luggage cart,np
+1084,,行李存放处,luggage depository,np
+1085,,到港行李,luggage from flights,np
+1086,,取行李,luggage reclaim,np
+1087,,请随身携带你的行李,please leave your luggage with you at all times,np
+1088,,易碎,fragile,np
+1089,,小心轻放,handle with care,np
+1090,,当心不要丢失东西,take care not to leave things behind,np
+1091,,短暂停留,short stay,np
+1092,,机场安检,airport security,np
+1093,,安检,security inspection,np
+1094,,口袋,pocket,np
+1095,,硬币,coin,np
+1096,,手提电脑,lap-top,np
+1097,,香烟,cigarette,np
+1098,,篮子，筐,basket,np
+1099,,输送带,conveyor,np
+1100,,探测器，检测器,detector,np
+1101,,脱掉,take off,np
+1102,,易燃物品,flammable item,np
+1103,,被禁止,forbidden,np
+1104,,单据，收据,receipt,np
+1105,,暂时，临时,temporarily,np
+1106,,登机,boarding,np
+1107,,上飞机,to board a plane,np
+1108,,对号入座,seat by number,np
+1109,,女空服员,stewardess,np
+1110,,乘客名单,passenger manifest,np
+1111,,紧急出口,emergency exits,np
+1112,,氧气罩,oxygen mask,np
+1113,,座椅扶手,armrest,np
+1114,,坐着的时候放脚的支撑物,foot rest,np
+1115,,有人,occupied,np
+1116,,飞机上的厨房,galley,np
+1117,,毛毯,blanket,np
+1118,,吸烟坐位,smoking seat,np
+1119,,晕机,airsick,np
+1120,,直飞,direct flight,np
+1121,,飞行,flight,np
+1122,,不平稳的飞行,bumpy flight,np
+1123,,迎风,to face the wind,np
+1124,,高度,altitude,np
+1125,,迫降,forced landing,np
+1126,,海关,customs,np
+1127,,海关申报处,customs service area,np
+1128,,海关申请表,customs declaration form,np
+1129,,货币申报,currency declaration,np
+1130,,姓,family name,np
+1131,,年,year,np
+1132,,日,day,np
+1133,,性别,sex,np
+1134,,女,female,np
+1135,,国籍,country of citizenship,np
+1136,,护照号,passport no,np
+1137,,职业,occupation,np
+1138,,行政管理人员,legislators &administrators,np
+1139,,商业人员,commerce,np
+1140,,农民,farmer,np
+1141,,无业,jobless,np
+1142,,前往目的地国,destination country,np
+1143,,签证签发地,city where visa was issued,np
+1144,,前往国家的住址,address while in,np
+1145,,官方填写,official use only,np
+1146,,签名,signature,np
+1147,,客机,passenger plane,np
+1148,,螺旋桨飞机,propeller-driven aircraft,np
+1149,,直升机,helicopter,np
+1150,,波音,boeing,np
+1151,,依柳辛,ilyusin,np
+1152,,三叉戟,trident,np
+1153,,延误,delayed,np
+1154,,中转旅客,transfer passengers,np
+1155,,国际机场,international airport,np
+1156,,飞机跑道,jetway,np
+1157,,直升飞机场,heliport,np
+1158,,卫星楼,satellite,np
+1159,,国际旅客候机厅,international passenger lobby,np
+1160,,国际候机楼,international terminal,np
+1161,,候机厅,waiting hall,np
+1162,,候机厅,departure lounge,np
+1163,,贵宾候机厅,vip suite,np
+1164,,迎宾处,greeting arriving,np
+1165,,问讯处,inquiries,np
+1166,,问讯处,help desk,np
+1167,,货币兑换处,money exchange,np
+1168,,登机手续办理,check-in,np
+1169,,转机处,flight connections,np
+1170,,失物招领,lost property,np
+1171,,公用电话,public phone,np
+1172,,大轿车乘车点,coachpick-up point,np
+1173,,航空公司汽车服务处,airline coach service,np
+1174,,租车处,car hire,np
+1175,,男厕,men's bathroom,np
+1176,,酒店,pub,np
+1177,,来宾登记,visitors please register,np
+1178,,餐厅,restaurant,np
+1179,,酒巴,bar,np
+1180,,洗衣店,laundry,np
+1181,,银行,bank,np
+1182,,营业时间,business hours,np
+1183,,营业,open,np
+1184,,关闭,stop,np
+1185,,下班,closed,np
+1186,,自行车存车处,bike parking,np
+1187,,国内班机,domestic flight,np
+1188,,机票确认,ticket confirm,np
+1189,,班机号码,flight number,np
+1190,,单程机票,one-way ticket,np
+1191,,座舱等级,fare class,np
+1192,,商务客舱,business class,np
+1193,,起点城市,from,np
+1194,,旅行经停地点,good for passage between,np
+1195,,起飞时间,departure time,np
+1196,,机座号,seat no,np
+1197,,订座情况,status,np
+1198,,登机牌,boarding pass,np
+1199,,出港,departures,np
+1200,,中转,transfers,np
+1201,,国际航班出港,international departure,np
+1202,,登机口,boarding gate,np
+1203,,入口,entrance,np
+1204,,安全出口,emergency exit,np
+1205,,靠右,keep right,np
+1206,,靠左,keep left,np
+1207,,由此下楼,downstairs,np
+1208,,拉,pull,np
+1209,,禁止通行,no passing,np
+1210,,禁止入内,no entry,np
+1211,,禁止携犬入内,dogs not allowed,np
+1212,,打开（ 放）,on,np
+1213,,危险,danger,np
+1214,,安全第一,safety first,np
+1215,,除指定区域外，禁止吸烟,no smoking except in designated area,np
+1216,,禁止鸣喇叭,no honking,np
+1217,,免费通行,toll free,np
+1218,,禁止掉头,no u turn,np
+1219,,紧急求救信号,sos,np
+1220,,请勿用手摸,hands off,np
+1221,,不准张贴,no bills,np
+1222,,有毒,poison,np
+1223,,意见箱,complaint box,np
+1224,,保持干燥,keep dry,np
+1225,,请擦去鞋上的泥土,wipe your shoes and boots,np
+1226,,免费入场,admission free,np
+1227,,减速行驶,reduced speed now,np
+1228,,随身行李,carry-on baggage,np
+1229,,行李领取处,baggage claim area,np
+1230,,行李牌,baggage tag,np
+1231,,行李寄存,left baggage,np
+1232,,行李暂存箱,luggage locker,np
+1233,,取行李,luggage pick up,np
+1234,,取行李传送带,reclaim belt,np
+1235,,请勿倒立,keep top side up,np
+1236,,此面向上,this side up,np
+1237,,净重,net（weight）,np
+1238,,切勿近火,keep away from fire,np
+1239,,在此排队,queue here,np
+1240,,跟紧,stay close,np
+1241,,安检,security check,np
+1242,,入境检验,passport control,np
+1243,,金属的,metallic,np
+1244,,物品，物体,object,np
+1245,,手机,cellphone,np
+1246,,口香糖,chewing gum,np
+1247,,铝箔,aluminum foil,np
+1248,,带，传送带,belt,np
+1249,,通过，经过,through,np
+1250,,检查,inspection,np
+1251,,解开外衣扣子,unbutton your coat,np
+1252,,违禁物品,prohibited item,np
+1253,,没收,confiscated,np
+1254,,欢迎登机,welcome aboard,np
+1255,,下飞机,to get off a plane,np
+1256,,机长,captain,np
+1257,,男空服员,steward,np
+1258,,飞行安全示范,pre-flight safety demonstration,np
+1259,,安全带,seat belt,np
+1260,,阅读灯,reading light,np
+1261,,盥洗室,lavatory,np
+1262,,无人,vacant,np
+1263,,送餐车,food trolley,np
+1264,,枕头,pillow,np
+1265,,非吸烟席,non-smoking seat,np
+1266,,航线,air route,np
+1267,,起飞,take-off,np
+1268,,平稳的飞行,smooth flight,np
+1269,,连续飞行,non-stop flight,np
+1270,,顺风,to fly with the wind,np
+1271,,速度,speed,np
+1272,,最高速度,top speed,np
+1273,,降低,to lose height,np
+1274,,飞机颠簸,turbulence,np
+1275,,盘旋,circling,np
+1276,,着陆,landing,np
+1277,,下机,disembark,np
+1278,,海关监管区,area of customs control,np
+1279,,海关申报台,customs declaration counter,np
+1280,,无报关,nothing to declare,np
+1281,,有报关,something) to declare,np
+1282,,无申报通道,nothing to declare,np
+1283,,名,first name,np
+1284,,月,month,np
+1285,,出生日期,date of birth,np
+1286,,男,male,np
+1287,,国籍,nationality,np
+1288,,原住地,country of origin,np
+1289,,偕行人数,accompanying number,np
+1290,,专业技术人员,professionals & technical,np
+1291,,办事员,clerk,np
+1292,,服务人员,service,np
+1293,,工人,worker,np
+1294,,其他,others,np
+1295,,登机城市,city where you boarded,np
+1296,,签发日期,date issue,np
+1297,,街道及门牌号,number and street,np
+1298,,城市及国家,city and state,np
+1299,,班机,airliner,np
+1300,,喷气式飞机,jet aircraft,np
+1301,,空中客车,airbus,np
+1302,,协和,concord,np
+1303,,麦道,mcdonald-douglas,np
+1304,,图波列夫,tupolev,np
+1305,,国际航班旅客,international passengers,np
+1306,,咖啡,coffee,np
+1307,,速溶咖啡,instant coffee,np
+1308,,冰咖啡,iced coffee,np
+1309,,冰薄荷咖啡,iced mint coffee,np
+1310,,意大利浓咖啡,espresso,np
+1311,,塔拉珠高山咖啡,tarrazu coffee,np
+1312,,特雷里奥咖啡,tres rios coffee,np
+1313,,杏香咖啡,saronno coffee,np
+1314,,玫瑰夫人咖啡,rose lady coffee,np
+1315,,瑞士冰咖啡,iced swiss coffee,np
+1316,,皇家咖啡,royal coffee,np
+1317,,爱尔咖啡,irish coffee,np
+1318,,贵妇人咖啡,dame coffee,np
+1319,,哥伦比亚咖啡,colombian coffee,np
+1320,,蓝山咖啡,blue mountain coffee,np
+1321,,曼特林咖啡,brazilian coffee,np
+1322,,美式咖啡,cafe americano,np
+1323,,菠萝冰美式,iced pineapple americano,np
+1324,,蜜桃冰美式咖啡,iced peach americano,np
+1325,,法式滴滤咖啡,french coffee,np
+1326,,低因咖啡,decaffeinated coffee,np
+1327,,冰卡布奇诺,iced cappuccino,np
+1328,,冰香草卡布奇诺,iced vanilla cappuccino,np
+1329,,果味冰卡布奇诺,iced fruit cappuccino,np
+1330,,薰衣草卡布奇诺,lavender cappuccino,np
+1331,,榛子卡布奇诺,hazelnut cappuccino,np
+1332,,冰焦糖咖啡拿铁,iced caramel latte,np
+1333,,冰榛子咖啡拿铁,iced hazelnut latte,np
+1334,,冰草莓咖啡拿铁,iced strawberry latte,np
+1335,,黑莓咖啡拿铁,blackberry latte,np
+1336,,薰衣草咖啡拿铁,lavender latte,np
+1337,,黑莓冰咖啡拿铁,iced blackberry latte,np
+1338,,蜜桃冰咖啡拿铁,iced peach latte,np
+1339,,樱桃咖啡拿铁,cherry latte,np
+1340,,榛子咖啡拿铁,hazelnut latte,np
+1341,,浓缩咖啡康保蓝,espresso con panna,np
+1342,,冰摩卡,iced mochaccino,np
+1343,,樱桃摩卡咖啡,cherry mocha,np
+1344,,芒果摩卡咖啡,mango mocha,np
+1345,,冰水果咖啡,iced fruit coffee,np
+1346,,漂浮冰咖啡,iced coffee float,np
+1347,,正餐刀,dinner knife,np
+1348,,牛油刀,butter knife,np
+1349,,扒刀,steak knife,np
+1350,,甜品勺,dessert spoon,np
+1351,,汤勺,soup spoon,np
+1352,,冻茶勺,soda spoon,np
+1353,,冰夹,ice tongs,np
+1354,,服务叉,service fork,np
+1355,,长把勺,ladle,np
+1356,,汤碗,soup bowl,np
+1357,,咖啡杯,coffee cup,np
+1358,,咖啡杯,coffee mug,np
+1359,,甜品碟,desscrt plate,np
+1360,,牛油碟,butter plate,np
+1361,,糖盅,sugar bowl,np
+1362,,茶盅,tea pot,np
+1363,,水杯,water glass,np
+1364,,高杯,high ball,np
+1365,,洛杯,rock,np
+1366,,配料,ingredients,np
+1367,,葱,green onion,np
+1368,,胡椒,pepper,np
+1369,,咸菜,pickle,np
+1370,,洋葱,onion,np
+1371,,黄油,butter,np
+1372,,橄榄油,olive oil,np
+1373,,香油,sesame oil,np
+1374,,盐,salt,np
+1375,,糖,sugar,np
+1376,,砂糖,granulated sugar,np
+1377,,冰糖,rock sugar,np
+1378,,味精,msg,np
+1379,,芥末,mustard,np
+1380,,番茄酱,ketchup,np
+1381,,果酱,jam,np
+1382,,花生酱,peanut,np
+1383,,蜂蜜,honey,np
+1384,,美极油,maggi,np
+1385,,蚝油,oyster sauce,np
+1386,,醋,vinegar,np
+1387,,菜单,menu,np
+1388,,点菜本,captain orde,np
+1389,,牙签,toothpick,np
+1390,,餐巾，餐布,napkin,np
+1391,,烟盅,ashtra,np
+1392,,搅棒,stir stick,np
+1393,,托盘,tray,np
+1394,,咖啡炉,coffee warmer,np
+1395,,巧克力咖啡,chocolate coffee,np
+1396,,现磨咖啡,fresh ground coffee,np
+1397,,浓缩冰咖啡,iced espresso,np
+1398,,意大利咖啡,italian coffee,np
+1399,,意大利泡沫咖啡,cappuccino,np
+1400,,碳烧咖啡,charcoal coffee,np
+1401,,维也纳咖啡,vienna coffee,np
+1402,,夏威夷可娜咖啡,hawaiian kona coffee,np
+1403,,墨西哥冰咖啡,iced mexican coffee,np
+1404,,巴西咖啡,brazil coffee,np
+1405,,君度咖啡,cointreau coffee,np
+1406,,生姜咖啡,ginger juice coffee,np
+1407,,椰香咖啡,coconut coffee,np
+1408,,牙买加咖啡,jamaican coffee,np
+1409,,巴西山度士咖啡,brazil santos coffee,np
+1410,,拿铁咖啡,cafe latte,np
+1411,,冰美式咖啡,iced cafe americano,np
+1412,,芒果冰美式咖啡,iced mango americano,np
+1413,,香蕉冰美式,iced banana americano,np
+1414,,冰法式滴滤,iced french coffee,np
+1415,,冰焦糖卡布奇诺,iced caramel cappuccino,np
+1416,,冰榛子卡布奇诺,iced hazelnut cappuccino,np
+1417,,果味卡布奇诺,fruit cappuccino,np
+1418,,香草卡布奇诺,vanilla cappuccino,np
+1419,,冰拿铁咖啡,iced cafe latte,np
+1420,,冰香草咖啡拿铁,iced vanilla latte,np
+1421,,冰菠萝咖啡拿铁,iced pineapple latte,np
+1422,,冰果味咖啡拿铁,iced fruit latte,np
+1423,,拿铁香草,vanilla bean latte,np
+1424,,椰子冰咖啡拿铁,iced coconut latte,np
+1425,,芒果冰咖啡拿铁,iced mango latte,np
+1426,,蜜桃咖啡拿铁,peach latte,np
+1427,,樱桃冰咖啡拿铁,iced cherry latte,np
+1428,,香蕉咖啡拿铁,banana latte,np
+1429,,浓缩咖啡玛奇朵,espresso macchiato,np
+1430,,草莓摩卡咖啡,iced strawberry mocha,np
+1431,,椰子摩卡咖啡,coconut mocha,np
+1432,,香蕉摩卡咖啡,banana mocha,np
+1433,,法国香草咖啡,french vanilla coffee,np
+1434,,巧克力冰咖啡,iced chocolate coffee,np
+1435,,正餐叉,dinner for,np
+1436,,水果刀,dessert knife,np
+1437,,柄铲,cake knife,np
+1438,,甜品叉,dessert for,np
+1439,,服务勺,vice spoo,np
+1440,,茶勺,teaspoon,np
+1441,,服务夹,service tongs,np
+1442,,小咖啡勺,demi-spoon,np
+1443,,饭碗,rice bowl,np
+1444,,碟子,dish,np
+1445,,咖啡碟,saucer,np
+1446,,面包碟,bread plate,np
+1447,,奶勺,creamer,np
+1448,,咖啡壶,coffee pot,np
+1449,,特浓杯,espresso cup,np
+1450,,果汁杯,juice glass,np
+1451,,啤酒杯,beer glass,np
+1452,,酒杯,wineglass,np
+1453,,蒜,garlic,np
+1454,,姜,ginge,np
+1455,,辣椒,hot red pepper,np
+1456,,香草,herb,np
+1457,,柠檬,lemon,np
+1458,,油,oil,np
+1459,,色拉油,salad oil,np
+1460,,调料,condiments,np
+1461,,加碘盐,iodized salt,np
+1462,,白糖,refined sugar,np
+1463,,红糖,brown sugar,np
+1464,,芝麻,sesame,np
+1465,,咖喱,curry,np
+1466,,沙拉酱,salad dressing,np
+1467,,番茄汁,tomato juice,np
+1468,,酸果酱,marmalade,np
+1469,,芝麻酱,sesame paste,np
+1470,,辣椒仔,tabasco,np
+1471,,酱油,soy sauce,np
+1472,,芝士粉,cheese powder,np
+1473,,辣椒酱,chili sauce,np
+1474,,酒水单,drink list,np
+1475,,胡椒瓶,pepper shaker,np
+1476,,盐瓶,salt shaker,np
+1477,,牙签筒,toothpick tuble,np
+1478,,纸巾,paper napkin,np
+1479,,吸管,straw,np
+1480,,杯垫,coaste,np
+1481,,菜盖,cover,np
+1482,,花瓶,vase,np
+1483,,姓名,name,np
+1484,,别名,alias,np
+1485,,小姐,miss,np
+1486,,太太,mrs,np
+1487,,英寸,in,np
+1488,,体重,weight,np
+1489,,年龄,age,np
+1490,,出生日期,birthdate,np
+1491,,生于,born,np
+1492,,永久住址,permanent address,np
+1493,,目前住址,current address,np
+1494,,双重国籍,duel citizenship,np
+1495,,籍贯,native place,np
+1496,,自治区,autonomous region,np
+1497,,市,city,np
+1498,,区,district,np
+1499,,街,street,np
+1500,,门牌,house number,np
+1501,,办公电话,business phone,np
+1502,,住宅电话,home phone,np
+1503,,身份证,id card,np
+1504,,未婚,single,np
+1505,,分居,separated,np
+1506,,家庭状况,family status,np
+1507,,健康状况,health condition,np
+1508,,（身体）极佳,excellent,np
+1509,,远视,far-sighted,np
+1510,,教育程度,educational background,np
+1511,,学历,educational history,np
+1512,,公费生,government-supportedstudent,np
+1513,,实习生,intern,np
+1514,,走读生,day-student,np
+1515,,旁听生（美）,auditor,np
+1516,,奖学金生,prize fellow,np
+1517,,留学生,abroad student,np
+1518,,学位,degree,np
+1519,,硕士,master,np
+1520,,博士后,post doctorate,np
+1521,,学年,academic year,np
+1522,,在职培训,in-job training,np
+1523,,课程,curriculum,np
+1524,,专门课程,specialized courses,np
+1525,,主修,major,np
+1526,,有才干的，能干的,able,np
+1527,,主动的，活跃的,active,np
+1528,,有雄心壮志的,ambitious,np
+1529,,友好的,amicable,np
+1530,,有理解力的,apprehensive,np
+1531,,有合作精神的,cooperative,np
+1532,,尽职的,dutiful,np
+1533,,有幽默,humorous,np
+1534,,稳健的,temperate,np
+1535,,负责的,responsible,np
+1536,,善于表达,expressivity,np
+1537,,精力充沛的,energetic,np
+1538,,实事求是的,realistic,np
+1539,,勤奋的,industrious,np
+1540,,有教养的,genteel,np
+1541,,工作经历,work experience,np
+1542,,职业经历,professionalhistory,np
+1543,,擅长于,good at,np
+1544,,工作成就，业绩,achievements,np
+1545,,笔名,pen name,np
+1546,,先生,mr,np
+1547,,小姐或太太,ms,np
+1548,,身高,height,np
+1549,,英尺,ft,np
+1550,,血型,bloodtype,np
+1551,,生日,birthday,np
+1552,,出生日期,date of birth,np
+1553,,出生地点,birthplace,np
+1554,,地址,address,np
+1555,,国籍,citizenship,np
+1556,,民族；国籍,nationality,np
+1557,,省,province,np
+1558,,专区,prefecture,np
+1559,,县,county,np
+1560,,路,road,np
+1561,,胡同，巷,lane,np
+1562,,邮政编码,postal code,np
+1563,,办公电话,office phone,np
+1564,,移动电话,mobile telephone,np
+1565,,婚姻状况,marital status,np
+1566,,已婚,married,np
+1567,,离异,divorced,np
+1568,,子女人数,number of children,np
+1569,,健康状况,health,np
+1570,,近视,short-sighted,np
+1571,,学历,education,np
+1572,,毕业生,graduate,np
+1573,,自费生,commoner,np
+1574,,走读生,extern,np
+1575,,旁听生,guest student,np
+1576,,寄宿生,boarder,np
+1577,,大学肆业生,undergraduate,np
+1578,,研究生,graduate student,np
+1579,,学士,bachelor,np
+1580,,博士,doctor,np
+1581,,学制,educational system,np
+1582,,脱产培训,off-job training,np
+1583,,特别训练,special training,np
+1584,,所学课程,courses taken,np
+1585,,进修课程,refresher course,np
+1586,,副修,minor,np
+1587,,适应性强的,adaptable,np
+1588,,有进取心的,aggressive,np
+1589,,和蔼可亲的,amiable,np
+1590,,善于分析的,analytical,np
+1591,,正直的,candid,np
+1592,,老练的，有策略的,diplomatic,np
+1593,,守纪律的,disciplined,np
+1594,,谦虚的,modest,np
+1595,,一丝不苟的,precise,np
+1596,,直率的，真诚的,frank,np
+1597,,有效率的,efficient,np
+1598,,有独创性的,ingenious,np
+1599,,受过良好教育的,well-educated,np
+1600,,有礼貌的,gentle,np
+1601,,守信的，忠诚的,faithful,np
+1602,,工作经历,occupational history,np
+1603,,具体经历,specific experience,np
+1604,,适应于,adapted to,np
+1605,,第二职业,second job,np
+1606,,配偶,spouse,np
+1607,,丈夫,husband,np
+1608,,妻子,wife,np
+1609,,兄弟,brother,np
+1610,,弟弟,younger brother,np
+1611,,姐姐,elder sister,np
+1612,,双胞胎的,twin,np
+1613,,异父(母)之姐妹,stepsister,np
+1614,,大伯，小叔，姐夫，妹夫,brother-in-law,np
+1615,,孩子,child,np
+1616,,女儿,daughter,np
+1617,,继女,stepdaughter,np
+1618,,养女,adopted daughter,np
+1619,,女婿,son-in-law,np
+1620,,侄女，外甥女,niece,np
+1621,,父母,parents,np
+1622,,r母亲，妈妈,mothe,np
+1623,,继母,stepmother,np
+1624,,养母,foster mother,np
+1625,,岳母，婆婆,mother-in-law,np
+1626,,婶母，伯母，舅母，姑母,aunt,np
+1627,,祖父,grandfather,np
+1628,,爷爷,grandpa,np
+1629,,孙辈,grandchildren,np
+1630,,孙女，外孙女,granddaughter,np
+1631,,曾祖父,great-grandfather,np
+1632,,叔、伯祖父,great-uncle,np
+1633,,曾孙，曾外孙,great-grandson,np
+1634,,家庭,family,np
+1635,,亲戚,relative,np
+1636,,男的,male,np
+1637,,代,generation,np
+1638,,后代，后辈,offspring,np
+1639,,夫妻,couple,np
+1640,,前夫,ex-husband,np
+1641,,前妻,ex-wife,np
+1642,,哥哥,elder brothe,np
+1643,,姐妹,sister,np
+1644,,妹妹,younger sister,np
+1645,,异父(母)之兄弟,stepbrother,np
+1646,,堂兄妹，表兄妹,cousin,np
+1647,,弟妹,sister-in-law,np
+1648,,儿子,son,np
+1649,,继子,stepson,np
+1650,,养子,adopted son,np
+1651,,儿媳,daughter-in-law,np
+1652,,侄儿，外甥,nephew,np
+1653,,父亲,father,np
+1654,,爸爸,dad,np
+1655,,继父,stepfather,np
+1656,,养父,foster father,np
+1657,,岳父，公公,father-in-law,np
+1658,,叔父，伯父，舅父，姑父,uncle,np
+1659,,祖母,grandmother,np
+1660,,奶奶,grandma,np
+1661,,孙子,grandson,np
+1662,,曾祖母,great-grandmother,np
+1663,,叔、伯祖母,great-aunt,np
+1664,,曾孙女，曾外孙女,great-granddaughter,np
+1665,,婚姻,marriage,np
+1666,,女的,female,np
+1667,,世系，血统,descent,np
+1668,,祖先,ancestor,np
+1669,,继承人,heir,np
+1670,صفر,零,zero,num
+1671,واحد,一,one,num
+1672,إثنان,二,two,num
+1673,ثلاثة,三,three,num
+1674,أربعة,四,four,num
+1675,خمسة,五,five,num
+1676,ستة,六,six,num
+1677,سبعة,七,seven,num
+1678,ثمانية,八,eight,num
+1679,تسعة,九,nine,num
+1680,عشرة,十,ten,num
+1681,مائة,一百,hundred,num
+1682,مئتين,二百,two hundred,num
+1683,خمس مائة,五百,five hundred,num
+1684,ألف,一千,thousand,num
+1685,ألفين,二千,two thousand,num
+1686,عشرة آلاف,一万,ten thousand,num
+1687,عشرون الف,二万,twenty thousand,num
+1688,خمسون ألف,五万,fifty thousand,num
+1689,مائة ألف,十万,hundred thousand,num
+1690,مليون,一百万,million,num
+1691,عشرة ملايين,一千万,ten million,num
+1692,مائة مليون,一亿,hundred million,num
+1693,مليار‎,十亿,billion,num
+1694,تريليون,一兆,trillion,num
+1695,من فضلك أعطني * و *.,请给我*和*。,"* and * , please.",vp
+1696,‏* أيام,*天,* day(s),prt
+1697,‏* ساعات,*个小时,* hour(s),prt
+1698,* لا يعمل,坏了,* is not working.,vp
+1699,‏* دقائق,*分钟,* minute(s),prt
+1700,*  أشهر,*个月,* month(s),prt
+1701,‏* أسبوع,*个星期,* week(s),prt
+1702,‏* سنوات,*年,* year(s),prt
+1703,قارورة,一瓶,a bottle,np
+1704,كأس من النبيذ,一杯酒,a glass of wine,np
+1705,نصف لتر,一品脱,a pint,np
+1706,طاولة ل * شخص,*人的座位,a table for * people,np
+1707,بطن,腹部,abdomen,np
+1708,بعد,之后,after,adv
+1709,بعد الظهر,下午,afternoon,np
+1710,مكيف هواء,空调,airconditioner,np
+1711,طائرة,飞机,airplane,np
+1712,مطار,机场,airport,np
+1713,هل أنا معتقل؟,我被捕了吗？,Am I under arrest?,sent
+1714,أبريل,四月,April,np
+1715,قريب من هنا,转角,Around the corner.,sent
+1716,أغسطس,八月,August,np
+1717,سبيل,大道,avenue,np
+1718,ظهر,背,back,np
+1719,مشرب,酒吧,bars,np
+1720,‏حمام,卫生间,bathroom,np
+1721,بطارية,电池,batteries,np
+1722,فول,豆,beans,np
+1723,ملاءات السرير,床单,bedsheets,np
+1724,لحم بقري,牛肉,beef,np
+1725,بيرة,啤酒,beer,np
+1726,قبل,以前,before,adv
+1727,أكبر,更大,bigger,adj
+1728,أسود,黑色,black,adj
+1729,فلفل أسود,黑胡椒,black pepper,np
+1730,شاي أسود,红茶,black tea,np
+1731,أزرق,蓝色,blue,adj
+1732,الجسم,身体,body,np
+1733,ماء مغلي,开水,boiled water,np
+1734,مياه معبأة,矿泉水,bottled water,np
+1735,خبز,面包,bread,np
+1736,وجبة افطار,早饭,breakfast,np
+1737,بني,褐色,brown,adj
+1738,محطة حافلات,公家车站,bus station,np
+1739,زبدة,牛油,butter,np
+1740,مؤخرة,屁股,buttocks,np
+1741,مقهى,咖啡室,cafe,np
+1742,هل استطيع الحصول على حقيبة؟,我可以要一个袋子吗？,Can I get a bag?,sent
+1743,هل أستطيع الحصول على تأمين؟,我可以买保险吗？,Can I get insurance?,sent
+1744,هل استطيع دفع غرامة أدفع غرامة الآن؟,我可以缴交罚款吗？,Can I just pay a fine now?,sent
+1745,قائمة الطعام، من فضلك؟,请给我看看菜单.,"Can I look at the menu, please?",sent
+1746,هل يمكنني الحصول على مكالمة هاتفية؟,我可以打个电话吗？,Can I make a telephone call?,sent
+1747,هل يمكنني حجز موعد؟,我可以预约吗？,Can I make an appointment?,sent
+1748,هل استطيع القيام بمكالمة دولية من هنا؟,可以打国际电话吗?,Can I make international calls here?,sent
+1749,هل يمكنني الطبع من هنا؟,我可以复印吗？,Can I print here?,sent
+1750,أيمكنني إستخدام هاتفك؟,我可以用您的手机吗？,Can I use your cell phone?,sent
+1751,أيمكنني استخدام هاتفك النقال؟,我可以用您的电话吗？,Can I use your phone?,sent
+1752,هل يمكنك تحويل مال لي؟ ,你可以帮我换钱吗？,Can you change money for me?,sent
+1753,هل يمكنك أن تحضر طبيب؟,你可以帮我找一位医生吗？,Can you get a doctor?,sent
+1754,هل يمكنك أن تريني أين هو على الخريطة؟,你可以在地图上指给我看?,Can you show me on the map?,sent
+1755,عل يمكنك تحدث ال*؟,你可以说*吗？,Can you speak *?,vp
+1756,هل يمكنك اقتراح فندق آخر؟,你有其他推荐的酒店吗？,Can you suggest another hotel?,sent
+1757,اين *؟,你可以告诉我*在那里吗？,Can you tell me where * is?,vp
+1758,هل تستطيع إيقاظي الساعة *؟,请在明天早上*点钟叫醒我。,Can you wake me at *?,vp
+1759,هل يمكنك أن تكتب لي الإسم و العنوان؟,你可以写下名字和地址吗？,Can you write the name and address down?,sent
+1760,سيارة,汽车,car,np
+1761,مياه غازية,碳酸水,carbonated water,np
+1762,أوراق مالية,现金,cash,np
+1763,رخيص,便宜,cheap,adj
+1764,أرخص,比较便宜,cheaper,adj
+1765,شيك,支票,check,np
+1766,جبنة,奶酪,cheese,np
+1767,صدر,胸部,chest,np
+1768,دجاج,鸡,chicken,np
+1769,أنظف,清洁工,cleaner,np
+1770,مغلق,关闭,closed,adj
+1771,صودا,苏打水,club soda,np
+1772,قهوة,咖啡,coffee,np
+1773,الكولا,可乐,Coke,np
+1774,دواء للزكام,感冒药,cold medicine,np
+1775,سعال,咳嗽,cough,np
+1776,لو سمحتو هل يمكنك أن *؟,可以请你*吗？,Could you please *?,vp
+1777,هل يمكنك أن تكرر هذا؟,你可以重复一遍吗？,Could you repeat that?,sent
+1778,بطاقة ائتمان,信用卡,credit card,np
+1779,ديسمبر,十二月,December,np
+1780,وديعة,押金,deposit,np
+1781,إسهال,泻肚子/拉肚子,diarrhoea,np
+1782,قاموس,词典,dictionary,np
+1783,ديزل‎ سولار‎ جاز,柴油,diesel,np
+1784,هل تقبل العملة *؟,你接受*的货币吗？,Do you accept * currency?,vp
+1785,هل تقبل بطاقات الائتمان؟,你接受信用卡吗？,Do you accept credit cards?,sent
+1786,هل تقبل الدولار الأمريكي؟,你接受美元吗？,Do you accept US dollars?,sent
+1787,هل تذهب إلى *؟,去不去*?,Do you go to *?,vp
+1788,هل لديك خزنة؟,你们有没有保险箱？,Do you have a safe?,sent
+1789,هل لديك قائمة بالإنجليزية؟,你有没有英文菜单？,Do you have an English menu?,sent
+1790,هل لديك أي غرف متاحة؟,你们还有房间吗？,Do you have any rooms available?,sent
+1791,هل لديك أي وجبات خفيفة؟,有没有小吃？有没有点心？,Do you have any snacks?,sent
+1792,هل لديك تأمين؟,你有保险吗？,Do you have insurance?,sent
+1793,هل لديك لون آخر؟,你们有没有另外的颜色?,Do you have it in another color?,sent
+1794,هل لديكم من هذه بمقاسي؟,有没有我的尺寸？,Do you have this in my size?,sent
+1795,هل تعلم *؟,你知道*吗？,Do you know *?,vp
+1796,هل تقدمون أي خمور؟,你们销售酒精类饮品吗？,Do you serve alcohol?,sent
+1797,هل هن,可以邮寄到海外吗？,Do you ship overseas?,sent
+1798,هل هناك شحن دولى؟,你会说英语吗？,Do you speak English?,sent
+1799,هل تقبلون عملة *؟,*元可以吗？,Do you take * currency?,vp
+1800,مفهوم؟,听得懂吗？,Do you understand?,sent
+1801,هل هذا يشمل وجبة الافطار؟,早餐包含在内吗？,Does that include breakfast?,sent
+1802,هل تحتوي هذه الغرفة على *؟,这个房间有没有*？,Does the room come with *?,vp
+1803,هل تتوقف هذه الحافلة في *؟,这辆巴士停在*吗？,Does this bus stop in *?,vp
+1804,هل يتوقف هذا القطار في *؟,这列火车停在*吗？,Does this train stop in *?,vp
+1805,لا تلمسني!,不要碰我！,Don't touch me!,sent
+1806,وسط البلد,市中心,downtown,np
+1807,رخصة قيادة,驾驶证件,driver's license,np
+1808,زلابية,饺子,dumpling,np
+1809,آذان,耳朵,ears,np
+1810,شرق,东,east,adj
+1811,بيض,鸡蛋,eggs,np
+1812,كتب إنجليزية,英文书,English books,np
+1813,مجلات انجليزية,英文杂志,English magazines,np
+1814,جريدة إنجليزية,英文报纸,English newspaper,np
+1815,دخول,入口,entrance,np
+1816,مساء,晚上,evening,np
+1817,ممتاز!,太棒了！,Excellent!,sent
+1818,أعذرني,打扰一下。,Excuse me. (begging pardon),sent
+1819,لو سمحت,对不起。,Excuse me. (coming through),sent
+1820,معذرة,请问。,Excuse me. (getting attention),sent
+1821,خروج,出口,exit,np
+1822,غالي,贵,expensive,adj
+1823,عيون,眼睛,eyes,sent
+1824,وجه,脸,face,np
+1825,فبراير,二月,February,np
+1826,أقدام,脚,feet,np
+1827,حمة,发烧,fever,np
+1828,بخير، شكرا لك.,"很好, 谢谢。","Fine, thank you.",sent
+1829,أصابع,手指,fingers,np
+1830,مقصورة درجة أولى,头等舱,first class cabin,np
+1831,سمك,鱼,fish,np
+1832,وجبة ثابتة السعر,定价套餐,fixed-price meal,np
+1833,ممنوع,被禁止,forbidden,adj
+1834,يوم الجمعة,星期五,Friday,np
+1835,أرز مقلي,炒饭,fried rice,np
+1836,من,从,from,prt
+1837,فاكهة,水果,fruits,np
+1838,محطة بنزين,加油站,gas station,np
+1839,نظارات,眼镜,glasses,np
+1840,ذهب,去,go,vp
+1841,انطلق الى الأمام.,直走,Go straight.,sent
+1842,ذهب,金色,gold,adj
+1843,مساء الخير.,晚上好。,Good evening.,sent
+1844,صباح الخير.,早安。,Good morning.,sent
+1845,تصبح على خير,晚安。,Good night.,sent
+1846,مع السلامة,再见。,Goodbye,sent
+1847,باي باي,拜拜。,Goodbye (informal),sent
+1848,أخضر,绿色,green,adj
+1849,شاي أخضر,绿茶,green tea,np
+1850,رمادي,灰色,grey,adj
+1851,شعر,头发,hair,np
+1852,نصف,半,half,adj
+1853,خنزير,火腿,ham,np
+1854,أيادي,手,hands,np
+1855,هو,他,he,np
+1856,رئس,头,head,np
+1857,مدفأة,暖气,heater,np
+1858,مرحبا.,你好。,Hello.,sent
+1859,النجدة!,救命！,Help!,sent
+1860,هنا,这里,here,adv
+1861,هل أنت(ي) هنا لوحدك؟,你自己一个人吗？,Here by yourself?,sent
+1862,فندق,酒店／旅馆,hotel,np
+1863,كيف حالك,你好吗？,How are you?,sent
+1864,كيف أصل إلى *؟,怎么去*?,How do I get to * ?,vp
+1865,كم سيكلفني الذهاب إلى *؟,去*要多少钱？,How much does it cost to get to *?,vp
+1866,ما سعر الغرفة لفرد واحد؟,单人房一晚多少钱？,How much is a room for one person per night?,sent
+1867,ما سعر الغرفة لفردين؟,双人房一晚多少钱？,How much is a room for two people per night?,sent
+1868,ما سعر التذكرة الى *؟,去*的票多少钱？,How much is a ticket to *?,vp
+1869,ما السعر للساعة؟,一小时是多少钱？,How much is it per hour?,sent
+1870,ما سعر المكالمة الى *؟,打给*是多少钱？,How much is it to call to *?,vp
+1871,ما سعر تذكرة الدخول؟,入场费多少钱？,How much is it to get in?,sent
+1872,بكم هذا؟,多少钱？,How much is this?,sent
+1873,بكم؟,多少？,How much?,sent
+1874,كيف كانت وجبتك؟,这一顿饭怎么样？,How was your meal?,sent
+1875,انا,我,I,np
+1876,أنا من *.,我从*来。,I am from *.,vp
+1877,انا مريض,我生病了。,I am sick.,sent
+1878,لا أستطيع تحمل هذا,我付不起。,I can't afford it.,sent
+1879,لا اتكلم *.,我不会讲*。,I can't speak *.,vp
+1880,لا آكل *.,我不吃*。,I don't eat *.,vp
+1881,ليس عندي *.,我没有*。,I don't have *.,vp
+1882,لا أتحدث *.,我不能说*。,I don't speak *.,vp
+1883,أنا لا أفهم,我听不懂。,I don't understand (something heard).,sent
+1884,لا أريد *.,我不要*。,I don't want *.,vp
+1885,أنا لا أريده,我不要。,I don't want it.,sent
+1886,لدي *.,我有*。,I have *.,vp
+1887,لقد وصلت.,我到了。,I have arrived.,sent
+1888,ما عملت اشي غلط.,我没有做错事。,I haven't done anything wrong.,sent
+1889,فقدت *.,我丢了我的*。,I lost my *.,vp
+1890,فقدت حقيبتي.,我丢了我的包包。,I lost my bag.,sent
+1891,احتاج *.,我要*。,I need *.,vp
+1892,أحتاج طبيب.,我需要医生。,I need a doctor.,sent
+1893,أ حتاج أن أرى جواز سفرك,我需要看一下你的护照。,I need to see your passport.,sent
+1894,أريد التحدث مع محامي,我要跟律师联系。,I need to talk to a lawyer.,sent
+1895,أحتاج مساعدة لو سمحت.,我需要你的帮助。,I need your help.,sent
+1896,أنا آكل الطعام الحلال فقط.,我只吃清真食品。,I only eat Halal food.,sent
+1897,أريد *.,我想要*。,I want *.,vp
+1898,أريد أن آكل طبق مع *.,我想吃*的菜。,I want a dish with *.,vp
+1899,أريد أن أدفع لاغادر.,我要退房。,I want to check out.,sent
+1900,أريد ايجار سيارة.,我想要租车。,I want to rent a car.,sent
+1901,أود بالتحدث مع سّفارة *.,我希望跟*大使馆联系。,I want to talk to the * embassy.,vp
+1902,سأقيم * ليلى,我打算住*夜。,I will stay for * night(s).,vp
+1903,أعمل في *.,我在*工作。,I work at the *.,vp
+1904,أريد ايجار سيارة.,我想租车,I'd like to rent a car.,sent
+1905,سأتصل بالشرطة‏ ‎.,我会叫警察。,I'll call the police.,sent
+1906,أنا نباتي.,我吃素的。,I'm a vegetarian.,sent
+1907,لقد انتهيت.,我完成了。,I'm finished.,sent
+1908,أبحث عن *.,我在找*,I'm looking for *.,vp
+1909,أنا تائه.,我迷路了。,I'm lost.,sent
+1910,أنا لست على ما يرام.,我不舒服,I'm not feeling well.,sent
+1911,أنا لست مهتم.,我没有兴趣。,I'm not interested.,sent
+1912,انا مريض.,我生病了。,I'm sick.,sent
+1913,أنا آسف.,对不起。,I'm sorry.,sent
+1914,أنا مع *.,我现在跟*在一起,I'm with *.,vp
+1915,إنني مصاب.,我受伤了。,I've been injured.,sent
+1916,أنا فقدت *.,我的*不见了,I've lost *.,vp
+1917,تقاطع,交界,intersection,np
+1918,هل يتضمن ذلك الإفطار؟,包含早餐吗？,Is breakfast included?,sent
+1919,هل هذا شامل التأمين؟,包含保险吗？,Is insurance included?,sent
+1920,هل هو مفتوح *؟,*对外开放吗？,Is it open on *?,vp
+1921,هل هناك * قريب؟,附近有没有*,Is there * around here?,vp
+1922,هل هناك * تنصحني به؟,你有推介的*吗？,Is there * you recommend?,vp
+1923,هل هناك خصم للمجموعات؟,有没有团体折扣？,Is there a group discount?,sent
+1924,هل هناك تخصص محلي؟,有没有当地特色？,Is there a local specialty?,sent
+1925,هل هناك خصم للطلاب؟,有没有学生优惠？,Is there a student discount?,sent
+1926,هل هناك مكان أترك فيه أغراضي؟,有没有地方让我放行李？,Is there anywhere I can leave luggage?,sent
+1927,هل هناك أحد يتحدث الانجليزية؟,这里有人会说英语吗？,Is there someone here who speaks English?,sent
+1928,هل هناك خدمة طاولات؟,有没有餐桌服务？,Is there table service?,sent
+1929,هل هذا المقعد خالى؟,这里有人坐吗？,Is this seat free?,sent
+1930,أشعر بالألم هنا.,这里很痛,It hurts here.,sent
+1931,هي التاسعة صباحاً,现在是早上9点钟。,It is nine in the morning.,sent
+1932,كان سوء تفاهم,这是误会。,It was a misunderstanding.,sent
+1933,كان لذيذ‏ ‎,很好吃。,It was delicious.,sent
+1934,إنها حالة طارئة.,这是紧急情况。,It's an emergency.,sent
+1935,لا بأس,没关系。,"It's okay. (polite response to ""I'm sorry"")",sent
+1936,إنه غير مريح.,不舒服。,It's uncomfortable.,sent
+1937,يحكك,痒,itchy,adj
+1938,يناير,一月,January,np
+1939,عصير,果汁,juice,np
+1940,يوليو,七月,July,np
+1941,يونيو,六月,June,np
+1942,الأسبوع الماضي,上个星期,last week,np
+1943,لاحقاً,迟一点,later,adv
+1944,اتركني وحدي.,不要打扰我。,Leave me alone.,sent
+1945,يسار,左边,left,adv
+1946,أرجل,腿,legs,np
+1947,اقل,少,less,adj
+1948,أقل من,少于,less than,adj
+1949,خزانات,储物柜,lockers,np
+1950,انتبه!,小心！,Look out!,sent
+1951,غداء,午饭,lunch,np
+1952,معكرونة,通粉,macaroni,np
+1953,مارس,三月,March,np
+1954,مايو,五月,May,np
+1955,هل لي بالحصول على قارورة *؟,可以来一瓶*吗？,May I have a bottle of *?,vp
+1956,هل لي بالحصول على كوب من *؟,可以来一杯*吗？,May I have a cup of *?,vp
+1957,هل لي بالحصول على كأس من *؟,可以来一杯*吗？,May I have a glass of *?,vp
+1958,هل لي بالحصول على القليل من *؟,可以来一点*吗？,May I have some *?,vp
+1959,هل لي بالسؤال، ما هو اسمك؟,请问你叫什么名?,"May I please ask, what is your name?",sent
+1960,هل لي برؤية الغرفة أولاً؟,请问我可以先看一下房间吗？,May I see the room first?,sent
+1961,أنا أيضاً,我也是,Me too.,sent
+1962,طارئ طبي,医疗急诊,Medical emergency,np
+1963,رجال,男人,men,np
+1964,منتصف الليل,半夜,midnight,np
+1965,حليب,牛奶,milk,np
+1966,الاثنين,星期一,Monday,np
+1967,مال,金钱,money,np
+1968,أكثر,更,more,adj
+1969,أكثر من,多于,more than,adj
+1970,صباح,早上,morning,np
+1971,لحم الضأن,羊肉,mutton,np
+1972,أنا اسمي *.,我叫 * 。,My name is * .,vp
+1973,"أظافر (fingernails), مسامير (hammering nails) ",指甲,nails,np
+1974,الهوية الوطنية,证件,national ID,np
+1975,رقبة,脖子,neck,np
+1976,جرائد,报纸,newspaper,np
+1977,الأسبوع القادم,下个星期,next week,np
+1978,سعيد بالتعرف عليك,很高兴认识你。,Nice to meet you.,sent
+1979,ليلة,晚上,night,np
+1980,ممنوع الوقوف,禁止停车,No parking.,sent
+1981,لا، شكراً.,不用了，谢谢。,"No, thank you.",sent
+1982,لا.,不要,No.,sent
+1983,الشعيرية,面条,noodles,np
+1984,الظهيرة,中午,noon,np
+1985,شمال,北,north,adv
+1986,أنف,鼻子,nose,np
+1987,ليس بعيد جداً,不太远,Not too far.,sent
+1988,نوفمبر,十一月,November,np
+1989,الآن,现在,now,adv
+1990,رقم *,数字,Number *.,vp
+1991,أكتوبر,十月,October,np
+1992,حسناً، سآخذه.,我要买这个。,"OK, I'll take it.",sent
+1993,حسناًً,好的,Okay.,sent
+1994,واحد إضافي، من فضلك.,请再给我一个。,"One more, please.",sent
+1995,الساعة الواحدة صباحاً,凌晨一点钟,one o'clock AM,np
+1996,الساعة الواحدة مساءً,下午一点钟,one o'clock PM,np
+1997,تذكرة واحدة إلى *.,要一张去*的票，谢谢,"One ticket to *, please.",vp
+1998,اتجاه واحد,单行道,one way,adv
+1999,مفتوح,开,open,adj
+2000,"برتقالي (the color or the adjective), برتقال (the fruit)",橙色,orange,np
+2001,عصير برتقال,柳橙汁,orange juice,np
+2002,مسكن ألم,止痛药,pain killer,np
+2003,مؤلم,痛。,painful,adj
+2004,عذراً/معذرة؟,可以再重复一遍吗？,Pardon me?,sent
+2005,جواز سفر,护照,passport,np
+2006,بعد ال*. / بعد أن تتخطى ال*.,传*,Past the *.,vp
+2007,ادفع,付,pay,vp
+2008,قلم حبر,笔,pen,np
+2009,قلم رصاص,铅笔,pencil,np
+2010,بترول,汽油,petrol,np
+2011,من فضلك نظف غرفتي.,请清洁我的房间,Please clean my room.,sent
+2012,من فضلك نظف الصحون.,请洗干净这些碟子,Please clear the plates.,sent
+2013,أرجوك، تعال/تعالي معي.,请跟我过来,Please come with me.,sent
+2014,من فضلك أعطني *.,请给我*。,Please give me *.,vp
+2015,من فضلك شغل المكيف الهوائي.,请把空调开大一点。,Please turn up the AC., sent
+2016,من فضلك استعمل آلة السحب ببطاقة الائتمان.,请打表。,Please use the meter machine.,sent
+2017,من فضلك,请。,Please.,adv
+2018,الشرطة,警察,police, np
+2019,لحم خنزير,猪肉,pork,np
+2020,طابع بريدي,邮票,postage stamp,np
+2021,بطاقة بريدية,明信片,postcard,np
+2022,اسحب,拉,pull,vp
+2023,بنفسجي,紫色,purple,adj
+2024,ادفع,推,push,adv
+2025,هادئ,安静,quiet,adj
+2026,موس حلاقة,剃刀,razor,np
+2027,أحمر,红色,red,adj
+2028,نبيذ أحمر,红酒,red wine,np
+2029,مطعم,餐厅,restaurant,np
+2030,أرز,米饭,rice,np
+2031,يمين,右边,right,part
+2032,شارع,路,road,np
+2033,شراب مسكر كحولي (رم),朗姆酒,rum,np
+2034,سيلان الأنف,流鼻涕,runny nose,np
+2035, سلطة,沙拉,salad,np
+2036,ملح,盐,salt,np
+2037,يوم السبت,星期六,Saturday,np
+2038,سجق,香肠,sausage,np
+2039,شاي معطر,花茶,scented tea,np
+2040,مقصورة الدرجة الثانية,二等舱,second class cabin,np
+2041,أراك لاحقاً.,待会见,See you later.,sent
+2042,سبتمبر,九月,September,np
+2043,شامبو,洗发精,shampoo,np
+2044,هي,她,she,np
+2045,كتف,肩膀,shoulder,np
+2046, أرني.,给我看一下。,Show me.,sent
+2047,مواقع لترى,景点,sites to see,np
+2048,ببطء,慢慢的,slowly,adv
+2049,عطسة,打喷嚏,sneeze,np
+2050,صابون,肥皂,soap,np
+2051,المزيد من *، من فضلك.,再多一点*，谢谢,"Some more *, pelase.",vp
+2052,ملتهب,酸,sore,adj
+2053,حساء,汤,soup,np
+2054,جنوب,南,south,adv
+2055,حد السرعة,速度限制,speed limit,np
+2056,دواء للمعدة,肠胃药,stomach medicine,np
+2057,قف,停,stop (on a street sign),sent
+2058,توقف! لص/سارق‏! ‎,住手！小偷！,Stop! Thief!,sent
+2059,توقف,停。,Stop.,sent
+2060,إلى الأمام,往前走,straight ahead,sent
+2061,شارع,街,street,np
+2062,سكر,糖,sugar,np
+2063,مرهم حماية من حروق الشمس,防晒乳,sunblock lotion,np
+2064,الأحد,星期天,Sunday,np
+2065,العشاء,晚饭,supper,np
+2066,خذني إلى هناك من فضلك.,请带我到那里。,"Take me there, please.",sent
+2067,خذني إلى *، من فضلك.,请您开到*。,"Take me to *, please.",vp
+2068,سدادة قطنية للدورة ,卫生棉条,tampon,np
+2069,تاكسي,出租车,taxi,np
+2070,سائق تاكسي,出租车司机,Taxi driver,np
+2071,شاي,茶,tea,np
+2072, هاتف,电话,telephone,np
+2073,شكراً جزيلاً,非常感谢,Thank you so much.,sent
+2074,شكراًً,谢谢。,Thank you.,sent
+2075,هذا غال جدا.,太贵了。,That's too expensive.,sent
+2076,الفاتورة، من فضلك.,请结帐。,"The check, please.",sent
+2077,بعد غد,后天,the day after tomorrow,np
+2078,قبل البارحة,前天,the day before yesterday,np
+2079,هناك,那里,there,adv
+2080,نحن * أشخاص,一共有*个人,There are * of us.,vp
+2081,هن,她们,they (f),np
+2082,هم,他们,they,np
+2083,هما,他们,they (two people),np
+2084,كان هذا رائعا جدا!,真的很棒！,This was very impressive!,sent
+2085,هذا الأسبوع,这个星期,this week,np
+2086,حلق,喉咙。,throat,np
+2087,يوم الخميس,星期四,Thursday,np
+2088,إلى *,去*,To *.,vp
+2089,خبز محمص,吐司,toast,np
+2090, اليوم,今天,today,np
+2091,أصابع القدم,脚指。,toes,np
+2092,حمام,厕所,toilet,np
+2093,غداً,明天,tomorrow,np
+2094,مياه مقوية,通宁水,tonic water,np
+2095,فرشاة أسنان,牙刷,toothbrush,np
+2096,معجون أسنان,牙膏,toothpaste,np
+2097,نحو ال*.,靠近*,Towards the *.,vp
+2098,محطة القطار,火车站,train station,np
+2099,يوم الثلاثاء,星期二,Tuesday,np
+2100,در إلى يسار.,左拐。,Turn left.,sent
+2101,در إلى يمين.,右拐。,Turn right.,sent
+2102,‏تلفاز,电视,TV,np
+2103,منعطف.,掉头。,U-turn.,sent
+2104,مظلة,雨伞,umbrella,np
+2105,خضروات,蔬菜,vegetables,np
+2106,شراب فودكا,伏特加,vodka,np
+2107, خصر,腰,waist,np
+2108,انتظر أو ابقى؟,等待还是留下来？,Wait or stay?,sent
+2109,انتظر.,等一下。,Wait.,sent
+2110,احذر ال*.,注意*,Watch for the *.,vp
+2111,ماء,水,water,np
+2112,نحن,我们,we,np
+2113,يوم الأربعاء,星期三,Wednesday,np
+2114,غرب,西,west,adv
+2115,ما هو سعر العملة؟,汇率多少？,What is the exchange rate?,sent
+2116,ماذا يدعى هذا؟,这叫什么？,What is this called?,sent
+2117,ما هذا؟,这是什么？,What is this?,sent
+2118,ما اسمك؟,你叫什么名字？,What is your name?,sent
+2119,ما هو توقيت *؟,*是什么时候？,What time is *?,sent
+2120,كم الساعة؟,现在几点？,What time is it?,sent
+2121,متى ستصل هذه الحافلة؟,公车什么时候到？,What time will this bus arrive?,vp
+2122,متى سيصل هذا القطار؟,火车什么时候到？,What time will this train arrive?,sent
+2123,ماذا؟,什么？,What?,sent
+2124,متى يجب علي تسجيل الخروج؟,何时要退房？,When do I have to check out?,sent
+2125,متى تنطلق الحافلة المتجه إلى*؟,去*的公车什么时候离开？,When does the bus for * leave?,vp
+2126,متى ينطلق القطار المتجه إلى*؟,去*的火车什么时候离开？,When does the train for * leave?,vp
+2127,ما هو توقيت الإغلاق؟,几点关门？,When is closing time?,sent
+2128,ما هو توقيت الافتتاح؟,几点开门？,When is opening time?,sent
+2129,متى؟,什么时候？,When?,sent
+2130,من أين أنت؟,你从哪里来的？,Where are you from?,sent
+2131,إلى أين أنت آخذني؟,你带我去哪里？,Where are you taking me?,sent
+2132,أين يمكنني أن أجد؟,哪里有*?,Where can I find *?,vp
+2133,أين يمكنني أن أصرّف شيك سياحي؟,我在哪里可以兑换这个旅行支票？,Where can I get a traveler's check changed?,sent
+2134,أين يمكنني أن أصرّف بعض المال؟,我要在哪里换钱？,Where can I get money changed?,sent
+2135,أين يمكننا أن نحصل على تذاكر؟,哪里买车票？,Where do we get tickets?,sent
+2136,أين يؤلمك؟,哪里痛？,Where does it hurt?,sent
+2137,أين تذهب هذه الحافلة؟,这辆巴士去哪里？,Where does this bus go?,sent
+2138,أين يذهب هذا القطار؟,这列火车去哪里？,Where does this train go?,sent
+2139,أين توجد آلة الصرف الآلي؟,提款机在哪里？,Where is an ATM?,sent
+2140,أين تقع على الخريطة؟,在地图上的哪里？,Where is it on the map?,sent
+2141,أين ال*؟,*在哪里？,Where is the *?,vp
+2142,أين الحمام؟,洗手间在哪里？,Where is the bathroom?,sent
+2143,أين الحافلة المتجهة إلى *؟,到*的巴士在哪？,Where is the bus to *?,vp
+2144,أين الحمام؟,厕所在哪里？,Where is the toilet?,sent
+2145,أن القطار المتجه إلى *؟,到*的火车在哪？,Where is the train to *?,vp
+2146,اين؟,哪里？,Where?,sent
+2147,بأي اتجاه؟,哪个方向？,Which direction?,sent
+2148,نحن في أي محطة؟,我们在哪一站？,Which station are we at?,sent
+2149,شراب الويسكي,威士忌,whiskey,np
+2150,أبيض,白色,white,adj
+2151,نبيذ أبيض,白酒,white wine,np
+2152,من؟,谁？,Who?,sent
+2153,لماذا؟,为什么？,Why?,sent
+2154,نساء,女人,women,np
+2155,عمل,工作,work,np
+2156,معصم,手腕,wrist,np
+2157,ورق للكتابة,纸,writing paper,np
+2158,أصفر,黄色,yellow,adj
+2159,نعم من فضلك,是，谢谢,"Yes, please.",sent
+2160,نعم.,是,Yes.,sent
+2161, البارحة,昨天,yesterday,np
+2162,ينتج,让路,yield,vp
+2163,أنت,你,you,np
+2164, أنتم,你们,you (p),np
+2165,"أنت تغشني (s), أنتما تغشانني (two), أنتم تغشونني (more than two)",你在骗我。,You're cheating me.,sent
+2166,على الرحب والسعة,不客气。,You're welcome.,sent
+2167,بيوت الشباب,青年旅馆,youth hostel,np
+2168,بخير، شكرا لك.,"很好, 谢谢。","I'm fine, thank you.",sent
+2169,جيد!,好！,Good.,sent
+2170,عظيم.,很棒！,Great.,sent
+2171,هل أنت بمفردك؟,,Are you here by yourself?,sent
+2172,كم ثمن *؟,多少钱 *？,How much is *?,vp
+2173,أنا لا أفهم,我听不懂。,I don't understand.,sent
+2174,دولار,美元,* dollar(s),prt
+2175,جنيه,磅,* pound(s),prt
+2176,درهم,迪拉姆,* dirham,prt
+2177,دينار,第纳尔,* dinar,prt
+2178,* يوان,*元,* yuan,prt
+2179,لشخص واحد.,为一个人。,For one person.,sent
+2180,لشخصين.,为两个人。,For two people.,sent
+2181,ل* أشخاص.,为*个人。,For * people.,vp
+2182,نعم.,是的。,Yeah.,vp
+2183,صحيح!,当然啦!,Sure.,sent
+2184,صديق,朋友,friend,np
+2185,مرحبا!,你好！,Hi!,sent
+2186,ماذا تحب؟,你喜欢什么？,What would you like?,sent
+2187,أود *.,我想要 *。,I would like *.,vp
+2188,مانجو,芒果,mango,np
+2189,تفاحة,苹果,apple,np
+2190,* أشخاص,*个人,* people,prt
+2191,أفغانستان,阿富汗,Afghanistan,np
+2192,ألبانيا,阿尔巴尼亚,Albania,np
+2193,الجزائر,阿尔及利亚,Algeria,np
+2194,أندورا,安道尔,Andorra,np
+2195,أنغولا,安哥拉,Angola,np
+2196,أنتيغوا,安提瓜,Antigua,np
+2197,الأرجنتين,阿根廷,Argentina,np
+2198,أرمينيا,亚美尼亚,Armenia,np
+2199,أستراليا,澳大利亚,Australia,np
+2200,النمسا,奥地利,Austria,np
+2201,أذربيجان,阿塞拜疆,Azerbaijan,np
+2202,الباهاما,巴哈马,Bahamas,np
+2203,البحرين,巴林,Bahrain,np
+2204,بنغلاديش,孟加拉国,Bangladesh,np
+2205,بربادوس,巴巴多斯,Barbados,np
+2206,روسيا البيضاء,白俄罗斯,Belarus,np
+2207,بلجيكا,比利时,Belgium,np
+2208,بليز,伯利兹,Belize,np
+2209,بنين,贝宁,Benin,np
+2210,بوتان,不丹,Bhutan,np
+2211,بوليفيا,玻利维亚,Bolivia,np
+2212,البوسنة الهرسك,波黑,Bosnia Herzegovina,np
+2213,بوتسوانا,博茨瓦纳,Botswana,np
+2214,البرازيل,巴西,Brazil,np
+2215,بروناي,文莱,Brunei,np
+2216,بلغاريا,保加利亚,Bulgaria,np
+2217,فاسو,布基纳法索,Burkina,np
+2218,بوروندي,布隆迪,Burundi,np
+2219,كمبوديا,柬埔寨,Cambodia,np
+2220,الكاميرون,喀麦隆,Cameroon,np
+2221,كندا,加拿大,Canada,np
+2222,الرأس الأخضر,佛得角,Cape Verde,np
+2223,ممثل وسط افريقيا,中非共和国,Central African Rep,np
+2224,تشاد,乍得,Chad,np
+2225,تشيلي,智利,Chile,np
+2226,الصين,中国,China,np
+2227,كولومبيا,哥伦比亚,Colombia,np
+2228,جزر القمر,科摩罗,Comoros,np
+2229,الكونغو,刚果,Congo,np
+2230,جمهورية الكونغو الديمقراطية,刚果民主共和国,Democratic Republic of Congo,np
+2231,كوستا ريكا,哥斯达黎加,Costa Rica,np
+2232,كرواتيا,克罗地亚,Croatia,np
+2233,كوبا,古巴,Cuba,np
+2234,قبرص,塞浦路斯,Cyprus,np
+2235,جمهورية التشيك,捷克共和国,Czech Republic,np
+2236,الدنمارك,丹麦,Denmark,np
+2237,جيبوتي,吉布提,Djibouti,np
+2238,دومينيكا,多米尼加,Dominica,np
+2239,جمهورية الدومنيكان,多明尼加共和国,Dominican Republic,np
+2240,تيمور الشرقية,东帝汶,East Timor,np
+2241,الإكوادور,厄瓜多尔,Ecuador,np
+2242,مصر,埃及,Egypt,np
+2243,السلفادور,萨尔瓦多,El Salvador,np
+2244,غينيا الإستوائية,赤道几内亚,Equatorial Guinea,np
+2245,إريتريا,厄立特里亚,Eritrea,np
+2246,استونيا,爱沙尼亚,Estonia,np
+2247,أثيوبيا,埃塞俄比亚,Ethiopia,np
+2248,فيجي,斐,Fiji,np
+2249,فنلندا,芬兰,Finland,np
+2250,فرنسا,法国,France,np
+2251,الغابون,加蓬,Gabon,np
+2252,غامبيا,冈比亚,Gambia,np
+2253,جورجيا,格鲁吉亚,Georgia,np
+2254,ألمانيا,德国,Germany,np
+2255,غانا,加纳,Ghana,np
+2256,اليونان,希腊,Greece,np
+2257,غرينادا,格林纳达,Grenada,np
+2258,غواتيمالا,危地马拉,Guatemala,np
+2259,غينيا,几内亚,Guinea,np
+2260,غينيا بيساو,几内亚比绍,Guinea-Bissau,np
+2261,غيانا,圭亚那,Guyana,np
+2262,هايتي,海地,Haiti,np
+2263,هندوراس,洪都拉斯,Honduras,np
+2264,المجر,匈牙利,Hungary,np
+2265,أيسلندا,冰岛,Iceland,np
+2266,الهند,印度,India,np
+2267,أندونيسيا,印度尼西亚,Indonesia,np
+2268,إيران,伊朗,Iran,np
+2269,العراق,伊拉克,Iraq,np
+2270,أيرلندا,爱尔兰,Ireland,np
+2271,إسرائيل,以色列,Israel,np
+2272,إيطاليا,意大利,Italy,np
+2273,ساحل العاج,象牙海岸,Ivory Coast,np
+2274,جامايكا,牙买加,Jamaica,np
+2275,اليابان,日本,Japan,np
+2276,الأردن,约旦,Jordan,np
+2277,كازاخستان,哈萨克斯坦,Kazakhstan,np
+2278,كينيا,肯尼亚,Kenya,np
+2279,كيريباس,基里巴斯,Kiribati,np
+2280,كوريا الشمالية,北朝鲜,North Korea,np
+2281,كوريا الجنوبية,韩国,South Korea,np
+2282,كوسوفو,科索沃,Kosovo,np
+2283,الكويت,科威特,Kuwait,np
+2284,قرغيزستان,吉尔吉斯斯坦,Kyrgyzstan,np
+2285,لاوس,老挝,Laos,np
+2286,لاتفيا,拉脱维亚,Latvia,np
+2287,لبنان,黎巴嫩,Lebanon,np
+2288,ليسوتو,莱索托,Lesotho,np
+2289,ليبيريا,利比里亚,Liberia,np
+2290,ليبيا,利比亚,Libya,np
+2291,ليختنشتاين,列支敦士登,Liechtenstein,np
+2292,ليتوانيا,立陶宛,Lithuania,np
+2293,لوكسمبورغ,卢森堡,Luxembourg,np
+2294,مقدونيا,马其顿,Macedonia,np
+2295,مدغشقر,马达加斯加,Madagascar,np
+2296,مالاوي,马拉维,Malawi,np
+2297,ماليزيا,马来西亚,Malaysia,np
+2298,جزر المالديف,马尔代夫,Maldives,np
+2299,مالي,马里,Mali,np
+2300,مالطا,马耳他,Malta,np
+2301,جزر مارشال,马绍尔群岛,Marshall Islands,np
+2302,موريتانيا,毛里塔尼亚,Mauritania,np
+2303,موريشيوس,毛里求斯,Mauritius,np
+2304,المكسيك,墨西哥,Mexico,np
+2305,ميكرونيزيا,密克罗尼西亚,Micronesia,np
+2306,مولدوفا,摩尔多瓦,Moldova,np
+2307,موناكو,摩纳哥,Monaco,np
+2308,منغوليا,蒙古,Mongolia,np
+2309,الجبل الأسود,黑山,Montenegro,np
+2310,المغرب,摩洛哥,Morocco,np
+2311,موزمبيق,莫桑比克,Mozambique,np
+2312,ميانمار,缅甸,Myanmar,np
+2313,ناميبيا,纳米比亚,Namibia,np
+2314,ناورو,瑙鲁,Nauru,np
+2315,نيبال,尼泊尔,Nepal,np
+2316,هولندا,荷兰,Netherlands,np
+2317,نيوزيلاندا,新西兰,New Zealand,np
+2318,نيكاراغوا,尼加拉瓜,Nicaragua,np
+2319,النيجر,尼日尔,Niger,np
+2320,نيجيريا,尼日利亚,Nigeria,np
+2321,النرويج,挪威,Norway,np
+2322,سلطنة عمان,阿曼,Oman,np
+2323,باكستان,巴基斯坦,Pakistan,np
+2324,بالاو,帕劳,Palau,np
+2325,بناما,巴拿马,Panama,np
+2326,بابوا غينيا الجديدة,巴布亚新几内亚,Papua New Guinea,np
+2327,باراغواي,巴拉圭,Paraguay,np
+2328,بيرو,秘鲁,Peru,np
+2329,الفلبين,菲律宾,Philippines,np
+2330,بولندا,波兰,Poland,np
+2331,البرتغال,葡萄牙,Portugal,np
+2332,دولة قطر,卡塔尔,Qatar,np
+2333,رومانيا,罗马尼亚,Romania,np
+2334,الاتحاد الروسي,俄罗斯联邦,Russian Federation,np
+2335,رواندا,卢旺达,Rwanda,np
+2336,سانت كيتس ونيفيس,圣基茨和尼维斯,St Kitts & Nevis,np
+2337,شارع لوسيا,圣卢西亚,St Lucia,np
+2338,سانت فنسنت وجزر غرينادين,圣文森特和格林纳丁斯,Saint Vincent & the Grenadines,np
+2339,ساموا,萨摩亚,Samoa,np
+2340,سان مارينو,圣马力诺,San Marino,np
+2341,ساو تومي وبرينسيبي,圣多美和普林西比,Sao Tome & Principe,np
+2342,المملكة العربية السعودية,沙特阿拉伯,Saudi Arabia,np
+2343,السنغال,塞内加尔,Senegal,np
+2344,صربيا,塞尔维亚,Serbia,np
+2345,سيشيل,塞舌尔,Seychelles,np
+2346,سيرا ليون,塞拉利昂,Sierra Leone,np
+2347,سنغافورة,新加坡,Singapore,np
+2348,سلوفاكيا,斯洛伐克,Slovakia,np
+2349,سلوفينيا,斯洛文尼亚,Slovenia,np
+2350,جزر سليمان,所罗门群岛,Solomon Islands,np
+2351,الصومال,索马里,Somalia,np
+2352,جنوب أفريقيا,南非,South Africa,np
+2353,جنوب السودان,南苏丹,South Sudan,np
+2354,إسبانيا,西班牙,Spain,np
+2355,سيريلانكا,斯里兰卡,Sri Lanka,np
+2356,سودان,苏丹,Sudan,np
+2357,سورينام,苏里南,Suriname,np
+2358,سوازيلاند,斯威士兰,Swaziland,np
+2359,السويد,瑞典,Sweden,np
+2360,سويسرا,瑞士,Switzerland,np
+2361,سوريا,叙利亚,Syria,np
+2362,تايوان,台湾,Taiwan,np
+2363,طاجيكستان,塔吉克斯坦,Tajikistan,np
+2364,تنزانيا,坦桑尼亚,Tanzania,np
+2365,تايلاند,泰国,Thailand,np
+2366,ليذهب,多哥,Togo,np
+2367,تونغا,汤加,Tonga,np
+2368,ترينيداد وتوباجو,特立尼达和多巴哥,Trinidad & Tobago,np
+2369,تونس,突尼斯,Tunisia,np
+2370,ديك رومي,火鸡,Turkey,np
+2371,تركمانستان,土库曼斯坦,Turkmenistan,np
+2372,توفالو,图瓦卢,Tuvalu,np
+2373,أوغندا,乌干达,Uganda,np
+2374,أوكرانيا,乌克兰,Ukraine,np
+2375,الإمارات العربية المتحدة,阿联酋,United Arab Emirates,np
+2376,المملكة المتحدة,英国,United Kingdom,np
+2377,الولايات المتحدة الامريكانية,美国,United States,np
+2378,أوروغواي,乌拉圭,Uruguay,np
+2379,أوزبكستان,乌兹别克斯坦,Uzbekistan,np
+2380,فانواتو,瓦努阿图,Vanuatu,np
+2381,مدينة الفاتيكان,梵蒂冈城,Vatican City,np
+2382,فنزويلا,委内瑞拉,Venezuela,np
+2383,فيتنام,越南,Vietnam,np
+2384,اليمن,也门,Yemen,np
+2385,زامبيا,赞比亚,Zambia,np
+2386,زيمبابوي,津巴布韦,Zimbabwe,np
+2387,طوكيو,东京,Tokyo,np
+2388,دلهي,新德里,Delhi,np
+2389,شنغهاي,上海,Shanghai,np
+2390,بكين,北京,Beijing,np
+2391,مومباي,孟买,Mumbai,np
+2392,ساو باولو,圣保罗,Sao Paulo,np
+2393,المكسيك المدينة,墨西哥城,Mexico City,np
+2394,أوساكا,大阪,Osaka,np
+2395,القاهرة,开罗,Cairo,np
+2396,دكا,达卡,Dhaka,np
+2397,كراتشي,卡拉奇,Karachi,np
+2398,بوينس آيرس،,布宜诺斯艾利斯,Buenos Aires,np
+2399,كولكاتا,加尔各答,Kolkata,np
+2400,لاغوس,拉各斯,Lagos,np
+2401,اسطنبول,伊斯坦布尔,Istanbul,np
+2402,تشونغتشينغ,渝,Chongqing,np
+2403,قوانغتشو,广州,Guangzhou,np
+2404,مانيلا,马尼拉,Manila,np
+2405,ريو دي جانيرو,里约热内卢,Rio de Janeiro,np
+2406,موسكو,莫斯科,Moscow,np
+2407,تيانجين,天津,Tianjin,np
+2408,بنغالور,班加罗尔,Bangalore,np
+2409,باريس,巴黎,Paris,np
+2410,شنتشن,深圳,Shenzhen,np
+2411,جاكرتا,雅加达,Jakarta,np
+2412,تشيناي,奈,Chennai,np
+2413,لندن,伦敦,London,np
+2414,ليما,利马,Lima,np
+2415,بوغوتا,波哥大,Bogota,np
+2416,جوهانسبرج,约翰内斯堡,Johannesburg,np
+2417,سيول,首尔,Seoul,np
+2418,بانكوك,曼谷,Bangkok,np
+2419,حيدر أباد,海得拉巴,Hyderabad,np
+2420,لاهور,拉合尔,Lahore,np
+2421,طهران,德黑兰,Tehran,np
+2422,تشنغدو,成都,Chengdu,np
+2423,ووهان,武汉,Wuhan,np
+2424,أحمد أباد,艾哈迈达巴德,Ahmedabad,np
+2425,كوالا لامبور,吉隆坡,Kuala Lumpur,np
+2426,مدينة الرياض,利雅得,Riyadh,np
+2427,سانتياغو,圣地亚哥,Santiago,np
+2428,سورة,苏拉特,Surat,np
+2429,مدريد,马德里,Madrid,np
+2430,تورونتو,多伦多,Toronto,np
+2431,بيون,普纳,Pune,np
+2432,دار السلام,达累斯萨拉姆,Dar es Salaam,np
+2433,برشلونة,巴塞罗那,Barcelona,np
+2434,يانجون,仰光,Yangon,np
+2435,غوادالاخارا,瓜达拉哈拉,Guadalajara,np
+2436,أنقرة,安卡拉,Ankara,np
+2437,الإسكندرية,亚历山大,Alexandria,np
+2438,سان بطرسبرج,圣彼得堡,Saint Petersburg,np
+2439,سيدني,悉尼,Sydney,np
+2440,نيروبي,内罗毕,Nairobi,np
+2441,برازيليا,巴西利亚,Brasilia,np
+2442,ملبورن,墨尔本,Melbourne,np
+2443,ميديلين,麦德林,Medellin,np
+2444,مونتريال,蒙特利尔,Montreal,np
+2445,حلب,阿勒颇,Aleppo,np
+2446,كيب تاون,开普敦,Cape Town,np
+2447,تل أبيب,特拉维夫,Tel Aviv,np
+2448,روما,罗马,Rome,np
+2449,جايبور,斋浦尔,Jaipur,np
+2450,الدار البيضاء,卡萨布兰卡,Casablanca,np
+2451,البرلينية,柏林,Berlin,np
+2452,لكناو,勒克瑙,Lucknow,np
+2453,بوسان,釜山,Busan,np
+2454,ميلان,米兰,Milan,np
+2455,كانبور,坎普尔,Kanpur,np
+2456,أثينا,雅典,Athens,np
+2457,سورابايا,泗水,Surabaya,np
+2458,لشبونة,里斯本,Lisbon,np
+2459,أبوجا,阿布贾,Abuja,np
+2460,كالي,卡利,Cali,np
+2461,مانشستر,曼彻斯特,Manchester,np
+2462,تايبيه,台北,Taipei,np
+2463,دبي,迪拜,Dubai,np
+2464,فانكوفر,温哥华,Vancouver,np
+2465,أكرا,阿克拉,Accra,np
+2466,بريسبان,布里斯班,Brisbane,np
+2467,بيروت,贝鲁特,Beirut,np
+2468,بوبال,博帕尔,Bhopal,np
+2469,بريتوريا,比勒陀利亚,Pretoria,np
+2470,هيروشيما,广岛,Hiroshima,np
+2471,تيخوانا,蒂华纳,Tijuana,np
+2472,هافانا,哈瓦那,Havana,np
+2473,بروكسل,布鲁塞尔,Brussels,np
+2474,بيرث,珀斯,Perth,np
+2475,بنوم بنه,金边,Phnom Penh,np
+2476,بوخارست,布加勒斯特,Bucharest,np
+2477,مكة المكرمة,麦加,Mecca,np
+2478,هامبورغ,汉堡,Hamburg,np
+2479,فيينا,维也纳,Vienna,np
+2480,مدينة باناما,巴拿马城,Panama City,np
+2481,وارسو,华沙,Warsaw,np
+2482,بودابست,布达佩斯,Budapest,np
+2483,ليون,里昂,Lyon,np
+2484,مرسيليا,马赛,Marseille,np
+2485,اسلام اباد,伊斯兰堡,Islamabad,np
+2486,ستوكهولم,斯德哥尔摩,Stockholm,np
+2487,ميونيخ,慕尼黑,Munich,np
+2488,الشارقة,沙迦,Sharjah,np
+2489,كالجاري,卡尔加里,Calgary,np
+2490,أوكلاند,奥克兰,Auckland,np
+2491,أوتاوا,渥太华,Ottawa,np
+2492,ادمونتون,埃德蒙顿,Edmonton,np
+2493,براغ,布拉格,Prague,np
+2494,بورتو,波尔图,Porto,np
+2495,كاتماندو,加德满都,Kathmandu,np
+2496,كوبنهاغن,哥本哈根,Copenhagen,np
+2497,أديليد,阿德莱德,Adelaide,np
+2498,زيوريخ,苏黎世,Zurich,np
+2499,أبو ظبي,阿布扎比,Abu Dhabi,np
+2500,غلاسكو,格拉斯哥,Glasgow,np
+2501,صوفيا,苏菲亚,Sofia,np
+2502,دبلن,都柏林,Dublin,np
+2503,هلسنكي,赫尔辛基,Helsinki,np
+2504,بلغراد,贝尔格莱德,Belgrade,np
+2505,مدينة هو تشي مينه,胡志明市,Ho Chi Minh City,np
+2506,طرابلس,硅藻土,Tripoli,np
+2507,أمستردام,阿姆斯特丹,Amsterdam,np
+2508,كولونيا,科隆,Cologne,np
+2509,أوسلو,奥斯陆,Oslo,np
+2510,روتردام,鹿特丹,Rotterdam,np
+2511,لطيف,尼斯,Nice,np
+2512,تولوز,图卢兹,Toulouse,np
+2513,بوردو,波尔多,Bordeaux,np
+2514,ساوثامبتون,南安普敦,Southampton,np
+2515,ليفربول,利物浦,Liverpool,np
+2516,بيت المقدس,耶路撒冷,Jerusalem,np
+2517,فالنسيا,瓦伦西亚,Valencia,np
+2518,برمنغهام,伯明翰,Birmingham,np
+2519,وينيبيغ,温尼伯,Winnipeg,np
+2520,نوتنغهام,诺丁汉,Nottingham,np
+2521,هاميلتون,汉密尔顿,Hamilton,np
+2522,فرانكفورت,法兰克福,Frankfurt,np
+2523,سالونيك,塞萨洛尼基,Thessaloniki,np
+2524,شيفيلد,谢菲尔德,Sheffield,np
+2525,بالي,巴厘岛,Bali,np
+2526,فلورنسا,佛罗伦萨,Florence,np
+2527,زغرب,萨格勒布,Zagreb,np
+2528,غزة,加沙,Gaza,np
+2529,بريستول,布里斯托尔,Bristol,np
+2530,والذهب الساحل,在黄金海岸,The Gold Coast,np
+2531,شتوتغارت,斯图加特,Stuttgart,np
+2532,مدينة البندقية,威尼斯,Venice,np
+2533,نانت,南特,Nantes,np
+2534,بلفاست,贝尔法斯特,Belfast,np
+2535,دوسلدورف,杜塞尔多夫,Dusseldorf,np
+2536,كينغستون,金士顿,Kingston,np
+2537,ريغا,里加,Riga,np
+2538,ليستر,莱斯特,Leicester,np
+2539,كيتشنر,基奇纳,Kitchener,np
+2540,برايتون,布莱顿,Brighton,np
+2541,ادنبره,爱丁堡,Edinburgh,np
+2542,كارديف,加的夫,Cardiff,np
+2543,كانبيرا,堪培拉,Canberra,np
+2544,مونبلييه,蒙彼利埃,Montpellier,np
+2545,هاليفاكس,哈利法克斯,Halifax,np
+2546,ولينغتون,惠灵顿,Wellington,np
+2547,براتيسلافا,布拉迪斯拉发,Bratislava,np
+2548,نيوكاسل,新城堡,Newcastle,np
+2549,ستوك أون ترينت,特伦特河畔斯托克,Stoke-on-Trent,np
+2550,كوفنتري,考文垂,Coventry,np
+2551,مرفئ مويسبي,端口莫尔兹比港,Port Moresby,np
+2552,فيكتوريا,维多利亚,Victoria,np
+2553,كرايستشيرش,克赖斯特彻奇,Christchurch,np
+2554,سوانسي,斯旺西,Swansea,np
+2555,ويندسور,温莎,Windsor,np
+2556,سراييفو,萨拉热窝,Sarajevo,np
+2557,هونغ كونغ,香港,Hong Kong,np
+2558,ماكاو,澳门,Macau,np
+2559,نيويورك,纽约市,New York City,np

@@ -1,0 +1,664 @@
+airport 机场
+domestic airport 国内机场
+ramp 停机坪
+control tower 机场控制台
+airport terminal 机场候机楼
+waiting room. 候机厅。
+waiting lounge. 候机厅。
+main lobby 主候机厅
+lounge pavilion. 贵宾候机亭。
+Assistance 问讯处
+Information 问讯处
+Ticket Office 售票处
+Check in area 办理登机区
+passport control immigration 护照检查处
+Lost and Found 失物招领处
+bus 公共汽车
+Airports shuttle 机场班车
+Taxipick-up point 出租车乘车点
+women's 女厕
+hotel reservation 订旅馆
+Travel Agency 旅行社
+duty-free shop 免税店
+cafe 咖啡馆
+Bakery 面包店
+Filling Station 加油站
+post office 邮局
+Office Hours 办公时间
+Pause 暂停
+Parting 停车处 
+Airport lounges 机场休息室
+Customers lounges 旅客休息室
+plane ticket 飞机票
+International Flight 国际班机
+name of passenger 旅客姓名
+plane No. 机号
+Round-Trip Ticket 来回机票
+First Class 头等舱
+Economy Class 经济舱
+to 前往城市
+date 起飞日期
+scheduled time 预计时间 
+airport fee 机场费
+carrier 承运公司
+automatic ticket machine 自动售票机
+Domestic flights. 国内航班
+Arrivals 进港
+transit 过境
+domestic departure 国内航班出站
+stairs and lifts to departures 由此乘电梯前往登机
+Exit 出口
+Exit to all routes 各通道出口
+upstairs 由此上楼
+Push 推
+Shut 此路不通
+No Visitors 游人止步
+No Admittance 闲人免进
+Wet Paint 油漆未干
+Off 关
+Give Way 快车先行
+No Smoking 禁止吸烟
+No Photos 请勿拍照
+No Litter 勿乱扔杂物
+Do Not Pass 禁止超车
+U Turn Ok 可以U形转弯
+Staff Only 本处职工专用
+Keep Silence 保持安静
+Not for Sale 恕不出售
+Beware of Pickpocket 谨防扒手
+For Use Only in Case of Fire 灭火专用
+Protect Public Propety 爱护公共财物
+Commit No Nuisance 禁止小便
+Children and Women First 妇女、儿童优先
+Road Up, Detour 马路施工，请绕行
+Baggage 行李
+Luggage 行李
+Checked baggage 托运的行李
+luggage claim 行李领取处
+Luggage Cart 行李推车
+Luggage Depository 行李存放处
+Luggage from flights 到港行李
+Luggage reclaim 取行李 
+Please leave your luggage with you at all times. 请随身携带你的行李。
+Fragile 易碎
+Handle with Care 小心轻放
+Take Care Not to Leave Things Behind 当心不要丢失东西
+Short stay 短暂停留 
+Airport security. 机场安检。
+Security Inspection. 安检。
+pocket 口袋
+coin 硬币
+lap-top 手提电脑
+cigarette 香烟
+basket 篮子，筐
+conveyor 输送带
+detector 探测器，检测器
+take off 脱掉
+flammable item 易燃物品
+forbidden 被禁止
+receipt 单据，收据
+temporarily 暂时，临时
+boarding 登机
+to board a plane 上飞机
+Seat by Number 对号入座
+Stewardess 女空服员
+passenger manifest 乘客名单
+emergency exits 紧急出口
+oxygen mask 氧气罩
+armrest 座椅扶手
+foot rest 坐着的时候放脚的支撑物
+occupied 有人
+galley 飞机上的厨房
+blanket 毛毯
+smoking seat 吸烟坐位
+airsick 晕机
+direct flight 直飞
+flight 飞行
+bumpy flight 不平稳的飞行
+to face the wind 迎风
+altitude 高度
+forced landing 迫降
+Customs 海关
+Customs Service Area 海关申报处
+Customs Declaration form. 海关申请表。
+Currency Declaration 货币申报
+family name 姓
+year 年
+day 日
+sex 性别
+female 女
+country of citizenship 国籍
+passport No. 护照号
+occupation 职业
+legislators &administrators 行政管理人员
+commerce 商业人员
+farmer 农民
+jobless 无业
+destination country 前往目的地国
+city where visa was issued 签证签发地
+address while in 前往国家的住址
+official use only 官方填写
+signature 签名
+passenger plane 客机
+propeller-driven aircraft 螺旋桨飞机
+helicopter 直升机
+Boeing 波音
+Ilyusin 依柳辛
+Trident 三叉戟
+delayed 延误
+transfer passengers 中转旅客
+international airport 国际机场
+jetway 飞机跑道
+heliport 直升飞机场
+satellite 卫星楼
+International Passenger Lobby. 国际旅客候机厅。
+international terminal 国际候机楼
+waiting hall. 候机厅。
+departure lounge. 候机厅。
+VIP suite. 贵宾候机厅。
+greeting arriving 迎宾处
+Inquiries 问讯处
+Help desk 问讯处
+money exchange 货币兑换处
+check-in 登机手续办理
+Flight connections 转机处
+Lost property 失物招领
+public phone 公用电话
+coachpick-up point 大轿车乘车点
+airline coach service 航空公司汽车服务处
+car hire 租车处
+men's bathroom 男厕
+Pub 酒店
+Visitors Please Register 来宾登记
+restaurant 餐厅
+Bar 酒巴
+Laundry 洗衣店
+bank 银行
+Business Hours 营业时间
+Open 营业
+Stop 关闭
+Closed 下班
+Bike Parking 自行车存车处
+Domestic Flight 国内班机
+ticket confirm 机票确认
+Flight Number 班机号码
+One-Way Ticket 单程机票
+fare class 座舱等级
+Business Class 商务客舱
+from 起点城市
+good for passage between 旅行经停地点
+departure time 起飞时间
+seat No. 机座号
+status 订座情况
+boarding pass 登机牌
+Departures 出港
+transfers 中转
+international departure 国际航班出港
+boarding gate 登机口
+Entrance 入口 
+Emergency exit 安全出口
+Keep Right 靠右
+Keep Left 靠左
+downstairs 由此下楼
+Pull 拉
+No Passing 禁止通行
+No Entry 禁止入内
+Dogs Not Allowed 禁止携犬入内
+On 打开（ 放）
+Danger 危险
+Safety First 安全第一
+No smoking except in designated area 除指定区域外，禁止吸烟
+No Honking 禁止鸣喇叭
+Toll Free 免费通行
+No U Turn 禁止掉头
+SOS 紧急求救信号
+Hands Off 请勿用手摸
+No Bills 不准张贴
+Poison 有毒
+Complaint Box 意见箱
+Keep Dry 保持干燥
+Wipe Your Shoes And Boots　请擦去鞋上的泥土
+Admission Free 免费入场
+Reduced Speed Now 减速行驶
+Carry-on baggage 随身行李
+Baggage claim area 行李领取处
+Baggage Tag 行李牌 
+Left baggage 行李寄存
+luggage locker 行李暂存箱
+Luggage pick up 取行李 
+Reclaim belt 取行李传送带 
+Keep Top Side Up 请勿倒立
+This Side Up 此面向上
+Net（Weight） 净重
+Keep Away From Fire 切勿近火
+Queue here 在此排队
+Stay close 跟紧
+Security check 安检
+Passport control 入境检验
+metallic 金属的
+object 物品，物体
+cellphone 手机
+chewing gum 口香糖
+aluminum foil 铝箔
+belt 带，传送带
+through 通过，经过
+inspection 检查
+unbutton your coat 解开外衣扣子
+prohibited item 违禁物品
+confiscated 没收
+Welcome aboard 欢迎登机
+to get off a plane 下飞机
+captain 机长
+Steward 男空服员
+pre-flight safety demonstration 飞行安全示范
+seat belt 安全带
+reading light 阅读灯
+Lavatory 盥洗室
+Vacant 无人
+food trolley 送餐车
+pillow 枕头
+non-smoking seat 非吸烟席
+air route 航线
+take-off 起飞
+smooth flight 平稳的飞行
+non-stop flight 连续飞行
+to fly with the wind 顺风
+speed 速度
+top speed 最高速度
+to lose height 降低
+turbulence 飞机颠簸
+circling 盘旋
+landing 着陆
+disembark 下机
+Area Of Customs Control. 海关监管区。
+Customs Declaration Counter. 海关申报台。
+Nothing to declare 无报关 
+Something) to declare 有报关 
+Nothing to declare 无申报通道
+First Name 名
+month 月
+date of Birth 出生日期
+male 男
+nationality 国籍
+country of Origin 原住地
+accompanying number 偕行人数
+professionals & technical 专业技术人员
+clerk 办事员
+service 服务人员
+worker 工人
+others 其他
+city where you boarded 登机城市
+date issue 签发日期 
+number and street 街道及门牌号
+city and state 城市及国家
+airliner 班机
+jet aircraft 喷气式飞机
+Airbus 空中客车
+Concord 协和
+McDonald-Douglas 麦道
+Tupolev 图波列夫
+international passengers 国际航班旅客
+Coffee 咖啡
+Instant Coffee 速溶咖啡
+Iced Coffee 冰咖啡
+Iced Mint Coffee 冰薄荷咖啡
+Espresso 意大利浓咖啡
+Tarrazu Coffee 塔拉珠高山咖啡
+Tres Rios Coffee 特雷里奥咖啡
+Saronno Coffee 杏香咖啡
+Rose Lady Coffee 玫瑰夫人咖啡
+Iced Swiss Coffee 瑞士冰咖啡
+Royal Coffee 皇家咖啡
+Irish Coffee 爱尔咖啡
+Dame Coffee 贵妇人咖啡
+Colombian Coffee 哥伦比亚咖啡
+Blue Mountain Coffee 蓝山咖啡
+Brazilian Coffee 曼特林咖啡
+Cafe Americano 美式咖啡
+Iced Pineapple Americano 菠萝冰美式
+Iced Peach Americano 蜜桃冰美式咖啡
+French Coffee 法式滴滤咖啡
+Decaffeinated Coffee 低因咖啡
+Iced Cappuccino 冰卡布奇诺
+Iced Vanilla Cappuccino 冰香草卡布奇诺
+Iced Fruit Cappuccino 果味冰卡布奇诺
+Lavender Cappuccino 薰衣草卡布奇诺
+Hazelnut Cappuccino 榛子卡布奇诺
+Iced Caramel Latte 冰焦糖咖啡拿铁
+Iced Hazelnut Latte 冰榛子咖啡拿铁
+Iced Strawberry Latte 冰草莓咖啡拿铁
+Blackberry Latte 黑莓咖啡拿铁
+Lavender Latte 薰衣草咖啡拿铁
+Iced Blackberry Latte 黑莓冰咖啡拿铁
+Iced Peach Latte 蜜桃冰咖啡拿铁
+Cherry Latte 樱桃咖啡拿铁
+Hazelnut Latte 榛子咖啡拿铁
+Espresso Con Panna 浓缩咖啡康保蓝
+Iced Mochaccino 冰摩卡
+Cherry Mocha 樱桃摩卡咖啡
+Mango Mocha 芒果摩卡咖啡
+Iced Fruit Coffee 冰水果咖啡
+Iced Coffee Float 漂浮冰咖啡
+dinner knife 正餐刀
+butter knife 牛油刀
+steak knife 扒刀
+dessert spoon 甜品勺
+soup spoon 汤勺
+soda spoon 冻茶勺
+ice tongs 冰夹
+service fork 服务叉
+ladle 长把勺
+soup bowl 汤碗
+coffee cup 咖啡杯
+coffee mug 咖啡杯
+desscrt plate 甜品碟
+butter plate 牛油碟
+sugar bowl 糖盅
+tea pot 茶盅
+water glass 水杯
+high ball 高杯
+rock 洛杯
+ingredients 配料
+green onion 葱
+pepper 胡椒
+pickle 咸菜
+onion 洋葱
+butter 黄油
+olive oil 橄榄油
+sesame oil 香油
+salt 盐
+sugar 糖
+granulated sugar 砂糖
+Rock Sugar 冰糖
+MSG 味精
+mustard 芥末
+ketchup 番茄酱
+jam 果酱
+peanut 花生酱
+honey 蜂蜜
+maggi 美极油
+oyster sauce 蚝油
+vinegar 醋
+menu 菜单
+captain orde 点菜本
+toothpick 牙签
+napkin 餐巾，餐布
+ashtra 烟盅
+stir stick 搅棒
+tray 托盘
+coffee warmer 咖啡炉
+Chocolate Coffee 巧克力咖啡 
+Fresh Ground Coffee 现磨咖啡
+Iced Espresso 浓缩冰咖啡
+Italian Coffee 意大利咖啡
+Cappuccino 意大利泡沫咖啡
+Charcoal Coffee 碳烧咖啡
+Vienna Coffee 维也纳咖啡
+Hawaiian Kona Coffee 夏威夷可娜咖啡
+Iced Mexican Coffee 墨西哥冰咖啡
+Brazil Coffee 巴西咖啡
+Cointreau Coffee 君度咖啡
+Ginger Juice Coffee 生姜咖啡
+Coconut Coffee 椰香咖啡
+Jamaican Coffee 牙买加咖啡
+Brazil Santos Coffee 巴西山度士咖啡
+Cafe Latte 拿铁咖啡
+Iced Cafe Americano 冰美式咖啡
+Iced Mango Americano 芒果冰美式咖啡
+Iced Banana Americano 香蕉冰美式
+Iced French Coffee 冰法式滴滤
+Iced Caramel Cappuccino 冰焦糖卡布奇诺
+Iced Hazelnut Cappuccino 冰榛子卡布奇诺
+Fruit Cappuccino 果味卡布奇诺
+Vanilla Cappuccino 香草卡布奇诺
+Iced Cafe Latte 冰拿铁咖啡
+Iced Vanilla Latte 冰香草咖啡拿铁
+Iced Pineapple Latte 冰菠萝咖啡拿铁
+Iced Fruit Latte 冰果味咖啡拿铁
+Vanilla Bean Latte 拿铁香草
+Iced Coconut Latte 椰子冰咖啡拿铁
+Iced Mango Latte 芒果冰咖啡拿铁
+Peach Latte 蜜桃咖啡拿铁
+Iced Cherry Latte 樱桃冰咖啡拿铁
+Banana Latte 香蕉咖啡拿铁
+Espresso Macchiato 浓缩咖啡玛奇朵
+Iced Strawberry Mocha 草莓摩卡咖啡
+Coconut Mocha 椰子摩卡咖啡
+Banana Mocha 香蕉摩卡咖啡
+French Vanilla Coffee 法国香草咖啡
+Iced Chocolate Coffee 巧克力冰咖啡
+dinner for 正餐叉
+dessert knife 水果刀
+cake knife 柄铲
+dessert for 甜品叉
+vice spoo 服务勺
+teaspoon 茶勺
+service tongs 服务夹
+demi-spoon 小咖啡勺
+rice bowl 饭碗
+dish 碟子
+saucer 咖啡碟
+bread plate 面包碟
+creamer 奶勺
+coffee pot 咖啡壶
+espresso cup 特浓杯
+juice glass 果汁杯
+beer glass 啤酒杯
+wineglass 酒杯
+garlic 蒜
+ginge 姜
+hot red pepper 辣椒
+herb 香草
+lemon 柠檬
+oil 油
+salad oil 色拉油
+condiments 调料
+iodized salt 加碘盐
+refined sugar 白糖
+brown sugar 红糖
+Sesame 芝麻
+curry 咖喱
+salad dressing 沙拉酱
+tomato juice 番茄汁
+marmalade 酸果酱
+Sesame paste 芝麻酱
+Tabasco 辣椒仔
+soy sauce 酱油
+cheese powder 芝士粉
+chili sauce 辣椒酱
+drink list 酒水单
+pepper shaker 胡椒瓶
+salt shaker 盐瓶
+toothpick tuble 牙签筒
+paper napkin 纸巾
+straw 吸管
+coaste 杯垫
+cover 菜盖
+vase 花瓶
+name 姓名
+alias 别名
+Miss 小姐
+Mrs. 太太
+in. 英寸
+weight 体重
+age 年龄
+birthdate 出生日期
+born 生于
+permanent address 永久住址 
+current address 目前住址 
+duel citizenship 双重国籍
+native place 籍贯
+autonomous region 自治区
+city 市
+district 区
+street 街
+house number 门牌
+business phone 办公电话
+home phone 住宅电话
+ID card 身份证
+single 未婚
+separated 分居
+family status 家庭状况
+health condition 健康状况
+excellent （身体）极佳
+far-sighted 远视
+educational background 教育程度
+educational history 学历
+government-supportedstudent 公费生
+intern 实习生
+day-student 走读生
+auditor 旁听生（美）
+prize fellow 奖学金生
+abroad student 留学生
+degree 学位
+master 硕士
+post doctorate 博士后
+academic year 学年
+in-job training 在职培训
+curriculum 课程
+specialized courses 专门课程
+major 主修
+able 有才干的，能干的
+active 主动的，活跃的
+ambitious 有雄心壮志的
+amicable 友好的
+apprehensive 有理解力的
+cooperative 有合作精神的
+dutiful 尽职的
+humorous 有幽默
+temperate 稳健的
+responsible 负责的 
+expressivity 善于表达
+energetic 精力充沛的
+realistic 实事求是的
+industrious 勤奋的
+genteel 有教养的
+work experience 工作经历
+professionalhistory 职业经历
+good at 擅长于
+achievements 工作成就，业绩
+pen name 笔名
+Mr. 先生
+Ms 小姐或太太
+height 身高
+ft. 英尺
+bloodtype 血型
+birthday 生日
+date of birth 出生日期
+birthplace 出生地点
+address 地址
+citizenship 国籍
+nationality 民族；国籍
+province 省
+prefecture 专区
+county 县
+road 路
+lane 胡同，巷
+postal code 邮政编码
+office phone 办公电话
+mobile telephone 移动电话
+marital status 婚姻状况
+married 已婚
+divorced 离异
+number of children 子女人数
+health 健康状况
+short-sighted 近视
+education 学历
+graduate 毕业生
+commoner 自费生
+extern 走读生
+guest student 旁听生
+boarder 寄宿生
+undergraduate 大学肆业生
+graduate student 研究生
+bachelor 学士
+doctor 博士
+educational system 学制
+off-job training 脱产培训
+special training 特别训练
+courses taken 所学课程
+refresher course 进修课程
+minor 副修
+adaptable 适应性强的
+aggressive 有进取心的
+amiable 和蔼可亲的
+analytical 善于分析的
+candid 正直的
+diplomatic 老练的，有策略的
+disciplined 守纪律的
+modest 谦虚的
+precise 一丝不苟的
+frank 直率的，真诚的
+efficient 有效率的
+ingenious 有独创性的
+well-educated 受过良好教育的
+gentle 有礼貌的
+faithful 守信的，忠诚的 
+occupational history 工作经历
+specific experience 具体经历
+adapted to 适应于
+second job 第二职业
+spouse 配偶
+husband 丈夫
+wife 妻子
+brother 兄弟
+younger brother 弟弟
+elder sister 姐姐
+twin 双胞胎的
+stepsister 异父(母)之姐妹
+brother-in-law 大伯，小叔，姐夫，妹夫
+child 孩子
+daughter 女儿
+stepdaughter 继女
+adopted daughter 养女
+son-in-law 女婿
+niece 侄女，外甥女
+parents 父母
+mother母亲，妈妈
+stepmother 继母
+foster mother 养母
+mother-in-law 岳母，婆婆
+aunt 婶母，伯母，舅母，姑母
+grandfather 祖父
+grandpa 爷爷
+grandchildren 孙辈
+granddaughter 孙女，外孙女
+great-grandfather 曾祖父
+great-uncle 叔、伯祖父
+great-grandson 曾孙，曾外孙
+family 家庭
+Relative 亲戚
+male 男的
+generation 代
+offspring 后代，后辈
+couple 夫妻
+Ex-husband 前夫
+Ex-wife 前妻
+elder brothe 哥哥
+sister 姐妹
+younger sister 妹妹
+stepbrother 异父(母)之兄弟
+cousin 堂兄妹，表兄妹
+sister-in-law 弟妹
+son 儿子
+stepson 继子
+adopted son 养子
+daughter-in-law 儿媳
+nephew 侄儿，外甥
+father 父亲
+dad 爸爸
+stepfather 继父
+foster father 养父
+father-in-law 岳父，公公
+uncle 叔父，伯父，舅父，姑父
+grandmother 祖母
+grandma 奶奶
+grandson 孙子
+great-grandmother 曾祖母
+great-aunt 叔、伯祖母
+great-granddaughter 曾孙女，曾外孙女
+marriage 婚姻
+female 女的
+descent 世系，血统
+ancestor 祖先 
+heir 继承人
