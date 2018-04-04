@@ -435,6 +435,7 @@ export default class ChatScreen extends Component<{}>  {
            This will help us reorder selections in the message composer bar and give a more accurate picture to
            the user of what will be sent as a message */
         var message = self.generateSentence(self.state.previousSelectionIDs);
+        alert(message);
         self.setState({message: message}, function() {
 
           var helperArr=[];
