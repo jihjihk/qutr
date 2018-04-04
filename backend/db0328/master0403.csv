@@ -1,0 +1,891 @@
+,ar,cn,en,pos
+0,صفر,零,zero,num
+1,واحد,一,one,num
+2,إثنان,二,two,num
+3,ثلاثة,三,three,num
+4,أربعة,四,four,num
+5,خمسة,五,five,num
+6,ستة,六,six,num
+7,سبعة,七,seven,num
+8,ثمانية,八,eight,num
+9,تسعة,九,nine,num
+10,عشرة,十,ten,num
+11,مائة,一百,hundred,num
+12,مئتين,二百,two hundred,num
+13,خمس مائة,五百,five hundred,num
+14,ألف,一千,thousand,num
+15,ألفين,二千,two thousand,num
+16,عشرة آلاف,一万,ten thousand,num
+17,عشرون الف,二万,twenty thousand,num
+18,خمسون ألف,五万,fifty thousand,num
+19,مائة ألف,十万,hundred thousand,num
+20,مليون,一百万,million,num
+21,عشرة ملايين,一千万,ten million,num
+22,مائة مليون,一亿,hundred million,num
+23,مليار‎,十亿,billion,num
+24,تريليون,一兆,trillion,num
+25,من فضلك أعطني * و *.,请给我*和*。,"* and * , please.",vp
+26,‏* أيام,*天,* day(s),prt
+27,‏* ساعات,*个小时,* hour(s),prt
+28,* لا يعمل,坏了,* is not working.,vp
+29,‏* دقائق,*分钟,* minute(s),prt
+30,*  أشهر,*个月,* month(s),prt
+31,‏* أسبوع,*个星期,* week(s),prt
+32,‏* سنوات,*年,* year(s),prt
+33,قارورة,一瓶,a bottle,np
+34,كأس من النبيذ,一杯酒,a glass of wine,np
+35,نصف لتر,一品脱,a pint,np
+36,طاولة ل * شخص,*人的座位,a table for * people,np
+37,بطن,腹部,abdomen,np
+38,بعد,之后,after,adv
+39,بعد الظهر,下午,afternoon,np
+40,مكيف هواء,空调,airconditioner,np
+41,طائرة,飞机,airplane,np
+42,مطار,机场,airport,np
+43,هل أنا معتقل؟,我被捕了吗？,Am I under arrest?,sent
+44,أبريل,四月,April,np
+45,قريب من هنا,转角,Around the corner.,sent
+46,أغسطس,八月,August,np
+47,سبيل,大道,avenue,np
+48,ظهر,背,back,np
+49,مشرب,酒吧,bars,np
+50,‏حمام,卫生间,bathroom,np
+51,بطارية,电池,batteries,np
+52,فول,豆,beans,np
+53,ملاءات السرير,床单,bedsheets,np
+54,لحم بقري,牛肉,beef,np
+55,بيرة,啤酒,beer,np
+56,قبل,以前,before,adv
+57,أكبر,更大,bigger,adj
+58,أسود,黑色,black,adj
+59,فلفل أسود,黑胡椒,black pepper,np
+60,شاي أسود,红茶,black tea,np
+61,أزرق,蓝色,blue,adj
+62,الجسم,身体,body,np
+63,ماء مغلي,开水,boiled water,np
+64,مياه معبأة,矿泉水,bottled water,np
+65,خبز,面包,bread,np
+66,وجبة افطار,早饭,breakfast,np
+67,بني,褐色,brown,adj
+68,محطة حافلات,公家车站,bus station,np
+69,زبدة,牛油,butter,np
+70,مؤخرة,屁股,buttocks,np
+71,مقهى,咖啡室,cafe,np
+72,هل استطيع الحصول على حقيبة؟,我可以要一个袋子吗？,Can I get a bag?,sent
+73,هل أستطيع الحصول على تأمين؟,我可以买保险吗？,Can I get insurance?,sent
+74,هل استطيع دفع غرامة أدفع غرامة الآن؟,我可以缴交罚款吗？,Can I just pay a fine now?,sent
+75,قائمة الطعام، من فضلك؟,请给我看看菜单.,"Can I look at the menu, please?",sent
+76,هل يمكنني الحصول على مكالمة هاتفية؟,我可以打个电话吗？,Can I make a telephone call?,sent
+77,هل يمكنني حجز موعد؟,我可以预约吗？,Can I make an appointment?,sent
+78,هل استطيع القيام بمكالمة دولية من هنا؟,可以打国际电话吗?,Can I make international calls here?,sent
+79,هل يمكنني الطبع من هنا؟,我可以复印吗？,Can I print here?,sent
+80,أيمكنني إستخدام هاتفك؟,我可以用您的手机吗？,Can I use your cell phone?,sent
+81,أيمكنني استخدام هاتفك النقال؟,我可以用您的电话吗？,Can I use your phone?,sent
+82,هل يمكنك تحويل مال لي؟ ,你可以帮我换钱吗？,Can you change money for me?,sent
+83,هل يمكنك أن تحضر طبيب؟,你可以帮我找一位医生吗？,Can you get a doctor?,sent
+84,هل يمكنك أن تريني أين هو على الخريطة؟,你可以在地图上指给我看?,Can you show me on the map?,sent
+85,عل يمكنك تحدث ال*؟,你可以说*吗？,Can you speak *?,vp
+86,هل يمكنك اقتراح فندق آخر؟,你有其他推荐的酒店吗？,Can you suggest another hotel?,sent
+87,اين *؟,你可以告诉我*在那里吗？,Can you tell me where * is?,vp
+88,هل تستطيع إيقاظي الساعة *؟,请在明天早上*点钟叫醒我。,Can you wake me at *?,vp
+89,هل يمكنك أن تكتب لي الإسم و العنوان؟,你可以写下名字和地址吗？,Can you write the name and address down?,sent
+90,سيارة,汽车,car,np
+91,مياه غازية,碳酸水,carbonated water,np
+92,أوراق مالية,现金,cash,np
+93,رخيص,便宜,cheap,adj
+94,أرخص,比较便宜,cheaper,adj
+95,شيك,支票,check,np
+96,جبنة,奶酪,cheese,np
+97,صدر,胸部,chest,np
+98,دجاج,鸡,chicken,np
+99,أنظف,清洁工,cleaner,np
+100,مغلق,关闭,closed,adj
+101,صودا,苏打水,club soda,np
+102,قهوة,咖啡,coffee,np
+103,الكولا,可乐,Coke,np
+104,دواء للزكام,感冒药,cold medicine,np
+105,سعال,咳嗽,cough,np
+106,لو سمحتو هل يمكنك أن *؟,可以请你*吗？,Could you please *?,vp
+107,هل يمكنك أن تكرر هذا؟,你可以重复一遍吗？,Could you repeat that?,sent
+108,بطاقة ائتمان,信用卡,credit card,np
+109,ديسمبر,十二月,December,np
+110,وديعة,押金,deposit,np
+111,إسهال,泻肚子/拉肚子,diarrhoea,np
+112,قاموس,词典,dictionary,np
+113,ديزل‎ سولار‎ جاز,柴油,diesel,np
+114,هل تقبل العملة *؟,你接受*的货币吗？,Do you accept * currency?,vp
+115,هل تقبل بطاقات الائتمان؟,你接受信用卡吗？,Do you accept credit cards?,sent
+116,هل تقبل الدولار الأمريكي؟,你接受美元吗？,Do you accept US dollars?,sent
+117,هل تذهب إلى *؟,去不去*?,Do you go to *?,vp
+118,هل لديك خزنة؟,你们有没有保险箱？,Do you have a safe?,sent
+119,هل لديك قائمة بالإنجليزية؟,你有没有英文菜单？,Do you have an English menu?,sent
+120,هل لديك أي غرف متاحة؟,你们还有房间吗？,Do you have any rooms available?,sent
+121,هل لديك أي وجبات خفيفة؟,有没有小吃？有没有点心？,Do you have any snacks?,sent
+122,هل لديك تأمين؟,你有保险吗？,Do you have insurance?,sent
+123,هل لديك لون آخر؟,你们有没有另外的颜色?,Do you have it in another color?,sent
+124,هل لديكم من هذه بمقاسي؟,有没有我的尺寸？,Do you have this in my size?,sent
+125,هل تعلم *؟,你知道*吗？,Do you know *?,vp
+126,هل تقدمون أي خمور؟,你们销售酒精类饮品吗？,Do you serve alcohol?,sent
+127,هل هن,可以邮寄到海外吗？,Do you ship overseas?,sent
+128,هل هناك شحن دولى؟,你会说英语吗？,Do you speak English?,sent
+129,هل تقبلون عملة *؟,*元可以吗？,Do you take * currency?,vp
+130,مفهوم؟,听得懂吗？,Do you understand?,sent
+131,هل هذا يشمل وجبة الافطار؟,早餐包含在内吗？,Does that include breakfast?,sent
+132,هل تحتوي هذه الغرفة على *؟,这个房间有没有*？,Does the room come with *?,vp
+133,هل تتوقف هذه الحافلة في *؟,这辆巴士停在*吗？,Does this bus stop in *?,vp
+134,هل يتوقف هذا القطار في *؟,这列火车停在*吗？,Does this train stop in *?,vp
+135,لا تلمسني!,不要碰我！,Don't touch me!,sent
+136,وسط البلد,市中心,downtown,np
+137,رخصة قيادة,驾驶证件,driver's license,np
+138,زلابية,饺子,dumpling,np
+139,آذان,耳朵,ears,np
+140,شرق,东,east,adj
+141,بيض,鸡蛋,eggs,np
+142,كتب إنجليزية,英文书,English books,np
+143,مجلات انجليزية,英文杂志,English magazines,np
+144,جريدة إنجليزية,英文报纸,English newspaper,np
+145,دخول,入口,entrance,np
+146,مساء,晚上,evening,np
+147,ممتاز!,太棒了！,Excellent!,sent
+148,أعذرني,打扰一下。,Excuse me. (begging pardon),sent
+149,لو سمحت,对不起。,Excuse me. (coming through),sent
+150,معذرة,请问。,Excuse me. (getting attention),sent
+151,خروج,出口,exit,np
+152,غالي,贵,expensive,adj
+153,عيون,眼睛,eyes,sent
+154,وجه,脸,face,np
+155,فبراير,二月,February,np
+156,أقدام,脚,feet,np
+157,حمة,发烧,fever,np
+158,بخير، شكرا لك.,"很好, 谢谢。","Fine, thank you.",sent
+159,أصابع,手指,fingers,np
+160,مقصورة درجة أولى,头等舱,first class cabin,np
+161,سمك,鱼,fish,np
+162,وجبة ثابتة السعر,定价套餐,fixed-price meal,np
+163,ممنوع,被禁止,forbidden,adj
+164,يوم الجمعة,星期五,Friday,np
+165,أرز مقلي,炒饭,fried rice,np
+166,من,从,from,prt
+167,فاكهة,水果,fruits,np
+168,محطة بنزين,加油站,gas station,np
+169,نظارات,眼镜,glasses,np
+170,ذهب,去,go,vp
+171,انطلق الى الأمام.,直走,Go straight.,sent
+172,ذهب,金色,gold,adj
+173,مساء الخير.,晚上好。,Good evening.,sent
+174,صباح الخير.,早安。,Good morning.,sent
+175,تصبح على خير,晚安。,Good night.,sent
+176,مع السلامة,再见。,Goodbye,sent
+177,باي باي,拜拜。,Goodbye (informal),sent
+178,أخضر,绿色,green,adj
+179,شاي أخضر,绿茶,green tea,np
+180,رمادي,灰色,grey,adj
+181,شعر,头发,hair,np
+182,نصف,半,half,adj
+183,خنزير,火腿,ham,np
+184,أيادي,手,hands,np
+185,هو,他,he,np
+186,رئس,头,head,np
+187,مدفأة,暖气,heater,np
+188,مرحبا.,你好。,Hello.,sent
+189,النجدة!,救命！,Help!,sent
+190,هنا,这里,here,adv
+191,هل أنت(ي) هنا لوحدك؟,你自己一个人吗？,Here by yourself?,sent
+192,فندق,酒店／旅馆,hotel,np
+193,كيف حالك,你好吗？,How are you?,sent
+194,كيف أصل إلى *؟,怎么去*?,How do I get to * ?,vp
+195,كم سيكلفني الذهاب إلى *؟,去*要多少钱？,How much does it cost to get to *?,vp
+196,ما سعر الغرفة لفرد واحد؟,单人房一晚多少钱？,How much is a room for one person per night?,sent
+197,ما سعر الغرفة لفردين؟,双人房一晚多少钱？,How much is a room for two people per night?,sent
+198,ما سعر التذكرة الى *؟,去*的票多少钱？,How much is a ticket to *?,vp
+199,ما السعر للساعة؟,一小时是多少钱？,How much is it per hour?,sent
+200,ما سعر المكالمة الى *؟,打给*是多少钱？,How much is it to call to *?,vp
+201,ما سعر تذكرة الدخول؟,入场费多少钱？,How much is it to get in?,sent
+202,بكم هذا؟,多少钱？,How much is this?,sent
+203,بكم؟,多少？,How much?,sent
+204,كيف كانت وجبتك؟,这一顿饭怎么样？,How was your meal?,sent
+205,انا,我,I,np
+206,أنا من *.,我从*来。,I am from *.,vp
+207,انا مريض,我生病了。,I am sick.,sent
+208,لا أستطيع تحمل هذا,我付不起。,I can't afford it.,sent
+209,لا اتكلم *.,我不会讲*。,I can't speak *.,vp
+210,لا آكل *.,我不吃*。,I don't eat *.,vp
+211,ليس عندي *.,我没有*。,I don't have *.,vp
+212,لا أتحدث *.,我不能说*。,I don't speak *.,vp
+213,أنا لا أفهم,我听不懂。,I don't understand (something heard).,sent
+214,لا أريد *.,我不要*。,I don't want *.,vp
+215,أنا لا أريده,我不要。,I don't want it.,sent
+216,لدي *.,我有*。,I have *.,vp
+217,لقد وصلت.,我到了。,I have arrived.,sent
+218,ما عملت اشي غلط.,我没有做错事。,I haven't done anything wrong.,sent
+219,فقدت *.,我丢了我的*。,I lost my *.,vp
+220,فقدت حقيبتي.,我丢了我的包包。,I lost my bag.,sent
+221,احتاج *.,我要*。,I need *.,vp
+222,أحتاج طبيب.,我需要医生。,I need a doctor.,sent
+223,أ حتاج أن أرى جواز سفرك,我需要看一下你的护照。,I need to see your passport.,sent
+224,أريد التحدث مع محامي,我要跟律师联系。,I need to talk to a lawyer.,sent
+225,أحتاج مساعدة لو سمحت.,我需要你的帮助。,I need your help.,sent
+226,أنا آكل الطعام الحلال فقط.,我只吃清真食品。,I only eat Halal food.,sent
+227,أريد *.,我想要*。,I want *.,vp
+228,أريد أن آكل طبق مع *.,我想吃*的菜。,I want a dish with *.,vp
+229,أريد أن أدفع لاغادر.,我要退房。,I want to check out.,sent
+230,أريد ايجار سيارة.,我想要租车。,I want to rent a car.,sent
+231,أود بالتحدث مع سّفارة *.,我希望跟*大使馆联系。,I want to talk to the * embassy.,vp
+232,سأقيم * ليلى,我打算住*夜。,I will stay for * night(s).,vp
+233,أعمل في *.,我在*工作。,I work at the *.,vp
+234,أريد ايجار سيارة.,我想租车,I'd like to rent a car.,sent
+235,سأتصل بالشرطة‏ ‎.,我会叫警察。,I'll call the police.,sent
+236,أنا نباتي.,我吃素的。,I'm a vegetarian.,sent
+237,لقد انتهيت.,我完成了。,I'm finished.,sent
+238,أبحث عن *.,我在找*,I'm looking for *.,vp
+239,أنا تائه.,我迷路了。,I'm lost.,sent
+240,أنا لست على ما يرام.,我不舒服,I'm not feeling well.,sent
+241,أنا لست مهتم.,我没有兴趣。,I'm not interested.,sent
+242,انا مريض.,我生病了。,I'm sick.,sent
+243,أنا آسف.,对不起。,I'm sorry.,sent
+244,أنا مع *.,我现在跟*在一起,I'm with *.,vp
+245,إنني مصاب.,我受伤了。,I've been injured.,sent
+246,أنا فقدت *.,我的*不见了,I've lost *.,vp
+247,تقاطع,交界,intersection,np
+248,هل يتضمن ذلك الإفطار؟,包含早餐吗？,Is breakfast included?,sent
+249,هل هذا شامل التأمين؟,包含保险吗？,Is insurance included?,sent
+250,هل هو مفتوح *؟,*对外开放吗？,Is it open on *?,vp
+251,هل هناك * قريب؟,附近有没有*,Is there * around here?,vp
+252,هل هناك * تنصحني به؟,你有推介的*吗？,Is there * you recommend?,vp
+253,هل هناك خصم للمجموعات؟,有没有团体折扣？,Is there a group discount?,sent
+254,هل هناك تخصص محلي؟,有没有当地特色？,Is there a local specialty?,sent
+255,هل هناك خصم للطلاب؟,有没有学生优惠？,Is there a student discount?,sent
+256,هل هناك مكان أترك فيه أغراضي؟,有没有地方让我放行李？,Is there anywhere I can leave luggage?,sent
+257,هل هناك أحد يتحدث الانجليزية؟,这里有人会说英语吗？,Is there someone here who speaks English?,sent
+258,هل هناك خدمة طاولات؟,有没有餐桌服务？,Is there table service?,sent
+259,هل هذا المقعد خالى؟,这里有人坐吗？,Is this seat free?,sent
+260,أشعر بالألم هنا.,这里很痛,It hurts here.,sent
+261,هي التاسعة صباحاً,现在是早上9点钟。,It is nine in the morning.,sent
+262,كان سوء تفاهم,这是误会。,It was a misunderstanding.,sent
+263,كان لذيذ‏ ‎,很好吃。,It was delicious.,sent
+264,إنها حالة طارئة.,这是紧急情况。,It's an emergency.,sent
+265,لا بأس,没关系。,"It's okay. (polite response to ""I'm sorry"")",sent
+266,إنه غير مريح.,不舒服。,It's uncomfortable.,sent
+267,يحكك,痒,itchy,adj
+268,يناير,一月,January,np
+269,عصير,果汁,juice,np
+270,يوليو,七月,July,np
+271,يونيو,六月,June,np
+272,الأسبوع الماضي,上个星期,last week,np
+273,لاحقاً,迟一点,later,adv
+274,اتركني وحدي.,不要打扰我。,Leave me alone.,sent
+275,يسار,左边,left,adv
+276,أرجل,腿,legs,np
+277,اقل,少,less,adj
+278,أقل من,少于,less than,adj
+279,خزانات,储物柜,lockers,np
+280,انتبه!,小心！,Look out!,sent
+281,غداء,午饭,lunch,np
+282,معكرونة,通粉,macaroni,np
+283,مارس,三月,March,np
+284,مايو,五月,May,np
+285,هل لي بالحصول على قارورة *؟,可以来一瓶*吗？,May I have a bottle of *?,vp
+286,هل لي بالحصول على كوب من *؟,可以来一杯*吗？,May I have a cup of *?,vp
+287,هل لي بالحصول على كأس من *؟,可以来一杯*吗？,May I have a glass of *?,vp
+288,هل لي بالحصول على القليل من *؟,可以来一点*吗？,May I have some *?,vp
+289,هل لي بالسؤال، ما هو اسمك؟,请问你叫什么名?,"May I please ask, what is your name?",sent
+290,هل لي برؤية الغرفة أولاً؟,请问我可以先看一下房间吗？,May I see the room first?,sent
+291,أنا أيضاً,我也是,Me too.,sent
+292,طارئ طبي,医疗急诊,Medical emergency,np
+293,رجال,男人,men,np
+294,منتصف الليل,半夜,midnight,np
+295,حليب,牛奶,milk,np
+296,الاثنين,星期一,Monday,np
+297,مال,金钱,money,np
+298,أكثر,更,more,adj
+299,أكثر من,多于,more than,adj
+300,صباح,早上,morning,np
+301,لحم الضأن,羊肉,mutton,np
+302,أنا اسمي *.,我叫 * 。,My name is * .,vp
+303,"أظافر (fingernails), مسامير (hammering nails) ",指甲,nails,np
+304,الهوية الوطنية,证件,national ID,np
+305,رقبة,脖子,neck,np
+306,جرائد,报纸,newspaper,np
+307,الأسبوع القادم,下个星期,next week,np
+308,سعيد بالتعرف عليك,很高兴认识你。,Nice to meet you.,sent
+309,ليلة,晚上,night,np
+310,ممنوع الوقوف,禁止停车,No parking.,sent
+311,لا، شكراً.,不用了，谢谢。,"No, thank you.",sent
+312,لا.,不要,No.,sent
+313,الشعيرية,面条,noodles,np
+314,الظهيرة,中午,noon,np
+315,شمال,北,north,adv
+316,أنف,鼻子,nose,np
+317,ليس بعيد جداً,不太远,Not too far.,sent
+318,نوفمبر,十一月,November,np
+319,الآن,现在,now,adv
+320,رقم *,数字,Number *.,vp
+321,أكتوبر,十月,October,np
+322,حسناً، سآخذه.,我要买这个。,"OK, I'll take it.",sent
+323,حسناًً,好的,Okay.,sent
+324,واحد إضافي، من فضلك.,请再给我一个。,"One more, please.",sent
+325,الساعة الواحدة صباحاً,凌晨一点钟,one o'clock AM,np
+326,الساعة الواحدة مساءً,下午一点钟,one o'clock PM,np
+327,تذكرة واحدة إلى *.,要一张去*的票，谢谢,"One ticket to *, please.",vp
+328,اتجاه واحد,单行道,one way,adv
+329,مفتوح,开,open,adj
+330,"برتقالي (the color or the adjective), برتقال (the fruit)",橙色,orange,np
+331,عصير برتقال,柳橙汁,orange juice,np
+332,مسكن ألم,止痛药,pain killer,np
+333,مؤلم,痛。,painful,adj
+334,عذراً/معذرة؟,可以再重复一遍吗？,Pardon me?,sent
+335,جواز سفر,护照,passport,np
+336,بعد ال*. / بعد أن تتخطى ال*.,传*,Past the *.,vp
+337,ادفع,付,pay,vp
+338,قلم حبر,笔,pen,np
+339,قلم رصاص,铅笔,pencil,np
+340,بترول,汽油,petrol,np
+341,من فضلك نظف غرفتي.,请清洁我的房间,Please clean my room.,sent
+342,من فضلك نظف الصحون.,请洗干净这些碟子,Please clear the plates.,sent
+343,أرجوك، تعال/تعالي معي.,请跟我过来,Please come with me.,sent
+344,من فضلك أعطني *.,请给我*。,Please give me *.,vp
+345,من فضلك شغل المكيف الهوائي.,请把空调开大一点。,Please turn up the AC., sent
+346,من فضلك استعمل آلة السحب ببطاقة الائتمان.,请打表。,Please use the meter machine.,sent
+347,من فضلك,请。,Please.,adv
+348,الشرطة,警察,police, np
+349,لحم خنزير,猪肉,pork,np
+350,طابع بريدي,邮票,postage stamp,np
+351,بطاقة بريدية,明信片,postcard,np
+352,اسحب,拉,pull,vp
+353,بنفسجي,紫色,purple,adj
+354,ادفع,推,push,adv
+355,هادئ,安静,quiet,adj
+356,موس حلاقة,剃刀,razor,np
+357,أحمر,红色,red,adj
+358,نبيذ أحمر,红酒,red wine,np
+359,مطعم,餐厅,restaurant,np
+360,أرز,米饭,rice,np
+361,يمين,右边,right,part
+362,شارع,路,road,np
+363,شراب مسكر كحولي (رم),朗姆酒,rum,np
+364,سيلان الأنف,流鼻涕,runny nose,np
+365, سلطة,沙拉,salad,np
+366,ملح,盐,salt,np
+367,يوم السبت,星期六,Saturday,np
+368,سجق,香肠,sausage,np
+369,شاي معطر,花茶,scented tea,np
+370,مقصورة الدرجة الثانية,二等舱,second class cabin,np
+371,أراك لاحقاً.,待会见,See you later.,sent
+372,سبتمبر,九月,September,np
+373,شامبو,洗发精,shampoo,np
+374,هي,她,she,np
+375,كتف,肩膀,shoulder,np
+376, أرني.,给我看一下。,Show me.,sent
+377,مواقع لترى,景点,sites to see,np
+378,ببطء,慢慢的,slowly,adv
+379,عطسة,打喷嚏,sneeze,np
+380,صابون,肥皂,soap,np
+381,المزيد من *، من فضلك.,再多一点*，谢谢,"Some more *, pelase.",vp
+382,ملتهب,酸,sore,adj
+383,حساء,汤,soup,np
+384,جنوب,南,south,adv
+385,حد السرعة,速度限制,speed limit,np
+386,دواء للمعدة,肠胃药,stomach medicine,np
+387,قف,停,stop (on a street sign),sent
+388,توقف! لص/سارق‏! ‎,住手！小偷！,Stop! Thief!,sent
+389,توقف,停。,Stop.,sent
+390,إلى الأمام,往前走,straight ahead,sent
+391,شارع,街,street,np
+392,سكر,糖,sugar,np
+393,مرهم حماية من حروق الشمس,防晒乳,sunblock lotion,np
+394,الأحد,星期天,Sunday,np
+395,العشاء,晚饭,supper,np
+396,خذني إلى هناك من فضلك.,请带我到那里。,"Take me there, please.",sent
+397,خذني إلى *، من فضلك.,请您开到*。,"Take me to *, please.",vp
+398,سدادة قطنية للدورة ,卫生棉条,tampon,np
+399,تاكسي,出租车,taxi,np
+400,سائق تاكسي,出租车司机,Taxi driver,np
+401,شاي,茶,tea,np
+402, هاتف,电话,telephone,np
+403,شكراً جزيلاً,非常感谢,Thank you so much.,sent
+404,شكراًً,谢谢。,Thank you.,sent
+405,هذا غال جدا.,太贵了。,That's too expensive.,sent
+406,الفاتورة، من فضلك.,请结帐。,"The check, please.",sent
+407,بعد غد,后天,the day after tomorrow,np
+408,قبل البارحة,前天,the day before yesterday,np
+409,هناك,那里,there,adv
+410,نحن * أشخاص,一共有*个人,There are * of us.,vp
+411,هن,她们,they (f),np
+412,هم,他们,they,np
+413,هما,他们,they (two people),np
+414,كان هذا رائعا جدا!,真的很棒！,This was very impressive!,sent
+415,هذا الأسبوع,这个星期,this week,np
+416,حلق,喉咙。,throat,np
+417,يوم الخميس,星期四,Thursday,np
+418,إلى *,去*,To *.,vp
+419,خبز محمص,吐司,toast,np
+420, اليوم,今天,today,np
+421,أصابع القدم,脚指。,toes,np
+422,حمام,厕所,toilet,np
+423,غداً,明天,tomorrow,np
+424,مياه مقوية,通宁水,tonic water,np
+425,فرشاة أسنان,牙刷,toothbrush,np
+426,معجون أسنان,牙膏,toothpaste,np
+427,نحو ال*.,靠近*,Towards the *.,vp
+428,محطة القطار,火车站,train station,np
+429,يوم الثلاثاء,星期二,Tuesday,np
+430,در إلى يسار.,左拐。,Turn left.,sent
+431,در إلى يمين.,右拐。,Turn right.,sent
+432,‏تلفاز,电视,TV,np
+433,منعطف.,掉头。,U-turn.,sent
+434,مظلة,雨伞,umbrella,np
+435,خضروات,蔬菜,vegetables,np
+436,شراب فودكا,伏特加,vodka,np
+437, خصر,腰,waist,np
+438,انتظر أو ابقى؟,等待还是留下来？,Wait or stay?,sent
+439,انتظر.,等一下。,Wait.,sent
+440,احذر ال*.,注意*,Watch for the *.,vp
+441,ماء,水,water,np
+442,نحن,我们,we,np
+443,يوم الأربعاء,星期三,Wednesday,np
+444,غرب,西,west,adv
+445,ما هو سعر العملة؟,汇率多少？,What is the exchange rate?,sent
+446,ماذا يدعى هذا؟,这叫什么？,What is this called?,sent
+447,ما هذا؟,这是什么？,What is this?,sent
+448,ما اسمك؟,你叫什么名字？,What is your name?,sent
+449,ما هو توقيت *؟,*是什么时候？,What time is *?,sent
+450,كم الساعة؟,现在几点？,What time is it?,sent
+451,متى ستصل هذه الحافلة؟,公车什么时候到？,What time will this bus arrive?,vp
+452,متى سيصل هذا القطار؟,火车什么时候到？,What time will this train arrive?,sent
+453,ماذا؟,什么？,What?,sent
+454,متى يجب علي تسجيل الخروج؟,何时要退房？,When do I have to check out?,sent
+455,متى تنطلق الحافلة المتجه إلى*؟,去*的公车什么时候离开？,When does the bus for * leave?,vp
+456,متى ينطلق القطار المتجه إلى*؟,去*的火车什么时候离开？,When does the train for * leave?,vp
+457,ما هو توقيت الإغلاق؟,几点关门？,When is closing time?,sent
+458,ما هو توقيت الافتتاح؟,几点开门？,When is opening time?,sent
+459,متى؟,什么时候？,When?,sent
+460,من أين أنت؟,你从哪里来的？,Where are you from?,sent
+461,إلى أين أنت آخذني؟,你带我去哪里？,Where are you taking me?,sent
+462,أين يمكنني أن أجد؟,哪里有*?,Where can I find *?,vp
+463,أين يمكنني أن أصرّف شيك سياحي؟,我在哪里可以兑换这个旅行支票？,Where can I get a traveler's check changed?,sent
+464,أين يمكنني أن أصرّف بعض المال؟,我要在哪里换钱？,Where can I get money changed?,sent
+465,أين يمكننا أن نحصل على تذاكر؟,哪里买车票？,Where do we get tickets?,sent
+466,أين يؤلمك؟,哪里痛？,Where does it hurt?,sent
+467,أين تذهب هذه الحافلة؟,这辆巴士去哪里？,Where does this bus go?,sent
+468,أين يذهب هذا القطار؟,这列火车去哪里？,Where does this train go?,sent
+469,أين توجد آلة الصرف الآلي؟,提款机在哪里？,Where is an ATM?,sent
+470,أين تقع على الخريطة؟,在地图上的哪里？,Where is it on the map?,sent
+471,أين ال*؟,*在哪里？,Where is the *?,vp
+472,أين الحمام؟,洗手间在哪里？,Where is the bathroom?,sent
+473,أين الحافلة المتجهة إلى *؟,到*的巴士在哪？,Where is the bus to *?,vp
+474,أين الحمام؟,厕所在哪里？,Where is the toilet?,sent
+475,أن القطار المتجه إلى *؟,到*的火车在哪？,Where is the train to *?,vp
+476,اين؟,哪里？,Where?,sent
+477,بأي اتجاه؟,哪个方向？,Which direction?,sent
+478,نحن في أي محطة؟,我们在哪一站？,Which station are we at?,sent
+479,شراب الويسكي,威士忌,whiskey,np
+480,أبيض,白色,white,adj
+481,نبيذ أبيض,白酒,white wine,np
+482,من؟,谁？,Who?,sent
+483,لماذا؟,为什么？,Why?,sent
+484,نساء,女人,women,np
+485,عمل,工作,work,np
+486,معصم,手腕,wrist,np
+487,ورق للكتابة,纸,writing paper,np
+488,أصفر,黄色,yellow,adj
+489,نعم من فضلك,是，谢谢,"Yes, please.",sent
+490,نعم.,是,Yes.,sent
+491, البارحة,昨天,yesterday,np
+492,ينتج,让路,yield,vp
+493,أنت,你,you,np
+494, أنتم,你们,you (p),np
+495,"أنت تغشني (s), أنتما تغشانني (two), أنتم تغشونني (more than two)",你在骗我。,You're cheating me.,sent
+496,على الرحب والسعة,不客气。,You're welcome.,sent
+497,بيوت الشباب,青年旅馆,youth hostel,np
+498,بخير، شكرا لك.,"很好, 谢谢。","I'm fine, thank you.",sent
+499,جيد!,好！,Good.,sent
+500,عظيم.,很棒！,Great.,sent
+501,هل أنت بمفردك؟,,Are you here by yourself?,sent
+502,كم ثمن *؟,多少钱 *？,How much is *?,vp
+503,أنا لا أفهم,我听不懂。,I don't understand.,sent
+504,دولار,美元,* dollar(s),prt
+505,جنيه,磅,* pound(s),prt
+506,درهم,迪拉姆,* dirham,prt
+507,دينار,第纳尔,* dinar,prt
+508,* يوان,*元,* yuan,prt
+509,لشخص واحد.,为一个人。,For one person.,sent
+510,لشخصين.,为两个人。,For two people.,sent
+511,ل* أشخاص.,为*个人。,For * people.,vp
+512,نعم.,是的。,Yeah.,vp
+513,صحيح!,当然啦!,Sure.,sent
+514,صديق,朋友,friend,np
+515,مرحبا!,你好！,Hi!,sent
+516,ماذا تحب؟,你喜欢什么？,What would you like?,sent
+517,أود *.,我想要 *。,I would like *.,vp
+518,مانجو,芒果,mango,np
+519,تفاحة,苹果,apple,np
+520,* أشخاص,*个人,* people,prt
+521,أفغانستان,阿富汗,Afghanistan,np
+522,ألبانيا,阿尔巴尼亚,Albania,np
+523,الجزائر,阿尔及利亚,Algeria,np
+524,أندورا,安道尔,Andorra,np
+525,أنغولا,安哥拉,Angola,np
+526,أنتيغوا,安提瓜,Antigua,np
+527,الأرجنتين,阿根廷,Argentina,np
+528,أرمينيا,亚美尼亚,Armenia,np
+529,أستراليا,澳大利亚,Australia,np
+530,النمسا,奥地利,Austria,np
+531,أذربيجان,阿塞拜疆,Azerbaijan,np
+532,الباهاما,巴哈马,Bahamas,np
+533,البحرين,巴林,Bahrain,np
+534,بنغلاديش,孟加拉国,Bangladesh,np
+535,بربادوس,巴巴多斯,Barbados,np
+536,روسيا البيضاء,白俄罗斯,Belarus,np
+537,بلجيكا,比利时,Belgium,np
+538,بليز,伯利兹,Belize,np
+539,بنين,贝宁,Benin,np
+540,بوتان,不丹,Bhutan,np
+541,بوليفيا,玻利维亚,Bolivia,np
+542,البوسنة الهرسك,波黑,Bosnia Herzegovina,np
+543,بوتسوانا,博茨瓦纳,Botswana,np
+544,البرازيل,巴西,Brazil,np
+545,بروناي,文莱,Brunei,np
+546,بلغاريا,保加利亚,Bulgaria,np
+547,فاسو,布基纳法索,Burkina,np
+548,بوروندي,布隆迪,Burundi,np
+549,كمبوديا,柬埔寨,Cambodia,np
+550,الكاميرون,喀麦隆,Cameroon,np
+551,كندا,加拿大,Canada,np
+552,الرأس الأخضر,佛得角,Cape Verde,np
+553,ممثل وسط افريقيا,中非共和国,Central African Rep,np
+554,تشاد,乍得,Chad,np
+555,تشيلي,智利,Chile,np
+556,الصين,中国,China,np
+557,كولومبيا,哥伦比亚,Colombia,np
+558,جزر القمر,科摩罗,Comoros,np
+559,الكونغو,刚果,Congo,np
+560,جمهورية الكونغو الديمقراطية,刚果民主共和国,Democratic Republic of Congo,np
+561,كوستا ريكا,哥斯达黎加,Costa Rica,np
+562,كرواتيا,克罗地亚,Croatia,np
+563,كوبا,古巴,Cuba,np
+564,قبرص,塞浦路斯,Cyprus,np
+565,جمهورية التشيك,捷克共和国,Czech Republic,np
+566,الدنمارك,丹麦,Denmark,np
+567,جيبوتي,吉布提,Djibouti,np
+568,دومينيكا,多米尼加,Dominica,np
+569,جمهورية الدومنيكان,多明尼加共和国,Dominican Republic,np
+570,تيمور الشرقية,东帝汶,East Timor,np
+571,الإكوادور,厄瓜多尔,Ecuador,np
+572,مصر,埃及,Egypt,np
+573,السلفادور,萨尔瓦多,El Salvador,np
+574,غينيا الإستوائية,赤道几内亚,Equatorial Guinea,np
+575,إريتريا,厄立特里亚,Eritrea,np
+576,استونيا,爱沙尼亚,Estonia,np
+577,أثيوبيا,埃塞俄比亚,Ethiopia,np
+578,فيجي,斐,Fiji,np
+579,فنلندا,芬兰,Finland,np
+580,فرنسا,法国,France,np
+581,الغابون,加蓬,Gabon,np
+582,غامبيا,冈比亚,Gambia,np
+583,جورجيا,格鲁吉亚,Georgia,np
+584,ألمانيا,德国,Germany,np
+585,غانا,加纳,Ghana,np
+586,اليونان,希腊,Greece,np
+587,غرينادا,格林纳达,Grenada,np
+588,غواتيمالا,危地马拉,Guatemala,np
+589,غينيا,几内亚,Guinea,np
+590,غينيا بيساو,几内亚比绍,Guinea-Bissau,np
+591,غيانا,圭亚那,Guyana,np
+592,هايتي,海地,Haiti,np
+593,هندوراس,洪都拉斯,Honduras,np
+594,المجر,匈牙利,Hungary,np
+595,أيسلندا,冰岛,Iceland,np
+596,الهند,印度,India,np
+597,أندونيسيا,印度尼西亚,Indonesia,np
+598,إيران,伊朗,Iran,np
+599,العراق,伊拉克,Iraq,np
+600,أيرلندا,爱尔兰,Ireland,np
+601,إسرائيل,以色列,Israel,np
+602,إيطاليا,意大利,Italy,np
+603,ساحل العاج,象牙海岸,Ivory Coast,np
+604,جامايكا,牙买加,Jamaica,np
+605,اليابان,日本,Japan,np
+606,الأردن,约旦,Jordan,np
+607,كازاخستان,哈萨克斯坦,Kazakhstan,np
+608,كينيا,肯尼亚,Kenya,np
+609,كيريباس,基里巴斯,Kiribati,np
+610,كوريا الشمالية,北朝鲜,North Korea,np
+611,كوريا الجنوبية,韩国,South Korea,np
+612,كوسوفو,科索沃,Kosovo,np
+613,الكويت,科威特,Kuwait,np
+614,قرغيزستان,吉尔吉斯斯坦,Kyrgyzstan,np
+615,لاوس,老挝,Laos,np
+616,لاتفيا,拉脱维亚,Latvia,np
+617,لبنان,黎巴嫩,Lebanon,np
+618,ليسوتو,莱索托,Lesotho,np
+619,ليبيريا,利比里亚,Liberia,np
+620,ليبيا,利比亚,Libya,np
+621,ليختنشتاين,列支敦士登,Liechtenstein,np
+622,ليتوانيا,立陶宛,Lithuania,np
+623,لوكسمبورغ,卢森堡,Luxembourg,np
+624,مقدونيا,马其顿,Macedonia,np
+625,مدغشقر,马达加斯加,Madagascar,np
+626,مالاوي,马拉维,Malawi,np
+627,ماليزيا,马来西亚,Malaysia,np
+628,جزر المالديف,马尔代夫,Maldives,np
+629,مالي,马里,Mali,np
+630,مالطا,马耳他,Malta,np
+631,جزر مارشال,马绍尔群岛,Marshall Islands,np
+632,موريتانيا,毛里塔尼亚,Mauritania,np
+633,موريشيوس,毛里求斯,Mauritius,np
+634,المكسيك,墨西哥,Mexico,np
+635,ميكرونيزيا,密克罗尼西亚,Micronesia,np
+636,مولدوفا,摩尔多瓦,Moldova,np
+637,موناكو,摩纳哥,Monaco,np
+638,منغوليا,蒙古,Mongolia,np
+639,الجبل الأسود,黑山,Montenegro,np
+640,المغرب,摩洛哥,Morocco,np
+641,موزمبيق,莫桑比克,Mozambique,np
+642,ميانمار,缅甸,Myanmar,np
+643,ناميبيا,纳米比亚,Namibia,np
+644,ناورو,瑙鲁,Nauru,np
+645,نيبال,尼泊尔,Nepal,np
+646,هولندا,荷兰,Netherlands,np
+647,نيوزيلاندا,新西兰,New Zealand,np
+648,نيكاراغوا,尼加拉瓜,Nicaragua,np
+649,النيجر,尼日尔,Niger,np
+650,نيجيريا,尼日利亚,Nigeria,np
+651,النرويج,挪威,Norway,np
+652,سلطنة عمان,阿曼,Oman,np
+653,باكستان,巴基斯坦,Pakistan,np
+654,بالاو,帕劳,Palau,np
+655,بناما,巴拿马,Panama,np
+656,بابوا غينيا الجديدة,巴布亚新几内亚,Papua New Guinea,np
+657,باراغواي,巴拉圭,Paraguay,np
+658,بيرو,秘鲁,Peru,np
+659,الفلبين,菲律宾,Philippines,np
+660,بولندا,波兰,Poland,np
+661,البرتغال,葡萄牙,Portugal,np
+662,دولة قطر,卡塔尔,Qatar,np
+663,رومانيا,罗马尼亚,Romania,np
+664,الاتحاد الروسي,俄罗斯联邦,Russian Federation,np
+665,رواندا,卢旺达,Rwanda,np
+666,سانت كيتس ونيفيس,圣基茨和尼维斯,St Kitts & Nevis,np
+667,شارع لوسيا,圣卢西亚,St Lucia,np
+668,سانت فنسنت وجزر غرينادين,圣文森特和格林纳丁斯,Saint Vincent & the Grenadines,np
+669,ساموا,萨摩亚,Samoa,np
+670,سان مارينو,圣马力诺,San Marino,np
+671,ساو تومي وبرينسيبي,圣多美和普林西比,Sao Tome & Principe,np
+672,المملكة العربية السعودية,沙特阿拉伯,Saudi Arabia,np
+673,السنغال,塞内加尔,Senegal,np
+674,صربيا,塞尔维亚,Serbia,np
+675,سيشيل,塞舌尔,Seychelles,np
+676,سيرا ليون,塞拉利昂,Sierra Leone,np
+677,سنغافورة,新加坡,Singapore,np
+678,سلوفاكيا,斯洛伐克,Slovakia,np
+679,سلوفينيا,斯洛文尼亚,Slovenia,np
+680,جزر سليمان,所罗门群岛,Solomon Islands,np
+681,الصومال,索马里,Somalia,np
+682,جنوب أفريقيا,南非,South Africa,np
+683,جنوب السودان,南苏丹,South Sudan,np
+684,إسبانيا,西班牙,Spain,np
+685,سيريلانكا,斯里兰卡,Sri Lanka,np
+686,سودان,苏丹,Sudan,np
+687,سورينام,苏里南,Suriname,np
+688,سوازيلاند,斯威士兰,Swaziland,np
+689,السويد,瑞典,Sweden,np
+690,سويسرا,瑞士,Switzerland,np
+691,سوريا,叙利亚,Syria,np
+692,تايوان,台湾,Taiwan,np
+693,طاجيكستان,塔吉克斯坦,Tajikistan,np
+694,تنزانيا,坦桑尼亚,Tanzania,np
+695,تايلاند,泰国,Thailand,np
+696,ليذهب,多哥,Togo,np
+697,تونغا,汤加,Tonga,np
+698,ترينيداد وتوباجو,特立尼达和多巴哥,Trinidad & Tobago,np
+699,تونس,突尼斯,Tunisia,np
+700,ديك رومي,火鸡,Turkey,np
+701,تركمانستان,土库曼斯坦,Turkmenistan,np
+702,توفالو,图瓦卢,Tuvalu,np
+703,أوغندا,乌干达,Uganda,np
+704,أوكرانيا,乌克兰,Ukraine,np
+705,الإمارات العربية المتحدة,阿联酋,United Arab Emirates,np
+706,المملكة المتحدة,英国,United Kingdom,np
+707,الولايات المتحدة الامريكانية,美国,United States,np
+708,أوروغواي,乌拉圭,Uruguay,np
+709,أوزبكستان,乌兹别克斯坦,Uzbekistan,np
+710,فانواتو,瓦努阿图,Vanuatu,np
+711,مدينة الفاتيكان,梵蒂冈城,Vatican City,np
+712,فنزويلا,委内瑞拉,Venezuela,np
+713,فيتنام,越南,Vietnam,np
+714,اليمن,也门,Yemen,np
+715,زامبيا,赞比亚,Zambia,np
+716,زيمبابوي,津巴布韦,Zimbabwe,np
+717,طوكيو,东京,Tokyo,np
+718,دلهي,新德里,Delhi,np
+719,شنغهاي,上海,Shanghai,np
+720,بكين,北京,Beijing,np
+721,مومباي,孟买,Mumbai,np
+722,ساو باولو,圣保罗,Sao Paulo,np
+723,المكسيك المدينة,墨西哥城,Mexico City,np
+724,أوساكا,大阪,Osaka,np
+725,القاهرة,开罗,Cairo,np
+726,دكا,达卡,Dhaka,np
+727,كراتشي,卡拉奇,Karachi,np
+728,بوينس آيرس،,布宜诺斯艾利斯,Buenos Aires,np
+729,كولكاتا,加尔各答,Kolkata,np
+730,لاغوس,拉各斯,Lagos,np
+731,اسطنبول,伊斯坦布尔,Istanbul,np
+732,تشونغتشينغ,渝,Chongqing,np
+733,قوانغتشو,广州,Guangzhou,np
+734,مانيلا,马尼拉,Manila,np
+735,ريو دي جانيرو,里约热内卢,Rio de Janeiro,np
+736,موسكو,莫斯科,Moscow,np
+737,تيانجين,天津,Tianjin,np
+738,بنغالور,班加罗尔,Bangalore,np
+739,باريس,巴黎,Paris,np
+740,شنتشن,深圳,Shenzhen,np
+741,جاكرتا,雅加达,Jakarta,np
+742,تشيناي,奈,Chennai,np
+743,لندن,伦敦,London,np
+744,ليما,利马,Lima,np
+745,بوغوتا,波哥大,Bogota,np
+746,جوهانسبرج,约翰内斯堡,Johannesburg,np
+747,سيول,首尔,Seoul,np
+748,بانكوك,曼谷,Bangkok,np
+749,حيدر أباد,海得拉巴,Hyderabad,np
+750,لاهور,拉合尔,Lahore,np
+751,طهران,德黑兰,Tehran,np
+752,تشنغدو,成都,Chengdu,np
+753,ووهان,武汉,Wuhan,np
+754,أحمد أباد,艾哈迈达巴德,Ahmedabad,np
+755,كوالا لامبور,吉隆坡,Kuala Lumpur,np
+756,مدينة الرياض,利雅得,Riyadh,np
+757,سانتياغو,圣地亚哥,Santiago,np
+758,سورة,苏拉特,Surat,np
+759,مدريد,马德里,Madrid,np
+760,تورونتو,多伦多,Toronto,np
+761,بيون,普纳,Pune,np
+762,دار السلام,达累斯萨拉姆,Dar es Salaam,np
+763,برشلونة,巴塞罗那,Barcelona,np
+764,يانجون,仰光,Yangon,np
+765,غوادالاخارا,瓜达拉哈拉,Guadalajara,np
+766,أنقرة,安卡拉,Ankara,np
+767,الإسكندرية,亚历山大,Alexandria,np
+768,سان بطرسبرج,圣彼得堡,Saint Petersburg,np
+769,سيدني,悉尼,Sydney,np
+770,نيروبي,内罗毕,Nairobi,np
+771,برازيليا,巴西利亚,Brasilia,np
+772,ملبورن,墨尔本,Melbourne,np
+773,ميديلين,麦德林,Medellin,np
+774,مونتريال,蒙特利尔,Montreal,np
+775,حلب,阿勒颇,Aleppo,np
+776,كيب تاون,开普敦,Cape Town,np
+777,تل أبيب,特拉维夫,Tel Aviv,np
+778,روما,罗马,Rome,np
+779,جايبور,斋浦尔,Jaipur,np
+780,الدار البيضاء,卡萨布兰卡,Casablanca,np
+781,البرلينية,柏林,Berlin,np
+782,لكناو,勒克瑙,Lucknow,np
+783,بوسان,釜山,Busan,np
+784,ميلان,米兰,Milan,np
+785,كانبور,坎普尔,Kanpur,np
+786,أثينا,雅典,Athens,np
+787,سورابايا,泗水,Surabaya,np
+788,لشبونة,里斯本,Lisbon,np
+789,أبوجا,阿布贾,Abuja,np
+790,كالي,卡利,Cali,np
+791,مانشستر,曼彻斯特,Manchester,np
+792,تايبيه,台北,Taipei,np
+793,دبي,迪拜,Dubai,np
+794,فانكوفر,温哥华,Vancouver,np
+795,أكرا,阿克拉,Accra,np
+796,بريسبان,布里斯班,Brisbane,np
+797,بيروت,贝鲁特,Beirut,np
+798,بوبال,博帕尔,Bhopal,np
+799,بريتوريا,比勒陀利亚,Pretoria,np
+800,هيروشيما,广岛,Hiroshima,np
+801,تيخوانا,蒂华纳,Tijuana,np
+802,هافانا,哈瓦那,Havana,np
+803,بروكسل,布鲁塞尔,Brussels,np
+804,بيرث,珀斯,Perth,np
+805,بنوم بنه,金边,Phnom Penh,np
+806,بوخارست,布加勒斯特,Bucharest,np
+807,مكة المكرمة,麦加,Mecca,np
+808,هامبورغ,汉堡,Hamburg,np
+809,فيينا,维也纳,Vienna,np
+810,مدينة باناما,巴拿马城,Panama City,np
+811,وارسو,华沙,Warsaw,np
+812,بودابست,布达佩斯,Budapest,np
+813,ليون,里昂,Lyon,np
+814,مرسيليا,马赛,Marseille,np
+815,اسلام اباد,伊斯兰堡,Islamabad,np
+816,ستوكهولم,斯德哥尔摩,Stockholm,np
+817,ميونيخ,慕尼黑,Munich,np
+818,الشارقة,沙迦,Sharjah,np
+819,كالجاري,卡尔加里,Calgary,np
+820,أوكلاند,奥克兰,Auckland,np
+821,أوتاوا,渥太华,Ottawa,np
+822,ادمونتون,埃德蒙顿,Edmonton,np
+823,براغ,布拉格,Prague,np
+824,بورتو,波尔图,Porto,np
+825,كاتماندو,加德满都,Kathmandu,np
+826,كوبنهاغن,哥本哈根,Copenhagen,np
+827,أديليد,阿德莱德,Adelaide,np
+828,زيوريخ,苏黎世,Zurich,np
+829,أبو ظبي,阿布扎比,Abu Dhabi,np
+830,غلاسكو,格拉斯哥,Glasgow,np
+831,صوفيا,苏菲亚,Sofia,np
+832,دبلن,都柏林,Dublin,np
+833,هلسنكي,赫尔辛基,Helsinki,np
+834,بلغراد,贝尔格莱德,Belgrade,np
+835,مدينة هو تشي مينه,胡志明市,Ho Chi Minh City,np
+836,طرابلس,硅藻土,Tripoli,np
+837,أمستردام,阿姆斯特丹,Amsterdam,np
+838,كولونيا,科隆,Cologne,np
+839,أوسلو,奥斯陆,Oslo,np
+840,روتردام,鹿特丹,Rotterdam,np
+841,لطيف,尼斯,Nice,np
+842,تولوز,图卢兹,Toulouse,np
+843,بوردو,波尔多,Bordeaux,np
+844,ساوثامبتون,南安普敦,Southampton,np
+845,ليفربول,利物浦,Liverpool,np
+846,بيت المقدس,耶路撒冷,Jerusalem,np
+847,فالنسيا,瓦伦西亚,Valencia,np
+848,برمنغهام,伯明翰,Birmingham,np
+849,وينيبيغ,温尼伯,Winnipeg,np
+850,نوتنغهام,诺丁汉,Nottingham,np
+851,هاميلتون,汉密尔顿,Hamilton,np
+852,فرانكفورت,法兰克福,Frankfurt,np
+853,سالونيك,塞萨洛尼基,Thessaloniki,np
+854,شيفيلد,谢菲尔德,Sheffield,np
+855,بالي,巴厘岛,Bali,np
+856,فلورنسا,佛罗伦萨,Florence,np
+857,زغرب,萨格勒布,Zagreb,np
+858,غزة,加沙,Gaza,np
+859,بريستول,布里斯托尔,Bristol,np
+860,والذهب الساحل,在黄金海岸,The Gold Coast,np
+861,شتوتغارت,斯图加特,Stuttgart,np
+862,مدينة البندقية,威尼斯,Venice,np
+863,نانت,南特,Nantes,np
+864,بلفاست,贝尔法斯特,Belfast,np
+865,دوسلدورف,杜塞尔多夫,Dusseldorf,np
+866,كينغستون,金士顿,Kingston,np
+867,ريغا,里加,Riga,np
+868,ليستر,莱斯特,Leicester,np
+869,كيتشنر,基奇纳,Kitchener,np
+870,برايتون,布莱顿,Brighton,np
+871,ادنبره,爱丁堡,Edinburgh,np
+872,كارديف,加的夫,Cardiff,np
+873,كانبيرا,堪培拉,Canberra,np
+874,مونبلييه,蒙彼利埃,Montpellier,np
+875,هاليفاكس,哈利法克斯,Halifax,np
+876,ولينغتون,惠灵顿,Wellington,np
+877,براتيسلافا,布拉迪斯拉发,Bratislava,np
+878,نيوكاسل,新城堡,Newcastle,np
+879,ستوك أون ترينت,特伦特河畔斯托克,Stoke-on-Trent,np
+880,كوفنتري,考文垂,Coventry,np
+881,مرفئ مويسبي,端口莫尔兹比港,Port Moresby,np
+882,فيكتوريا,维多利亚,Victoria,np
+883,كرايستشيرش,克赖斯特彻奇,Christchurch,np
+884,سوانسي,斯旺西,Swansea,np
+885,ويندسور,温莎,Windsor,np
+886,سراييفو,萨拉热窝,Sarajevo,np
+887,هونغ كونغ,香港,Hong Kong,np
+888,ماكاو,澳门,Macau,np
+889,نيويورك,纽约市,New York City,np

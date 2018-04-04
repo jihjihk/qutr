@@ -326,7 +326,7 @@ export default class ChatScreen extends Component<{}>  {
             else {
               unit = qnt + " " + unit;
             }
-            np += unit;
+            np += " " + unit + " ";
           }
 
           else {
