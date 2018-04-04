@@ -1,0 +1,532 @@
+en,ar,pos
+0,صفر,num
+1,واحد,num
+2,إثنان,num
+3,ثلاثة,num
+4,أربعة,num
+5,خمسة,num
+6,ستة,num
+7,سبعة,num
+8,ثمانية,num
+9,تسعة,num
+10,عشرة,num
+11,إحدى عشر,num
+12,إثنا عشر,num
+13,ثلاثة عشر,num
+14,أربعة عشر,num
+15,خمسة عشر,num
+16,ستة عشر,num
+17,سبعة عشر,num
+18,ثمانية عشر,num
+19,تسعة عشر,num
+20,عشرون,num
+21,واحد وعشرون,num
+22,إثنان وعشرون,num
+23,ثلاثة وعشرون,num
+30,ثلاثون,num
+40,أربعون,num
+50,خمسون,num
+60,ستون,num
+70,سبعون,num
+80,ثمانون,num
+90,تسعون,num
+100,مائة,num
+101,مائة و واحد,num
+110,مائة وعشرة,num
+111,مائة و أحد عشر,num
+200,مئتين,num
+300,ثلاث مائة,num
+500,خمس مائة,num
+1000,ألف,num
+2000,ألفين,num
+"10,000",عشرة آلاف,num
+"10,001",عشرة آلاف و واحد,num
+"10,002",عشرة آلاف وإثنان,num
+"20,000",عشرون الف,num
+"50,000",خمسون ألف,num
+"100,000",مائة ألف,num
+"200,000",مئتي ألف,num
+"1,000,000",مليون,num
+"10,000,000",عشرة ملايين,num
+"100,000,000",مائة مليون,num
+"1,000,000,000",مليار‎,num
+"1,000,000,000,000",تريليون,num
+"* and * , please.",من فضلك أعطني * و *.,vp
+* day(s),‏* أيام,prt
+* hour(s),‏* ساعات,prt
+* is not working.,* لا يعمل,vp
+* minute(s),‏* دقائق,prt
+* month(s),*  أشهر,prt
+* week(s),‏* أسبوع,prt
+* year(s),‏* سنوات,prt
+a beer,البيرة,np
+a bottle,قارورة,np
+a glass of wine,كأس من النبيذ,np
+a pint,نصف لتر,np
+a table for * people,طاولة ل * شخص,np
+abdomen,بطن,np
+after,بعد,adv
+After *., بعد *.,vp
+afternoon,بعد الظهر,np
+airconditioner,مكيف هواء,np
+airplane,طائرة,np
+airport,مطار,np
+Am I under arrest?,هل أنا معتقل؟,sent
+April,نيسان‎\ أبريل,np
+Around the corner.,قريب من هنا,sent
+August,آب‎\ أغسطس,np
+avenue,سبيل,np
+back,ظهر,np
+bars,مشرب,np
+bathroom,‏حمام,np
+batteries,بطارية,np
+beans,فول,np
+bedsheet,ملاءة سرير,np
+bedsheets,ملاءات السرير,np
+beef,لحم بقري,np
+beer,بيرة,np
+before,قبل,adv
+Before *.,قبل *.,vp
+bigger,أكبر,adj
+black,أسود,adj
+black pepper,فلفل أسود,np
+black tea,شاي أسود,np
+blue,أزرق,adj
+body,الجسم,np
+boiled water,ماء مغلي,np
+bottled water,مياه معبأة,np
+bread,خبز,np
+breakfast,وجبة افطار,np
+brown,بني,adj
+bus station,محطة حافلات,np
+butter,زبدة,np
+buttocks,مؤخرة,np
+cafe,مقهى,np
+Can I get a bag?,هل استطيع الحصول على حقيبة؟,sent
+Can I get insurance?,هل أستطيع الحصول على تأمين؟,sent
+Can I just pay a fine now?,هل استطيع دفع غرامة أدفع غرامة الآن؟,sent
+"Can I look at the menu, please?",قائمة الطعام، من فضلك؟,sent
+Can I make a telephone call?,هل يمكنني الحصول على مكالمة هاتفية؟,sent
+Can I make an appointment?,هل يمكنني حجز موعد؟,sent
+Can I make international calls here?,هل استطيع القيام بمكالمة دولية من هنا؟,sent
+Can I print here?,هل يمكنني الطبع من هنا؟,sent
+Can I use your cell phone?,أيمكنني إستخدام هاتفك؟,sent
+Can I use your phone?,أيمكنني استخدام هاتفك النقال؟,sent
+Can you change money for me?,هل يمكنك تحويل مال لي؟ ,sent
+Can you get a doctor?,هل يمكنك أن تحضر طبيب؟,sent
+Can you show me on the map?,هل يمكنك أن تريني أين هو على الخريطة؟,sent
+Can you speak *?,عل يمكنك تحدث ال*؟,vp
+Can you suggest another hotel?,هل يمكنك اقتراح فندق آخر؟,sent
+Can you tell me where * is?,اين *؟,vp
+Can you wake me at *?,هل تستطيع إيقاظي الساعة *؟,vp
+Can you write the name and address down?,هل يمكنك أن تكتب لي الإسم و العنوان؟,sent
+car,سيارة,np
+carbonated water,مياه غازية,np
+cash,أوراق مالية,np
+cheap,رخيص,adj
+cheaper,أرخص,adj
+check,شيك,np
+cheese,جبنة,np
+chest,صدر,np
+chicken,دجاج‎\ فراخ,np
+cleaner,أنظف,np
+closed,مغلق,adj
+club soda,صودا,np
+coffee,قهوة,np
+Coke,الكولا,np
+cold medicine,دواء للزكام,np
+cough,سعال,np
+Could you please *?,لو سمحتو هل يمكنك أن *؟,vp
+Could you repeat that?,هل يمكنك أن تكرر هذا؟,sent
+credit card,بطاقة ائتمان,np
+December,كانون الأول‎/ ديسمبر,np
+deposit,وديعة,np
+diarrhoea,إسهال,np
+dictionary,قاموس,np
+diesel,ديزل‎ سولار‎ جاز,np
+Do you accept * currency?,هل تقبل العملة *؟,vp
+Do you accept credit cards?,هل تقبل بطاقات الائتمان؟,sent
+Do you accept US dollars?,هل تقبل الدولار الأمريكي؟,sent
+Do you go to *?,هل تذهب إلى *؟,vp
+Do you have a safe?,هل لديك خزنة؟,sent
+Do you have an English menu?,هل لديك قائمة بالإنجليزية؟,sent
+Do you have any rooms available?,هل لديك أي غرف متاحة؟,sent
+Do you have any snacks?,هل لديك أي وجبات خفيفة؟,sent
+Do you have insurance?,هل لديك تأمين؟,sent
+Do you have it in another color?,هل لديك لون آخر؟,sent
+Do you have this in my size?,هل لديكم من هذه بمقاسي؟,sent
+Do you know *?,هل تعلم *؟,vp
+Do you serve alcohol?,هل تقدمون أي خمور؟,sent
+Do you ship overseas?,هل هن,sent
+Do you speak English?,هل هناك شحن دولى؟,sent
+Do you take * currency?,هل تقبلون عملة *؟,vp
+Do you understand?,مفهوم؟,sent
+Does that include breakfast?,هل هذا يشمل وجبة الافطار؟,sent
+Does the room come with *?,هل تحتوي هذه الغرفة على *؟,vp
+Does this bus stop in *?,هل تتوقف هذه الحافلة في *؟,vp
+Does this train stop in *?,هل يتوقف هذا القطار في *؟,vp
+Don't touch me!,لا تلمسني!,sent
+downtown,وسط البلد,np
+driver's license,رخصة قيادة,np
+dumpling,زلابية,np
+ears,آذان,np
+east,شرق,adj
+eggs,بيض,np
+English books,كتب إنجليزية,np
+English magazines,مجلات انجليزية,np
+English newspaper,جريدة إنجليزية,np
+entrance,دخول,np
+evening,مساء,np
+Excellent!,ممتاز!,sent
+Excuse me. (begging pardon),أعذرني,sent
+Excuse me. (coming through),لو سمحت,sent
+Excuse me. (getting attention),معذرة,sent
+exit,خروج,np
+expensive,غالي,adj
+eyes,عيون,sent
+face,وجه,np
+February,شباط‎ \فبراير,np
+feet,أقدام,np
+fever,حمة,np
+"Fine, thank you.",بخير، شكرا لك.,sent
+fingers,أصابع,np
+first class cabin,مقصورة درجة أولى,np
+fish,سمك,np
+fixed-price meal,وجبة ثابتة السعر,np
+forbidden,ممنوع,adj
+Friday,يوم الجمعة,np
+fried rice,أرز مقلي,np
+from,من,prt
+fruits,فاكهة,np
+gas station,محطة بنزين,np
+glasses,نظارات,np
+go,ذهب,vp
+Go straight.,انطلق الى الأمام.,sent
+gold,ذهب,adj
+Good evening.,مساء الخير.,sent
+Good morning.,صباح الخير.,sent
+Good night.,تصبح على خير,sent
+Goodbye,مع السلامة,sent
+Goodbye (informal),باي باي,sent
+green,أخضر,adj
+green tea,شاي أخضر,np
+grey,رمادي,adj
+hair,شعر,np
+half,نصف,adj
+ham,خنزير,np
+hands,أيادي,np
+he,هو,np
+head,رئس,np
+heater,مدفأة,np
+Hello.,مرحبا.,sent
+Help!,النجدة!,sent
+here,هنا,adv
+Here by yourself?,هل أنت(ي) هنا لوحدك؟,sent
+hotel,فندق,np
+How are you?,كيف حالك,sent
+How do I get to * ?,كيف أصل إلى *؟,vp
+How much does it cost to get to *?,كم سيكلفني الذهاب إلى *؟,vp
+How much is a room for one person per night?,ما سعر الغرفة لفرد واحد؟,sent
+How much is a room for two people per night?,ما سعر الغرفة لفردين؟,sent
+How much is a ticket to *?,ما سعر التذكرة الى *؟,vp
+How much is it per hour?,ما السعر للساعة؟,sent
+How much is it to call to *?,ما سعر المكالمة الى *؟,vp
+How much is it to get in?,ما سعر تذكرة الدخول؟,sent
+How much is this?,بكم هذا؟,sent
+How much?,بكم؟,sent
+How was your meal?,كيف كانت وجبتك؟,sent
+I,انا,np
+I am from *.,أنا من *.,vp
+I am sick.,انا مريض,sent
+I can't afford it.,لا أستطيع تحمل هذا,sent
+I can't speak *.,لا اتكلم *.,vp
+I don't eat *.,لا آكل *.,vp
+I don't have *.,ليس عندي *.,vp
+I don't speak *.,لا أتحدث *.,vp
+I don't understand (something heard).,أنا لا أفهم,sent
+I don't want *.,لا أريد *.,vp
+I don't want it.,أنا لا أريده,sent
+I have *.,لدي *.,vp
+I have arrived.,لقد وصلت.,sent
+I haven't done anything wrong.,ما عملت اشي غلط.,sent
+I lost my *.,فقدت *.,vp
+I lost my bag.,فقدت حقيبتي.,sent
+I need *.,احتاج *.,vp
+I need a doctor.,أحتاج طبيب.,sent
+I need to see your passport.,أ حتاج أن أرى جواز سفرك,sent
+I need to talk to a lawyer.,أريد التحدث مع محامي,sent
+I need your help.,أحتاج مساعدة لو سمحت.,sent
+I only eat Halal food.,أنا آكل الطعام الحلال فقط.,sent
+I want *.,أريد *.,vp
+I want a dish with *.,أريد أن آكل طبق مع *.,vp
+I want to check out.,أريد أن أدفع لاغادر.,sent
+I want to rent a car.,أريد ايجار سيارة.,sent
+I want to talk to the * embassy.,أود بالتحدث مع سّفارة *.,vp
+I will stay for * night(s).,سأقيم * ليلى,vp
+I work at the *.,أعمل في *.,vp
+I'd like to rent a car.,أريد ايجار سيارة.,sent
+I'll call the police.,سأتصل بالشرطة‏ ‎.,sent
+I'm a vegetarian.,أنا نباتي.,sent
+I'm finished.,لقد انتهيت.,sent
+I'm looking for *.,أبحث عن *.,vp
+I'm lost.,أنا تائه.,sent
+I'm not feeling well.,أنا لست على ما يرام.,sent
+I'm not interested.,أنا لست مهتم.,sent
+I'm sick.,انا مريض.,sent
+I'm sorry.,أنا آسف.,sent
+I'm with *.,أنا مع *.,vp
+I've been injured.,إنني مصاب.,sent
+I've lost *.,أنا فقدت *.,vp
+intersection,تقاطع,np
+Is breakfast included?,هل يتضمن ذلك الإفطار؟,sent
+Is insurance included?,هل هذا شامل التأمين؟,sent
+Is it open on *?,هل هو مفتوح *؟,vp
+Is there * around here?,هل هناك * قريب؟,vp
+Is there * you recommend?,هل هناك * تنصحني به؟,vp
+Is there a group discount?,هل هناك خصم للمجموعات؟,sent
+Is there a local specialty?,هل هناك تخصص محلي؟,sent
+Is there a student discount?,هل هناك خصم للطلاب؟,sent
+Is there anywhere I can leave luggage?,هل هناك مكان أترك فيه أغراضي؟,sent
+Is there someone here who speaks English?,هل هناك أحد يتحدث الانجليزية؟,sent
+Is there table service?,هل هناك خدمة طاولات؟,sent
+Is this seat free?,هل هذا المقعد خالى؟,sent
+It hurts here.,أشعر بالألم هنا.,sent
+It is nine in the morning.,هي التاسعة صباحاً,sent
+It was a misunderstanding.,كان سوء تفاهم,sent
+It was delicious.,كان لذيذ‏ ‎,sent
+It's an emergency.,إنها حالة طارئة.,sent
+"It's okay. (polite response to ""I'm sorry"")",لا بأس,sent
+It's uncomfortable.,إنه غير مريح.,sent
+itchy,يحكك,adj
+January,كانون الثاني‎/ يناير,np
+juice,عصير,np
+July,تموز/‎ يوليو,np
+June,حزيران/‎ يونيو,np
+last week,الأسبوع الماضي,np
+later,لاحقاً,adv
+Leave me alone.,اتركني وحدي.,sent
+left,يسار,adv
+legs,أرجل,np
+less,اقل,adj
+less than,أقل من,adj
+lockers,خزانات,np
+Look out!,انتبه!,sent
+lunch,غداء,np
+macaroni,معكرونة,np
+March,آذار‎ / مارس,np
+May,أيار‎/ مايو,np
+May I have a bottle of *?,هل لي بالحصول على قارورة *؟,vp
+May I have a cup of *?,هل لي بالحصول على كوب من *؟,vp
+May I have a glass of *?,هل لي بالحصول على كأس من *؟,vp
+May I have some *?,هل لي بالحصول على القليل من *؟,vp
+"May I please ask, what is your name?",هل لي بالسؤال، ما هو اسمك؟,vp
+May I see the room first?,هل لي برؤية الغرفة أولاً؟,vp
+Me too.,أنا أيضاً,sent
+Medical emergency,طارئ طبي,np
+men,رجال,np
+midnight,منتصف الليل,np
+milk,حليب,np
+Monday,الاثنين,np
+money,مال,np
+more,المزيد/أكثر,adj
+more than,أكثر من,adj
+morning,صباح,np
+mutton,لحم الضأن,np
+My name is * .,أنا اسمي *.,vp
+nails,"أظافر (fingernails), مسامير (hammering nails) ",np
+national ID,الهوية الوطنية,np
+neck,رقبة,np
+newspaper,جرائد,np
+next week,الأسبوع القادم,np
+Nice to meet you.,سعيد بالتعرف عليك,sent
+night,ليلة/ليل,np
+No parking.,ممنوع الوقوف,sent
+"No, thank you.",لا، شكراً.,sent
+No.,لا.,sent
+noodles,الشعيرية,np
+noon,الظهيرة,np
+north,شمال,adv
+nose,أنف,np
+Not too far.,ليس بعيد جداً,sent
+November,تشرين الثاني/‎ نوفمبر,np
+now,الآن,adv
+Number *.,رقم *,vp
+October,تشرن الأول‎ /أكتوبر,np
+"OK, I'll take it.",حسناً، سآخذه.,sent
+Okay.,حسناًً,sent
+"One more, please.",واحد إضافي، من فضلك.,sent
+one o'clock AM,الساعة الواحدة صباحاً,np
+one o'clock PM,الساعة الواحدة مساءً,np
+"One ticket to *, please.",تذكرة واحدة إلى *.,vp
+one way,اتجاه واحد,adv
+open,مفتوح,adj
+orange,"برتقالي (the color or the adjective), برتقال (the fruit)",np
+orange juice,عصير برتقال,np
+pain killer,مسكن ألم,sent
+painful,مؤلم,adj
+Pardon me?,عذراً/معذرة؟,sent
+passport,جواز سفر,np
+Past the *.,بعد ال*. / بعد أن تتخطى ال*.,vp
+pay,ادفع,vp
+pen,قلم حبر,np
+pencil,قلم رصاص,np
+petrol,بترول,np
+Please clean my room.,من فضلك نظف غرفتي.,sent
+Please clear the plates.,من فضلك نظف الصحون.,sent
+Please come with me.,أرجوك، تعال/تعالي معي.,sent
+Please give me *.,من فضلك أعطني *., sent
+Please turn up the AC.,من فضلك شغل المكيف الهوائي., sent
+Please use the meter machine.,من فضلك استعمل آلة السحب ببطاقة الائتمان.,sent
+Please.,من فضلك, part
+Police!,الشرطة!, np
+pork,لحم خنزير,np
+postage stamp,طابع بريدي,np
+postcard,بطاقة بريدية,np
+pull,اسحب,vp
+purple,بنفسجي,adj
+push,ادفع, vp
+quiet,هادئ,adj
+razor,موس حلاقة,np
+red,أحمر,adj
+red wine,نبيذ أحمر,np
+restaurant,مطعم,np
+rice,أرز,np
+right,يمين,part
+road,شارع,np
+rum,شراب مسكر كحولي (رم),np
+runny nose,سيلان الأنف,np
+salad, سلطة,np
+salt,ملح,np
+Saturday,يوم السبت,np
+sausage,سجق/نقاق,np
+scented tea,شاي معطر, np
+second class cabin,مقصورة الدرجة الثانية,np
+See you later.,أراك لاحقاً.,sent
+September,أيلول‎/ سبتمبر,np
+shampoo,شامبو,np
+she,هي,np
+shoulder,كتف,np
+Show me., أرني.,sent
+sites to see,مواقع لترى,np
+slowly,ببطء,adv
+sneeze,عطسة,np
+soap,صابون,np
+"Some more *, pelase.",المزيد من *، من فضلك.,vp
+sore,ملتهب,adj
+soup,حساء,np
+south,جنوب,adv
+speed limit,حد السرعة,np
+stomach medicine,دواء للمعدة,np
+stop (on a street sign),قف,sent
+Stop! Thief!,توقف! لص/سارق‏! ‎,sent
+Stop.,توقف,sent
+straight ahead,إلى الأمام,sent
+street,شارع,np
+sugar,سكر,np
+sunblock lotion,مرهم حماية من حروق الشمس,np
+Sunday,الأحد,np
+supper,العشاء,np
+"Take me there, please.",خذني إلى هناك من فضلك.,sent
+"Take me to *, please.",خذني إلى *، من فضلك.,vp
+tampon,سدادة قطنية للدورة ,np
+taxi,تاكسي‏/سيارة أجرة,np
+Taxi driver,سائق سيارة أجرة/تاكسي,np
+tea,شاي,np
+telephone, هاتف,np
+Thank you so much.,شكراً جزيلاً,sent
+Thank you.,شكراًً,sent
+That's too expensive.,هذا غال جدا.,sent
+"The check, please.",الفاتورة، من فضلك.,sent
+the day after tomorrow,بعد غد,np
+the day before yesterday,قبل البارحة,np
+there,هناك,adv
+There are * of us.,نحن * أشخاص,vp
+they (f),هن,np
+they (m/mixed),هم,np
+they (two people),هما,np
+This was very impressive!,كان هذا رائعا جدا!,sent
+this week,هذا الأسبوع,np
+Three-thirty PM.,الثالثة والنص مساءً,vp
+throat,حلق,np
+Thursday,يوم الخميس,np
+To *.,إلى *,vp
+toast,خبز التوست/المحمص,np
+today, اليوم,np
+toes,أصابع القدم,np
+toilet,حمام,np
+tomorrow,غداً,np
+tonic water,مياه مقوية,np
+toothbrush,فرشاة أسنان,np
+toothpaste,معجون أسنان,np
+Towards the *.,نحو ال*.,vp
+train station,محطة القطار,np
+Tuesday,يوم الثلاثاء,np
+Turn left.,در إلى يسار.,sent
+Turn right.,در إلى يمين.,sent
+TV,‏تلفاز,np
+U-turn.,منعطف.,sent
+umbrella,مظلة,np
+vegetables,خضروات,np
+vodka,شراب فودكا,np
+waist, خصر,np
+Wait or stay?,انتظر أو ابقى؟,sent
+Wait.,انتظر.,sent
+Watch for the *.,احذر ال*.,vp
+water,ماء,np
+we,نحن,np
+Wednesday,يوم الأربعاء,np
+west,غرب,adv
+What is the exchange rate?,ما هو سعر العملة؟,sent
+What is this called?,ماذا يدعى هذا؟,sent
+What is this?,ما هذا؟,sent
+What is your name?,ما اسمك؟,sent
+What is your special dish?,ما هو طبقك المميز؟,sent
+What time is breakfast/supper?,ما هو توقيت الفطور/العشاء؟,sent
+What time is it?,كم الساعة؟,sent
+What time will this bus arrive?,متى ستصل هذه الحافلة؟,vp
+What time will this train arrive?,متى سيصل هذا القطار؟,sent
+What?,ماذا؟,sent
+When do I have to check out?,متى يجب علي تسجيل الخروج؟,sent
+When does the bus for * leave?,متى تنطلق الحافلة المتجه إلى*؟,vp
+When does the train for * leave?,متى ينطلق القطار المتجه إلى*؟,vp
+When is closing time?,ما هو توقيت الإغلاق؟,sent
+When is opening time?,ما هو توقيت الافتتاح؟,sent
+When?,متى؟,sent
+Where are you from?,من أين أنت؟,sent
+Where are you taking me?,إلى أين أنت آخذني؟,sent
+Where can I find *?,أين يمكنني أن أجد؟,vp
+Where can I get a traveler's check changed?,أين يمكنني أن أصرّف شيك سياحي؟,sent
+Where can I get money changed?,أين يمكنني أن أصرّف بعض المال؟,sent
+Where do we get tickets?,أين يمكننا أن نحصل على تذاكر؟,sent
+Where does it hurt?,أين يؤلمك؟,sent
+Where does this bus go?,أين تذهب هذه الحافلة؟,sent
+Where does this train go?,أين يذهب هذا القطار؟,sent
+Where is an ATM?,أين توجد آلة الصرف الآلي؟,sent
+Where is it on the map?,أين تقع على الخريطة؟,sent
+Where is the *?,أين ال*؟,vp
+Where is the bathroom?,أين الحمام؟,sent
+Where is the bus to *?,أين الحافلة المتجهة إلى *؟,vp
+Where is the toilet?,أين الحمام؟,sent
+Where is the train to *?,أن القطار المتجه إلى *؟,vp
+Where?,اين؟,sent
+Which direction?,بأي اتجاه؟,sent
+Which station are we at?,نحن في أي محطة؟,sent
+whiskey,شراب الويسكي,np
+white,أبيض,adj
+white wine,نبيذ أبيض,np
+Who?,من؟,sent
+Why?,لماذا؟,sent
+women,نساء,np
+work,عمل,np
+wrist,معصم,np
+writing paper,ورق للكتابة,np
+yellow,أصفر,adj
+"Yes, please.",نعم من فضلك,sent
+Yes.,نعم.,sent
+yesterday, البارحة,np
+yield,ينتج,vp
+you,أنت,np
+you (p), أنتم,np
+You're cheating me.,"أنت تغشني (s), أنتما تغشانني (two), أنتم تغشونني (more than two)",sent
+You're welcome.,على الرحب والسعة,sent
+youth hostel,بيوت الشباب,np

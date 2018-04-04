@@ -7,6 +7,7 @@ const SECONDARY_DARK = '#eeeeee';
 const BLACK = 'black';
 const WHITE = 'white';
 const GREEN = 'green';
+const SUGGESTIONBAR_HEIGHT = 13;
 
 export { PRIMARY, 
 		 PRIMARY_LIGHT,
@@ -16,5 +17,6 @@ export { PRIMARY,
 		 SECONDARY_DARK,
 		 WHITE, 
 		 BLACK,		  
-		 GREEN		 
+		 GREEN,
+		 SUGGESTIONBAR_HEIGHT		 
 		};

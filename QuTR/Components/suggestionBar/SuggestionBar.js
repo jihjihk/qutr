@@ -39,7 +39,7 @@ export default class SuggestionBar extends Component {
     if (suggestions.length>0) {
 
       var phrases=[], IDs=[];
-      suggestions.forEach(function(child) {
+      suggestions.forEach((child) => {
         phrases.push(child.phrase);
         IDs.push(child.ID);
       })
@@ -66,6 +66,11 @@ export default class SuggestionBar extends Component {
     return {width: windowWidth/widthDivisor};
   }
 
+  scrollToBeginning() {
+
+    this.refs.sw.scrollTo({x: 0, y: 0, animated: false});
+  }
+
   render = () => {
 
     var suggestions = [];
@@ -83,7 +88,8 @@ export default class SuggestionBar extends Component {
           <ScrollView contentContainerStyle={[this.state.viewStyle, this.props.style]} 
                       horizontal 
                       showsHorizontalScrollIndicator = {true}
-                      keyboardShouldPersistTaps = 'always'>            
+                      keyboardShouldPersistTaps = 'always'
+                      ref='sw'>            
             {suggestions}
           </ScrollView> 
         </View>

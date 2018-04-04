@@ -1,0 +1,1006 @@
+Morning. May I help you? 早上好，请问有什么可以帮你的吗? 
+I would like to make flight reservations. 我想预订机票。
+I want to book one ticket for the next flight to London. 我想预订一张飞往伦敦的下一班机票。
+Would you please make my reservation to Chicago for tomorrow? 请帮我预订明天去芝加哥的机票好吗?
+Give me a one-way ticket to L.A. 给我一张单程到洛杉矶的票。
+Can I have a second-class one-way ticket to Chicago, please? 请给我一张去芝加哥的单程二等票好吗?
+When are you leaving? 您何时出发? 
+What date, please? 请问订哪一天? 
+I'd like to get three seats on a flight to Paris on May 1. 我想订3张5月1日到巴黎的机票。
+Do you have any tickets available for that date? 你们有那天的票吗?
+I'd like to take the first available flight. 我想乘第一班飞机。
+What time does the plane take off? 飞机何时起飞呢?
+Let me check the availability. 让我看看还有票吗。
+Hold on a second please, Let me see... 请稍等，让我看一下...
+Just a minute and I'll see if there are any flights. 请等一下，让我看看是否有航班。
+Just a second and I will check the schedule. 稍等一会儿，我查一下时间表。
+Just a monent,please. Let me check for you. 请稍等，我来为您查一下。 
+Yes, there is. 有的。
+American Airlines has a flight leaving at 9:25 a. m. 美国航空公司有一架班机，在早上9点25分起飞。
+We have two flights at 2:00 p.m. and 5:00 p.m. 我们有两次航班，下午2:00和5:00的。
+Both flights have seats available. 两次航班都有座。
+There are enough seats. 还有很多座位。
+Is it a direct flight? 是直飞航班吗? 
+Are they non-stop flights? 它们是直飞班机吗?
+Yes. Direct to Paris. 是的，这是直飞巴黎的飞机。
+We have a nonstop flight leaving at half past ten. 10点半我们有一个直达航班。
+There are no direct flights. 没有直达的航班。
+That is not a direct flight. 那不是直飞的航班。
+You need to transfer at Tokyo. 你需要在东京转机。
+Which would you prefer, first class or economy? 你喜欢哪种，头等舱还是经济舱? 
+What kind of tickets do you want, first class or economy? 你要什么类型的票，头等舱还是经济舱? 
+Do you want to fly first or economy class? 您要头等舱还是经济舱?
+What class? 要什么舱位? 
+Business class. 公务舱。
+Economy, please. 请买经济舱。
+I'll need an economy ticket with an open return. 我要经济舱，回程时间不定的来回票。 
+Only first class tickets available, sir. 现在只有头等舱了，先生。
+What's the fare for an economy class ticket? 经济舱的票价是多少? 
+What's the fare to New York for the economy class? 去纽约的经济舱机票多少钱?
+How much is the fare? 票价多少钱?
+How much is the ticket? 这票多少钱? 
+What is the fare, please? 请问票价是多少? 
+Will this be a one-way trip? 您要单程票吗?
+Round trip or one way? 往返还是单程?
+How much is the round trip? 往返票多少钱?
+Do you have any direct flights coming back? 回程时你们有直飞的班机吗?
+One way. 单程。
+Round trip back to Chicago on Janunary 3rd. 我要往返票，1月3日飞回芝加哥。
+First class fare of a one-way ticket from Beijing to Shanghai is 1,700 yuan. 从北京至上海的单程机票，头等舱是1700元。 
+1810 yuan. 1810元。
+Are there any discount tickets for me? 我买票有折扣吗?
+Will you give me some discount on tickets? 机票能给我折扣吗? 
+No. 没有
+OK. I will take it. 好的，就这班。
+I guess that's OK. 我想就那个吧。 
+What kind of seats do you want? 你需要什么样的座位? 
+Would you prefer a window seat or an aisle seat? 你想要一个靠窗的位子，还是靠过道的? 
+Could you give me a window seat? 可以给我靠窗的座位吗? 
+I'd like to have a seat by the window. 我想要一个靠窗的座位。 
+I'm sorry, but there are no window seats available. 很抱谦，没有靠窗的座位了。
+Do you have any other seats open where we can sit together? 还有没有其他连在一起的座位?
+I'd like an aisle seat. 我想要一个走廊的座位。 
+An aisle seat, please. 请给我一个靠走道的座位。 
+Aisle, please. 靠过道的。
+Would you please tell me your name, telephone and ID number? 能告诉我你的名字、手机号和身份证号码吗?
+Sure! I'm Liuxia. My phone number is 13645361268, and ID number is 110103199102140922. 当然，我叫刘霞，手机号是13645361268，身份证号是110103199102140922。
+Well, I've got them. 好的，我记下了。
+Now you have been booked. 现在您已完成订位。
+Your ticket is in order now. 您的机票现在完全办妥了。
+Your flight number is BT3678. 您的航班号是BT3678。
+Your seat is confirmed on flight BT3678, leaving at 16:15. 您的机位以确定，航班号为BT3678，16：15起飞。
+When shall I come to pick up the ticket? 我什么时候来取票? 
+Come to pay the fare and fetch your ticket two days before departure, please. 请于起飞前两天来付款取票。
+Where do I pick up the ticket? 我去什么地方拿机票? 
+What time do I have to be at the airport? 我什么时候到机场? 
+When am I supposed to check in? 我应该什么时候检票呢? 
+What time should I check in? 我应该什么时间办理登机手续呢? 
+You have to be there two hours before departure time. 你要在飞机起飞前两个小时到达那里。
+Please check in at the airport two hours before departure. 请于起飞前2小时到机场办理登机手续。
+Try to be there by 14:00, and the airport will be crowed. 尽量14:00到那吧，机场人会很多的。
+Please be there fourteen o'clock at the latest. 最晚请在14:00到那里。 
+You'll have to get there by 14:01 at the latest. The check-in is half an hour earlier than departure. 最晚14:01到，因为机场提前半小时检票。
+You have to be there half an hour before departure time. 你应该在飞机起飞之前半个小时到那。
+I need to change my flight date. 我需要更改航班日期。
+Can you change the reservation, please? 我能更改一下订票的班机吗?
+Sure. 当然可以。
+May I have your name? 请问您的姓名? 
+I'd like to cancel my reservation for the flight on September 16, and book one on September 19 instead, please. 我想把9月16日预订的班机取消，改订9月19日的班机。
+OK. wait a moment, please. Sorry, that's all sold out. 好，请稍等。对不起，19号的都卖完了。
+What about September 20? 那9月20号的呢?
+Let me see. OK, there is only one ticket left, first class and it is 2,700 yuan. 让我看看，20号就剩一张了，头等舱2700元人民币。
+Do you have any lower fare? 有比较便宜的机票吗?
+Yes, for September 21, 1,800 yuan, OK? 有，21号的，1800元，可以吗?
+All right. 好的。
+The balance of the fare is 700 yuan, you have to pay it by yourself. 票价差额为700元，需要你自理。 
+Where is the check-in counter for China Airlines? 请问中国国际航空公司办理登机手续的柜台在哪里?
+May I check in here for flight MU 562 to Tokyo? 这里是去东京的MU562航班登机手续办理处吗?
+Is this the right counter to check in at? 是在这儿检票吗?
+Please check-in at zone R. 请到Ｒ区办理登机手续。
+Please follow the signs for zone R to check in. 请沿着标志引导到Ｒ区办理登机手续。
+You may check in at the self-service kiosk area in zones G & H. 你可以在G和H区自助服务亭办理登机手续。
+Check in area. 办理登机区。
+Check in zone. 办理登机区。
+Check-in all destinations. 办理飞往世界各地登机手续。
+What time do you start check-in？你们何时开始办理登机手续？
+When can I start to check in? 我什么时候开始办理登机手续? 
+Have your ticket and passport ready for the check-in agent. 请将机票和护照准备好办理登机手续。
+Please queue for flights to European destinations. 请排队办理前往欧洲各地的登机手续。
+I'd like to check in. 我要办理登记手续。
+Would you please help me to get my boarding pass? 可以帮我换登机牌吗? 
+May I see your passport, please? 可以看看你的护照吗? 
+May I have your passport please? 可以给我您的护照吗。
+One economy class seat, is that right？一个经济舱座位，对吗？
+How many pieces of luggage do you have? 您有几件行李? 
+You have a lot of baggage. 您有好多行李。
+Do you have any bages to check? 你有什么行李要托运吗? 
+How many bags do you want to check in? 您要托运几个包裹? 
+Just this one. 就这一个。
+Please put it here. 请把它放在这里。
+Please put your baggage on the scale. 请把您的行李放在磅秤上。
+It's 28 kilos. 28公斤。 
+I'm afraid it's overweight. 恐怕超重了。
+Your baggage is overweight. 你的行李超重了。
+What's the baggage allowance? 行李限重是多少? 
+You can either take out something or pay the excess baggage charge. 您可以把一些东西拿出来，或者付行李超重费。
+I would rather pay. 我付钱好了。
+Here's your ticket, your boarding pass and the tag of your baggage. 这是您的机票、登机牌和行李签。
+Here's your ticket, boarding pass, passport and baggage claim tag. 这是您的机票，登机证，护照和行李提领证。
+Here is your boarding pass. 这是您的登机牌。
+The boarding time is 10:00. 登机时间是10点。
+Boarding time is 10:20 a.m. 登机时间是上午10点20分。
+Where do I board the plane? 我在哪儿登机? 
+What's the gate number? 在几号门? 
+The gate number is 9. 登机门是9号。
+You'll be boarding at Gate 9. 请将在9号登机门登机。
+At gate 9, go through the security check and turn left, take the moving staircase at the end of the hall, then you will find it. 9号登机口，在通过安检后左转，走到大厅的尽头乘电梯能到。 
+Is there anything else to do before flight time? 在起飞前还有其他手续要办吗? 
+No, Miss. Just show your ticket to the boarding officer as you get on the plane. 没有，小姐。您登机时只要向工作人员出示机票就可以了。
+The rest is our job. Have a good trip. 余下的是我们的事，祝您旅途愉快。
+Airport security. 机场安检。
+Security check (in). 安检。
+Security Inspection. 安检。
+All bags-packages and persons are subject to search. 所有行李包裹以及个人一律接受安检。
+Please have your luggage checked. 请自觉接受行包安检。
+Security screening requirements. 安检要求。
+Quantity allowed to take. 限带物品数量。
+Regulations on restriction of liquids. 限带液体物品的规定。
+Maximum storage. 最高限重。
+Go this way, please. 请这边走。
+Queue here. 在此排队。
+Please put all carry-on luggage in a basket and then place it on the conveyor. 请把所有的随身行李放在一个筐里，然后把筐放在传送带上。
+Put your carry-on luggage on the belt, please. 请把你的手提行李放在传送带上。
+Will you please put your suitcase and that box on the belt? 请把你的手提箱和那个盒子放在传送带上好吗? 
+Please take your computer out and put it in the basket. 请把您的电脑从包里取出放入筐里。
+Laptop computers must be removed from carry-on and placed on X-ray. 笔记本电脑从随身行李取出接受X光安检。
+All portable electronic devices, keys, coins and other metal objects should be placed on X-ray belt in separate container. 便携电器、钥匙、硬币、和其他金属物品置放单独盒内后，放X光安检传送带上。
+Now put everything from your pockets in this tray and come through the detector. 现在请把口袋里的东西掏出来放在这里，从检测器走过。
+Please put all your metallic objects such as coin,cellphone,chewing gum,cigarettes,and anything with Aluminum foil into the basket. 请把您随身携带的所有金属物品，如硬币、手机、口香糖、香烟、以 及带锡纸的物品等放在篮子里。
+Anything else in your pocket? 口袋里还有其它物品吗？
+Take off your coat and shoes and put then in the box. 脱掉您的外套和鞋子，把它们放进盒子里。
+All the leaving passengers must go through this gate. 所有旅客都必须从这个检查口通过。
+Go through the gate, please. 请通过安全门。
+Walk through the security gate, please. 请走过这个安检门。
+Please pass through the detector one by one. 请一个一个通过探测门。
+Stay close. 跟紧。
+Please come over for inspection. 请过来接受检查。
+Please open your bag. We'd like to have a look. 请把你的包打开，我们要检查一下。
+Just make sure you don't have any liquid with you. 我只是要确定你没有携带液体。
+And would you mind opening your lap-top? 您介意打开您的手提电脑吗? 
+No, not at all. there you go. 没关系，给你。
+Please take off your shoes. 请脱掉您的鞋子。
+Please raise your arms. 请您抬起双臂。
+Turn around please. 请转身。
+Should I take off my jacket too? 我还要脱掉夹克吗?
+Please unbutton your coat. 请把您的衣扣打开。
+Take off your belt, please. 请解下您的皮带。
+We'll check you by hand, what do you think? 我们用手检，你看如何?
+You can't have any liquid with you. 您不能携带任何液体。 
+It is a prohibited item. 这是违禁品。
+These items are forbidden by law. 这些东西是违禁品。
+You can't take it with you into the aircraft. 您不能把它带上飞机。
+Flammable items cannot be taken with you into the aircraft. 易燃品不能随身带上飞机。
+We will have to be confiscated. 我们必须没收。
+Here is your receipt. 这是给您的没收单据。
+We could check it in for you ,or you could have it deposited temporarily at our place for up to one month. 您可以办理托运或在我们这儿办理暂存，我们可以替您保留一个月。
+If you can't come back within a month, we won't keep it for you. 如果一个月之内，您不来领的话，我们将不再替您保存。
+This is the government's rule. For your own safety and other passangers, we need your understanding and corporation. 这是政府规定的，为了您和其他旅客的安全，请您理解和配合我们的工作。
+Everything checks out. 一切检查完毕。
+Checking is done, thankyou for your corporation. 检查完毕，谢谢合作。
+You can take your baggage now. 您可以拿行李了。
+You may go now. Please take your things.你可以走了，带好你的东西。
+Take care, not to leave things behind. 当心不要遗忘携带物品。
+We are not responsible for items left over 30 days. 遗忘物品超过30天我们概不负责。
+I wish you a happy joumey. 祝您旅途愉快。 
+Attention, please. Due to weather condition, all flights to Taipei will be delayed. 各位旅客请注意，由于气候不佳，所有飞往台北的班机都将延后起飞。
+The flight is delayed due to bad weather conditions. 由于天气不好航班延误了。
+We truly regret the delay. Thank you for your cooperation and patience. 我们对此深表谦意，并感谢您的配合与耐心。
+We will inform you of the new departure time as soon as possible. Thank you. 我们将尽快通知您的新班机的起飞时候，谢谢。
+I just heard an announcement that my flight has been delayed. 我刚听到广播说我的班机延迟了。
+What's your flight number? 你的班机号是什么? 
+Flight 662-bound for Philadelphia. 662号班机，去费城的。
+The delay is due to mechanical difficulties. 延迟出发是因为机械故障。
+Do you know how long it will be? 你知道会延误多久吗? 
+Probably not more than two hours. 大概不会超过两小时。
+I'm afraid I'll miss my connecting flight. 我会赶不上我下一段的班机了。
+Is there another flight available? 现在还有别的班机可以坐吗?
+Just a minute. Let me check. 请等一下，让我看看。
+Yes, there is a flight leaving for Philadelphia in ten minutes, but it's full. I could put you on standby if you wish. 有，有一架班机十分钟内去费城，可是已经满座了。我可以把您列为候补，如果您愿意的话。
+Please put me on the waiting list. 请把我列为候补。
+Yes, all right. But if I don't get on that flight, would it be possible to change the connecting flight to Miami? 好吧。可是假如我上不了那架飞机，能换一班转飞迈阿密的班机吗? 
+Let's see... there's a United flight leaving Philadelphia at 7:45 this evening. 我看一下...今天晚上七点四十五分联合航空公司有一班机由费城起飞。
+Could you get me on that flight, please? 能设法让我搭上那班飞机吗?
+Yes, I'll check to see if there's any space left. 好，我查查看还有没有剩余位置。 
+Gate. 登机口。
+Departure Gate. 登机口。
+Boarding Gate. 登机口。
+Where is the boarding gate for this flight? 这班飞机的登机口在哪儿?
+Where is the gate? 登机口在哪儿? 
+Go straight following the sign ang you will see the gate. 跟着指示走，你将看到登机口。
+The next flight available for boarding is to Lincoln, Nebraska. 下一班可以登机的航班是飞往内布拉斯加州，林肯市。
+What is the boarding time? 什么时候登机呢? 
+When is the boarding time? 什么时候登机呢? 
+Thai Airlines flight TG 635 to Bangkok is now boarding. 飞往曼谷的泰航TG635班，已经开始登机。
+Passengers in the first class, please proceed to the boarding gate now. 请头等舱的旅客前往登机门。
+Welcome aboard. 欢迎登机。
+Boarding passes and IDs, please! 请出示登记证和身份证!
+Please have your ticket or boarding card ready for inspection. 请把机票和登机牌准备好接受检查。
+Please have photo identification ready for inspection. 请准备好带照片的身份证接受检查。
+Can I see your ticket, please? 我可以看看你的票吗?
+Would you please show me your ticket and boarding pass? 请出示一下你的机票和登机牌好吗? 
+Here are my passport and ticket. 这是我的护照和机票。
+Enjoy your flight! 飞行愉快!
+Have a nice flight! 飞行愉快!
+It's boarding now. 现在正在登机。
+Closing. 登机口关闭。
+Terminal 1 Departure. 1号候机楼。
+Terminal 4 & Cargo. 4号货运航班候机楼。 
+Departures. 出港。
+Domestic Departure. 国内出发。
+Domestic Flights. 国内航班。
+Waiting And Boarding. 候机和登机。
+Waiting Room. 候机厅。
+Waiting Hall. 候机厅。
+Waiting Lounge. 候机厅。
+Departure Lounge. 候机厅。
+Very Important Person(VIP) Suite. 贵宾候机厅。
+Lounge Pavilion. 贵宾候机亭。
+International Passenger Lobby. 国际旅客候机厅。
+Transit Passenger. 过境旅客。
+Area Of Customs Control. 海关监管区。
+Customs Declaration form. 海关申请表。
+Customs Declaration Counter. 海关申报台。
+Security Office. 保安部。
+Luggage Car. 行李车。
+Trolley. 行李手推车。
+Luggage Weighting. 行李称重处。
+Left Baggage. 行李寄存。
+Luggage Storage (Counter). 行李寄存（处）。
+Baggage Rack. 行李架。
+Luggage Inspection. 行李检查台。
+Luggage Delivery. 行李交付。
+Baggage Claim (Area). 行李提取（区）。
+Notice On Luggage Check-In. 行包托运须知。
+Restriction of hand carry-on articles. 随身携带的物品限制规定。
+Goods Prohibited To Be Hand-Carried. 禁止随身携带的物品。
+Goods Prohibited To Exit The Country. 禁止携带出境的物品。
+No Smoking Except In Designated Area. 除指定区域外，禁止吸烟。
+Express Pass. 快速通道。
+Emergency Exit. 紧急出口。
+Exit To All Routes. 各通道出口。
+Airport Bus. 机场巴士。
+Shuttle Bus. 机场巴士。
+Airport Limousine. 机场班车。
+Airport Shuttle. 机场班车。
+Missing People Help Line. 走失求救热线。
+Lost Child Information. 走失儿童认领。
+Pilot's Cockpit. 飞行员驾驶舱。
+Fasten Seat Belt While Seated. 就坐后请系好安全带。
+Earphone Set. 耳机。
+In-Flight. 飞行中。
+Flying Time. 飞行时间。
+Speed Per Hour. 飞行速度。
+Departure Time On Reverse. 返航时间。
+Where is my seat? 我的座位在哪儿?
+Where is seat 10A? 10A号座位在哪儿?
+Can you tell me where seat 10A is? 你能告诉我10A座位在哪儿吗? 
+Can you show me the way to my seat? 你能指给我的座位吗? 
+Can you help me find my seat? 你能帮我找到我的座位吗? 
+Your seat is in the middle of the cabin. 您的座位在客舱的中部。
+It's over there next to the window. 就在那里，靠窗的那一个。
+Is this seat 10A? 这个座位是10A吗? 
+Excuse me. You have my seat. 不好意思，你坐到我的位子了。
+I think this is my seat. 我想这是我的座位。
+This is supposed to be my seat. 这应该是我的座位了。
+Our seats are separated. 我们的座位是分开的。
+Do you have any empty seats together somewhere? 哪有在一起的空座位呢?
+We'd like to sit together. 我们想坐在一起。
+Do you mind changing seats with me? 你介意跟我换下座位吗? 
+Can I change seats with you? 我可以跟你换位子吗?
+Would it be possible for us to trade seats? 我们可以交换座位吗? 
+Can I move to an empty seat over there? 我可以移到那边的空座位吗?
+Can I take one of those empty saets over there? 我可以坐在那边其中的一个空座吗? 
+Could you please help me put my baggage up there? 可以帮我把行李放上去吗?
+The overhead compartments are all full. 上面的行李箱都满了。
+I can't get my bag to fit into the overhead compartment. 我的包放不进上面的行李箱了。
+Where can I put my baggage? 我的行李放哪儿呢? 
+Please put your package under your seat. 请把你的行李放在座位下面。
+You can place the baggage under the seat in front of you. 您可以将行李放在前面的座位下面。
+How do I recline my seat? 我怎么让我的椅子躺下? 
+Could you put your seat up, please? 请竖直椅背好吗?
+Please keep your seat belt fastened. 请系好安全带。
+Put on your seat belt, please. 请系好安全带。
+Can you tell me how to fasten the seat belt? 您能告诉我怎么系安全带吗?
+Can you tell me how to unfasten the seat belt? 您能告诉我安全带怎么解开吗?
+The passengers, in preparation for takeoff, please turn off all electronic devices. 各位乘客请注意，飞机准备起飞了，请关闭所有电子装置。
+What time does the inflight movie start? 机上电影什么时候开始播放?
+Which is the movie channel? 哪个是电影频道?
+This headphone is not working. Can I have a new one? 这副耳机是坏的，能给我一副新的吗?
+Do you have Chinese newspapers? 你们有没有中文报纸?
+How do I turn on the light? 请问怎样开阅读灯?
+Where is the lavatory? 请问洗手间在哪里?
+When do you start to serve dinner? 请问晚餐几点开始供应?
+Please pull your table down. It's supper time. 晚餐时间到了，请放下桌子。
+What would you like to have for dinner? 你晚餐吃什么? 
+What would you suggest? 你推荐什么? 
+You may choose from the fish and beef. 你可以选择鱼或者是牛肉。 
+Which would you like for dinner, beef, chicken or fish? 晚餐想吃牛肉、鸡肉还是鱼? 
+I think beef is better. 我想牛肉比较好。
+I'd like the beef. 我要牛肉。
+Excuse me. What would you like to eat, Chinese food or Western food? 打扰一下，请问您要吃什么，中餐还是西餐? 
+What is the Chinese food? 中餐是什么? 
+Porridge. 白粥。
+And the Western food? 西餐呢?
+Fried eggs with ham. 火腿肠煎蛋。
+Then give me a double Western. 那给我来双份西餐吧。
+May I have a drink, please? 给我一些饮料可以吗?
+Sure. What kind of drink do you want? 当然可以。 你想要什么饮料?
+What would you like to drink? 你喝点什么? 
+A cocktail if possible. 如果可能的话来点鸡尾酒吧。
+I'm afraid we have no cocktails now. 现在恐怕没有鸡尾酒了。
+What about something else, coffee,tea, juice, coke or beer? 其他的怎么样，咖啡、茶、果汁、可乐、或啤酒? 
+Would you like a cup of tea or coffee? 要茶还是咖啡呢? 
+Well, I'll have a cup of coffee. 好吧，我要一杯咖啡。
+I'll have a coke, please. 请给我一杯可乐。
+No,I'd rather have a glass of juice, please. 不，我更想要一杯果汁。
+What kinds do you have? 你们都有什么果汁? 
+We have a selection of orange, apple, grape and lemonade. 我们有橙汁、苹果汁、葡萄汁和柠檬汁。
+I'll have a glass of lemonade. More ice,please. 我要一杯柠檬汁，请多放一点冰块。
+All right. Will there be anything else? 好的，还需要别的吗? 
+Could you give me more paper napkins? 你能多给一些餐巾纸吗? 
+OK. I'll have that right out. 好的，我马上拿给你。
+Enjoy your meal. 祝您用餐愉快。 
+Just let me know if you need anything else. 如果你需要其他什么东西，就告诉我。 
+Press the call button if you need any more help. 如果还有其他需求，可以按呼叫按钮通知我们。
+One extra pillow, please. 请再给我一个枕头。
+I feel a little bit cold. 我觉得有点冷。
+Can I have another blank? 我能再要条毯子吗? 
+Could you give me one more blanket? 能再给我一条毯子吗? 
+All right. 好的。
+You can also turn down the air-conditioner. 你还可以调小空调。
+Ladies and gentlemen, we are approaching an area of turbulence. 各位旅客请注意，本班机即将行经乱流区。
+For your own safety, please go back to your seat and fasten the seat belts. Thank you. 请您回到您的座位，并系好安全带，以求安全。谢谢您的合作。
+When can I use my electronic devices? 我什么时候才能使用电子设备?
+After landing on the airport, you can turn on you cell phone. 飞机降落在机场后，你就能打开手机了。
+When does your flight land? 飞机什么时候着陆?
+When is the plane due? 飞机什么时候着陆? 
+We will be landing at Bangkok international Airport in 20 minutes. 20分钟后我们即将降落在曼谷国际机场。
+The local time is 9:45 p. m. and the ground temperature is 25 degrees Centigrade, or 77 degrees Fahrenheit. 当地时间为晚上9点45分，地面温度摄氏25度，华氏77度。
+Captain Tony and all the members of his crew thank you for flying with us. 机长汤尼与所有组员感谢各位旅客搭乘本班机。
+We hope you enjoyed your flight. 我们希望你们满意这次的飞行。
+What's wrong with you? 你怎么了? 
+I'm not feeling well. 我感到不舒服。
+I don't feel well. 我觉的不太舒服。
+I feel dizzy and weak. And I'm having this pain in my ear. 我感觉头晕、虚弱，耳朵也有点疼。
+I think I am sick. 我想我是病了。 
+I'm feeling kind of airsick. 我觉得晕机了。
+I have a little airsickness. 我有点晕机。
+I feel like vomiting. 我想吐。
+I need an airsickness bag. 我需要一个呕吐袋。
+Just relax a little bit. 放松点。 
+There's an airsickness bag in the seat pocket. 在椅兜里有呕吐袋。 
+Do you have anything for airsickness? 你们有晕机药吗?
+Do you have any medicine for airsickness? 你们有晕机药吗?
+Could you give me some airsickness medicine? 能给我些晕机药吗? 
+I'll get some medicine for you right away. 我马上去给你拿些药来。 
+Here's your medicine. 这是给你的药。
+You can take some airsick pills. 您可以吃点晕机药。
+Why does this happen to me when I am on the plane? I feel bad. 为什么在飞机上会有这种感觉? 我感觉很难受。
+Don't worry, Sir. It's just due to the lower pressure. 不用担心，先生。只是由于低气压的缘故。
+What should I do about it? 我该怎么做呢?
+You may feel much better if you chew some gum or peanuts. 如果嚼点口香糖或花生会感觉舒服些。
+Does that really work? I'll give it a try. 真的有用吗? 我来试试。
+How are you feeling now? 现在感觉如何?
+Much better. Thank you.好多了，谢谢。
+You are welcome. Please press the button when you need any help. 不客气。如果需要什么帮助，请按按钮。 
+I am going to transfer in Hong Kong. 我要转机去香港。
+I have to transfer to New York. 我必须转机去纽约。
+Where do I go to catch my connecting flight? 我要去哪里赶衔接的航班? 
+Could you tell me where to deal with the formalities? 您能告诉我去哪里办理手续吗?
+You can go to the flight connection counter. 您可以去转机柜台。
+Please go to the transfer counter. 请到转机柜台办理。
+Where is the transfer desk? 转机柜台在哪儿?
+Where is the CAL transfer desk? 华航的转机柜台在哪里?
+When will the connecting flight take off? 衔接的航班什么时候起飞? 
+Can I get on the earlier flight instead? 我可以换成早一点的航班吗? 
+Do you have the boarding pass for the next flight? 您有下一趟航班的登机牌吗? 
+How do I deal with my luggage? 我的行李怎么办呢?
+Your luggage will be trasferred to your next plane. 您的行李将会转到下一班飞机上。 
+We have enough time to transfer the flight. 我们有足够的时间转飞机。
+There is enough time for us for the connection. 我们有足够的时间转飞机。
+All the connecting passengers are requested to proceed to Gate 9. 所有转机旅客请到9号登机门。
+How can I get to the baggage claim area? 去行李领取处怎么走呢? 
+Where is the baggage claim area? 行李领取处在哪儿? 
+Which carousel is for flight TG 945? TG945的行李提取处在哪里?
+I'm waiting for my luggage. 我在等我的行李。
+Excuse me, this is my bag. 借过一下，这是我的行李。
+Where can I find a baggage trolley? 哪里有行李推车。
+I can't find my baggage. 我找不到行李了。
+I lost my baggage. 我的行李不见了。
+Can you tell me your flight number? 能告诉我你乘坐的航班号吗? 
+Please give me your baggage claim tag. 请给我你的行李领取牌。
+Could you describe your baggage? 你能描述一下你的行李吗? 
+What does it look like? 它是什么样子的? 
+It's a green suitcase with wheels. 它是有轮子的绿色行李箱。
+Fill out this form. 填一下这张表。
+I'll check it for you at once. 我马上为您查询。
+Here it is. 在这儿。
+This is my luggage. 这是我的行李。
+Can you help me get my baggage? It's too heavy. 你能帮我拿行李吗? 实在太重了。
+Where can I get a baggage trolley? 我在哪儿能得到行李车? 
+How was your flight? 你的旅途怎么样呢?
+You must be tired after such a long flight. 经过长途飞行后你一定累了。
+I feel very tired, because it's a very long flight. 我感觉很累，因为飞行时间很长。
+Let me help you with your luggage. 让我帮你拿行李吧。
+My car is waiting outside. 我的车停在外面。
+I am getting my car at the parking lot. 我去停车场取车。
+Let's go to the parking space directly. 我们直接去停车场吧。
+We could grab a quick bite. 我们快找点吃的吧。
+I'm not hungry. 我不饿。
+Are there any restaurants still open near here? 这附近还有在营业的饭店吗? 
+Where would you like to go for dinner? 你想在哪儿吃饭呢? 
+Do you have any particular restaurant in mind? 你想好有什么特别的餐馆吗? 
+Do you have one to recommend? 你有推荐的吗? 
+Could you recommend some good restaurants around here? 你能推荐几家附近的好餐馆吗?
+Which restaurant do you recommend? 你推荐哪家餐厅呢? 
+The restaurant across the street is excellent. 街对面的那家餐馆不错。
+This restaurant is famous for the seafood. 这家餐厅以海鲜闻名。
+I think we should go and have a try. 我们应该去试试。
+I don't want to eat there. 我不想在那儿吃。
+Let's change restaurants. 我们换个饭店吧。
+It is very hard to find a seat in this restaurant in the evening. 晚上在这家餐厅很难找到座位。
+The restaurant is so popular that you have to wait for one to two hours to get a seat. 这家餐厅太出名了，要等一两个小时才有座位。
+This restaurant is more expensive than that one. 这家餐馆比那一家贵得多。
+Prices of food in this restaurant are much higher than that in other restaurants. 这家餐厅的价格比其他的餐厅高。
+Let's choose the least expensive restaurant today. 我们今天选家最便宜的餐馆吧。
+Good evening. Welcome to our restaurant. 晚上好，欢迎光临我们饭店。
+Have you made a reservation? 您预订订座了吗?
+Do you have a reservation? 您有预订吗? 
+I've made a reservation at your restaurant. 我已经在你们餐厅预订过了。
+I've reserved a table for two. 我订了一个两人桌。
+Our table is No.11. 我们预订了11号桌。
+Please tell me your name. 请告诉我您的名字。
+I have a reservation under Peter Li. 我有在皮特名下的预订。
+The reservation is under chen. 是用陈的名字预订的。
+My surname is Victor. 我叫维克多。
+The name is Victor. 名字是维克多。 
+We were expecting you. 我们正恭候着您呢。
+Our waiter will show you to your table. 我们的服务生会带您到餐位。
+Please wait here or take advantage until our hostess escorts to your table. 请稍等或自便，有人会领你入座。
+I'll show you to your table. 我来带您到餐桌。 
+Please follow me. 请跟我来。
+Please come this way. 请往这边走。
+Come this way please. 来这边请。
+This way please. 这边请。
+Please let us pass. 请让我们借过一下。
+Go right ahead. 请过。 
+I didn't reserve a table. 我没有预订.
+No, we do not. 没有预订。
+No, I haven't reserved in advance. 没有，我事先没有预订。
+Sorry, we're fully booked. 抱歉，我们位子被订满了。
+How many people please? 请问几个人? 
+How many? sir. 几个人? 先生。
+How many of you, please? 请问几位?
+A table for three, please. 三位。 
+We'd love a table for four. 我们想要张4人桌。
+We need a table for four. 我们要一张四人桌。
+Do you have a table for four please? 你能安排一张四人桌吗? 
+Where would you prefer to sit? 你喜欢坐在哪里?
+Would you like the smoking or non-smoking section? 您喜欢吸烟区还是非吸烟区?
+Do you prefer a smoking or non-smoking area? 您喜欢吸烟区还是非吸烟区? 
+Smoking or non-smoking? 吸烟区还是非吸烟区? 
+Doesn't matter. 没关系。
+Smoking, please. 吸烟区。
+Non-smoking. 非吸烟区。
+I'd like the non-smoking(smoking) section. 我喜欢非吸烟（吸烟）区。
+Please wait a moment. 请稍等一会。
+I'll find a table for you. 我会为您找一张桌子。
+I'll check if we have vacancy. 我看看是否还有空位。
+Could you wait at the bar until I find an approprite table for you? 您能在吧台等一下，我为您找张合适的桌子? 
+I'm afraid all our tables are taken. 恐怕我们所有的桌子都被占用着。
+Would you mind waiting until one is free? 您介意等一下空出桌子吗?
+Would you take a seat over there and I will call you when a table is free? 您能在那边的座位上等一下，当有空桌时我会通知您好吗? 
+Could you wait in line until a table is free, please? 请您排队等候空位好吗? 
+Could you wait a little longer, please? 请您等稍长点时间可以吗? 
+How long will it take? 这需要多长时间?
+I'm not sure. 我不确定。
+I'll wait. 我等一下吧。
+We have a table for you now. 现在有桌子了。 
+Thank you for waiting. 谢谢您一直等着。
+I'm very sorry to have kept you waiting. 很抱歉让您一直等着。
+We're very sorry for the delay. 我们很抱歉延误了这么长时间。
+Is this table all right? 这张桌子可以吗? 
+Will this table be all right? 这张桌行吗? 
+How about this table? 这张桌子可以吗?
+I don't like this table. 我不喜欢这张桌子。
+This table is too close to the toilet. 这张桌子离厕所太近。
+Could we have another one? 我们能换个其他的吗? 
+Can we have a quiet area? 我可以要一个安静的地方吗? 
+I think we'd like to take that one by the window. 我们想还是靠窗的那张吧。
+That table is reserved. 那张桌子被预定了。
+The table over there has been reserved. 那边那张桌子已经被预定了。
+The one by the window has been taken by others. 靠窗的那张已经有人预订了。
+I'm afraid that table is reserved for 8 p.m. 恐怕那张桌子晚上8点以后被预定了。
+I'm afraid that area is under preparation. 恐怕那一区还在准备中。
+It doesn't matter. This one will do. 没关系，那就这张吧。
+Not bad. We'll take it. 可以，就做这儿吧。
+This one is very good. 这张桌很好。
+It's all right. 很好。
+
+Your hat and scart can be hung here. 您的帽子和围巾可以挂在这儿。
+Please sit down. 请坐。
+Please take seats. 请坐。
+Please sit where you like. 请随意入座。
+Be seated, please. 请坐。
+Would you prefer sitting inside or outside? 您比较喜欢做里面还是外面? 
+May I get a high chair for the baby? 我可以给婴儿拿个高脚椅吗? 
+Would you like a high chair for your baby? 您想要一个高脚椅给婴儿吗? 
+Would you like me to bring a baby chair? 您需要我拿个婴儿椅吗? 
+Shall I bring a cushion for the little one to sit on? 我需要拿个垫子为小朋友坐吗? 
+Here's the menu. 这是菜单。
+You may look at the menu first and decide what you like to have. 请先看看菜单再决定点什么菜。
+I'm going to have one waitress to serve you. 我去安排一个服务员过来。
+Our waitress will be with you in a moment. 服务员马上就来。
+Our waitress will get you tea in a minute. 服务员马上就给您上茶。
+A waiter will come to take your order. 服务员会过来为您点餐。
+Cheers! 干杯!
+Bottoms up! 干杯!
+Glasses up! 举杯!
+Let's have a toast! 让我们来干一杯!
+Let us raise the glass to friendship. 为我们的友谊举杯。
+Let's just have another toast. 让我们再次举杯庆祝。
+We can have another toast for that. Cheers! 为了这个我们再次祝酒，干杯！
+Please give me the paper towel. 请给我些纸巾。
+Could you get a few small plates for us? 能给我们拿些小盘吗? 
+Would you please bring me a knife and fork? 能给我拿副刀叉吗? 
+Waiter! I have a small problem. 服务生! 我有点问题。
+This tablecloth is filthy. 这个桌布好脏。
+This glass is chipped. 这杯子有缺口。
+This glass is dirty. 这杯子是脏的。
+This glass is smeared. 这杯子有污渍。
+This glass is spotted. 这杯子有斑点。
+This glass is stained. 这杯子有污垢。
+This glass is stained and it really spoiled my appetite very much. 杯子有污垢，这可真倒胃口。
+This fork is dirty. 这个叉子是脏的。
+This knife is not sparp. 这把刀不锋利了。
+This knife is bent. 这把刀子弯了。
+This knife doesn't cut. 这把刀不能切了。
+This knife is blunt. 这把刀子钝了。
+This knife is so blunt that it can't even cut beancurd. 这刀太钝了，甚至连豆腐都切不了。
+I'll change it immediately. 我会立即更换。
+Where are our dishes? 我们的菜在那儿呢?(我们的才怎么还没来呀?) 
+The dishes are offered too slowly. 菜上的太慢了。
+We've been waiting for an hour. 我们已经等了一个小时了。
+I've been waiting half an hour for my order. 从我点餐到现在等了半个小时了。
+I order my meal at least 20 nimutes ago and it still hasn't come. 我至少20分钟前点的餐，到现在还没来。
+I've been waiting for a long time but nobody came to serve me. 我们已经等了很长时间了，但没人来为我们服务。
+We came here before they did. How come they were served first? 我们比他们先到，怎么他们先得到服务? 
+Could you see if it's ready? 能看看是否做好了吗? 
+I'll see about your order. 我这就去看看你点的菜。
+I'll check your order with the chef. 我会和厨师查对您点的菜。
+Please rush our order. 请快点做好我们的菜。
+Please do and hurry up! 请快一点!
+Would you mind hurrying? 你们能快点吗? 
+Would you please serve a little quicker? 能上菜快点吗? 
+Do you think you could tell the kitchen to speed it up a little bit? 你能告诉厨房速度快一点吗? 
+I'll try to hurry things up. 我会催促快些。
+I'll hurry. Please wait a moment. 我会快点的，请稍等一会儿。
+I'm in a hurry. 我要赶时间。
+The kitchen is very busy today. 今天厨房很忙。
+Our chef is trying his best. 我们的厨师正在尽最大的努力。
+I'll be right back with your order. 我会立即为您送上餐点。
+Why is it taking so long? 为什么会这么久? 
+Why is it taking so long for the food to arrive? 为什么上餐要这么久? 
+Does it need to take so long? 用花那么长时间吗?
+How much longer are we going to have to wait for our dinner? 我们还要等多久才能吃上饭呢?
+I'm afraid we have no more time to wait. 我想我们没时间再等了。
+I'd like to cancel my order. 我要取消我的点餐。
+Please cancel my order if the food is not ready. 如果饭菜没做好的话请取消我的点餐吧。
+Your food is being cooked. I'm afraid it's too late to cancel it. 你的食物正在做，恐怕取消太晚了。
+The service is too slow. 这服务太慢了。
+I can't understand why this restaurant always serves so slowly. 我不明白这个饭店为什么总是上菜这么慢。
+Your dishes are ready. 您的菜准备好了。
+Your meal, we're really sorry for the delay. 你的菜，我们真的很抱歉耽搁了。
+I'm afraid there is a mistake. 恐怕出错了吧。
+I think you have made a mistake with my order. 我想你上错我的点的菜了。
+I don't think I ordered this dish. 我想我没有点这个菜。
+This is not my order. 这不是我点的菜。
+This is not what I ordered. 这不是我点的菜。
+I might have made a mistake. 我可能搞错了。
+What was your order? 您点的是什么? 
+Could you repeat your order again? 能再说下您点的餐吗? 
+I'm very sorry for the mistake. 很抱歉搞错了。
+Please be more careful in the future. 请以后多多注意。
+I hope you enjoy your meal. 我希望您喜欢您的食物。
+This food tastes strange. 这菜味道好怪。
+The food has a funny smell. 这菜闻起来很奇怪。
+This is not the right flavor. 这不是正经的味道。
+This salad is not fresh. 色拉不新鲜了。
+The dish I ordered was not fresh. 我点的菜不新鲜。
+It seems that the seafood has gone bad. 海鲜好像坏了。
+The food is off. 这菜变质了。
+My fish is not cooked enough. 我的鱼没做熟。
+I don't think this fish is proberly cooked. 我觉得这鱼好像没做熟。
+These eggs are raw. 鸡蛋是生的。
+These eggs are undercooked. 鸡蛋还没熟。
+These eggs are too soft/hard. 鸡蛋太软/硬了。
+These eggs are overcooked. 鸡蛋过熟了。
+I don't want the yolk to be too well-done. 我不要蛋黄做的太老。 
+My steak is raw. 我的牛排是生的。
+This steak is underdone. 牛排没熟。
+This steak is bloody. 牛排带血过多。
+This steak is hard/dry. 牛排太硬/干了。
+My steak is tough and overdone. 我的牛排太硬过熟了。
+This shish kebab is burnt. 这份烤羊肉串烧焦了。
+There is a fly in my soup. 我的汤里有只苍蝇。 
+The food was dreadful. 这饭菜糟糕透了。
+I'm not happy about the dish. 我对这菜不满意。
+I'm not very happy with the quality of the food here. 我对这里的饭菜质量非常的不满意。
+I'll return your suggestion to the chef. 我会向主厨反应你的意见。
+I'll ask the chef to explain to you. 我会请主厨来向您解释。
+I'll have the chef prepare another one. 我会请厨师准备另一份。
+I'll tell the kitchen to prepare a new one for you. 我会告诉厨房为您再做一份新的。
+I'll bring you another one. 我会给你另外拿来一份。
+I'll send this back to the kitchen and get you a new one. 我会把它送回厨房，换拿给您为一份新的。
+There will be no charge for this. 这一份我们不收费。
+This is on the house. 这一份由饭店出钱。
+Your meal is on the house. 你的餐点由饭店出钱。
+Please accept our apology. 请接受我们的道歉。
+I've checked with the kitchen. 我已经与厨房检查过了。
+There isn't anything wrong with this food. 这菜没有任何问题。
+If you don't like the taste of it, perhaps I could get you something else? 如果您不喜欢这口味，或许我给你换成其他的? 
+The service was very bad. 这服务太差劲了。
+I don't like your attitude. 我不喜欢你的态度。
+You have a problem with your attitude. 你的态度有问题。
+Could I talk to someone in charge? 我能跟主管谈谈吗? 
+I'd like to see to your manager. 我要见你们经理。
+Your staff was rude. 你的工作人员很粗鲁。
+I want three doggy bags. 我需要三个打包袋。
+May I have a doggy bag? 我可以打包吗? 
+Could you wrap this? 你能把这个打包吗?
+I'd like to take the rest home. 我想把剩下的打包回家。
+Please pack the leftovers for me. 请帮我把剩菜打包。
+Wrap the steak up for him, so he'll take it with. 打包这份牛排，他要带走。
+Why don't you wrap his steak up? 你为什么不打包他的牛排?
+Do you have time for coffee? 你有空喝杯咖啡吗?
+How about a coffee? 来杯咖啡怎么样?
+Let's go for coffee. 我们去喝杯咖啡吧。
+Let's stop at a coffee shop. 让我们在咖啡店歇会儿。
+Why do you like coffee shop? 你为什么喜欢咖啡店? 
+Coffee shops are not only a good place to get a cup of coffee, but also a great place to meet customers. 咖啡店不仅是喝咖啡的好地方，而且是会见客户的好地方。
+Many cafes are now equipped with Wi-Fi. 现在很多咖啡店都装有无线网络。
+You can surf the Internet while enjoying your coffee. 你在品尝咖啡的时候可以浏览网络。
+Is there a cafe near by? 请问附近有没有咖啡店？
+Waiter! 服务生！
+What kind of coffee do you have? 你们这儿有什么咖啡?
+What kind of drinks you got? 你们有什么饮料?
+What do you have to drink? 你们这里有什么喝的?
+Would you like some tea or coffee? 喝茶还是喝咖啡？
+I'd like a coffee. 我想要杯咖啡。
+Give me a cup of coffee. 给我一杯咖啡。
+A cup of coffee for me, and a glass of apple juice for her. 我要一杯咖啡，她要一杯苹果汁。
+How would you like your coffee? 你喝什么样的咖啡?
+What flavor do you like? 你喜欢什么口味?
+What coffee would you like,black coffee or white coffee? 你喜欢什么咖啡，黑咖啡还是牛奶咖啡？
+A small cup of strong black coffee without milk or cream. 小杯浓的黑咖啡，不加牛奶和奶油。
+Would you like some cream in your coffee? 你的咖啡要加点奶油吗? 
+Cream and sugar. 要加糖和奶油。
+No cream, please. 请不要加奶油。
+I'd like a coffee with sugar. 我想要杯加糖的咖啡。
+Do you have any sugar substitute? 你们有代糖的吗?
+I don't want to intake any sugar. 我不想摄入糖分。 
+I'd like a decaf. 来一杯没有咖啡因的咖啡。
+Give me a decaf. 给我一杯没有咖啡因的咖啡。
+Black coffee, please. 请来杯黑咖啡（清咖啡）。
+Black coffee for me,just black. 黑咖啡，不加别的。
+I take it black. 我喜欢黑咖啡。
+Some black coffee will help to sober me up.一些黑咖啡，能让我清醒。
+I love Japanese coffee shops. 我喜欢日本的咖啡店。
+Do you serve anything else besides drinks? Say, cake. 除了喝的你们这还有什么别的吗? 比如蛋糕。
+We also serve sandwiches and cakes. 我们还供应三明治和蛋糕。
+Give me two pieces of cake. 给我来两块蛋糕吧。
+Can you come here when you have a second? 你有空时能到这里来一下吗?
+Yes, sir. How can I help you? 来了，先生。有什么需要帮忙的?
+Please clean up the table. 请收拾一下桌子。
+OK. And anything else I can do for you? 好的，还有什么别的需要吗?
+I'd like a refill, please. 请给我续一杯。
+I need more coffee. 我要加点咖啡。 
+Is it free of charge? 续杯是免费的吗?
+May I have another black coffee,please? 请再给我一杯黑咖啡好吗？
+When does the coffee shop close? 咖啡店什么时候打烊呢？
+We lazed the whole afternoon away at a cafe. 我们在一家咖啡馆消磨了整个下午。
+
+The Pearl River Hotel. anything I can do for you? 这是珠江宾馆，我能为您做什么?
+Room Reservation. Good afternoon. 客房预约部。下午好!
+Advance Reservations. Can I help you? 这儿预订房间，需要效劳吗? 
+I'd like to make a reservation. 我想预订房间。
+I'd like to reserve a room. 我想订一间房。
+I'd like to reserve some rooms for a tourist party. 我想为一个旅游团订一些房间。
+What date will you check in? 你们那天入住? 
+For what time, Madam? 小姐，请问什么时间入住? 
+Which date would you that be? 要订在哪个日期? 
+For the night of April 18th for one night. 订4月18日一个晚上。 
+What kind of room would you like? 你喜欢订哪类房间? 
+We have single rooms, double rooms, suites and luxury suites, etc. 我们有单人房，双人房，套房和豪华套房等等。
+I'd like a standard room. 我要一个标准间。
+I'd like to book a single room with a bath from the afternoon of February 5th to the morning of february 11th. 我想订一个带洗澡间的单人房间，从2月5日下午到2月11日上午。
+I'm calling from Nanjing. I'd like to reserve a single room from tomorrow for six days, please. 我从南京打来电话。我想预订一个单人房，明晚开始，共6天。
+I'd like to book a double room for next Tuesday. 下星期二我想订一个双人房间。
+That's fine. A double room for Tuesday, September 12th. 好的。星期二，9月12日，一个双人间。
+How long do you plan to stay? 你计划住多久? 
+How long will you be staying? 请问你要住多久?
+We'll be leaving on Sunday morning. 我们星期日早上离开。
+That will be five night. 那就是五天。
+Could you hold the line, please? I'll check our room availability for that day. 请别挂断? 我要查一下那天的空房间。
+Thank you for waiting, Sir. We have a vacancy for that period. 让您就等了。我们这段时间有房间。
+What's the price? 房间的价格是多少? 
+What's the rate, please? 请问房费是多少?
+Could you tell me the current price? 你能告诉我现在房价是多少吗? 
+What's the rate for a standard room? 标准房间多少钱? 
+It's two hundred and twenty yuan per night. 每晚220元。
+The current rate is 180 yuan per night. 现行房费是每天180元。
+It's $300 including breakfast and room service. 300美元包括早餐和服务费。 
+That sounds not bad at all. I'll take it. 听起来还不错。这个房间我订了。
+OK. Your name, please? 可以，请问您的名字? 
+Could you tell me your name, Sir? 能告诉我你的名字吗，先生? 
+What's your name, please? 请问您的名字? 
+Yes, it is Carl. 好的，我是卡尔。
+How do you spell it, please? 请问怎么拼写呢?
+It's C-A-R-L. C-A-R-L 
+And your telephone number, please? 请问你的电话号码是多少? 
+My telephone number is 3367-7856. 我的电话号码是33677856。
+By the way, how would you like to pay for it? 另外，您准备怎样付款呢?
+This hotel prefers cash. 本宾馆主张现金付款。
+I see. When can I receive your confirmation? 明白了。我什么时候可以得到你们的确认?
+Not until you have paid a 10 percent deposit. 您只要支付10%的预订金，我们就予以确定。
+I'll log in to the Internet to find out about you. I know your address. 我还是上因特网去看吧。我知道你们的网址。 
+Could I ask when you will arrive? 请问您什么时候到达? 
+I'll get there by five o'clock on August 16th. 我会在8月16日5点之前到达。
+We'll have the room ready for you. 我们会为您准备好房间。
+Thank you for booking in our hotel. 谢谢您预定我们的宾馆。
+OK. We look forward to your visit. 好的，我们期待您的光临。
+OK. Thank you and we look forward to your arrival. 好的，谢谢您，我们期盼您的到来。
+We look forward to seeing you next Tuesday. 我们盼望下星期二见到您。
+See you then. 到时候见。
+I'd like reserve a room facing the sea. 我想订个临海的房间。
+We're fully booked. 我们都订满了。
+All our rooms are full occupied. 我们所有的房间都满了。
+I'm afraid our hotel is fully booked on that night. 本店那晚恐怕已经登记满了。
+I am afraid that all the room with a view to the sea have been booked. 恐怕所有看得到海的房间都已经被预订了。
+That is really disappointing. 真让人失望。
+And now you want to change the booking, do you? 你想变更一下入住时间吗?
+Is it possible for you to change your reservation date? 你可不可以改变预约日期呢? 
+No, that's not possible. 不能。
+We might have cancellations. Could you call us again closer to the date? 或许有人会取消预约，请您接近哪个日期时再打电话好吗?
+Sure, but if you do have any cancellations, could you let me know as soon as possible? 好的，如果真有人取消，能不能尽快让我知道呢?
+I'm very sorry, Sir, but we are unable to do that. We would appreciate it very much if you could call us instead. 先生，非常抱歉，我们不能那样做，如果您能打电话来，我们将会非常感激。 
+We hope you understand. 希望您能谅解。 
+Room Reservations. May i help you,sir? 客房预定。先生有什么需要我帮忙的吗?
+Yes, my name is Alice, and I made a reservation for two nights from October 5th. I'd like to extend it for two more nights until the 9th. 是的，我的名字是爱丽丝，我预订了房间从10月5日保留两个晚上，我将延长两个晚上直到9号。
+For 4 nights from October 5th until October 9th. 从10月5日到9日四个晚上。
+Will there be any change in your room type? Your reservation is for a twin room. 您需要变化你的房间类型吗？你预定的是一间双人床的。
+No. 不。
+Thank you, sir. We will extend the reservation for you. 谢谢，先生。我们将为您扩大保留。
+I booked a single room in your hotel for this friday. 我在你们宾馆预定了这周五的单人房间。
+I'm sorry to say that I have to cancel it. 我很抱歉，我不得不取消这个预定。
+I'd like to cancel a reservation. 我想取消预订。
+Can I cancel my reservation? 我能取消我的预定吗? 
+May I have your name, please? 请把你的名字告诉我好吗? 
+In whose name was the reservation? 用谁的名字预订的?
+Jack Bruder. 杰克布鲁德尔。
+How do you spell that, please? 请讲一下是怎么拼写的?
+B-r-u-d-e-r. B-r-u-d-e-r。 
+What was the date of the reservation? 保留的日期是什么呢?
+From October 2nd for 3 nights. 从10月2日三个晚上。
+Excuse me, but is the reservation for you? 对不起，是您预定的?
+No, it's for my friend. 不，是我的朋友。
+May I have your name and phone number, please? 能告诉我你的名字和电话吗?
+It's Mary Calson and my number is 365-7071. 我叫玛丽凯撒和我的电话365-7071。
+Thank you, ma'am.I'll cancel Mr.Bruder's reservation from October 2nd for 3 nights.My name is Jason and we look forward to another chance to serve you. 谢谢你太太，我们将取消布鲁特尔从10月2号三个晚上的预定，我的名字叫杰桑，我们下次一个机会为您服务。
+I have cancelled your reservation. 我已经取消了你的预定。
+Check In. 办理入住。
+Check Out. 办理离店手续。
+Sorry No Vacancy. 抱歉，客满。
+Front Desk 前台
+Front Counter 前台
+Reception 前台/服务台/接待
+Information 问询处/咨询台
+Manager On Duty. 值班经理。
+Restaurant Lounge. 酒店大厅。
+Stalls 中庭
+Front Aisle 前廊
+East Wing 东楼
+West Wing 西楼
+East Box 东厢
+West Box 西厢
+Suit 套间
+Handicapped Room. 残疾人房间。
+Accessible Guestroom. 残疾人客房。
+Guest Room Dept. 客房部
+House Keeping Dept. 客房部
+Price According To Season And Size Of Flat. 价格按季节和公寓大小而定。
+Stay A Minimum Of 3 Nights And Receive 1 Extra Night Free. 住三晚，可额外免费赠一晚。
+Reduced Rates For Elderly. 老人优惠。
+No Service Fee. 免收服务费用。
+Guest Safety Tips. 旅客安全提示。
+Slippery Road. 小心路滑。
+Be Careful. 小心(路滑)。
+Caution：Slippery! 注意：滑!
+Always Use Deadbolt. 始终使用死栓。
+Double Lock Door. Use Safety Latch. 双保险门闩，请使用安全碰锁。
+Use Door Viewer To Identify Callers Prior To Opening Door. 开门前通过猫洞鉴别叫门人身份。
+Never Open Door Prior To Verifying ID. 没有确认对方身份绝对不能开门。
+Secure Valuables. 保管好贵重物品。
+Please Keep Valuables With You. 贵重物品随身携带/贵重物品请自行妥善保管。
+Please Take care Of Your Belongings. 请保管好随身物品。
+Don't Leave Valuables Unattended. 请保管好随身携带的贵重物品。
+Safe Deposit Boxes Are Available At Front Desk. 前台可以提供保险箱。
+Report Suspicious Persons Or Acts. 报告可疑人员或可疑行为。
+Insert Or Swipe Key. 将钥匙卡插入或擦过处理机。
+Remove Key. 取出钥匙卡。
+Turn Handle. 旋转手柄。
+Please Return This Key Card To The Front Desk When You Check Out. 结账时请将钥匙卡归还前台。
+Do Not Smoke In The Bed. 请勿在床上吸烟。
+This Is Designated Non-Smoking Room. 这是指定的禁烟房间。
+A Cleaning Fee Of $200 Will Be Charged To Your Room Account If You Smoke In This Room. 违者将被从账户中扣除$200罚金作为清洁费用。
+Air Conditioned. 空调开放。
+Fully Centrally Heated. 中央暖气全部开放。
+Full Central Heating With House Provided Hot Water 24 Hours. 中央暖气系统，房间24小时提供热水。
+In-Room Coffee Maker. 室内咖啡机。
+Tea(Coffee) Making Facility In All Bedrooms. 所有卧室有沏茶（煮咖啡）设备。
+Be Careful When Using The Bath. 使用此浴室时小心。
+Sauna 桑拿浴
+Whirlpool 热水漩涡池
+Depress Handle Until Bowl Is Empty. 压下把手直至便盆冲净为止。
+Outdoor Swimming Pools. 室外泳池。
+Indoor Swimming Pools. 室内泳池。
+(Hair) Dryer 头发吹风机
+Warm Air Hand Drier. 吹风机。
+Keep Away From Water. 谨防沾水。
+Shave Pins In All Bedrooms. 所有卧室备有刮脸插销。
+Unplug It. 拔去电源插头。
+Warn Children Of The Risk Of Death By Electric Shock. 小心孩童触电死亡。
+Forget Something? 遗忘了物品吗?
+If You Forget To Pack Any Standard Toiletry Item（Toothbrush, Toothpaste, Shaving Cream, Razor Or Comb）, Just Call The Front Desk And We'll Get You A Complimentary Repacement Right Away. 如果您忘了把洗漱物品打入您的包裹（如牙刷，牙膏，剃须膏，剃须刀或梳子），请给前台电话，我们可以立即提供赠送替代品。
+For Your Convenience, Cigarettes Are Available At The Front Desk. 为了您的方便，前台有香烟出售。
+Night Porter On Duty. 夜间有行李搬运服务生。
+Laundry Service. 提供洗烫服务。
+Pay Phone 付费电话
+Attendant Call. 呼叫服务员
+For Reservation Call... 预订服务请拨电话...
+Early Book For Lunch Or Dinner. 预订午餐或晚餐。
+High-Speed Wireless Internet. 高速无线上网
+Introducing High-Speed Internet Access. 高速上网介绍。
+Free In All Guest Rooms. 所有房间内免费登陆。
+Guest Rooms In This Hotel Are Not Equipped With Wireless(Wifi) High Speed Internet Access. 本酒店旅客房间内没有无线上网设施。
+Wifi Is Available In Public Area In The Hotel. 在酒店的公共场所可以登陆无线英特网。
+Please Call The Hotel Operator For More Information. 可以打电话询问酒店接线员更多信息。
+For More On High Speed Internet Access, Including Trouble Shooting Information, Please Refer To The Guest Service Directory. 请查阅旅客服务指南获取更多的有关高速上网以及如何排除故障的信息。
+Hospitality Promise 服务承诺
+When You Talk, We Listen. 我们随时倾听您的意见。
+We Are Committed To Doing What It Takes To Make Your Stay As Comfortable As Possible. 为了让您尽可能舒适我们愿意付出一切。
+Our Front Desk Team Is Available 24 Hours A Day To Address Any Of Your Needs. 我们前台服务团队每天24小时为您解决一切问题。
+Just Let Our Manager On Duty Or Front Desk Staff Know If Any Part Of Your Stay Isn't Satisfactory. 如果某处不尽人意请告诉我们的值班经理或前台服务人员。
+We Promise To Make It Right Or You Won't Pay For That Part Of Your Stay. 我们承诺将立即整改，否则您可以拒绝支付相关服务的费用。
+Do Not Hesitate To Contact Us. 请不要犹豫联系我们。
+Your Comfort Is Our Priority. 您的满意就是我们的宗旨。
+Making Your Stay A Complete Success Is Our Goal. 让您居住的完全满意是我们的宗旨。
+Employees Must Wash Hands Before Returning To Work. 员工便后必须洗手方可回到工作岗位。
+Two Way Traffic Hotel Parking. 旅馆双向停车场。
+Executive Business Centre. 行政商务中心
+Conference Facilities. 会议设施。
+Fax And Copy Service. 传真复印服务。
+Restaurant And Pub. 餐馆酒吧。
+Fitness Centre. 健身中心。
+Exercise Facilities 锻炼设施
+Games Room. 游戏房。
+Staff Only. 旅客止步。
+How many people are in your family?  你家有几口人?
+Four people.  四口人。
+My parents and my younger sister.  父母和我的妹妹。
+Any brothers or sisters?  有兄弟姐妹吗?
+Just one brother.  只有一个哥哥。
+Do you live with your parents?  你和父母住在一起吗?
+I live alone.  我一个人住。
+I live in an apartment.  我住在一个公寓里。
+Do you speak Japanese?  你说日语吗?
+I only speak English.  我只说英语。
+A little.  只会一点。
+I am interested in ….  我的爱好是…
+What are you studying?  你学的是什么?
+What sort of job do you do at ABC?  你在ABC公司担任什么职务?
+What do you do there?  你在那里从事什么工作?
+My job is to teach students.  我的工作是教学生。
+I work in government.  我在政府部门上班。
+Where do you work?  你在哪里工作?
+What kind of work do you do?  你从事哪类工作?
+What do you do for a living?  你靠什么来谋生（你做什么工作）? 
+What do you do?  你做什么工作?
+What's your job?  你的工作是什么?
+That's my number, e-mail.  这里是我的电话号码、电邮。
+Here's my business card.  这是我的名片。
+What's your telephone number?  你的电话号码是多少?
+May I have your telephone number and address?  我可以得到你的电话号码和地址吗?
+Can you give me your contact information?  你能给我你的联系方式吗?
+How can I contact you?  我怎么联系你呢?
+I'd like you to meet a friend of mine.  我想让你见见我的朋友
+I want you to meet Bob.  我想让你见见鲍勃。
+I'd like to introduce Bob.  我来介绍一下鲍勃。
+He's a nice guy.  他是个好人。
+Let me introduce you to eath other.  让我来给你们相互介绍。
+Have you met before?  你们以前见过吗? 
+Have we ever met?  我们以前见过面吗?
+You look familiar.  你看起来很眼熟。
+You look like one of my friends.  你看起来像我的一个朋友。
+You look like someone I know.  你看起来像我认识的一个人。
+I'm not sure. Maybe.  我不确定，也许。
+No, I don't think we've met.  不，我想没见过面。
+It was nice meeting you.  认识你很高兴。
+It's pleasure to meet you.  很高兴认识(遇见)你。
+What's your name, please?  请问你叫什么名字?
+May I have your name?  我可以知道你的名字吗?
+My name is *.  我的名字叫*。
+How old are you?  你多大了?
+I'm * years old.  我今年*岁了。
+May I ask where you come from?  我可以问一下你从哪里来吗? 
+I come from Canada.  我从加拿大来。
+What is your nationality?  你的国籍是哪儿?
+My nationality is Chinese.  我的国籍是中国。
+I am American.  我是美国人。
+We need more milk 我们需要买点牛奶
+Let's go grocery shopping 我们去超市买东西吧
+Let's go to the supermarket. 我们去超市吧。
+We took a trip to the supermarket. 我们去超市转转。
+To the supermarket. What's up? 去超市，干嘛?
+Is the supermarket open today? 超市今天开门吗?
+May I help you? 我能为你效劳吗? 
+Where are the shopping baskets? 购物篮在哪里?
+Let's get a shopping cart first. 我们先去找个购物车。
+I need a shopping cart. 我需要一辆购物车。
+It is at the entrance. 就在入口处。
+Here, take one of these trolleys. 在这，取一辆手推车吧。
+We have free samples now. 我们现在有免费试吃。
+Do you want to try it? 你要不要尝一下? 
+What are you looking for? 您在找什么呢? 
+Are you looking for something particular? 您在找什么呢? 
+What do you want exactly? 你到底想买些什么? 
+I can't find the pet food. 我找不到宠物食品。 
+Where's the meat counter? 肉柜台在哪里? 
+Where can I find the diary products? 乳制品在哪儿?
+Where are the dairy products? 乳制品在哪儿?
+They are on the chelf right behind you. 就在你身后的货架上。
+Which aisle are the canned goods at? 罐头产品在哪条通道?
+At what aisle is the frozen food? 冷冻食品在哪条通道?
+Do you remember which aisle this was at? 你记得这货物在哪条货道里吗?
+Can anyone tell me where I can buy the ingredients to make Chinese food? 谁能告诉我哪里可以买到做中国菜的原材料?
+Where is the fruit and vegetable section? 水果蔬菜区在哪里?
+The fruit and vegetables are over there. 水果和蔬菜在那边。
+They are in Section B. 它们在B区。
+In aisle 3. 在第三通道。
+It's at the end of this aisle. 在这条通道的尽头。 
+Go all the way to the back and turn right. 往里走到头然后右转。
+I'd like some bananas. 我想要些香蕉。
+How much dose this meat weight? 这肉有多重?
+Could you weight this? 你能称一下这个吗?
+Slice me half a kilo of beef. 给我切一斤牛肉。
+Give me a pound of tomatoes and a pound of eggplants. 给我一磅番茄和一磅茄子。
+OK. Anyting else? 好的，还要其它的吗?
+Do you sell organic vegetables here? 你们卖有机蔬菜吗?
+Yes, we do. They're right in front of you. 有的，就在你面前。
+You should have a sign. That way people could identify which are organic and which aren't. 你们应该要有标识，让顾客知道哪些是有机蔬菜，那些不是。
+The organic vegetables are marked with the blue label. Here, do you see? 有机蔬菜都有蓝色的标签。在这里，看到了吗?
+They're labeled on the packet. 它们在包装上有标示。 
+There is no price on this item. 这上面没有标价。
+This item is not priced. 这上面没有标价。
+We need to buy some soya sauce. Which aisle is the soya sauce in? 我们想买一些酱油，酱油在哪一个通道?
+That would be in aisle 7, with the condiments. It is right next to the ketchup. 在第七走道，和调味品一起，就在番茄酱的旁边。 
+We have a clearance sale today. 我们今天清仓大处理。
+The price will go down. 价格将会下降。
+Do you have this in stock? 这个还有存货吗?
+Do you have more of this item in stock? 这种商品还有存货吗?
+I'm afraid We don't have it in stock. 恐怕已经没有存货了。
+I'm afraid we're out of that item. 恐怕那种货已经卖完了。
+Sorry. It's out of stock now. 对不起，已经脱销了。
+Easy to use and great value too. 好用实惠，物美价廉。
+What time do you open? 你们几点开始营业? 
+What time do you close? 你们几点开始关门? 

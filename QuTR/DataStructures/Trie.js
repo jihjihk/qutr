@@ -6,27 +6,36 @@ class Trie {
 	}
 
 	insertPhrase(cID, phrase) {
+		// Remove punctuation from phrase
+		let punctRE = /[\u2000-\u206F\u2E00-\u2E7F\\!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/g;
+		let spaceRE = /\s+/g;
+		let noPuncPhrase = phrase.replace(punctRE, "").replace(spaceRE, " ").toLowerCase();
+
 		let current = this.root;
-		let words = phrase.toLowerCase().split(" ");
+		let words = noPuncPhrase.split(" ");
 		for(let i = 0; i < words.length; i++) {
 			let word = words[i];
-			for(let j = 0; j < word.length; j++) {
-				let c = word[j];
-				if(!current.children.hasOwnProperty(c)) {
-					let node = new TrieNode();
-					current.children[c] = node;
+			if(word.length === 0) {
+				continue;
+			} else {
+				for(let j = 0; j < word.length; j++) {
+					let c = word[j];
+					if(!current.children.hasOwnProperty(c)) {
+						let node = new TrieNode();
+						current.children[c] = node;
+					}
+					current = current.children[c];
 				}
-				current = current.children[c];
-			}
-			current.endOfWord = true;
-			current.word = word;
+				current.endOfWord = true;
+				current.word = word;
 
-			// Add space to the end of every node and store the concept ID
-			if(!current.children.hasOwnProperty(" ")) {
-				current.children[" "] = new TrieNode();
+				// Add space to the end of every node and store the concept ID
+				if(!current.children.hasOwnProperty(" ")) {
+					current.children[" "] = new TrieNode();
+				}
+				current.children[" "].concepts.push(cID);
+				current = this.root;	// Reset at root for word
 			}
-			current.children[" "].concepts.push(cID);
-			current = this.root;	// Reset at root for word
 		}
 	}
 
@@ -70,11 +79,12 @@ class Trie {
 				}
 			}
 		}
+		console.log(suggestions);
 		return suggestions;
 	}
 
 	suggConcepts(prefix) {
-		let inputWords = prefix.toLowerCase().split(" ");
+		let inputWords = prefix.replace(/^\s+|\s+$/g, '').toLowerCase().split(" ");  // Remove extra whitespace and split
 		let concepts = {};
 		for(let i = 0; i < inputWords.length; i++) {
 			let word = inputWords[i];
@@ -85,7 +95,9 @@ class Trie {
 					if (!concepts.hasOwnProperty(concept)) {
 						concepts[concept] = 1;
 					} else {
-						concepts[concept] += 1;
+						if(inputWords.length > 1) {
+							concepts[concept] += 1;
+						}
 					}
 				}
 			}

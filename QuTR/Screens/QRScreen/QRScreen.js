@@ -10,8 +10,6 @@ import { PRIMARY_LIGHT } from '../../masterStyle.js'
 
 import QRCode from 'react-native-qrcode-svg';
 
-var self;
-
 export default class QRScreen extends Component<{}>  {
 
   constructor(props) {
@@ -21,7 +19,6 @@ export default class QRScreen extends Component<{}>  {
         logo: {uri: "https://firebasestorage.googleapis.com/v0/b/qutr-8cc2c.appspot.com/o/logo.png?alt=media&token=d9844d2c-51b4-43a2-a607-a4a7c1f2c5a6"},
         user: firebaseService.auth().currentUser
     };
-    self = this;
   }
 
   componentWillMount = () => {
@@ -47,7 +44,7 @@ export default class QRScreen extends Component<{}>  {
     firebaseService.database().ref()
     .child('users')
     .child(this.state.user.uid)
-    .on('value', function(snapshot) {
+    .on('value', (snapshot) => {
       var conversation = snapshot.val().conversation;
       if (!!conversation) {
 
@@ -55,29 +52,33 @@ export default class QRScreen extends Component<{}>  {
                               .child('conversations')
                               .child(conversation);
 
-        self.setState({conversationRef: conversationRef}, function() {
+        this.setState({conversationRef: conversationRef}, () => {
 
           conversationRef
           .once('value')
-          .then(function(snapshot)  {
+          .then((snapshot) => {
 
+            var snapshotValue = snapshot.val();
             var time = new Date();
             var ms = time.getTime();
-            var ID1 = snapshot.val().ID1, ID2 = snapshot.val().ID2;
+            var ID1 = snapshotValue.ID1, ID2 = snapshotValue.ID2;
+
+            conversationRef.update({[ID1]: false, [ID2]: false})
+
             /* The conversation expired, needs to be removed */
-            if (Math.abs(snapshot.val().timestamp - ms) > 86400000) {
+            if (Math.abs(snapshotValue.timestamp - ms) > 86400000) {
 
               /* Delete database reference of the conversation for each correspondent */
-              self.deleteConversationForUser(ID1);
-              self.deleteConversationForUser(ID2);
+              this.deleteConversationForUser(ID1);
+              this.deleteConversationForUser(ID2);
               /* Delete conversation from the database */
-              self.state.conversationRef.remove();
+              this.state.conversationRef.remove();
             }
 
             /* This indicatess a new conversation, so just change the tab. 
                If the user had another conversation, that one gets deleted in QR Scanner code */
-            else if (Math.abs(snapshot.val().timestamp - ms) < 10000) {
-              self.props.changeTab(1);             
+            else if (Math.abs(snapshotValue.timestamp - ms) < 10000) {
+              this.props.changeTab(1);             
             }              
           })
         });

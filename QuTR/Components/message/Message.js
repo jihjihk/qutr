@@ -10,7 +10,8 @@ export default class Message extends Component {
   render = () => {
 
     return (
-        <Text style={[styles.message, this.props.style]}>
+        <Text style={[styles.message, this.props.style]}
+        	  selectable={true}>
         	{this.props.message}
         </Text>
     );

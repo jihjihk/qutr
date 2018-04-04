@@ -70,13 +70,13 @@ export default class ProfileScreen extends Component<{}>  {
   }
 
   componentWillMount()  {
-    self=this;
+    
     this.state.firebase.database()
       .ref('/users/' + this.state.user.uid)
       .once('value')
-      .then(function(snapshot) {  
+      .then((snapshot) => {  
 
-        self.setState({
+        this.setState({
           name: snapshot.val().name,
           age: snapshot.val().age,
           language: snapshot.val().language,
