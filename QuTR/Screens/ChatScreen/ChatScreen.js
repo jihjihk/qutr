@@ -412,12 +412,32 @@ export default class ChatScreen extends Component<{}>  {
       this.refs.mi.logAllProperties(this.refs.mi.input, remainderString);
     }
 
+    var splitSuggestionString = stringForSuggestions.replace(/^\s+|\s+$/g, '').toLowerCase().split(" ");  // Remove extra whitespace and split
+    //var copy = splitSuggestionString;
+    let numArray = [];
+    
+    splitSuggestionString.forEach((word) => {
+      
+      if(isNaN(parseFloat(word))) {
+        // Check if integer
+        if(!isNaN(parseInt(word))) {
+          numArray.push({ ID: parseInt(word), phrase: parseInt(word)+"" });
+          //copy.splice(copy.indexOf(word), 1);
+        }
+      } else {
+        // Float
+        numArray.push({ ID: parseFloat(word), phrase: parseFloat(word)+"" });
+        //copy.splice(copy.indexOf(word), 1);
+      }
+    });
+
     /* Send my typing info to the database */
     if (stringForSuggestions.length>0 || suggestionSelected)  
       this.amTyping(true);
     else this.amTyping(false); 
     
     conceptsArray = this.getConcepts(stringForSuggestions);
+    conceptsArray = numArray.concat(conceptsArray);
 
     stringForSuggestions!=="" ? 
       this.sendToSuggestionBar(conceptsArray) :
