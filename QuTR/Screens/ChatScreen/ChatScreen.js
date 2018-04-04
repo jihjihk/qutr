@@ -503,6 +503,7 @@ export default class ChatScreen extends Component<{}>  {
         /* Upon selecting a suggestion we want to generate the possible sentence out of the choices that we have 
            This will help us reorder selections in the message composer bar and give a more accurate picture to
            the user of what will be sent as a message */
+
         var message = this.generateSentence(this.state.previousSelectionIDs);
         this.setState({message: message}, () => {
 
