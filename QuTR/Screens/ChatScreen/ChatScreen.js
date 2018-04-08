@@ -70,7 +70,8 @@ export default class ChatScreen extends Component<{}>  {
                 trie: null,
                 theyAreTyping: false,
                 conversationRef: null,
-                userRef: null
+                userRef: null,
+                width: 375.33
               };
   }
 
@@ -119,7 +120,9 @@ export default class ChatScreen extends Component<{}>  {
       }
       if(phraseData) {
         for (let pObj in phraseData) {
-          trie.insertPhrase(pObj, phraseData[pObj].phrase);
+          var phrase = phraseData[pObj].phrase;
+          if (!phrase) trie.insertPhrase(pObj, "");
+          else trie.insertPhrase(pObj, phrase);
         }
       }
       this.setState({
@@ -571,6 +574,17 @@ export default class ChatScreen extends Component<{}>  {
     /* Once the previous selections have been sorted, call renderComposerBar() to display them,
        as well as textChanged to rerender text remaining in the message input box */
     this.renderComposerBar(reorderedSelections);
+    this.scrollToBeginning();
+  }
+
+  changedComposerBar = (width, height) => {
+
+    this.setState({width: width});
+  }
+
+  scrollToBeginning = () => {
+
+    this.refs.cb.scrollTo({x: 0, y: 0, animated: false});
   }
 
   /* Removes the selection from the message composer and memory */
@@ -671,10 +685,12 @@ export default class ChatScreen extends Component<{}>  {
           {this.state.selectionsVisible ? <View style={[styles.scrollWrapper]}>
                                             <ScrollView style={[styles.selectionList]}
                                                         horizontal={true}
-                                                        contentContainerStyle={[styles.childLayout]}
+                                                        contentContainerStyle={{minWidth: this.state.width}}
                                                         overflow="hidden"
+                                                        ref="cb"
                                                         scrollEnabled={true}
-                                                        showsHorizontalScrollIndicator = {false}>
+                                                        showsHorizontalScrollIndicator = {true}
+                                                        onContentSizeChange={(width, height) => {this.changedComposerBar(width, height)}}>
                                               {(!!this.refs.mi) ? 
                                                 this.state.renderPreviousSelections : null}
                                             </ScrollView>

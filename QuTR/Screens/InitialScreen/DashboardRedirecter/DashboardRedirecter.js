@@ -2,7 +2,6 @@ import firebaseService from '../../../services/firebase';
 import React, { Component } from 'react';
 import { StackNavigator } from 'react-navigation';
 import {
-  Alert,
   Platform,
   View
 } from 'react-native';
@@ -39,14 +38,20 @@ export default class App extends Component<{}> {
     super(props);
     this.state={
       page: 0,
-      user: firebaseService.auth().currentUser
+      user: firebaseService.auth().currentUser,
+      qrActive: true
     }
   }
 
   changeTab = (page) => {
 
+    var qrActive;
+    if (page!=0)  qrActive=false;
+    else qrActive = true;   
+
     this.setState({
-      page: page
+      page: page,
+      qrActive: qrActive
     });
   }
 
@@ -81,8 +86,12 @@ export default class App extends Component<{}> {
                                   color={SECONDARY_DARK}>
                             </Icon>
                           </TabHeading>}>
-              <QRScanner changeTab = {this.changeTab}>
-              </QRScanner>
+              {this.state.qrActive ? 
+                 <QRScanner changeTab = {this.changeTab}>
+                 </QRScanner>
+                 :
+                 null
+               }
             </Tab>
           </Tabs>
         </Tab>
