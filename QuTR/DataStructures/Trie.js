@@ -1,8 +1,10 @@
 import TrieNode from './TrieNode.js';
+import SymSpell from './SymSpell.js';
 
 class Trie {
 	constructor() {
 		this.root = new TrieNode();
+		this.spellChecker = new SymSpell({ maxDistance: 1 });
 	}
 
 	insertPhrase(cID, phrase) {
@@ -28,58 +30,50 @@ class Trie {
 				}
 				current.endOfWord = true;
 				current.word = word;
-
-				// Add space to the end of every node and store the concept ID
-				if(!current.children.hasOwnProperty(" ")) {
-					current.children[" "] = new TrieNode();
-				}
-				current.children[" "].concepts.push(cID);
+        		current.concepts.push(cID);	// Add the concept ID associated with the word
 				current = this.root;	// Reset at root for word
+
+				this.spellChecker.add(word);	// Add word to Spell Checker
 			}
 		}
 	}
 
-	wordSuggestions(prefix) {
-		let suggestions = {};
-		let penalty = false;
+	traverseTrie(word) {
 		let current = this.root;
-		let pre = "";
-		const prefixLength = prefix.length;
-		for(let i = 0; i < prefixLength; i++) {
-			let c = prefix[i];
+		for(let i = 0; i < word.length; i++) {
+			let c = word.charAt(i);
 			if(!current.children.hasOwnProperty(c)) {
-				penalty = true;
-				pre = prefix.substring(i);	// Search for this substring in potential suggestions
-				break;
+				return null;
 			}
 			current = current.children[c];
 		}
-		// Breadth First Search to extract all words under a given prefix
-		let queue = [];
-		queue.push(current);
-		while(Array.isArray(queue) && queue.length) {
-			let node = queue.shift();
-			if(node.endOfWord) {
-				// If there is no spelling mistake, add suggestion normally
-				if(!penalty) {
-					suggestions[node.word] = node.children[" "].concepts;
-					node.rank += 1;
-				} else {
-					// Otherwise, allow for only edit distance penalty
-					if(Math.abs(node.word.length - prefixLength) <= 1 && node.word.indexOf(pre.substring(1)) >= 0) {
-						suggestions[node.word] = node.children[" "].concepts;
-						node.rank += 1;
-					}
-				}
-			} else {
-				for(let child in node.children) {
-					if(node.children.hasOwnProperty(child)) {
-						queue.push(node.children[child]);
-					}
-				}
-			}
-		}
-		console.log(suggestions);
+		return current;
+	}
+
+	suggConceptsHelper(prefix) {
+	    // Return all possible conceptIDs for three things:
+	    // 1. An exact match (if found) in the Trie
+	    // 2. Autocompleted words from the Trie with the given prefix
+	    // 3. Words/prefixes with an edit distance of 1
+		let suggestions = [];
+		let penalty = false;
+		let corrSuggs = this.spellChecker.search(prefix);
+	    if(corrSuggs.length === 0) return []; // No suggestions found.
+
+	    if(corrSuggs[0].distance === 0) { // 1. Exact match.
+	      suggestions = this.traverseTrie(corrSuggs[0].term).concepts;
+	    } else {
+	      let node = this.traverseTrie(prefix);
+	      if(node) suggestions = node.concepts; // 2. Autocomplete from Trie.
+	      else {
+	        // 3. Words/prefixes within 1 edit-distance (more suggestions).
+	        corrSuggs.forEach((sugg) => {
+	          let word = sugg.term;
+	          let concepts = this.traverseTrie(word).concepts;
+	          suggestions = suggestions.concat(concepts);
+	        });
+	      }
+	    }
 		return suggestions;
 	}
 
@@ -88,24 +82,19 @@ class Trie {
 		let concepts = {};
 		for(let i = 0; i < inputWords.length; i++) {
 			let word = inputWords[i];
-			let suggs = this.wordSuggestions(word);
-			for(let sugg in suggs) {
-				for(let j = 0; j < suggs[sugg].length; j++) {
-					let concept = suggs[sugg][j];
-					if (!concepts.hasOwnProperty(concept)) {
-						concepts[concept] = 1;
-					} else {
-						if(inputWords.length > 1) {
-							concepts[concept] += 1;
-						}
-					}
+			let suggCons = this.suggConceptsHelper(word);
+			// Count concept IDs
+			suggCons.forEach((conID) => {
+				if(!concepts.hasOwnProperty(conID)) concepts[conID] = 1;
+				else {
+					if(inputWords.length > 1) concepts[conID] += 1;
 				}
-			}
+			});
 		}
-		return this.sortObject(concepts);
+		return (Object.keys(concepts).length === 0 && concepts.constructor === Object) ? [] : this.sortObject(concepts);
 	}
 
-	// Helper function to sort an object in JS
+	// Helper function to sort concept IDs by count
 	sortObject(obj) {
 		let sortable = [];
 		for(let o in obj) {
