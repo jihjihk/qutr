@@ -5,6 +5,7 @@ import {
   Keyboard,
   ActivityIndicator,
   ListView,
+  FlatList,
   Image,
   ScrollView,
   TouchableOpacity,
@@ -71,7 +72,7 @@ export default class ChatScreen extends Component<{}>  {
                 theyAreTyping: false,
                 conversationRef: null,
                 userRef: null,
-                width: 375.33
+                suggestions: []
               };
   }
 
@@ -477,7 +478,7 @@ export default class ChatScreen extends Component<{}>  {
 
   sendToSuggestionBar = (suggestions) => {
 
-    this.refs.sb.populate(suggestions);
+    this.setState({suggestions: suggestions});
   }
 
   /* Comparator for rendering selections in the composer bar according to their order
@@ -619,6 +620,8 @@ export default class ChatScreen extends Component<{}>  {
      })    
   }
 
+  keyExtractor = (item, index) => item.ID+"" || item.phrase+"" || item+"";
+
 
   renderRow = (rd) => {
 
@@ -685,7 +688,7 @@ export default class ChatScreen extends Component<{}>  {
           {this.state.selectionsVisible ? <View style={[styles.scrollWrapper]}>
                                             <ScrollView style={[styles.selectionList]}
                                                         horizontal={true}
-                                                        contentContainerStyle={{minWidth: this.state.width}}
+                                                        contentContainerStyle={!!this.state.width ? {minWidth: this.state.width} : null}
                                                         overflow="hidden"
                                                         ref="cb"
                                                         scrollEnabled={true}
@@ -715,8 +718,14 @@ export default class ChatScreen extends Component<{}>  {
                   right={<ToolbarButton style={this.state.sendStyle} 
                                         name='md-send' 
                                         onPress={() => this.sendMessage()}/>}/>
-          <SuggestionBar ref='sb' 
-                         select = {(suggestion, id) => this.selectSuggestion(suggestion, id)}>    
+          <SuggestionBar ref='sb'> 
+            <FlatList data = {this.state.suggestions}
+                      renderItem={({ item }) => 
+                        <SuggestionButton text={item.phrase}
+                                          id={item.ID}
+                                          toSelect={(suggestion, id) => this.selectSuggestion(suggestion, id)}/>
+                      }
+                      keyExtractor={this.keyExtractor}/>
           </SuggestionBar>
       </Container>
    );
