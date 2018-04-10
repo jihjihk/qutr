@@ -17,9 +17,11 @@ export default StyleSheet.create({
     backgroundColor: SECONDARY_DARK,
     height: windowHeight/SUGGESTIONBAR_HEIGHT,
     borderRightWidth: 0.2,
+    borderLeftWidth: 0.2,
     borderColor: PRIMARY_DARK,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingHorizontal: 5
   },
   text: {
   	textAlign: 'center', 

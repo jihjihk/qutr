@@ -86,12 +86,9 @@ export default class App extends Component<{}> {
                                   color={SECONDARY_DARK}>
                             </Icon>
                           </TabHeading>}>
-              {this.state.qrActive ? 
-                 <QRScanner changeTab = {this.changeTab}>
+                 <QRScanner changeTab = {this.changeTab}
+                            active = {this.state.qrActive}>
                  </QRScanner>
-                 :
-                 null
-               }
             </Tab>
           </Tabs>
         </Tab>

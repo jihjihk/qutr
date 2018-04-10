@@ -102,10 +102,13 @@ export default class QRScanner extends Component<{}>  {
   render() {
     return (
       <View style={styles.Container}>
-        <QRCodeScanner onRead={ this.onSuccess.bind(this) }
-                       cameraStyle = {[styles.Scanner, this.props.style]}
-                       reactivate={true}
-                       reactivateTimeout={5000}/>
+        {this.props.active 
+          ? 
+          <QRCodeScanner onRead={ this.onSuccess.bind(this) }
+                         cameraStyle = {[styles.Scanner, this.props.style]}/>
+          :
+          null
+        }        
       </View>
     );
   };

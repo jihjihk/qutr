@@ -9,7 +9,8 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
-  TouchableHighlight
+  TouchableHighlight,
+  Dimensions
 } from 'react-native';
 import { Container, Title, Text, Icon } from 'native-base';
 import { Icon as ElementsIcon } from 'react-native-elements';
@@ -41,6 +42,8 @@ import Trie from '../../DataStructures/Trie.js';
 import Texts from "../../Texts.js"
 
 const Firebase = require('firebase');
+const windowWidth = Dimensions.get('window').width;
+const SUGGESTIONS_ALLOWED = 20;
 
 export default class ChatScreen extends Component<{}>  {
 
@@ -77,8 +80,10 @@ export default class ChatScreen extends Component<{}>  {
   }
 
   componentWillMount () {
-    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this._keyboardDidShow.bind(this));
-    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this._keyboardDidHide.bind(this));
+    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', 
+                                                        this._keyboardDidShow.bind(this));
+    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', 
+                                                        this._keyboardDidHide.bind(this));
   }
 
   componentWillUnmount () {
@@ -401,7 +406,9 @@ export default class ChatScreen extends Component<{}>  {
 
   textChanged = (value, suggestionSelected, remainderString) => {
 
-    var conceptsArray, stringForSuggestions, potentialMessage = this.state.message;
+    var conceptsArray, 
+        stringForSuggestions, 
+        potentialMessage = this.state.message;
     
     /* Check that the user is not entering an empty string */
     if (/\S/.test(value)) 
@@ -416,8 +423,10 @@ export default class ChatScreen extends Component<{}>  {
       this.refs.mi.logAllProperties(this.refs.mi.input, remainderString);
     }
 
+    this.setState({suggestions: []});
+
     var splitSuggestionString = stringForSuggestions.replace(/^\s+|\s+$/g, '').toLowerCase().split(" ");  // Remove extra whitespace and split
-    //var copy = splitSuggestionString;
+    var copy = splitSuggestionString;
     let numArray = [];
     
     splitSuggestionString.forEach((word) => {
@@ -459,7 +468,8 @@ export default class ChatScreen extends Component<{}>  {
     let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
     conceptCount.sort((a, b) => {
       if(b[1] - a[1] === 0) { // Sorting concepts by phrase length
-        return this.state.phraseData[a[0]].phrase.length - this.state.phraseData[b[0]].phrase.length;
+        return this.state.phraseData[a[0]].phrase.length - 
+              this.state.phraseData[b[0]].phrase.length;
       } else return b[1] - a[1];
     });
     
@@ -478,7 +488,10 @@ export default class ChatScreen extends Component<{}>  {
 
   sendToSuggestionBar = (suggestions) => {
 
-    this.setState({suggestions: suggestions});
+    var tempSuggestions = (suggestions.length < SUGGESTIONS_ALLOWED) ? 
+                           suggestions : 
+                           suggestions.slice(0, SUGGESTIONS_ALLOWED)
+    this.setState({suggestions: tempSuggestions});
   }
 
   /* Comparator for rendering selections in the composer bar according to their order
@@ -529,7 +542,10 @@ export default class ChatScreen extends Component<{}>  {
       if (child.includes("!")) tempChild = tempChild.replace("!", "");
       if (child.includes("* ")) tempChild = tempChild.replace("* ", "");
       else if (child.includes(" *")) tempChild = tempChild.replace(" *", "")
-      phraseAppearanceOrder.push({"text": child, "index": this.state.message.toLowerCase().indexOf(tempChild) })
+      phraseAppearanceOrder.push({"text": child, 
+                                  "index": this.state.message
+                                          .toLowerCase()
+                                          .indexOf(tempChild) })
     })
 
     phraseAppearanceOrder.sort(this.compareObjs);
@@ -622,6 +638,12 @@ export default class ChatScreen extends Component<{}>  {
 
   keyExtractor = (item, index) => item.ID+"" || item.phrase+"" || item+"";
 
+  getSuggestionWidth = () => {
+
+    var widthDivisor = this.state.suggestions.length;
+    return {minWidth: windowWidth/widthDivisor};
+  }
+
 
   renderRow = (rd) => {
 
@@ -639,7 +661,7 @@ export default class ChatScreen extends Component<{}>  {
               </View>);
       }
 
-      else if (!!rd.val().senderID) {
+    else if (!!rd.val().senderID) {
 
         return (<View style={[styles.theirMessageView]}>
                   <Image source={{uri: this.state.theirPicture}} 
@@ -692,10 +714,9 @@ export default class ChatScreen extends Component<{}>  {
                                                         overflow="hidden"
                                                         ref="cb"
                                                         scrollEnabled={true}
-                                                        showsHorizontalScrollIndicator = {true}
-                                                        onContentSizeChange={(width, height) => {this.changedComposerBar(width, height)}}>
-                                              {(!!this.refs.mi) ? 
-                                                this.state.renderPreviousSelections : null}
+                                                        onContentSizeChange={(width, height) => {this.changedComposerBar(width, height)}}
+                                                        showsHorizontalScrollIndicator={false}>
+                                              {this.state.renderPreviousSelections || null}
                                             </ScrollView>
                                           </View>
                                         :
@@ -723,9 +744,11 @@ export default class ChatScreen extends Component<{}>  {
                       renderItem={({ item }) => 
                         <SuggestionButton text={item.phrase}
                                           id={item.ID}
-                                          toSelect={(suggestion, id) => this.selectSuggestion(suggestion, id)}/>
+                                          toSelect={(suggestion, id) => this.selectSuggestion(suggestion, id)}
+                                          style = {this.getSuggestionWidth()}/>
                       }
-                      keyExtractor={this.keyExtractor}/>
+                      keyExtractor={this.keyExtractor}
+                      horizontal/>
           </SuggestionBar>
       </Container>
    );
