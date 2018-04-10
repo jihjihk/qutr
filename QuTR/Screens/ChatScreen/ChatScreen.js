@@ -2,6 +2,7 @@ import firebaseService from '../../services/firebase';
 import React, { Component } from 'react';
 import {
   View,
+  Alert,
   Keyboard,
   ActivityIndicator,
   ListView,
@@ -43,7 +44,7 @@ import Texts from "../../Texts.js"
 
 const Firebase = require('firebase');
 const windowWidth = Dimensions.get('window').width;
-const SUGGESTIONS_ALLOWED = 20;
+const SUGGESTIONS_ALLOWED = 15;
 
 export default class ChatScreen extends Component<{}>  {
 
@@ -65,6 +66,7 @@ export default class ChatScreen extends Component<{}>  {
                 loading: true,
                 dataSource: ds,
                 selectionsVisible: false,
+                messageVisible: true,
                 message: '',
                 renderPreviousSelections: [],
                 previousSelections: [],
@@ -687,7 +689,17 @@ export default class ChatScreen extends Component<{}>  {
     return (
       <Container ref="container" style={[styles.Container]}>
 
-          <Header center={<Title style={[styles.Title]}>{this.state.theirName}</Title>}/>
+          <Header center={<Title style={[styles.Title]}>{this.state.theirName}</Title>}
+                  right={<TouchableHighlight style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+                                                        <ElementsIcon color={(this.state.message.length>0) ? 
+                                                                               SECONDARY : 'black'}
+                                                                      name='thought-bubble' 
+                                                                      type='material-community'
+                                                                      underlayColor='transparent'
+                                                                      onPress={() => {if (this.state.message.length>0)
+                                                                                        Alert.alert("Message", this.state.message)}}>
+                                                        </ElementsIcon>
+                                                      </TouchableHighlight>}/>
           <ChatWindow ref="cw">          
             <ListView dataSource={this.state.dataSource}
                       enableEmptySections={true}
@@ -725,8 +737,8 @@ export default class ChatScreen extends Component<{}>  {
           <Footer left={<TouchableHighlight style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
                           <ElementsIcon color={(this.state.renderPreviousSelections.length>0) ? 
                                                  SECONDARY : 'black'}
-                                        name='thought-bubble' 
-                                        type='material-community'
+                                        name='list' 
+                                        type='material'
                                         underlayColor='transparent'
                                         onPress={() => this.toggleSelections()}>
                           </ElementsIcon>
@@ -739,8 +751,18 @@ export default class ChatScreen extends Component<{}>  {
                   right={<ToolbarButton style={this.state.sendStyle} 
                                         name='md-send' 
                                         onPress={() => this.sendMessage()}/>}/>
-          <SuggestionBar ref='sb'> 
-            <FlatList data = {this.state.suggestions}
+          <SuggestionBar ref='sb'
+                         style={this.state.suggestions.length==0 ? {flex: 1} : null}> 
+            
+            {(this.state.suggestions.length==0) ?
+
+              <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Text style={{alignSelf: 'center'}}>
+                  {Texts.noSuggestions[this.state.defaultLang]}
+                </Text>
+              </View> :
+
+              <FlatList data = {this.state.suggestions}
                       renderItem={({ item }) => 
                         <SuggestionButton text={item.phrase}
                                           id={item.ID}
@@ -749,6 +771,8 @@ export default class ChatScreen extends Component<{}>  {
                       }
                       keyExtractor={this.keyExtractor}
                       horizontal/>
+            }
+
           </SuggestionBar>
       </Container>
    );

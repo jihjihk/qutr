@@ -10,7 +10,7 @@ const windowHeight = Dimensions.get('window').height;
 export default StyleSheet.create({
 
   withKeyboard: {
-    height: windowHeight/SUGGESTIONBAR_HEIGHT, 
+    height: windowHeight/SUGGESTIONBAR_HEIGHT,
   },
   withoutKeyboard: {
   	height: 0,
