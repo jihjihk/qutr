@@ -11,7 +11,7 @@ class Trie {
     // Remove punctuation from phrase
     let punctRE = /[\u2000-\u206F\u2E00-\u2E7F\\!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/g;
     let spaceRE = /\s+/g;
-    let noPuncPhrase = normalizeArabic(phrase.replace(punctRE, "").replace(spaceRE, " ").toLowerCase());
+    let noPuncPhrase = this.normalizeArabic(phrase.replace(punctRE, "").replace(spaceRE, " ").toLowerCase());
 
     let current = this.root;
     let words = noPuncPhrase.split(" ");
@@ -100,7 +100,7 @@ class Trie {
   }
 
   suggConcepts(prefix) {
-    let inputWords = normalizeArabic(prefix.replace(/^\s+|\s+$/g, '').toLowerCase()).split(" ");  // Remove extra whitespace and split
+    let inputWords = this.normalizeArabic(prefix.replace(/^\s+|\s+$/g, '').toLowerCase()).split(" ");  // Remove extra whitespace and split
     let concepts = {};  // Combined object for all concepts w/ count
     let suggCons = {};  // Combined object for all concepts b/ word
     for(let i = 0; i < inputWords.length; i++) {
