@@ -11,7 +11,7 @@ class Trie {
     // Remove punctuation from phrase
     let punctRE = /[\u2000-\u206F\u2E00-\u2E7F\\!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/g;
     let spaceRE = /\s+/g;
-    let noPuncPhrase = phrase.replace(punctRE, "").replace(spaceRE, " ").toLowerCase();
+    let noPuncPhrase = normalizeArabic(phrase.replace(punctRE, "").replace(spaceRE, " ").toLowerCase());
 
     let current = this.root;
     let words = noPuncPhrase.split(" ");
@@ -100,7 +100,7 @@ class Trie {
   }
 
   suggConcepts(prefix) {
-    let inputWords = prefix.replace(/^\s+|\s+$/g, '').toLowerCase().split(" ");  // Remove extra whitespace and split
+    let inputWords = normalizeArabic(prefix.replace(/^\s+|\s+$/g, '').toLowerCase()).split(" ");  // Remove extra whitespace and split
     let concepts = {};  // Combined object for all concepts w/ count
     let suggCons = {};  // Combined object for all concepts b/ word
     for(let i = 0; i < inputWords.length; i++) {
@@ -140,6 +140,20 @@ class Trie {
       return b[1] - a[1];
     });
     return sortable;  // Returns array of 2-tuple arrays [[c1, 2], [c2, 1], ... etc.]
+  }
+
+  normalizeArabic(phrase) {
+  	let normPhrase = phrase;
+  	// Alif
+  	normPhrase = normPhrase.replace(/\u0623/g, "\u0627");
+  	normPhrase = normPhrase.replace(/\u0625/g, "\u0627");
+  	normPhrase = normPhrase.replace(/\u0622/g, "\u0627");
+  	// Ya
+  	normPhrase = normPhrase.replace(/\u0649/g, "\u064A");
+  	// Tamar Boota
+  	normPhrase = normPhrase.replace(/\u0629/g, "\u0647");
+
+  	return normPhrase;
   }
 }
 
