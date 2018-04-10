@@ -4,7 +4,7 @@ class TrieNode {
 		this.endOfWord = false;
 		this.rank = 0;
 		this.word = "";
-		this.concepts = [];
+		this.concepts = {};
 	}
 }
 
