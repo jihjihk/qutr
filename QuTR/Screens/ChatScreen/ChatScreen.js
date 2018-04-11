@@ -128,7 +128,12 @@ export default class ChatScreen extends Component<{}>  {
       }
       if(phraseData) {
         for (let pObj in phraseData) {
-          var phrase = phraseData[pObj].phrase;
+          let phrase = phraseData[pObj].phrase;
+          if(lang === "中文") {
+            let hanzi = require('hanzi');
+            hanzi.start();
+            phrase = hanzi.segment(phrase).join(" ");
+          } 
           if (!phrase) trie.insertPhrase(pObj, "");
           else trie.insertPhrase(pObj, phrase);
         }
