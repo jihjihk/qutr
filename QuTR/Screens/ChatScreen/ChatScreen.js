@@ -757,7 +757,7 @@ export default class ChatScreen extends Component<{}>  {
             {(this.state.suggestions.length==0) ?
 
               <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Text style={{alignSelf: 'center'}}>
+                <Text style={{alignSelf: 'center', fontStyle: 'italic'}}>
                   {Texts.noSuggestions[this.state.defaultLang]}
                 </Text>
               </View> :

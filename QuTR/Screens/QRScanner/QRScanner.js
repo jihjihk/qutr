@@ -15,7 +15,8 @@ export default class QRScanner extends Component<{}>  {
   constructor(props) {
     super(props);
     this.state={
-      user: firebaseService.auth().currentUser
+      user: firebaseService.auth().currentUser,
+      myID: firebaseService.auth().currentUser.uid
     }
   }
 
@@ -28,7 +29,7 @@ export default class QRScanner extends Component<{}>  {
 
     firebaseService.database().ref()
     .child('users')
-    .child(this.state.user.uid)
+    .child(this.state.myID)
     .off('value');
   }
 
@@ -36,7 +37,7 @@ export default class QRScanner extends Component<{}>  {
 
     firebaseService.database().ref()
     .child('users')
-    .child(this.state.user.uid)
+    .child(this.state.myID)
     .on('value', (snapshot) => {
       var conversation = snapshot.val().conversation;
       if (!!conversation) {
@@ -47,21 +48,28 @@ export default class QRScanner extends Component<{}>  {
 
   onSuccess(e) {
 
+    if (!this.props.active) return;
+
+    var eSplit = e.data.split("/");
+    var theirKey = eSplit[eSplit.length-1];
+
+    /* Can't scan own code */
+    if (theirKey==this.state.myID)  return;
+
     if (!!this.state.conversation) {
       firebaseService.database().ref()
       .child('conversations')
       .child(this.state.conversation)
       .remove(() => {
-        this.processNewConversation(e);
+        this.processNewConversation(theirKey);
       });
     }
-    else this.processNewConversation(e);
+    else this.processNewConversation(theirKey);
   }
 
-  processNewConversation = (e) => {
-    var eSplit = e.data.split("/");
-    var theirKey = eSplit[eSplit.length-1];
-    var myKey = firebaseService.auth().currentUser.uid;
+  processNewConversation = (theirKey) => {
+    
+    var myKey = this.state.myID;
     var newChatKey = firebaseService.database().ref().child('chats/').push().key; /* Key of the new conversation */
     var date = Firebase.database.ServerValue.TIMESTAMP;
     
@@ -73,7 +81,7 @@ export default class QRScanner extends Component<{}>  {
     this.createConversation(newChatKey, convInfo);
       
     /* Redirect user to ChatScreen upon a successful scan */
-    setTimeout(() => {this.props.changeTab(1)}, 750);
+    setTimeout(() => {this.props.changeTab(1)}, 250);
   }
 
   createConversation = (chatKey, message) => {
@@ -102,13 +110,9 @@ export default class QRScanner extends Component<{}>  {
   render() {
     return (
       <View style={styles.Container}>
-        {this.props.active 
-          ? 
-          <QRCodeScanner onRead={ this.onSuccess.bind(this) }
-                         cameraStyle = {[styles.Scanner, this.props.style]}/>
-          :
-          null
-        }        
+        <QRCodeScanner onRead={ this.onSuccess.bind(this) }
+                       cameraStyle = {[styles.Scanner, this.props.style]}
+                       reactivate={false}/>
       </View>
     );
   };
