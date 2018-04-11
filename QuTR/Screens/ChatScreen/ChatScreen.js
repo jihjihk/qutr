@@ -301,6 +301,7 @@ export default class ChatScreen extends Component<{}>  {
 
   removeAllAsterisk = (final) => {
     var astlist = [" *", "* ", "*"]
+    final+="";
 
     //extra whitespace removal if the phrase is returned as it self.
 
@@ -314,7 +315,7 @@ export default class ChatScreen extends Component<{}>  {
 
   generateSentence = (selectedPhraseID) => {
 
-    var myLang = "English";
+    var myLang = this.state.defaultLang;
     var phraseDB;
 
     var np = "",
@@ -342,11 +343,9 @@ export default class ChatScreen extends Component<{}>  {
     else if (selectedPhraseID.length == 1) {
 
       var pid = selectedPhraseID[0];
-      if (getPhrase(phraseDB, pid))
-        final = getPhrase(phraseDB, pid);
-      else
-        final = pid;
-      return capitalize(removeAllAsterisk(final));
+      var phrase = this.getPhrase(phraseDB, pid);
+      final = (!!phrase) ? phrase : pid;
+      return this.capitalize(this.removeAllAsterisk(final));
 
     }
 
@@ -355,8 +354,8 @@ export default class ChatScreen extends Component<{}>  {
 
       selectedPhraseID.forEach((pid) => {
 
-        var myPhrase = getPhrase(phraseDB, pid);
-        var myPos = getPos(phraseDB, pid);
+        var myPhrase = this.getPhrase(phraseDB, pid);
+        var myPos = this.getPos(phraseDB, pid);
 
         //query item is a phrase id
         if (myPhrase) {
@@ -420,7 +419,7 @@ export default class ChatScreen extends Component<{}>  {
       //user input a particle but not a number
       //in this case just remove asterisk and insert into nounArr
       else {
-        nounArr.unshift(removeAllAsterisk(unit));
+        nounArr.unshift(this.removeAllAsterisk(unit));
       }
     }
     //input number but not enough particles, so we just push them into nounArr
@@ -432,7 +431,7 @@ export default class ChatScreen extends Component<{}>  {
         temp = temp.replace("*", nounArr[0]);
         nounArr.shift();
       } else {
-        temp += temp.replace("*", " ");
+        temp = temp.replace("*", " ");
       }
     }
     final += temp;
@@ -440,7 +439,7 @@ export default class ChatScreen extends Component<{}>  {
     //handling leftover noun phrases
     final += nounArr.join(". ");
 
-    return capitalize(final);
+    return this.capitalize(final);
   }
 
   createMessage = (ownerID, message) => {
