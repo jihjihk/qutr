@@ -119,19 +119,20 @@ export default class ChatScreen extends Component<{}>  {
       let lang = snapshot.val().language;
       let trie = new Trie();
       let phraseData = null;
+      let hanzi = null;
       if (lang === "English") {
         phraseData = en;
       } else if (lang === "عربية") {
         phraseData = ar;
       } else if (lang === "中文") {
         phraseData = cn;
+        hanzi = require('hanzi');
+        hanzi.start();
       }
       if(phraseData) {
         for (let pObj in phraseData) {
           let phrase = phraseData[pObj].phrase;
           if(lang === "中文") {
-            let hanzi = require('hanzi');
-            hanzi.start();
             phrase = hanzi.segment(phrase).join(" ");
           } 
           if (!phrase) trie.insertPhrase(pObj, "");
