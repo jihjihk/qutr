@@ -30,7 +30,9 @@ class Trie {
         }
         current.endOfWord = true;
         current.word = word;
-        current.concepts.push(cID); // Add the concept ID associated with the word
+        // Add the concept ID associated with the word (checking for duplicates)
+        if(!current.concepts.hasOwnProperty(cID)) current.concepts[cID] = true;
+        
         current = this.root;  // Reset at root for word
 
         this.spellChecker.add(word);  // Add word to Spell Checker
@@ -71,6 +73,13 @@ class Trie {
     }
   }
 
+  // Helper function to convert concepts object to array
+  objKeysToArray(obj) {
+    let arr = [];
+    for(let key in obj) arr.push(key);
+    return arr;
+  }
+
   suggConceptsHelper(prefix) {
     // Return all possible conceptIDs for three things:
     // 1. An exact match (if found) in the Trie
@@ -80,11 +89,11 @@ class Trie {
     let corrSuggs = this.spellChecker.search(prefix);
     if(corrSuggs.length === 0) return null; // No suggestions found.
     // 1. Exact match.
-    if(corrSuggs[0].distance === 0) suggestions.exact = this.traverseTrie(corrSuggs[0].term).concepts;
+    if(corrSuggs[0].distance === 0) suggestions.exact = this.objKeysToArray(this.traverseTrie(corrSuggs[0].term).concepts);
 
     // 2. Autocomplete from Trie.
     let node = this.traverseTrie(prefix, false);
-    if(node) suggestions.autoCom = node.concepts; 
+    if(node) suggestions.autoCom = this.objKeysToArray(node.concepts); 
 
     // 3. Words/prefixes within 1 edit-distance (more suggestions).
     let i = (suggestions.exact.length !== 0) ? 1 : 0; // To skip concepts from 1.
@@ -92,7 +101,7 @@ class Trie {
       let sugg = corrSuggs[i];
       let word = sugg.term;
       if(suggestions.autoCom.length !== 0 && node.word === word) continue;  // To skip concepts from 2.
-      let concepts = this.traverseTrie(word).concepts;
+      let concepts = this.objKeysToArray(this.traverseTrie(word).concepts);
       suggestions.autoCorr = suggestions.autoCorr.concat(concepts);
     }
     
@@ -143,17 +152,17 @@ class Trie {
   }
 
   normalizeArabic(phrase) {
-  	let normPhrase = phrase;
-  	// Alif
-  	normPhrase = normPhrase.replace(/\u0623/g, "\u0627");
-  	normPhrase = normPhrase.replace(/\u0625/g, "\u0627");
-  	normPhrase = normPhrase.replace(/\u0622/g, "\u0627");
-  	// Ya
-  	normPhrase = normPhrase.replace(/\u0649/g, "\u064A");
-  	// Tamar Boota
-  	normPhrase = normPhrase.replace(/\u0629/g, "\u0647");
+    let normPhrase = phrase;
+    // Alif
+    normPhrase = normPhrase.replace(/\u0623/g, "\u0627");
+    normPhrase = normPhrase.replace(/\u0625/g, "\u0627");
+    normPhrase = normPhrase.replace(/\u0622/g, "\u0627");
+    // Ya
+    normPhrase = normPhrase.replace(/\u0649/g, "\u064A");
+    // Tamar Boota
+    normPhrase = normPhrase.replace(/\u0629/g, "\u0647");
 
-  	return normPhrase;
+    return normPhrase;
   }
 }
 
