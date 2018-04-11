@@ -86,14 +86,16 @@ class Trie {
     // 2. Autocompleted words from the Trie with the given prefix
     // 3. Words/prefixes with an edit distance of 1
     let suggestions = { exact: [], autoCom: [], autoCorr: [] };
-    let corrSuggs = this.spellChecker.search(prefix);
-    if(corrSuggs.length === 0) return null; // No suggestions found.
-    // 1. Exact match.
-    if(corrSuggs[0].distance === 0) suggestions.exact = this.objKeysToArray(this.traverseTrie(corrSuggs[0].term).concepts);
 
-    // 2. Autocomplete from Trie.
+    // 2. Autocomplete from Trie (to get first autocomplete suggestion within edit distance > 1).
     let node = this.traverseTrie(prefix, false);
-    if(node) suggestions.autoCom = this.objKeysToArray(node.concepts); 
+    if(node) suggestions.autoCom = this.objKeysToArray(node.concepts);
+
+    let corrSuggs = this.spellChecker.search(prefix);
+    if(!node && corrSuggs.length === 0) return null; // No suggestions found within 1-Edit Distance
+
+    // 1. Exact match.
+    if(corrSuggs.length !== 0 && corrSuggs[0].distance === 0) suggestions.exact = this.objKeysToArray(this.traverseTrie(corrSuggs[0].term).concepts);
 
     // 3. Words/prefixes within 1 edit-distance (more suggestions).
     let i = (suggestions.exact.length !== 0) ? 1 : 0; // To skip concepts from 1.
