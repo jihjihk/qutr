@@ -119,7 +119,6 @@ class Trie {
       if(suggestions) {
         if(suggestions.exact.length > 5) {  // 1st preference is exact match.
           suggCons[word] = suggestions.exact;
-          break;
         } else {
           suggCons[word] = suggestions.exact.concat(suggestions.autoCom);       // 2nd preference is autocomplete
           if(suggCons[word].length < 5) suggCons[word] = suggCons[word].concat(suggestions.autoCorr);  // 3rd is auto-correct
