@@ -275,20 +275,62 @@ export default class ChatScreen extends Component<{}>  {
   should we have a separate data structure that is a reverse {phrase: ID} relationship so it's fast to look up?
   */
   
+  hasNumber = (myString) => {
+    return /\d/.test(myString);
+  }
+
+  capitalize = (myString) => {
+    return myString.charAt(0).toUpperCase() + myString.slice(1);
+  }
+
+  getPhrase = (db, idstr) => {
+    try {
+      return phrase = db[idstr].phrase;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  getPos = (db, idstr) => {
+    try {
+      return phrase = db[idstr].pos;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  removeAllAsterisk = (final) => {
+    var astlist = [" *", "* ", "*"]
+
+    //extra whitespace removal if the phrase is returned as it self.
+
+    astlist.forEach((ast) => {
+      if (final.includes(ast)) {
+        final = final.replace(ast, "");
+      }
+    })
+    return final;
+  }
+
   generateSentence = (selectedPhraseID) => {
 
-    var myLang = this.state.defaultLang;
+    var myLang = "English";
     var phraseDB;
 
-    var np = "";
-    var temp = "";
-    var final = "";
-    var prt = "";
-    var qnt = "";
+    var np = "",
+      temp = "",
+      final = "",
+      unit = "";
 
-    if (myLang == "عربية") phraseDB = ar;
-    else if (myLang == "中文") phraseDB = cn;
-    else phraseDB = en;
+    var nounArr = [];
+    var numArr = [];
+
+    if (myLang == "عربية")
+      phraseDB = ar;
+    else if (myLang == "中文")
+      phraseDB = cn;
+    else
+      phraseDB = en;
 
     //input array has 0
     if (selectedPhraseID.length == 0) {
@@ -298,80 +340,107 @@ export default class ChatScreen extends Component<{}>  {
     //there is only 1 phrase ID in the array,
     //so we return the phrase by itself
     else if (selectedPhraseID.length == 1) {
-      var onlypid = selectedPhraseID[0];
 
-      if (typeof(onlypid) == "number") {
-        final += onlypid;
-      }
-      else {
-        final = phraseDB[onlypid].phrase;
-      }
+      var pid = selectedPhraseID[0];
+      if (getPhrase(phraseDB, pid))
+        final = getPhrase(phraseDB, pid);
+      else
+        final = pid;
+      return capitalize(removeAllAsterisk(final));
 
-      var astlist = [" *", "* ", "*"]
-
-      //extra whitespace removal if the phrase is returned as it self.
-      astlist.forEach((ast) => {
-        if (final.includes(ast)) {
-          final = final.replace(ast, "");
-        }
-      }) 
     }
 
     //input has 2 or more phrases
-    else {      
+    else {
+
       selectedPhraseID.forEach((pid) => {
-        //query is an integer; append as itself
-        if (typeof(pid) == "number") {
-          qnt += pid;
-        }
+
+        var myPhrase = getPhrase(phraseDB, pid);
+        var myPos = getPos(phraseDB, pid);
+
         //query item is a phrase id
-        else {
+        if (myPhrase) {
+
           //query item is a complete sentence
-          if (phraseDB[pid].pos == "sent") {
-            final += phraseDB[pid].phrase + " ";
+          if (myPos == "sent") {
+            final += myPhrase + " ";
           }
-
-          //if the query is a particle
-          //CHECK if number is always at the beginning
-          else if (phraseDB[pid].pos == "prt") {
-            unit = phraseDB[pid].phrase;
-
-            if (unit.includes("*")) {
-              unit = unit.replace("*", qnt);
+          //query item is a template
+          else if (myPhrase.includes("*")) {
+            if (myPos == "vp") {
+              temp += myPhrase + " ";
+            } else if (myPos == "prt") {
+              unit = myPhrase;
             }
-            else {
-              unit = qnt + " " + unit;
-            }
-            np += " " + unit + " ";
           }
-
+          //query item is NP, ADJ, ADV or VP and PRT without *
           else {
-            if (phraseDB[pid].phrase.includes("*") && phraseDB[pid].pos == "vp") {
-              temp = phraseDB[pid].phrase;
-            }
+            //if this phrase is a noun, then insert at the beginning of chunk array 
+            //to increase priority of replacement
+
+            if (myPos == "np")
+              nounArr.unshift(myPhrase);
             else
-              np += phraseDB[pid].phrase.replace("*", "").toLowerCase();
+              nounArr.push(myPhrase);
+          }
+        }
+
+        //query is a number, time, date or a unseen word;
+        // append as itself
+        else {
+          //word is JUST A NUMBER
+          if (typeof(pid) == "number") {
+            numArr.push(pid);
+          }
+          //word is a string BUT CONTAINS A NUMBER (maybe date time object or a FLIGHT NUMBER)
+          else if (hasNumber(pid)) {
+            //for now just treat as a noun object
+            nounArr.unshift(pid);
+
+          }
+          //word is just an unseen string of characters
+          //maybe a proper noun etc
+          else {
+            nounArr.push(pid);
           }
         }
       });
     }
 
-    //replace asterisk with noun phrase or empty string
-    if (temp != "") {
-      temp = temp.replace("*", np);
-      final += temp;
+    //user selected one of the particles with *
+    if (unit != "") {
+      if (numArr.length > 0) {
+        //replace unit particle with the first number we see,
+        //then pop the first number in numArr because it's already used
+        //then insert the newly constructed number+particle word as a noun phrase into nounArr
+        unit = unit.replace("*", numArr[0]);
+        numArr.shift();
+        nounArr.unshift(unit);
+      }
+      //user input a particle but not a number
+      //in this case just remove asterisk and insert into nounArr
+      else {
+        nounArr.unshift(removeAllAsterisk(unit));
+      }
     }
-    
-    else {
-      final += np;
-    }
+    //input number but not enough particles, so we just push them into nounArr
+    nounArr = nounArr.concat(numArr);
 
-    //capitalize the sentence if English
-    if (myLang == "English") {
-      final = final.charAt(0).toUpperCase() + final.slice(1);
+    //handling template replacement
+    while (temp.includes("*")) {
+      if (nounArr.length > 0) {
+        temp = temp.replace("*", nounArr[0]);
+        nounArr.shift();
+      } else {
+        temp += temp.replace("*", " ");
+      }
     }
+    final += temp;
 
-    return final;
+    //handling leftover noun phrases
+    final += nounArr.join(". ");
+
+    return capitalize(final);
   }
 
   createMessage = (ownerID, message) => {

@@ -12,7 +12,7 @@
 10,* month(s),*个月,*  أشهر,prt
 11,* p.m.,上午*点,* مساءً,prt
 12,* people,*个人,* أشخاص,prt
-13,* people.,四口人。,,sent
+13,* people.,四口人。,,vp
 14,* pound(s),磅,جنيه,prt
 15,* week(s),*个星期,‏* أسبوع,prt
 16,* year(s),*年,‏* سنوات,prt
@@ -25,8 +25,7 @@
 23,a glass of wine,一杯酒,كأس من النبيذ,np
 24,a pint,一品脱,نصف لتر,np
 25,A small cup of strong black coffee without milk or cream.,小杯浓的黑咖啡，不加牛奶和奶油。,,sent
-26,a table for * people,*人的座位,طاولة ل * شخص,np
-27,"A table for *, please.",*位。,,sent
+27,"A table for *, please.",*位。,,vp
 28,A waiter will come to take your order.,服务员会过来为您点餐。,,sent
 29,abdomen,腹部,بطن,np
 30,able,能干的,,np
@@ -499,10 +498,10 @@
 497,Do you accept credit cards?,你接受信用卡吗？,هل تقبل بطاقات الائتمان؟,sent
 498,Do you accept US dollars?,你接受美元吗？,هل تقبل الدولار الأمريكي؟,sent
 499,Do you go to *?,去不去*?,هل تذهب إلى *؟,vp
-500,Do you have * newspapers?,你们有没有中文报纸?,,sent
+500,Do you have * newspapers?,你们有没有中文报纸?,,vp
 501,Do you have a reservation?,您有预订吗?,,sent
 502,Do you have a safe?,你们有没有保险箱？,هل لديك خزنة؟,sent
-503,Do you have a table for * please?,你能安排一张四人桌吗?,,sent
+503,Do you have a table for * please?,你能安排一张四人桌吗?,,vp
 504,Do you have an English menu?,你有没有英文菜单？,هل لديك قائمة بالإنجليزية؟,sent
 505,Do you have any bages to check?,你有什么行李要托运吗?,,sent
 506,Do you have any direct flights coming back?,回程时你们有直飞的班机吗?,,sent
@@ -534,7 +533,7 @@
 532,Do you serve alcohol?,你们销售酒精类饮品吗？,هل تقدمون أي خمور؟,sent
 533,Do you serve anything else besides drinks?,除了喝的你们这还有什么别的吗?,,sent
 534,Do you ship overseas?,可以邮寄到海外吗？,هل هن,sent
-535,Do you speak *?,你说日语吗?,,sent
+535,Do you speak *?,你说日语吗?,,vp
 536,Do you speak English?,你会说英语吗？,هل هناك شحن دولى؟,sent
 537,Do you take * currency?,*元可以吗？,هل تقبلون عملة *؟,vp
 538,Do you think you could tell the kitchen to speed it up a little bit?,你能告诉厨房速度快一点吗?,,sent
@@ -915,7 +914,7 @@
 913,I am going to transfer in *.,我要转机去*。,,vp
 914,I am interested in ….,我的爱好是…,,sent
 915,I am sick.,我生病了。,انا مريض,sent
-916,I booked a single room in your hotel for *.,我在你们宾馆预定了这周五的单人房间。,,sent
+916,I booked a single room in your hotel for *.,我在你们宾馆预定了这周五的单人房间。,,vp
 917,I can a little.,只会一点。,,sent
 918,I can't afford it.,我付不起。,لا أستطيع تحمل هذا,sent
 919,I can't find my baggage.,我找不到行李了。,,sent
@@ -923,7 +922,7 @@
 921,I can't get my bag to fit into the overhead compartment.,我的包放不进上面的行李箱了。,,sent
 922,I can't speak *.,我不会讲*。,لا اتكلم *.,vp
 923,I can't understand why this restaurant always serves so slowly.,我不明白这个饭店为什么总是上菜这么慢。,,sent
-924,I come from *.,我从加拿大来。,,sent
+924,I come from *.,我从加拿大来。,,vp
 925,I didn't reserve a table.,我没有预订.,,sent
 926,I don't eat *.,我不吃*。,لا آكل *.,vp
 927,I don't feel well.,我觉的不太舒服。,,sent
@@ -1615,7 +1614,7 @@
 1613,Please Call The Hotel Operator For More Information.,可以打电话询问酒店接线员更多信息。,,sent
 1614,Please cancel my order if the food is not ready.,如果饭菜没做好的话请取消我的点餐吧。,,sent
 1615,Please check in at the airport two hours before departure.,请于起飞前*小时到机场办理登机手续。,,vp
-1616,Please check-in at zone *,请到*区办理登机手续。,,sent
+1616,Please check-in at zone *,请到*区办理登机手续。,,vp
 1617,Please clean my room.,请清洁我的房间,من فضلك نظف غرفتي.,sent
 1618,Please clean up the table.,请收拾一下桌子。,,sent
 1619,Please clear the plates.,请洗干净这些碟子,من فضلك نظف الصحون.,sent
@@ -1646,7 +1645,7 @@
 1644,Please put me on the waiting list.,请把我列为候补。,,sent
 1645,Please put your baggage on the scale.,请把您的行李放在磅秤上。,,sent
 1646,Please put your package under your seat.,请把你的行李放在座位下面。,,sent
-1647,Please queue for flights to * destinations.,请排队办理前往*各地的登机手续。,,sent
+1647,Please queue for flights to * destinations.,请排队办理前往*各地的登机手续。,,vp
 1648,Please raise your arms.,请您抬起双臂。,,sent
 1649,Please Return This Key Card To The Front Desk When You Check Out.,结账时请将钥匙卡归还前台。,,sent
 1650,Please rush our order.,请快点做好我们的菜。,,sent
@@ -1686,7 +1685,7 @@
 1684,Price According To Season And Size Of Flat.,价格按季节和公寓大小而定。,,sent
 1685,Prices of food in this restaurant are much higher than that in other restaurants.,这家餐厅的价格比其他的餐厅高。,,sent
 1686,prize fellow,奖学金生,,np
-1687,Probably * hours.,大概*小时。,,sent
+1687,Probably * hours.,大概*小时。,,vp
 1688,professionalhistory,职业经历,,np
 1689,professionals & technical,专业技术人员,,np
 1690,prohibited item,违禁物品,,np
@@ -1958,7 +1957,7 @@
 1956,That is really disappointing.,真让人失望。,,sent
 1957,That sounds not bad at all. I'll take it.,听起来还不错。这个房间我订了。,,sent
 1958,That table is reserved.,那张桌子被预定了。,,sent
-1959,That will be * night(s).,那就是*天。,,sent
+1959,That will be * night(s).,那就是*天。,,vp
 1960,"That's my number, e-mail.",这里是我的电话号码、电邮。,,sent
 1961,That's too expensive.,太贵了。,هذا غال جدا.,sent
 1962,"The balance of the fare is * dollars, you have to pay it by yourself.",票价差额为*元，需要你自理。,,vp
@@ -1980,7 +1979,7 @@
 1978,The Gold Coast,在黄金海岸,والذهب الساحل,np
 1979,The kitchen is very busy today.,今天厨房很忙。,,sent
 1980,The name is *.,名字是*。,,vp
-1981,The next flight available is to *.,下一班可以登机的航班是飞往*。,,sent
+1981,The next flight available is to *.,下一班可以登机的航班是飞往*。,,vp
 1982,The one by the window has been taken by others.,靠窗的那张已经有人预订了。,,sent
 1983,"The organic vegetables are marked with the blue label. Here, do you see?",有机蔬菜都有蓝色的标签。在这里，看到了吗?,,sent
 1984,The overhead compartments are all full.,上面的行李箱都满了。,,sent
@@ -2064,7 +2063,7 @@
 2062,ticket office,售票处,,np
 2063,Tijuana,蒂华纳,تيخوانا,np
 2064,to,前往城市,,np
-2065,to *,去*,إلى *,adv
+2065,To *.,去*。,إلى *.,vp
 2066,to board a plane,上飞机,,np
 2067,to face the wind,迎风,,np
 2068,to fly with the wind,顺风,,np
@@ -2257,14 +2256,14 @@
 2255,What kind of work do you do?,你从事哪类工作?,,sent
 2256,What kinds do you have?,你们都有什么果汁?,,sent
 2257,What should I do about it?,我该怎么做呢?,,sent
-2258,What sort of job do you do at *?,你在*担任什么职务?,,sent
+2258,What sort of job do you do at *?,你在*担任什么职务?,,vp
 2259,What time do I have to be at the airport?,我什么时候到机场?,,sent
 2260,What time do you close?,你们几点开始关门?,,sent
 2261,What time do you open?,你们几点开始营业?,,sent
 2262,What time do you start check-in?,你们何时开始办理登机手续？,,sent
 2263,What time does the inflight movie start?,机上电影什么时候开始播放?,,sent
 2264,What time does the plane take off?,飞机何时起飞呢?,,sent
-2265,What time is *?,*是什么时候？,ما هو توقيت *؟,sent
+2265,What time is *?,*是什么时候？,ما هو توقيت *؟,vp
 2266,What time is it?,现在几点？,كم الساعة؟,sent
 2267,What time should I check in?,我应该什么时间办理登机手续呢?,,sent
 2268,What time will this bus arrive?,公车什么时候到？,متى ستصل هذه الحافلة؟,vp
@@ -2278,7 +2277,7 @@
 2276,What?,什么？,ماذا؟,sent
 2277,What's the baggage allowance?,行李限重是多少?,,sent
 2278,What's the fare for an economy class ticket?,经济舱的票价是多少?,,sent
-2279,What's the fare to * for the economy class?,去*的经济舱机票多少钱?,,sent
+2279,What's the fare to * for the economy class?,去*的经济舱机票多少钱?,,vp
 2280,What's the gate number?,在几号门?,,sent
 2281,What's the price?,房间的价格是多少?,,sent
 2282,What's the rate for a standard room?,标准房间多少钱?,,sent
@@ -2296,7 +2295,7 @@
 2294,When do I have to check out?,何时要退房？,متى يجب علي تسجيل الخروج؟,sent
 2295,When do you start to serve dinner?,请问晚餐几点开始供应?,,sent
 2296,When does the bus for * leave?,去*的公车什么时候离开？,متى تنطلق الحافلة المتجه إلى*؟,vp
-2297,When does the * close?,*什么时候打烊呢？,,sent
+2297,When does the * close?,*什么时候打烊呢？,,vp
 2298,When does the train for * leave?,去*的火车什么时候离开？,متى ينطلق القطار المتجه إلى*؟,vp
 2299,When does your flight land?,飞机什么时候着陆?,,sent
 2300,When is closing time?,几点关门？,ما هو توقيت الإغلاق؟,sent
@@ -2337,7 +2336,7 @@
 2335,Where is the bathroom?,洗手间在哪里？,أين الحمام؟,sent
 2336,Where is the boarding gate for this flight?,这班飞机的登机口在哪儿?,,sent
 2337,Where is the bus to *?,到*的巴士在哪？,أين الحافلة المتجهة إلى *؟,vp
-2338,Where is the check-in counter for * Airlines?,请问*航空公司办理登机手续的柜台在哪里?,,sent
+2338,Where is the check-in counter for * Airlines?,请问*航空公司办理登机手续的柜台在哪里?,,vp
 2339,Where is the fruit and vegetable section?,水果蔬菜区在哪里?,,sent
 2340,Where is the gate?,登机口在哪儿?,,sent
 2341,Where is the lavatory?,请问洗手间在哪里?,,sent
@@ -2394,7 +2393,7 @@
 2392,Would you mind waiting until one is free?,您介意等一下空出桌子吗?,,sent
 2393,Would you please bring me a knife and fork?,能给我拿副刀叉吗?,,sent
 2394,Would you please help me to get my boarding pass?,可以帮我换登机牌吗?,,sent
-2395,Would you please make my reservation to * for tomorrow?,请帮我预订明天去*的机票好吗?,,sent
+2395,Would you please make my reservation to * for tomorrow?,请帮我预订明天去*的机票好吗?,,vp
 2396,Would you please serve a little quicker?,能上菜快点吗?,,sent
 2397,Would you please show me your ticket and boarding pass?,请出示一下你的机票和登机牌好吗?,,sent
 2398,"Would you please tell me your name, telephone and ID number?",能告诉我你的名字、手机号和身份证号码吗?,,sent
@@ -2432,12 +2431,12 @@
 2430,You can't take it with you into the aircraft.,您不能把它带上飞机。,,sent
 2431,You have a lot of baggage.,您有好多行李。,,sent
 2432,You have a problem with your attitude.,你的态度有问题。,,sent
-2433,You have to be there * hours before departure time.,你要在飞机起飞前两个小时到达那里。,,sent
+2433,You have to be there * hours before departure time.,你要在飞机起飞前两个小时到达那里。,,vp
 2434,You have to be there half an hour before departure time.,你应该在飞机起飞之前半个小时到那。,,sent
 2435,You look familiar.,你看起来很眼熟。,,sent
 2436,You look like one of my friends.,你看起来像我的一个朋友。,,sent
 2437,You look like someone I know.,你看起来像我认识的一个人。,,sent
-2438,You may check in at the self-service kiosk area in zones *,你可以在G和H区自助服务亭办理登机手续。,,sent
+2438,You may check in at the self-service kiosk area in zones *,你可以在G和H区自助服务亭办理登机手续。,,vp
 2439,You may choose from the fish and beef.,你可以选择鱼或者是牛肉。,,sent
 2440,You may feel much better if you chew some gum or peanuts.,如果嚼点口香糖或花生会感觉舒服些。,,sent
 2441,You may go now. Please take your things.,你可以走了，带好你的东西。,,sent
@@ -2470,4 +2469,3 @@
 2468,zero,零,صفر,num
 2469,Zimbabwe,津巴布韦,زيمبابوي,np
 2470,Zurich,苏黎世,زيوريخ,np
-2471,,,,sent
