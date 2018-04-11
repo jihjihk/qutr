@@ -9,6 +9,7 @@
   "dependencies": {
     "@expo/vector-icons": "^5.2.0",
     "firebase": "^4.9.1",
+    "hanzi": "^2.1.0",
     "i18n-js": "^3.0.3",
     "native-base": "^2.3.8",
     "react": "^16.2.0",
