@@ -137,7 +137,7 @@ class Trie {
         }
       });
     }
-    return (Object.keys(concepts).length === 0 && concepts.constructor === Object) ? [] : this.sortObject(concepts);
+    return (Object.keys(concepts).length === 0 && concepts.constructor === Object) ? [[prefix, 1]] : this.sortObject(concepts);
   }
 
   // Helper function to sort concept IDs by count
