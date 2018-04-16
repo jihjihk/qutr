@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 import {
   SECONDARY,
@@ -6,13 +6,22 @@ import {
   SECONDARY_LIGHT,
   PRIMARY,
   PRIMARY_DARK,
-  PRIMARY_LIGHT
+  PRIMARY_LIGHT,
+  SUGGESTIONBAR_HEIGHT
 } from '../../masterStyle.js';
+
+const windowHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
 
   Container: {
     backgroundColor: SECONDARY_DARK,
+  },
+  withKeyboard: {
+    height: windowHeight/SUGGESTIONBAR_HEIGHT,
+  },
+  withoutKeyboard: {
+    height: 0,
   },
   Title: {
     color: SECONDARY,
@@ -47,9 +56,11 @@ export default StyleSheet.create({
   scrollWrapper: {
     height: 35, 
     borderColor: PRIMARY_DARK, 
-    borderWidth: 0.5, 
+    borderLeftWidth: 0.5,
     backgroundColor: PRIMARY,
-    paddingLeft: 5,
+    paddingHorizontal: 5,
+    flexDirection: 'row',
+    flex: 1
   },
   selectedSuggestion: {
     backgroundColor: SECONDARY, 
@@ -69,5 +80,40 @@ export default StyleSheet.create({
     flexDirection: 'column', 
     justifyContent: 'center', 
     alignItems: 'center'
+  },
+  noSuggestionsContainer: {
+    flex: 1, 
+    justifyContent: 'center'
+  },
+  noSuggestionsText: {
+    textAlign: 'center', 
+    fontStyle: 'italic', 
+    flex: 1, 
+    textAlignVertical: 'center'
+  },
+  showMoreButton: {
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    width: 60,  
+  },
+  toolbarButton: {
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    flex: 1
+  },
+  activityIndicator: {
+    flex: 1, 
+    justifyContent:'center'
+  },
+  dotIndicator: {
+    marginLeft: 5, 
+    justifyContent: 'flex-start'
+  },
+  minimizeToolbarContainer: {
+    width: 60, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    backgroundColor: PRIMARY, 
+    alignSelf: 'flex-end'
   }
 });

@@ -25,7 +25,7 @@ export default class SuggestionButton extends Component {
     return (
         <TouchableOpacity underlayColor={SECONDARY} 
                             style={[styles.container, this.props.style]} 
-                            onPress = { () => {this.props.toSelect(this.props.text, this.props.id)}}>
+                            onPress = {this.props.toSelect}>
           <Text style={[styles.text]}>{this.props.text}</Text>
         </TouchableOpacity> 
     );

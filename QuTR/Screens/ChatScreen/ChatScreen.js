@@ -32,6 +32,7 @@ import styles from './styles.js';
 import { BLACK, 
          SECONDARY_LIGHT,
          PRIMARY_DARK,
+         PRIMARY_LIGHT,
          SECONDARY,
          PRIMARY } from '../../masterStyle.js'
 
@@ -49,12 +50,8 @@ const SUGGESTIONS_ALLOWED = 15;
 export default class ChatScreen extends Component<{}>  {
 
   /* *** message is the fully constructed sentences after generateSentence()
-  while selectedPhraseID is an array of raw phrase IDs selected by the user.
-
-  We should probably send the other chat conversant the selectedPhraseID array
-  instead of "message" and call generateSentence() before displaying.
-
   */
+
   constructor(props) {
     super(props);
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -68,16 +65,18 @@ export default class ChatScreen extends Component<{}>  {
                 selectionsVisible: false,
                 messageVisible: true,
                 message: '',
-                renderPreviousSelections: [],
-                previousSelections: [],
-                previousSelectionIDs: [],
-                selectedPhraseID: [],
+                selections: [],
                 defaultLang: "English",
                 trie: null,
                 theyAreTyping: false,
                 conversationRef: null,
                 userRef: null,
-                suggestions: []
+                suggestions: [],
+                suggestionsForRendering: [],
+                amountShown: SUGGESTIONS_ALLOWED,
+                sbStyle: [styles.withoutKeyboard],
+                footerLeftIcon: 'message',
+                currentInput: ''
               };
   }
 
@@ -95,12 +94,12 @@ export default class ChatScreen extends Component<{}>  {
 
    _keyboardDidShow () {
     this.refs.cw.onKeyboardShow();
-    this.refs.sb.onKeyboardShow();
+    this.setState({sbStyle: [styles.withKeyboard]});
   }
 
   _keyboardDidHide () {
     this.refs.cw.onKeyboardHide();
-    this.refs.sb.onKeyboardHide();
+    this.setState({sbStyle: [styles.withoutKeyboard]})
   }
 
   componentDidMount() {
@@ -230,7 +229,7 @@ export default class ChatScreen extends Component<{}>  {
     if (this.state.sendDisabled)  return;
 
     /* Read the text input, create a message, push to the database and clean up user interface */
-    var selectedIDs = this.state.previousSelectionIDs;
+    var selectedIDs = this.getSelectionIDs(this.state.selections);
 
     var message = this.createMessage(this.state.user.uid, selectedIDs);
     var messageKey = this.getNewMessageKey();
@@ -239,14 +238,13 @@ export default class ChatScreen extends Component<{}>  {
     this.amTyping(false);
 
     this.setState({message: '',
-                   renderPreviousSelections: [],
-                   previousSelections: [],
-                   previousSelectionIDs: [],
-                   selectionsVisible: false
+                   selections: [],
+                   selectionsVisible: false,
+                   suggestionsForRendering: [],
+                   suggestions: []
                  });
 
     this.refs.mi.clearContent();
-    this.refs.sb.clean();
     this.disableSend();    
   }
 
@@ -267,6 +265,17 @@ export default class ChatScreen extends Component<{}>  {
 
     this.state.conversationRef
     .update({'timestamp': message.timestamp});
+  }
+
+  getSelectionIDs = (selections) => {
+
+    var selectionIDs = [];
+    selections.forEach((child) => {
+
+      selectionIDs.push(child.ID);
+    })
+
+    return selectionIDs;
   }
 
   /* *** Jihyun: this is where my function is. It receives an array of phrase IDs
@@ -350,7 +359,7 @@ export default class ChatScreen extends Component<{}>  {
 
       var pid = selectedPhraseID[0];
       var phrase = this.getPhrase(phraseDB, pid);
-      final = (!!phrase) ? phrase : pid;
+      final = (phrase) ? phrase : pid;
       return this.capitalize(this.removeAllAsterisk(final));
 
     }
@@ -398,7 +407,7 @@ export default class ChatScreen extends Component<{}>  {
             numArr.push(pid);
           }
           //word is a string BUT CONTAINS A NUMBER (maybe date time object or a FLIGHT NUMBER)
-          else if (hasNumber(pid)) {
+          else if (this.hasNumber(pid)) {
             //for now just treat as a noun object
             nounArr.unshift(pid);
 
@@ -469,11 +478,6 @@ export default class ChatScreen extends Component<{}>  {
                 });
   }
 
-  toggleSelections = () => {
-    if (this.state.renderPreviousSelections.length>0)
-      this.setState({selectionsVisible: !this.state.selectionsVisible})
-  }
-
   amTyping = (truth) => {
 
     this.state.conversationRef
@@ -491,7 +495,7 @@ export default class ChatScreen extends Component<{}>  {
       stringForSuggestions = value;
     else stringForSuggestions = "";
 
-    this.refs.sb.scrollToBeginning();
+    this.scrollToBeginning('sb');
     
     if (suggestionSelected) {
 
@@ -499,7 +503,8 @@ export default class ChatScreen extends Component<{}>  {
       this.refs.mi.logAllProperties(this.refs.mi.input, remainderString);
     }
 
-    this.setState({suggestions: []});
+    this.setState({suggestions: [],
+                   amountShown: SUGGESTIONS_ALLOWED});
 
     var splitSuggestionString = stringForSuggestions.replace(/^\s+|\s+$/g, '').toLowerCase().split(" ");  // Remove extra whitespace and split
     var copy = splitSuggestionString;
@@ -531,9 +536,6 @@ export default class ChatScreen extends Component<{}>  {
     stringForSuggestions!=="" ? 
       this.sendToSuggestionBar(conceptsArray) :
       this.sendToSuggestionBar([]);
-
-    if (stringForSuggestions.length>0 || potentialMessage.length==0) this.disableSend();
-    else this.enableSend();
   }
 
   getConcepts = (stringForSuggestions) => {
@@ -567,159 +569,95 @@ export default class ChatScreen extends Component<{}>  {
     var tempSuggestions = (suggestions.length < SUGGESTIONS_ALLOWED) ? 
                            suggestions : 
                            suggestions.slice(0, SUGGESTIONS_ALLOWED)
-    this.setState({suggestions: tempSuggestions});
+    this.setState({suggestions: suggestions,
+                   suggestionsForRendering: tempSuggestions});
   }
 
-  /* Comparator for rendering selections in the composer bar according to their order
-     in the potential message */
-  compareObjs = (a, b) => {
+  loadExtraSuggestions = () => {
 
-    if (a.index < b.index)
-      return -1;
-    if (a.index > b.index)
-      return 1;
-    return 0;
+    var newAmountShown = this.state.amountShown+SUGGESTIONS_ALLOWED;
+    var tempSuggestions = this.state.suggestions.slice(0, newAmountShown);
+
+    this.setState({suggestionsForRendering: tempSuggestions,
+                   amountShown: newAmountShown});
   }
 
-  /* Handle suggestion selection:
-      * value is a textual representation of the suggestion
-      * id is the concept id
-  */
-  selectSuggestion = (value, id) => {
+  selectSuggestion = (item) => {
 
-    if (!value) return;
-    this.setState({previousSelectionIDs: this.state.previousSelectionIDs.concat([id]),
-                   previousSelections: this.state.previousSelections.concat([value]),
-                   renderPreviousSelections: [],
-                   selectionsVisible: true},
-      () => {
-        /* Upon selecting a suggestion we want to generate the possible sentence out of the choices that we have 
-           This will help us reorder selections in the message composer bar and give a more accurate picture to
-           the user of what will be sent as a message */
+    if (!item.phrase) return;
 
-        var message = this.generateSentence(this.state.previousSelectionIDs);
-        this.setState({message: message}, () => {
+    var newSelections = this.state.selections.concat(item);
+    var IDs = this.getSelectionIDs(newSelections);
+    var message = this.generateSentence(IDs);
 
-          this.refreshComposerBar();
-          this.textChanged(value, true, "");
-        })
-      })
-  }
+    if (message!="") this.enableSend();
 
-  /* Sort all of the previous selections according to their indices in the projected message string */ 
-  reorderSelectionsForComposerBar = () => {
+    this.setState({selections: newSelections,
+                   selectionsVisible: true, 
+                   message: message});
 
-    var phraseAppearanceOrder=[];
-    this.state.previousSelections.forEach((child) => {
-      var tempChild=child.toLowerCase();
-      
-      if (child.includes("*.")) tempChild = tempChild.replace(" *.", "");
-      if (child.includes("?")) tempChild = tempChild.replace("?", "");
-      if (child.includes("!")) tempChild = tempChild.replace("!", "");
-      if (child.includes("* ")) tempChild = tempChild.replace("* ", "");
-      else if (child.includes(" *")) tempChild = tempChild.replace(" *", "")
-      phraseAppearanceOrder.push({"text": child, 
-                                  "index": this.state.message
-                                          .toLowerCase()
-                                          .indexOf(tempChild) })
-    })
-
-    phraseAppearanceOrder.sort(this.compareObjs);
-    var newSelections = [];
-    phraseAppearanceOrder.forEach((child) => {
-      newSelections.push(child.text);
-    })
-    return newSelections;
+    this.textChanged("", true, "");
   }
 
   /* This adds the selected suggestion to the message composer
      and handles the appropriate state changes */
-  renderComposerBar = (selections) => {
+  renderSelection = (item) => {
 
-    var tempSelectionArray = [];
-    selections.forEach((child) => {
+    var selection = item.item;
+    var index = item.index;
 
-      /* In state, a phrase and its ID are always at the same index
-         in their respective containers */
-      var indexInState = this.state.previousSelections.indexOf(child);
-      var ID = this.state.previousSelectionIDs[indexInState];
-      tempSelectionArray.push(<View key={this.state.previousSelections.length}
-                         style={{flexDirection: 'row', alignItems:'center'}}>
-                      <Text style={[styles.selectedSuggestion]}
-                            overflow="hidden"
-                            numberOfLines={1}>
-                          {child}
-                      </Text>
-                      <TouchableOpacity onPress={() => {this.removeSelection(child, ID)}}>
-                         <Icon name='md-remove-circle'
-                               style={[styles.removeSelection]}>
-                         </Icon>                                     
-                      </TouchableOpacity>
-                    </View>);
-    })
-
-    this.setState({renderPreviousSelections: tempSelectionArray});
+    return (<View key={this.state.selections.length}
+                  style={{flexDirection: 'row', alignItems:'center'}}>
+              <Text style={[styles.selectedSuggestion]}
+                    overflow="hidden"
+                    numberOfLines={1}>
+                  {selection.phrase}
+              </Text>
+              <TouchableOpacity onPress={() => {this.removeSelection(index)}}>
+                 <Icon name='md-remove-circle'
+                       style={[styles.removeSelection]}>
+                 </Icon>                                     
+              </TouchableOpacity>
+            </View>);
   }
 
-  refreshComposerBar = () => {
+ scrollToBeginning = (ref) => {
 
-    var reorderedSelections = this.reorderSelectionsForComposerBar();
-    /* Once the previous selections have been sorted, call renderComposerBar() to display them,
-       as well as textChanged to rerender text remaining in the message input box */
-    this.renderComposerBar(reorderedSelections);
-    this.scrollToBeginning();
-  }
-
-  changedComposerBar = (width, height) => {
-
-    this.setState({width: width});
-  }
-
-  scrollToBeginning = () => {
-
-    this.refs.cb.scrollTo({x: 0, y: 0, animated: false});
+    if (!!this.refs[ref])
+      this.refs[ref].scrollToOffset(0);
   }
 
   /* Removes the selection from the message composer and memory */
-  removeSelection = (deletedSelection, ID) => {    
+  removeSelection = (index) => {    
 
-    /* Call renderComposerBar later */
-    var previousSelections = this.state.previousSelections;
-    var previousSelectionIDs = this.state.previousSelectionIDs;
+    var selections = this.state.selections;
+    selections.splice(index, 1);
+
+    var selectionIDs = this.getSelectionIDs(selections),
+        message = this.generateSentence(selectionIDs);
     
-    var index = previousSelections.indexOf(deletedSelection);
-
-    previousSelections.splice(index, 1);
-    previousSelectionIDs.splice(index, 1);
+    this.setState({selections: selections,
+                   message: message,
+                   footerLeftIcon: 'composer'}); 
     
-    this.setState({previousSelections: previousSelections,
-                   previousSelectionIDs: previousSelectionIDs,
-                   renderPreviousSelections: [],
-                   message: this.generateSentence(previousSelectionIDs)
-                  }, 
-      () => {        
+    this.scrollToBeginning('cb');
+    /* Clean up if no suggestions are left selected */
+    if (selections.length==0 || 
+        message=="") {
 
-        
-        this.refreshComposerBar();
-        /* Clean up if no suggestions are left selected */
-        if (this.state.previousSelections.length==0 || 
-            this.state.message=="") {
-
-          this.disableSend();
-          this.setState({selectionsVisible: false});
-          this.amTyping(false);
-        }
-     })    
+      this.disableSend();
+      this.setState({selectionsVisible: false});
+      this.amTyping(false);
+    }
   }
 
   keyExtractor = (item, index) => item.ID+"" || item.phrase+"" || item+"";
 
   getSuggestionWidth = () => {
 
-    var widthDivisor = this.state.suggestions.length;
-    return {minWidth: windowWidth/widthDivisor};
+    var widthDivisor = this.state.suggestionsForRendering.length;
+    return {minWidth: (windowWidth-60)/widthDivisor};
   }
-
 
   renderRow = (rd) => {
 
@@ -750,114 +688,243 @@ export default class ChatScreen extends Component<{}>  {
     else return null;
   }
 
-  render() {
+  renderMessagesContainer = () => {
 
-    if (this.state.loading) {
-      return (      <View style={{flex: 1, justifyContent:'center'}}>
-                      <ActivityIndicator size="large"/>
-                    </View>)
-    }
-    
-    if (!!this.state.conversation) 
+    return 
+
+    (<ListView dataSource={this.state.dataSource}
+                enableEmptySections={true}
+                renderRow={(rowData) => this.renderRow(rowData)}/>  
+    );
+  }
+
+  renderTypingIndicator = () => {
+
+    if (this.state.theyAreTyping)
 
     return (
-      <Container ref="container" style={[styles.Container]}>
+      <View style={[styles.theirMessageView]}>
+        <Image source={{uri: this.state.theirPicture}} 
+               style={[styles.picture]}/>
+        <DotIndicator color={PRIMARY_DARK}
+                      count={3}
+                      size={5}
+                      style={[styles.dotIndicator]}/>
+      </View>)
+  }
 
-          <Header center={<Title style={[styles.Title]}>{this.state.theirName}</Title>}
-                  right={<TouchableHighlight style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-                                                        <ElementsIcon color={(this.state.message.length>0) ? 
-                                                                               SECONDARY : 'black'}
-                                                                      name='thought-bubble' 
-                                                                      type='material-community'
-                                                                      underlayColor='transparent'
-                                                                      onPress={() => {if (this.state.message.length>0)
-                                                                                        Alert.alert("Message", this.state.message)}}>
-                                                        </ElementsIcon>
-                                                      </TouchableHighlight>}/>
-          <ChatWindow ref="cw">          
-            <ListView dataSource={this.state.dataSource}
-                      enableEmptySections={true}
-                      renderRow={(rowData) => this.renderRow(rowData)}/>  
-            
-            { this.state.theyAreTyping ? 
-              <View style={[styles.theirMessageView]}>
-                <Image source={{uri: this.state.theirPicture}} 
-                       style={[styles.picture]}/>
-                <DotIndicator color={PRIMARY_DARK}
-                              count={3}
-                              size={5}
-                              style={{marginLeft: 5, justifyContent: 'flex-start'}}/>
-              </View>
-                 :
-              null
-            }          
-          </ChatWindow>
+  renderLoadingIndicator = () => {
 
-          {this.state.selectionsVisible ? <View style={[styles.scrollWrapper]}>
-                                            <ScrollView style={[styles.selectionList]}
-                                                        horizontal={true}
-                                                        contentContainerStyle={!!this.state.width ? {minWidth: this.state.width} : null}
-                                                        overflow="hidden"
-                                                        ref="cb"
-                                                        scrollEnabled={true}
-                                                        onContentSizeChange={(width, height) => {this.changedComposerBar(width, height)}}
-                                                        showsHorizontalScrollIndicator={false}>
-                                              {this.state.renderPreviousSelections || null}
-                                            </ScrollView>
-                                          </View>
-                                        :
-                                        null}
+    return ( <View style={[styles.activityIndicator]}>
+                <ActivityIndicator size="large"/>
+              </View>)
+  }
 
-          <Footer left={<TouchableHighlight style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-                          <ElementsIcon color={(this.state.renderPreviousSelections.length>0) ? 
-                                                 SECONDARY : 'black'}
-                                        name='list' 
-                                        type='material'
-                                        underlayColor='transparent'
-                                        onPress={() => this.toggleSelections()}>
-                          </ElementsIcon>
-                        </TouchableHighlight>}
+  renderComposerBar = () => {
 
-                  center={<MessageInput ref='mi' 
-                                        onChangeText={(value) => this.textChanged(value, false)}
-                                        placeholder={Texts.inputPlaceholder[this.state.defaultLang]}>
-                          </MessageInput>} 
-                  right={<ToolbarButton style={this.state.sendStyle} 
-                                        name='md-send' 
-                                        onPress={() => this.sendMessage()}/>}/>
-          <SuggestionBar ref='sb'
-                         style={this.state.suggestions.length==0 ? {flex: 1} : null}> 
-            
-            {(this.state.suggestions.length==0) ?
+    return (<View style={[styles.scrollWrapper]}>
+                <FlatList data={this.state.selections}
+                          renderItem={(item) => this.renderSelection(item)}
+                          keyExtractor={this.keyExtractor}
+                          horizontal
+                          scrollable={true}
+                          ref='cb'>
+                </FlatList>
+              </View>);
+  }
 
-              <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Text style={{alignSelf: 'center', fontStyle: 'italic'}}>
-                  {Texts.noSuggestions[this.state.defaultLang]}
+  renderPotentialMessage = () => {
+
+    return (<ScrollView style={[styles.scrollWrapper]}
+                          horizontal
+                          scrollable={true}>
+                <Text style={{color: 'white', textAlignVertical: 'center', fontSize: 18, marginRight: 10}}>
+                  {this.state.message}
                 </Text>
-              </View> :
+              </ScrollView>);
+  }
 
-              <FlatList data = {this.state.suggestions}
-                      renderItem={({ item }) => 
-                        <SuggestionButton text={item.phrase}
-                                          id={item.ID}
-                                          toSelect={(suggestion, id) => this.selectSuggestion(suggestion, id)}
-                                          style = {this.getSuggestionWidth()}/>
-                      }
-                      keyExtractor={this.keyExtractor}
-                      horizontal/>
-            }
+  noConversationsPlaceholder = () => {
 
-          </SuggestionBar>
-      </Container>
-   );
-    
-   return (
+    return (
       <Container ref="container" style={[styles.noConversations]}>
         <View>
           <Text>{Texts.noConversations[this.state.defaultLang]}</Text>
         </View>
       </Container>
    );
+  }
+
+  noSuggestionsPlaceholder = () => {
+
+    return (<View style={[styles.noSuggestionsContainer]}>
+              <Text style={[styles.noSuggestionsText]}>
+                {Texts.noSuggestions[this.state.defaultLang]}
+              </Text>
+            </View>)
+  }
+
+  renderSuggestionBar = () => {
+
+    return (
+
+      <View style={{flexDirection: 'row'}}>
+      
+       <View style={{flex: 1}}>
+        <FlatList data = {this.state.suggestionsForRendering}
+                  renderItem={({ item }) => 
+                  <SuggestionButton text={item.phrase}
+                                    id={item.ID}
+                                    toSelect={() => this.selectSuggestion(item)}
+                                    style = {this.getSuggestionWidth()}/>
+                  }
+                  keyExtractor={this.keyExtractor}
+                  horizontal
+                  ref='sb'>
+        </FlatList>
+      </View>
+      <TouchableHighlight style={[styles.showMoreButton]}>
+        <ElementsIcon color={(this.state.suggestions.length>this.state.amountShown) ? 
+                              PRIMARY_LIGHT:
+                              'black'}
+                      name='dots-horizontal' 
+                      type='material-community'
+                      underlayColor='transparent'
+                      onPress={() => this.loadExtraSuggestions()}>
+        </ElementsIcon>
+      </TouchableHighlight>
+    </View>)
+  }
+
+  renderSuggestions = () => {
+
+    return (<View style={[this.state.sbStyle]}> 
+            
+            {(this.state.suggestionsForRendering.length==0) ?
+
+              this.noSuggestionsPlaceholder() :
+
+              this.renderSuggestionBar()
+            }
+
+          </View>);
+  }
+
+  renderHeader = () => {
+
+    return (
+      <Header center={<Title style={[styles.Title]}>{this.state.theirName}</Title>}/>
+    )
+  }
+
+  renderFooter = () => {
+
+    return (
+      <Footer left={(this.state.footerLeftIcon=='composer') ?
+                      this.composerBarIcon() :
+                      this.displayMessageIcon()
+                    }
+
+              center={<MessageInput ref='mi' 
+                                    onChangeText={(value) => this.textChanged(value, false)}
+                                    placeholder={Texts.inputPlaceholder[this.state.defaultLang]}>
+                      </MessageInput>}
+
+              right={<ToolbarButton style={this.state.sendStyle} 
+                                    name='md-send' 
+                                    onPress={() => this.sendMessage()}/>}/>)
+  }
+
+  renderConversationWindow = () => {
+
+    return (
+      <Container ref="container" style={[styles.Container]}>
+
+          {this.renderHeader()}
+          <ChatWindow ref="cw">          
+            <ListView dataSource={this.state.dataSource}
+                      enableEmptySections={true}
+                      renderRow={(rowData) => this.renderRow(rowData)}/>
+            {this.renderTypingIndicator()}
+          </ChatWindow>
+
+          { (this.state.selectionsVisible) ? 
+
+          <View style={{height: 35, flexDirection: 'row'}}>
+            { (this.state.footerLeftIcon == 'message') ?
+              this.renderComposerBar() :
+              this.renderPotentialMessage()
+            }        
+            <View style={[styles.minimizeToolbarContainer]}>
+              <TouchableHighlight style={[styles.toolbarButton]}>
+                <ElementsIcon color={SECONDARY}
+                              name='window-minimize' 
+                              type='material-community'
+                              underlayColor='transparent'
+                              onPress={() => {this.setState({selectionsVisible: false})}}>
+                </ElementsIcon>
+              </TouchableHighlight>
+            </View> 
+          </View> : null
+          }
+
+          {this.renderFooter()}
+          
+          {this.renderSuggestions()}
+          
+      </Container>
+   );
+  }
+
+  composerBarIcon = () => {
+
+    return (
+
+      <TouchableHighlight style={[styles.toolbarButton]}>
+        <ElementsIcon color={(this.state.selections.length>0) ? 
+                               SECONDARY : 'black'}
+                      name='list' 
+                      type='material'
+                      underlayColor='transparent'
+                      onPress={() => this.handleFooterLeftIcon('message')}>
+        </ElementsIcon>
+      </TouchableHighlight>
+    )    
+  }
+
+  displayMessageIcon = () => {
+
+    return (
+
+      <TouchableHighlight style={[styles.toolbarButton]}>
+        <ElementsIcon color={(this.state.message.length>0) ? 
+                               SECONDARY : 'black'}
+                      name='thought-bubble' 
+                      type='material-community'
+                      underlayColor='transparent'
+                      onPress={() => this.handleFooterLeftIcon('composer')}>
+        </ElementsIcon>
+      </TouchableHighlight>
+    )
+  }
+
+  handleFooterLeftIcon = (icon) => {
+
+    if (this.state.selections.length==0) return;
+    this.setState({footerLeftIcon: icon,
+                   selectionsVisible: true})
+  }
+
+  render() {
+
+     if (this.state.loading)
+      return this.renderLoadingIndicator()
+    
+     else if (!!this.state.conversation)
+      return this.renderConversationWindow()
+    
+     else 
+      return this.noConversationsPlaceholder()
 
   }
 }

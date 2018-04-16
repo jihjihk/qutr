@@ -12,7 +12,6 @@ export default StyleSheet.create({
     backgroundColor: PRIMARY_DARK,
     flexDirection: 'row', 
     height: 45,
-    borderBottomWidth: 0.2,
     borderColor: 'white',
   },
   Side: {

@@ -16,8 +16,7 @@ export default StyleSheet.create({
   container: {
     backgroundColor: SECONDARY_DARK,
     height: windowHeight/SUGGESTIONBAR_HEIGHT,
-    borderRightWidth: 0.2,
-    borderLeftWidth: 0.2,
+    borderLeftWidth: 0.4,
     borderColor: PRIMARY_DARK,
     justifyContent: 'center',
     alignItems: 'center',
