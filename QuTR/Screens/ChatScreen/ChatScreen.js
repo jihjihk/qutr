@@ -38,7 +38,8 @@ import { BLACK,
 
 import ar from './phrases_json/ar.json';
 import en from './phrases_json/en.json';
-import cn from './phrases_json/cn_split.json';
+import cn from './phrases_json/cn.json';
+import cn_split from './phrases_json/cn_split.json';
 
 import Trie from '../../DataStructures/Trie.js';
 import Texts from "../../Texts.js"
@@ -127,7 +128,7 @@ export default class ChatScreen extends Component<{}>  {
       }
       if(phraseData) {
         for (let pObj in phraseData) {
-          let phrase = phraseData[pObj].phrase;
+          let phrase = (lang === "中文") ? cn_split[pObj].phrase : phraseData[pObj].phrase;
           if (!phrase) trie.insertPhrase(pObj, "");
           else trie.insertPhrase(pObj, phrase);
         }
