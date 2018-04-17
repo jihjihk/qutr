@@ -1,14 +1,20 @@
 import pandas as pd
 import json
 import sys, getopt
+import jieba
 
 def main(inputcsv):
 
 	tri = pd.read_csv(inputcsv)
+
+	for i, row in tri.iterrows():
+		tri.loc[i, 'cn_split'] = " ".join(jieba.cut(str(row.cn)))
+
 	en = pd.DataFrame(tri.en)
 	ar = pd.DataFrame(tri.ar)
 	cn = pd.DataFrame(tri.cn)
 	cn_split = pd.DataFrame(tri.cn_split)
+
 	pos = pd.DataFrame(tri.pos)
 
 	en = en.rename(columns={"en":"phrase"})
@@ -21,8 +27,9 @@ def main(inputcsv):
 	    for i in range(0, len(langdf)):
 	        ## assigning a new index col with p0, p1... to differentiate string IDs with cardinal numbers
 	        langdf.loc[i, 'id'] = "p" + str(i)
-	        print(langdf.loc[i,'id'])
+	        #print(langdf.loc[i,'id'])
 	    langdf.set_index("id", inplace=True)
+	    print(langdf.columns[0] + " conversion done.")
 
 	ar_json = ar.to_json(orient='index')
 	arob = json.loads(ar_json)
