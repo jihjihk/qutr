@@ -38,7 +38,7 @@ import { BLACK,
 
 import ar from './phrases_json/ar.json';
 import en from './phrases_json/en.json';
-import cn from './phrases_json/cn.json';
+import cn from './phrases_json/cn_split.json';
 
 import Trie from '../../DataStructures/Trie.js';
 import Texts from "../../Texts.js"
@@ -118,22 +118,16 @@ export default class ChatScreen extends Component<{}>  {
       let lang = snapshot.val().language;
       let trie = new Trie();
       let phraseData = null;
-      let hanzi = null;
       if (lang === "English") {
         phraseData = en;
       } else if (lang === "عربية") {
         phraseData = ar;
       } else if (lang === "中文") {
         phraseData = cn;
-        hanzi = require('hanzi');
-        hanzi.start();
       }
       if(phraseData) {
         for (let pObj in phraseData) {
           let phrase = phraseData[pObj].phrase;
-          if(lang === "中文") {
-            phrase = hanzi.segment(phrase).join(" ");
-          } 
           if (!phrase) trie.insertPhrase(pObj, "");
           else trie.insertPhrase(pObj, phrase);
         }
