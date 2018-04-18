@@ -539,7 +539,6 @@ export default class ChatScreen extends Component<{}>  {
       following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
     */
     let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
-    if (conceptCount.length === 0) return [{ ID: stringForSuggestions, phrase: stringForSuggestions }];
 
     conceptCount.sort((a, b) => {
       if(b[1] - a[1] === 0) { // Sorting concepts by phrase length
@@ -558,6 +557,7 @@ export default class ChatScreen extends Component<{}>  {
         conceptsArray[i] = { ID: cID, phrase: cPhrase };
       }
     }
+    conceptsArray.push({ ID: stringForSuggestions, phrase: stringForSuggestions }); // Last suggestion is input as it is
     return conceptsArray;
   }
 
