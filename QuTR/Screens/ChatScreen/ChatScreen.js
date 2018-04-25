@@ -266,8 +266,8 @@ export default class ChatScreen extends Component<{}>  {
 
     var selectionIDs = [];
     selections.forEach((child) => {
-
-      selectionIDs.push(child.ID);
+      let ID = (!isNaN(Number(child.ID))) ? Number(child.ID) : child.ID;
+      selectionIDs.push(ID);
     })
 
     return selectionIDs;
@@ -376,11 +376,11 @@ export default class ChatScreen extends Component<{}>  {
           }
           //query item is a template
           else if (myPhrase.includes("*")) {
-            if (myPos == "vp") {
-              temp += myPhrase + " ";
-            } else if (myPos == "prt") {
+            
+            if (myPos == "prt")
               unit = myPhrase;
-            }
+            else
+              temp += myPhrase + " ";
           }
           //query item is NP, ADJ, ADV or VP and PRT without *
           else {
@@ -447,7 +447,7 @@ export default class ChatScreen extends Component<{}>  {
     final += temp;
 
     //handling leftover noun phrases
-    final += nounArr.join(". ");
+    final += nounArr.join(" ");
 
     return this.capitalize(final);
   }
@@ -501,24 +501,24 @@ export default class ChatScreen extends Component<{}>  {
     this.setState({suggestions: [],
                    amountShown: SUGGESTIONS_ALLOWED});
 
-    var splitSuggestionString = stringForSuggestions.replace(/^\s+|\s+$/g, '').toLowerCase().split(" ");  // Remove extra whitespace and split
-    var copy = splitSuggestionString;
-    let numArray = [];
+    // var splitSuggestionString = stringForSuggestions.replace(/^\s+|\s+$/g, '').toLowerCase().split(" ");  // Remove extra whitespace and split
+    // var copy = splitSuggestionString;
+    // let numArray = [];
     
-    splitSuggestionString.forEach((word) => {
+    // splitSuggestionString.forEach((word) => {
       
-      if(isNaN(parseFloat(word))) {
-        // Check if integer
-        if(!isNaN(parseInt(word))) {
-          numArray.push({ ID: parseInt(word), phrase: parseInt(word)+"" });
-          //copy.splice(copy.indexOf(word), 1);
-        }
-      } else {
-        // Float
-        numArray.push({ ID: parseFloat(word), phrase: parseFloat(word)+"" });
-        //copy.splice(copy.indexOf(word), 1);
-      }
-    });
+    //   if(isNaN(parseFloat(word))) {
+    //     // Check if integer
+    //     if(!isNaN(parseInt(word))) {
+    //       numArray.push({ ID: parseInt(word), phrase: parseInt(word)+"" });
+    //       //copy.splice(copy.indexOf(word), 1);
+    //     }
+    //   } else {
+    //     // Float
+    //     numArray.push({ ID: parseFloat(word), phrase: parseFloat(word)+"" });
+    //     //copy.splice(copy.indexOf(word), 1);
+    //   }
+    // });
 
     /* Send my typing info to the database */
     if (stringForSuggestions.length>0 || suggestionSelected)  
@@ -526,7 +526,7 @@ export default class ChatScreen extends Component<{}>  {
     else this.amTyping(false); 
     
     conceptsArray = this.getConcepts(stringForSuggestions);
-    conceptsArray = numArray.concat(conceptsArray);
+    //conceptsArray = numArray.concat(conceptsArray);
 
     stringForSuggestions!=="" ? 
       this.sendToSuggestionBar(conceptsArray) :
@@ -539,6 +539,7 @@ export default class ChatScreen extends Component<{}>  {
       following function returns an array of 2-tuple [conceptID, count] arrays: [[c1, 2], [c2, 1], ... etc.]
     */
     let conceptCount = this.state.trie.suggConcepts(stringForSuggestions);
+
     conceptCount.sort((a, b) => {
       if(b[1] - a[1] === 0) { // Sorting concepts by phrase length
         return this.state.phraseData[a[0]].phrase.length - 
@@ -556,6 +557,7 @@ export default class ChatScreen extends Component<{}>  {
         conceptsArray[i] = { ID: cID, phrase: cPhrase };
       }
     }
+    conceptsArray.push({ ID: stringForSuggestions, phrase: stringForSuggestions }); // Last suggestion is input as it is
     return conceptsArray;
   }
 

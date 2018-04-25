@@ -113,7 +113,7 @@ class Trie {
   suggConcepts(prefix) {
     let inputWords = this.normalizeArabic(prefix.replace(/^\s+|\s+$/g, '').toLowerCase()).split(" ");  // Remove extra whitespace and split
     let concepts = {};  // Combined object for all concepts w/ count
-    let suggCons = {};  // Combined object for all concepts b/ word
+    let suggCons = {};  // Combined object for all concepts by word
     for(let i = 0; i < inputWords.length; i++) {
       let word = inputWords[i];
       let suggestions = this.suggConceptsHelper(word);
@@ -137,7 +137,7 @@ class Trie {
         }
       });
     }
-    return (Object.keys(concepts).length === 0 && concepts.constructor === Object) ? [[prefix, 1]] : this.sortObject(concepts);
+    return (Object.keys(concepts).length === 0 && concepts.constructor === Object) ? [] : this.sortObject(concepts);
   }
 
   // Helper function to sort concept IDs by count
