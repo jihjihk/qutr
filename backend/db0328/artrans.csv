@@ -1,0 +1,177 @@
+,en,cn,ar,pos
+350,coaster,杯垫,السفينة,np
+458,dessert plate,甜品碟,لوحة الحلوى,np
+583,elder brother,哥哥,الاخ الاكبر,np
+635,fare class,座舱等级,الطبقة أجرة,np
+707,feet (ft),英尺,قدم,np
+737,Go straight following the sign ang you will see the gate.,跟着指示走，你将看到登机口。,,sent
+751,DELETE,DELETE,DELETE,DELETE
+967,I think * is better.,我想*比较好。,,sent
+1085,ID card,身份证,بطاقة التعريف,np
+1151,It seems that this food has gone bad.,这道菜好像坏了。,يبدو أن هذا الطعام قد ساء.,sent
+1191,DELETE,DELETE,DELETE,sent
+1252,Let's get a * first.,我们先去找个*。,دعونا الحصول على * أولا.,sent
+1387,MSG,味精,MSG,np
+1453,Just show your ticket to the boarding officer as you get on the plane.,您登机时只要向工作人员出示机票就可以了。,فقط اعرض تذكرتك إلى ضابط الصعود بينما تحصل على الطائرة.,sent
+1904,taxi pick-up point,出租车乘车点,نقطة التقاط سيارة أجرة,np
+2006,This knife is not sharp.,这把刀不锋利了。,هذا السكين ليس حاد.,sent
+2010,This is not fresh.,这个不新鲜了。,هذا ليس جديدا.,sent
+2011,This meat is burnt.,这份烤肉烧焦了。,هذا اللحم محترق.,sent
+2013,This meat is bloody.,肉带血过多。,هذا اللحم دموي.,sent
+2014,This meat is dry.,肉太硬/干了。,هذا اللحم جاف.,sent
+2015,This meat is underdone.,肉没熟。,هذا اللحم خالي.,sent
+2017,This is filthy.,这个好脏。,هذا قذر.,sent
+2051,DELETE,DELETE,DELETE,DELETE
+2087,U-Turn is allowed.,可以U形转弯,ممنوع الدوران.,sent
+2178,Welcome aboard.,欢迎登机,مرحبا بكم على متن.,sent
+2198,What do you have to drink?,你们这里有什么喝的?,ماذا لديك للشرب؟,sent
+2199,What do you want exactly?,你到底想买些什么?,ماذا تريد بالضبط؟,sent
+2200,What does it look like?,它是什么样子的?,كيف تبدو؟,sent
+2201,What flavor do you like?,你喜欢什么口味?,ما النكهة التي تحبها؟,sent
+2203,What is the boarding time?,什么时候登机呢?,ما هو وقت الصعود؟,sent
+2205,"What is the fare, please?",请问票价是多少?,ما هي الأجرة ، من فضلك؟,sent
+2209,What is your nationality?,你的国籍是哪儿?,ما هيه جنسيتك؟,sent
+2210,What kind of coffee do you have?,你们这儿有什么咖啡?,أي نوع من القهوة لديك؟,sent
+2211,What kind of drinks you got?,你们有什么饮料?,أي نوع من المشروبات لديك؟,sent
+2212,What kind of room would you like?,你喜欢订哪类房间?,أي نوع من الغرف ترغب به؟,sent
+2213,What kind of seats do you want?,你需要什么样的座位?,أي نوع من المقاعد تريد؟,sent
+2214,"What kind of tickets do you want, first class or economy?",你要什么类型的票，头等舱还是经济舱?,ما نوع التذاكر التي تريدها ، الدرجة الأولى أو الاقتصاد؟,sent
+2215,What kind of work do you do?,你从事哪类工作?,ماهو نوع العمل الذي تقوم به؟,sent
+2216,What kinds do you have?,你们都有什么果汁?,ما هي أنواع لديك؟,sent
+2217,What should I do about it?,我该怎么做呢?,ما ينبغي علي فعله بشأن ذلك؟,sent
+2218,What sort of job do you do at *?,你在*担任什么职务?,ما نوع العمل الذي تقوم به في *؟,vp
+2219,What time do I have to be at the airport?,我什么时候到机场?,في أي وقت يجب علي أن أكون في المطار؟,sent
+2220,What time do you close?,你们几点开始关门?,في أي وقت تقوم بالإغلاق؟,sent
+2221,What time do you open?,你们几点开始营业?,في اي وقت تفتح؟,sent
+2222,What time do you start check-in?,你们何时开始办理登机手续？,في أي وقت تبدأ في تسجيل الوصول؟,sent
+2223,What time does the inflight movie start?,机上电影什么时候开始播放?,في أي وقت يبدأ فيلم inflight؟,sent
+2224,What time does the plane take off?,飞机何时起飞呢?,في أي وقت تقلع الطائرة؟,sent
+2227,What time should I check in?,我应该什么时间办理登机手续呢?,في أي وقت يجب عليّ تسجيل الدخول؟,sent
+2230,What was the date of the reservation?,保留的日期是什么呢?,ما هو تاريخ الحجز؟,sent
+2231,What was your order?,您点的是什么?,ماذا كان طلبك؟,sent
+2232,What would you like to drink?,你喝点什么?,ماذا تحب أن تشرب؟,sent
+2233,What would you like to have for dinner?,你晚餐吃什么?,ماذا تحب أن تتناول العشاء؟,sent
+2235,What would you suggest?,你推荐什么?,ما اقتراحك؟,sent
+2237,What's the baggage allowance?,行李限重是多少?,ما هو وزن الأمتعة؟,sent
+2238,What's the fare for an economy class ticket?,经济舱的票价是多少?,ما هي أجرة تذكرة الدرجة السياحية؟,sent
+2239,What's the fare to * for the economy class?,去*的经济舱机票多少钱?,ما هي الأجرة إلى * بالنسبة للطبقة الاقتصادية؟,vp
+2240,What's the gate number?,在几号门?,ما هو رقم البوابة؟,sent
+2241,What's the price?,房间的价格是多少?,ما هو سعر؟,sent
+2242,What's the rate for a standard room?,标准房间多少钱?,ما هو سعر الغرفة العادية؟,sent
+2243,"What's the rate, please?",请问房费是多少?,ما هو المعدل ، من فضلك؟,sent
+2244,What's up?,干嘛?,ماذا تفعل؟,sent
+2245,What's wrong with you?,你怎么了?,ما مشكلتك؟,sent
+2246,What's your flight number?,你的班机号是什么?,ما هو رقم رحلتك؟,sent
+2247,What's your job?,你的工作是什么?,ما هو عملك؟,sent
+2248,"What's your name, please?",请问你叫什么名字?,ما اسمك من فضلك؟,sent
+2249,What's your telephone number?,你的电话号码是多少?,ماهو رقم هاتفك؟,sent
+2250,When am I supposed to check in?,我应该什么时候检票呢?,متى يفترض أن أقوم بتسجيل الوصول؟,sent
+2251,When are you leaving?,您何时出发?,متى ستغادر؟,sent
+2252,When can I start to check in?,我什么时候开始办理登机手续?,متى يمكنني البدء في تسجيل الوصول؟,sent
+2253,When can I use my electronic devices?,我什么时候才能使用电子设备?,متى يمكنني استخدام أجهزتي الإلكترونية؟,sent
+2255,When do you start to serve dinner?,请问晚餐几点开始供应?,متى تبدأ في تقديم العشاء؟,sent
+2257,When does the * close?,*什么时候打烊呢？,متى تغلق *؟,vp
+2259,When does your flight land?,飞机什么时候着陆?,متى تهبط رحلتك؟,sent
+2262,When is the boarding time?,什么时候登机呢?,متى يكون وقت الصعود؟,sent
+2263,When is the plane due?,飞机什么时候着陆?,متى الطائرة مستحقة؟,sent
+2264,When shall I come to pick up the ticket?,我什么时候来取票?,متى أتي لألتقط التذكرة؟,sent
+2265,When will the connecting flight take off?,衔接的航班什么时候起飞?,متى تقلع رحلة الربط؟,sent
+2266,"When You Talk, We Listen.",我们随时倾听您的意见。,عندما تتحدث ، نستمع.,sent
+2268,Where are our dishes?,我们的菜在那儿呢?,أين أطباقنا؟,sent
+2269,Where are the dairy products?,乳制品在哪儿?,أين منتجات الألبان؟,sent
+2270,Where are the shopping baskets?,购物篮在哪里?,أين هي سلال التسوق؟,sent
+2274,Where can I find a baggage trolley?,哪里有行李推车。,أين يمكنني العثور على عربة الأمتعة؟,sent
+2275,Where can I find the diary products?,乳制品在哪儿?,أين يمكنني العثور على منتجات اليوميات؟,sent
+2276,Where can I get a baggage trolley?,我在哪儿能得到行李车?,أين يمكنني الحصول على عربة الأمتعة؟,sent
+2279,Where can I put my baggage?,我的行李放哪儿呢?,أين يمكنني وضع أمتعتي؟,sent
+2280,Where do I board the plane?,我在哪儿登机?,أين يمكنني ركوب الطائرة؟,sent
+2281,Where do I go to catch my connecting flight?,我要去哪里赶衔接的航班?,إلى أين أذهب للحاق برحلة الربط الخاصة بي؟,sent
+2282,Where do I pick up the ticket?,我去什么地方拿机票?,من أين أحمل التذكرة؟,sent
+2284,Where do you work?,你在哪里工作?,أين تعمل؟,sent
+2290,Where is my seat?,我的座位在哪儿?,أين مقعدي؟,sent
+2291,Where is seat *?,*号座位在哪儿?,أين المقعد *؟,vp
+2292,Where is the * Airlines transfer desk?,*航的转机柜台在哪里?,أين مكتب نقل الخطوط الجوية؟,vp
+2294,Where is the baggage claim area?,行李领取处在哪儿?,أين منطقة المطالبة بالأمتعة؟,sent
+2296,Where is the boarding gate for this flight?,这班飞机的登机口在哪儿?,أين بوابة الصعود لهذه الرحلة؟,sent
+2298,Where is the check-in counter for * Airlines?,请问*航空公司办理登机手续的柜台在哪里?,أين يقع مكتب تسجيل الوصول لـ * شركات الطيران؟,vp
+2299,Where is the fruit and vegetable section?,水果蔬菜区在哪里?,أين قسم الفاكهة والخضار؟,sent
+2300,Where is the gate?,登机口在哪儿?,اين البوابة؟,sent
+2301,Where is the lavatory?,请问洗手间在哪里?,أين المرحاض؟,sent
+2304,Where is the transfer desk?,转机柜台在哪儿?,أين مكتب النقل؟,sent
+2305,Where would you like to go for dinner?,你想在哪儿吃饭呢?,إلى أين تريد أن تذهب لتناول العشاء؟,sent
+2306,Where would you prefer to sit?,你喜欢坐在哪里?,أين تفضل الجلوس؟,sent
+2309,Which aisle are the canned goods at?,罐头产品在哪条通道?,ممر ما هي السلع المعلبة في؟,sent
+2310,Which date would you that be?,要订在哪个日期?,في أي تاريخ ستكون؟,sent
+2312,Which is the movie channel?,哪个是电影频道?,ما هي قناة الأفلام؟,sent
+2313,Which restaurant do you recommend?,你推荐哪家餐厅呢?,أي مطعم تنصحني به؟,sent
+2315,"Which would you like for dinner, beef, chicken or fish?",晚餐想吃牛肉、鸡肉还是鱼?,ما الذي تريده لتناول العشاء أو اللحم البقري أو الدجاج أو السمك؟,sent
+2316,"Which would you prefer, first class or economy?",你喜欢哪种，头等舱还是经济舱?,ما الذي تفضله ، من الدرجة الأولى أو الاقتصاد؟,sent
+2322,Why do you like *?,你为什么喜欢*?,لماذا تحب *؟,sent
+2323,Why does this happen to me when I am on the plane? I feel bad.,为什么在飞机上会有这种感觉? 我感觉很难受。,لماذا يحدث هذا عندما أكون في الطائرة؟ أشعر بشعور سيء.,sent
+2324,DELETE,DELETE,DELETE,sent
+2325,Why is it taking so long for the food to arrive?,为什么上餐要这么久?,لماذا يستغرق وقتًا طويلاً حتى يصل الطعام؟,sent
+2326,Why is it taking so long?,为什么会这么久?,لماذا يأخذ وقتا طويلا؟,sent
+2328,wife,妻子,زوجة,np
+2329,Wifi Is Available In Public Area In The Hotel.,在酒店的公共场所可以登陆无线英特网。,واي فاي متوفر في الأماكن العامة في الفندق.,sent
+2330,Will there be any change in your room type? Your reservation is for a twin room.,您需要变化你的房间类型吗？你预定的是一间双人床的。,هل سيكون هناك أي تغيير في نوع غرفتك؟ حجزك لغرفة توأم.,sent
+2331,Will this be a one-way trip?,您要单程票吗?,هل ستكون هذه رحلة في اتجاه واحد؟,sent
+2332,Will this table be all right?,这张桌行吗?,هل سيكون هذا الجدول على ما يرام؟,sent
+2333,Will you give me some discount on tickets?,机票能给我折扣吗?,سوف تعطيني بعض الخصم على التذاكر؟,sent
+2334,Will you please put your suitcase and that box on the belt?,请把你的手提箱和那个盒子放在传送带上好吗?,هل من الممكن وضع حقيبة السفر الخاصة بك وهذا الصندوق على الحزام؟,sent
+2336,wineglass,酒杯,كأس نبيذ,np
+2338,wipe your shoes and boots,请擦去鞋上的泥土,مسح الأحذية والأحذية الخاصة بك,np
+2340,women's bathroom,女厕,حمام النساء,np
+2342,work experience,工作经历,خبرة في العمل,np
+2343,worker,工人,عامل,np
+2344,Would it be possible for us to trade seats?,我们可以交换座位吗?,هل من الممكن لنا أن نتاجر في المقاعد؟,sent
+2345,Would you like a cup of tea or coffee?,要茶还是咖啡呢?,هل ترغب في كوب من الشاي أو القهوة؟,sent
+2346,Would you like a high chair for your baby?,您想要一个高脚椅给婴儿吗?,هل ترغب في كرسي مرتفع لطفلك؟,sent
+2347,Would you like me to bring a baby chair?,您需要我拿个婴儿椅吗?,هل تريدني أن أحضر كرسي أطفال؟,sent
+2348,Would you like some cream in your coffee?,你的咖啡要加点奶油吗?,هل تريد بعض كريم في قهوتك؟,sent
+2349,Would you like some tea or coffee?,喝茶还是喝咖啡？,هل تريد بعض الشاي أو القهوة؟,sent
+2350,Would you like the smoking or non-smoking section?,您喜欢吸烟区还是非吸烟区?,هل ترغب في قسم التدخين أو عدم التدخين؟,sent
+2351,Would you mind hurrying?,你们能快点吗?,هل لديك مانع عجل؟,sent
+2352,Would you mind waiting until one is free?,您介意等一下空出桌子吗?,هل تمانع في الانتظار حتى يتم تحرير واحد؟,sent
+2353,Would you please bring me a knife and fork?,能给我拿副刀叉吗?,هل من فضلك أحضر لي سكين وشوكة؟,sent
+2354,Would you please help me to get my boarding pass?,可以帮我换登机牌吗?,هل يمكنك مساعدتي في الحصول على بطاقة الصعود إلى الطائرة؟,sent
+2355,Would you please make my reservation to * for tomorrow?,请帮我预订明天去*的机票好吗?,هل من الممكن أن تجعل حجزي إلى * للغد؟,vp
+2356,Would you please serve a little quicker?,能上菜快点吗?,هل من الممكن أن تخدم قليلاً أسرع؟,sent
+2357,Would you please show me your ticket and boarding pass?,请出示一下你的机票和登机牌好吗?,هل من الممكن أن تعرض لي تذكرتك وتذكرة صعودك؟,sent
+2358,"Would you please tell me your name, telephone and ID number?",能告诉我你的名字、手机号和身份证号码吗?,هل من الممكن أن تخبرني باسمك ورقم هاتفك ورقم الهوية؟,sent
+2359,Would you prefer a window seat or an aisle seat?,你想要一个靠窗的位子，还是靠过道的?,هل تفضل مقعد النافذة أو مقعد الممر؟,sent
+2360,Would you prefer sitting inside or outside?,您比较喜欢做里面还是外面?,هل تفضل الجلوس في الداخل أو الخارج؟,sent
+2361,Would you take a seat over there and I will call you when a table is free?,您能在那边的座位上等一下，当有空桌时我会通知您好吗?,هل ستحصل على مقعد هناك وسأتصل بك عندما تكون الطاولة مجانية؟,sent
+2362,"Wrap the steak up for him, so he'll take it with.",打包这份牛排，他要带走。,لف شريحة اللحم له ، لذلك سوف يأخذها معه.,sent
+2368,year,年,عام,np
+2371,"Yes, I'll check to see if there's any space left.",好，我查查看还有没有剩余位置。,نعم ، سوف أتحقق من وجود مساحة متبقية.,sent
+2373,How can I help you?,有什么需要帮忙的?,كيف بإمكاني مساعدتك؟,sent
+2374,"Yes, there is.",有的。,نعم هنالك.,sent
+2375,"Yes, we do. They're right in front of you.",有的，就在你面前。,نعم فعلنا. انهم على حق أمامك.,sent
+2381,You are welcome. Please press the button when you need any help.,不客气。如果需要什么帮助，请按按钮。,مرحبا بك. يرجى الضغط على الزر عندما تحتاج إلى أي مساعدة.,sent
+2382,You can also turn down the air-conditioner.,你还可以调小空调。,يمكنك أيضا إيقاف مكيف الهواء.,sent
+2383,You can either take out something or pay the excess baggage charge.,您可以把一些东西拿出来，或者付行李超重费。,يمكنك إما إخراج شيء ما أو دفع رسوم الأمتعة الزائدة.,sent
+2384,You can go to the flight connection counter.,您可以去转机柜台。,يمكنك الذهاب إلى عداد اتصال الطيران.,sent
+2385,You can place the baggage under the seat in front of you.,您可以将行李放在前面的座位下面。,يمكنك وضع الأمتعة تحت المقعد أمامك.,sent
+2386,You can take some airsick pills.,您可以吃点晕机药。,يمكنك أن تأخذ بعض حبوب airsick.,sent
+2387,You can take your baggage now.,您可以拿行李了。,يمكنك أن تأخذ أمتعتك الآن.,sent
+2388,You can't have any liquid with you.,您不能携带任何液体。,لا يمكنك الحصول على أي سوائل معك.,sent
+2389,You can't take it with you into the aircraft.,您不能把它带上飞机。,لا يمكنك أخذها معك في الطائرة.,sent
+2390,You have a lot of baggage.,您有好多行李。,لديك الكثير من الأمتعة.,sent
+2391,You have a problem with your attitude.,你的态度有问题。,لديك مشكلة مع موقفك.,sent
+2392,You have to be there * hours before departure time.,你要在飞机起飞前两个小时到达那里。,يجب أن تكون هناك * قبل ساعات من وقت المغادرة.,vp
+2393,You have to be there half an hour before departure time.,你应该在飞机起飞之前半个小时到那。,يجب أن تكون هناك قبل نصف ساعة من موعد المغادرة.,sent
+2394,You look familiar.,你看起来很眼熟。,أنت تبدو مألوفة.,sent
+2395,You look like one of my friends.,你看起来像我的一个朋友。,أنت تبدو مثل أحد أصدقائي.,sent
+2396,You look like someone I know.,你看起来像我认识的一个人。,أنت تبدو كشخص أعرفه,sent
+2397,You may check in at the self-service kiosk area in zones *,你可以在G和H区自助服务亭办理登机手续。,يمكنك تسجيل الوصول في منطقة كشك الخدمة الذاتية في المناطق *,vp
+2398,You may choose from the fish and beef.,你可以选择鱼或者是牛肉。,يمكنك الاختيار من السمك واللحم البقري.,sent
+2399,You may feel much better if you chew some gum or peanuts.,如果嚼点口香糖或花生会感觉舒服些。,قد تشعر بتحسن كبير إذا قمت بمضغ العلكة أو الفول السوداني.,sent
+2400,You may go now. Please take your things.,你可以走了，带好你的东西。,يمكنك الذهاب الآن. يرجى اتخاذ الأشياء الخاصة بك.,sent
+2401,You may look at the menu first and decide what you like to have.,请先看看菜单再决定点什么菜。,قد تنظر إلى القائمة أولاً وتقرر ما ترغب في الحصول عليه.,sent
+2402,You must be tired after such a long flight.,经过长途飞行后你一定累了。,يجب أن تكون متعبًا بعد هذه الرحلة الطويلة.,sent
+2403,You need to transfer at *.,你需要在*转机。,تحتاج إلى نقل في *.,vp
+2404,You should have a sign. That way people could identify which are organic and which aren't.,你们应该要有标识，让顾客知道哪些是有机蔬菜，那些不是。,يجب أن يكون لديك علامة. وبهذه الطريقة ، يمكن للأشخاص التعرف على المنتجات العضوية وأيها غير عضوية.,sent
+2405,You'll be boarding at Gate *,请将在*号登机门登机。,ستصعد على البوابة *,vp
+2406,You'll have to get there by * at the latest.,最晚*到。,سيكون عليك الوصول إلى هناك * على أقصى تقدير.,vp
+2561,budget,预算,ميزانية,np
+2563,How would you like to pay?,您要如何结账？,كيف تريد الدفع؟,sent
